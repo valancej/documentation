@@ -27,7 +27,7 @@ data:
     - /artifacts
 ```
 
-You can then use the `volumes-from` declaration to mount this volume on another container.
+You can then use the `volumes_from` declaration to mount this volume on another container.
 
 ```yaml
 myapp:
