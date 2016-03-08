@@ -29,7 +29,7 @@
   tag: master
   command: sh bin/check_fork.sh
 - type: serial
-  tag: "^(master|staging/.*|private/.*)"
+  tag: "^(master|staging/.*|private/.*)$"
   steps:
     - name: s3_sync
       service: aws
