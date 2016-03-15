@@ -90,6 +90,7 @@ Please replace `[region]` and `[accountid]` with the respective values for your 
       "Action": [
         "cloudformation:GetTemplate",
         "cloudformation:DescribeStackResource",
+        "cloudformation:DescribeStackResources",
         "cloudformation:UpdateStack"
       ],
       "Effect": "Allow",

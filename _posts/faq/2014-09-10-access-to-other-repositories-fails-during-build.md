@@ -7,6 +7,7 @@ tags:
   - ssh key
   - github
   - bitbucket
+  - private repository
 categories:
   - faq
 ---

@@ -2,7 +2,7 @@
 title: Pushing to git remote fails
 layout: page
 tags:
-  - faq
+  - troubleshooting
   - build error
   - github
   - bitbucket
@@ -10,7 +10,7 @@ tags:
   - push
   - git
 categories:
-  - faq
+  - troubleshooting
 ---
 If you want to push to a remote git repository during your deployment steps on Codeship, and the build fails with an error message such as the following:
 
