@@ -2,12 +2,12 @@
 title: Pending step in cucumber fails build
 layout: page
 tags:
-  - faq
+  - troubleshooting
   - build error
   - ruby
   - cucumber
 categories:
-  - faq
+  - troubleshooting
 ---
 The cucumber option `--strict` fails the build if you have a pending or undefined step.
 
