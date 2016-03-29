@@ -1,15 +1,16 @@
 ---
-title: Deploy via Custom Scripts
+title: Deploy via Custom Script
 layout: page
 tags:
   - deployment
+  - custom
   - scripts
 categories:
   - continuous-deployment
 ---
-Script deployment is useful to define your custom deployment commands or execute another task after or prior to a deployment.
+A custom script deployment is useful if your deployment requires additional or custom commands that is not available with some of Codeship's [integrated deployment]({{ site.baseurl }}/continuous-deployment/) options. 
 
-For example:
+A custom script deployment is also useful when you need to execute another task after or prior to a deployment. For example:
 
 ```shell
 # execute rake tasks
@@ -23,5 +24,35 @@ bundle exec rake my_rake_task
 # you can define your keys in the environment variables
 ```
 
-To get more concrete you can, for example, run a migration on Heroku after your deployment:
-![Migration after Heroku Deployment]({{ site.baseurl }}/images/continuous-deployment/script_deployment.png)
+Please follow these steps to create a custom deployment script:
+
+#### Step 1
+
+Navigate to your project's deployment configuration page by selecting _Project Settings_ > _Deployment_ on the top right side of the page.
+
+![Project Settings Deployment]({{ site.baseurl }}/images/continuous-deployment/project_configuration.png)
+
+#### Step 2
+
+Edit an existing deployment branch or create a new deployment pipeline by selecting + _Add new deployment pipeline_. You can then create a pipeline for an exact branch or a [wildcard branch]({{ site.baseurl }}/continuous-deployment/wildcard-deployment-pipelines/) to deploy. 
+
+![Create branch deploy]({{ site.baseurl }}/images/continuous-deployment/create_deploy_branch.png)
+
+#### Step 3
+
+Select _Custom Script_
+
+![Select Custom Script]({{ site.baseurl }}/images/continuous-deployment/custom_deploy_script_select.png)
+
+#### Step 4
+
+Insert your deployment commands in the _Deployment Commands_ box shown below. Then click **Create Deployment** to save your custom deployment script. 
+
+![Create Custom Script]({{ site.baseurl }}/images/continuous-deployment/create_custom_deploy_script.png)
+
+### Success!
+
+![Custome Deployment Success]({{ site.baseurl }}/images/continuous-deployment/custom_script_success.png)
+
+You have now successfully created a custom deployment script. Go ahead and push a commit to your configured deploy branch. If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com/) page.
+
