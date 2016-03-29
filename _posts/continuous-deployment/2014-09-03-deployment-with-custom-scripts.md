@@ -8,7 +8,7 @@ tags:
 categories:
   - continuous-deployment
 ---
-A custom script deployment is useful if your deployment requires additional or custom commands that is not available with some of Codeship's [integrated deployment]({{ site.baseurl }}/continuous-deployment/) options. 
+A custom script deployment is useful if your deployment requires additional or custom commands that are not available with some of Codeship's [integrated deployment]({{ site.baseurl }}/continuous-deployment/) options. 
 
 A custom script deployment is also useful when you need to execute another task after or prior to a deployment. For example:
 
@@ -34,7 +34,7 @@ Navigate to your project's deployment configuration page by selecting _Project S
 
 #### Step 2
 
-Edit an existing deployment branch or create a new deployment pipeline by selecting + _Add new deployment pipeline_. You can then create a pipeline for an exact branch or a [wildcard branch]({{ site.baseurl }}/continuous-deployment/wildcard-deployment-pipelines/) to deploy. 
+Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}/continuous-deployment/wildcard-deployment-pipelines/). 
 
 ![Create branch deploy]({{ site.baseurl }}/images/continuous-deployment/create_deploy_branch.png)
 
