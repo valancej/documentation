@@ -36,7 +36,7 @@ The first time you want to connect Codeship to Google App Engine we will ask for
 
 ![Connect GAE]({{ site.baseurl }}/images/continuous-deployment/connect_gae.png)
 
-You will then be directed to log into your google account.
+You will then be directed to log into your Google account.
 
 ### Step 5
 
@@ -46,7 +46,7 @@ Once connected, you will be brought back to your Google App Engine deployment se
 
 You can set the path of your `appcfg.*` file in the _Update Path:_ field. If the file exists on the root of your repository, simply leave it blank.
 
-By default we search for an `app.yaml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. Otherwise we expect it to be a Java application and use `appcfg.sh`.
+By default we search for a `app.yml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. Otherwise we expect it to be a Java application and use `appcfg.sh`.
 
 #### Application URL
 
