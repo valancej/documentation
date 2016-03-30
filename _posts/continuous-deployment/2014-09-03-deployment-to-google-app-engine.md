@@ -58,7 +58,7 @@ You have the option of adding the URL of your GAE app below to call after the de
 
 ![GAE Success]({{ site.baseurl }}/images/continuous-deployment/gae_success.png)
 
-You have now successfully created a custom deployment script. Go ahead and push a commit to your configured deploy branch.
+You have now successfully setup deployment to your Google App Engine. Go ahead and push a commit to your configured deploy branch.
 
 ## App Engine Authentication Issues
 
