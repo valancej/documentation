@@ -8,36 +8,57 @@ tags:
 categories:
   - continuous-deployment
 ---
-You can deploy your [Java]({{ site.baseurl }}{% post_url languages/2014-09-03-java-and-jvm-based-languages %}), [Go]({{ site.baseurl }}{% post_url languages/2014-09-03-go %}) or [Python]({{ site.baseurl }}{% post_url languages/2014-09-03-python %}) applications to Google App Engine through Codeship.
+You can deploy your [Java]({{ site.baseurl }}{% post_url languages/2014-09-03-java-and-jvm-based-languages %}),[Python]({{ site.baseurl }}{% post_url languages/2014-09-03-python %}), [NodeJS]({{ site.baseurl }}{% post_url languages/2014-09-03-nodejs  %}) , or [Go]({{ site.baseurl }}{% post_url languages/2014-09-03-go %}) applications to Google App Engine through Codeship.
 
-The first time you want to connect Codeship to Google App Engine we will
-ask for credentials through OAuth.
+## Setup Google App Engine Deployment
 
-![Connect got Google App Engine]({{ site.baseurl }}/images/continuous-deployment/connect_to_gae.png)
+### Step 1
 
-## Settings
+Navigate to your project's deployment configuration page by selecting _Project Settings_ > _Deployment_ on the top right side of the page.
 
-In your App Engine deployment you can set the path that should be used by
-the appcfg tool to upload and an optional URL we will call after the deployment
-to make sure everything is up and running.
+![Project Settings Deployment]({{ site.baseurl }}/images/continuous-deployment/project_configuration.png)
 
-![Google App Engine Settings]({{ site.baseurl }}/images/continuous-deployment/gae_settings.png)
+### Step 2
 
-By default we will upload from the root of your repository. If you build for
-example your Java app in a different directory you have to set the path to the
-that different directory. We will call the appcfg deployment tool with that path
-to deploy your application from this build output.
+Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}/continuous-deployment/wildcard-deployment-pipelines/). 
 
-In our [Java App Engine Example](https://github.com/CodeshipExamples/java-app-engine)
-we compile the application with `gradle` and the result will be written to
-build/exploded-war. We set `build/exploded-war` as the path, so the code will
-be taken from there.
+![Create branch deploy]({{ site.baseurl }}/images/continuous-deployment/create_deploy_branch.png)
 
-## appcfg.py or appcfg.sh
+### Step 3
 
-By default we search for an `app.yaml` file in the path you've set. If we
-find it we will use the `appcfg.py` script to upload your application. Otherwise we
-expect it to be a Java application and use `appcfg.sh`.
+Select _Google App Engine_
+
+![Select GAE]({{ site.baseurl }}/images/continuous-deployment/select_gae.png)
+
+### Step 4
+
+The first time you want to connect Codeship to Google App Engine we will ask for credentials through OAuth.
+
+![Connect GAE]({{ site.baseurl }}/images/continuous-deployment/connect_gae.png)
+
+You will then be directed to log into your Google account.
+
+### Step 5
+
+Once connected, you will be brought back to your Google App Engine deployment settings page. 
+
+#### appcfg Update Path
+
+You can set the path of your `appcfg.*` file in the _Update Path:_ field. If the file exists on the root of your repository, simply leave it blank.
+
+By default we search for a `app.yml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. Otherwise we expect it to be a Java application and use `appcfg.sh`.
+
+#### Application URL
+
+You have the option of adding the URL of your GAE app below to call after the deployment to make sure everything is up and running.
+
+![Configure GAE]({{ site.baseurl }}/images/continuous-deployment/configure_gae.png)
+
+### Success!
+
+![GAE Success]({{ site.baseurl }}/images/continuous-deployment/gae_success.png)
+
+You have now successfully setup deployment to your Google App Engine. Go ahead and push a commit to your configured deploy branch.
 
 ## App Engine Authentication Issues
 
@@ -53,3 +74,7 @@ on [Connected Services](https://codeship.com/authentications) will update your a
 and allow deployments to App Engine.
 
 Please save the deployment settings after reconnecting to GAE to ensure that we use the newly created token.
+
+## Questions
+
+If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com/) page.
