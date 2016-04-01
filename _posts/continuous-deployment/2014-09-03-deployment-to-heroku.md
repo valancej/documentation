@@ -8,7 +8,7 @@ tags:
 categories:
   - continuous-deployment
 ---
-Codeship makes makes it easy to deploy your application to Heroku with Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}).
+Codeship makes makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}).
 
 * include a table of contents
 {:toc}
@@ -36,10 +36,10 @@ Select _Heroku_
 ![Configure Heroku]({{ site.baseurl }}/images/continuous-deployment/configure_heroku.png)
 
 #### Application URL
-Insert the name of the Heroku application you want to the pipeline to deploy to.
+Insert the name of the Heroku application you want the pipeline to deploy to.
 
 #### Heroku API Key
-In order for you to deploy your app using Codeship, you need to provide your Heroku API key to give codeship access to your Heroku account. You can access your Heroku API key [here](https://dashboard.heroku.com/account).
+In order for you to deploy your app using Codeship, you need to provide the Heroku API key from your Heroku account. You can access your Heroku API key [here](https://dashboard.heroku.com/account).
 
 ### Success!
 
@@ -54,23 +54,23 @@ You can configure additional settings to your Heroku deployment by selecting **M
 
 ![Heroku Deploy Options]({{ site.baseurl }}/images/continuous-deployment/heroku-deploy-options.png)
 
-### URL
+#### URL
 After each deployment, we check your application to make sure that it is up. We will either call the default `*.herokuapp.com` URL or the URL you specified here.
 
 If this URL requires **basic auth** please enter: `http://YOUR_USERNAME:YOUR_PASSWORD@YOUR_URL`
 
-### Restore
-Add the end URL of the bucket you plan to access and import your dump file into. See Heroku's article [Import to Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgres-import-export#import-to-heroku-postgres).
+#### Restore
+Add the URL of the bucket you plan to access and import your dump file into. See Heroku's article [Import to Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgres-import-export#import-to-heroku-postgres).
 
-### Backup Database
-Option to backup your database before deploy. See [Download Backup](https://devcenter.heroku.com/articles/heroku-postgres-import-export#download-backup) for more information.
+#### Backup Database
+Backup your database before you deploy. See [Download Backup](https://devcenter.heroku.com/articles/heroku-postgres-import-export#download-backup) for more information.
 
-### Force Push
+#### Force Push
 Pushes into heroku with `-f` so the current commit overwrites anything on Heroku. 
 
 NOTE: Only enable this for staging environments.
 
-### Run Migrations
+#### Run Migrations
 You can specify to run the migration during the Heroku deployment. If you want to run your migration after the deployment, you can add a [custom script]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-with-custom-scripts %}) after the Heroku deployment and run the migration.
 
 **Example**:
@@ -81,7 +81,7 @@ heroku run --exit-code --app ${HEROKU_APPLICATION_NAME} -- bundle exec rake db:m
 
 ![Heroku Migration After Deploy]({{ site.baseurl }}/images/continuous-deployment/heroku-migration-after-deploy.png)
 
-### Check app URL
+#### Check app URL
 This will enable your build to check the URL of your application to make sure that it is up.
 
 ## Troubleshooting
