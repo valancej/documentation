@@ -36,7 +36,7 @@ Select _Heroku_
 ![Configure Heroku]({{ site.baseurl }}/images/continuous-deployment/configure_heroku.png)
 
 #### Application URL
-Insert the name of the Heroku application you want the pipeline to deploy to.
+Insert the name of the Heroku application or pipeline you want the pipeline to deploy to.
 
 #### Heroku API Key
 In order for you to deploy your app using Codeship, you need to provide the Heroku API key from your Heroku account. You can access your Heroku API key [here](https://dashboard.heroku.com/account).
@@ -60,17 +60,23 @@ After each deployment, we check your application to make sure that it is up. We 
 If this URL requires **basic auth** please enter: `http://YOUR_USERNAME:YOUR_PASSWORD@YOUR_URL`
 
 #### Restore
-Add the URL of the bucket you plan to access and import your dump file into. See Heroku's article [Import to Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgres-import-export#import-to-heroku-postgres).
+In order for backups to access and import your dump file you will need to upload it somewhere with an HTTP-accessible URL. See Heroku's [Import to Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgres-import-export#import-to-heroku-postgres) page for more information.
+
+Example:
+
+```
+https://s3.amazonaws.com/me/items/3H0q/mydb.dump
+```
 
 #### Backup Database
-Backup your database before you deploy. See [Download Backup](https://devcenter.heroku.com/articles/heroku-postgres-import-export#download-backup) for more information.
+Backup your database before you deploy. See Heroku's [Creating a Backup](https://devcenter.heroku.com/articles/heroku-postgres-backups#creating-a-backup) page for more information.
 
 #### Force Push
 Pushes into heroku with `-f` so the current commit overwrites anything on Heroku. 
 
-NOTE: Only enable this for staging environments.
+NOTE: Use this with caution. This flag disables these checks, and can cause the remote repository to lose commits. See [git push -f](https://git-scm.com/docs/git-push) for more info.
 
-#### Run Migrations
+#### Run Migrations (Ruby on Rails only)
 You can specify to run the migration during the Heroku deployment. If you want to run your migration after the deployment, you can add a [custom script]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-with-custom-scripts %}) after the Heroku deployment and run the migration.
 
 **Example**:
