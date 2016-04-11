@@ -11,6 +11,14 @@ categories:
   - docker
 ---
 
+* include a table of contents
+{:toc}
+
+<div class="info-block">
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}).
+</div>
+
+
 During your build you might want to access other repositories to pull in dependencies or push your code to other servers.
 
 To do this you need to set up an encrypted SSH Key that is available as an environment variable and can be written to the `.ssh` folder.
@@ -31,7 +39,7 @@ Now you have to copy the content of `keyfile.rsa` into an environment file `sshk
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
 ```
 
-After preparing the `sshkey.env` file we can encrypt it with jet. Follow the [encryption tutorial]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-15-encryption %}) to turn the `sshkey.env` file into a `sshkey.env.encrypted` file.
+After preparing the `sshkey.env` file we can encrypt it with Jet. Follow the [encryption tutorial]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-15-encryption %}) to turn the `sshkey.env` file into a `sshkey.env.encrypted` file.
 
 You can then add it to a service with the `encrypted_env_file` option. It will be automatically decrypted on Codeship.
 

@@ -11,6 +11,13 @@ categories:
   - docker
 ---
 
+* include a table of contents
+{:toc}
+
+<div class="info-block">
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}).
+</div>
+
 ## Using private images in your builds
 
 `jet` does support using private Docker images as base images for your containers. Similar to [pushing images]({{ site.baseurl }}{% post_url docker/tutorials/2015-07-03-docker-push %}) you need to save your encrypted `.dockercfg` file in the repository and reference it for any step using private base images (or for groups of steps).
