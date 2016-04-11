@@ -14,6 +14,10 @@ categories:
 * include a table of contents
 {:toc}
 
+<div class="info-block">
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}).
+</div>
+
 ## Pushing to a locally running registry
 
 Please see the [example in the codeship-tool examples repository](https://github.com/codeship/codeship-tool-examples/tree/master/16.docker_push) for how to run a registry during the build process and push a new image to this registry.

@@ -12,8 +12,11 @@ categories:
 
 If you need to make private information available to your build, you can save this information encrypted in your repository. This is most often needed to either make credentials used during deployment available or store credentials for a Docker registry. See e.g our [Docker Push]({{ site.baseurl }}{% post_url docker/tutorials/2015-07-03-docker-push %}) tutorial for a practical example.
 
+* include a table of contents
+{:toc}
+
 <div class="info-block">
-You need to have the [Jet CLI]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}) installed on your local system for the examples below to work.
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}).
 </div>
 
 ## Getting the key

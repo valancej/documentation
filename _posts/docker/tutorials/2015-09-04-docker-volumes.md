@@ -12,6 +12,10 @@ categories:
 * include a table of contents
 {:toc}
 
+<div class="info-block">
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}).
+</div>
+
 ## Using Docker volumes
 
 Volumes can be used to connect containers in your build environment, and to share build artifacts between containers and steps in your pipeline.

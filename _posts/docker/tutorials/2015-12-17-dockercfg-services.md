@@ -14,13 +14,17 @@ categories:
 * include a table of contents
 {:toc}
 
+<div class="info-block">
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}).
+</div>
+
 ## Overview
 
 Codeship supports using private registries for pulling and pushing images by allowing static dockercfg credentials to be encrypted as part of your codebase. Due to an increasing number of container registry vendors using different methods to generate Docker temporary credentials, we have added support for custom dockercfg credential generation. By using a custom service within your list of Codeship services, you can integrate with a standard dockercfg generation container for your desired provider. Codeship will provide a basic set of images supporting common providers, however you will also be able to use custom images to integrate with custom registries.
 
 ## Using a service to generate Docker credentials
 
-Taking advantage of this feature is fairly simple. First off, add a service using the image for your desired registry provider to your `codeship-services.yml` file. You can add any links, environment variables or volumes you need, just like with a regular service. 
+Taking advantage of this feature is fairly simple. First off, add a service using the image for your desired registry provider to your `codeship-services.yml` file. You can add any links, environment variables or volumes you need, just like with a regular service.
 
 ```
 # codeship-services.yml
@@ -28,7 +32,7 @@ app:
   build:
     dockerfile_path: ./Dockerfile
     image: myservice.com/myuser/myapp
-myservice_generator: 
+myservice_generator:
   image: codeship/myservice-dockercfg-generator
   encrypted_env: creds.encrypted
 ```
