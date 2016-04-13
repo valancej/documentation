@@ -37,6 +37,8 @@ The `jet` CLI is now included in [Homebrew Cask](https://caskroom.github.io/). I
 brew cask install jet
 ```
 
+The formula will install Docker as well. If you already have Docker installed, but didn't use Homebrew to install it, you will be asked by Homebrew if you want to overwrite the Docker binary. If you don't want to manage Docker via Homebrew, please use the alternative installation method below.
+
 If you don't have Homebrew installed or don't use Homebrew Cask you can install `jet` via the following commands.
 
 ```bash
