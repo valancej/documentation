@@ -31,11 +31,21 @@ Please follow the steps below for the operating system you are using. See the [J
 
 ### Mac OS X
 
+The `jet` CLI is now included in [Homebrew Cask](https://caskroom.github.io/). If you already have [Homebrew installed](http://brew.sh/) and the [Caskroom tapped](https://caskroom.github.io/)[^1] you can install `jet` by running the following command
+
+```bash
+brew cask install jet
+```
+
+If you don't have Homebrew installed or don't use Homebrew Cask you can install `jet` via the following commands.
+
 ```bash
 curl -SLo "jet-{{ site.data.jet.version }}.tar.gz" "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz"
 tar -xC /usr/local/bin/ -f jet-{{ site.data.jet.version }}.tar.gz
 chmod u+x /usr/local/bin/jet
 ```
+
+[^1]: Instructions for tapping the _Caskroom_ are at the very bottom of the page.
 
 ### Linux
 

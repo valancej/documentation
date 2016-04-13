@@ -1,0 +1,27 @@
+.footnote {
+  font-size: .8em;
+  text-decoration: underline;
+  background: darken($_cGrey, 5%);
+  display: inline-block;
+  padding: 0 .3em;
+  border-radius: .2em;
+}
+
+.footnotes {
+  border-top: .1rem solid $cFootnotesBg;
+  margin-top: 2.5rem;
+
+  li {
+    font-size: .9rem;
+    line-height: .9rem;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1em;
+  }
+
+  .reversefootnote {
+    font-size: .9em;
+  }
+}
