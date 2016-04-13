@@ -33,7 +33,7 @@ So if you wanted to copy all of your repository to a remote server, you could ad
 * Also make sure your _remote dir_ already exists before trying your first deployment.
 
 ```shell
-lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.yoursite.com; set ssl:verify-certificate no; mirror -R ${HOME}/clone/ /remote/dir"
+lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.yoursite.com; set ssl:verify-certificate no; mirror -R ~/clone/ /path/on/server/"
 ```
 
 For more information on using _lftp_ please see the [LFTP man page]({% man_url lftp %}) available online.
@@ -65,7 +65,7 @@ Please add a file containing the following directives to your repository. You ca
 
 ```shell
 mkdir /path/on/server
-put -rp "${HOME}/clone/" /path/on/server/
+put -rp "~/clone/" /path/on/server/
 ```
 
 For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
