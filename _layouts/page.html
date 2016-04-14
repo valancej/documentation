@@ -36,6 +36,14 @@ layout: default
       <div data-swiftype-name="body" data-swiftype-type="text" data-swiftype-index='true'>
         {{ content }}
       </div>
+
+      {% if page.comments %}
+      <div class="comments">
+        {% capture url %}{{ page.url | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+        {% include comments.html url=url %}
+      </div>
+      {% endif %}
+
     </div>
   </div>
 </div>
