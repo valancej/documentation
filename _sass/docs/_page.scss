@@ -260,7 +260,7 @@ body.is-blue {
     li {
       padding-left: .5rem;
 
-      &:before {
+      &::before {
         counter-increment: none;
         content: none;
       }
