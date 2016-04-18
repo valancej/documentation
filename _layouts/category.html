@@ -3,18 +3,12 @@ layout: page
 ---
 {% assign category = site.data.categories[page.category] %}
 {% assign category_pages = site.categories[page.category] | sort: 'title' %}
-{% assign ul_options = 'ul--columnized' %}
-
-{% if category.title == 'Docker Infrastructure' or category.title == 'Docker Integration' %}
-{% assign category_pages = site.categories[page.category] | sort: 'weight' | reverse %}
-{% assign ul_options = '' %}
-{% endif %}
 
 {% if category.introduction %}
 {{ category.introduction | markdownify }}
 {% endif %}
 
-<ul class="ul {{ ul_options }}">
+<ul class="ul">
   {% for content_page in category_pages %}
     <li><a href="{{ site.baseurl }}{{ content_page.url }}">{{ content_page.title }}</a></li>
   {% endfor %}
