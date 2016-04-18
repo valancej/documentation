@@ -29,6 +29,12 @@ In order to run the _Jet_ binary on your computer, you need to have Docker insta
 
 Please follow the steps below for the operating system you are using. See the [Jet Release Notes]({{ site.baseurl }}{% post_url docker/jet/2015-07-16-release-notes %}) for the ChangeLog.
 
+See the [sha256sums]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/sha256sums) file for checksums for the latest release. To check the downloaded files on Linux / Unix based systems run the following command.
+
+```bash
+shasum -c -a 256 sha256sums
+```
+
 ### Mac OS X
 
 The `jet` CLI is now included in [Homebrew Cask](https://caskroom.github.io/). If you already have [Homebrew installed](http://brew.sh/) and the [Caskroom tapped](https://caskroom.github.io/)[^1] you can install `jet` by running the following command
@@ -42,8 +48,8 @@ The formula will install Docker as well. If you already have Docker installed, b
 If you don't have Homebrew installed or don't use Homebrew Cask you can install `jet` via the following commands.
 
 ```bash
-curl -SLo "jet-{{ site.data.jet.version }}.tar.gz" "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz"
-tar -xC /usr/local/bin/ -f jet-{{ site.data.jet.version }}.tar.gz
+curl -SLO "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz"
+tar -xC /usr/local/bin/ -f jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz
 chmod u+x /usr/local/bin/jet
 ```
 
@@ -52,8 +58,8 @@ chmod u+x /usr/local/bin/jet
 ### Linux
 
 ```bash
-curl -SLo "jet-{{ site.data.jet.version }}.tar.gz" "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-linux_amd64_{{ site.data.jet.version }}.tar.gz"
-sudo tar -xaC /usr/local/bin -f jet-{{ site.data.jet.version }}.tar.gz
+curl -SLO "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-linux_amd64_{{ site.data.jet.version }}.tar.gz"
+sudo tar -xaC /usr/local/bin -f jet-linux_amd64_{{ site.data.jet.version }}.tar.gz
 sudo chmod +x /usr/local/bin/jet
 ```
 
