@@ -1,6 +1,6 @@
 # Site settings
 url: https://codeship.com
-baseurl: 
+baseurl:
 permalink: /:categories/:title/
 tags_dir: tags
 ubuntu_version: trusty
@@ -34,8 +34,8 @@ exclude:
   - package.json
   - gulpfile.js
 encoding: utf-8
-#gems:
-#  - octopress-autoprefixer
+gems:
+  - jekyll-sitemap
 collections:
   faq:
     permalink: /faq/:path/
