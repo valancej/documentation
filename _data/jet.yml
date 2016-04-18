@@ -1,2 +1,2 @@
 base_url: https://s3.amazonaws.com/codeship-jet-releases
-version: "0.9.5"
+version: "1.6.0"

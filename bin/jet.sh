@@ -8,10 +8,10 @@ target="/site/.jet"
 
 log "Preparing Jet release notes and current version"
 rm -rf "${target}" && mkdir -p "${target}/sync"
-aws s3 sync "s3://${JET_RELEASE_BUCKET}/" "${target}/sync" --exclude=* --include=*.changelog --quiet
+aws s3 sync "s3://${JET_RELEASE_BUCKET}/" "${target}/sync" --exclude "*" --include "*.changelog" --quiet
 
 # write the release notes
-find "${target}/sync/" -type f -not -size 0 | natsort -r | \
+find "${target}/sync/" -name "*.changelog" -type f -not -size 0 | natsort -r | \
 while read line; do
 	version=$(basename ${line} | sed -e 's/\.changelog//')
 	if [ -z "${latest_version}" ]; then
