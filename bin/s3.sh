@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-log() { echo -e "\e[36m$@\e[39m"; }
+log() { echo -e "\033[36m$@\033[39m"; }
 action=${1:?'You need to pass an action!'} && shift
 
 case "$action" in
