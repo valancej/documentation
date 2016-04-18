@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-fail() { echo -e "\e[31m$@\e[39m"; exit 1; }
+fail() { echo -e "\033[31m$@\033[39m"; exit 1; }
 
 # TODO
 # currently CI_REPO_NAME only contains the repository name, but not the owner,

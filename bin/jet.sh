@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-log() { echo -e "\e[36m$@\e[39m"; }
+log() { echo -e "\033[36m$@\033[39m"; }
 
 # configuration
 unset $latest_version
