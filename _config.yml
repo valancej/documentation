@@ -36,6 +36,7 @@ exclude:
 encoding: utf-8
 gems:
   - jekyll-sitemap
+  - jekyll-coffeescript
 collections:
   faq:
     permalink: /faq/:path/
