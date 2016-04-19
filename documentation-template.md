@@ -19,12 +19,10 @@ Steps Example: [Deploy via Custom Script](https://codeship.com/documentation/con
 Code block example:
 
 ```
- 
-```ruby
+'''ruby
   def something
   end
-```
-
+'''
 ```
 
 ### Conclusion
