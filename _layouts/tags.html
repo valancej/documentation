@@ -7,7 +7,7 @@ layout: page
 {{ site.data.tags[page.tags].introduction | markdownify }}
 {% endif %}
 
-<ul class="ul ul--columnized">
+<ul class="ul">
   {% for content_page in tag_pages %}
     <li><a href="{{ site.baseurl }}{{ content_page.url }}">{{ content_page.title }}</a></li>
   {% endfor %}
