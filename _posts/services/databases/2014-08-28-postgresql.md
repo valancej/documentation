@@ -23,13 +23,13 @@ You need to activate them with `CREATE EXTENSION` as explained in the [Extension
 
 ### 9.2
 
-The **default version** of PostgreSQL on Codeship is **9.2**, which runs on the default port of `5432`. You don't need any special configuration to use it at all.
+The **default version** of PostgreSQL on Codeship is **9.2**, which runs on the default port of `5432`. No additional configuration is required to use version 9.2.
 
 ### 9.3
 
 In addition we also have version **9.3** installed and configured identically. You can use this version by specifying port `5433` in your database configuration.
 
-For Rails based projects you also need to work around our auto-configuration. Please add the following command to your setup steps.
+For Rails based projects you also need to work around our auto-configuration. Please add the following command to your _Setup Commands_.
 
 ```shell
 sed -i "s|5432|5433|" "config/database.yml"
@@ -39,7 +39,7 @@ sed -i "s|5432|5433|" "config/database.yml"
 
 Version **9.4** of the database server is running on port `5434` and configured identical to the others. If you want to use this version make sure to specify the correct port in your database configuration.
 
-For Rails based projects, please add the following command to your setup steps to work around the auto-configuration in place on the build VMs.
+For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place on the build VMs.
 
 ```shell
 sed -i "s|5432|5434|" "config/database.yml"
@@ -53,7 +53,7 @@ PostgreSQL version **9.5** is running on port `5435` and configured (almost) ide
 PostgreSQL 9.5 includes PostGIS version 2.2 instead of 2.1, which is installed for the other PostgreSQL versions.
 </div>
 
-Similar to the other versions, you need to work around our auto-configuration for Rails based projects by adding the following command to your setup steps.
+Similar to the other versions, you need to work around our auto-configuration for Rails based projects by adding the following command to your _Setup Commands_.
 
 ```shell
 sed -i "s|5432|5435|" "config/database.yml"
@@ -74,16 +74,14 @@ psql -d DATABASE_NAME -p DATABASE_PORT -c 'create extension if not exists hstore
 ```
 
 ### PostGIS
-For PostgreSQL versions 9.2 to 9.4 we have PostGIS 2.0.x installed on the virtual machine.
-
-PostgreSQL version 9.5 includes the newer PostGIS version 2.2.
+PostgreSQL versions 9.2 to 9.4 include PostGIS 2.0, PostgreSQL version 9.5 includes the newer PostGIS version 2.2.
 
 ## Framework-specific configuration
 
 ### Ruby on Rails
 We replace the values in your `config/database.yml` file automatically to configuration matching the PostgreSQL 9.2 instance.
 
-If you have your Rails application in a subdirectory or want to change it from our default values you can add the following snippet to a `codeship.database.yml` (or any other filename) in your repository.
+If your Rails application is in stored a subdirectory or you want to change the database configuration from our default values ,you can add the following data to a `codeship.database.yml` file (or any other filename) and commit that file to your repository.
 
 ```yaml
 development:
@@ -110,13 +108,13 @@ test:
   sslmode: disable
 ```
 
-In your setup commands run the following command to copy the file to its target location.
+In your _Setup Commands_, run the following command to copy the file to its target location.
 
 ```shell
 cp codeship.database.yml YOUR_DATABASE_YAML_PATH
 ```
 
-If you don't use Rails and load the `database.yml` file yourself you might see an `PSQL::Error` message stating the raw username `<%= ENV['PG_USER'] %>` instead of the value of the environment variable. This is because the `database.yml` example includes ERB syntax. You need to load it and run it through ERB before you can use it first.
+If you don't use Rails and load the database.yml file yourself, you might see a PSQL::Error message stating the raw username <%= ENV['PG_USER'] %> instead of the value of the environment variable. This is because the database.yml example includes ERB syntax. You need to load database.yml, and run it through ERB before you can use it first.
 
 ```ruby
 # Sample error message
@@ -127,7 +125,7 @@ DATABASE_CONFIG = YAML.load(ERB.new(File.read("config/database.yml")))
 ```
 
 ### Django
-You can use the following database configuration snippet for Django based projects.
+You can use the following database configuration for Django based projects.
 
 ```python
 DATABASES = {
