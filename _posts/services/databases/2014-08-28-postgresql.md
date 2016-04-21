@@ -15,7 +15,7 @@ The default databases created for you are **development** and **test**.
 
 PostgreSQL `9.2` runs on the default port and the credentials are stored in the `PG_USER` and `PG_PASSWORD` environment variables.
 
-We install the Ubuntu postgresql-contrib package. It includes the [extension modules](http://www.postgresql.org/docs/9.2/static/contrib.html) listed in the PostgreSQL Documentation.
+We install the Ubuntu `postgresql-contrib` package. It includes the [extension modules](http://www.postgresql.org/docs/9.2/static/contrib.html) listed in the PostgreSQL Documentation.
 
 You need to activate them with `CREATE EXTENSION` as explained in the [Extension Guide](http://www.postgresql.org/docs/9.1/static/sql-createextension.html).
 
@@ -23,13 +23,13 @@ You need to activate them with `CREATE EXTENSION` as explained in the [Extension
 
 ### 9.2
 
-The **default version** of PostgreSQL on Codeship is **9.2**, which runs on the default port of `5432`. To use it you don't need to change your configuration at all.
+The **default version** of PostgreSQL on Codeship is **9.2**, which runs on the default port of `5432`. You don't need any special configuration to use it at all.
 
 ### 9.3
 
 In addition we also have version **9.3** installed and configured identically. You can use this version by specifying port `5433` in your database configuration.
 
-For Rails based projects you also need to work around our autoconfiguration. Please add the following command to your setup steps.
+For Rails based projects you also need to work around our auto-configuration. Please add the following command to your setup steps.
 
 ```shell
 sed -i "s|5432|5433|" "config/database.yml"
@@ -39,39 +39,51 @@ sed -i "s|5432|5433|" "config/database.yml"
 
 Version **9.4** of the database server is running on port `5434` and configured identical to the others. If you want to use this version make sure to specify the correct port in your database configuration.
 
-Again, for Rails based projects, please add the following command to your setup steps.
+For Rails based projects, please add the following command to your setup steps to work around the auto-configuration in place on the build VMs.
 
 ```shell
 sed -i "s|5432|5434|" "config/database.yml"
 ```
 
+### 9.5
 
-## Create Databases and run psql commands
+PostgreSQL version **9.5** is running on port `5435` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
+
+<div class="info-block">
+PostgreSQL 9.5 includes PostGIS version 2.2 instead of 2.1, which is installed for the other PostgreSQL versions.
+</div>
+
+Similar to the other versions, you need to work around our auto-configuration for Rails based projects by adding the following command to your setup steps.
+
+```shell
+sed -i "s|5432|5435|" "config/database.yml"
+```
+
+## Run `psql` commands
 You can run any SQL query against the PostgreSQL database. For example to create a new database:
 
 ```shell
-psql -c 'create database new_db;'
+psql -p DATABASE_PORT -c 'create database new_db;'
 ```
 
 ## Enable Extensions
 You can enable extensions either via the your application framework (if supported) or by running commands directly against the database. E.g, you'd would add the following command to your setup steps to enable the `hstore` extension.
 
 ```shell
-psql -c 'create extension if not exists hstore;' -d test -p 5432
+psql -d DATABASE_NAME -p DATABASE_PORT -c 'create extension if not exists hstore;'
 ```
 
-*Note, that you'd need to adapt the port number if you switched to a different version of PostgreSQL previously!*
+### PostGIS
+For PostgreSQL versions 9.2 to 9.4 we have PostGIS 2.0.x installed on the virtual machine.
 
-## PostGIS
-PostGIS 2.0.x is installed on the virtual machine.
+PostgreSQL version 9.5 includes the newer PostGIS version 2.2.
 
-## Ruby on Rails
+## Framework-specific configuration
 
-We replace the values in your `config/database.yml` automatically.
+### Ruby on Rails
+We replace the values in your `config/database.yml` file automatically to configuration matching the PostgreSQL 9.2 instance.
 
-If you have your Rails application in a subdirectory or want to change
-it from our default values you can add the following to a codeship.database.yml
-(or any other filename) in your repository:
+If you have your Rails application in a subdirectory or want to change it from our default values you can add the following snippet to a `codeship.database.yml` (or any other filename) in your repository.
 
 ```yaml
 development:
@@ -98,27 +110,24 @@ test:
   sslmode: disable
 ```
 
-Then in your setup commands run
+In your setup commands run the following command to copy the file to its target location.
 
 ```shell
 cp codeship.database.yml YOUR_DATABASE_YAML_PATH
 ```
 
-to copy the file wherever you need it.
-
-If you don't use Rails and load the database.yml yourself you might see an error like the following:
-
-```shell
-PSQL::Error: Access denied for user '<%= ENV['PG_USER'] %>'@'localhost'
-```
-
-The database.yml example has ERB syntax in it so you need to load it by interpreting the ERB first:
+If you don't use Rails and load the `database.yml` file yourself you might see an `PSQL::Error` message stating the raw username `<%= ENV['PG_USER'] %>` instead of the value of the environment variable. This is because the `database.yml` example includes ERB syntax. You need to load it and run it through ERB before you can use it first.
 
 ```ruby
+# Sample error message
+# PSQL::Error: Access denied for user '<%= ENV['PG_USER'] %>'@'localhost'
+#
+# Run the file through ERB before loading the YAML data
 DATABASE_CONFIG = YAML.load(ERB.new(File.read("config/database.yml")))
 ```
 
-## Django
+### Django
+You can use the following database configuration snippet for Django based projects.
 
 ```python
 DATABASES = {
