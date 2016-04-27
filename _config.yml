@@ -33,6 +33,7 @@ exclude:
   - node_modules
   - package.json
   - gulpfile.js
+  - templates
 encoding: utf-8
 gems:
   - jekyll-sitemap
