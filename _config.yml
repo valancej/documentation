@@ -31,6 +31,7 @@ exclude:
   - gulpfile.js
   - LICENSE.md
   - node_modules
+  - npm-shrinkwrap.json
   - package.json
   - README.md
   - templates

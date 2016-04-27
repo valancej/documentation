@@ -5,21 +5,22 @@
 .DS_Store
 
 # Not needed during the build
+_site
 .editorconfig
-.sass-cache
 .ruby-gemset
 .ruby-version
-_site
-codeship.aes
-codeship-services.yml
-codeship-steps.yml
-deployment.env*
-dockercfg*
+.sass-cache
 *.env*
 CODE_OF_CONDUCT.md
+codeship-services.yml
+codeship-steps.yml
+codeship.aes
 CONTRIBUTING.MD
+deployment.env*
+dockercfg*
 Dockerfile*
 external
 LICENSE.md
 node_modules
 README.md
+templates
