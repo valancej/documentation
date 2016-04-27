@@ -19,20 +19,22 @@ defaults:
 # Jekyll
 exclude:
   - _*.json
-  - codeship.aes
+  - bin
+  - CODE_OF_CONDUCT.md
   - codeship-services.yml
   - codeship-steps.yml
-  - bin
-  - external
-  - README.md
-  - LICENSE.md
+  - codeship.aes
   - CONTRIBUTING.md
-  - CODE_OF_CONDUCT.md
-  - Guardfile
+  - external
   - Gemfile*
-  - node_modules
-  - package.json
+  - Guardfile
   - gulpfile.js
+  - LICENSE.md
+  - node_modules
+  - npm-shrinkwrap.json
+  - package.json
+  - README.md
+  - templates
 encoding: utf-8
 gems:
   - jekyll-sitemap
