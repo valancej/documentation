@@ -1,0 +1,43 @@
+FROM ruby:2.3.1-slim
+MAINTAINER marko@codeship.com
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV NODE_VERSION 4.x
+
+# basic project configuration
+WORKDIR /docs
+VOLUME ['/docs']
+EXPOSE 4000
+
+# System dependencies
+RUN \
+	curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}" | bash - && \
+	apt-get update && \
+	apt-get install -y --no-install-recommends \
+		build-essential \
+		libssl1.0.0 \
+		libyaml-0-2 \
+		nodejs && \
+	ln -s $(which nodejs) /usr/local/bin/node && \
+	apt-get clean -y && \
+	rm -rf /var/lib/apt/lists/*
+
+# NPM based dependencies
+COPY package.json npm-shrinkwrap.json ./
+RUN \
+	npm config set "production" "true" && \
+	npm config set "loglevel" "error" && \
+ 	npm install && \
+	ln -s /docs/node_modules/gulp/bin/gulp.js /usr/local/bin/gulp
+
+# Ruby based dependencies
+COPY Gemfile Gemfile.lock ./
+RUN \
+	echo "gem: --no-rdoc --no-ri" >> ${HOME}/.gemrc && \
+	bundle install --jobs 20 --retry 5 --without development
+
+# Copy the complete site
+COPY . ./
+
+# Serve the site
+CMD ["bundle", "exec", "jekyll", "serve", "-H 0.0.0.0", "--incremental"]
