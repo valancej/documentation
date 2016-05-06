@@ -15,8 +15,8 @@ RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
 	ln -s $(which nodejs) /usr/local/bin/node && \
 	npm config set "production" "true" && \
 	npm config set "loglevel" "error" && \
-	npm install --global gulp && \
 	npm install && \
+	ln -s /docs/node_modules/gulp/bin/gulp.js /usr/local/bin/gulp && \
 	echo "gem: --no-rdoc --no-ri" >> ${HOME}/.gemrc && \
 	bundle install --jobs 20 --retry 5 --without development && \
 	apt-get clean -y && \
