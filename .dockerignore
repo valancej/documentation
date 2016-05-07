@@ -7,8 +7,6 @@
 # Not needed during the build
 _site
 .editorconfig
-.ruby-gemset
-.ruby-version
 .sass-cache
 *.env*
 CODE_OF_CONDUCT.md
