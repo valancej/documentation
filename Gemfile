@@ -1,6 +1,6 @@
 # A sample Gemfile
 source "https://rubygems.org"
-ruby "2.2.3"
+ruby "2.3.1"
 
 gem 'jekyll', '~> 3.1.2'
 gem 'jekyll-sitemap', '~> 0.10.0'
