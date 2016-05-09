@@ -24,6 +24,8 @@
           command: bundle exec scss-lint
         - name: JSON
           command: gulp lint
+        - name: Jekyll
+          command: bundle exec jekyll doctor
 - name: fail_master_on_forks
   service: docs
   tag: master
