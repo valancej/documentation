@@ -85,4 +85,30 @@ db:
 
 * Commit and push the changes to your remote repository, head over to [Codeship](https://codeship.com/) and watch your build pull the private image from the registry!
 
+## Common problems
+
+### Invalid character / Failed to parse Dockercfg
+
+You might see an error like this when pulling a private base image using your encrypted Dockercfg file:
+
+``Failed to parse dockercfg: invalid character '___' after top-level value``
+
+This  means that either your Dockercfg has a syntax problem or that it was encrypted with an incorrect or incomplete AES key, or an AES key from another project.
+
+Try deleting your Dockercfg and your AES key, then re-downloading the AES key and re-encrypting the Dockercfg file.
+
+### No key
+
+Sometimes you might see this error the first time you go to encrypt your Dockercfg file:
+
+``jet: no key``
+
+This means your AES key is missing from your project directory and must be downloaded according to the instructions above.
+
+
+### Need a key regenerated
+
+If you need a key regenerated, you can submit a ticket to the help desk from your account. Keep in mind that this will leave current encrypted credentials and environmental variables invalid for future builds on Codeship until they are re-encrypted using the new key.
+
+
 As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.
