@@ -1,5 +1,5 @@
 ---
-title: Running Codeship Locally for Development
+title: Running Codeship's Jet Locally for Development
 layout: page
 weight: 75
 tags:

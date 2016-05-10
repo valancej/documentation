@@ -51,7 +51,7 @@ RUN apt-get update -qq
 #   build-essential
 
 # Create the folders needed by the application and set the
-# current working directory for the following commands
+# current working directory with the following commands
 RUN mkdir /app
 WORKDIR /app
 
