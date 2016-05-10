@@ -89,21 +89,21 @@ db:
 
 ### Invalid character / Failed to parse .dockercfg
 
-You might see an error like this when pulling a private base image using your encrypted ``.dockercfg`` file:
+You might see an error like this when pulling a private base image using your encrypted `.dockercfg` file:
 
 ``Failed to parse .dockercfg: invalid character '___' after top-level value``
 
-This  means that either your ``.dockercfg`` has a syntax problem or that it was encrypted with an incorrect or incomplete AES key, or an AES key from another project.
+This  means that either your `.dockercfg` has a syntax problem or that it was encrypted with an incorrect or incomplete AES key, or an AES key from another project.
 
-Try deleting your ``.dockercfg`` and your AES key, then re-downloading the AES key and re-encrypting the ``.dockercfg`` file.
+Try deleting your `.dockercfg` and your AES key, then re-downloading the AES key and re-encrypting the `.dockercfg` file.
 
 ### No key
 
-Sometimes you might see this error the first time you go to encrypt your ``.dockercfg`` file:
+Sometimes you might see this error the first time you go to encrypt your `.dockercfg` file:
 
 ``jet: no key``
 
-This means your AES key is missing from your project directory and must be downloaded according to [the instructions above.]({{ site.baseurl }}/docker/docker-pull/#configuring-a-build-with-a-private-base-image)
+This means your AES key is missing from your project directory and must be downloaded according to [the instructions above.](#configuring-a-build-with-a-private-base-image)
 
 
 ### Need a key regenerated
