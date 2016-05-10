@@ -1,3 +1,7 @@
+documentation:
+  build:
+    image: codeship/documentation
+    dockerfile_path: Dockerfile
 ci:
   build:
     image: quay.io/codeship/documentation
