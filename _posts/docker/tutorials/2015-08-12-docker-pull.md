@@ -32,26 +32,26 @@ To follow this tutorial on your own computer, please [install the `jet` CLI loca
 docker login
 # follow the onscreen instructions
 # ...
-jet encrypt ${HOME}/.docker/config.json dockercfg.encrypted
+jet encrypt ${HOME}/.docker/config.json .dockercfg.encrypted
 # or (depending if you are on an older version of Docker)
-jet encrypt ${HOME}/.dockercfg dockercfg.encrypted
+jet encrypt ${HOME}/.dockercfg .dockercfg.encrypted
 ```
 
 * For Quay.io
 
     * First configure a [robot account](http://docs.quay.io/glossary/robot-accounts.html)
     * Once you have configured the robot account, download the `.dockercfg` file for this account, by heading over to the _Robots Account_ tab in your settings, clicking the gear icon, selecting _View Credentials_ and hitting the download button.
-    * Save the file as `dockercfg` in your repository, encrypt it and add the unencrypted version to `.gitignore`
+    * Save the file as `.dockercfg` in your repository, encrypt it and add the unencrypted version to `.gitignore`
 
 ```bash
-echo "dockercfg" >> .gitignore
-jet encrypt dockercfg dockercfg.encrypted
+echo ".dockercfg" >> .gitignore
+jet encrypt .dockercfg .dockercfg.encrypted
 ```
 
-* Commit `dockercfg.encrypted` as well as the `.gitignore` file
+* Commit `.dockercfg.encrypted` as well as the `.gitignore` file
 
 ```bash
-git add dockercfg.encrypted .gitignore
+git add .dockercfg.encrypted .gitignore
 git commit -m "Adding encrypted credentials for docker push"
 ```
 
@@ -80,30 +80,30 @@ db:
 ```yaml
 - service: app
   command: /bin/true
-  encrypted_dockercfg_path: dockercfg.encrypted
+  encrypted_.dockercfg_path: .dockercfg.encrypted
 ```
 
 * Commit and push the changes to your remote repository, head over to [Codeship](https://codeship.com/) and watch your build pull the private image from the registry!
 
 ## Common problems
 
-### Invalid character / Failed to parse Dockercfg
+### Invalid character / Failed to parse .dockercfg
 
-You might see an error like this when pulling a private base image using your encrypted Dockercfg file:
+You might see an error like this when pulling a private base image using your encrypted ``.dockercfg`` file:
 
-``Failed to parse dockercfg: invalid character '___' after top-level value``
+``Failed to parse .dockercfg: invalid character '___' after top-level value``
 
-This  means that either your Dockercfg has a syntax problem or that it was encrypted with an incorrect or incomplete AES key, or an AES key from another project.
+This  means that either your ``.dockercfg`` has a syntax problem or that it was encrypted with an incorrect or incomplete AES key, or an AES key from another project.
 
-Try deleting your Dockercfg and your AES key, then re-downloading the AES key and re-encrypting the Dockercfg file.
+Try deleting your ``.dockercfg`` and your AES key, then re-downloading the AES key and re-encrypting the ``.dockercfg`` file.
 
 ### No key
 
-Sometimes you might see this error the first time you go to encrypt your Dockercfg file:
+Sometimes you might see this error the first time you go to encrypt your ``.dockercfg`` file:
 
 ``jet: no key``
 
-This means your AES key is missing from your project directory and must be downloaded according to the instructions above.
+This means your AES key is missing from your project directory and must be downloaded according to [the instructions above.]({{ site.baseurl }}/docker/docker-pull/#configuring-a-build-with-a-private-base-image)
 
 
 ### Need a key regenerated
