@@ -7,7 +7,7 @@
 
 ## Contributing
 
-We are happy to hear your feedback. Please read our [contributing guidelines](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md) before you submit a PR or open a ticket.
+We are happy to hear your feedback. Please read our [contributing guidelines](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md) before you submit a pull request or open a ticket.
 
 ## Getting Started
 
@@ -17,18 +17,18 @@ We are happy to hear your feedback. Please read our [contributing guidelines](CO
 
 We recommend using Docker to build and test the documentation. Running via Docker is only required if you plan to make changes to the styling or layout of the site.
 
-For content related changes and fixes, it's easiest to use GitHubs [File Edit UI](https://help.github.com/articles/editing-files-in-another-user-s-repository/) to make the changes and create the PR.
+For content related changes and fixes, it's easiest to use GitHubs [File Edit UI](https://help.github.com/articles/editing-files-in-another-user-s-repository/) to make the changes and create the pull request.
 
 ### Setup
 
-To work on the project, you need to clone the repository
+We need to be brief, so clone the repository,
 
 ```bash
 git clone git@github.com:codeship/documentation.git
 cd documentation
 ```
 
-and build the container and save it as a tagged image.
+build the container and save it as a tagged image.
 
 ```bash
 docker build --tag codeship/documentation .
@@ -46,13 +46,13 @@ To access the site open http://IP_OF_YOUR_DOCKER_SERVER:4000 in your browser.
 
 ### Updating dependencies
 
-To update Rubygem based dependencies make sure to update the `Gemfile` (if required) and run
+To update Rubygem based dependencies, update the `Gemfile` (if required) and run
 
 ```bash
 docker run -it -v $(pwd):/docs codeship/documentation bundle update
 ```
 
-For NPM based dependencies run the following two commands
+For NPM based dependencies, run the following two commands
 
 ```bash
 docker run -it -v $(pwd):/docs codeship/documentation npm update && npm shrinkwrap
@@ -62,7 +62,7 @@ docker run -it -v $(pwd):/docs codeship/documentation npm update && npm shrinkwr
 
 #### SCSS
 
-SCSS files are automatically linted using [scss-lint](https://github.com/causes/scss-lint). To run it execute the following command
+SCSS files are automatically linted using [scss-lint](https://github.com/causes/scss-lint). To run it, execute the following command
 
 ```bash
 docker run -it -v $(pwd):/docs codeship/documentation bundle exec scss-lint
