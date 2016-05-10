@@ -7,9 +7,17 @@
 
 ## Contributing
 
-We are happy to get feedback on our documentation or accept PRs from you. If you submit a PR or open a ticket, please read our [contributing guidelines](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md) first.
+We are happy to hear your feedback. Please read our [contributing guidelines](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md) before you submit a PR or open a ticket.
 
 ## Getting Started
+
+## Prerequisites
+
+* [Docker](https://docs.docker.com/engine/installation/)
+
+We recommend using Docker to build and test the documentation. Running via Docker is only required if you plan to make changes to the styling or layout of the site.
+
+For content related changes and fixes, it's easiest to use GitHubs [File Edit UI](https://help.github.com/articles/editing-files-in-another-user-s-repository/) to make the changes and create the PR.
 
 ### Setup
 
@@ -20,18 +28,16 @@ git clone git@github.com:codeship/documentation.git
 cd documentation
 ```
 
-If you have Docker installed, we'd recommend using Docker for running & building the documentation.
-
-First build the container and save it as a tagged image via  
+and build the container and save it as a tagged image.
 
 ```bash
-docker build --tag documentation .
+docker build --tag codeship/documentation .
 ```
 
-You can then run commands via that container. By default it will build the site and start the Jekyll development server.
+You can then run commands via that container. By default, it will build the site and start the Jekyll development server.
 
 ```bash
-docker run -it -p 4000:4000 -v $(pwd):/docs documentation
+docker run -it -p 4000:4000 -v $(pwd):/docs codeship/documentation
 ```
 
 To access the site open http://IP_OF_YOUR_DOCKER_SERVER:4000 in your browser.
@@ -40,16 +46,16 @@ To access the site open http://IP_OF_YOUR_DOCKER_SERVER:4000 in your browser.
 
 ### Updating dependencies
 
-To update Rubygem based dependencies make sure the specifications in the `Gemfile` are configured accordingly and then run
+To update Rubygem based dependencies make sure to update the `Gemfile` (if required) and run
 
 ```bash
-docker run -it -v $(pwd):/docs documentation bundle update
+docker run -it -v $(pwd):/docs codeship/documentation bundle update
 ```
 
 For NPM based dependencies run the following two commands
 
 ```bash
-docker run -it -v $(pwd):/docs documentation npm update && npm shrinkwrap
+docker run -it -v $(pwd):/docs codeship/documentation npm update && npm shrinkwrap
 ```
 
 ### Linting
@@ -59,7 +65,7 @@ docker run -it -v $(pwd):/docs documentation npm update && npm shrinkwrap
 SCSS files are automatically linted using [scss-lint](https://github.com/causes/scss-lint). To run it execute the following command
 
 ```bash
-docker run -it -v $(pwd):/docs documentation bundle exec scss-lint
+docker run -it -v $(pwd):/docs codeship/documentation bundle exec scss-lint
 ```
 
 It's configured in [.scss-lint.yml](.scss-lint.yml) and the default configuration is [available online](https://github.com/causes/scss-lint/blob/master/config/default.yml) as well.
@@ -67,7 +73,13 @@ It's configured in [.scss-lint.yml](.scss-lint.yml) and the default configuratio
 #### JSON
 
 ```bash
-docker run -it -v $(pwd):/docs documentation gulp lint
+docker run -it -v $(pwd):/docs codeship/documentation gulp lint
+```
+
+#### Jekyll
+
+```bash
+docker run -it -v $(pwd):/docs codeship/documentation bundle exec jekyll doctor
 ```
 
 ## Markup
@@ -84,7 +96,7 @@ If you want to include a table of contents, include the following snippet in the
 ### URL Helpers
 #### Tags
 
-Generate a URL for the specified tag (_database_ in the example below). This is also available as a filter to be used with a variable (_tag_ in the example).
+Generate a URL for the specified tag (_database_ in the example below). This function is also available as a filter and can be used with a variable (_tag_ in the example).
 
 ```
 {% tag_url databases %}
@@ -99,7 +111,7 @@ generate the output like the following (depending on configuration values)
 
 #### Man Pages
 
-Link to a specific Ubuntu man page. This currently defaults to the Ubuntu Trusty version.
+Link to a particular Ubuntu man page. The Ubuntu version currently defaults to Ubuntu Trusty.
 
 ```
 {% man_url formatdb %}
