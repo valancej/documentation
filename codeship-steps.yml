@@ -9,15 +9,15 @@
           command: sh bin/jet.sh
           encrypted_dockercfg_path: dockercfg.encrypted
         - name: build
-          service: docs
+          service: ci
           command: bash bin/build.sh
           encrypted_dockercfg_path: dockercfg.encrypted
         - name: post-process
-          service: docs
+          service: ci
           command: gulp post-process
     - type: serial
       name: linters
-      service: docs
+      service: ci
       encrypted_dockercfg_path: dockercfg.encrypted
       steps:
         - name: SCSS
@@ -27,7 +27,7 @@
         - name: Jekyll
           command: bundle exec jekyll doctor
 - name: fail_master_on_forks
-  service: docs
+  service: ci
   tag: master
   command: sh bin/check_fork.sh
 - type: serial
