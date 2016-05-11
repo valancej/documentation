@@ -117,7 +117,7 @@ Along with being able to push to private registries, you can also push to tags o
   encrypted_dockercfg_path: dockercfg.encrypted
 ```
 
-This `image_tag` field can contain a simple string, or be part of a [Go template](http://golang.org/pkg/text/template/). You can compose your image tag from a variety of provided values.
+This `image_tag` field can contain a simple string, or be part of a [Go template](http://golang.org/pkg/text/template/). You can compose your image tag from a variety of provided values. __Note__ that because we use Go for our Regex support, negative regexes and conditional regexes are  not supported.
 
 * `ProjectID` (the Codeship defined project ID)
 * `BuildID` (the Codeship defined build ID)
