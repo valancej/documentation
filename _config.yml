@@ -37,8 +37,9 @@ exclude:
   - templates
 encoding: utf-8
 gems:
-  - jekyll-sitemap
   - jekyll-coffeescript
+  - jekyll-seo-tag
+  - jekyll-sitemap
 collections:
   faq:
     permalink: /faq/:path/
