@@ -1,6 +1,7 @@
 # Project
 _site
 .bundle
+.jekyll-metadata
 .sass-cache
 codeship.aes
 deployment.env
