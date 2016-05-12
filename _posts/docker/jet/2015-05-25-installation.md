@@ -15,7 +15,7 @@ categories:
 <div class="info-block">
 
 
-Jet is used to locally debug and test builds on Codeship's Docker-based infrastructure, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship's hosted (non-Docker) infrastructure, you will not need to use Jet.
+Jet is used to locally debug and test builds for Codeship's Docker-based infrastructure, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship's hosted (non-Docker) infrastructure, you will not need to use Jet.
 </div>
 
 * include a table of contents
