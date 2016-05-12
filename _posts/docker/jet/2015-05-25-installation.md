@@ -110,4 +110,4 @@ eval $(docker-machine env dev)
 
 ## Using Jet
 
-Now that you have Jet installed and configured, [read more to learn about using it.]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-cli %})
+Now that you have Jet installed and configured, [learn how to use it.]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-cli %})
