@@ -1,8 +1,10 @@
 FROM ruby:2.3.1-slim
 MAINTAINER marko@codeship.com
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV NODE_VERSION 4.x
+ENV \
+	DEBIAN_DISTRIBUTION="jessie" \
+	DEBIAN_FRONTEND="noninteractive" \
+	NODE_VERSION="4.x"
 
 # basic project configuration
 WORKDIR /docs
@@ -11,7 +13,11 @@ EXPOSE 4000
 
 # System dependencies
 RUN \
-	curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}" | bash - && \
+	apt-get update && \
+	apt-get install -y --no-install-recommends \
+		apt-transport-https && \
+	curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
+	echo "deb https://deb.nodesource.com/node_${NODE_VERSION} ${DEBIAN_DISTRIBUTION} main" > /etc/apt/sources.list.d/nodesource.list && \
 	apt-get update && \
 	apt-get install -y --no-install-recommends \
 		build-essential \
