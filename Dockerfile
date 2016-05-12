@@ -40,4 +40,4 @@ RUN \
 COPY . ./
 
 # Serve the site
-CMD ["bundle", "exec", "jekyll", "serve", "-H 0.0.0.0", "--incremental"]
+CMD ["bundle", "exec", "jekyll", "serve", "-H", "0.0.0.0", "--incremental"]
