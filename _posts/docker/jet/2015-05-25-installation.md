@@ -25,11 +25,11 @@ Jet is used to locally debug and test builds for Codeship's Docker-based infrast
 
 Jet is a CLI tool designed to make working with Codeship's Docker infrastructure faster and easier, as well as to put more power in a developer's hands so that there is less time spent configuring and debugging projects via a web UI.
 
-Jet allows you to run your CI/CD pipeline on your local machine, making it much faster to test your configuration, troubleshoot errors and discover the best setup for your project. By default, Jet skips image pushes and deployments but you can instruct it not to skip them with special commands.
+Jet allows you to run your CI/CD pipeline on your local machine, making it much faster to test your configuration, troubleshoot errors and discover the best setup for your project. By default, Jet skips image pushes and deployments but you can instruct it not to skip them with special options.
 
-You can also pass a variety of environmental and setup variables, making Jet a powerful way to simulate your CI/CD process without having to wait for the full push/run/feedback cycle of a real build.
+You can also pass a variety of environment and setup variables, making Jet a powerful way to simulate your CI/CD process without having to wait for the full push/run/feedback cycle of a real build.
 
-Jet also allows you to encrypt your project's environmental variables and image repository credentials, helping you keep your critical information secure without impacting the flexibility of your CI/CD process.
+Jet also allows you to encrypt your project's environment variables and image repository credentials, helping you keep your critical information secure without impacting the flexibility of your CI/CD process.
 
 ## Prerequisites
 
