@@ -15,11 +15,21 @@ categories:
 <div class="info-block">
 
 
-These installation instructions are applicable if you want to run the Codeship local development CLI, `jet` binary, locally. If you only want to run your builds via the hosted Codeship environment, you can skip these steps.
+Jet is used to locally debug and test builds on Codeship's Docker-based infrastructure, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship's hosted (non-Docker) infrastructure, you will not need to use Jet.
 </div>
 
 * include a table of contents
 {:toc}
+
+## What is Jet?
+
+Jet is a CLI tool designed to make working with Codeship's Docker infrastructure faster and easier, as well as to put more power in a developer's hands so that there is less time spent configuring and debugging projects via a web UI.
+
+Jet allows you to run your CI/CD pipeline on your local machine, making it much faster to test your configuration, troubleshoot errors and discover the best setup for your project. By default, Jet skips image pushes and deployments but you can instruct it not to skip them with special commands.
+
+You can also pass a variety of environmental and setup variables, making Jet a powerful way to simulate your CI/CD process without having to wait for the full push/run/feedback cycle of a real build.
+
+Jet also allows you to encrypt your project's environmental variables and image repository credentials, helping you keep your critical information secure without impacting the flexibility of your CI/CD process.
 
 ## Prerequisites
 
@@ -97,3 +107,7 @@ If you installed and configured your Docker environment via [Docker Machine](htt
 ```bash
 eval $(docker-machine env dev)
 ```
+
+## Using Jet
+
+Now that you have Jet installed and configured, [read more to learn about using it.]({{ site.baseurl }}{% post_url docker/jet/docker/jet/2015-05-25-cli %})
