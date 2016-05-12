@@ -9,15 +9,15 @@
           command: sh bin/jet.sh
           encrypted_dockercfg_path: dockercfg.encrypted
         - name: build
-          service: docs
+          service: ci
           command: bash bin/build.sh
           encrypted_dockercfg_path: dockercfg.encrypted
         - name: post-process
-          service: docs
+          service: ci
           command: gulp post-process
     - type: serial
       name: linters
-      service: docs
+      service: ci
       encrypted_dockercfg_path: dockercfg.encrypted
       steps:
         - name: SCSS
@@ -27,28 +27,39 @@
         - name: Jekyll
           command: bundle exec jekyll doctor
 - name: fail_master_on_forks
-  service: docs
+  service: ci
   tag: master
   command: sh bin/check_fork.sh
-- type: serial
-  tag: "^(master|staging/.*|private/.*)$"
+- type: parallel
+  name: deploying
   steps:
-    - name: s3_sync
-      service: aws
-      command: sh bin/s3.sh sync
-      encrypted_dockercfg_path: dockercfg.encrypted
-    - name: s3_website
-      service: aws
-      command: sh bin/s3.sh configure_website _website.json
-      encrypted_dockercfg_path: dockercfg.encrypted
-    - name: s3_lifecycle
-      service: aws
-      command: sh bin/s3.sh configure_lifecycle _lifecycle.json
-      encrypted_dockercfg_path: dockercfg.encrypted
-    - name: s3_robots
-      service: aws
-      command: sh bin/s3.sh robots
-      encrypted_dockercfg_path: dockercfg.encrypted
-    - name: swiftype
-      service: docs
-      command: sh bin/swiftype.sh
+  - type: serial
+    tag: "^(master|staging/.*|private/.*)$"
+    steps:
+      - name: s3_sync
+        service: aws
+        command: sh bin/s3.sh sync
+        encrypted_dockercfg_path: dockercfg.encrypted
+      - name: s3_website
+        service: aws
+        command: sh bin/s3.sh configure_website _website.json
+        encrypted_dockercfg_path: dockercfg.encrypted
+      - name: s3_lifecycle
+        service: aws
+        command: sh bin/s3.sh configure_lifecycle _lifecycle.json
+        encrypted_dockercfg_path: dockercfg.encrypted
+      - name: s3_robots
+        service: aws
+        command: sh bin/s3.sh robots
+        encrypted_dockercfg_path: dockercfg.encrypted
+      - name: swiftype
+        service: ci
+        command: sh bin/swiftype.sh
+  - type: push
+    tag: "^master$"
+    name: push_docker_hub
+    service: documentation
+    image_name: codeship/documentation
+    image_tag: latest
+    registry: https://index.docker.io/v1/
+    encrypted_dockercfg_path: dockercfg.encrypted
