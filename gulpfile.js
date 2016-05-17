@@ -34,7 +34,8 @@ gulp.task('img:resize', function() {
 	]
 	return gulp.src(paths)
 		.pipe(imageResize({
-			width: 2048
+			width: 1024,
+			upscale : false
 		}))
 		.pipe(print())
 		.pipe(gulp.dest('images'));
