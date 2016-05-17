@@ -25,12 +25,8 @@ gulp.task('css', folders(site, function(folder) {
 
 gulp.task('img:resize', function() {
 	var paths = [
-		path.join(site, 'images', '*.jpeg'),
-		path.join(site, 'images', '**', '*.jpeg'),
-		path.join(site, 'images', '*.jpg'),
-		path.join(site, 'images', '**', '*.jpg'),
-		path.join(site, 'images', '*.png'),
-		path.join(site, 'images', '**', '*.png')
+		path.join(site, '**', 'images', '*.*'),
+		path.join(site, '**', 'images', '**', '*.*'),
 	]
 	return gulp.src(paths)
 		.pipe(imageResize({
@@ -38,17 +34,13 @@ gulp.task('img:resize', function() {
 			upscale : false
 		}))
 		.pipe(print())
-		.pipe(gulp.dest('images'));
+		.pipe(gulp.dest(path.join(site, 'images')));
 });
 
 gulp.task('img:minify', ['img:resize'], function() {
 	var paths = [
-		path.join(site, 'images', '*.jpeg'),
-		path.join(site, 'images', '**', '*.jpeg'),
-		path.join(site, 'images', '*.jpg'),
-		path.join(site, 'images', '**', '*.jpg'),
-		path.join(site, 'images', '*.png'),
-		path.join(site, 'images', '**', '*.png')
+		path.join(site, '**', 'images', '*.*'),
+		path.join(site, '**', 'images', '**', '*.*'),
 	]
 	return gulp.src(paths)
 		.pipe(imagemin({
