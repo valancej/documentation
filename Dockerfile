@@ -15,6 +15,7 @@ RUN \
 	apt-get update && \
 	apt-get install -y --no-install-recommends \
 		build-essential \
+		graphicsmagick \
 		libssl1.0.0 \
 		libyaml-0-2 \
 		nodejs && \
