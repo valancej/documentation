@@ -16,8 +16,10 @@ On the ***Environment*** page of your project settings you can enter the variabl
 We will export these environment variables to the environment your build runs via a command similar to:
 
 ```bash
-export VARIABLE_NAME=value
+export VARIABLE_NAME="value"
 ```
+
+Single (`'`) and double quotes (`"`), as well as backticks (`` ` ``) in the _value_ part of your variable are automatically escaped by prepending them with a backslash (`\`). Other characters with a special meaning (e.g. `$`) are not escaped automatically to allow you to use them with your environment variables. (For example to include the value of another variable.)
 
 We export your environment variables before all other commands of your build. This is pure convenience for setting up the environment but completely equal to exporting environment variables yourself.
 
