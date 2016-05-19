@@ -1,5 +1,6 @@
 - type: parallel
   name: testing
+  encrypted_dockercfg_path: dockercfg.encrypted
   steps:
     - type: serial
       name: prepare_site
@@ -7,18 +8,15 @@
         - name: jet_release_notes
           service: aws
           command: sh bin/jet.sh
-          encrypted_dockercfg_path: dockercfg.encrypted
         - name: build
           service: ci
           command: bash bin/build.sh
-          encrypted_dockercfg_path: dockercfg.encrypted
         - name: post-process
           service: ci
           command: gulp post-process
     - type: serial
       name: linters
       service: ci
-      encrypted_dockercfg_path: dockercfg.encrypted
       steps:
         - name: SCSS
           command: bundle exec scss-lint
@@ -30,6 +28,7 @@
   service: ci
   tag: master
   command: sh bin/check_fork.sh
+  encrypted_dockercfg_path: dockercfg.encrypted
 - type: parallel
   name: deploying
   tag: "^(master|staging/.*|private/.*)$"
