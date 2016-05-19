@@ -31,28 +31,25 @@
   tag: master
   command: sh bin/check_fork.sh
 - type: parallel
-  tag: "^(master|staging/.*|private/.*)$"
   name: deploying
+  tag: "^(master|staging/.*|private/.*)$"
+  encrypted_dockercfg_path: dockercfg.encrypted
   steps:
   - name: s3_sync
     service: aws
     command: sh bin/s3.sh sync
-    encrypted_dockercfg_path: dockercfg.encrypted
   - type: serial
     tag: "^master$"
     steps:
       - name: s3_website
         service: aws
         command: sh bin/s3.sh configure_website _website.json
-        encrypted_dockercfg_path: dockercfg.encrypted
       - name: s3_lifecycle
         service: aws
         command: sh bin/s3.sh configure_lifecycle _lifecycle.json
-        encrypted_dockercfg_path: dockercfg.encrypted
       - name: s3_robots
         service: aws
         command: sh bin/s3.sh robots
-        encrypted_dockercfg_path: dockercfg.encrypted
       - name: swiftype
         service: ci
         command: sh bin/swiftype.sh
@@ -63,4 +60,3 @@
     image_name: codeship/documentation
     image_tag: latest
     registry: https://index.docker.io/v1/
-    encrypted_dockercfg_path: dockercfg.encrypted
