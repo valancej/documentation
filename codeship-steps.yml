@@ -35,28 +35,28 @@
   tag: "^(master|staging/.*|private/.*)$"
   encrypted_dockercfg_path: dockercfg.encrypted
   steps:
-  - name: s3_sync
-    service: aws
-    command: sh bin/s3.sh sync
-  - type: serial
-    tag: "^master$"
-    steps:
-      - name: s3_website
-        service: aws
-        command: sh bin/s3.sh configure_website _website.json
-      - name: s3_lifecycle
-        service: aws
-        command: sh bin/s3.sh configure_lifecycle _lifecycle.json
-      - name: s3_robots
-        service: aws
-        command: sh bin/s3.sh robots
-      - name: swiftype
-        service: ci
-        command: sh bin/swiftype.sh
-  - type: push
-    tag: "^master$"
-    name: push_docker_hub
-    service: documentation
-    image_name: codeship/documentation
-    image_tag: latest
-    registry: https://index.docker.io/v1/
+    - name: s3_sync
+      service: aws
+      command: sh bin/s3.sh sync
+    - type: serial
+      tag: "^master$"
+      steps:
+        - name: s3_website
+          service: aws
+          command: sh bin/s3.sh configure_website _website.json
+        - name: s3_lifecycle
+          service: aws
+          command: sh bin/s3.sh configure_lifecycle _lifecycle.json
+        - name: s3_robots
+          service: aws
+          command: sh bin/s3.sh robots
+        - name: swiftype
+          service: ci
+          command: sh bin/swiftype.sh
+    - type: push
+      tag: "^master$"
+      name: push_docker_hub
+      service: documentation
+      image_name: codeship/documentation
+      image_tag: latest
+      registry: https://index.docker.io/v1/
