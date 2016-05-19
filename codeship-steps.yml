@@ -31,15 +31,16 @@
   tag: master
   command: sh bin/check_fork.sh
 - type: parallel
+  tag: "^(master|staging/.*|private/.*)$"
   name: deploying
   steps:
+  - name: s3_sync
+    service: aws
+    command: sh bin/s3.sh sync
+    encrypted_dockercfg_path: dockercfg.encrypted
   - type: serial
-    tag: "^(master|staging/.*|private/.*)$"
+    tag: "^master$"
     steps:
-      - name: s3_sync
-        service: aws
-        command: sh bin/s3.sh sync
-        encrypted_dockercfg_path: dockercfg.encrypted
       - name: s3_website
         service: aws
         command: sh bin/s3.sh configure_website _website.json
