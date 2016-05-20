@@ -6,9 +6,9 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     colorator (0.1)
-    execjs (2.6.0)
+    execjs (2.7.0)
     ffi (1.9.10)
-    jekyll (3.1.5)
+    jekyll (3.1.6)
       colorator (~> 0.1)
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 1.1)
@@ -47,7 +47,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (~> 3.1.5)
+  jekyll (~> 3.1.6)
   jekyll-coffeescript (~> 1.0.1)
   jekyll-seo-tag (~> 1.4.0)
   jekyll-sitemap (~> 0.10.0)
