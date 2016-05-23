@@ -3,6 +3,9 @@
     "ID": "staging",
     "Prefix": "staging/",
     "Status": "Enabled",
+    "AbortIncompleteMultipartUpload": {
+      "DaysAfterInitiation": 7
+    },
     "Expiration": {
       "Days": 14
     }
@@ -10,6 +13,9 @@
     "ID": "private",
     "Prefix": "private/",
     "Status": "Enabled",
+    "AbortIncompleteMultipartUpload": {
+      "DaysAfterInitiation": 7
+    },
     "Expiration": {
       "Days": 30
     }
