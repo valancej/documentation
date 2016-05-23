@@ -16,13 +16,20 @@ categories:
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}).
 </div>
 
-## Using Docker volumes
+## What Are Docker Volumes?
+Volumes are a way to pass data between containers, as well as between steps in your CI/CD process. Volumes are directories that other containers can read data from once they have been mounted either inside of one of your containers or on the host infrastructure itself.
 
-Volumes can be used to connect containers in your build environment, and to share build artifacts between containers and steps in your pipeline.
+This means you can have containers that work together without needing to tightly couple them or build out any direct communication between them. This is a great way to keep your containers efficient, and volumes solve a lot of problems in Docker-based architecture.
 
-Please see the [example in the codeship-tool examples repository](https://github.com/codeship/codeship-tool-examples/tree/master/07.volumes) of how to use volumes.
+## Using Docker Volumes With Codeship
+There are two primary ways to use Docker volumes in your CI/CD process with Codeship.
 
-To connect containers using volumes, first define a volume on one container in your codeship-service.yml:
+### Passing Data Between Containers
+You can mount volumes in your containers and allow other containers to access that volume *during the same step*. A step here refers to an individual command in your `codeship-steps.yml` file. ([Learn more about your Steps file here.]({{ site.baseurl }}/docker/steps/))
+
+It's important to note that with this setup, data will be available between containers but will __not__ persist when the current step finishes and the next step begins.
+
+To mount a volume to share data between your containers, first you need to open up your `codeship-service.yml` and specify a directory using the `volumes` directive on one of your services:
 
 ```yaml
 data:
@@ -31,7 +38,7 @@ data:
     - /artifacts
 ```
 
-You can then use the `volumes_from` declaration to mount this volume on another container.
+Then, for your remaining services that require access to the volume, you will use the `volumes_from` directive in your other service definitions and specify which service you are reading the volume from (i.e. the one specified with your `volumes` directive.)
 
 ```yaml
 myapp:
@@ -40,11 +47,12 @@ myapp:
     - data
 ```
 
-## Persisting volumes between steps
+[We have a downloadable example of this set up here.](https://github.com/codeship/codeship-tool-examples/tree/master/07.volumes)
 
-By default, all steps have an independent set of containers. As such, referencing a volume common to multiple steps will not reference the same base folder. This means not only containers, but also volumes, are isolated between steps.
+### Passing Data Between Steps
+The second setup solves the problem of persisting data *between* steps in your `codeship-services.yml` file. Since every step runs on a separate set of containers, date produced in one step is not normally available to a later step - but by mounting a volume on the host infrastructure you can persist data throughout your entire build.
 
-To get around this, and share volumes between steps, simply define a static volume mount point:
+ To mount a volume on the host, open your `codeship-services.yml` file and map a host directory to your container directory:
 
 ```yaml
 data:
@@ -53,6 +61,19 @@ data:
     - /tmp/artifacts:/artifacts
 ```
 
-With this static volume mounting, every container mounting a volume, regardless of the step, will share the same base folder on the host. This allows build artifacts to be shared between steps of your build. For an example of this, check out the [deployment example](https://github.com/codeship/codeship-tool-examples/tree/master/08.deployment-container) showing how to build and share build artifacts between steps.
+On all other services that need to access this data, you can use either the `volumes_from` directive as explained in the previous example or simply provide the exact same `volumes` directive (with the host:container mapping) on all services that require access to your volume.
+
+[We have a downloadable example of this set up here](https://github.com/codeship/codeship-tool-examples/tree/master/08.deployment-container)
+
+## Common Use Cases
+There are several common problems that volumes solve, including:
+
+* Using a file in a shared volume as a "health check" to look for service availability or completion
+
+* Passing credentials between steps or services
+
+* Creating compiled assets and artifacts via one service to be deployed or pushed to an image registry from another service
+
+* Avoiding re-work between steps (such as not re-seeding your database multiple times.)
 
 As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.
