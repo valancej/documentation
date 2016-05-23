@@ -107,7 +107,7 @@ You will also need to configure your `codeship-steps.yml` file to provide your a
 
 ## Using Private Base Images From Self-Hosted Registries
 
-You can also access images from privately or self-hosted image registries.
+You can also access images from privately or self-hosted registries.
 
 In your `Dockerfile`:
 
