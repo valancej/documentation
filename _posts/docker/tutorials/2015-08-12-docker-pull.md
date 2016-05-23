@@ -18,11 +18,19 @@ categories:
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}).
 </div>
 
-## Using private images in your builds
+## Using Private Base Images In Your Builds
 
-`jet` does support using private Docker images as base images for your containers. Similar to [pushing images]({{ site.baseurl }}{% post_url docker/tutorials/2015-07-03-docker-push %}) you need to save your encrypted `.dockercfg` file in the repository and reference it for any step using private base images (or for groups of steps).
+Using Codeship's Docker infrastructure, you can easily use private Docker images as base images for your containers.
 
-## Configuring a build with a private base image
+Similar to [pushing images]({{ site.baseurl }}{% post_url docker/tutorials/2015-07-03-docker-push %}), you need to save your encrypted `.dockercfg` file in the repository and reference it for any step using private base images (or for groups of steps). You also need to specify in your `Dockerfile` and your `Codeship-services.yml` file which images from your repository you want to use.
+
+You can also pull images from multiple repositories within the same build, as long as you provide all necessary credentials.
+
+## Providing Your Repository Account Credentials
+
+To download a private base image, you'll need to provide your account credentials so that your Docker builds can authenticate with the repository and access your image.
+
+To provide your image repository credentials:
 
 * Get the AES encryption key from the _General_ settings page of your Codeship project and save it to your repository as `codeship.aes` (adding it to the `.gitignore` file is a good idea).
 
@@ -32,37 +40,14 @@ To follow this tutorial on your own computer, please [install the `jet` CLI loca
 docker login
 # follow the onscreen instructions
 # ...
-jet encrypt ${HOME}/.docker/config.json .dockercfg.encrypted
+jet encrypt ${HOME}/.docker/config.json dockercfg.encrypted
 # or (depending if you are on an older version of Docker)
-jet encrypt ${HOME}/.dockercfg .dockercfg.encrypted
+jet encrypt ${HOME}/.dockercfg dockercfg.encrypted
 ```
 
-* For Quay.io
+## Using Private Base Images From Dockerhub
 
-    * First configure a [robot account](http://docs.quay.io/glossary/robot-accounts.html)
-    * Once you have configured the robot account, download the `.dockercfg` file for this account, by heading over to the _Robots Account_ tab in your settings, clicking the gear icon, selecting _View Credentials_ and hitting the download button.
-    * Save the file as `.dockercfg` in your repository, encrypt it and add the unencrypted version to `.gitignore`
-
-```bash
-echo ".dockercfg" >> .gitignore
-jet encrypt .dockercfg .dockercfg.encrypted
-```
-
-* Commit `.dockercfg.encrypted` as well as the `.gitignore` file
-
-```bash
-git add .dockercfg.encrypted .gitignore
-git commit -m "Adding encrypted credentials for docker push"
-```
-
-* Adapt your Dockerfile
-
-```Dockerfile
-FROM codeship/private_base
-# ...
-```
-
-* Configure your `codeship-services.yml` file. It will probably look similar to the following:
+Configure your `codeship-services.yml` file. It will probably look similar to the following:
 
 ```yaml
 # Building a container based on a private base image
@@ -72,20 +57,95 @@ app:
 
 # pulling a container from a private repository (without building it locally)
 db:
-  image: codeship/postgresql
+  image: username/repository_name
 ```
 
-* Configure your `codeship-steps.yml` file. Make sure to specify the encrypted Docker configuration for any step that requires access to a private image.
+You will also need to configure your `codeship-steps.yml` file to provide your account credentials on every step that using a private base image.
 
 ```yaml
 - service: app
   command: /bin/true
-  encrypted_.dockercfg_path: .dockercfg.encrypted
+  encrypted_.dockercfg_path: dockercfg.encrypted
 ```
 
-* Commit and push the changes to your remote repository, head over to [Codeship](https://codeship.com/) and watch your build pull the private image from the registry!
+## Using Private Base Images From Quay.io
 
-## Common problems
+Quay.io has slightly different permissions and specification requirement than Dockerhub, so make sure to provide the necessary specifications for accessing your Quay repos.
+
+* First configure a [robot account](http://docs.quay.io/glossary/robot-accounts.html)
+* Once you have configured the robot account, download the `.dockercfg` file for this account, by heading over to the _Robots Account_ tab in your settings, clicking the gear icon, selecting _View Credentials_ and hitting the download button.
+* Save the file as `.dockercfg` in your repository, encrypt it and add the unencrypted version to `.gitignore`
+
+```bash
+echo ".dockercfg" >> .gitignore
+jet encrypt .dockercfg dockercfg.encrypted
+```
+
+* Now commit `dockercfg.encrypted` as well as the `.gitignore` file:
+
+```bash
+git add dockercfg.encrypted .gitignore
+git commit -m "Adding encrypted credentials for docker push"
+```
+
+With your permissions defined for your Quay.io account, you'll now want to make sure your image definitions themselves specify Quay.
+
+In your `Dockerfile`:
+
+```Dockerfile
+FROM quay.io/username/repository_name
+# ...
+```
+
+And, in your `codeship-services.yml` file:
+
+```yaml
+# Building a container based on a private base image
+app:
+  build:
+    dockerfile_path: Dockerfile
+
+# pulling a container from a private repository (without building it locally)
+db:
+  image: quay.io/username/repository_name
+  registry: registryURL
+  encrypted_dockercfg_path: dockercfg.encrypted
+```
+
+## Using Private Base Images From Self-Hosted Repos
+
+You can also access images from privately or self-hosted image repositories.
+
+In your `Dockerfile`:
+
+```Dockerfile
+FROM registryURL/username/repository_name
+# ...
+```
+
+And, in your `codeship-services.yml` file:
+
+```yaml
+# Building a container based on a private base image
+app:
+  build:
+    dockerfile_path: Dockerfile
+
+# pulling a container from a private repository (without building it locally)
+db:
+  image: registryURL/username/repository_name
+  encrypted_dockercfg_path: dockercfg.encrypted
+```
+
+You will also need to configure your `codeship-steps.yml` file to provide your account credentials on every step that using a private base image.
+
+```yaml
+- service: app
+  command: /bin/true
+  encrypted_.dockercfg_path: dockercfg.encrypted
+```
+
+## Common Problems
 
 ### Invalid character / Failed to parse .dockercfg
 
@@ -104,7 +164,6 @@ Sometimes you might see this error the first time you go to encrypt your `.docke
 ``jet: no key``
 
 This means your AES key is missing from your project directory and must be downloaded according to [the instructions above.](#configuring-a-build-with-a-private-base-image)
-
 
 ### Need a key regenerated
 
