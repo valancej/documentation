@@ -5,10 +5,19 @@
     "type": "git",
     "url": "https://github.com/codeship/documentation.git"
   },
+  "bugs": {
+    "url": "https://github.com/codeship/documentation/issues"
+  },
   "license": "MIT",
+  "engines": {
+    "node": "^4.4.4",
+    "npm": "^2.15.1"
+  },
   "dependencies": {
     "autoprefixer": "^6.0.0",
     "gulp-folders": "^1.1.0",
+    "gulp-image-resize": "^0.7.1",
+    "gulp-imagemin": "^2.4.0",
     "gulp-jsonlint": "^1.1.1",
     "gulp-postcss": "^6.0.0",
     "gulp-print": "^2.0.1",
