@@ -5,7 +5,7 @@ documentation:
 ci:
   build:
     image: quay.io/codeship/documentation
-    dockerfile_path: Dockerfile.ci
+    dockerfile_path: Dockerfile
   cached: true
   volumes_from:
     - data
