@@ -17,10 +17,6 @@ aws:
   volumes_from:
     - data
   encrypted_env_file: deployment.env.encrypted
-curl:
-  build:
-    dockerfile_path: Dockerfile.curl
-  encrypted_env_file: deployment.env.encrypted
 data:
   image: busybox
   volumes:
