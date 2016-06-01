@@ -59,3 +59,7 @@
       image_name: codeship/documentation
       image_tag: latest
       registry: https://index.docker.io/v1/
+- name: Notify Slack
+  service: ci
+  tag: "^(master|staging/.*|private/.*)$"
+  command: sh bin/notify_slack.sh
