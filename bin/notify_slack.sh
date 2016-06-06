@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 log() { echo -e "\033[36m$@\033[39m"; }
 
