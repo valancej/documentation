@@ -62,4 +62,4 @@
 - name: Notify Slack
   service: ci
   tag: "^(master|staging/.*|private/.*)$"
-  command: sh bin/notify_slack.sh
+  command: bash bin/notify_slack.sh
