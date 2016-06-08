@@ -17,4 +17,6 @@ Please add the following command in the Setup Command section of your test setti
 pip install awscli
 ```
 
+Please visit https://aws.amazon.com/cli/ for more information including CLI references.
+
 If you would like a simpler way to deploy to AWS, Codeship also offers integrated deployment with [Elastic Beanstalk]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-to-elastic-beanstalk%}), [CodeDeploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-11-10-deployment-to-aws-codedeploy%}), and S3.
