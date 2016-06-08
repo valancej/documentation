@@ -5,7 +5,8 @@ documentation:
 ci:
   build:
     image: quay.io/codeship/documentation
-    dockerfile_path: Dockerfile.ci
+    dockerfile_path: Dockerfile
+  encrypted_env_file: deployment.env.encrypted
   cached: true
   volumes_from:
     - data
@@ -16,10 +17,6 @@ aws:
   cached: true
   volumes_from:
     - data
-  encrypted_env_file: deployment.env.encrypted
-curl:
-  build:
-    dockerfile_path: Dockerfile.curl
   encrypted_env_file: deployment.env.encrypted
 data:
   image: busybox

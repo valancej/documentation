@@ -8,7 +8,7 @@ gem 'sass', '~> 3.4.22'
 
 # Jekyll plugins
 gem 'jekyll-coffeescript', '~> 1.0.1'
-gem 'jekyll-seo-tag', '~> 1.4.0'
+gem 'jekyll-seo-tag', '~> 2.0.0'
 gem 'jekyll-sitemap', '~> 0.10.0'
 
 group :test do
