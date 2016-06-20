@@ -64,8 +64,7 @@ As with the the FTP example above, we will deploy the complete repository conten
 Please add a file containing the following directives to your repository. You can name it any way you like. In our case we will call it _production_ and store it in a subdirectory called _deploy_.
 
 ```shell
-mkdir /path/on/server
-put -rp "~/clone/" /path/on/server/
+put -rp /home/rof/clone /path/on/server/
 ```
 
 For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
@@ -74,8 +73,8 @@ For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-dep
 sftp -b deploy/production ssh_user@your.server.com
 ```
 
-Make sure you add the [SSH key of your project]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %})
-into your servers ***authorized_keys*** file.
+* Make sure you add the [SSH key of your project]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %}) into your servers ***authorized_keys*** file.
+* Also make sure your _remote directory_ already exists before running your first deployment.
 
 ## Continuous Deployment with SCP
 
