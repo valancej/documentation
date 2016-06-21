@@ -2,6 +2,8 @@
 
 Example: https://codeship.com/documentation/docker/services/
 
+### TOC
+
 ### Introduction
 Write a brief introduction summary of the topic in which this document will cover
 
