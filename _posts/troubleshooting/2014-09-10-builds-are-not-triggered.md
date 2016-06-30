@@ -36,14 +36,6 @@ https://lighthouse.codeship.io/bitbucket/YOUR_PROJECT_UUID
 
 ![BitBucket Service Configuration]({{ site.baseurl }}/images/faq/webhook_bitbucket.png)
 
-### Issues with BitBucket
-
-There is a bug with BitBucket web hooks, which won't supply needed information for pushes which don't include new commits. (E.g. pushing a merge of two branches). The full bug report on this is available at the [BitBucket issue tracker](https://bitbucket.org/site/master/issue/7775/post-service-does-not-provide-useful).
-
-As a workaround we recommend explicitly creating a merge commit when merging branches. On the command line simply include the `--no-ff` flag.
-
-Please note, that in some cases even including the flag won't trigger a build on Codeship. See the above mentioned bug report for the full details.
-
 ## Issues with Codeship
 
 It also might be possible that there are issues on Codeship. Please check our [Codeship Status Page](http://codeshipstatus.com){:target="_blank"} or follow us on [@Codeship](https://twitter.com/codeship) for further information.
