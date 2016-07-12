@@ -64,6 +64,8 @@ On all other services that need to access this data, you can use either the `vol
 
 [We have a downloadable example of this set up here](https://github.com/codeship/codeship-tool-examples/tree/master/08.deployment-container)
 
+**Important note**: Volumes are mounted at run time, not at build time. During build time, the host directory is available but the directory mounted into the container is not. The inverse is true during run time. This means that if you were using the code snippet shown above, you would reference `tmp/artifacts` in your Dockerfile when running an `ADD` or a `COPY` command since those commands are running in the build context, but if you were accessing the volume from a step in your `codeship-steps.yml` file, then you would reference the mounted `/artifacts` directory instead since the host directory would be unavailable in the run context.
+
 ## Common Use Cases
 Volumes solve several common problems, including:
 
@@ -75,7 +77,7 @@ Volumes solve several common problems, including:
 
 * Avoiding re-work between steps (such as not re-creating test data multiple times.)
 
-## More information
+## More Information
 
 * https://docs.docker.com/engine/reference/builder/#volume
 
