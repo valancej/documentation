@@ -2,17 +2,12 @@ documentation:
   build:
     image: codeship/documentation
     dockerfile_path: Dockerfile
-ci:
-  build:
-    image: quay.io/codeship/documentation
-    dockerfile_path: Dockerfile
   encrypted_env_file: deployment.env.encrypted
   cached: true
   volumes_from:
     - data
 aws:
   build:
-    image: quay.io/codeship/documentation-aws
     dockerfile_path: Dockerfile.aws
   cached: true
   volumes_from:
