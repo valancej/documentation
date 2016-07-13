@@ -15,7 +15,7 @@ categories:
 {:toc}
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}).
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}). Note that if the generator service you select needs to write your local filesystem, you must use a local Docker host (Linux, Docker for Mac and Windows, Docker Machine with VirtualBox, etc), and not a remote Docker host.
 </div>
 
 ## Overview
