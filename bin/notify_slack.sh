@@ -41,4 +41,5 @@ EOT
 
 # send API request to slack
 log "Pinging Slack"
-curl -s -X POST --data-urlencode "$payload" "$SLACK_WEBHOOK_URL"
+log "payload: ${payload}"
+curl -v -X POST --data-urlencode "${payload}" "${SLACK_WEBHOOK_URL}"
