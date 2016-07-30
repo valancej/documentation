@@ -28,7 +28,7 @@ The first thing you want to do is install Codeship Jet on your local machine. Fo
 
 Once Jet is installed, we'll want to test it out. Type 'jet version' to print the version number on screen. Next, type 'jet help' to bring up the help options. Jet is very powerful - from running CI to encrypting your credentials, so take some time to play around with what you see when you run 'jet help'.
 
-![Jet Help Log Output](({{ site.baseurl }}/images/gettingstarted/jet-help.png)
+![Jet Help Log Output]({{ site.baseurl }}/images/gettingstarted/jet-help.png)
 
 ## Make A Simple Ruby Script
 
@@ -126,7 +126,7 @@ Since we reference *redis* and *postgres*, we need to define them as separate se
 
 One important thing to know is that any time you build a service, such as *demo*, it will automatically spin up containers for every linked service. So if we build *demo*, we end up with three containers: one for the primary service and one for each service.
 
-![Three containers](/images/3containers.png)
+![Three containers]({{ site.baseurl }}/images/gettingstarted/3containers.png)
 
 ## Pick Your Steps To Run
 
@@ -142,7 +142,7 @@ Next up, we define what steps run in your CI/CD workflow. This is done through a
   The step then launches one of the services defined in your **codeship-services.yml** file - in this case, it's launching the *demo* service. Now, if you remember, because we launched the *demo* service it's also going to launch the two linked services: *redis* and *postgres*.
   Next we call a command inside our new *demo* container. We tell it to run the **check.rb** script we created and added to our Dockerfile earlier.
 
-  ![flow chart of three containers and script](/images/workflow.png)
+  ![flow chart of three containers and script]({{ site.baseurl }}/images/gettingstarted/workflow.png)
 
   As you'll recall, that script prints the version of *redis* and *postgres* - which it will by checking the version of the services we launched via the links to our original *demo* service.
 
@@ -158,7 +158,7 @@ This will tell the Codeship CLI tool Jet to build the services in your **codeshi
 
 If everything is working, you should see something like this:
 
-![Screenshot of terminal showing example](/images/part1working.png)
+![Screenshot of terminal showing example]({{ site.baseurl }}/images/gettingstarted/part1working.png)
 
 And if you scroll through your logs, you should see the versions for *redis* and *postgres* printed just as **check.rb** instructs it to.
 
