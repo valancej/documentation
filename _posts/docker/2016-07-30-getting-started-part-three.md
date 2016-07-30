@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting Started Part 3
 layout: page
 weight: 85
 tags:

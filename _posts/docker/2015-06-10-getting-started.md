@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting Started Part 1
 layout: page
 weight: 85
 tags:
@@ -28,7 +28,7 @@ The first thing you want to do is install Codeship Jet on your local machine. Fo
 
 Once Jet is installed, we'll want to test it out. Type 'jet version' to print the version number on screen. Next, type 'jet help' to bring up the help options. Jet is very powerful - from running CI to encrypting your credentials, so take some time to play around with what you see when you run 'jet help'.
 
-![Jet Help Log Output](/images/jet-help.png)
+![Jet Help Log Output](({{ site.baseurl }}/images/gettingstarted/jet-help.png)
 
 ## Make A Simple Ruby Script
 
