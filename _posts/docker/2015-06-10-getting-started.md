@@ -8,6 +8,7 @@ tags:
   - introduction
   - getting started
   - tutorial
+  - getting started jet
 categories:
   - docker
 ---
