@@ -133,4 +133,4 @@ Now, if we go over to our Dockerhub repo, we should see some meta data indicatin
 
 Now we've built an app, added a test, pushed an image and deployed our code. What's next?
 
-We want to walk through a couple of the powerful, flexible things you can achieve with Codeship, Jet and Docker - and we're going to start with *volumes*. [Let's learn about volumes.]({{ site.baseurl }}{% post_url docker/jet/2016-07-30-getting-started-part-four.md %})
+We want to walk through a couple of the powerful, flexible things you can achieve with Codeship, Jet and Docker - and we're going to start with *volumes*. [Let's learn about volumes.]({{ site.baseurl }}{% post_url docker/jet/2016-07-30-getting-started-part-four %})

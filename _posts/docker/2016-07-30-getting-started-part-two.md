@@ -95,4 +95,4 @@ You should see something like this indicating our tests ran and passed:
 
 ## After Testing, Push Images And/Or Deploy!
 
-So, now we have images building, a working script and a working test! The next step is to move from CI to CD: [pushing images and deploying your code.]({{ site.baseurl }}{% post_url docker/jet/2016-07-30-getting-started-part-three.md %})
+So, now we have images building, a working script and a working test! The next step is to move from CI to CD: [pushing images and deploying your code.]({{ site.baseurl }}{% post_url docker/jet/2016-07-30-getting-started-part-three %})
