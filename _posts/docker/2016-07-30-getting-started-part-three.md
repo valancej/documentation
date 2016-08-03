@@ -13,10 +13,10 @@ categories:
   - docker
 ---
 
-The source for the tutorial is available on Github as [codeship/jet-tutorial](https://github.com/codeship/jet-tutorial) and you can clone it via
+The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
 ```bash
-git clone git@github.com:codeship/jet-tutorial.git
+git clone git@github.com:codeship/ci-guide.git
 ```
 
 ## Now, We Release Code Or Images (Or Both!)
