@@ -10,7 +10,7 @@ tags:
   - tutorial
   - getting started jet  
 categories:
-  - docker
+  - docker-guide
 ---
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via

@@ -10,7 +10,7 @@ tags:
   - tutorial
   - getting started jet
 categories:
-  - docker
+  - docker-guide
 ---
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
@@ -175,4 +175,4 @@ Looking at the same logs as before, you'll see that now your *redis* service is 
 
 ## Next: Adding Tests
 
-Now that we've covered the basics of how **Jet**, `codeship-services.yml`, `codeship-steps.yml` and your Docker applications link together to create a unique and powerful Docker-native CI/CD process, we'll move on to explore some more robust examples. Up next, [running your tests.]({{ site.baseurl }}{% post_url docker/jet/2016-07-30-getting-started-part-two %})
+Now that we've covered the basics of how **Jet**, `codeship-services.yml`, `codeship-steps.yml` and your Docker applications link together to create a unique and powerful Docker-native CI/CD process, we'll move on to explore some more robust examples. Up next, [running your tests.]({{ site.baseurl }}{% post_url docker/guide/2016-07-27-getting-started-part-two %})

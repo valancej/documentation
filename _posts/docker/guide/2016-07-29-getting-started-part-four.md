@@ -10,7 +10,7 @@ tags:
   - tutorial
   - getting started jet  
 categories:
-  - docker
+  - docker-guide
 ---
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
@@ -146,4 +146,4 @@ Of course, every application is different so there are a ton of potential reason
 
 ## Next: Parallel, Speed, etc
 
-Next we're going to look at two of the more powerful and productive things you can do to create really fast and efficient CI/CD pipelines with Codeship. [Taking a look at parallel steps and caching.]({{ site.baseurl }}{% post_url docker/jet/2016-07-30-getting-started-part-five %})
+Next we're going to look at two of the more powerful and productive things you can do to create really fast and efficient CI/CD pipelines with Codeship. [Taking a look at parallel steps and caching.]({{ site.baseurl }}{% post_url docker/guide/2016-07-30-getting-started-part-five %})

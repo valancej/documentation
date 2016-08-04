@@ -10,7 +10,7 @@ tags:
   - tutorial
   - getting started jet  
 categories:
-  - docker
+  - docker-guide
 ---
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
@@ -96,4 +96,4 @@ You should see something like this indicating our tests ran and passed:
 
 ## After Testing, Push Images And/Or Deploy!
 
-So, now we have images building, a working script and a working test! The next step is to move from CI to CD: [pushing images and deploying your code.]({{ site.baseurl }}{% post_url docker/jet/2016-07-30-getting-started-part-three %})
+So, now we have images building, a working script and a working test! The next step is to move from CI to CD: [pushing images and deploying your code.]({{ site.baseurl }}{% post_url docker/guide/2016-07-28-getting-started-part-three %})
