@@ -1,7 +1,7 @@
 ---
 title: Getting Started Part 4
 layout: page
-weight: 125
+weight: 70
 tags:
   - docker
   - jet
