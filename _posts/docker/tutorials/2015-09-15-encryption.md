@@ -88,4 +88,4 @@ If you want to run through a complete example with a working services and steps 
 
 ## Docker configuration
 
-See the tutorials on [Docker Push]({{ site.baseurl }}{% post_url docker/tutorials/2015-07-03-docker-push %}) and [Private Base Images](({{ site.baseurl }}{% post_url docker/tutorials/2015-08-12-docker-pull %})) for the exact steps required to encrypt the Docker configuration.
+See the tutorials on [Docker Push]({{ site.baseurl }}{% post_url docker/tutorials/2015-07-03-docker-push %}) and [Private Base Images]({{ site.baseurl }}{% post_url docker/tutorials/2015-08-12-docker-pull %}) for the exact steps required to encrypt the Docker configuration.
