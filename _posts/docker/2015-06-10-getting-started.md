@@ -39,7 +39,7 @@ First, create a file called `check.rb`. In that file we're just going to print o
 
 In `check.rb`, just write and save the following code:
 
-```
+```ruby
 require "redis"
 require "pg"
 
@@ -72,7 +72,7 @@ If you're not familiar with Dockerfiles, and you want to spend a little bit of t
 
 Now, if you're ready to get going, we're going to define a simple Dockerfile. So, create your file and drop this code in:
 
-```
+```bash
 !-- # base on latest ruby base image
 FROM ruby:2.2.1
 
@@ -106,7 +106,7 @@ So, with Codeship we use Docker Compose as a jumping off point for your CI/CD pr
 
 So, once you've created your `codeship-services.yml` go ahead and add the following code to it:
 
-```
+```yaml
 demo:
   build:
     image: myapp
@@ -132,7 +132,7 @@ One important thing to know is that any time you build a service, such as *demo*
 
 Next up, we define what steps run in your CI/CD workflow. This is done through another simple .YML file that lives in your repo - `codeship-steps.yml`. Go ahead and create this file and add the following code:
 
-```
+```yaml
 - name: ruby
   service: demo
   command: bundle exec ruby check.rb
@@ -151,9 +151,7 @@ Next up, we define what steps run in your CI/CD workflow. This is done through a
 
 Now -  let's see how all of this ties together. Open up a terminal and go to the directory with the files we created.
 
-Type:
-
-``jet steps``
+Type: `jet steps`
 
 This will tell the Codeship CLI tool Jet to build the services in your `codeship-services.yml` file and then run the steps in your `codeship-steps.yml` file.
 
