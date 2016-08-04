@@ -1,7 +1,7 @@
 ---
 title: Getting Started Part 3
 layout: page
-weight: 85
+weight: 115
 tags:
   - docker
   - jet
@@ -41,11 +41,11 @@ Now, you're also gonna need an image repo account. For this example, we're gonna
 
 ## Let's Do A Push
 
-Now that we have our accounts created, let's go ahead and open up our **codeship-steps.yml** file. After our test step, we're going to add a new step - a *push* step.
+Now that we have our accounts created, let's go ahead and open up our `codeship-steps.yml` file. After our test step, we're going to add a new step - a `push` step.
 
 Add the following code, and then we'll go through it, to discuss what's happening and what we need to do to make it work.
 
-```
+```yaml
 - type: parallel
   steps:
     - name: checkrb
@@ -67,25 +67,25 @@ Add the following code, and then we'll go through it, to discuss what's happenin
 
 There are a few things to note here:
 
-*Push* is the step type we use to signify that we're pushing out the image defined or built by our service.
+`Push` is the step type we use to signify that we're pushing out the image defined or built by our service.
 
-*Image name* takes a slightly different form depending on the repo - if it's Dockerhub, it's *account_name/repo_name*. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
+`Image name` takes a slightly different form depending on the repo - if it's Dockerhub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
 
-*Registry* is the unique push URL for the image repo. Again, this varies per registry so if you're not using Dockerhub be sure to verify that you get the right value for this.
+`Registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Dockerhub be sure to verify that you get the right value for this.
 
-*Encrypted_dockercfg_path* is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
+`Encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
 
 ## Encrypted Credentials
 
-So, just like we did with our environmental variabels in the previous lesson, we'll want to encrypt our image repository examples so that our repo doesn't have our logins sitting around in plain text.
+So, just like we did with our environmental variables in the previous lesson, we'll want to encrypt our image repository examples so that our repo doesn't have our logins sitting around in plain text.
 
-First, if you didn't do it on the last step, you'll need to download yur project's AES key in to your code's directory. To get the AES key, just go to your project on Codeship.com and look at the project settings.
+First, if you didn't do it on the last step, you'll need to download your project's AES key in to your code's directory. To get the AES key, just go to your project on Codeship.com and look at the project settings.
 
 ![Downloading AES key]({{ site.baseurl }}/images/gettingstarted/aes_key.png)
 
-Now that you've downloaded your AES key, we'll created a new file called dockercfg where we'll drop in our Dockerhub credentials:
+Now that you've downloaded your AES key, we'll created a new file named `dockercfg` where we'll drop in our Dockerhub credentials:
 
-```
+```json
 {
 	"auths": {
 		"https://index.docker.io/v1/": {
@@ -96,15 +96,15 @@ Now that you've downloaded your AES key, we'll created a new file called dockerc
 }
 ```
 
-Once we've saved that, we'll switch over to our terminal and ```cd``` in to the correct directory.
+Once we've saved that, we'll switch over to our terminal and `cd` in to the correct directory.
 
 From there, we'll run:
 
-```
+```bash
 jet encrypt dockercfg dockercfg.encrypted
 ```
 
-You should see your new dockercfg.encrypted file populate. Now, you'll want to remove your unencrypted version - or, at the very least, add it to your **.gitignore** file.
+You should see your new `dockercfg.encrypted` file populate. Now, you'll want to remove your unencrypted version - or, at the very least, add it to your **.gitignore** file.
 
 ## Push!
 
