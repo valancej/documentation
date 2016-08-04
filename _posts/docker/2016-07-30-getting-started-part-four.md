@@ -1,7 +1,7 @@
 ---
 title: Getting Started Part 4
 layout: page
-weight: 85
+weight: 125
 tags:
   - docker
   - jet
@@ -35,7 +35,7 @@ That's where volumes come in. A volume is mounted on the host, "underneath" your
 
 Let's open our services file and find our main application service and make a quick modification.
 
-```
+```yaml
 demo:
   build:
     image: myapp
@@ -49,7 +49,7 @@ demo:
     - ./tmp:/code
 ```
 
-The *volumes* directive takes a parameter that maps a host directory (*./tmp*) to a container directory (*/app*). This means that inside of our container, anything written or read from */app* will actually be taking place on the host in the *./tmp* directory.
+The `volumes` directive takes a parameter that maps a host directory (`./tmp`) to a container directory (`/app`). This means that inside of our container, anything written or read from `/app` will actually be taking place on the host in the `./tmp` directory.
 
 ## Making It Work
 
@@ -57,9 +57,9 @@ With our volume mounted, we're next going to need to test if it's working. To ma
 
 Let's prepare for the second part first, reading from the volume in a step that takes place after the step where we write to it. This will guarantee that the volume is accepting data, persisting that data and readable further down in our CI/CD pipeline.
 
-To read from the volume, we'll need to create a separate service in your **codeship-services.yml** file. Let's do that now.
+To read from the volume, we'll need to create a separate service in your `codeship-services.yml` file. Let's do that now.
 
-```
+```yaml
 demo_volumes:
   build:
     image: myapp
@@ -70,23 +70,23 @@ demo_volumes:
 
 There are a few things that are worth noting here. First, we've given the service a new name, a new image name and a new Dockerfile. We want this service to be totally separate from our other service, after all.
 
-Second, we've added a new directive, *volumes_from* and specified that it will read from the volume in our main *demo* service. This is the essential requirement for connecting volumes between services.
+Second, we've added a new directive, `volumes_from` and specified that it will read from the volume in our main `demo` service. This is the essential requirement for connecting volumes between services.
 
-Of course, since our new service needs a new Dockerfile, we'll need to create our **Dockerfile.volumes** really quick. For this example, we're just going to clone our existing **Dockerfile** and rename it.
+Of course, since our new service needs a new Dockerfile, we'll need to create our `Dockerfile.volumes` really quick. For this example, we're just going to clone our existing `Dockerfile` and rename it.
 
 ## Creating A New Test
 
-Now that our service for reading from the volume exists, let's create a new file named **write.rb** to create the artifact on our volume that we'll be testing for. After creating the file, drop in the following code:
+Now that our service for reading from the volume exists, let's create a new file named `write.rb` to create the artifact on our volume that we'll be testing for. After creating the file, drop in the following code:
 
-```
+```ruby
 File.write('/code/test.txt', 'Test content')
 puts "Writing to a volume!"
 exit 0
 ```
 
-As you can see, it's writing a simple text file to our volume that we'll use to verify that our volumes setting is working properly. Next, we'll add a second new file to call from our new service so that we can check to make sure the text file exists. Let's create **read.rb** and drop in the following:
+As you can see, it's writing a simple text file to our volume that we'll use to verify that our volumes setting is working properly. Next, we'll add a second new file to call from our new service so that we can check to make sure the text file exists. Let's create `read.rb` and drop in the following:
 
-```
+```ruby
 data = File.read("/code/test.txt")
 puts "Reading from the volume" + data
 exit 0
@@ -94,9 +94,9 @@ exit 0
 
 ## Making It All Work
 
-Now that we have our new service and both of our scripts, we need to edit our **codeship-steps.yml** file so that everything get's executed. We're going to take advantage of nested parallel and serial steps to do this. Open up **codeship-steps.yml** and modify it to the following:
+Now that we have our new service and both of our scripts, we need to edit our `codeship-steps.yml` file so that everything get's executed. We're going to take advantage of nested parallel and serial steps to do this. Open up `codeship-steps.yml` and modify it to the following:
 
-```
+```yaml
 - type: parallel
   steps:
     - name: checkrb
@@ -124,9 +124,9 @@ Now that we have our new service and both of our scripts, we need to edit our **
       encrypted_dockercfg_path: dockercfg.encrypted
 ```
 
-As you csan see, we've created a third parallel step to run out new volumes test, and that paralell step is using a *serial* sub-step to first run the **write.rb** script and then to run the **read.rb** script.
+As you csan see, we've created a third parallel step to run out new volumes test, and that paralell step is using a *serial* sub-step to first run the `write.rb` script and then to run the `read.rb` script.
 
-So, now we've got a new service that writes an artifact to a volume, as defined in our **Codeship-steps.yml** file. We also have a new test in our original *demo* service that checks to see if the artifact exists before moving on with our image push and deployment. This, in a nutshell, is how volumes are used in your CI/CD pipeline.
+So, now we've got a new service that writes an artifact to a volume, as defined in our `codeship-steps.yml` file. We also have a new test in our original `demo` service that checks to see if the artifact exists before moving on with our image push and deployment. This, in a nutshell, is how volumes are used in your CI/CD pipeline.
 
 Let's go ahead and run `jet steps` to see it all work.
 
