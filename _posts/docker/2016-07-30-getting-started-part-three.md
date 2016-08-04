@@ -67,13 +67,13 @@ Add the following code, and then we'll go through it, to discuss what's happenin
 
 There are a few things to note here:
 
-`Push` is the step type we use to signify that we're pushing out the image defined or built by our service.
+* `Push` is the step type we use to signify that we're pushing out the image defined or built by our service.
 
-`Image name` takes a slightly different form depending on the repo - if it's Dockerhub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
+* `Image name` takes a slightly different form depending on the repo - if it's Dockerhub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
 
-`Registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Dockerhub be sure to verify that you get the right value for this.
+* `Registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Dockerhub be sure to verify that you get the right value for this.
 
-`Encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
+* `Encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
 
 ## Encrypted Credentials
 
