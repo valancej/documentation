@@ -66,7 +66,7 @@ Next we're going to create a Dockerfile.
 
 If you're not familiar with Dockerfiles, and you want to spend a little bit of time getting up to speed on Docker, we highly recommend using these resources as a jumping off point.
 
-- [Docker's Getting Startet Guide](https://docs.docker.com/mac/)
+- [Docker's Getting Started Guide](https://docs.docker.com/mac/)
 - [Docker Documentation](https://docs.docker.com/)
 - [The Docker Ecosystem](https://blog.codeship.com/understanding-the-docker-ecosystem/)
 
