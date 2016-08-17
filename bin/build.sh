@@ -29,3 +29,11 @@ rm -rf "${jet_source}"
 log "Building with base URL /${target}"
 sed -i'' -e "s|^baseurl:.*|baseurl: /${target}|" _config.yml
 bundle exec jekyll build --destination "${destination}"
+
+if [ "${CI_BRANCH}" = "master" ]; then
+	log "Preparing for move to documentation.codeship.com"
+	log "Building with base URL /"
+	sed -i'' -e "s|^baseurl:.*|baseurl: /|" _config.yml
+	bundle exec jekyll build --destination "/site/root/"
+	mv /site/root/* /site/
+fi
