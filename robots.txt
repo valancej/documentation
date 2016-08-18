@@ -7,4 +7,4 @@
 #
 # See http://www.robotstxt.org/ for more information.
 User-agent: *
-Disallow: /
+Disallow:
