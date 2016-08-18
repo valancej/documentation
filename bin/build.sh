@@ -5,8 +5,9 @@ log() { echo -e "\033[36m$@\033[39m"; }
 # Special treatment for the "master" branch to deploy to /documentation instead
 # of /master
 target="${CI_BRANCH}"
+baseurl="/${CI_BRANCH}"
 if [ "${CI_BRANCH}" = "master" ]; then
-	target="documentation"
+	baseurl=""
 fi
 
 # Where do we want to generate the site at?
@@ -26,14 +27,13 @@ fi
 rm -rf "${jet_source}"
 
 # Compile the site
-log "Building with base URL /${target}"
-sed -i'' -e "s|^baseurl:.*|baseurl: /${target}|" _config.yml
+log "Building with base URL '${baseurl}'"
+sed -i'' -e "s|^baseurl:.*|baseurl: ${baseurl}|" _config.yml
 bundle exec jekyll build --destination "${destination}"
 
 if [ "${CI_BRANCH}" = "master" ]; then
-	log "Preparing for move to documentation.codeship.com"
-	log "Building with base URL /"
-	sed -i'' -e "s|^baseurl:.*|baseurl: /|" _config.yml
-	bundle exec jekyll build --destination "/site/root/"
-	mv /site/root/* /site/
+	log "Building legacy version for the master branch"
+	log "Building with base URL /documentation"
+	sed -i'' -e "s|^baseurl:.*|baseurl: /documentation|" _config.yml
+	bundle exec jekyll build --destination "/site/documentation/"
 fi
