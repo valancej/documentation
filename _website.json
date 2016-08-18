@@ -3,7 +3,7 @@
 		"Suffix": "index.html"
 	},
 	"ErrorDocument": {
-		"Key": "documentation/404.html"
+		"Key": "404.html"
 	},
 	"RoutingRules": [{
 		"Redirect": {
