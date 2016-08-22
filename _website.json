@@ -70,12 +70,14 @@
 			"KeyPrefixEquals": "private/docker/docker/"
 		}
 		}, {
-			"Redirect": {
-				"ReplaceKeyWith": "/",
-				"HttpRedirectCode": "301"
-			},
 			"Condition": {
 				"KeyPrefixEquals": "documentation/"
+			},
+			"Redirect": {
+				"HostName": "documentation.codeship.com",
+				"Protocol": "https",
+				"ReplaceKeyPrefixWith": "/",
+				"HttpRedirectCode": "301"
 			}
 	}]
 }
