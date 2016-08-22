@@ -6,19 +6,19 @@
     "Key": "404.html"
   },
   "RoutingRules": [{
-    "Redirect": {
-      "HostName": "codeship.com",
-      "ReplaceKeyWith": "documentation/",
-      "HttpRedirectCode": "303"
-    },
     "Condition": {
       "HttpErrorCodeReturnedEquals": "403",
       "KeyPrefixEquals": ""
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "Protocol": "https",
+      "HttpRedirectCode": "303"
     }
   }, {
     "Redirect": {
-      "HostName": "codeship.com",
-      "ReplaceKeyPrefixWith": "documentation/faq/",
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "faq/",
       "HttpRedirectCode": "301"
     },
     "Condition": {
@@ -26,8 +26,8 @@
     }
   }, {
     "Redirect": {
-      "HostName": "codeship.com",
-      "ReplaceKeyPrefixWith": "documentation/languages/",
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "languages/",
       "HttpRedirectCode": "301"
     },
     "Condition": {
@@ -35,8 +35,8 @@
     }
   }, {
     "Redirect": {
-      "HostName": "codeship.com",
-      "ReplaceKeyPrefixWith": "documentation/databases/sqlite/",
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "databases/sqlite/",
       "HttpRedirectCode": "301"
     },
     "Condition": {
@@ -44,8 +44,8 @@
     }
   }, {
     "Redirect": {
-      "HostName": "codeship.com",
-      "ReplaceKeyPrefixWith": "documentation/administration/",
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "administration/",
       "HttpRedirectCode": "301"
     },
     "Condition": {
@@ -53,31 +53,12 @@
     }
   }, {
     "Redirect": {
-      "HostName": "codeship.com",
-      "ReplaceKeyPrefixWith": "documentation/integrations/webhooks/",
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "integrations/webhooks/",
       "HttpRedirectCode": "301"
     },
     "Condition": {
       "KeyPrefixEquals": "documentation/api-and-webhooks/webhooks/"
-    }
-  }, {
-    "Redirect": {
-      "HostName": "codeship.com",
-      "ReplaceKeyWith": "documentation/docker/",
-      "HttpRedirectCode": "301"
-    },
-    "Condition": {
-      "KeyPrefixEquals": "private/docker/docker/"
-    }
-  }, {
-    "Condition": {
-      "KeyPrefixEquals": "documentation/"
-    },
-    "Redirect": {
-      "HostName": "documentation.codeship.com",
-      "Protocol": "https",
-      "ReplaceKeyPrefixWith": "/",
-      "HttpRedirectCode": "301"
     }
   }]
 }
