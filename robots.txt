@@ -8,3 +8,4 @@
 # See http://www.robotstxt.org/ for more information.
 User-agent: *
 Disallow:
+Sitemap: https://documentation.codeship.com/sitemap.xml 
