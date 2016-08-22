@@ -10,4 +10,4 @@ RUN apk --update add \
 
 WORKDIR /deploy
 COPY bin/jet.sh bin/s3.sh ./bin/
-COPY _lifecycle.json _robots.txt _website.json ./
+COPY _lifecycle.json _website.json ./
