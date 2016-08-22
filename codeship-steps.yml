@@ -43,9 +43,6 @@
         - name: s3_lifecycle
           service: aws
           command: sh bin/s3.sh configure_lifecycle _lifecycle.json
-        - name: s3_robots
-          service: aws
-          command: sh bin/s3.sh robots
         - name: swiftype
           service: documentation
           command: sh bin/swiftype.sh

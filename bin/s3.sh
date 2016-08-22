@@ -29,10 +29,6 @@ case "$action" in
 		config_file=${1:?'You need to pass an action!'} && shift
 		aws s3api put-bucket-lifecycle --bucket "${AWS_S3_BUCKET}" --lifecycle-configuration "file://${config_file}"
 		;;
-	'robots')
-		log "Pushing robots.txt file"
-		aws s3 cp _robots.txt "s3://${AWS_S3_BUCKET}/robots.txt" --acl public-read
-		;;
 	*)
 		log "Invalid action ${action} :("
 		exit 1
