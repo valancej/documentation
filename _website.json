@@ -1,83 +1,83 @@
 {
-	"IndexDocument": {
-		"Suffix": "index.html"
-	},
-	"ErrorDocument": {
-		"Key": "404.html"
-	},
-	"RoutingRules": [{
-		"Redirect": {
-			"HostName": "codeship.com",
-			"ReplaceKeyWith": "documentation/",
-			"HttpRedirectCode": "303"
-		},
-		"Condition": {
-			"HttpErrorCodeReturnedEquals": "403",
-			"KeyPrefixEquals": ""
-		}
-	}, {
-		"Redirect": {
-			"HostName": "codeship.com",
-			"ReplaceKeyPrefixWith": "documentation/faq/",
-			"HttpRedirectCode": "301"
-		},
-		"Condition": {
-			"KeyPrefixEquals": "documentation/troubleshooting/"
-		}
-	}, {
-		"Redirect": {
-			"HostName": "codeship.com",
-			"ReplaceKeyPrefixWith": "documentation/languages/",
-			"HttpRedirectCode": "301"
-		},
-		"Condition": {
-			"KeyPrefixEquals": "documentation/languages-and-frameworks/"
-		}
-	}, {
-		"Redirect": {
-			"HostName": "codeship.com",
-			"ReplaceKeyPrefixWith": "documentation/databases/sqlite/",
-			"HttpRedirectCode": "301"
-		},
-		"Condition": {
-			"KeyPrefixEquals": "documentation/databases-and-queues/sqlite/"
-		}
-	}, {
-		"Redirect": {
-			"HostName": "codeship.com",
-			"ReplaceKeyPrefixWith": "documentation/administration/",
-			"HttpRedirectCode": "301"
-		},
-		"Condition": {
-			"KeyPrefixEquals": "documentation/managing-your-project/"
-		}
-	}, {
-		"Redirect": {
-			"HostName": "codeship.com",
-			"ReplaceKeyPrefixWith": "documentation/integrations/webhooks/",
-			"HttpRedirectCode": "301"
-		},
-		"Condition": {
-			"KeyPrefixEquals": "documentation/api-and-webhooks/webhooks/"
-		}
-		}, {
-		"Redirect": {
-			"HostName": "codeship.com",
-			"ReplaceKeyWith": "documentation/docker/",
-			"HttpRedirectCode": "301"
-		},
-		"Condition": {
-			"KeyPrefixEquals": "private/docker/docker/"
-		}
-		}, {
-			"Condition": {
-				"KeyPrefixEquals": "documentation/"
-			},
-			"Redirect": {
-				"HostName": "documentation.codeship.com",
-				"Protocol": "https",
-				"ReplaceKeyPrefixWith": "/",
-				"HttpRedirectCode": "301"
-			}
-	}]
+  "IndexDocument": {
+    "Suffix": "index.html"
+  },
+  "ErrorDocument": {
+    "Key": "404.html"
+  },
+  "RoutingRules": [{
+    "Redirect": {
+      "HostName": "codeship.com",
+      "ReplaceKeyWith": "documentation/",
+      "HttpRedirectCode": "303"
+    },
+    "Condition": {
+      "HttpErrorCodeReturnedEquals": "403",
+      "KeyPrefixEquals": ""
+    }
+  }, {
+    "Redirect": {
+      "HostName": "codeship.com",
+      "ReplaceKeyPrefixWith": "documentation/faq/",
+      "HttpRedirectCode": "301"
+    },
+    "Condition": {
+      "KeyPrefixEquals": "documentation/troubleshooting/"
+    }
+  }, {
+    "Redirect": {
+      "HostName": "codeship.com",
+      "ReplaceKeyPrefixWith": "documentation/languages/",
+      "HttpRedirectCode": "301"
+    },
+    "Condition": {
+      "KeyPrefixEquals": "documentation/languages-and-frameworks/"
+    }
+  }, {
+    "Redirect": {
+      "HostName": "codeship.com",
+      "ReplaceKeyPrefixWith": "documentation/databases/sqlite/",
+      "HttpRedirectCode": "301"
+    },
+    "Condition": {
+      "KeyPrefixEquals": "documentation/databases-and-queues/sqlite/"
+    }
+  }, {
+    "Redirect": {
+      "HostName": "codeship.com",
+      "ReplaceKeyPrefixWith": "documentation/administration/",
+      "HttpRedirectCode": "301"
+    },
+    "Condition": {
+      "KeyPrefixEquals": "documentation/managing-your-project/"
+    }
+  }, {
+    "Redirect": {
+      "HostName": "codeship.com",
+      "ReplaceKeyPrefixWith": "documentation/integrations/webhooks/",
+      "HttpRedirectCode": "301"
+    },
+    "Condition": {
+      "KeyPrefixEquals": "documentation/api-and-webhooks/webhooks/"
+    }
+  }, {
+    "Redirect": {
+      "HostName": "codeship.com",
+      "ReplaceKeyWith": "documentation/docker/",
+      "HttpRedirectCode": "301"
+    },
+    "Condition": {
+      "KeyPrefixEquals": "private/docker/docker/"
+    }
+  }, {
+    "Condition": {
+      "KeyPrefixEquals": "documentation/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "Protocol": "https",
+      "ReplaceKeyPrefixWith": "/",
+      "HttpRedirectCode": "301"
+    }
+  }]
 }
