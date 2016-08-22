@@ -13,7 +13,7 @@ categories:
 
 The default databases created for you are **development** and **test**.
 
-PostgreSQL `9.2` runs on the default port and the credentials are stored in the `PG_USER` and `PG_PASSWORD` environment variables.
+PostgreSQL `9.2` runs on the default port and the credentials are stored in the `PGUSER` and `PGPASSWORD` environment variables.
 
 We install the Ubuntu `postgresql-contrib` package. It includes the [extension modules](http://www.postgresql.org/docs/9.2/static/contrib.html) listed in the PostgreSQL Documentation.
 
@@ -89,9 +89,9 @@ development:
   host: localhost
   encoding: unicode
   pool: 10
-  username: <%= ENV['PG_USER'] %>
+  username: <%= ENV['PGUSER'] %>
   template: template1
-  password: <%= ENV['PG_PASSWORD'] %>
+  password: <%= ENV['PGPASSWORD'] %>
   database: development<%= ENV['TEST_ENV_NUMBER'] %>
   port: 5432
   sslmode: disable
@@ -118,7 +118,7 @@ If you don't use Rails and load the database.yml file yourself, you might see a 
 
 ```ruby
 # Sample error message
-# PSQL::Error: Access denied for user '<%= ENV['PG_USER'] %>'@'localhost'
+# PSQL::Error: Access denied for user '<%= ENV['PGUSER'] %>'@'localhost'
 #
 # Run the file through ERB before loading the YAML data
 DATABASE_CONFIG = YAML.load(ERB.new(File.read("config/database.yml")))
@@ -132,8 +132,8 @@ DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     'NAME': 'test',
-    'USER': os.environ.get('PG_USER'),
-    'PASSWORD': os.environ.get('PG_PASSWORD'),
+    'USER': os.environ.get('PGUSER'),
+    'PASSWORD': os.environ.get('PGPASSWORD'),
     'HOST': '127.0.0.1',
   }
 }

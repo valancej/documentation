@@ -91,8 +91,8 @@ The credentials for our database are stored as **environment variables**
 * PostgreSQL
 
   ```bash
-  Username: $PG_USER
-  Password: $PG_PASSWORD
+  Username: $PGUSER
+  Password: $PGPASSWORD
   ```
 
 * MySQL
