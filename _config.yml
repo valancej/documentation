@@ -1,5 +1,5 @@
 # Site settings
-url: https://codeship.com
+url: https://documentation.codeship.com
 baseurl:
 permalink: /:categories/:title/
 tags_dir: tags
