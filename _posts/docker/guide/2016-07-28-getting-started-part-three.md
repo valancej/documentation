@@ -96,9 +96,14 @@ Now that you've downloaded your AES key, we'll created a new file named `dockerc
 }
 ```
 
-Once we've saved that, we'll switch over to our terminal and `cd` in to the correct directory.
+To get our auth key, we'll need to go back to our terminal and run:
 
-From there, we'll run:
+```bash
+docker login
+cat ${HOME}/.docker/config.json
+```
+
+This will print the `auths` value that we need to add to our `dockercfg` file. Once we've added this information to our `dockercfg` file and saved it, we'll run:
 
 ```bash
 jet encrypt dockercfg dockercfg.encrypted
