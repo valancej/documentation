@@ -2,8 +2,8 @@
 set -e
 log() { echo -e "\033[36m$@\033[39m"; }
 
-# Special treatment for the "master" branch to deploy to /documentation instead
-# of /master
+# Special settings for the "master" branch, compile the site to the "master"
+# subdirectory, but use an empty baseurl, so we can deploy to the bucket root
 target="${CI_BRANCH}"
 baseurl="/${CI_BRANCH}"
 if [ "${CI_BRANCH}" = "master" ]; then
@@ -30,10 +30,3 @@ rm -rf "${jet_source}"
 log "Building with base URL '${baseurl}'"
 sed -i'' -e "s|^baseurl:.*|baseurl: ${baseurl}|" _config.yml
 bundle exec jekyll build --destination "${destination}"
-
-if [ "${CI_BRANCH}" = "master" ]; then
-	log "Building legacy version for the master branch"
-	log "Building with base URL /documentation"
-	sed -i'' -e "s|^baseurl:.*|baseurl: /documentation|" _config.yml
-	bundle exec jekyll build --destination "/site/documentation/"
-fi
