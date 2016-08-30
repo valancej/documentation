@@ -8,7 +8,7 @@ ENV \
 
 # basic project configuration
 WORKDIR /docs
-VOLUME ['/docs']
+VOLUME ["/docs"]
 EXPOSE 4000
 
 # System dependencies
