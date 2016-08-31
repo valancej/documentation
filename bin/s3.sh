@@ -7,12 +7,7 @@ case "$action" in
 	'sync')
 		if [ "${CI_BRANCH}" = "master" ]; then
 			log "Pushing documenation to s3://${AWS_S3_BUCKET}/"
-			aws s3 sync "/site/master/" "s3://${AWS_S3_BUCKET}/" --acl public-read --follow-symlinks --exclude "documentation/*" --exclude "staging/*" --exclude "private/*" --delete
-
-			# TODO delete the next two lines, once the move once
-			# documentation.codeship.com is complete
-			log "Pushing legacy version to s3://${AWS_S3_BUCKET}/documentation/"
-			aws s3 sync "/site/documentation/" "s3://${AWS_S3_BUCKET}/documentation/" --acl public-read --follow-symlinks --delete
+			aws s3 sync "/site/master/" "s3://${AWS_S3_BUCKET}/" --acl public-read --follow-symlinks --exclude "staging/*" --exclude "private/*" --delete
 		else
 			target="${CI_BRANCH}"
 			log "Pushing documenation to s3://${AWS_S3_BUCKET}/${target}/"
