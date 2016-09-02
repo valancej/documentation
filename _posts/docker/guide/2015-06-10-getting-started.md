@@ -73,7 +73,7 @@ If you're not familiar with Dockerfiles, and you want to spend a little bit of t
 Now, if you're ready to get going, we're going to define a simple Dockerfile. So, create your file and drop this code in:
 
 ```bash
-!-- # base on latest ruby base image
+# base on latest ruby base image
 FROM ruby:2.2.1
 
 # update and install dependencies
