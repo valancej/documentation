@@ -18,7 +18,7 @@ Of course, our standard support is available regardless of what base images  you
 
 ## Submitted By [HuliLabs](https://github.com/hulilabs/)
 
-* [WebDriverIO](https://github.com/hulilabs/webdriverio)
-* [Karma+PhantomJS](https://github.com/hulilabs/karma)
-* [Gulp](https://github.com/hulilabs/gulp)
-* [Grunt](https://github.com/hulilabs/grunt)
+* [WebDriverIO](https://hub.docker.com/r/huli/webdriverio/)
+* [Karma+PhantomJS](https://hub.docker.com/r/huli/karma/)
+* [Gulp](https://hub.docker.com/r/huli/gulp/)
+* [Grunt](https://hub.docker.com/r/huli/grunt/)
