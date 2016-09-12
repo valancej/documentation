@@ -64,3 +64,11 @@ All organization owners and managers have the option to import projects from the
 4. You can then choose to import one, some or all of your Codeship projects.
 
 ![Importing a personal project to an organization]({{ site.baseurl }}/images/administration/import_projects.png)
+
+## Removing a user from all teams and projects
+
+To remove a team member from all organization teams and projects, click into your team management page. At the top, you will see a link for "Show all Members".
+
+From the "Show all Members" screen, changes to a any team member will apply to all teams and projects, organization-wide.
+
+![Importing a personal project to an organization]({{ site.baseurl }}/images/administration/remove_all.png)
