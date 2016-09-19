@@ -60,5 +60,14 @@
     "Condition": {
       "KeyPrefixEquals": "documentation/api-and-webhooks/webhooks/"
     }
+  }, {
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "docker-guide/getting-started/",
+      "HttpRedirectCode": "301"
+    },
+    "Condition": {
+      "KeyPrefixEquals": "docker/getting-started/"
+    }
   }]
 }
