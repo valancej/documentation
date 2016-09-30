@@ -17,7 +17,7 @@ We are happy to hear your feedback. Please read our [contributing guidelines](CO
 
 We recommend using Docker to build and test the documentation. Running via Docker is only required if you plan to make changes to the styling or layout of the site.
 
-For content related changes and fixes, it's easiest to use GitHubs [File Edit UI](https://help.github.com/articles/editing-files-in-another-user-s-repository/) to make the changes and create the pull request.
+For content related changes and fixes, it's easiest to use GitHub's [File Edit UI](https://help.github.com/articles/editing-files-in-another-user-s-repository/) to make the changes and create the pull request.
 
 ### Setup
 

@@ -67,7 +67,7 @@ psql -p DATABASE_PORT -c 'create database new_db;'
 ```
 
 ## Enable Extensions
-You can enable extensions either via the your application framework (if supported) or by running commands directly against the database. E.g, you'd would add the following command to your setup steps to enable the `hstore` extension.
+You can enable extensions either via the your application framework (if supported) or by running commands directly against the database. E.g, you would add the following command to your setup steps to enable the `hstore` extension.
 
 ```shell
 psql -d DATABASE_NAME -p DATABASE_PORT -c 'create extension if not exists hstore;'
