@@ -8,7 +8,7 @@
 */
 
 
-// This Function let's you assign multiple Selectors to a list with :pseudo-selectors if needed
+// This Function lets you assign multiple Selectors to a list with :pseudo-selectors if needed
 @function assign-inputs($inputs, $pseudo: null) {
   $list : ();
 
