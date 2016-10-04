@@ -14,8 +14,8 @@ EXPOSE 4000
 RUN \
 	apt-get update && \
 	apt-get install -y --no-install-recommends \
-		curl \
-		apt-transport-https && \
+		apt-transport-https \
+		curl && \
 	curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
 	echo "deb https://deb.nodesource.com/node_${NODE_VERSION} ${DEBIAN_DISTRIBUTION} main" > /etc/apt/sources.list.d/nodesource.list && \
 	apt-get update && \
