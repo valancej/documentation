@@ -21,26 +21,28 @@ For content related changes and fixes, it's easiest to use GitHub's [File Edit U
 
 ### Setup
 
-We need to be brief, so clone the repository,
+The first step is cloning and going into the repository.
 
 ```bash
 git clone git@github.com:codeship/documentation.git
 cd documentation
 ```
 
-build the container and save it as a tagged image.
+Then build the container and save it as a tagged image.
 
 ```bash
 docker build --tag codeship/documentation .
 ```
 
-You can then run commands via that container. By default, it will build the site and start the Jekyll development server.
+You can now run commands via that container. By default, it will build the site and start the Jekyll development server.
 
 ```bash
 docker run -it -p 4000:4000 -v $(pwd):/docs codeship/documentation
 ```
 
-To access the site open http://IP_OF_YOUR_DOCKER_SERVER:4000 in your browser.
+To access the site open http://IP_OF_YOUR_DOCKER_SERVER:4000 in your browser. Usually, this is `localhost:4000`.
+
+On **Windows**, the Docker commands are executed via the Docker Quickstart Terminal. If localhost doesn't work, you might have to open a normal command prompt and type `docker-machine ls`. There you can take the IP that is listed under URL and type the IP (with port 4000) into your browser to reach the documentation.
 
 ## Development
 
@@ -103,7 +105,7 @@ Generate a URL for the specified tag (_database_ in the example below). This fun
 {{ tag | tag_url }}
 ```
 
-generate the output like the following (depending on configuration values)
+generates the output as follows (depending on configuration values):
 
 ```
 /tags/databases/
@@ -117,7 +119,7 @@ Link to a particular Ubuntu man page. The Ubuntu version currently defaults to U
 {% man_url formatdb %}
 ```
 
-generates the following output
+generates the following output:
 
 ```
 http://manpages.ubuntu.com/manpages/trusty/en/man1/formatdb.1.html
