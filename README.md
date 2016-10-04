@@ -42,6 +42,7 @@ docker run -it -p 4000:4000 -v $(pwd):/docs codeship/documentation
 
 To access the site open http://IP_OF_YOUR_DOCKER_SERVER:4000 in your browser. Usually, this is `localhost:4000`.
 
+On **Windows**, the Docker commands are executed via the Docker Quickstart Terminal. If localhost doesn't work, you might have to open a normal command prompt and type `docker-machine ls`. There you can take the IP that is listed under URL and type the IP (with port 4000) into your browser to reach the documentation.
 
 ## Development
 
