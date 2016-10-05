@@ -4,7 +4,7 @@ MAINTAINER marko@codeship.com
 ENV \
 	DEBIAN_DISTRIBUTION="jessie" \
 	DEBIAN_FRONTEND="noninteractive" \
-	NODE_VERSION="4.x"
+	NODE_VERSION="6.x"
 
 # basic project configuration
 WORKDIR /docs
