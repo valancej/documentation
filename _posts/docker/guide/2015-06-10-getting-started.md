@@ -21,13 +21,13 @@ git clone git@github.com:codeship/ci-guide.git
 
 ## Getting Started
 
-We're going to walk you through using Codeship to build, test and deploy your Docker applications. Codeship uses a tool called Jet to turn your existing Docker apps and workflows into a seamless CI/CD process.
+We're going to walk you through using Codeship to build, test, and deploy your Docker applications. Codeship uses a tool called Jet to turn your existing Docker apps and workflows into a seamless CI/CD process.
 
 The first thing you want to do is install Codeship Jet on your local machine. For Mac users, you can do this through Brew and Linux users can curl the Jet binary directly. [You can see more detailed instructions here.](https://codeship.com/documentation/docker/installation/)
 
 ## Testing Jet
 
-Once Jet is installed, we'll want to test it out. Type 'jet version' to print the version number on screen. Next, type 'jet help' to bring up the help options. Jet is very powerful - from running CI to encrypting your credentials, so take some time to play around with what you see when you run 'jet help'.
+Once Jet is installed, type 'jet version' to print the version number on screen. Next, type 'jet help' to bring up the help options. Jet is very powerful - from running CI to encrypting your credentials, so take some time to play around with what you see when you run 'jet help'.
 
 ![Jet Help Log Output]({{ site.baseurl }}/images/gettingstarted/jet-help.png)
 
@@ -64,13 +64,13 @@ puts test.exec("SELECT version();").first["version"]
 
 Next we're going to create a Dockerfile.
 
-If you're not familiar with Dockerfiles, and you want to spend a little bit of time getting up to speed on Docker, we highly recommend using these resources as a jumping off point.
+If you're not familiar with Dockerfiles, and you want to spend a little bit of time getting up to speed on Docker, we highly recommend using these resources as a jumping-off point.
 
 - [Docker's Getting Started Guide](https://docs.docker.com/mac/)
 - [Docker Documentation](https://docs.docker.com/)
 - [The Docker Ecosystem](https://blog.codeship.com/understanding-the-docker-ecosystem/)
 
-Now, if you're ready to get going, we're going to define a simple Dockerfile. So, create your file and drop this code in:
+Once you're ready to get going, create an empty Dockerfile and paste this code into it:
 
 ```bash
 # base on latest ruby base image
@@ -92,7 +92,7 @@ RUN bundle install --jobs 20 --retry 5
 Add . /app
 ```
 
-As you can see here, we're pulling the ruby base image, creating some directories, installing some gems and then adding our code. That last bit is important because now when we launch our Docker container, the `check.rb` script we wrote earlier will be inside it and ready to run.
+As you can see here, we're pulling the ruby base image, creating some directories, installing some gems, and then adding our code. That last bit is important because now when we launch our Docker container, the `check.rb` script we wrote earlier will be inside it and ready to run.
 
 ## Define Your Services / Compose File
 
