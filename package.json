@@ -15,12 +15,12 @@
   },
   "dependencies": {
     "autoprefixer": "^6.0.0",
+    "gulp": "^3.9.0",
     "gulp-folders": "^1.1.0",
     "gulp-image-resize": "^0.7.1",
     "gulp-imagemin": "^2.4.0",
     "gulp-jsonlint": "^1.1.1",
     "gulp-postcss": "^6.0.0",
-    "gulp-print": "^2.0.1",
-    "gulp": "^3.9.0"
+    "gulp-print": "^2.0.1"
   }
 }

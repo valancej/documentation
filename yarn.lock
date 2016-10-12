@@ -362,11 +362,11 @@ dateformat@^1.0.11, dateformat@^1.0.7-1.2.3:
     meow "^3.3.0"
 
 debug-fabulous@0.0.X:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/debug-fabulous/-/debug-fabulous-0.0.3.tgz#d154582976646bcf35b4b8a47ce174439dd5019b"
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/debug-fabulous/-/debug-fabulous-0.0.4.tgz#fa071c5d87484685424807421ca4b16b0b1a0763"
   dependencies:
     debug "2.X"
-    lazy-debug "0.X"
+    lazy-debug-legacy "0.0.X"
     object-assign "4.1.0"
 
 debug@~2.2.0, debug@2.X:
@@ -1002,8 +1002,8 @@ gulp-rename@^1.2.0:
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
 
 gulp-sourcemaps@^1.5.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/gulp-sourcemaps/-/gulp-sourcemaps-1.7.2.tgz#a4a61c01a7b8f39abd2723a3f3e334011c63e8f6"
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/gulp-sourcemaps/-/gulp-sourcemaps-1.7.3.tgz#a468a2801996c969e47476fcc6dcd5a7e2aa53c1"
   dependencies:
     acorn "4.X"
     convert-source-map "1.X"
@@ -1429,9 +1429,9 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.0.2"
 
-lazy-debug@0.X:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/lazy-debug/-/lazy-debug-0.1.3.tgz#e052ef145337bb51471e05fd4bafc096ae794f30"
+lazy-debug-legacy@0.0.X:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/lazy-debug-legacy/-/lazy-debug-legacy-0.0.1.tgz#537716c0776e4cf79e3ed1b621f7658c2911b1b1"
 
 lazy-req@^1.0.0:
   version "1.1.0"
