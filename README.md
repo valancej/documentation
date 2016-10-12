@@ -57,7 +57,7 @@ docker run -it -v $(pwd):/docs codeship/documentation bundle update
 For NPM based dependencies, run the following two commands
 
 ```bash
-docker run -it -v $(pwd):/docs codeship/documentation npm update && npm shrinkwrap
+docker run -it -v $(pwd):/docs codeship/documentation yarn upgrade
 ```
 
 ### Linting
