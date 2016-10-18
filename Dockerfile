@@ -2,6 +2,7 @@ FROM ruby:2.3.1-slim
 MAINTAINER marko@codeship.com
 
 ENV \
+	CACHE_BUST=1 \
 	DEBIAN_DISTRIBUTION="jessie" \
 	DEBIAN_FRONTEND="noninteractive" \
 	NODE_VERSION="6.x"
