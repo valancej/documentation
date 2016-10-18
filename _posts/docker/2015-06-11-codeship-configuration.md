@@ -17,7 +17,7 @@ categories:
 The configuration information below is specific to Codeship's Docker based infrastructure. For more information see [codeship.com](https://codeship.com/enterprise)
 </div>
 
-Once you have your [project running locally]({{ site.baseurl }}{% post_url docker/2015-06-10-getting-started %}) you can configure the repository on Codeship and have the builds run on each push.
+Once you have your [project running locally]({{ site.baseurl }}{% post_url docker/guide/2015-06-10-getting-started %}) you can configure the repository on Codeship and have the builds run on each push.
 
 If you already worked with Codeship the process will be familiar (and if not, it should be very simple nonetheless).
 
