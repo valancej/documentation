@@ -26,15 +26,14 @@ RUN \
 		libyaml-0-2 \
 		nodejs && \
 	ln -s $(which nodejs) /usr/local/bin/node && \
+	npm install --global yarn && \
 	apt-get clean -y && \
 	rm -rf /var/lib/apt/lists/*
 
 # NPM based dependencies
-COPY package.json npm-shrinkwrap.json ./
+COPY package.json yarn.lock ./
 RUN \
-	npm config set "production" "true" && \
-	npm config set "loglevel" "error" && \
- 	npm install && \
+	yarn install --production && \
 	ln -s /docs/node_modules/gulp/bin/gulp.js /usr/local/bin/gulp
 
 # Ruby based dependencies
