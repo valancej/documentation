@@ -7,15 +7,14 @@ tags:
   - jet
   - configuration
   - services
-categories:
-  - docker
+category: Getting Started
 ---
 
 * include a table of contents
 {:toc}
 
 ## What Is Your Codeship Services File?
-Your services files - `codeship-services.yml` - is the [Docker Compose](https://docs.docker.com/compose/) based file your CI/CD process with Codeship relies on to build and orchestrate your environment. At the start of every new build, we create a new build instance, with Docker installed, to run your build on. From there, what containers are built and when is defined by your [codeship-steps.yml]({{ site.baseurl }}{% post_url docker/2015-05-25-steps %}) file running commands on the individual containers defined in your `codeship-services.yml` file.
+Your services files - `codeship-services.yml` - is the [Docker Compose](https://docs.docker.com/compose/) based file your CI/CD process with Codeship relies on to build and orchestrate your environment. At the start of every new build, we create a new build instance, with Docker installed, to run your build on. From there, what containers are built and when is defined by your [codeship-steps.yml]({% link _jet/getting-started/steps.md %}) file running commands on the individual containers defined in your `codeship-services.yml` file.
 
 Your `codeship-services.yml` file, just like Docker Compose, can build images out of Dockerfiles or fetch images from image registries. These image registries can be public or you can provide  credentials to pull (and push) images to private registries as part of your CI/CD process.
 
@@ -154,13 +153,13 @@ All linking to the host is not allowed. This means the following directives are 
   * `stdin_open`
 
 ### Docker Compose Version 2 Syntax
-Codeship does not yet support Docker Compose Version 2 syntax or Version 2-specific features such as build arguments. We are currently working on support for Compose features up to the latest version and will announce as soon as full support is available to all users.  
+Codeship does not yet support Docker Compose Version 2 syntax or Version 2-specific features such as build arguments. We are currently working on support for Compose features up to the latest version and will announce as soon as full support is available to all users.
 
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
 * [Build Directive In Compose](https://docs.docker.com/compose/compose-file/#build)
 * [Encrypting environment variables.]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-15-encryption %})
-* [Steps File]({{ site.baseurl }}{% post_url docker/2015-05-25-steps %})
+* [Steps File]({% link _jet/getting-started/steps.md %})
 * [Volumes]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-04-docker-volumes %})
 * [Add_Docker Directive in Compose](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker)
 * [Docker-in-Docker](https://registry.hub.docker.com/u/jpetazzo/dind).

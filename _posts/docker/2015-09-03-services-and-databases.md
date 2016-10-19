@@ -14,7 +14,7 @@ categories:
 
 Through Docker we support many different databases and services you can use for your build. By adding them to your `codeship-services.yml` file you have a lot of control on how to set up your build environment.
 
-Before reading through the documentation please take a look at the [Services]({{ site.baseurl }}{% post_url docker/2015-05-25-services %}) and [Steps]({{ site.baseurl }}{% post_url docker/2015-05-25-steps %}) documentation page so you have a good understanding how services and steps on Codeship work. At first we want to show you how to customize a service or database container so it has the exact configuration you need for your build.
+Before reading through the documentation please take a look at the [Services]({% link _jet/getting-started/services.md %}) and [Steps]({% link _jet/getting-started/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work. At first we want to show you how to customize a service or database container so it has the exact configuration you need for your build.
 
 ## Customizing a service container
 
