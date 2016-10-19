@@ -6,8 +6,7 @@ tags:
   - ssh
   - key
   - debug
-categories:
-  - continuous-integration
+category: Getting Started
 ---
 You are able to activate build debugging at the bottom of the build detail view for projects running on the classic infrastructure. The SSH debugging session only works for branches still available in your repository.
 
