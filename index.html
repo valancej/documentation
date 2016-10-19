@@ -5,8 +5,6 @@ bodyclass: is-blue
 ---
 {% assign categories = site.data.categories | sort_by_data_value: 'weight' %}
 
-{% include search.html %}
-
 <div class="contentWrapper">
   <div class="grid grid--boxContainer">
     {% for c in categories reversed %}
