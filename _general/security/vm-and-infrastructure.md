@@ -4,8 +4,7 @@ layout: page
 tags:
   - security
   - infrastructure
-categories:
-  - security
+category: Security
 ---
 ## OS & Virtualization
 We use **Ubuntu 14.04 (Trusty Tahr)** on our test machines. To virtualize the test machines we use **Linux Containers**.

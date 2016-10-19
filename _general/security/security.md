@@ -4,8 +4,7 @@ layout: page
 tags:
   - security
   - gpg key
-categories:
-  - security
+category: Security
 ---
 We fully understand and recognize, that the security of your source code and configuration data is important, as it forms the base of your and our endeavours. Therefore we put a lot of effort and thought into providing a secure infrastructure for you to use.
 
