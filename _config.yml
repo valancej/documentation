@@ -7,14 +7,35 @@ ubuntu_version: trusty
 
 # Defaults for posts
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
       type: posts
     values:
       layout: page
       weight: 50
       comments: true
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: general
+    values:
+      layout: page
+      weight: 50
+      comments: true
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: checkbot
+    values:
+      layout: page
+      weight: 50
+      comments: true
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: jet
+    values:
+      layout: page
+      weight: 50
+      comments: true
+
 
 # Jekyll
 exclude:
@@ -41,8 +62,20 @@ gems:
   - jekyll-seo-tag
   - jekyll-sitemap
 collections:
-  faq:
-    permalink: /faq/:path/
+  general:
+    title: General
+    permalink: /general/:path/
+    sort_order: 1
+    output: true
+  checkbot:
+    title: Classic
+    permalink: /classic/:path/
+    sort_order: 2
+    output: true
+  jet:
+    title: Jet
+    permalink: /jet/:path/
+    sort_order: 3
     output: true
 
 # SASS

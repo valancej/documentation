@@ -7,8 +7,7 @@ tags:
   - jet
   - configuration
   - steps
-categories:
-  - docker
+category: Getting Started
 ---
 
 * include a table of contents
@@ -26,7 +25,7 @@ categories:
 _Jet_ will look for a steps file in this order. If you are running _Jet_ locally, you can override the filename with the `--steps-path` flag. Both YAML and JSON formats are accepted.
 
 ## Prerequisites
-Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-cli %}) or [set up your project on Codeship.]({{ site.baseurl }}{% post_url docker/2015-06-11-codeship-configuration %}). It will also require that you have configured your [codeship-services.yml file]({{ site.baseurl }}{% post_url docker/2015-05-25-services %}).
+Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-cli %}) or [set up your project on Codeship.]({{ site.baseurl }}{% post_url docker/2015-06-11-codeship-configuration %}). It will also require that you have configured your [codeship-services.yml file]({% link _jet/getting-started/services.md %}).
 
 ## Using codeship-steps.yml
 

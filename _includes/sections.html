@@ -1,0 +1,15 @@
+{% assign collections = site.collections | sort: 'sort_order' %}
+<nav class="Topmenu">
+  <ul>
+    {% for collection in collections %}
+    {% if collection.label == 'posts' %}
+      {% continue %}
+    {% endif %}
+      <li>
+        <a href="{{ collection.label | relative_url }}/">
+          {{ collection.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

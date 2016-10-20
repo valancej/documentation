@@ -424,3 +424,31 @@ body.is-blue {
 
   }
 }
+
+.Layout {
+  font-size: 0;
+}
+
+.Sidebar,
+.Content {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.Sidebar {
+  width: 20vw;
+}
+
+.Contentn {
+  width: 80vw;
+}
+
+.Topmenu {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #000;
+  }
+}

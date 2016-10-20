@@ -5,7 +5,22 @@
 </head>
 <body class="{{page.bodyclass}}">
   {% include header.html %}
-  {{ content }}
+
+  {% include search.html %}
+
+  {% include sections.html %}
+  <div class="Layout">
+    {% if page.collection %}
+      <div class="Sidebar">
+        {% include sidebar.html %}
+      </div>
+    {% endif %}
+
+    <div class="Content">
+      {{ content }}
+    </div>
+  </div>
+
   {% include footer.html %}
 
   {% include mixpanel.html %}
