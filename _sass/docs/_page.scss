@@ -438,8 +438,10 @@ body.is-blue {
 
 .Sidebar {
   width: 20vw;
+  text-align: left;
+  border-right: 1px solid $cInputBorder;
 }
 
-.Contentn {
+.Content {
   width: 80vw;
 }

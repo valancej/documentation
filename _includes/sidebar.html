@@ -2,10 +2,10 @@
 {% assign categories = collection.first.docs | group_by: 'category' | sort: 'name' %}
 
 <aside class="Sidebar">
-  <ul>
+  <ul class="ul">
     {% for category in categories %}
     {% assign documents = category.items | sort: 'weight' %}
-      <li>
+      <li class="ul__title">
         <strong>{{ category.name }}</strong>
         <ul>
           {% for document in documents %}
