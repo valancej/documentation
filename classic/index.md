@@ -1,6 +1,6 @@
 ---
 layout: page
-collection: checkbot
+collection: classic
 ---
 
 Welcome to the Documentation about the _Classic_ category.

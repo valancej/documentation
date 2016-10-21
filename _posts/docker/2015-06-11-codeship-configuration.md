@@ -40,9 +40,9 @@ If you already worked with Codeship the process will be familiar (and if not, it
 
 	The page is split in two panes. On the left hand side you will find basic build details, including the commit message, who triggered the build and which branch (or tag) triggered the build.
 
-	You will also see the [services]({% link _jet/getting-started/services.md %}) defined in your _codeship-services.yml_ file (if you click on the _Services_ header as this section is hidden by default).
+	You will also see the [services]({% link _docker/getting-started/services.md %}) defined in your _codeship-services.yml_ file (if you click on the _Services_ header as this section is hidden by default).
 
-	The main portion of the left pane is dedicated to listing the [steps]({% link _jet/getting-started/steps.md %}) you have defined. Clicking on a single step will open the step log in the right pane. Each step includes the following information:
+	The main portion of the left pane is dedicated to listing the [steps]({% link _docker/getting-started/steps.md %}) you have defined. Clicking on a single step will open the step log in the right pane. Each step includes the following information:
 
 	* the command you are running
 	* the service the step is running on (on the right hand side)
