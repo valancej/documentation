@@ -16,7 +16,7 @@ categories:
 
 ## Notifications
 
-Codeship allows you to configure a number of standard notifications for your build via your project settings. For details on what notification methods are supported, as well as how to configure notifications for your builds, check out the [documentation]({{ site.baseurl }}{% post_url administration/2014-09-02-notifications %}#encryption-commands).
+Codeship allows you to configure a number of standard notifications for your build via your project settings. For details on what notification methods are supported, as well as how to configure notifications for your builds, check out the [documentation]({{ site.baseurl }}{% link _general/account/notifications.md %}#encryption-commands).
 
 ## Custom Notifications
 

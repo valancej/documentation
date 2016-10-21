@@ -4,8 +4,7 @@ layout: page
 tags:
   - administration
   - project
-categories:
-  - administration
+category: About
 ---
 You can transfer your project to another account by navigating to:
 

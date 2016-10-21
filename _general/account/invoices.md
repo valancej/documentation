@@ -6,14 +6,13 @@ tags:
   - account
   - invoices
   - billing
-categories:
-  - administration
+category: Account
 ---
 
 * include a table of contents
 {:toc}
 
-Invoices are available every month on the date the subscription began via email or the invoices page in your Account or Organization Settings. 
+Invoices are available every month on the date the subscription began via email or the invoices page in your Account or Organization Settings.
 
 ### View and download invoices
 To view your invoices on Codeship
@@ -24,7 +23,7 @@ To view your invoices on Codeship
 
     - **Organization Account**: Select _Organization Name_
 
-- Select _Invoice_ link 
+- Select _Invoice_ link
 
 Here, you will see the history of all previous invoices. All invoices can be downloaded as a PDF file.
 
