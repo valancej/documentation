@@ -5,8 +5,7 @@ tags:
   - faq
   - avatar
   - gravatar
-categories:
-  - faq
+category: Account
 ---
 
 To change the avatar shown on Codeship, please head over to [Gravatar.com](http://en.gravatar.com/) and setup an avatar for both, the email address you configured in your Codeship [User Settings](https://codeship.com/user/edit) as well as for any email addresses you use in your git configuration.

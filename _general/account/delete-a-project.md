@@ -4,8 +4,7 @@ layout: page
 tags:
   - administration
   - project
-categories:
-  - administration
+category: Account
 ---
 If you are the project owner you can delete your project by going to
 

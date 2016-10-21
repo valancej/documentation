@@ -6,8 +6,7 @@ tags:
   - project
   - organizations
   - team management
-categories:
-  - administration
+category: Account
 ---
 
 Organizations simplify and enhance team management as well as subscription management for (larger) teams on Codeship.
