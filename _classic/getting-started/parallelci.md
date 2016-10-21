@@ -35,7 +35,7 @@ As we do not run your _setup commands_ for the deployment pipeline, please add a
 ![Configuration of build pipelines]({{ site.baseurl }}/images/continuous-integration/parallelization-deploy-pipelines.png)
 
 ## Artifacts Support
-As your build and deployment commands are run on multiple virtual machines, **artifacts created during the test steps will not be available during the deployment**. If you need artifacts from the previous steps, make sure to regenerate them during the deployment using a [_script deployment_]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-with-custom-scripts %}) added before the actual deployment.
+As your build and deployment commands are run on multiple virtual machines, **artifacts created during the test steps will not be available during the deployment**. If you need artifacts from the previous steps, make sure to regenerate them during the deployment using a [_script deployment_]({{ site.baseurl }}{% link _classic/continuous-deployment/deployment-with-custom-scripts.md %}) added before the actual deployment.
 
 ## Downgrade Behavior
 If you downgrade to a subscription with fewer parallel pipelines any additional pipelines will merged into the first one. If this is not desirable for your project make sure to manually move the steps to the appropriate test pipelines before downgrading.

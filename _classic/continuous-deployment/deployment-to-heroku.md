@@ -7,7 +7,7 @@ tags:
   - heroku
 category: Continuous Deployment
 ---
-Codeship makes makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}).
+Codeship makes makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _classic/getting-started/deployment-pipelines.md %}).
 
 * include a table of contents
 {:toc}
@@ -70,7 +70,7 @@ This causes git to disable some checks and can cause the remote repository to lo
 See [git push -f](https://git-scm.com/docs/git-push) for more info.
 
 #### Run Migrations (Ruby on Rails only)
-You can specify to run the migration during the Heroku deployment. If you want to run your migration after the deployment, you can add a [custom script]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-with-custom-scripts %}) after the Heroku deployment and run the migration.
+You can specify to run the migration during the Heroku deployment. If you want to run your migration after the deployment, you can add a [custom script]({{ site.baseurl }}{% link _classic/continuous-deployment/deployment-with-custom-scripts.md %}) after the Heroku deployment and run the migration.
 
 **Example**:
 
@@ -84,7 +84,7 @@ heroku run --exit-code --app ${HEROKU_APPLICATION_NAME} -- bundle exec rake db:m
 This will enable your build to check the URL of your application to make sure that it is up.
 
 ## Troubleshooting
-- [check_url fails when deploying to Heroku]({{ site.baseurl }}{% post_url faq/2014-09-10-check_url-fails-for-heroku-deployment %})
+- [check_url fails when deploying to Heroku]({{ site.baseurl }}{% link _general/projects/check_url-fails-for-heroku-deployment.md %})
 
 ## Questions
 If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com/) page.

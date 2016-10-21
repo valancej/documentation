@@ -18,4 +18,4 @@ pip install awscli
 
 Please visit [https://aws.amazon.com/cli/](https://aws.amazon.com/cli/) for more information including CLI references.
 
-If you would like a simpler way to deploy to AWS, Codeship also offers integrated deployment with [Elastic Beanstalk]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-to-elastic-beanstalk%}), [CodeDeploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-11-10-deployment-to-aws-codedeploy%}), and S3.
+If you would like a simpler way to deploy to AWS, Codeship also offers integrated deployment with [Elastic Beanstalk]({{ site.baseurl }}{% link _classic/continuous-deployment/deployment-to-elastic-beanstalk.md %}), [CodeDeploy]({{ site.baseurl }}{% link _classic/continuous-deployment/deployment-to-aws-codedeploy.md %}), and S3.

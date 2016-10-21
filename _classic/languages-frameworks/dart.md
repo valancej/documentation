@@ -31,7 +31,7 @@ exactly the same command to run those tests as you would on your own system
 
 We automatically have `xvfb` running on our System. You can use Firefox, Chrome
 or PhantomJS to run your Dart tests in a browser. You can read more in our
-[Browser Testing Guide]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-browser-testing %})
+[Browser Testing Guide]({{ site.baseurl }}{% link _classic/continuous-integration/browser-testing.md %})
 
 ## Newer Versions
 

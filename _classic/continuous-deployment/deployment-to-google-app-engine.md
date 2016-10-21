@@ -7,7 +7,7 @@ tags:
   - google app engine
 category: Continuous Deployment
 ---
-You can deploy your [Java]({{ site.baseurl }}{% post_url languages/2014-09-03-java-and-jvm-based-languages %}),[Python]({{ site.baseurl }}{% post_url languages/2014-09-03-python %}), [NodeJS]({{ site.baseurl }}{% post_url languages/2014-09-03-nodejs  %}) , or [Go]({{ site.baseurl }}{% post_url languages/2014-09-03-go %}) applications to Google App Engine through Codeship.
+You can deploy your [Java]({{ site.baseurl }}{% link _classic/languages-frameworks/java-and-jvm-based-languages.md %}),[Python]({{ site.baseurl }}{% link _classic/languages-frameworks/python.md %}), [NodeJS]({{ site.baseurl }}{% link _classic/languages-frameworks/nodejs.md  %}) , or [Go]({{ site.baseurl }}{% link _classic/languages-frameworks/go.md %}) applications to Google App Engine through Codeship.
 
 ## Setup Google App Engine Deployment
 

@@ -16,7 +16,7 @@ For submodules that are hosted as public repositories that should just work (and
 
 If your submodule is however a **private repository** you'd need to make sure Codeship can clone the repository.
 
-1. Make sure the projects public SSH key (from the _General_ settings page) has access to the submodule repository. See [how to provide access to other repositories]({{ site.baseurl }}{% post_url faq/2014-09-10-access-to-other-repositories-fails-during-build %}) if you're not sure how to achieve this.
+1. Make sure the projects public SSH key (from the _General_ settings page) has access to the submodule repository. See [how to provide access to other repositories]({{ site.baseurl }}{% link _general/projects/access-to-other-repositories-fails-during-build.md %}) if you're not sure how to achieve this.
 2. Make sure the submodule is referenced via a SSH based URL (e.g. `git@github.com:codeship/documentation.git`). If you refence the submodule via a HTTPS based URL (e.g. `https://github.com/codeship/documentation.git`), the git client will ask for authentication credentials during the build and run into a timeout (as you can't provide them).
 
 See the git documentation on [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for more information on working with submodules.
