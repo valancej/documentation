@@ -4,7 +4,7 @@ tags:
   - project settings
   - ssh key
   - faq
-category: Getting Started
+category: Projects
 ---
 Open the project navigation on top of the page. Click on the settings icon next to the respective project.
 

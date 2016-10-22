@@ -5,7 +5,7 @@ tags:
   - deployment
   - git
   - push
-category: Getting Started
+category: Continuous Deployment
 ---
 
 If you want to deploy your application by doing a `git push` to a remote repository please follow these steps:
