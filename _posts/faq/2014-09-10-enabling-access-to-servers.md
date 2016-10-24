@@ -12,28 +12,28 @@ categories:
 ---
 ## IP Addresses
 
-Codeship services do not have a static IP. We are hosted in the US-East region of EC2 at AWS. You can find all the IP addresses allocated to EC2 at [AWS IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) or take a look at their [.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file directly.
+Codeship is hosted on AWS EC2 us-east-1 region. Because of this, Codeship services do not have a static IP address. AWS publishes their most up-to-date [IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json).
 
-You can enable access for those ranges on your own server's firewall settings. Alternatively, if you are an AWS customer yourself, you can add the following information to your EC2 security group.
+You can enable access for those ranges on your own server's firewall settings. Alternatively, if you are an AWS customer yourself, you can add the following information to your EC2 Security Group.
 
 ## AWS Security Group and Account ID
 
 * Account ID: *841076584876*
-* Security group ID: *sg-64c2870c*
+* Security Group ID: *sg-64c2870c*
 
-In your EC2 security group, set the source to Custom-IP and add the following snippet as the source.
+In your EC2 Security Group, set the Source to Custom-IP and add the following snippet as the Source.
 
 ```shell
 841076584876/sg-64c2870c
 ```
 
-Be aware that security groups don't work across AWS regions, so for the above settings to be applicable to your account, you'd need to host your instances on `us-east-1` as well. Also, security groups won't work with instances hosted in a Virtual Private Cloud (VPC) at all.
+Be aware that Security Groups don't work across AWS regions, so for the above settings to be applicable to your account, you'd need to host your instances on `us-east-1` as well. Also, Security Groups won't work with instances hosted in a Virtual Private Cloud (VPC) at all.
 
 ## Access from RDS instances
 
-Different to the settings mentioned above you need to provide the name of the security group instead of the ID. Please add the following access rules
+Different to the settings mentioned above you need to provide the name of the Security Group instead of the ID. Please add the following access rules
 
 * Account ID: *841076584876*
-* Security group name: *default*
+* Security Group name: *default*
 
 Note, that this doesn't work with VPCs or across regions either.
