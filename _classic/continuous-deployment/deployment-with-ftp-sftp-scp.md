@@ -41,7 +41,7 @@ For more information on using _lftp_ please see the [LFTP man page]({% man_url l
 
 All of the methods below can use key based authentication. As this does not require you to provide your account password to Codeship, we strongly advise to configure this.
 
-You need to add the [Codeship public SSH key]({{ site.baseurl }}{% link _classic/getting-started/where-can-i-find-the-ssh-public-key-for-my-project.md %}) for your project to the `~/.ssh/authorized_keys` file on your server. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
+You need to add the [Codeship public SSH key]({{ site.baseurl }}{% link _general/projects/where-can-i-find-the-ssh-public-key-for-my-project.md %}) for your project to the `~/.ssh/authorized_keys` file on your server. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
 
 ```shell
 mkdir -p ~/.ssh
@@ -72,7 +72,7 @@ For the [branch you want to deploy]({{ site.baseurl }}{% link _classic/getting-s
 sftp -b deploy/production ssh_user@your.server.com
 ```
 
-* Make sure you add the [SSH key of your project]({{ site.baseurl }}{% link _classic/getting-started/where-can-i-find-the-ssh-public-key-for-my-project.md %}) into your servers ***authorized_keys*** file.
+* Make sure you add the [SSH key of your project]({{ site.baseurl }}{% link _general/projects/where-can-i-find-the-ssh-public-key-for-my-project.md %}) into your servers ***authorized_keys*** file.
 * Also make sure your _remote directory_ already exists before running your first deployment.
 
 ## Continuous Deployment with SCP
@@ -87,7 +87,7 @@ For the [branch you want to deploy]({{ site.baseurl }}{% link _classic/getting-s
 scp -rp ~/clone/* ssh_user@your.server.com:/path/on/server/
 ```
 
-Make sure you add the [SSH key of your project]({{ site.baseurl }}{% link _classic/getting-started/where-can-i-find-the-ssh-public-key-for-my-project.md %})
+Make sure you add the [SSH key of your project]({{ site.baseurl }}{% link _general/projects/where-can-i-find-the-ssh-public-key-for-my-project.md %})
 into your servers `~/.ssh/authorized_keys` file.
 
 ## Continuous Deployment with RSYNC
