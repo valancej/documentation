@@ -4,6 +4,7 @@ weight: 70
 tags:
   - testing
   - faq
+  - builds
 categories:
   - continuous-integration
 ---
