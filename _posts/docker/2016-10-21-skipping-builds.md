@@ -5,6 +5,8 @@ tags:
   - docker
   - jet
   - git
+  - builds
+  - testing
 categories:
   - docker
 ---
