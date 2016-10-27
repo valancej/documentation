@@ -1,6 +1,6 @@
 ---
 title: Where can I find the SSH Public Key for my project?
-weight: 90
+weight: 93
 tags:
   - project settings
   - ssh key
