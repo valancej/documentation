@@ -9,7 +9,7 @@ categories:
 ---
 If you want to add a badge showing your last builds status to your ReadMe, you can find the code in the **Notification** settings of your project.
 
-![Codeship Status for codeship/documentation](https://codeship.com/projects/59a737f0-1648-0132-c4e7-72c6c37b1f6e/status?branch=master)
+![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)
 
 The raw URL for the image looks like the this:
 
