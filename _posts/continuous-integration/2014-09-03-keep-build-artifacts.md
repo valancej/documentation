@@ -1,5 +1,6 @@
 ---
 title: Keeping Build Artifacts
+weight: 60
 tags:
   - faq
   - artifacts

@@ -1,6 +1,6 @@
 ---
 title: ParallelCI
-weight: 80
+weight: 97
 tags:
 - testing
 - continuous integration

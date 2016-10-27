@@ -1,6 +1,6 @@
 ---
 title: SSH access
-weight: 90
+weight: 94
 tags:
   - testing
   - ssh
