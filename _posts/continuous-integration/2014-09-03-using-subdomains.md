@@ -1,5 +1,6 @@
 ---
 title: Custom DNS Resolution
+weight: 60
 tags:
   - subdomain
   - testing
