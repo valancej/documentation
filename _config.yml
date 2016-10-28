@@ -23,14 +23,14 @@ defaults:
       comments: true
   - scope:
       path: "" # an empty string here means all files in the project
-      type: checkbot
+      type: classic
     values:
       layout: page
       weight: 50
       comments: true
   - scope:
       path: "" # an empty string here means all files in the project
-      type: jet
+      type: docker
     values:
       layout: page
       weight: 50
@@ -74,7 +74,7 @@ collections:
     output: true
   docker:
     title: Docker Infrastructure
-    permalink: /jet/:path/
+    permalink: /docker/:path/
     sort_order: 3
     output: true
 
