@@ -35,6 +35,13 @@ defaults:
       layout: page
       weight: 50
       comments: true
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: changelog
+    values:
+      layout: page
+      weight: 50
+      comments: true
 
 
 # Jekyll
@@ -76,6 +83,11 @@ collections:
     title: Docker Infrastructure
     permalink: /docker/:path/
     sort_order: 3
+    output: true
+  changelog:
+    title: ChangeLog
+    permalink: /changelog/:path/
+    sort_order: 4
     output: true
 
 # SASS
