@@ -22,4 +22,4 @@ For this reason we introduce two new concepts.
 - [Services]({% link _docker/getting-started/services.md %}) specify a Docker image, plus accompanying configuration, same as you would do with _Docker Compose_. The Docker image defines the operating environment.
 - [Steps]({% link _docker/getting-started/steps.md %}) specify what to run on those services.
 
-To get started, please [install Jet]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}) locally on your development machine and follow the [tutorial]({{ site.baseurl }}{% post_url docker/guide/2015-06-10-getting-started %}) to get your first project working on the Codeship Docker Infrastructure.
+To get started, please [install Jet]({{ site.baseurl }}{% link _docker/getting-started/installation.md %}) locally on your development machine and follow the [tutorial]({{ site.baseurl }}{% link _docker/getting-started/getting-started.md %}) to get your first project working on the Codeship Docker Infrastructure.
