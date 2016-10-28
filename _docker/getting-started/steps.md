@@ -25,7 +25,7 @@ category: Getting Started
 _Jet_ will look for a steps file in this order. If you are running _Jet_ locally, you can override the filename with the `--steps-path` flag. Both YAML and JSON formats are accepted.
 
 ## Prerequisites
-Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-cli %}) or [set up your project on Codeship.]({{ site.baseurl }}{% post_url docker/2015-06-11-codeship-configuration %}). It will also require that you have configured your [codeship-services.yml file]({% link _docker/getting-started/services.md %}).
+Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _docker/getting-started/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _docker/getting-started/codeship-configuration.md %}). It will also require that you have configured your [codeship-services.yml file]({% link _docker/getting-started/services.md %}).
 
 ## Using codeship-steps.yml
 
@@ -193,7 +193,7 @@ For each step, the running container is provided with a set of environment varia
 * `CI` (defaults to `true`)
 * `CI_NAME` (defaults to `codeship`)
 
-Please see our [Docker Push Tutorial]({{ site.baseurl }}{% post_url docker/tutorials/2015-07-03-docker-push %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.
+Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _docker/getting-started/docker-push.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.
 
 ## Questions
 If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com) page.

@@ -29,7 +29,7 @@ Some great examples of how and why we based `codeship-services.yml` on Docker Co
 **Note**: There are a few Docker Compose features not yet supported by `codeship-services.yml`. We will eventually be at full Docker Compose parity, but until then you can use most features of Docker Compose in your `codeship-services.yml` file with little to no modification. For a list of non-supporter Docker Compose features, see below in this article.
 
 ## Prerequisites
-Your Services file will require that you have [installed Jet locally]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-cli %}) or [set up your project on Codeship.]({{ site.baseurl }}{% post_url docker/2015-06-11-codeship-configuration %})
+Your Services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _docker/getting-started/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _docker/getting-started/codeship-configuration.md %})
 
 ## Services File Setup & Configuration
 By default, we look for the filename `codeship-services.yml` but a `docker-compose.yml` file that does not include any non-support functionality will also be automatically recognized and used if no `codeship-services.yml` is present. Compose commands that we do not yet fully support will usually be ignored, although occasionally they can also trigger errors.
@@ -75,7 +75,7 @@ data:
     - ./tmp/data:/data
 ```
 
-[Learn more about using volumes.]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-04-docker-volumes %})
+[Learn more about using volumes.]({{ site.baseurl }}{% link _docker/getting-started/docker-volumes.md %})
 
 ### Environment Variables
 The standard `environment` and `env_file` directives are supported. Additionally, we support encrypted environment variables with `encrypted_environment` and `encrypted_env_file` directives. These are the same format, except they expect encrypted variables.
@@ -104,13 +104,13 @@ app:
   encrypted_env_file: env.encrypted
 ```
 
-The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-15-encryption %}) to root directory (and adding it to our `.gitignore` file.)
+The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% link _docker/getting-started/encryption.md %}) to root directory (and adding it to our `.gitignore` file.)
 
-Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% post_url docker/jet/2015-05-25-installation %}))
+Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _docker/getting-started/installation.md %}))
 
 Lastly, we would either delete the unencrypted `env` file or add it to our `.gitignore`.
 
-[Learn more about encrypting your environment variables.]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-15-encryption %})
+[Learn more about encrypting your environment variables.]({{ site.baseurl }}{% link _docker/getting-started/encryption.md %})
 
 ### Docker Inside Docker
 The boolean directive `add_docker` is available. If specified for a service, it will:
@@ -132,7 +132,7 @@ app:
   cached: true
 ```
 
-There are several specific requirements and considerations when using caching, so it is recommended that you [read our caching documentation.]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-07-caching %}) before enabling caching on your builds.
+There are several specific requirements and considerations when using caching, so it is recommended that you [read our caching documentation.]({{ site.baseurl }}{% link _docker/getting-started/caching.md %}) before enabling caching on your builds.
 
 ## Unavailable Features
 The following features available from Docker Compose are not available on Codeship.
@@ -158,12 +158,12 @@ Codeship does not yet support Docker Compose Version 2 syntax or Version 2-speci
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
 * [Build Directive In Compose](https://docs.docker.com/compose/compose-file/#build)
-* [Encrypting environment variables.]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-15-encryption %})
+* [Encrypting environment variables.]({{ site.baseurl }}{% link _docker/getting-started/encryption.md %})
 * [Steps File]({% link _docker/getting-started/steps.md %})
-* [Volumes]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-04-docker-volumes %})
+* [Volumes]({{ site.baseurl }}{% link _docker/getting-started/docker-volumes.md %})
 * [Add_Docker Directive in Compose](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker)
 * [Docker-in-Docker](https://registry.hub.docker.com/u/jpetazzo/dind).
-* [Caching]({{ site.baseurl }}{% post_url docker/tutorials/2015-09-07-caching %})
+* [Caching]({{ site.baseurl }}{% link _docker/getting-started/caching.md %})
 
 ## Other Notes
 * `link` containers will be newly created for each step.
