@@ -23,7 +23,7 @@ git clone git@github.com:codeship/ci-guide.git
 
 We're going to walk you through using Codeship to build, test, and deploy your Docker applications. Codeship uses a tool called Jet to turn your existing Docker apps and workflows into a seamless CI/CD process.
 
-The first thing you want to do is install Codeship Jet on your local machine. For Mac users, you can do this through Brew and Linux users can curl the Jet binary directly. [You can see more detailed instructions here.](https://codeship.com/documentation/docker/installation/)
+The first thing you want to do is install Codeship Jet on your local machine. For Mac users, you can do this through Brew and Linux users can curl the Jet binary directly. [You can see more detailed instructions here.](https://documentation.codeship.com/docker/installation/)
 
 ## Testing Jet
 
