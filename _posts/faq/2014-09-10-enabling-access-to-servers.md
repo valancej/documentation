@@ -19,9 +19,12 @@ You can enable access for those ranges on your own server's firewall settings. A
 ## AWS Security Group and Account ID
 
 ### Attention: Our Infrastructure is Changing
+Release date: **Thursday, November 3rd 2016**
 
-All instances used for running Codeship builds will be moving into an Amazon VPC. Previously, if you were situated within AWS `us-east-1` region, it was possible to limit access to your infrastructure via a single security group, owned by Codeship. However, this is now not possible.
+On the 3rd November 2016 all instances used for running Codeship builds will be moving into an Amazon VPC. Previously, if you were situated within AWS `us-east-1` region, it was possible to limit access to your infrastructure via a single security group, owned by Codeship. However, this is now not possible.
 
 **What does this mean for you?**
 
 If you want to limit incoming traffic to your infrastructure, we recommend that you use the IP addresses approach shown above. All our instances will now move into a new security group, which is only accessible from within our VPC. This means that you cannot whitelist our security group in order to give Codeship instances access to your infrastructure. 
+
+If you experience any issues regarding this change, please open a ticket at [helpdesk.codeship.com]()
