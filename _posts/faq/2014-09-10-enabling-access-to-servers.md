@@ -18,22 +18,13 @@ You can enable access for those ranges on your own server's firewall settings. A
 
 ## AWS Security Group and Account ID
 
-* Account ID: *841076584876*
-* Security Group ID: *sg-64c2870c*
+### Attention: Our Infrastructure is Changing
+Release date: **Thursday, November 3rd 2016**
 
-In your EC2 Security Group, set the Source to Custom-IP and add the following snippet as the Source.
+On the 3rd November 2016 all instances used for running Codeship builds will be moving into an Amazon VPC. Previously, if you were situated within AWS `us-east-1` region, it was possible to limit access to your infrastructure via a single security group, owned by Codeship. However, this is now not possible.
 
-```shell
-841076584876/sg-64c2870c
-```
+**What does this mean for you?**
 
-Be aware that Security Groups don't work across AWS regions, so for the above settings to be applicable to your account, you'd need to host your instances on `us-east-1` as well. Also, Security Groups won't work with instances hosted in a Virtual Private Cloud (VPC) at all.
+If you want to limit incoming traffic to your infrastructure, we recommend that you use the IP addresses approach shown above. All our instances will now move into a new security group, which is only accessible from within our VPC. This means that you cannot whitelist our security group in order to give Codeship instances access to your infrastructure. 
 
-## Access from RDS instances
-
-Different to the settings mentioned above you need to provide the name of the Security Group instead of the ID. Please add the following access rules
-
-* Account ID: *841076584876*
-* Security Group name: *default*
-
-Note, that this doesn't work with VPCs or across regions either.
+If you experience any issues regarding this change, please open a ticket at [helpdesk.codeship.com]()
