@@ -47,7 +47,7 @@ demo:
     TEST_TOKEN: Testing123
 ```
 
-This new `environment` directive creates a new environment variable in our build named `TEST_TOKEN`. Note that even though we're explicitly declaring our environment variables here, in a production application we'd actual prefer to [encrypt them](https://documentation.codeship.com/docker/encryption/).
+This new `environment` directive creates a new environment variable in our build named `TEST_TOKEN`. Note that even though we're explicitly declaring our environment variables here, in a production application we'd actual prefer to [encrypt them]({{ site.baseurl }}/docker/encryption/).
 
 ### Look For The Variable
 
