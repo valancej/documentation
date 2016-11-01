@@ -6,8 +6,12 @@ log() { echo -e "\033[36m$@\033[39m"; }
 # subdirectory, but use an empty baseurl, so we can deploy to the bucket root
 target="${CI_BRANCH}"
 baseurl="/${CI_BRANCH}"
+envname="dev"
 if [ "${CI_BRANCH}" = "master" ]; then
 	baseurl=""
+	envname="production"
+elif [ "${CI_BRANCH}" = ${staging/*} || "${CI_BRANCH}" = ${private/*} ]; then
+	envname="staging"
 fi
 
 # Where do we want to generate the site at?
@@ -29,4 +33,4 @@ rm -rf "${jet_source}"
 # Compile the site
 log "Building with base URL '${baseurl}'"
 sed -i'' -e "s|^baseurl:.*|baseurl: ${baseurl}|" _config.yml
-bundle exec jekyll build --destination "${destination}"
+bundle exec JEKYLL_ENV=${envname} jekyll build --destination "${destination}"
