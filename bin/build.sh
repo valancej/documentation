@@ -33,4 +33,4 @@ rm -rf "${jet_source}"
 # Compile the site
 log "Building with base URL '${baseurl}'"
 sed -i'' -e "s|^baseurl:.*|baseurl: ${baseurl}|" _config.yml
-bundle exec JEKYLL_ENV=${envname} jekyll build --destination "${destination}"
+bundle exec JEKYLL_ENV="${envname}" jekyll build --destination "${destination}"
