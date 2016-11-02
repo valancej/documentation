@@ -12,16 +12,15 @@ body.is-blue {
 
 .contentWrapper.has-meta {
   max-width: $bpLarge;
-  padding: 0 10rem;
+  padding: 0 10rem 0 0;
   position: relative;
 }
 
 @media (max-width: 900px) {
   .contentWrapper.has-meta {
-    padding: 0 8rem;
+    padding: 0 8rem 0 0;
   }
 
-  .meta__left,
   .meta__right {
     width: 8rem;
   }
@@ -44,7 +43,6 @@ body.is-blue {
   width: 100%;
 }
 
-.meta__left,
 .meta__right {
   width: 10rem;
   position: absolute;

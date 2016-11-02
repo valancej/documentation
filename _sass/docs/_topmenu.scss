@@ -25,6 +25,11 @@
     @media only screen and (min-width: 900px) {
       width: 40%;
     }
+    text-align: right;
+    &_title {
+      margin-top: -0.2rem;
+      font-size: 1.2rem;
+    }
   }
 
   &_search {
@@ -107,11 +112,5 @@
         padding: 0 1rem;
       }
     }
-  }
-
-  &_header {
-    text-align: right;
-    margin-top: -40px;
-    height: 80%;
   }
 }
