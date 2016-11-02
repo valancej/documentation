@@ -1,10 +1,12 @@
 {% assign collections = site.collections | sort: 'sort_order' %}
 <nav class="Topmenu">
-  <div class="Topmenu_header">
-    <h1>Codeship Documentation</h1>
-  </div>
   <div class="Topmenu_nav">
     <ul>
+      <li>
+        <button>Search
+          <span class="icon fa fa-search"></span>
+        </button>
+      </li>
       {% for collection in collections %}
       {% if collection.label == 'posts' %}
       {% continue %}
@@ -15,12 +17,10 @@
         </a>
       </li>
       {% endfor %}
-      <li>
-        <button>
-          <span class="icon fa fa-search"></span>
-        </button>
-      </li>
     </ul>
+  </div>
+  <div class="Topmenu_header">
+    <h1>Codeship Documentation</h1>
   </div>
 
   <div class="Topmenu_search">
