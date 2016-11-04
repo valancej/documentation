@@ -94,6 +94,7 @@
       border: 0;
       position: absolute;
       z-index: 9;
+      -webkit-appearance: none; // Fix broken layout in Safari
 
       &:focus {
         outline: 0;
