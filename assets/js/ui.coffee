@@ -81,4 +81,9 @@ $ ->
         e.preventDefault()
         $search.removeClass('is-active')
 
+      $search.find('input').on 'keyup', (e) ->
+        if e.keyCode == 27 # ESC
+          $(this).val('')
+          $search.removeClass('is-active')
+
   new Ui.Watcher
