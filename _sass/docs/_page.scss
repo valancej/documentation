@@ -82,37 +82,6 @@ body.is-blue {
 }
 
 // *******************************************************
-// BREADCRUMBS
-// *******************************************************
-
-.breadcrumbs {
-  transform: translateY(-.5rem);
-  overflow-wrap: normal;
-  overflow-x: initial;
-
-  a {
-    color: darken($_cGrey, 10%);
-    display: inline-block;
-    margin: 0 .5rem;
-    font-size: .9rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &:not(:last-of-type)::after {
-      content: '/';
-      position: relative;
-      right: -.5rem;
-    }
-
-    &:first-of-type {
-      margin-left: 0;
-    }
-  }
-}
-
-// *******************************************************
 // BOX
 // *******************************************************
 

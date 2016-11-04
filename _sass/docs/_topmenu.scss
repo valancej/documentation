@@ -13,26 +13,31 @@
     cursor: pointer;
   }
 
-  &_header,
   &_nav {
     font-size: 1rem;
     width: 100%;
     display: inline-block;
     vertical-align: middle;
-  }
-
-  &_header {
-    @media only screen and (min-width: 900px) {
-      width: 40%;
+    button {
+      background: 0;
+      border: 0;
+      color: $cAnchor;
+      font-size: 1rem;
     }
 
-    text-align: right;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
 
-    &_title {
-      margin-top: -.2rem;
-      font-size: 1.2rem;
+      @media only screen and (max-width: 900px) {
+        justify-content: space-around;
+      }
+
+      li {
+        padding: 0 1rem;
+      }
     }
-
   }
 
   &_search {
@@ -86,33 +91,6 @@
 
       &:focus {
         outline: 0;
-      }
-    }
-  }
-
-  &_nav {
-    @media only screen and (min-width: 900px) {
-      width: 60%;
-    }
-
-    button {
-      background: 0;
-      border: 0;
-      color: $cAnchor;
-      font-size: 1rem;
-    }
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-
-      @media only screen and (max-width: 900px) {
-        justify-content: space-around;
-      }
-
-      li {
-        padding: 0 1rem;
       }
     }
   }
