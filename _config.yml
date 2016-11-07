@@ -64,16 +64,19 @@ gems:
 collections:
   general:
     title: General
+    shortname: general
     permalink: /general/:path/
     sort_order: 1
     output: true
   classic:
     title: Classic Infrastructure
+    shortname: classic
     permalink: /classic/:path/
     sort_order: 2
     output: true
   docker:
     title: Docker Infrastructure
+    shortname: docker
     permalink: /docker/:path/
     sort_order: 3
     output: true
