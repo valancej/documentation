@@ -47,7 +47,7 @@ demo:
     TEST_TOKEN: Testing123
 ```
 
-This new `environment` directive creates a new environment variable in our build named `TEST_TOKEN`. Note that even though we're explicitly declaring our environment variables here, in a production application we'd actual prefer to [encrypt them](https://codeship.com/documentation/docker/encryption/).
+This new `environment` directive creates a new environment variable in our build named `TEST_TOKEN`. Note that even though we're explicitly declaring our environment variables here, in a production application we'd actual prefer to [encrypt them]({% link _posts/docker/tutorials/2015-09-15-encryption.md %}).
 
 ### Look For The Variable
 
@@ -96,4 +96,4 @@ You should see something like this indicating our tests ran and passed:
 
 ## After Testing, Push Images And/Or Deploy!
 
-So, now we have images building, a working script and a working test! The next step is to move from CI to CD: [pushing images and deploying your code.]({{ site.baseurl }}{% post_url docker/guide/2016-07-28-getting-started-part-three %})
+So, now we have images building, a working script and a working test! The next step is to move from CI to CD: [pushing images and deploying your code.]({% link _posts/docker/guide/2016-07-28-getting-started-part-three.md %})
