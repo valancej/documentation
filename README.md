@@ -1,4 +1,4 @@
-# [Codeship Documentation](https://codeship.com/documentation/)
+# [Codeship Documentation](https://documentation.codeship.com/)
 
 [![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)](https://codeship.com/projects/102044)
 [![Waffle.io Board](https://badge.waffle.io/codeship/documentation.svg?label=ready&title=Ready)](http://waffle.io/codeship/documentation)

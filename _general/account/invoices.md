@@ -27,7 +27,7 @@ To view your invoices on Codeship
 
 Here, you will see the history of all previous invoices. All invoices can be downloaded as a PDF file.
 
-### Receive invoices in another email address
+### Receive invoices to another email address
 You can also change the email address to receive the invoices in **Manage Subscriptions** > _Update credit card and billing address_.  
 
 ![Billing Info Link]({{ site.baseurl }}/images/administration/update_cc_info_link.png)

@@ -1,6 +1,6 @@
 ---
 title: Setting Environment Variables
-weight: 60
+weight: 96
 tags:
   - testing
 category: Getting Started

@@ -11,28 +11,18 @@ category: Projects
 ---
 ## IP Addresses
 
-Codeship is Hosted in the US-East region of EC2. You can find all the IP Addresses allocated to EC2 in their [Developer Forum](https://forums.aws.amazon.com/ann.jspa?annID=1701).
+Codeship is hosted on AWS EC2 us-east-1 region. Because of this, Codeship services do not have a static IP address. AWS publishes their most up-to-date [IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json).
 
-You can enable access for those ranges on your own servers firewall settings.
+You can enable access for those ranges on your own server's firewall settings.
 
-## AWS Security Group and account ID
 
-* Account ID: *841076584876*
-* Security group ID: *sg-64c2870c*
+## AWS Security Group and Account ID (support ended November 3rd 2016)
 
-To add it as a source to your EC2 Security group set the Source to Custom-IP and add the following snippet as the source.
+### Attention: Our Infrastructure Changed
+As of November 3, 2016, all instances used for running Codeship builds moved into an Amazon VPC. Previously, if your infrastructure was situated in the AWS `us-east-1` region, it was possible to whitelist Codeship access via a single AWS security group and account ID, owned by Codeship. This is no longer possible as of November 3, 2016.
 
-```shell
-841076584876/sg-64c2870c
-```
+**What does this mean for you?**
 
-Be aware that security groups don't work across AWS regions, so for the above settings to be applicable to your account, you'd need to host your instances on `us-east-1` as well. Also, security groups won't work with instances hosted in a Virtual Private Cloud (VPC) at all.
+If you want to limit incoming traffic to your infrastructure, we recommend that you use the IP addresses approach shown above. All our instances will now move into a new security group, which is only accessible from within our VPC. This means that you cannot whitelist our security group in order to give Codeship instances access to your infrastructure. 
 
-## Access from RDS instances
-
-Different to the settings mentioned above you need to provide the name of the security group, instead of the ID. Please add the following access rules
-
-* Account ID: *841076584876*
-* Security group name: *default*
-
-Note, that this doesn't work with VPCs or across regions either.
+If you experience any issues regarding this change, please open a ticket at [helpdesk.codeship.com]()

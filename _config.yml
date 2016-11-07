@@ -101,7 +101,7 @@ kramdown:
 # Prose.io
 prose:
   rooturl: '_posts'
-  siteurl: 'https://codeship.com/documentation/'
+  siteurl: 'https://documentation.codeship.com/'
   media: 'images'
   ignore:
     - index.md
@@ -122,14 +122,14 @@ prose:
         field:
           element: 'select'
           label: 'Category'
-          options: 'http://codeship.com/documentation/metadata/categories.jsonp'
+          options: 'https://documentation.codeship.com/metadata/categories.jsonp'
       - name: 'tags'
         field:
             element: 'multiselect'
             label: 'Tags'
             placeholder: 'Choose Tags'
             alterable: true
-            options: 'http://codeship.com/documentation/metadata/tags.jsonp'
+            options: 'http://documentation.codeship.com/metadata/tags.jsonp'
       - name: 'weight'
         field:
           element: 'number'

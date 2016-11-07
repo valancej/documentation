@@ -66,11 +66,16 @@ There are two types of group steps:
 * `parallel` run the sub-steps in parallel. Feel free to specify this recursively as much as you want, _Jet_ will just max out the number of available processors. If any sub-step fails, the parallel step fails as well.
 * `serial` run the sub-steps serially. This is useful for grouping within parallel steps.
 
-Group steps share the following four directives:
+Group steps share the following directives:
 
-* `type` the step type, either `parallel` or `serial`.
-* `steps` a list of sub-steps.
+* `dockercfg_service` specifies the Docker configuration service to use for a step.
+* `encrypted_dockercfg_path` is the location of the encrypted Docker configuration file.
 * `service` or `services` which specify a service or list of services for your steps to run on.
+* `steps` is a list of sub-steps.
+* `tag` indicates what branches the step will be run on (as a string or regex).
+* `type` is the step type, either `parallel` or `serial`.
+
+`dockercfg_service` and `encrypted_dockercfg_path` are mutually exclusive with `encrypted_dockercfg_path` taking precedence, i.e. if both are specified, the information is taken from `encrypted_dockercfg_path`.
 
 `service` is a single string, `services` is a list of strings. At most one of these can be specified. If you specify a service at the group level you cannot specify a service for an individual run step. If you specify a list of services, all sub-steps will be run in one of two ways.
 
@@ -82,6 +87,8 @@ Since that's confusing, here's a logically equivalent example:
 ```yaml
 # Example 1
 - type: parallel
+  tag: "^(master|staging/.*)$"
+  dockercfg_service: dockercfg_generator
   steps:
   - type: serial
     steps:
@@ -98,6 +105,8 @@ Since that's confusing, here's a logically equivalent example:
 
 # the same as the above
 - type: parallel
+  tag: "^(master|staging/.*)$"
+  dockercfg_service: dockercfg_generator
   services:
   - foo
   - bar
@@ -107,16 +116,26 @@ Since that's confusing, here's a logically equivalent example:
 
 # Example 2
 - service: foo
+  tag: "master"
+  encrypted_dockercfg_path: dockercfg.encrypted
   command: echo one
 - service: foo
+  tag: master
+  encrypted_dockercfg_path: dockercfg.encrypted
   command: echo two
 - service: bar
+  tag: master
+  encrypted_dockercfg_path: dockercfg.encrypted
   command: echo one
 - service: bar
+  tag: "master"
+  encrypted_dockercfg_path: dockercfg.encrypted
   command: echo two
 
 # the same as the above
 - type: serial
+  tag: "master"
+  encrypted_dockercfg_path: dockercfg.encrypted
   services:
   - foo
   - bar
