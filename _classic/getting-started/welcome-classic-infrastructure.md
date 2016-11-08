@@ -4,8 +4,7 @@ weight: 98
 tags:
   - classic
   - introduction
-categories:
-  - continuous-integration
+category: Getting Started
 ---
 
 Welcome to Codeship's Classic Infrastructure with pre-configured VMs where we take care of the infrastructure for you. We host the environment, you provide the code.

@@ -31,4 +31,4 @@ demo:
     dockerfile_path: Dockerfile
 ```
 
-Find out more about these two files in [steps configuration]({{ site.baseurl }}{% post_url docker/2015-05-25-steps %}) and [services configuration]({{ site.baseurl }}{% post_url docker/2015-05-25-services %}).
+Find out more about these two files in [steps configuration]({{ site.baseurl }}{% link _docker/getting-started/steps.md %}) and [services configuration]({{ site.baseurl }}{% link _docker/getting-started/services.md %}).
