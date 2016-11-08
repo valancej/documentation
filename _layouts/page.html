@@ -17,14 +17,10 @@ layout: default
   {% endif %}
 {% endif %}
 
-{% include search.html %}
-
 <div class="contentWrapper has-meta">
   {% include meta.html tags=page.tags %}
   <div class="grid">
     <div class="colxs100 pageContent">
-
-      {% include breadcrumbs.html %}
 
       <h1 class="pageTitle" data-swiftype-name="title" data-swiftype-type="string"  data-swiftype-index='true'>{{ title }}</h1>
       {% if page.tags %}

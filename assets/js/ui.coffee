@@ -15,6 +15,7 @@ $ ->
       @_setTitleImage()
       @_linkfyAnchors()
       @_handleMobileMenu()
+      @_handleSearchInteraction()
       @setScrollToEvents()
 
     _setTitleImage: ->
@@ -66,5 +67,23 @@ $ ->
         target = $(this).attr 'href'
         $(target).velocity 'scroll', {duration: 500, offset: -90, easing: "easeInSine"}
 
+    _handleSearchInteraction: ->
+      $searchButton = $('.Topmenu_nav button')
+      $searchCloseButton = $('.Topmenu_search button')
+      $search = $('.Topmenu_search')
+
+      $searchButton.on 'click', (e) ->
+        e.preventDefault()
+        $search.addClass('is-active')
+        $search.find('input').focus()
+
+      $searchCloseButton.on 'click', (e) ->
+        e.preventDefault()
+        $search.removeClass('is-active')
+
+      $search.find('input').on 'keyup', (e) ->
+        if e.keyCode == 27 # ESC
+          $(this).val('')
+          $search.removeClass('is-active')
 
   new Ui.Watcher

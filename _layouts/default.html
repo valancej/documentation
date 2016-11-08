@@ -4,8 +4,21 @@
   {% include head.html %}
 </head>
 <body class="{{page.bodyclass}}">
-  {% include header.html %}
-  {{ content }}
+  {% include codeship_header.html %}
+  {% include documentation_header.html %}
+
+  <div class="Layout">
+    {% if page.collection %}
+      <div class="Sidebar">
+        {% include sidebar.html %}
+      </div>
+    {% endif %}
+
+    <div class="Content">
+      {{ content }}
+    </div>
+  </div>
+
   {% include footer.html %}
 
   {% include mixpanel.html %}

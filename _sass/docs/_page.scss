@@ -12,16 +12,15 @@ body.is-blue {
 
 .contentWrapper.has-meta {
   max-width: $bpLarge;
-  padding: 0 10rem;
+  padding: 0 10rem 0 0;
   position: relative;
 }
 
 @media (max-width: 900px) {
   .contentWrapper.has-meta {
-    padding: 0 8rem;
+    padding: 0 8rem 0 0;
   }
 
-  .meta__left,
   .meta__right {
     width: 8rem;
   }
@@ -44,46 +43,14 @@ body.is-blue {
   width: 100%;
 }
 
-.meta__left,
 .meta__right {
   width: 10rem;
   position: absolute;
-  left: 0;
+  left: auto;
+  right: 0;
   margin-top: 4rem;
   box-sizing: border-box;
   padding: 0 5px;
-}
-
-.meta__right {
-  right: 0;
-  left: auto;
-}
-
-.meta__backLink {
-  display: block;
-  position: relative;
-  padding-left: 2.5rem;
-  line-height: 1rem;
-  font-size: .8rem;
-
-  &:hover::before {
-    transform: translateX(-100%);
-  }
-
-  &::before {
-    @include showIcon($fa-var-angle-left);
-    position: absolute;
-    left: 0;
-    top: -2px;
-    display: block;
-    width: 2rem;
-    line-height: 2rem;
-    border: 1px solid $cAnchor;
-    text-align: center;
-    border-radius: 100%;
-    font-size: 1.2rem;
-    transition: transform 150ms;
-  }
 }
 
 // *******************************************************
@@ -111,37 +78,6 @@ body.is-blue {
   &:hover {
     background: $cAnchor;
     color: $_cWhite;
-  }
-}
-
-// *******************************************************
-// BREADCRUMBS
-// *******************************************************
-
-.breadcrumbs {
-  transform: translateY(-.5rem);
-  overflow-wrap: normal;
-  overflow-x: initial;
-
-  a {
-    color: darken($_cGrey, 10%);
-    display: inline-block;
-    margin: 0 .5rem;
-    font-size: .9rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &:not(:last-of-type)::after {
-      content: '/';
-      position: relative;
-      right: -.5rem;
-    }
-
-    &:first-of-type {
-      margin-left: 0;
-    }
   }
 }
 
@@ -423,4 +359,25 @@ body.is-blue {
     }
 
   }
+}
+
+.Layout {
+  font-size: 0;
+}
+
+.Sidebar,
+.Content {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.Sidebar {
+  width: 20vw;
+  text-align: left;
+  border-right: 1px solid $cInputBorder;
+}
+
+.Content {
+  width: 80vw;
 }
