@@ -14,7 +14,7 @@ category: Getting Started
 * include a table of contents
 {:toc}
 
-## Get a API Key
+## Get an API Key
 
 You can get your API key on [your account page](https://codeship.com/user/edit).
 
