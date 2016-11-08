@@ -6,7 +6,7 @@ tags:
   - builds
   - docker
 categories:
-  - docker
+category: Getting Started
 ---
 
 The **image** in `codeship-services.yml` has to match the **image_name** in `codeship-steps.yml`, like in the following example:
