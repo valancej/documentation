@@ -14,5 +14,15 @@
       "ReplaceKeyPrefixWith": "docker/continuous-deployment/google-cloud/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "continuous-integration/ssh-access/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "classic/getting-started/ssh-access/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
