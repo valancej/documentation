@@ -7,67 +7,22 @@
   },
   "RoutingRules": [{
     "Condition": {
-      "HttpErrorCodeReturnedEquals": "403",
-      "KeyPrefixEquals": ""
+      "KeyPrefixEquals": "docker-integration/google-cloud/"
     },
     "Redirect": {
       "HostName": "documentation.codeship.com",
-      "Protocol": "https",
-      "HttpRedirectCode": "303"
+      "ReplaceKeyPrefixWith": "docker/continuous-deployment/google-cloud/",
+      "HttpRedirectCode": "302"
     }
-  }, {
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "continuous-integration/ssh-access/"
+    },
     "Redirect": {
       "HostName": "documentation.codeship.com",
-      "ReplaceKeyPrefixWith": "faq/",
-      "HttpRedirectCode": "301"
-    },
-    "Condition": {
-      "KeyPrefixEquals": "documentation/troubleshooting/"
-    }
-  }, {
-    "Redirect": {
-      "HostName": "documentation.codeship.com",
-      "ReplaceKeyPrefixWith": "languages/",
-      "HttpRedirectCode": "301"
-    },
-    "Condition": {
-      "KeyPrefixEquals": "documentation/languages-and-frameworks/"
-    }
-  }, {
-    "Redirect": {
-      "HostName": "documentation.codeship.com",
-      "ReplaceKeyPrefixWith": "databases/sqlite/",
-      "HttpRedirectCode": "301"
-    },
-    "Condition": {
-      "KeyPrefixEquals": "documentation/databases-and-queues/sqlite/"
-    }
-  }, {
-    "Redirect": {
-      "HostName": "documentation.codeship.com",
-      "ReplaceKeyPrefixWith": "administration/",
-      "HttpRedirectCode": "301"
-    },
-    "Condition": {
-      "KeyPrefixEquals": "documentation/managing-your-project/"
-    }
-  }, {
-    "Redirect": {
-      "HostName": "documentation.codeship.com",
-      "ReplaceKeyPrefixWith": "integrations/webhooks/",
-      "HttpRedirectCode": "301"
-    },
-    "Condition": {
-      "KeyPrefixEquals": "documentation/api-and-webhooks/webhooks/"
-    }
-  }, {
-    "Redirect": {
-      "HostName": "documentation.codeship.com",
-      "ReplaceKeyPrefixWith": "docker-guide/getting-started/",
-      "HttpRedirectCode": "301"
-    },
-    "Condition": {
-      "KeyPrefixEquals": "docker/getting-started/"
+      "ReplaceKeyPrefixWith": "classic/getting-started/ssh-access/",
+      "HttpRedirectCode": "302"
     }
   }]
 }
