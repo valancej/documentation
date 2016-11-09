@@ -34,5 +34,25 @@
       "ReplaceKeyPrefixWith": "classic/continuous-integration/browser-testing/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "docker-guide/getting-started/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "docker/getting-started/getting-started/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "continuous-integration/set-environment-variables/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "classic/getting-started/set-environment-variables/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
