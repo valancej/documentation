@@ -74,5 +74,35 @@
       "ReplaceKeyPrefixWith": "general/projects/enabling-access-to-servers/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "troubleshooting/github-3rd-party-restrictions/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "general/account/github-3rd-party-restrictions/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "continuous-deployment/deployment-to-aws-codedeploy/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "classic/continuous-deployment/deployment-to-aws-codedeploy/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "faq/access-to-other-repositories-fails-during-build/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "general/projects/access-to-other-repositories-fails-during-build/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
