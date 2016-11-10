@@ -54,5 +54,25 @@
       "ReplaceKeyPrefixWith": "classic/getting-started/set-environment-variables/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "languages/nodejs/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "classic/languages-frameworks/nodejs/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "faq/enabling-access-to-servers"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "general/projects/enabling-access-to-servers/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
