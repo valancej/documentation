@@ -184,5 +184,35 @@
       "ReplaceKeyPrefixWith": "docker/getting-started/steps/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "continuous-deployment/push-to-remote-repository/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "classic/continuous-deployment/push-to-remote-repository/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "faq/limit_builds/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "general/projects/limit_builds/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "faq/configure-your-avatar"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "general/account/configure-your-avatar/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
