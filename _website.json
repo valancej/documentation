@@ -104,5 +104,25 @@
       "ReplaceKeyPrefixWith": "general/projects/access-to-other-repositories-fails-during-build/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "docker/community-images/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "docker/getting-started/community-images/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "continuous-integration/welcome-classic-infrastructure/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "classic/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
