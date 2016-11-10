@@ -124,5 +124,65 @@
       "ReplaceKeyPrefixWith": "classic/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "docker/image-push-fails/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "docker/getting-started/image-push-fails/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "docker/skipping-builds/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "docker/getting-started/skipping-builds/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "administration/transfer-project-to-new-owner/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "general/projects/transfer-project-to-new-owner/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "administration/organizations/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "general/account/organizations/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "integrations/api/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "classic/getting-started/api/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "docker/steps/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "docker/getting-started/steps/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
