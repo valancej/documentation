@@ -28,7 +28,7 @@ If you already worked with Codeship the process will be familiar (and if not, it
 
 4. You can now choose between a standard Codeship build or a build based on the Docker Infrastructure. Choose the latter.
 	![Select Docker Infrastructure]({{ site.baseurl }}/images/docker/setup_select_docker.png)
-5. You will be presented with a screen offering basic setup instructions, as well as a link to the [Documentation for the Codeship Docker Infrastructure]({{ site.baseurl }}/jet/).
+5. You will be presented with a screen offering basic setup instructions, as well as a link to the documentation for the Codeship Docker Infrastructure.
 	![Docker Project Help Screen]({{ site.baseurl }}/images/docker/setup_docker_setup.png)
 
 	As we already added all the required information to the [repository](https://github.com/codeship/jet-tutorial), you can simply push a new commit and this will trigger a new build on Codeship.

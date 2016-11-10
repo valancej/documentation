@@ -23,6 +23,6 @@ As of November 3, 2016, all instances used for running Codeship builds moved int
 
 **What does this mean for you?**
 
-If you want to limit incoming traffic to your infrastructure, we recommend that you use the IP addresses approach shown above. All our instances will now move into a new security group, which is only accessible from within our VPC. This means that you cannot whitelist our security group in order to give Codeship instances access to your infrastructure. 
+If you want to limit incoming traffic to your infrastructure, we recommend that you use the IP addresses approach shown above. All our instances will now move into a new security group, which is only accessible from within our VPC. This means that you cannot whitelist our security group in order to give Codeship instances access to your infrastructure.
 
-If you experience any issues regarding this change, please open a ticket at [helpdesk.codeship.com]()
+If you experience any issues regarding this change, please open a ticket at [helpdesk.codeship.com](https://helpdesk.codeship.com/)
