@@ -29,7 +29,7 @@ bundle exec cap $STAGE deploy
 
 ### Authentication fails
 
-Usually Capistrano relies on a SSH connection to copy files and execute remote commands. If connecting to your server fails with an error message (e.g. asking for a password), please take a look at our [documentation on authenticating via SSH public keys](https://codeship.com/documentation/continuous-deployment/deployment-with-ftp-sftp-scp/#authenticating-via-ssh-public-keys) for more information.
+Usually Capistrano relies on a SSH connection to copy files and execute remote commands. If connecting to your server fails with an error message (e.g. asking for a password), please take a look at our [documentation on authenticating via SSH public keys]({{ site.baseurl }}{% link _classic/continuous-deployment/deployment-with-ftp-sftp-scp.md %}) for more information.
 
 ### Capistrano is not installed by default
 
