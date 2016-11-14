@@ -224,5 +224,25 @@
       "ReplaceKeyPrefixWith": "classic/getting-started/ssh-access/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "docker/services/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "docker/getting-started/services/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "continuous-deployment/deployment-pipelines/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "classic/getting-started/deployment-pipelines/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
