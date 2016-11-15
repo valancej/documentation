@@ -244,5 +244,25 @@
       "ReplaceKeyPrefixWith": "classic/getting-started/deployment-pipelines/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "troubleshooting/builds-are-not-triggered/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "general/projects/builds-are-not-triggered/",
+      "HttpRedirectCode": "302"
+    }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "docker/cli/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "docker/getting-started/cli/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
