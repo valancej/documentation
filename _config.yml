@@ -61,6 +61,7 @@ gems:
   - jekyll-coffeescript
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 collections:
   general:
     title: General
