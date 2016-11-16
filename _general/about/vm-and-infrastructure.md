@@ -6,7 +6,6 @@ tags:
   - infrastructure
 category: About
 redirect_from:
-  - /security/vm-and-Infrastructure/
   - /security/vm-and-infrastructure/
 ---
 ## OS & Virtualization
