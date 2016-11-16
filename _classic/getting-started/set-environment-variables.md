@@ -4,6 +4,8 @@ weight: 96
 tags:
   - testing
 category: Getting Started
+redirect_from:
+  - /continuous-integration/set-environment-variables/
 ---
 If you set environment variables, they will be available for the whole build. You can set your environment variables in two different ways:
 

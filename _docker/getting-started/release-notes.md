@@ -7,6 +7,8 @@ tags:
   - jet
   - release notes
 category: Getting Started
+redirect_from:
+  - /docker/release-notes/
 ---
 
 <div class="info-block">

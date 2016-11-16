@@ -5,6 +5,8 @@ tags:
   - faq
   - artifacts
 category: Continuous Integration
+redirect_from:
+  - /continuous-integration/keep-build-artifacts/
 ---
 
 For security reasons Codeship doesn't keep any artifacts from your builds besides the build log shown on the website. If you want to keep artifacts, you need to push them to a remote server during your builds.

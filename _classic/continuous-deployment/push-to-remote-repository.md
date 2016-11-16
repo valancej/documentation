@@ -6,6 +6,8 @@ tags:
   - git
   - push
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/push-to-remote-repository/
 ---
 
 If you want to deploy your application by doing a `git push` to a remote repository please follow these steps:

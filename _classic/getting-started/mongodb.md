@@ -6,6 +6,8 @@ tags:
   - databases
   - mongodb
 category: Getting Started
+redirect_from:
+  - /databases/mongodb/
 ---
 MongoDB **2.6.4** runs on the default port and doesn't require any credentials.
 

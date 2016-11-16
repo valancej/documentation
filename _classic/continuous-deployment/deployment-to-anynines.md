@@ -1,9 +1,11 @@
 ---
 title: Deploy to anynines
 tags:
-- deployment
-- anynines
+  - deployment
+  - anynines
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/deployment-to-anynines/
 ---
 
 [anynines](http://www.anynines.com) is a PaaS built on top of CloudFoundry and OpenStack.

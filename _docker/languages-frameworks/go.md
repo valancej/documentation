@@ -6,6 +6,8 @@ tags:
   - languages
   - docker
 category: Languages &amp; Frameworks
+redirect_from:
+  - /docker-integration/go/
 ---
 In this article you will learn about setting up a Go based project on our Docker infrastructure.
 

@@ -8,6 +8,8 @@ tags:
   - push
   - registry
 category: Getting Started
+redirect_from:
+  - /docker/docker-push/
 ---
 
 * include a table of contents

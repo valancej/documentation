@@ -5,6 +5,8 @@ tags:
   - faq
   - builds
 category: Projects
+redirect_from:
+  - /faq/limit_builds/
 ---
 We don’t have a feature to limit which branches can be built.
 

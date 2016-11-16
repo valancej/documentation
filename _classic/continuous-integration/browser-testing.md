@@ -5,6 +5,8 @@ tags:
   - testing
   - continuous integration
 category: Continuous Integration
+redirect_from:
+  - /continuous-integration/browser-testing/
 ---
 ## Firefox
 Firefox 35 is installed and available in the PATH.

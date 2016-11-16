@@ -8,6 +8,8 @@ tags:
   - pull
   - registry
 category: Getting Started
+redirect_from:
+  - /docker/docker-pull/
 ---
 
 * include a table of contents

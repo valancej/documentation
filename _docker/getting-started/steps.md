@@ -8,6 +8,8 @@ tags:
   - configuration
   - steps
 category: Getting Started
+redirect_from:
+  - /docker/steps/
 ---
 
 * include a table of contents

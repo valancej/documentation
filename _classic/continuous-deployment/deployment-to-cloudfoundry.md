@@ -1,9 +1,11 @@
 ---
 title: Deploy with Cloud Foundry
 tags:
-- deployment
-- cloudfoundry
+  - deployment
+  - cloudfoundry
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/deployment-to-cloudfoundry/
 ---
 
 As for getting started with **Cloud Foundry** on Codeship, start by getting your application to deploy from your local machine. Once this is done, you need to add the following environment variables to your project settings.

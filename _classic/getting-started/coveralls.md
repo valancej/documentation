@@ -5,6 +5,8 @@ tags:
   - analytics
   - integrations
 category: Getting Started
+redirect_from:
+  - /analytics/coveralls/
 ---
 ## Coveralls Discount Code
 

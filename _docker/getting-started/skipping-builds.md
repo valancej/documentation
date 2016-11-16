@@ -8,6 +8,8 @@ tags:
   - builds
   - testing
 category: Getting Started
+redirect_from:
+  - /docker/skipping-builds/
 ---
 You can add either of the following skip directives to the commit message of the last commit before you push and that push will be ignored:
 

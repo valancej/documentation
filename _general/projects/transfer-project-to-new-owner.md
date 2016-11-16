@@ -5,6 +5,8 @@ tags:
   - administration
   - project
 category: Projects
+redirect_from:
+  - /administration/transfer-project-to-new-owner/
 ---
 You can transfer your project to another account by navigating to:
 

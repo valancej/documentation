@@ -6,6 +6,8 @@ tags:
   - languages
   - docker
 category: Languages &amp; Frameworks
+redirect_from:
+  - /docker-integration/nodejs/
 ---
 In this article you will learn about setting up a Node.js based project on our Docker infrastructure.
 

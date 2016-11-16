@@ -5,6 +5,8 @@ tags:
   - analytics
   - integrations
 category: Getting Started
+redirect_from:
+  - /analytics/code-climate/
 ---
 There is no specific setup necessary to use Code Climate on Codeship.
 You can follow the [Code Climate docs](http://docs.codeclimate.com/article/219-setting-up-test-coverage)

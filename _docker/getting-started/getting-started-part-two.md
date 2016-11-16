@@ -8,8 +8,10 @@ tags:
   - introduction
   - getting started
   - tutorial
-  - getting started jet  
+  - getting started jet
 category: Getting Started
+redirect_from:
+  - /docker-guide/getting-started-part-two/
 ---
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via

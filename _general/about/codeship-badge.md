@@ -5,6 +5,8 @@ tags:
   - faq
   - badge
 category: About
+redirect_from:
+  - /faq/codeship-badge/
 ---
 If you want to add a badge showing your last builds status to your ReadMe, you can find the code in the **Notification** settings of your project.
 

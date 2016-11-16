@@ -4,6 +4,8 @@ tags:
   - dart
   - languages
 category: Languages &amp; Frameworks
+redirect_from:
+  - /languages/dart/
 ---
 `$DART_SDK` is available in the Environment and included in the PATH. The installed version of the Dart SDK is `1.5.1`
 

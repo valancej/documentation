@@ -9,6 +9,8 @@ tags:
   - services
   - databases
 category: Getting Started
+redirect_from:
+  - /docker/services-and-databases/
 ---
 
 Through Docker we support many different databases and services you can use for your build. By adding them to your `codeship-services.yml` file you have a lot of control on how to set up your build environment.

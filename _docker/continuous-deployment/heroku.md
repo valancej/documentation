@@ -6,6 +6,8 @@ tags:
   - heroku
   - docker
 category: Continuous Deployment
+redirect_from:
+  - /docker-integration/heroku/
 ---
 
 To make it easy for you to deploy your application to Heroku we've built a container that has the Heroku Toolbelt and additional scripts installed. We will set up a simple example showing you how to configure the deployment.

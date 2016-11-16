@@ -10,6 +10,8 @@ tags:
   - project configuration
   - tutorial
 category: Getting Started
+redirect_from:
+  - /docker/codeship-configuration/
 ---
 
 <div class="info-block">

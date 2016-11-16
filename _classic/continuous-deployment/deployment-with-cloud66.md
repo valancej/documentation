@@ -4,6 +4,8 @@ tags:
   - deployment
   - cloud66
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/deployment-with-cloud66/
 ---
 Integrating [Cloud 66](http://www.cloud66.com/) with Codeship is as simple as copying and pasting a URL!
 

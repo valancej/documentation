@@ -6,6 +6,8 @@ tags:
   - commands
   - branch
 category: Getting Started
+redirect_from:
+  - /faq/ignore-command-on-branch/
 ---
 ## Ignore command on a branch
 

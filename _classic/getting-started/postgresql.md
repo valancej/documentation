@@ -6,6 +6,8 @@ tags:
   - databases
   - postgresql
 category: Getting Started
+redirect_from:
+  - /databases/postgresql/
 ---
 * include a table of contents
 {:toc}

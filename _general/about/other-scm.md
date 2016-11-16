@@ -6,6 +6,8 @@ tags:
   - scm
   - svn
 category: About
+redirect_from:
+  - /faq/other-scm/
 ---
 Codeship currently only supports [GitHub](https://github.com/) and [BitBucket](https://bitbucket.org/) based repositories. While we do have plans to integrate with other providers in the future we don't have anything concrete planned at the moment.
 

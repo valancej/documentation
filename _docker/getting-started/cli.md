@@ -8,11 +8,13 @@ tags:
   - commands
   - running locally
 category: Getting Started
+redirect_from:
+  - /docker/cli/
+  - /jet/
 ---
 
 <div class="info-block">
 These commands are applicable if you want to run the Codeship local development CLI, `jet` binary, locally. Some of these options are only available locally and are unavailable in the hosted Codeship environment. If you haven't already, [you will need to install Jet.]({{ site.baseurl }}{% link _docker/getting-started/installation.md %})
-
 </div>
 
 * include a table of contents

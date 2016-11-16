@@ -7,6 +7,8 @@ tags:
   - jet
   - images
 category: Getting Started
+redirect_from:
+  - /docker/community-images/
 ---
 
 Codeship community members can develop and maintain base images that they may want to share with other Docker users.

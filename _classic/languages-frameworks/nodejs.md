@@ -6,6 +6,8 @@ tags:
   - iojs
   - framework
 category: Languages &amp; Frameworks
+redirect_from:
+  - /languages/nodejs/
 ---
 
 * include a table of contents
