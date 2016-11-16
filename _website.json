@@ -264,5 +264,15 @@
       "ReplaceKeyPrefixWith": "docker/getting-started/cli/",
       "HttpRedirectCode": "302"
     }
+  },
+  {
+    "Condition": {
+      "KeyPrefixEquals": "docker/installation/"
+    },
+    "Redirect": {
+      "HostName": "documentation.codeship.com",
+      "ReplaceKeyPrefixWith": "docker/getting-started/installation/",
+      "HttpRedirectCode": "302"
+    }
   }]
 }
