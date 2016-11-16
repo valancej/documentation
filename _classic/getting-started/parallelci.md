@@ -7,6 +7,8 @@ tags:
 - parallelci
 - parallelism
 category: Getting Started
+redirect_from:
+  - /continuous-integration/parallelci/
 ---
 
 **ParallelCI** allows you to split your test commands across multiple build VMs to speed up your build time. See the [ParallelCI feature page](http://codeship.com/features/parallelci) to check out how this helped users improve their build times tremendously.

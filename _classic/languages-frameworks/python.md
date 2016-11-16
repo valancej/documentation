@@ -5,6 +5,8 @@ tags:
   - python
   - languages
 category: Languages &amp; Frameworks
+redirect_from:
+  - /languages/python/
 ---
 We use **virtualenv** to manage python environments for you. We currently support Python `2.7.6`. Version `3.4.0` of Python is installed as well and available via the `python3` binary.
 

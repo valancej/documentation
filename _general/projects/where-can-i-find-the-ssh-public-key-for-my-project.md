@@ -6,6 +6,8 @@ tags:
   - ssh key
   - faq
 category: Projects
+redirect_from:
+  - /continuous-integration/where-can-i-find-the-ssh-public-key-for-my-project/
 ---
 Open the project navigation on top of the page. Click on the settings icon next to the respective project.
 

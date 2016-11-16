@@ -5,6 +5,8 @@ tags:
   - services
   - elasticsearch
 category: Getting Started
+redirect_from:
+  - /services/elasticsearch/
 ---
 Elasticsearch **1.2.2** is installed on the default port and doesn't require any credentials. However, it is not running by default. To use the Elasticsearch during your builds, start the service via the following command:
 

@@ -5,6 +5,8 @@ tags:
   - faq
   - getting started
 category: About
+redirect_from:
+  - /faq/getting_started_with_ci/
 ---
 * [Introduction to Continuous Integration by Martin Fowler](http://martinfowler.com/articles/continuousIntegration.html)
 * [Why Continuous Deployment by Eric Ries](http://www.startuplessonslearned.com/2009/06/why-continuous-deployment.html)

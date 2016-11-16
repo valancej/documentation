@@ -8,6 +8,8 @@ tags:
   - ip addresses
   - iam
 category: Projects
+redirect_from:
+  - /faq/enabling-access-to-servers
 ---
 ## IP Addresses
 

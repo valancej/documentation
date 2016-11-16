@@ -1,6 +1,8 @@
 ---
 layout: page
 collection: docker
+redirect_from:
+  - /docker/introduction/
 ---
 
 Welcome to Codeship's Docker Infrastructure, the new way to run your tests on Codeship. Enjoy full customizability. Easily mirror your Development, Test and Production Environments with full parity. The underlying build infrastructure, based on Docker, allows for customized definition of the running environment.

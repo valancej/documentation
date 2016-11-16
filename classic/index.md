@@ -1,6 +1,9 @@
 ---
 layout: page
 collection: classic
+redirect_from:
+  - /continuous-integration/welcome-classic-infrastructure/
+  - /classic/getting-started/welcome-classic-infrastructure/
 ---
 
 Welcome to Codeship's Classic Infrastructure with pre-configured VMs where we take care of the infrastructure for you. We host the environment, you provide the code.

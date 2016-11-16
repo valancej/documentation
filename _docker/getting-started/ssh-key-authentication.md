@@ -8,6 +8,8 @@ tags:
   - ssh key
   - encryption
 category: Getting Started
+redirect_from:
+  - /docker/ssh-key-authentication/
 ---
 
 * include a table of contents

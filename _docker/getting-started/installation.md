@@ -9,6 +9,8 @@ tags:
   - installation
   - running locally
 category: Getting Started
+redirect_from:
+  - /docker/installation/
 ---
 
 <div class="info-block">

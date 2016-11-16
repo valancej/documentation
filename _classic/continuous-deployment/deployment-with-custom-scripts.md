@@ -6,6 +6,8 @@ tags:
   - custom
   - scripts
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/deployment-with-custom-scripts/
 ---
 A custom script deployment is useful if your deployment requires additional or custom commands that are not available with some of Codeship's integrated deployment options.
 

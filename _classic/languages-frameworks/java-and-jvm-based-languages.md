@@ -5,6 +5,8 @@ tags:
   - scala
   - languages
 category: Languages &amp; Frameworks
+redirect_from:
+  - /languages/java-and-jvm-based-languages/
 ---
 
 ## JDKs

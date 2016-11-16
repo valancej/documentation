@@ -5,6 +5,8 @@ tags:
   - deployment
   - digital ocean
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/deployment-to-digitalocean/
 ---
 ## Different Ways to Deploy
 DigitalOcean offers virtual servers (called Droplets).

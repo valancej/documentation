@@ -5,6 +5,8 @@ tags:
   - administration
   - notifications
 category: Account
+redirect_from:
+  - /administration/notifications/
 ---
 ## Where can I configure Notifications
 Click the project menu on the top navigation and click the settings wheel to get to your project settings. There, click the **Notifications** link.

@@ -7,6 +7,8 @@ tags:
   - tutorial
   - encryption
 category: Getting Started
+redirect_from:
+  - /docker/encryption/
 ---
 
 If you need to make private information available to your build, you can save this information encrypted in your repository. This is most often needed to either make credentials used during deployment available or store credentials for a Docker registry. See e.g our [Docker Push]({{ site.baseurl }}{% link _docker/getting-started/docker-push.md %}) tutorial for a practical example.

@@ -6,6 +6,8 @@ tags:
   - deployment
   - heroku
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/deployment-to-heroku/
 ---
 Codeship makes makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _classic/getting-started/deployment-pipelines.md %}).
 

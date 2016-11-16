@@ -5,8 +5,9 @@ tags:
   - faq
   - builds
   - docker
-categories:
 category: Getting Started
+redirect_from:
+  - /docker/image-push-fails/
 ---
 
 The **image** in `codeship-services.yml` has to match the **image_name** in `codeship-steps.yml`, like in the following example:

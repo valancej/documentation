@@ -6,6 +6,8 @@ tags:
   - languages
   - docker
 category: Languages &amp; Frameworks
+redirect_from:
+  - /docker-integration/php/
 ---
 In this article you will learn about setting up a PHP based project and runnning your phpunit tests. This setup will allow you to run any other PHP based tool as well.
 

@@ -5,6 +5,8 @@ tags:
   - webhooks
   - integrations
 category: Getting Started
+redirect_from:
+  - /integrations/webhooks/
 ---
 ## Setup
 

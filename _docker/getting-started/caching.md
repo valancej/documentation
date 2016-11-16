@@ -6,6 +6,8 @@ tags:
   - docker
   - tutorial
 category: Getting Started
+redirect_from:
+  - /docker/caching/
 ---
 
 * include a table of contents

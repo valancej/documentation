@@ -7,6 +7,8 @@ tags:
   - scp
   - rsync
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/deployment-with-ftp-sftp-scp/
 ---
 We generally advise to use any SSH based tools like SFTP or SCP for deployment and only use FTP if not possible otherwise.
 

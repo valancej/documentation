@@ -5,6 +5,8 @@ tags:
   - git
   - submodules
 category: Continuous Integration
+redirect_from:
+  - /continuous-integration/git-submodules/
 ---
 
 If your repository includes a `.gitmodules` file Codeship will automatically initialize and update the configured submodules. To do this, we run the following command after cloning your repository.

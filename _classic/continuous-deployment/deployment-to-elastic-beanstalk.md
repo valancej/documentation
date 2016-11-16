@@ -6,6 +6,8 @@ tags:
   - deployment
   - elastic beanstalk
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/deployment-to-elastic-beanstalk/
 ---
 ## Prerequisites
 

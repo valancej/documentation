@@ -8,6 +8,8 @@ tags:
   - configuration
   - services
 category: Getting Started
+redirect_from:
+  - /docker/services/
 ---
 
 * include a table of contents

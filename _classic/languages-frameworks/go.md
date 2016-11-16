@@ -4,6 +4,8 @@ tags:
 - go
 - languages
 category: Languages &amp; Frameworks
+redirect_from:
+  - /languages/go/
 ---
 We set the `GOPATH` to `${HOME}` and checkout your code into
 

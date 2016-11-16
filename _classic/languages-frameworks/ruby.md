@@ -5,6 +5,8 @@ tags:
   - ruby
   - languages
 category: Languages &amp; Frameworks
+redirect_from:
+  - /languages/ruby/
 ---
 We use RVM to manage different Ruby versions. We set <strong>{% default_ruby_version %}</strong> as the default version. Currently we do not load the Ruby version from your Gemfile. You can always change the Ruby version by running:
 

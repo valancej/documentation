@@ -8,6 +8,8 @@ tags:
   - tools
   - browser
 category: Continuous Integration
+redirect_from:
+  - /docker/browser-testing/
 ---
 
 Running on our Docker based infrastructure you have many different options to set up browser testing. Following we will describe how you can install different browsers. Please check the language documentation for specifics on how to test with your browser in a specific language.

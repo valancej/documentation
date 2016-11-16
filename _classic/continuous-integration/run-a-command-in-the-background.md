@@ -5,6 +5,8 @@ tags:
   - testing
   - faq
 category: Continuous Integration
+redirect_from:
+  - /continuous-integration/run-a-command-in-the-background/
 ---
 
 If you need to run a process in the background during your builds (e.g. to run a service not available by default, or to run a development server provided by your application framework) you can use the following templates to do so.

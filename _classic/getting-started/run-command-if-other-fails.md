@@ -6,6 +6,8 @@ tags:
   - build error
   - commands
 category: Getting Started
+redirect_from:
+  - /faq/run-command-if-other-fails/
 ---
 To run another command if an earlier one fails you can use the following bash syntax
 

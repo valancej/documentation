@@ -7,6 +7,8 @@ tags:
   - cli
   - amazon
 category: Continuous Deployment
+redirect_from:
+  - /continuous-deployment/deployment-with-awscli/
 ---
 The AWS CLI tool does NOT come pre-installed on Codeship Classic infrastructure's build machines.
 

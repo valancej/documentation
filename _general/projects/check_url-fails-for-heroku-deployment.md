@@ -6,6 +6,8 @@ tags:
   - build error
   - heroku
 category: Projects
+redirect_from:
+  - /faq/check_url-fails-for-heroku-deployment/
 ---
 After each deployment we check if your app is up. Therefore we call (`wget`) either the default `*.herokuapps.com` URL or the URL you specified here.
 

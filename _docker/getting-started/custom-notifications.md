@@ -8,6 +8,8 @@ tags:
   - push
   - registry
 category: Getting Started
+redirect_from:
+  - /docker/custom-notifications/
 ---
 
 * include a table of contents

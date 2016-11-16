@@ -10,6 +10,8 @@ tags:
   - push
   - git
 category: Projects
+redirect_from:
+  - /troubleshooting/push-to-remote-repositories/
 ---
 If you want to push to a remote git repository during your deployment steps on Codeship, and the build fails with an error message such as the following:
 

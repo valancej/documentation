@@ -7,6 +7,8 @@ tags:
   - organizations
   - team management
 category: Account
+redirect_from:
+  - /administration/organizations/
 ---
 
 Organizations simplify and enhance team management as well as subscription management for (larger) teams on Codeship.

@@ -8,6 +8,8 @@ tags:
   - xip.io
   - lvh.me
 category: Continuous Integration
+redirect_from:
+  - /continuous-integration/using-subdomains/
 ---
 
 Sometimes you need to access your application at a specific URL during the build.

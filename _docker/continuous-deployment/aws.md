@@ -6,6 +6,8 @@ tags:
   - aws
   - docker
 category: Continuous Deployment
+redirect_from:
+  - /docker-integration/aws/
 ---
 
 To make it easy for you to deploy your application to AWS we've built a container that has the AWSCLI installed. We will set up a simple example showing you how to configure any deployment to AWS.
