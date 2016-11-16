@@ -317,16 +317,6 @@
   },
   {
     "Condition": {
-      "KeyPrefixEquals": "services/elasticsearch/"
-    },
-    "Redirect": {
-      "HostName": "documentation.codeship.com",
-      "ReplaceKeyPrefixWith": "classic/getting-started/elasticsearch/",
-      "HttpRedirectCode": "302"
-    }
-  },
-  {
-    "Condition": {
       "KeyPrefixEquals": "languages/php/"
     },
     "Redirect": {
