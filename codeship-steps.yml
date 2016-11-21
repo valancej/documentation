@@ -31,21 +31,27 @@
   name: deploying
   tag: "^(master|staging/.*|private/.*)$"
   steps:
-    - name: s3_sync
-      service: aws
-      command: sh bin/s3.sh sync
     - type: serial
-      tag: "^master$"
+      name: s3_deployment
       steps:
-        - name: s3_website
+        - name: s3_sync
           service: aws
-          command: sh bin/s3.sh configure_website _website.json
-        - name: s3_lifecycle
+          command: sh bin/s3.sh sync
+        - name: s3_redirects
           service: aws
-          command: sh bin/s3.sh configure_lifecycle _lifecycle.json
-        - name: swiftype
-          service: documentation
-          command: sh bin/swiftype.sh
+          command: sh bin/s3.sh configure_redirects
+        - type: serial
+          tag: "^master$"
+          steps:
+            - name: s3_website
+              service: aws
+              command: sh bin/s3.sh configure_website _website.json
+            - name: s3_lifecycle
+              service: aws
+              command: sh bin/s3.sh configure_lifecycle _lifecycle.json
+            - name: swiftype
+              service: documentation
+              command: sh bin/swiftype.sh
     - type: push
       tag: "^master$"
       name: push_docker_hub

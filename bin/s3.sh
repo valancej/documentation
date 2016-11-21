@@ -24,6 +24,26 @@ case "$action" in
 		config_file=${1:?'You need to pass an action!'} && shift
 		aws s3api put-bucket-lifecycle --bucket "${AWS_S3_BUCKET}" --lifecycle-configuration "file://${config_file}"
 		;;
+	'configure_redirects')
+		if [ "${CI_BRANCH}" = "master" ]; then
+			cd /site/master/ || exit 1
+		else
+			cd /site/ || exit 1
+		fi
+		for file in $(grep -rl -E '<meta\s+http-equiv="refresh"\s+content="0;\s+url=.*">' *); do
+			src="${file}"
+			tgt=$(grep -o -E '<meta\s+http-equiv="refresh"\s+content="0;\s+url=.*">' "${file}" | sed -E 's/<meta http-equiv="refresh" content="0; url=(.*)">/\1/g')
+			log "Redirect ${src} to ${tgt}"
+			aws s3api put-object \
+			  --bucket "${AWS_S3_BUCKET}" \
+			  --key "${src}" \
+			  --website-redirect-location "${tgt}" \
+			  --acl "public-read" \
+			  --content-type "text/html" \
+			  --body "${file}"
+		done
+		cd - || exit 1
+		;;
 	*)
 		log "Invalid action ${action} :("
 		exit 1
