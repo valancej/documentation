@@ -60,6 +60,20 @@ Similar to the other versions, you need to work around our auto-configuration fo
 sed -i "s|5432|5435|" "config/database.yml"
 ```
 
+### 9.6
+
+PostgreSQL version **9.6** is running on port `5436` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
+
+<div class="info-block">
+PostgreSQL 9.6 includes PostGIS version 2.2 instead of 2.1, which is installed for the other PostgreSQL versions.
+</div>
+
+Similar to the other versions, you need to work around our auto-configuration for Rails based projects by adding the following command to your _Setup Commands_.
+
+```shell
+sed -i "s|5432|5436|" "config/database.yml"
+```
+
 ## Run `psql` commands
 You can run any SQL query against the PostgreSQL database. For example to create a new database:
 
@@ -75,7 +89,7 @@ psql -d DATABASE_NAME -p DATABASE_PORT -c 'create extension if not exists hstore
 ```
 
 ### PostGIS
-PostgreSQL versions 9.2 to 9.4 include PostGIS 2.0, PostgreSQL version 9.5 includes the newer PostGIS version 2.2.
+PostgreSQL versions 9.2 to 9.4 include PostGIS 2.0, PostgreSQL version 9.5 and newer include the newer PostGIS version 2.2.
 
 ## Framework-specific configuration
 
