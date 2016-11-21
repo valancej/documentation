@@ -26,7 +26,7 @@ case "$action" in
 		;;
 	'configure_redirects')
 		if [ "${CI_BRANCH}" = "master" ]; then
-			cd /site/_site || exit 1
+			cd /site/master/ || exit 1
 		else
 			cd /site/ || exit 1
 		fi
