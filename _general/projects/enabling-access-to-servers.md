@@ -8,7 +8,7 @@ tags:
   - iam
 category: Projects
 redirect_from:
-  - /faq/enabling-access-to-servers
+  - /faq/enabling-access-to-servers/
 ---
 ## IP Addresses
 

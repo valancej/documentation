@@ -5,6 +5,9 @@ tags:
   - troubleshooting
   - build error
 category: Projects
+redirect_from:
+  - /troubleshooting/cant-find-file-in-repository/
+  - /faq/cant-find-file-in-repository/
 ---
 
 When you get an error indicating that a file can't be found but you are sure it exists in the repository it might be due to case sensitivity of the file system on our machines.

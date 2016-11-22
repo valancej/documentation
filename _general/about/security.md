@@ -5,6 +5,9 @@ tags:
   - security
   - gpg key
 category: About
+redirect_from:
+  - /security/
+  - /security/security/
 ---
 We fully understand and recognize, that the security of your source code and configuration data is important, as it forms the base of your and our endeavours. Therefore we put a lot of effort and thought into providing a secure infrastructure for you to use.
 
