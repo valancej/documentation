@@ -4,6 +4,5 @@
   },
   "ErrorDocument": {
     "Key": "404/index.html"
-  },
-  "RoutingRules": []
+  }
 }
