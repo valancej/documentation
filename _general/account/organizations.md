@@ -22,6 +22,7 @@ We currently offer the following roles (though more roles are already on our tod
 
 * **Owners** have control over all aspects of an organization. From changing the subscription to managing organization projects and teams.
 * **Managers** have control over team and project management of an organization. They can add and remove projects and manage the organization teams by adding new team members or assigning projects to teams. They have access to all projects and are able to change the project configuration.
+* **Project Managers** can manage projects the team is assigned to. They can debug builds, update test settings, or manage deployments.
 * **Contributors** have read-only access to their projects. This means that they can view the project dashboard and build details but are not allowed to change project settings or open debug builds.
 
 ## Creating an Organization
@@ -55,7 +56,7 @@ Once the project is created, you can add it to any of your teams. Members of the
 
 ![Adding a project to a team]({{ site.baseurl }}/images/administration/add_project_to_team.png)
 
-## Importing projects from personal account
+## Importing projects from a personal account
 
 All organization owners and managers have the option to import projects from their personal account.
 
