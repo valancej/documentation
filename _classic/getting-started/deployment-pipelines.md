@@ -7,23 +7,25 @@ category: Getting Started
 redirect_from:
   - /continuous-deployment/deployment-pipelines/
 ---
-On Codeship, you are able to define **deployment pipelines**. A deployment pipeline is bound to a branch. Every time a build runs for this branch, it kicks off your deployment pipeline.
+On Codeship, you are able to define **deployment pipelines**. A deployment pipeline is bound to a branch. Every time a build runs for this branch by pushing to it, it kicks off your deployment pipeline.
 
-Additionally, you can add multiple deployments within one deployment pipeline. This way, you can deploy for example to a staging environment first and only if that succeeds, to the production environment. This process is fully automated on Codeship and in case of errors you'll immediately get notified.
+<div class="info-block">
+You can add **multiple deployments within one deployment pipeline**. This way you can, for example, deploy to a staging environment first and, if that succeeds, follow up with a deployment to the production environment. This process is fully automated on Codeship and in case of errors you will get notified immediately. It is *not possible to run multiple deployments in parallel*.
+</div>
 
 ## Set up a deployment pipeline
-Go to your the ***Deployment*** page of your project settings to set up your deployment.
+Go to the ***Deployment*** page of your project settings to set up your deployment.
 
-Add a branch you want to deploy and save it.
+Add a branch that you would like to deploy and save it.
 ![Create Deployment Branch]({{ site.baseurl }}/images/continuous-deployment/create_branch.png)
 
 Choose your hosting provider or deployment method.
 ![Choose Deployment]({{ site.baseurl }}/images/continuous-deployment/choose_deployment.png)
 
-Fill in the deployment configuration and click the green checkmark on the top right of your deployment to save it."
+Fill out the deployment configuration and click the green checkmark on the top right of your deployment to save it.
 ![Save Deployment]({{ site.baseurl }}/images/continuous-deployment/save_deployment.png)
 
-On the next push to this branch (in this case 'master') and if all tests pass the deployment will be triggered.
+On the next push to this branch (in this case 'master') the deployment will be triggered under the condition that all tests pass successfully.
 ![Saved Deployment]({{ site.baseurl }}/images/continuous-deployment/saved_deployment.png)
 
 Now you can add additional deployments or configure another deployment pipeline.
