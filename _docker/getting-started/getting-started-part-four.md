@@ -1,10 +1,11 @@
 ---
-title: Getting Started Part 4
+title: Getting Started With Codeship Pro Part 4
 layout: page
 weight: 70
 tags:
   - docker
   - jet
+  - codeship pro  
   - introduction
   - getting started
   - tutorial
@@ -20,7 +21,7 @@ The source for the tutorial is available on Github as [codeship/ci-guide](https:
 git clone git@github.com:codeship/ci-guide.git
 ```
 
-## What's A Volume For?
+## Getting Started With Codeship Pro (Part 4)
 
 Let's take a look at volumes, and let's start with *what is a volume and what is it good for*?
 
@@ -28,7 +29,7 @@ First, it's important to know that Codeship does not reuse containers on differe
 
 This can create some problems. What if you want to create a service responsible for generating all your production assets, or what if you prepare your database in one service and need it to remain the same in the next step when you run your tests?
 
-That's where volumes come in. A volume is mounted on the host, "underneath" your containers, and you can specify which containers can read from volumes defined by other services. This lets you artifact data, generate assets and pass data between services easily - while keeping your services and steps isolated like you would want for a truly high-integrity CI process.
+That's where volumes come in. A volume is mounted on the host, "underneath" your containers, and you can specify which containers can read from volumes defined by other services. This lets you artifact data, generate assets and pass data between services easily - while keeping your services and steps isolated like you would want for a truly high-integrity CI process. Note that volumes are standard Docker functionality, not Codeship-specific.
 
 ![Volume/Host/Container Diagram]({{ site.baseurl }}/images/gettingstarted/sharedhostvolume.png)
 
@@ -125,7 +126,7 @@ Now that we have our new service and both of our scripts, we need to edit our `c
       encrypted_dockercfg_path: dockercfg.encrypted
 ```
 
-As you csan see, we've created a third parallel step to run out new volumes test, and that paralell step is using a *serial* sub-step to first run the `write.rb` script and then to run the `read.rb` script.
+As you can see, we've created a third parallel step to run out new volumes test, and that paralell step is using a *serial* sub-step to first run the `write.rb` script and then to run the `read.rb` script.
 
 So, now we've got a new service that writes an artifact to a volume, as defined in our `codeship-steps.yml` file. We also have a new test in our original `demo` service that checks to see if the artifact exists before moving on with our image push and deployment. This, in a nutshell, is how volumes are used in your CI/CD pipeline.
 
@@ -147,4 +148,4 @@ Of course, every application is different so there are a ton of potential reason
 
 ## Next: Parallel, Speed, etc
 
-Next we're going to look at two of the more powerful and productive things you can do to create really fast and efficient CI/CD pipelines with Codeship. [Taking a look at parallel steps and caching.]({% link _docker/getting-started/getting-started-part-five.md %})
+Next we're going to look at two of the more powerful and productive things you can do to create really fast and efficient CI/CD pipelines with Codeship Pro. [Taking a look at parallel steps and caching.]({% link _docker/getting-started/getting-started-part-five.md %})

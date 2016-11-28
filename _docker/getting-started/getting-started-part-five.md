@@ -1,10 +1,11 @@
 ---
-title: Getting Started Part 5
+title: Getting Started With Codeship Pro Part 5
 layout: page
 weight: 60
 tags:
   - docker
   - jet
+  - codeship pro  
   - introduction
   - getting started
   - tutorial
@@ -20,7 +21,7 @@ The source for the tutorial is available on Github as [codeship/ci-guide](https:
 git clone git@github.com:codeship/ci-guide.git
 ```
 
-## Intro
+## Getting Started With Codeship Pro (Part 5)
 
 Now that we've covered the basic pieces of the service, we should take a few minutes and cover two additional features that make for more flexible and powerful CI/CD workflows for your team.
 
@@ -97,4 +98,4 @@ From here, there's still a ton more you can learn to optimize your builds, troub
 
 We recommend [our blog](https://blog.codeship.com), [our documentation](({{ site.url }}), [our community forum](https://community.codeship.com), and [our webinars](http://resources.codeship.com/webinars) to keep learning more.
 
-It's important to get to a working build as soon as possible when you start your new CI/CD process with Codeship and Docker. From there, take some time with your team every few weeks or every few months to find ways to optimize, save time, keep the developers coding with fewer waiting periods and improve your application and Docker image efficiency.
+It's important to get to a working build as soon as possible when you start your new CI/CD process with Codeship Pro. From there, take some time with your team every few weeks or every few months to find ways to optimize, save time, keep the developers coding with fewer waiting periods and improve your application and Docker image efficiency.

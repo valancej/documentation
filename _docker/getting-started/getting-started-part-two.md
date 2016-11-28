@@ -1,10 +1,11 @@
 ---
-title: Getting Started Part 2
+title: Getting Started With Codeship Pro Part 2
 layout: page
 weight: 90
 tags:
   - docker
   - jet
+  - codeship pro  
   - introduction
   - getting started
   - tutorial
@@ -20,13 +21,13 @@ The source for the tutorial is available on Github as [codeship/ci-guide](https:
 git clone git@github.com:codeship/ci-guide.git
 ```
 
-## Intro
+## Getting Started With Codeship Pro (Part 2)
 
-One of the most essential parts of any CI process is running your tests. With Codeship's Jet tool for Docker, we wanted to make building your CI/CD pipeline easy - so we made iterating through, debugging and improving your tests both locally and remotely after you push, as straightforward as we could.
+One of the most essential parts of any CI process is running your tests. With Codeship Pro, we wanted to make building your CI/CD pipeline easy, so we made debugging and troubleshooting - both locally and remotely - as straightforward as we could.
 
 ## Running Your Tests
 
-Let's go back in to our code example for a minute and add a simple, passing test.
+Let's go back in to our code example for a minute and add a simple test.
 
 In our case, we're just going to check for an existent environmental variable. This isn't a particularly real-world scenario, but it will help demonstrate exactly what Codeship does with your tests and what you should look for.
 
@@ -87,7 +88,7 @@ As you can see we're now running our two scripts under a new `parallel` modifier
 
 ### Run And See!
 
-Now, after configuring your tests, let's go back to your terminal and run ```jet steps```
+Now, after configuring your tests, let's go back to your terminal and run `jet steps`
 
 This will run your CI process as defined in `codeship-steps.yml`.
 

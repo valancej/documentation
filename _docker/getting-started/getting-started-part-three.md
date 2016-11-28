@@ -1,10 +1,11 @@
 ---
-title: Getting Started Part 3
+title: Getting Started With Codeship Pro Part 3
 layout: page
 weight: 80
 tags:
   - docker
   - jet
+  - codeship pro
   - introduction
   - getting started
   - tutorial
@@ -20,17 +21,17 @@ The source for the tutorial is available on Github as [codeship/ci-guide](https:
 git clone git@github.com:codeship/ci-guide.git
 ```
 
-## Now, We Release Code Or Images (Or Both!)
+## Getting Started With Codeship Pro (Part 3)
 
 Now that you have a working CI process with a successful test, the next step is to push out your Docker image!
 
 ## Required Services Before We Push
 
-### A Codeship Account With Access To Jet
+### A Codeship Account With Access To Code Pro
 
-The first thing you'll need is a working Codeship account with access to Jet. If you haven't used up a 14 day free trial yet, you can [sign up for one here.](https://www.codeship.com/docker)
+The first thing you'll need is a working Codeship account with access to Code Pro. If you haven't used up a 14 day free trial yet, you can [sign up for one here.](https://www.codeship.com/docker)
 
-If you have an account already - or, once you've activated your free trial - you'll want to create a new project. When creating your new project, make sure to select the Docker infrastructure after choosing the repo you're using.
+If you have an account already - or, once you've activated your free trial - you'll want to create a new project. When creating your new project, make sure to select the Pro/Docker infrastructure after choosing the repo you're using.
 
 ![Selecting Docker Infrastructure]({{ site.baseurl }}/images/gettingstarted/setup_select_docker.png)
 
@@ -140,4 +141,4 @@ Now, if we go over to our Dockerhub repo, we should see some meta data indicatin
 
 Now we've built an app, added a test, pushed an image and deployed our code. What's next?
 
-We want to walk through a couple of the powerful, flexible things you can achieve with Codeship, Jet and Docker - and we're going to start with *volumes*. [Let's learn about volumes.]({% link _docker/getting-started/getting-started-part-four.md %})
+We want to walk through a couple of the powerful, flexible things you can achieve with Codeship Pro - and we're going to start with *volumes*. [Let's learn about volumes.]({% link _docker/getting-started/getting-started-part-four.md %})
