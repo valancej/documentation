@@ -16,7 +16,7 @@ redirect_from:
   * [Deployment via Custom Script]({{ site.baseurl }}{% link _classic/continuous-deployment/deployment-with-custom-scripts.md %})
 </div>
 
-After your code passed through the pipeline successfully, the last step in your CI chain is deploying your code. You're either using one of our many integrations or deploying with your own script. If you're using your own means of deployment, we recommend tools like rsync, [Capistrano](http://capistranorb.com/, Ruby), [Rocketeer](http://rocketeer.autopergamene.eu/, PHP), [Deployer](https://deployer.org/, PHP), or [Fabric](http://www.fabfile.org/, Python).
+After your code passed through the pipeline successfully, the last step in your CI chain is deploying your code. You're either using one of our many integrations or deploying with your own script. If you're using your own means of deployment, we recommend tools like rsync, [Capistrano (Ruby)](http://capistranorb.com/), [Rocketeer (PHP)](http://rocketeer.autopergamene.eu/), [Deployer (PHP)](https://deployer.org/), or [Fabric (Python)](http://www.fabfile.org/).
 
 Generally, we advise on using any SSH-based tool over FTP since the latter is not encrypted and transmits plain-text. If security is of any concern to you, one of the first steps is to use SSH when you're deploying without a tool.
 
@@ -24,6 +24,10 @@ Our recommendation if you do not want to use a deployment tool or one of our int
 
 1. Add the Codeship public key to your `~/.ssh/authorized_keys` file, see [Authenticating via SSH Public Keys](#authenticating-via-ssh-public-keys).
 2. Create a deployment script, see [Run commands on a remote server via SSH](#run-commands-on-a-remote-server-via-ssh). At the very least, you will have to copy all files needed by your application to the server and start the services needed by your application.
+
+<div class="info-block">
+When Codeship checks out your repository, we clone it to a folder called `clone` directly beneath the home directory. So when you see references to `~/clone/` folder, we talk about our local copy of your repository.
+</div>
 
 **Table of Contents**
 * include a table of contents
@@ -68,7 +72,7 @@ in the [SCP man page]({% man_url scp %}).
 For the [branch you want to deploy]({{ site.baseurl }}{% link _classic/getting-started/deployment-pipelines.md %}) you create a script deployment that contains:
 
 ```shell
-scp -rp ~/yourlocalrepository/* ssh_user@your.server.com:/path/on/server/
+scp -rp ~/clone/* ssh_user@your.server.com:/path/on/server/
 ```
 
 Make sure you add the [SSH key of your project]({{ site.baseurl }}{% link _general/projects/where-can-i-find-the-ssh-public-key-for-my-project.md %})
@@ -82,27 +86,25 @@ will check the files and only upload files that have changed.
 For the [branch you want to deploy]({{ site.baseurl }}{% link _classic/getting-started/deployment-pipelines.md %}) you create a script deployment that contains the following code.
 
 ```shell
-rsync -av ~/yourlocalrepository/ ssh_user@your.server.com:/path/on/server/
+rsync -avz ~/clone/ ssh_user@your.server.com:/path/on/server/
 ```
 
 Or you can also run rsync over ssh.
 
 ```shell
-rsync -avz -e "ssh" ~/yourlocalrepository/ ssh_user@your.server.com:/path/on/server/
+rsync -avz -e "ssh" ~/clone/ ssh_user@your.server.com:/path/on/server/
 ```
 
 You can read more about the Rsync options in the [Rsync man page]({% man_url rsync %}).
 
 ## Continuous Deployment with SFTP
 
-SFTP supports FTP-like commands over an encrypted SSH session. You can automate SFTP by creating a batchfile and handing it to SFTP. The batchfile can contain any commands documented in the interactive commands section of the [LFTP man page]({% man_url sftp %}).
+SFTP supports FTP-like commands over an encrypted SSH session. You can automate SFTP by creating a batch file and handing it to SFTP. The batch file can contain any commands documented in the interactive commands section of the [SFTP man page]({% man_url sftp %}).
 
-As with the the FTP example above, we will deploy the complete repository contents onto a remote server.
-
-Please add a file containing the following directives to your repository. You can name it any way you like. In our case we will call it _production_ and store it in a subdirectory called _deploy_.
+We will deploy the complete repository contents onto a remote server. Please add a file containing the following directives to your repository. You can name it any way you like. In our case we will call it _production_ and store it in a subdirectory called _deploy_.
 
 ```shell
-put -rp /home/rof/yourlocalrepository /path/on/server/
+put -rp /home/rof/clone /path/on/server/
 ```
 
 For the [branch you want to deploy]({{ site.baseurl }}{% link _classic/getting-started/deployment-pipelines.md %}) you create a script deployment that contains:
@@ -127,11 +129,11 @@ FTP_USER
 
 So if you wanted to copy all of your repository to a remote server, you could add the following command to a _script deployment_ on the branch you want to deploy.
 
-* Make sure your _remote dir_ does not end with a slash unless you want your copy to live in a subdirectory called _yourlocalrepository_.
+* Make sure your _remote dir_ does not end with a slash unless you want your copy to live in a subdirectory called _clone_.
 * Also make sure your _remote dir_ already exists before trying your first deployment.
 
 ```shell
-lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.yoursite.com; set ssl:verify-certificate no; mirror -R ~/yourlocalrepository/ /path/on/server/"
+lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.yoursite.com; set ssl:verify-certificate no; mirror -R ~/clone/ /path/on/server/"
 ```
 
 For more information on using _lftp_ please see the [LFTP man page]({% man_url lftp %}) available online.
