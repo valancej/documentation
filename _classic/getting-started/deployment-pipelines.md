@@ -7,7 +7,7 @@ category: Getting Started
 redirect_from:
   - /continuous-deployment/deployment-pipelines/
 ---
-On Codeship, you are able to define **deployment pipelines**. A deployment pipeline is bound to a branch. Every time a build runs for this branch by pushing to it, it kicks off your deployment pipeline.
+On Codeship, you are able to define **deployment pipelines**. A deployment pipeline is bound to a branch. Every time you push a new commit or tag to this branch, you trigger a build for it and the build will kick off your deployment pipeline.
 
 <div class="info-block">
 You can add **multiple deployments within one deployment pipeline**. This way you can, for example, deploy to a staging environment first and, if that succeeds, follow up with a deployment to the production environment. This process is fully automated on Codeship and in case of errors you will get notified immediately. It is *not possible to run multiple deployments in parallel*.
@@ -25,7 +25,7 @@ Choose your hosting provider or deployment method.
 Fill out the deployment configuration and click the green checkmark on the top right of your deployment to save it.
 ![Save Deployment]({{ site.baseurl }}/images/continuous-deployment/save_deployment.png)
 
-On the next push to this branch (in this case 'master') the deployment will be triggered under the condition that all tests pass successfully.
+On the next push to this branch (in this case 'master') the deployment will be triggered under the condition that all setup and test commands pass successfully.
 ![Saved Deployment]({{ site.baseurl }}/images/continuous-deployment/saved_deployment.png)
 
 Now you can add additional deployments or configure another deployment pipeline.
