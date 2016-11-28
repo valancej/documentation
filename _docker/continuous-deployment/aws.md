@@ -16,7 +16,7 @@ To make it easy for you to deploy your application to AWS we've built a containe
 
 The AWS deployment container lets you plugin your deployment tools without the need to include that in the testing or even production container. That keeps your containers small and focused on the specific task they need to accomplish in the build. By using the AWS deployment container you get the tools you need to deploy to any AWS service and still have the flexibility to adapt it to your needs.
 
-The container configuration is open source and can be found in the [codeship-library/aws-deployment](https://github.com/codeship-library/aws-deployment) project on Github. It includes a working example that uses the AWSCLI as part of an integration test before we push a new container to the Docker Hub.
+The container configuration is open source and can be found in the [codeship-library/aws-deployment](https://github.com/codeship-library/aws-deployment) project on GitHub. It includes a working example that uses the AWSCLI as part of an integration test before we push a new container to the Docker Hub.
 
 We will use the `codeship/aws-deployment` container throughout the documentation to interact with various AWS services.
 
@@ -90,7 +90,7 @@ Add the following to your `codeship-steps.yml`
 ```
 
 ### Deploying to AWS Elastic Beanstalk
-Deployment to Elastic Beanstalk is incredibly easy. We implemented a `codeship_aws eb_deploy` command in the `codeship/aws-deployment` container so you can get started quickly. As arguments you have to set the path to your deployable folder, the Elastic Beansatlk application and environment name and the S3 bucket that we should upload the zipped artifact to.
+Deployment to Elastic Beanstalk is very straightforward. We implemented a `codeship_aws eb_deploy` command in the `codeship/aws-deployment` container so you can get started quickly. The arguments you have to set are the path to your deployable folder, the Elastic Beanstalk application and environment name, and the S3 bucket to which to upload the zipped artifact.
 
 The following example can be used in your `codeship-steps.yml` to deploy to Elastic Beanstalk.
 
@@ -99,7 +99,7 @@ The following example can be used in your `codeship-steps.yml` to deploy to Elas
   command: codeship_aws eb_deploy PATH_TO_FOLDER_TO_DEPLOY APPLICATION_NAME ENVIRONMENT_NAME S3_BUCKET_NAME
 ```
 
-The command will zip up the content in the folder, upload it to S3, register a new version with Elastic Beanstalk and then deploy that new Version. We're also validating that the environment is fine and that the new version was actually deployed.
+The command will zip up the content in the folder, upload it to S3, register a new version with Elastic Beanstalk and then deploy that new version. We're also validating that the environment is fine and that the new version was actually deployed.
 
 If you want to customize the deployment you can also use the [existing Script](https://github.com/codeship-library/aws-deployment/blob/master/scripts/codeship_aws_eb_deploy) from our open source AWS container and edit it so it fits exactly to your needs. This script can be added to your repository and then called directly as a step, as in the following example:
 
@@ -142,10 +142,10 @@ Please replace `[region]` and `[accountid]` with the respective values for your 
   "Statement": [
     {
       "Action": [
-        "Elastic Beanstalk:CreateApplicationVersion",
-        "Elastic Beanstalk:DescribeEnvironments",
-        "Elastic Beanstalk:DeleteApplicationVersion",
-        "Elastic Beanstalk:UpdateEnvironment"
+        "elasticbeanstalk:CreateApplicationVersion",
+        "elasticbeanstalk:DescribeEnvironments",
+        "elasticbeanstalk:DeleteApplicationVersion",
+        "elasticbeanstalk:UpdateEnvironment"
       ],
       "Effect": "Allow",
       "Resource": "*"
@@ -207,7 +207,7 @@ Please replace `[region]` and `[accountid]` with the respective values for your 
 }
 ```
 
-If you are using more than once instance for your application you need to add at least the following permissions as well.
+If you are using more than one instance for your application you need to add at least the following permissions as well.
 
 ```json
 {
@@ -232,7 +232,7 @@ Add the following to your codeship-steps.yml to start deploying.
   command: codeship_aws codedeploy_deploy /PATH/TO/YOUR/CODE APPLICATION_NAME DEPLOYMENT_GROUP_NAME S3_BUCKET_NAME
 ```
 
-Make sure to add policies to your IAM User used with Codeship that allows to interact with CodeDeploy. Take a look at the [getting started](http://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html) documentation from AWS to get the full policy template.
+Make sure to add policies to your IAM User used with Codeship that allow to interact with CodeDeploy. Take a look at the [getting started](http://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html) documentation from AWS to get the full policy template.
 
 ## See also
 
