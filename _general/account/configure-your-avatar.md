@@ -22,4 +22,4 @@ git config --get user.email
 git config --get user.email
 ```
 
-Note that different projects can have different email addresses configured and that GitHub / Bitbucket can have other email addresses configured for the actions you take via their interfaces.
+Note that different projects can have different email addresses configured and that your VCS can have other email addresses configured for the actions you take via their interfaces.

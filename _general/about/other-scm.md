@@ -1,5 +1,5 @@
 ---
-title: Custom SCM providers
+title: Custom SCM/VCS providers
 layout: page
 tags:
   - faq
@@ -9,6 +9,6 @@ category: About
 redirect_from:
   - /faq/other-scm/
 ---
-Codeship currently only supports [GitHub](https://github.com/) and [BitBucket](https://bitbucket.org/) based repositories. While we do have plans to integrate with other providers in the future we don't have anything concrete planned at the moment.
+Codeship currently supports [GitHub](https://github.com/), [GitLab](https://gitlab.com/), and [Bitbucket](https://bitbucket.org/) based repositories.
 
 There are no plans to integrate with other SCM tools like Subversion.

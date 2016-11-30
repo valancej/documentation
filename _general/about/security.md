@@ -9,14 +9,14 @@ redirect_from:
   - /security/
   - /security/security/
 ---
-We fully understand and recognize, that the security of your source code and configuration data is important, as it forms the base of your and our endeavours. Therefore we put a lot of effort and thought into providing a secure infrastructure for you to use.
+We fully understand and recognize, that the security of your source code and configuration data is important, as it forms the base of your and our endeavors. Therefore we put a lot of effort and thought into providing a secure infrastructure for you to use.
 
 * include a table of contents
 {:toc}
 
 ## System Security
 
-For every project you add to the Codeship we create an SSH Key that is itself encrypted strongly and only decrypted shortly before being used in the build virtual machine. For every build we start a new and clean virtual machine. All changes you make (including file system changes) are stored in a ramdisk which is removed as soon as your build finishes (tests and deployment). None of your data is ever stored on any harddrive on our build servers.
+For every project you add to Codeship we create an SSH Key that is itself encrypted strongly and only decrypted shortly before being used in the build virtual machine. For every build we start a new and clean virtual machine. All changes you make (including file system changes) are stored in a ramdisk which is removed as soon as your build finishes (tests and deployment). None of your data is ever stored on any hard drive on our build servers.
 
 All communication between your browser and our website is SSL encrypted, as is all communication to our Openredis queue. All communication to the build virtual machines is done over SSH.
 
@@ -26,7 +26,7 @@ Unless you want them to. We will never read your code if not explicitly requeste
 
 ## Authorization for your source code provider
 
-To run your tests, we need to check out your code from your source code provider. Currently we support GitHub and Bitbucket but others will follow. You can sign up for the Codeship via Email as well but as soon as you connect a repository with your Codeship account you are telling your source code provider that you allow us to check out your private repositories.
+To run your tests, we need to check out your code from your source code provider. Currently we support GitHub, GitLab, and Bitbucket. You can sign up for the Codeship via Email as well but as soon as you connect a repository with your Codeship account you are telling your source code provider that you allow us to check out your private repositories.
 
 You can revoke permission in your source code provider settings and by removing the Codeship's deploy keys and service hooks from your projects' configuration pages.
 
