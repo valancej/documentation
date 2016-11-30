@@ -12,7 +12,7 @@ Welcome to Codeship's Docker Infrastructure, the new way to run your tests on Co
 Codeship's Docker based infrastructure is available to customers on a invite only basis at the moment. Please see the [Docker feature page](http://pages.codeship.com/docker) for information and to request access.
 
 **Note**
-- Codeship's Docker Infrastructure supports git based repositories on GitHub and BitBucket. **Mercurial based repositories on BitBucket are not currently supported.**
+- Codeship's Docker Infrastructure supports git-based repositories on GitHub, GitLab, and BitBucket. **Mercurial based repositories on BitBucket are not currently supported.**
 </div>
 
 _Docker Infrastructure_ implements two main functions:

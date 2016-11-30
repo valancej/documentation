@@ -6,6 +6,7 @@ tags:
   - build error
   - github
   - bitbucket
+  - gitlab
   - shallow clone
   - push
   - git
