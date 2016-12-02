@@ -85,7 +85,7 @@ If you want to start really fresh, you can clear the Dependency Cache by using
 cs clear-cache
 ```
 
-## What is a SSH public key?
+## What is an SSH public key?
 
 SSH is a protocol which uses asymmetric key algorithms for authentication.
 If you want to dig deeper into Public-Key cryptography you can start by reading the [Wikipedia article](http://en.wikipedia.org/wiki/Public-key_cryptography).
