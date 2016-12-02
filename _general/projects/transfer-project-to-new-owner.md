@@ -16,6 +16,6 @@ A user with appropriate permission for the target account needs to confirm the t
 
 If you want to **bulk transfer projects**, please reach out to our support via [helpdesk.codeship.com](https://helpdesk.codeship.com).
 
-<h2>Use Case Example</h2>
+## Use Case Examples
 * You are using the Heroku addon and want to start using Codeship without it.
 * You don't want to maintain a project anymore and want to transfer it to someone else.
