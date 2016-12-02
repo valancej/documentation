@@ -1,5 +1,5 @@
 ---
-title: Where can I find the SSH Public Key for my project?
+title: Project SSH Key
 weight: 93
 tags:
   - project settings
@@ -8,6 +8,7 @@ tags:
 category: Projects
 redirect_from:
   - /continuous-integration/where-can-i-find-the-ssh-public-key-for-my-project/
+  - /general/projects/where-can-i-find-the-ssh-public-key-for-my-project/
 ---
 For communication between your Codeship project and outside via SSH, you will need your project's SSH public key which you can find in the Codeship dashboard.
 
