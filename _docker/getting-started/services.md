@@ -136,7 +136,8 @@ There are several specific requirements and considerations when using caching, s
 ## Unavailable Features
 The following features available from Docker Compose are not available on Codeship.
 
-* Support for version headings, like `version: "2"`
+* Support for version headings, like `version: '2'`
+* Support for nesting services under a top-level `services` key. Use the Docker Compose V1 format where each service is a top-level key.
 * Support for network configuration
 * Support for build arguments
 * Support for the following directives
