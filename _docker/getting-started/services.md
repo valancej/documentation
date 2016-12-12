@@ -119,7 +119,7 @@ The boolean directive `add_docker` is available. If specified for a service, it 
 See [add_docker](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker) for an example using [Docker-in-Docker](https://registry.hub.docker.com/u/jpetazzo/dind).
 
 ### Caching the Docker image
-We provide a `cached` directive, that pushes a specific tag (based on build attributes) to your image registry that we will attempt to re-use on future builds, rather than rebuilding your Docker image, to save time and speed up your CI/CD process.
+Caching is declared per service. For a service with caching enabled, Codeship will store your image remotely in an encrypted S3 bucket, and then use that image to repopulate the local build cache on future build runs. This prevents the Docker image from building from scratch each time, to save time and speed up your CI/CD process. By default, we will fall back to the latest image that was built on the `master` branch.
 
 An example setup using caching in your `codeship-services.yml` file would look like this:
 
@@ -136,9 +136,9 @@ There are several specific requirements and considerations when using caching, s
 ## Unavailable Features
 The following features available from Docker Compose are not available on Codeship.
 
-* Support for the new `docker-compose.yml` file format introduced with 1.6.0
-* Support for network configuration (introduced with the new config format)
-* Support for build arguments (introduced with the new config format)
+* Support for version headings, like `version: "2"`
+* Support for network configuration
+* Support for build arguments
 * Support for the following directives
   * `depends_on`
   * `cpu_quota`
@@ -150,9 +150,6 @@ All linking to the host is not allowed. This means the following directives are 
   * `external_links`
   * `ports`
   * `stdin_open`
-
-### Docker Compose Version 2 Syntax
-Codeship does not yet support Docker Compose Version 2 syntax or Version 2-specific features such as build arguments. We are currently working on support for Compose features up to the latest version and will announce as soon as full support is available to all users.
 
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
