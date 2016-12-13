@@ -11,6 +11,9 @@ redirect_from:
   - /faq/testing-prs-from-forked-repositories/
   - /faq/limit_builds/
   - /administration/transfer-project-to-new-owner/
+  - /general/projects/testing-prs-from-forked-repositories/
+  - /general/projects/limit_builds/
+  - /general/projects/transfer-project-to-new-owner/
 ---
 This article will teach you how to create and delete a project as well as give some further information on specific questions.
 
