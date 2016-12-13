@@ -36,10 +36,10 @@ Your Services file will require that you have [installed Jet locally]({{ site.ba
 ## Services File Setup & Configuration
 By default, we look for the filename `codeship-services.yml` but a `docker-compose.yml` file that does not include any non-support functionality will also be automatically recognized and used if no `codeship-services.yml` is present. Compose commands that we do not yet fully support will usually be ignored, although occasionally they can also trigger errors.
 
-Your services file is structured identically to a standard [Docker Compose](https://docs.docker.com/compose/) file with the exception of the unavailable features listed in this article.
+Your services file is structured identically to a Version 1 [Docker Compose](https://docs.docker.com/compose/) file with the exception of the unavailable features listed in this article.
 
-### Build Directive
-The basic `build` directive, to build containers and images out of your Dockerfile, is fully supported. You [specify a build](https://docs.docker.com/compose/compose-file/#build) in the same way as is standard with Docker Compose, although you can also use an extended version as needed. You can also mix formats between services, but not for a single service - i.e. you can build some of your services from one or more Dockerfiles while other services simply download existing images from registries.
+### Build
+Use the `build` directive to build your service's image from a Dockerfile. You [specify a build](https://docs.docker.com/compose/compose-file/#build) in the same way as is standard with Docker Compose, although you can also use an extended version as needed. You can also mix `build` and `image` between services, but not for a single service - i.e. you can build some of your services from one or more Dockerfiles while other services simply download existing images from registries.
 
 ```yaml
 app:
@@ -47,8 +47,8 @@ app:
     image: codeship/app
     path: app
     dockerfile_path: Dockerfile
-data:
-  image: busybox
+    args:
+      build_env: production
 ```
 
 * `image` specifies the output image name, as opposed to generating one by default.
@@ -56,6 +56,8 @@ data:
 * `path` sets the build context, essentially defining a custom root directory for any ADD or COPY directives (as well as specifying where to look for the Dockerfile). It's important to note that the _Dockerfile_ is searched for relative to that directory. If you don't specify a custom `path`, it will default to the directory of the services file.
 
 * `dockerfile_path` allows you to specify a specific Dockerfile to use, rather than inheriting one from the build context. It does not, however, change the build context or override the root directory.
+
+* `args`: build arguments passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _docker/getting-started/build-arguments.md %})
 
 ### Volumes
 You can use `volumes` in your `codeship-services.yml` file to persist data between containers as well as between steps in your CI/CD process.
