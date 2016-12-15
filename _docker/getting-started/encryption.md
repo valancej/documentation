@@ -85,7 +85,8 @@ It might be necessary to pass encrypted values to the image at buildtime. A comm
 Save the file as e.g. `buildargs.env` in your repository. It could contain the following data
 
 ```
-GEM_SERVER_AUTH=XXXXXXXXXXXXXXXXXXXXX
+GEM_SERVER_TOKEN=XXXXXXXXXXXX
+SECRET_BUILDTIME_PASSWORD=XXXXXXXXXXXX
 ```
 
 To encrypt this file with the key saved previously you would run the following commands

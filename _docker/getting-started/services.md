@@ -59,12 +59,21 @@ app:
 
 * `args`: build arguments passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _docker/getting-started/build-arguments.md %})
 
+* `encrypted_args_file`: an encrypted file of build arguments that are passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _docker/getting-started/build-arguments.md %})
+
+### Image
+Some services are available on the Docker Hub or other registry, and you may want to use those images instead of building your own. To start a service with a Docker image available on a registry, use the `image` key.
+
+```yaml
+database:
+  image: postgres:latest
+```
+
 ### Volumes
 You can use `volumes` in your `codeship-services.yml` file to persist data between containers as well as between steps in your CI/CD process.
 
 An example setup using volumes in your `codeship-services.yml` file would look like this:
 
-```
 ```yaml
 app:
   build:
@@ -105,7 +114,7 @@ app:
   encrypted_env_file: env.encrypted
 ```
 
-The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% link _docker/getting-started/encryption.md %}) to root directory (and adding it to our `.gitignore` file.)
+The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key]({{ site.baseurl }}{% link _docker/getting-started/encryption.md %}) to root directory (and adding it to our `.gitignore` file.)
 
 Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _docker/getting-started/installation.md %}))
 
@@ -133,15 +142,14 @@ app:
   cached: true
 ```
 
-There are several specific requirements and considerations when using caching, so it is recommended that you [read our caching documentation.]({{ site.baseurl }}{% link _docker/getting-started/caching.md %}) before enabling caching on your builds.
+There are several specific requirements and considerations when using caching, so it is recommended that you [read our caching documentation]({{ site.baseurl }}{% link _docker/getting-started/caching.md %}) before enabling caching on your builds.
 
 ## Unavailable Features
 The following features available from Docker Compose are not available on Codeship.
 
-* Support for version headings, like `version: '2'`
+* Support for version headers, like `version: '2'`
 * Support for nesting services under a top-level `services` key. Use the Docker Compose V1 format where each service is a top-level key.
-* Support for network configuration
-* Support for build arguments
+* Support for top-level network configuration
 * Support for the following directives
   * `depends_on`
   * `cpu_quota`
@@ -157,12 +165,13 @@ All linking to the host is not allowed. This means the following directives are 
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
 * [Build Directive In Compose](https://docs.docker.com/compose/compose-file/#build)
-* [Encrypting environment variables.]({{ site.baseurl }}{% link _docker/getting-started/encryption.md %})
+* [Encrypting environment variables and build arguments]({{ site.baseurl }}{% link _docker/getting-started/encryption.md %})
 * [Steps File]({% link _docker/getting-started/steps.md %})
 * [Volumes]({{ site.baseurl }}{% link _docker/getting-started/docker-volumes.md %})
 * [Add_Docker Directive in Compose](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker)
 * [Docker-in-Docker](https://registry.hub.docker.com/u/jpetazzo/dind).
 * [Caching]({{ site.baseurl }}{% link _docker/getting-started/caching.md %})
+* [Build Arguments]({{ site.baseurl }}{% link _docker/getting-started/build-arguments.md %})
 
 ## Other Notes
 * `link` containers will be newly created for each step.
