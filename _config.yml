@@ -5,37 +5,23 @@ permalink: /:categories/:title/
 tags_dir: tags
 ubuntu_version: trusty
 
-# Defaults for posts
+# SEO Tag
+title: Codeship Documentation
+twitter:
+  username: codeship
+facebook:
+  publisher: https://www.facebook.com/codeship
+logo: /assets/img/logo-codeship.png
+
+# Defaults
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
-      type: posts
     values:
       layout: page
       weight: 50
       comments: true
-  - scope:
-      path: "" # an empty string here means all files in the project
-      type: general
-    values:
-      layout: page
-      weight: 50
-      comments: true
-  - scope:
-      path: "" # an empty string here means all files in the project
-      type: classic
-    values:
-      layout: page
-      weight: 50
-      comments: true
-  - scope:
-      path: "" # an empty string here means all files in the project
-      type: docker
-    values:
-      layout: page
-      weight: 50
-      comments: true
-
+      image: /assets/img/og_documentation.jpg
 
 # Jekyll
 exclude:
