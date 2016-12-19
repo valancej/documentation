@@ -11,6 +11,10 @@ category: Getting Started
 * include a table of contents
 {:toc}
 
+<div class="info-block">
+This feature is in private beta. If you are a Codeship customer with projects running on our Docker infrastructure, contact us at [beta@codeship.com](mailto:beta@codeship.com) to request access to this feature.
+</div>
+
 ## Overview: Build Arguments
 For each service, you can declare [build arguments](https://docs.docker.com/compose/compose-file/#/args), which are values available to the image only at build time. For example, if you must pass the image a set of credentials in order to access an asset or repository when the image is built, you would pass that value to the image as a build argument.  
 
@@ -53,7 +57,7 @@ When the `app` service is built, the value of `build_env` becomes `staging`. If 
 Note: YAML boolean values (true, false, yes, no, on, off) must be enclosed in quotes, so that the parser interprets them as strings.
 
 ## Encrypted Build Arguments
-In a lot of cases, the values needed by the image at build time are secrets -- credentials, passwords, and other things that you don't want to check in to source control in plain text. Because of this, Codeship supports encrypted build arguments. You can either encrypt a file containing all of the build arguments you need, or pass them to the service individually.
+In a lot of cases, the values needed by the image at build time are secrets -- credentials, passwords, and other things that you don't want to check in to source control in plain text. Because of this, Codeship supports encrypted build arguments. You can either encrypt a build argument individually, or encrypt an entire file containing all of the build arguments you need.
 
 First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _docker/getting-started/encryption.md %}) to root directory (and add it to the `.gitignore` file.)
 
@@ -71,6 +75,15 @@ app:
   build:
     dockerfile_path: Dockerfile
     encrypted_args_file: build_args.encrypted
+```
+
+If your use case is simple enough, you may want to pass in encrypted values directly instead of requiring Codeship to read them from a file. The following syntax is also supported:
+
+```yaml
+app:
+  build:
+    dockerfile_path: Dockerfile
+    encrypted_args: 8rD1P1xO1CwB4L99JBqnvoSOX+1wimf9qwHXATf9foasPtU6Sw==
 ```
 
 Codeship will decrypt your build arguments and pass them to the image when it is built.

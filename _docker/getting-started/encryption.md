@@ -80,6 +80,11 @@ aws:
 
 ## Build Arguments
 
+<div class="info-block">
+Build arguments are in private beta. If you are a Codeship customer with projects running on our Docker infrastructure, contact us at [beta@codeship.com](mailto:beta@codeship.com) to request access to this feature.
+</div>
+
+
 It might be necessary to pass encrypted values to the image at buildtime. A common use case for this is credentials for a repository or asset needed during the image building process, such as accessing a private gem server. In this case, you can encrypt a file of [build arguments](https://docs.docker.com/compose/compose-file/#/args) that will be passed to the image at build time.
 
 Save the file as e.g. `buildargs.env` in your repository. It could contain the following data
