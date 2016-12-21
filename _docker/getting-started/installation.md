@@ -16,7 +16,7 @@ redirect_from:
 <div class="info-block">
 
 
-Jet is used to locally debug and test builds for Codeship's Docker-based infrastructure, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship's hosted (non-Docker) infrastructure, you will not need to use Jet.
+Jet is used to locally debug and test builds for Codeship Pro, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship's hosted (non-Docker) infrastructure, you will not need to use Jet.
 </div>
 
 * include a table of contents
@@ -24,7 +24,7 @@ Jet is used to locally debug and test builds for Codeship's Docker-based infrast
 
 ## What is Jet?
 
-Jet is a CLI tool designed to make working with Codeship's Docker infrastructure faster and easier, as well as to put more power in a developer's hands so that there is less time spent configuring and debugging projects via a web UI.
+Jet is a CLI tool designed to make working with Codeship Pro faster and easier, as well as to put more power in a developer's hands so that there is less time spent configuring and debugging projects via a web UI.
 
 Jet allows you to run your CI/CD pipeline on your local machine, making it much faster to test your configuration, troubleshoot errors and discover the best setup for your project. By default, Jet skips image pushes and deployments but you can instruct it not to skip them with special options.
 

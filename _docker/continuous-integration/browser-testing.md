@@ -12,7 +12,7 @@ redirect_from:
   - /docker/browser-testing/
 ---
 
-Running on our Docker based infrastructure you have many different options to set up browser testing. Following we will describe how you can install different browsers. Please check the language documentation for specifics on how to test with your browser in a specific language.
+Running on Codeship Pro, you have many different options to set up browser testing. Following we will describe how you can install different browsers. Please check the language documentation for specifics on how to test with your browser in a specific language.
 
 ## Xvfb
 Before going into the details of setting up various browsers make sure to include [Xvfb](https://en.wikipedia.org/wiki/Xvfb) in your build. Running Xvfb before your browser sets up a virtual display the GUI of the various browsers can use.
