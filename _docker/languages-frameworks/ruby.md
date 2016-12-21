@@ -9,7 +9,7 @@ category: Languages &amp; Frameworks
 redirect_from:
   - /docker-integration/ruby/
 ---
-In this article you will learn about setting up a Ruby based project, including Rails projects, on our Docker infrastructure. We will set up testing with RSpec and Cucumber, but the same applies to any other Ruby testing framework.
+In this article you will learn about setting up a Ruby based project, including Rails projects, on Codeship Pro. We will set up testing with RSpec and Cucumber, but the same applies to any other Ruby testing framework.
 
 ## Services and Steps
 Before reading through the documentation please take a look at the [Services]({% link _docker/getting-started/services.md %}) and [Steps]({% link _docker/getting-started/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work.

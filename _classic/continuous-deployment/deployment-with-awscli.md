@@ -10,7 +10,7 @@ category: Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-with-awscli/
 ---
-The AWS CLI tool does NOT come pre-installed on Codeship Classic infrastructure's build machines.
+The AWS CLI tool does NOT come pre-installed on Codeship Basic build machines.
 
 Please add the following command in the Setup Command section of your test settings to install the AWS CLI tool:
 

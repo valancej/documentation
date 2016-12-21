@@ -9,7 +9,7 @@ category: Languages &amp; Frameworks
 redirect_from:
   - /docker-integration/nodejs/
 ---
-In this article you will learn about setting up a Node.js based project on our Docker infrastructure.
+In this article you will learn about setting up a Node.js-based project on Codeship Pro.
 
 ## Services and Steps
 Before reading through the documentation please take a look at the [Services]({% link _docker/getting-started/services.md %}) and [Steps]({% link _docker/getting-started/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work.

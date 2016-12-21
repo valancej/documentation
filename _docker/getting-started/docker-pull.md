@@ -21,7 +21,7 @@ To follow this tutorial on your own computer, please [install the `jet` CLI loca
 
 ## Using A Private Base Image In Your Builds
 
-Using Codeship's Docker infrastructure, you can easily use private Docker images as base images for your containers.
+Using Codeship Pro, you can easily use private Docker images as base images for your containers.
 
 Similar to [pushing images]({{ site.baseurl }}{% link _docker/getting-started/docker-push.md %}), you need to save your encrypted `dockercfg` file in the registry and reference it for any step using private base images (or for groups of steps). You also need to specify in your `Dockerfile` and your `codeship-services.yml` file which images from your registry you want to use.
 

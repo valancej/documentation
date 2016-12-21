@@ -10,9 +10,9 @@ category: Getting Started
 redirect_from:
   - /continuous-integration/ssh-access/
 ---
-You are able to activate build debugging at the bottom of the build detail view for projects running on the classic infrastructure. The SSH debugging session only works for branches still available in your repository.
+You are able to activate build debugging at the bottom of the build detail view for projects running on Codeship Basic. The SSH debugging session only works for branches still available in your repository.
 
-If you are using the Docker infrastructure, you can debug locally by using the command-line tool. You can refer to the [Installation Documentation]({{ site.baseurl }}{% link _docker/getting-started/installation.md %}) to get your builds running locally for debugging.
+If you are using Codeship Pro, you can debug locally by using the command-line tool. You can refer to the [Installation Documentation]({{ site.baseurl }}{% link _docker/getting-started/installation.md %}) to get your builds running locally for debugging.
 
 * include a table of contents
 {:toc}

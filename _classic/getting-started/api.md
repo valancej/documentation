@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-  The API is currently only available for projects on our Classic Infrastructure and not available on Docker based projects.
+The API is currently only available for projects on Codeship Basic and not available on Codeship Pro.
 </div>
 
 * include a table of contents

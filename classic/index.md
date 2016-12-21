@@ -6,7 +6,7 @@ redirect_from:
   - /classic/getting-started/welcome-classic-infrastructure/
 ---
 
-Welcome to Codeship's Classic Infrastructure with pre-configured VMs where we take care of the infrastructure for you. We host the environment, you provide the code.
+Welcome to Codeship Basic with pre-configured VMs where we take care of the infrastructure for you. We host the environment, you provide the code.
 
 ## Getting Started
 The screenshot below shows the initial [dashboard](https://app.codeship.com/projects) after logging in for the first time.
@@ -17,4 +17,4 @@ You can choose whether you want to import from GitHub or Bitbucket repository. A
 
 For significant speed improvements, you will have the option to check out our [ParallelCI trial](https://codeship.com/features/parallelci) in order to run tests in parallel and deploy faster. Watch this [video](https://www.youtube.com/watch?v=E7ujcuGtRjo) to find out more about ParallelCI.
 
-The next steps for Classic Infrastructure are about deployment and other fine-grained settings.
+The next steps for Codeship Basic are about deployment and other fine-grained settings.

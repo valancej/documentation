@@ -9,7 +9,7 @@ category: Languages &amp; Frameworks
 redirect_from:
   - /docker-integration/python/
 ---
-In this article you will learn about setting up a Python based project on our Docker infrastructure. We will use [nosetest](https://nose.readthedocs.org/en/latest/) and [py.test](http://pytest.org/latest/) for setting up the build, but the same works for any other test framework as well.
+In this article you will learn about setting up a Python-based project on Codeship Pro. We will use [nosetest](https://nose.readthedocs.org/en/latest/) and [py.test](http://pytest.org/latest/) for setting up the build, but the same works for any other test framework as well.
 
 ## Services and Steps
 Before reading through the documentation please take a look at the [Services]({% link _docker/getting-started/services.md %}) and [Steps]({% link _docker/getting-started/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work.

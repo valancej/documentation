@@ -15,7 +15,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-The configuration information below is specific to Codeship's Docker based infrastructure. For more information see [codeship.com](https://codeship.com/enterprise)
+The configuration information below is specific to Codeship Pro. For more information see [codeship.com](https://codeship.com/enterprise)
 </div>
 
 Once you have your [project running locally]({{ site.baseurl }}{% link _docker/getting-started/getting-started.md %}) you can configure the repository on Codeship and have the builds run on each push.
@@ -28,8 +28,8 @@ If you already worked with Codeship the process will be familiar (and if not, it
 
 	So far these are the standard steps to add a new project on Codeship.
 
-4. You can now choose between a standard Codeship build or a build based on the Docker Infrastructure. Choose the latter.
-	![Select Docker Infrastructure]({{ site.baseurl }}/images/docker/setup_select_docker.png)
+4. You can now choose between Codeship Basic (hosted) and Codeship Pro (Docker). Choose the latter.
+	![Select Codeship Pro]({{ site.baseurl }}/images/docker/setup_select_docker.png)
 5. You will be presented with a screen offering basic setup instructions, as well as a link to the documentation for the Codeship Docker Infrastructure.
 	![Docker Project Help Screen]({{ site.baseurl }}/images/docker/setup_docker_setup.png)
 
