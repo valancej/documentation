@@ -5,13 +5,12 @@ redirect_from:
   - /docker/introduction/
   - /docker/getting-started/
 ---
-Welcome to Codeship Pro, the new way to run your tests on Codeship. Enjoy full customizability. Easily mirror your Development, Test and Production Environments with full parity. The underlying build infrastructure, based on Docker, allows for customized definition of the running environment.
+Welcome to Codeship Pro, the most customizable way to run your tests on Codeship. Easily mirror your development, test and production environments with full parity. The underlying build infrastructure, based on Docker, allows for customized definition of each service and dependency you require.
+
+Your Codeship Pro builds run on infrastucture equipped with version {{ site.data.docker.version }} of the Docker Engine.
 
 <div class="info-block">
-Codeship Pro is available to customers on a invite only basis at the moment. Please see the [Docker feature page](http://pages.codeship.com/docker) for information and to request access.
-
-**Note**
-- Codeship Pro supports git-based repositories on GitHub, GitLab, and BitBucket. **Mercurial based repositories on BitBucket are not currently supported.**
+**Note** Codeship Pro supports git-based repositories on GitHub, GitLab, and Bitbucket. Mercurial-based repositories on Bitbucket are not currently supported.**
 </div>
 
 _Codeship Pro_ implements two main functions:
