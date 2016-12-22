@@ -57,9 +57,9 @@ app:
 
 * `dockerfile_path` allows you to specify a specific Dockerfile to use, rather than inheriting one from the build context. It does not, however, change the build context or override the root directory.
 
-* `args`: build arguments passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _docker/getting-started/build-arguments.md %})
+* `args`: build arguments passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %})
 
-* `encrypted_args_file`: an encrypted file of build arguments that are passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _docker/getting-started/build-arguments.md %})
+* `encrypted_args_file`: an encrypted file of build arguments that are passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %})
 
 ### Image
 Some services are available on the Docker Hub or other registry, and you may want to use those images instead of building your own. To start a service with a Docker image available on a registry, use the `image` key.

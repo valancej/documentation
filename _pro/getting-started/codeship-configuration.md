@@ -30,7 +30,7 @@ If you already worked with Codeship the process will be familiar (and if not, it
 
 4. You can now choose between Codeship Basic (hosted) and Codeship Pro (Docker). Choose the latter.
 	![Select Codeship Pro]({{ site.baseurl }}/images/docker/setup_select_docker.png)
-5. You will be presented with a screen offering basic setup instructions, as well as a link to the documentation for the Codeship Docker Infrastructure.
+5. You will be presented with a screen offering basic setup instructions, as well as a link to the documentation for Codeship Pro.
 	![Docker Project Help Screen]({{ site.baseurl }}/images/docker/setup_docker_setup.png)
 
 	As we already added all the required information to the [repository](https://github.com/codeship/jet-tutorial), you can simply push a new commit and this will trigger a new build on Codeship.

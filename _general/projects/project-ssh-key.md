@@ -18,7 +18,7 @@ For communication between your Codeship project and outside via SSH, you will ne
 
 ![SSH Public Key]({{ site.baseurl }}/images/general/sshpublickey.png)
 
-If you need more information on how to use SSH and similar tools, see [Deployment via FTP, SFTP, SCP, RSYNC, and SSH]({{ site.baseurl }}{% link _classic/continuous-deployment/deployment-with-ftp-sftp-scp.md %}).
+If you need more information on how to use SSH and similar tools, see [Deployment via FTP, SFTP, SCP, RSYNC, and SSH]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-ftp-sftp-scp.md %}).
 
 ## Use Case Examples
 * You are deploying to one of your own servers instead of using Codehip's integrations to services like AWS, Heroku, and more.

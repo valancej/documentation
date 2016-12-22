@@ -81,7 +81,7 @@ aws:
 ## Build Arguments
 
 <div class="info-block">
-Build arguments are in private beta. If you are a Codeship customer with projects running on our Docker infrastructure, contact us at [beta@codeship.com](mailto:beta@codeship.com) to request access to this feature.
+Build arguments are in private beta. If you are a Codeship customer with projects running on Codeship Pro, contact us at [beta@codeship.com](mailto:beta@codeship.com) to request access to this feature.
 </div>
 
 
