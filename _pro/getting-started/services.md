@@ -16,16 +16,18 @@ redirect_from:
 {:toc}
 
 ## What Is Your Codeship Services File?
-Your services file - `codeship-services.yml` - is where you configure each service you need to run your CI/CD builds with Codeship. During the build, these services will be used to run the testing steps you've defined in your [`codeship-steps.yml`]({% link _pro/getting-started/steps.md %}) file. You can have as many services as you'd like, and customize each of them. Each of these services will be run inside a Docker container.
+Your services file - `codeship-services.yml` - is where you configure each service you need to run your CI/CD builds with Codeship. During the build, these services will be used to run the testing steps you've defined in your `codeship-steps.yml` [file]({% link _pro/getting-started/steps.md %}). You can have as many services as you'd like, and customize each of them. Each of these services will be run inside a Docker container.
 
 Your services can be built from your own Dockerfiles, or pulled from any registry. Your `codeship-services.yml` will be very similar to a `docker-compose.yml` file, and most of the syntax is compatible.
 
-Running with Docker, the services you declare in the `codeship-services.yml` file allow you to:
+Running with Docker, your Codeship services allow you to:
 
 * Set up different environments for running your unit, integration, or acceptance tests
-* Have full control over your dependencies, versions, and every piece of software used in the build
+* Have control over dependencies and versions of software consumed within the service
 * Build specialized deployment images to unify deployment across your company
 * Use any Docker image available on an image registry for your builds
+
+Your Codeship builds run on infrastucture equipped with version {{ site.data.docker.version }} of the Docker Engine.
 
 ## Prerequisites
 Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/getting-started/codeship-configuration.md %})
@@ -61,7 +63,7 @@ services:
       - ./tmp/data:/data
 ``` 
 
-If include a `version`, Codeship will ignore the value, as the features supported by Codeship are version independent.
+If your file includes a `version`, Codeship will ignore the value, as the features supported by Codeship are version independent.
 
 ### Build
 Use the `build` directive to build your service's image from a Dockerfile. You [specify a build](https://docs.docker.com/compose/compose-file/#build) in the same way as is standard with Docker Compose, although you can also use an extended version as needed. You can also mix `build` and `image` between services, but not for a single service - i.e. you can build some of your services from one or more Dockerfiles while other services simply download existing images from registries.
