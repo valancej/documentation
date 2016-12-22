@@ -27,7 +27,7 @@ The screenshot below shows the initial [dashboard](https://app.codeship.com/proj
 In the next step, you can choose whether you want to import from a GitHub, GitLab, or Bitbucket repository by providing the repository link as shown in the examples.
 ![connecting to repository examples]({{ site.baseurl }}/images/general/2importrep.png)
 
-After connecting to a repository, you will either continue with the [classic infrastructure]({{ site.baseurl }}{% link classic/index.md %}) or be able to choose between classic and [Docker infrastructure]({{ site.baseurl }}{% link docker/index.md %}) if the latter is activated on your account.
+After connecting to a repository, you will either continue with [Codeship Basic]({{ site.baseurl }}{% link basic/index.md %}) or be able to choose between Codeship Basic and [Codeship Pro]({{ site.baseurl }}{% link pro/index.md %}) if the latter is activated on your account.
 
 ## Delete a Project
 You need to have project ownership for deleting a project. Once you click the delete button, you will have to confirm the deletion once more. A project can be deleted by going to:
@@ -57,7 +57,7 @@ We don’t have a feature to limit which branches can be built.
 
 We **build your project on every push** (that is, we run your setup and test commands) to let you know as soon as possible if something is broken. We will only ever run a deployment for the specific branch it is configured on and only after all setup and test commands executed successfully. Before deployment, every push to your repository should be tested.
 
-If you wish to skip a build, please refer to the article about skipping builds for the [classic infrastructure]({{ site.baseurl }}{% link _classic/getting-started/skipping-builds.md %}) and [Docker infrastructure]({{ site.baseurl }}{% link _docker/getting-started/skipping-builds.md %}).
+If you wish to skip a build, please refer to the article about skipping builds for [Codeship Basic]({{ site.baseurl }}{% link _basic/getting-started/skipping-builds.md %}) and [Codeship Pro]({{ site.baseurl }}{% link _pro/getting-started/skipping-builds.md %}).
 
 ## Testing PRs from Forked Repositories
 Codeship **does not support testing pull requests from forked repositories** at the moment. You'd need to configure the forked repository separately on Codeship or push the branch to the already configured repository instead.

@@ -55,16 +55,16 @@ collections:
     permalink: /general/:path/
     sort_order: 1
     output: true
-  classic:
-    title: Classic Infrastructure
-    shortname: classic
-    permalink: /classic/:path/
+  basic:
+    title: Codeship Basic
+    shortname: basic
+    permalink: /basic/:path/
     sort_order: 2
     output: true
-  docker:
-    title: Docker Infrastructure
-    shortname: docker
-    permalink: /docker/:path/
+  pro:
+    title: Codeship Pro
+    shortname: pro
+    permalink: /pro/:path/
     sort_order: 3
     output: true
 

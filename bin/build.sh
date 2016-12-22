@@ -25,8 +25,8 @@ jet_source="/site/.jet"
 if [ -f "_data/jet.yml" ]; then
 	sed -i'' -e "s|^version:.*|version: $(cat ${jet_source}/version)|" "_data/jet.yml"
 fi
-if [ -f "_docker/getting-started/release-notes.md" ]; then
-	cat "${jet_source}/release-notes" >> "_docker/getting-started/release-notes.md"
+if [ -f "_pro/getting-started/release-notes.md" ]; then
+	cat "${jet_source}/release-notes" >> "_pro/getting-started/release-notes.md"
 fi
 rm -rf "${jet_source}"
 
