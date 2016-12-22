@@ -16,7 +16,7 @@ This feature is in private beta. If you are a Codeship customer with projects ru
 </div>
 
 ## Overview: Build Arguments
-For each service, you can declare [build arguments](https://docs.docker.com/compose/compose-file/#/args), which are values available to the image only at build time. For example, if you must pass the image a set of credentials in order to access an asset or repository when the image is built, you would pass that value to the image as a build argument.  
+For each service, you can declare [build arguments](https://docs.docker.com/compose/compose-file/#/args), which are values available to the image only at build time. For example, if you must pass the image a set of credentials in order to access an asset or repository when the image is built, you would pass that value to the image as a build argument.
 
 ## Build Arguments vs. Environment Variables
 During a build on Codeship's Docker platform, there are three ways to pass custom values to your services:
@@ -42,7 +42,7 @@ RUN script-requiring-build-env.sh "$build_env"
 ```
 
 ### Passing build args in the services file
-Now that the Dockerfile knows to expect an argument, you can pass the argument to the image via the service configuration in `codeship-services.yml`. 
+Now that the Dockerfile knows to expect an argument, you can pass the argument to the image via the service configuration in `codeship-services.yml`.
 
 ```bash
 app:
@@ -59,14 +59,14 @@ Note: YAML boolean values (true, false, yes, no, on, off) must be enclosed in qu
 ## Encrypted Build Arguments
 In a lot of cases, the values needed by the image at build time are secrets -- credentials, passwords, and other things that you don't want to check in to source control in plain text. Because of this, Codeship supports encrypted build arguments. You can either encrypt a build argument individually, or encrypt an entire file containing all of the build arguments you need.
 
-First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _docker/getting-started/encryption.md %}) to root directory (and add it to the `.gitignore` file.)
+First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %}) to root directory (and add it to the `.gitignore` file.)
 
 ```bash
 GEM_SERVER_TOKEN=XXXXXXXXXXXX
 SECRET_BUILDTIME_PASSWORD=XXXXXXXXXXXX
 ```
 
-Once the AES key is in the root directory, run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt build_args build_args.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _docker/getting-started/installation.md %}))
+Once the AES key is in the root directory, run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt build_args build_args.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}))
 
 Pass that file to your service's build directive.
 
@@ -94,5 +94,6 @@ Docker will attempt to reuse layers of your image if there are no changes. Altho
 ## Common Error Messages
 `One or more build-args [XXX] were not consumed`
 
-If you pass a build argument to an image at build time, but do not have a corresponding `ARG` instruction in the Dockerfile, Docker (versions < 1.13) will fail the image build. 
+If you pass a build argument to an image at build time, but do not have a corresponding `ARG` instruction in the Dockerfile, Docker (versions < 1.13) will fail the image build.
+
 As of 1.13, unused build args will not fail the build, but will generate a warning message.
