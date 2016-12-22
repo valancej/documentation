@@ -13,7 +13,8 @@
       "HostName": "documentation.codeship.com",
       "ReplaceKeyPrefixWith": "basic/",
       "HttpRedirectCode": "302"
-    },
+    }
+  }, {
     "Condition": {
       "KeyPrefixEquals": "docker/"
     },
