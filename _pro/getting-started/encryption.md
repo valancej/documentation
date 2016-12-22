@@ -78,6 +78,42 @@ aws:
   encrypted_env_file: deployment.env.encrypted
 ```
 
+## Build Arguments
+
+<div class="info-block">
+Build arguments are in private beta. If you are a Codeship customer with projects running on our Docker infrastructure, contact us at [beta@codeship.com](mailto:beta@codeship.com) to request access to this feature.
+</div>
+
+
+It might be necessary to pass encrypted values to the image at buildtime. A common use case for this is credentials for a repository or asset needed during the image building process, such as accessing a private gem server. In this case, you can encrypt a file of [build arguments](https://docs.docker.com/compose/compose-file/#/args) that will be passed to the image at build time.
+
+Save the file as e.g. `buildargs.env` in your repository. It could contain the following data
+
+```
+GEM_SERVER_TOKEN=XXXXXXXXXXXX
+SECRET_BUILDTIME_PASSWORD=XXXXXXXXXXXX
+```
+
+To encrypt this file with the key saved previously you would run the following commands
+
+```bash
+# jet encrypt [--key-path=codeship.aes] plain_file encrypted_file
+jet encrypt buildargs.env buildargs.env.encrypted
+# also add the plain text version to .gitignore
+echo "buildargs.env" >> .gitignore
+```
+
+To load the file during the build adapt your `codeship-services.yml` and reference the encrypted files
+
+```yaml
+app:
+  build:
+     dockerfile: Dockerfile.ci
+     encrypted_args_file: buildargs.env.encrypted
+```
+
+## Decrypting
+
 If you need to decrypt the encrypted file run the following command instead
 
 ```bash

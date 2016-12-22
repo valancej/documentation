@@ -7,6 +7,7 @@ tags:
   - ssh key
   - github
   - bitbucket
+  - gitlab
   - private repository
 category: Projects
 redirect_from:

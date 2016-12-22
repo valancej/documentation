@@ -301,8 +301,16 @@ body.is-blue {
   width: 20%;
   text-align: left;
   border-right: 1px solid $cInputBorder;
+
+  @media (max-width: $bpMedium) {
+    width: 100%;
+  }
 }
 
 .Content {
   width: 80%;
+
+  @media (max-width: $bpMedium) {
+    width: 100%;
+  }
 }

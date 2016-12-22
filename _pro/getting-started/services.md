@@ -36,10 +36,10 @@ Your Services file will require that you have [installed Jet locally]({{ site.ba
 ## Services File Setup & Configuration
 By default, we look for the filename `codeship-services.yml` but a `docker-compose.yml` file that does not include any non-support functionality will also be automatically recognized and used if no `codeship-services.yml` is present. Compose commands that we do not yet fully support will usually be ignored, although occasionally they can also trigger errors.
 
-Your services file is structured identically to a standard [Docker Compose](https://docs.docker.com/compose/) file with the exception of the unavailable features listed in this article.
+Your services file is structured identically to a Version 1 [Docker Compose](https://docs.docker.com/compose/) file with the exception of the unavailable features listed in this article.
 
-### Build Directive
-The basic `build` directive, to build containers and images out of your Dockerfile, is fully supported. You [specify a build](https://docs.docker.com/compose/compose-file/#build) in the same way as is standard with Docker Compose, although you can also use an extended version as needed. You can also mix formats between services, but not for a single service - i.e. you can build some of your services from one or more Dockerfiles while other services simply download existing images from registries.
+### Build
+Use the `build` directive to build your service's image from a Dockerfile. You [specify a build](https://docs.docker.com/compose/compose-file/#build) in the same way as is standard with Docker Compose, although you can also use an extended version as needed. You can also mix `build` and `image` between services, but not for a single service - i.e. you can build some of your services from one or more Dockerfiles while other services simply download existing images from registries.
 
 ```yaml
 app:
@@ -47,8 +47,8 @@ app:
     image: codeship/app
     path: app
     dockerfile_path: Dockerfile
-data:
-  image: busybox
+    args:
+      build_env: production
 ```
 
 * `image` specifies the output image name, as opposed to generating one by default.
@@ -57,12 +57,23 @@ data:
 
 * `dockerfile_path` allows you to specify a specific Dockerfile to use, rather than inheriting one from the build context. It does not, however, change the build context or override the root directory.
 
+* `args`: build arguments passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _docker/getting-started/build-arguments.md %})
+
+* `encrypted_args_file`: an encrypted file of build arguments that are passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _docker/getting-started/build-arguments.md %})
+
+### Image
+Some services are available on the Docker Hub or other registry, and you may want to use those images instead of building your own. To start a service with a Docker image available on a registry, use the `image` key.
+
+```yaml
+database:
+  image: postgres:latest
+```
+
 ### Volumes
 You can use `volumes` in your `codeship-services.yml` file to persist data between containers as well as between steps in your CI/CD process.
 
 An example setup using volumes in your `codeship-services.yml` file would look like this:
 
-```
 ```yaml
 app:
   build:
@@ -119,7 +130,7 @@ The boolean directive `add_docker` is available. If specified for a service, it 
 See [add_docker](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker) for an example using [Docker-in-Docker](https://registry.hub.docker.com/u/jpetazzo/dind).
 
 ### Caching the Docker image
-We provide a `cached` directive, that pushes a specific tag (based on build attributes) to your image registry that we will attempt to re-use on future builds, rather than rebuilding your Docker image, to save time and speed up your CI/CD process.
+Caching is declared per service. For a service with caching enabled, Codeship will store your image remotely in an encrypted S3 bucket, and then use that image to repopulate the local build cache on future build runs. This prevents the Docker image from building from scratch each time, to save time and speed up your CI/CD process. By default, we will fall back to the latest image that was built on the `master` branch.
 
 An example setup using caching in your `codeship-services.yml` file would look like this:
 
@@ -136,9 +147,9 @@ There are several specific requirements and considerations when using caching, s
 ## Unavailable Features
 The following features available from Docker Compose are not available on Codeship.
 
-* Support for the new `docker-compose.yml` file format introduced with 1.6.0
-* Support for network configuration (introduced with the new config format)
-* Support for build arguments (introduced with the new config format)
+* Support for version headers, like `version: '2'`
+* Support for nesting services under a top-level `services` key. Use the Docker Compose V1 format where each service is a top-level key.
+* Support for top-level network configuration
 * Support for the following directives
   * `depends_on`
   * `cpu_quota`
@@ -151,18 +162,16 @@ All linking to the host is not allowed. This means the following directives are 
   * `ports`
   * `stdin_open`
 
-### Docker Compose Version 2 Syntax
-Codeship does not yet support Docker Compose Version 2 syntax or Version 2-specific features such as build arguments. We are currently working on support for Compose features up to the latest version and will announce as soon as full support is available to all users.
-
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
 * [Build Directive In Compose](https://docs.docker.com/compose/compose-file/#build)
-* [Encrypting environment variables.]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %})
+* [Encrypting environment variables and build arguments]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %})
 * [Steps File]({% link _pro/getting-started/steps.md %})
 * [Volumes]({{ site.baseurl }}{% link _pro/getting-started/docker-volumes.md %})
 * [Add_Docker Directive in Compose](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker)
 * [Docker-in-Docker](https://registry.hub.docker.com/u/jpetazzo/dind).
 * [Caching]({{ site.baseurl }}{% link _pro/getting-started/caching.md %})
+* [Build Arguments]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %})
 
 ## Other Notes
 * `link` containers will be newly created for each step.

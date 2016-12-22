@@ -18,7 +18,7 @@ When your Capistrano task is ready and working, you just need to add the _Capist
 
 Checkout our [Deployment Pipelines]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}) if you want to add multiple Capistrano Deployments.
 
-## Capistrano with a script based deployment
+## Capistrano with a script-based deployment
 
 You don't need to use our Capistrano Integration. If you have a more complex Deployment Setup you can call Capistrano directly.
 

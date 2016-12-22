@@ -6,13 +6,14 @@ tags:
   - build error
   - github
   - bitbucket
+  - gitlab
 category: Projects
 redirect_from:
   - /troubleshooting/builds-are-not-triggered/
   - /faq/builds-are-not-triggered/
 ---
 
-Builds on Codeship are triggered via a webhook from GitHub or Bitbucket. We add this hook to your repository when you configure the project on Codeship, but sometimes those settings get out of sync.
+Builds on Codeship are triggered via a webhook from your VCS. We add this hook to your repository when you configure the project on Codeship, but sometimes those settings get out of sync.
 
 That's why we show the status of the webhook configuration on the _General_ page of your project settings.
 
