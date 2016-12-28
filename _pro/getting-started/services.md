@@ -181,12 +181,28 @@ There are several specific requirements and considerations when using caching, s
 ## Unavailable Features
 The following features available in Docker Compose are not available on Codeship. If these keys exist in your `codeship-services.yml` file, don't panic -- we'll just ignore them.
 
-  * `depends_on`
+  * `cgroup_parent`
+  * `container_name`
   * `cpu_quota`
-  * `stop_signal`
+  * `depends_on`
+  * `devices`
   * `extends`
+  * `group_add`
+  * `ipc`
+  * `isolation`
   * `labels`
-  * `networks`
+  * `logging`, `log_driver`, `log_opt`
+  * `mac_address`
+  * `memswap_limit`, `mem_swappiness`
+  * `networks`, `network_mode`
+  * `oom_scope_adj`
+  * `pid`
+  * `stop_signal`, `stop_grace_period`
+  * `tty`
+  * `tmpfs`
+  * `ulimits`
+  * `volume_driver`
+  * `volumes` (top-level key)
 
 All linking to the host is not allowed. This means the following directives are excluded:
   * `external_links`
