@@ -1,4 +1,5 @@
 ---
+title: Codeship Basic
 layout: page
 collection: basic
 redirect_from:
