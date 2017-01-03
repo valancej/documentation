@@ -101,7 +101,7 @@ The following example can be used in your `codeship-steps.yml` to deploy to Elas
 
 The command will zip up the content in the folder, upload it to S3, register a new version with Elastic Beanstalk and then deploy that new version. We're also validating that the environment is fine and that the new version was actually deployed.
 
-If you want to customize the deployment you can also use the [existing Script](https://github.com/codeship-library/aws-deployment/blob/master/scripts/codeship_aws_eb_deploy) from our open source AWS container and edit it so it fits exactly to your needs. This script can be added to your repository and then called directly as a step, as in the following example:
+If you want to customize the deployment you can also use the [existing Script](https://github.com/codeship-library/aws-utilities/blob/master/deployment/scripts/codeship_aws_eb_deploy) from our open source AWS container and edit it so it fits exactly to your needs. This script can be added to your repository and then called directly as a step, as in the following example:
 
 ```yaml
 - service: awsdeployment
