@@ -1,4 +1,5 @@
 ---
+title: General
 layout: page
 collection: general
 ---

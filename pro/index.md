@@ -1,4 +1,5 @@
 ---
+title: Codeship Pro
 layout: page
 collection: pro
 redirect_from:
