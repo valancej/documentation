@@ -190,7 +190,6 @@ The following features available in Docker Compose are not available on Codeship
   * `group_add`
   * `ipc`
   * `isolation`
-  * `labels`
   * `logging`, `log_driver`, `log_opt`
   * `mac_address`
   * `memswap_limit`, `mem_swappiness`
@@ -208,6 +207,8 @@ All linking to the host is not allowed. This means the following directives are 
   * `external_links`
   * `ports`
   * `stdin_open`
+
+Labels as they relate to images are supported by Codeship and should be [declared in the Dockerfile](https://docs.docker.com/engine/reference/builder/#/label) using the `LABEL` instruction. `labels` as a key in the services file (to label the running container) is not supported. 
 
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
