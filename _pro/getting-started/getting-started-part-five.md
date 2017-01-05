@@ -25,11 +25,11 @@ git clone git@github.com:codeship/ci-guide.git
 
 Now that we've covered the basic pieces of the service, we should take a few minutes and cover two additional features that make for more flexible and powerful CI/CD workflows for your team.
 
-## Cacheing
+## Caching
 
-Next up, let's take a look at cacheing. When you use cacheing, we'll push your image out to a private, secure S3 bucket with access credentials unique to your project. Then, on your next build, we'll quickly check your Dockerfile to see if anything has changed. If nothing has changed - meaning, if building the Dockerfile would result in the exact same image as last time - we'll reuse the cached image. This is a layer by layer cache, so we'll reuse as much of the image as we can before rebuilding the rest of the image once we encounter a change.
+Next up, let's take a look at caching. When you use caching, we'll push your image out to a private, secure S3 bucket with access credentials unique to your project. Then, on your next build, we'll quickly check your Dockerfile to see if anything has changed. If nothing has changed - meaning, if building the Dockerfile would result in the exact same image as last time - we'll reuse the cached image. This is a layer by layer cache, so we'll reuse as much of the image as we can before rebuilding the rest of the image once we encounter a change.
 
-Let's open up our `codeship-services.yml` file and make a change to enable cacheing.
+Let's open up our `codeship-services.yml` file and make a change to enable caching.
 
 ```yaml
 demo:
@@ -78,9 +78,9 @@ Of course, to see our cache in action we'll have to push *another* build using t
 
 Once the new build runs, we can check our log output and see our cache in action.
 
-![Cacheing working log output.]({{ site.baseurl }}/images/gettingstarted/cacheworking.png)
+![Caching working log output.]({{ site.baseurl }}/images/gettingstarted/cacheworking.png)
 
-Cacheing is a really powerful way to speed your builds up. We also have a great article on optimizing your builds overall, as well as making sure your Dockerfile is designed with cacheing in mind. [You can read that here.](https://blog.codeship.com/speeding-up-your-docker-based-builds-with-codeship/)
+Caching is a really powerful way to speed your builds up. We also have a great article on optimizing your builds overall, as well as making sure your Dockerfile is designed with caching in mind. [You can read that here.](https://blog.codeship.com/speeding-up-your-docker-based-builds-with-codeship/)
 
 ## Tests Per Branch
 
