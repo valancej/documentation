@@ -1,6 +1,6 @@
 {
   "author": "Codeship",
-  "homepage": "https://codeship.com/documentation",
+  "homepage": "https://documentation.codeship.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/codeship/documentation.git"
@@ -10,8 +10,8 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "^4.4.4",
-    "npm": "^2.15.1"
+    "node": "^6.9.3",
+    "yarn": "^0.18.1"
   },
   "dependencies": {
     "autoprefixer": "^6.0.0",
