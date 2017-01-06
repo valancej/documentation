@@ -11,7 +11,7 @@ tags:
 category: Getting Started
 redirect_from:
   - /docker/installation/
-  - /documentation/docker/installation/
+  - /pro/installation/
 ---
 
 <div class="info-block">
