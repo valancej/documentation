@@ -1,7 +1,7 @@
 ---
 title: Running Codeship's Jet Locally for Development
 layout: page
-weight: 75
+weight: 1
 tags:
   - docker
   - jet

@@ -1,6 +1,6 @@
 ---
 title: Skipping builds
-weight: 95
+weight: 38
 tags:
   - docker
   - jet

@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Using private base images"
 layout: page
-weight: 45
+weight: 43
 tags:
   - docker
   - tutorial
