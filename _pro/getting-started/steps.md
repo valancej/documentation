@@ -64,6 +64,25 @@ As already mentioned you can specify a `tag` or `exclude`  attribute for each st
     * `tag: ^(master|staging)` would run a command on any of these branches: `master`, `staging`, or any branch beginning with `master` or `staging`, like `master-rebase`.
     * `exclude: ^(master|staging)` would skip the step on any of these branches: `master`, `staging`, or any branch beginning with `master` or `staging`, like `master-rebase`.
 
+## Parallelizing Steps And Tests
+
+If you're looking at running steps - such as setup commands or test commands - in parallel (i.e. simultaneously), it's as simple as using the `parallel` directive in your steps file.
+
+```yaml
+- type: parallel
+  steps:
+    - service: foo
+      command: echo one
+    - service: foo
+      command: echo two
+```
+
+All steps you indent underneath the `type: parallel` directive will spin up separate containers on the host machine to run simultaneously. As with individual steps, if any parallel step fails the pipeline would not move past the current step group (although all still-running parallel steps will be allowed to finish.) It's important to note that, since every parallel step runs on a separate container, [you may need to use volumes]({{ site.baseurl }}{% link _pro/getting-started/docker-volumes.md %}) to persist or share data between your steps. 
+
+It is also worth noting that because parallel steps run separate containers simultaneously on the host machine, they will cause your build to use more resources (CPU and memory on the host machine) which can occasionally cause build issues if resources are maxed out (although you always have the option of upgrading to a larger build machine.)
+
+You can also nest parallel (and serial) step groups within a larger parallel step group. See *Group Steps* below for more information.
+
 ## Group Steps
 
 There are two types of group steps:
