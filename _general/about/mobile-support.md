@@ -6,6 +6,8 @@ tags:
   - osx
   - android
   - ios
+  - swift
+  - objective-c
 category: About
 ---
 ## Support For Mobile Applications on Codeship
@@ -13,4 +15,4 @@ Codeship does not officially support any mobile development on either Codeship B
 
 Some customers have had success manually installing older versions of the Android SDK on Codeship Basic, or building the Android SDK in a Docker image on Codeship Pro - but neither is officially documented or supported.
 
-At this time there is no viable workaround for iOS builds, either.
+At this time there is no viable workaround for native iOS application builds, either. Some frameworks for building non-native applications, such as [fabric.io](https://get.fabric.io) have been used successfully, though.
