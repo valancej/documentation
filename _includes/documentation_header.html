@@ -12,9 +12,15 @@
       {% continue %}
       {% endif %}
       <li>
-        <a href="{{ collection.label | relative_url }}/">
-          {{ collection.title }}
-        </a>
+        {% if collection.shortname == page.collection %}
+          <strong><a href="{{ collection.label | relative_url }}/">
+            {{ collection.title }}
+          </a></strong>
+        {% else %}
+          <a href="{{ collection.label | relative_url }}/">
+            {{ collection.title }}
+          </a>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>
