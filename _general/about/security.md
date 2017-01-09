@@ -22,9 +22,11 @@ All communication between your browser and our website is SSL encrypted, as is a
 
 ## Can Codeship Read My Code?
 
-No! Our team can view your build logs - but only with your permissions. We can not, however, view the original files in your source control.
+On Codeship Basic, with permission our support team can open an SSH debug session in to your build machine which allows us to see your source code.
 
-## What Kind Of Access To Me SCM Does Codeship Need?
+On Codeship Pro, we have no direct access to your source control but our support team can see your builds and build logs, as well as account information.
+
+## What Kind Of Access To My SCM Does Codeship Need?
 
 To run your tests, we need to check out your code from your source code provider. Currently we support GitHub, GitLab, and Bitbucket. You can sign up for the Codeship via Email as well but as soon as you connect a repository with your Codeship account you are telling your source code provider that you allow us to check out your private repositories.
 
@@ -66,6 +68,6 @@ We have a more detailed security checklist available on request. [Get in touch](
 
 ## How Can I Get In Touch About Security?
 
-If you have any further questions you can send an email to [contact@codeship.com](mailto:contact@codeship.com).
+If you have any further questions you can send an email to [contact@codeship.com](mailto:security@codeship.com).
 
 If you want to contact us regarding a security issue please send an email to [security@codeship.com](mailto:security@codeship.com) instead. You can encrypt it with [Codeship's PGP Key]({{ site.baseurl }}/codeship.asc).
