@@ -75,6 +75,20 @@ Similar to the other versions, you need to work around our auto-configuration fo
 sed -i "s|5432|5436|" "config/database.yml"
 ```
 
+### pg_dump
+Occasionally, you may experience a version mismatch with the PostgreSQL version you have configured.
+
+```shell
+pg_dump: server version: $YOUR_VERSION; pg_dump version: 9.2.19 
+pg_dump: aborting because of server version mismatch
+```
+
+This can be resolved by adding the following command in your **Setup Commands** before running your migrations:
+
+```shell
+export PATH=/usr/lib/postgresql/<PG_VERSION>/bin/:$PATH
+```
+
 ## Run `psql` commands
 You can run any SQL query against the PostgreSQL database. For example to create a new database:
 
