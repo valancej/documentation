@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Encrypting environment variables"
 layout: page
-weight: 45
+weight: 41
 tags:
   - docker
   - tutorial

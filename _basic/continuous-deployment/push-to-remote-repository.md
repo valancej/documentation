@@ -1,5 +1,6 @@
 ---
 title: Push to Remote Repository
+weight: 90
 layout: page
 tags:
   - deployment

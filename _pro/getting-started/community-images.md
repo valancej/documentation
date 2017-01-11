@@ -1,7 +1,7 @@
 ---
 title: Community Base Images
 layout: page
-weight: 47
+weight: 35
 tags:
   - docker
   - jet

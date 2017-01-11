@@ -1,7 +1,7 @@
 ---
 title: Steps Configuration
 layout: page
-weight: 55
+weight: 31
 tags:
   - docker
   - jet

@@ -1,7 +1,7 @@
 ---
 title: Getting Started With Codeship Pro Part 2
 layout: page
-weight: 90
+weight: 12
 tags:
   - docker
   - jet

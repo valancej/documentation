@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Pushing to a remote registry"
 layout: page
-weight: 45
+weight: 44
 tags:
   - docker
   - tutorial

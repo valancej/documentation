@@ -1,7 +1,7 @@
 ---
 title: Codeship local development CLI
 layout: page
-weight: 74
+weight: 2
 tags:
   - docker
   - introduction

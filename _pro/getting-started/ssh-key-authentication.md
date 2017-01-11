@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Configure SSH Key Authentication"
 layout: page
-weight: 45
+weight: 41
 tags:
   - docker
   - tutorial

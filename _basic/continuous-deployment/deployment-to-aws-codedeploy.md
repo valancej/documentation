@@ -1,5 +1,6 @@
 ---
 title: Deploy to AWS CodeDeploy
+weight: 9
 layout: page
 tags:
   - deployment

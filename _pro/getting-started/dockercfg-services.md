@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Generating Docker credentials using a service"
 layout: page
-weight: 45
+weight: 42
 tags:
   - docker
   - tutorial

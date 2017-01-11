@@ -1,6 +1,6 @@
 ---
 title: Deploy to Elastic Beanstalk
-weight: 80
+weight: 8
 layout: page
 tags:
   - deployment
