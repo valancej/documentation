@@ -10,6 +10,7 @@ tags:
 category: Getting Started
 redirect_from:
   - /docker/cli/
+  - /pro/cli/
   - /jet/
 ---
 
