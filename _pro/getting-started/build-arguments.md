@@ -11,10 +11,6 @@ category: Getting Started
 * include a table of contents
 {:toc}
 
-<div class="info-block">
-This feature is in private beta. If you are a Codeship customer with projects running on Codeship Pro, contact us at [beta@codeship.com](mailto:beta@codeship.com) to request access to this feature.
-</div>
-
 ## Overview: Build Arguments
 For each service, you can declare [build arguments](https://docs.docker.com/compose/compose-file/#/args), which are values available to the image only at build time. For example, if you must pass the image a set of credentials in order to access an asset or repository when the image is built, you would pass that value to the image as a build argument.
 
