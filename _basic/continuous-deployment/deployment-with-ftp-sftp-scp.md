@@ -1,6 +1,6 @@
 ---
 title: Deploy via FTP, SFTP, SCP, RSYNC, and SSH
-weight: 55
+weight: 4
 tags:
   - deployment
   - ftp

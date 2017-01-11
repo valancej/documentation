@@ -1,5 +1,6 @@
 ---
 title: Deploy to AWS Lambda
+weight: 10
 layout: page
 tags:
   - deployment

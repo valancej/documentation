@@ -1,5 +1,6 @@
 ---
 title: Deployment with AWS CLI
+weight: 7
 layout: page
 tags:
   - deployment
