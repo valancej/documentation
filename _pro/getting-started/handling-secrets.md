@@ -22,14 +22,40 @@ During most Codeship builds, your build machine needs to access or communicate w
 
 Codeship supports encrypted and unencrypted versions of both. Depending on how and when the secret is used, either build arguments or environment variables may be a better choice - and you might often need both.
 
-                                               |Buildtime |Runtime|
-|----------------------------------------------|----------|-------|
-| Build arguments                              | ✓        |       |
-| Env vars declared in Dockerfile              | ✓        | ✓     |
-| Env vars in codeship-services.yml            |          | ✓     |
 
+<table style="border: 1px solid #adadad; padding: 15px; margin: 15px 0 15px;">
+  <colgroup>
+    <col width="300px">
+    <col width="150px">
+    <col width="150px">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Image build time</th>
+      <th>Container runtime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Build arguments</td>
+      <td>✓</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Env vars in Dockerfile</td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <td>Env vars in codeship-services.yml</td>
+      <td></td>
+      <td>✓</td>
+    </tr>
+  </tbody>
+</table>
 
-It's important to note that *buildtime* means the secret is available in the context of the Dockerfile, or the building of the image - whereas *runtime* means the secret is available only after the image has been built, when running commands from your `codeship-steps.yml` file.
+It's important to note that *build time* means the secret is available in the context of the Dockerfile, or the building of the image - whereas *runtime* means the secret is available only after the image has been built, when running commands from your `codeship-steps.yml` file.
 
 Typically, the need for passing secrets to the build falls into three main categories:
 
