@@ -66,7 +66,7 @@ As already mentioned you can specify a `tag` or `exclude`  attribute for each st
 
 ## Parallelizing steps and tests
 
-If you're looking at running steps - such as setup commands or test commands - in parallel (i.e. simultaneously), it's as simple as using the `parallel` directive in your steps file.
+If you're looking at running steps - such as setup commands, test commands or deployment commands - in parallel (i.e. simultaneously), it's as simple as using the `parallel` directive in your steps file.
 
 ```yaml
 - type: parallel
