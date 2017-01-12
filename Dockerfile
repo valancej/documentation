@@ -1,5 +1,4 @@
 FROM ruby:2.3.1-slim
-MAINTAINER marko@codeship.com
 
 ENV \
 	CACHE_BUST=1 \
