@@ -86,4 +86,4 @@ You can learn more about using encrypted environment variables in [this article]
 
 <br>
 
-<span style="font-size: 26px !important;"><strong>Have a use case that's missing from this article? Ask a question on the Codeship <a style="font-size: 26px !important;" href="https://community.codeship.com/c/docker">community forum</a></strong></span>
+**Have a use case that's missing from this article? Ask a question on the Codeship [https://community.codeship.com/c/docker](community forum)**
