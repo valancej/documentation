@@ -12,7 +12,7 @@ redirect_from:
 {:toc}
 
 ## Versions
-We use **PHPENV** to manage PHP versions. We currently have **5.3**, **5.4**, **5.5**, **5.6** and **7.0** installed.
+We use **PHPENV** to manage PHP versions. We currently have **5.3**, **5.4**, **5.5**, **5.6**, **7.0** and **7.1** installed.
 These are aliases that are pointing to the specific 5.x.x and 7.x.x versions we have installed.
 
 For a full list of installed versions (including patch level versions) open a SSH debug build and run the following command
@@ -23,7 +23,8 @@ phpenv versions
 
 ### Ubuntu 14.04
 By default we use 5.5
-Specific version: 5.3.29, 5.4.32, 5.5.16 and 5.6.0
+
+Specific versions: 5.3.29, 5.4.45, 5.5.38, 5.6.29, 7.0.14 and 7.1.0
 
 ***Do not rely on the specific versions we have as this can change any time and could break your build.***
 
