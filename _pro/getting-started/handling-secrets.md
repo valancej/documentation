@@ -84,4 +84,6 @@ For any secret that needs to be accessed during container runtime, meaning _afte
 
 You can learn more about using encrypted environment variables in [this article](https://documentation.codeship.com/pro/getting-started/encryption/). You'll need to [download Jet](https://documentation.codeship.com/pro/getting-started/installation/), the CLI for running Codeship Pro builds locally, as well as grab your project's AES key from the Project Settings page.
 
-### Have a use case that's missing from this article? Ask a question on the Codeship [community forum](https://community.codeship.com/c/docker).
+<br>
+
+**Have a use case that's missing from this article? Ask a question on the Codeship [https://community.codeship.com/c/docker](community forum)**
