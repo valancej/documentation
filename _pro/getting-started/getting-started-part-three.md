@@ -29,13 +29,12 @@ Now that you have a working CI process with a successful test, the next step is 
 
 ### A Codeship Account With Access To Code Pro
 
-The first thing you'll need is a working Codeship account with access to Code Pro. If you haven't used up a 14 day free trial yet, you can [sign up for one here.](https://www.codeship.com/docker)
-
-If you have an account already - or, once you've activated your free trial - you'll want to create a new project. When creating your new project, make sure to select Codeship Pro after choosing the repo you're using.
+The first thing you'll need is a working Codeship account with a Codeship Pro project (**Codeship Pro is now free for 100 builds per month, 1 concurrent build, unlimited projects and unlimited users**). 
+When creating your new project, make sure to select Codeship Pro after choosing the repo you're using.
 
 ![Selecting Codeship Pro]({{ site.baseurl }}/images/gettingstarted/setup_select_docker.png)
 
-If you don't have a repo configured, just create a new repo on Github and push the code examples we're using so far.
+If you don't have a repo configured, just create a new repo on Github and push the code examples we've been using so far.
 
 ### An Image Registry Account
 
