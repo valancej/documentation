@@ -71,6 +71,12 @@ returns
 }
 ```
 
+To only get builds from a specific branch, add the `branch=branch_name` parameter to the call:
+```shell
+curl -i "https://codeship.com/api/v1/projects/:project_id.json?api_key=valid_api_key&branch=valid_branch_name"
+```
+
+
 ## Builds
 
 ### Build data
@@ -112,10 +118,10 @@ returns
 
 ### Restart the last build of a project on Codeship
 
-You can restart the last build for a specific branch of a project with the
-`codeship_restart_build` script.
+You can restart the last build for a specific branch of a project, from within Codeship Basic, with the included
+`codeship_restart_build` script. Using this script, you don't have to know the ID of the latest build before hand, which makes it easier to automate things.
 
-Set the following variables in your projects environment settings first
+Set the following variables in your project's environment settings first
 
 ```shell
 CODESHIP_API_KEY
@@ -123,9 +129,15 @@ CODESHIP_API_PROJECT_ID (you can get that one from the URL of a project)
 CODESHIP_API_BRANCH
 ```
 
-By adding the following command to your build you can restart the last build on a specific
+By adding the following command to your build, you can restart the last build on a specific
 branch for the project you defined with the environment variables.
 
 ```shell
 codeship_restart_build
 ```
+
+Behind the scenes, the `codeship_restart_build` script calls the Codeship API to get information about the builds of a project and restart the latest build of the speficied branch. 
+If you want to see how that's done, you can [check out the source]({% link _basic/getting-started/restart-build-script.md %}) (in case you want to do the same in your own systems).
+
+At a high level, the script calls `/api/v1/projects/:project_id.json?branch=valid_branch_name` to get builds from the project, for the specified branch. 
+Looking at the returned builds, it identifies the latest one and then calls `/api/v1/builds/:build_id/restart.json` to restart it.
