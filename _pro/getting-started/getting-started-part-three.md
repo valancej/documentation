@@ -27,7 +27,7 @@ Now that you have a working CI process with a successful test, the next step is 
 
 ## Required Services Before We Push
 
-### A Codeship Account With Access To Codeship Pro
+### A Codeship Pro Project
 
 The first thing you'll need is a working Codeship account with a Codeship Pro project (**Codeship Pro is now free for 100 builds per month, 1 concurrent build, unlimited projects and unlimited users**). 
 When creating your new project, make sure to select Codeship Pro after choosing the repo you're using.
