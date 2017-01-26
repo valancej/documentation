@@ -137,7 +137,7 @@ codeship_restart_build
 ```
 
 Behind the scenes, the `codeship_restart_build` script calls the Codeship API to get information about the builds of a project and restart the latest build of the speficied branch. 
-If you want to see how that's done, you can [check out the source](https://github.com/codeship/scripts/blob/utilities/codeship_restart_build.sh) (in case you want to do the same in your own systems).
+If you want to see how that's done, you can [check out the source](https://github.com/codeship/scripts/blob/master/utilities/codeship_restart_build.sh) (in case you want to do the same in your own systems).
 
 At a high level, the script calls `/api/v1/projects/:project_id.json?branch=valid_branch_name` to get builds from the project, for the specified branch. 
 Looking at the returned builds, it identifies the latest one and then calls `/api/v1/builds/:build_id/restart.json` to restart it.
