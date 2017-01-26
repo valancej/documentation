@@ -50,8 +50,8 @@ You can learn more about organization management on Codeship [by clicking here](
 
 You can learn more about security on Codeship [by clicking here]({% link _general/about/security.md %}), but there are two Codeship services and staff have different levels of access for each:
 
-- On Codeship Basic, with permission our support team can open an SSH debug session in to your build machine which allows us to see your source code.
+- On [Codeship Basic](https://codeship.com/features/basic), with permission our support team can open an SSH debug session in to your build machine which allows us to see your source code.
 
-- On Codeship Pro, we have no direct access to your source control but our support team can see your builds and build logs, as well as account information.
+- On [Codeship Pro](https://codeship.com/features/pro), we have no direct access to your source control but our support team can see your builds and build logs, as well as account information.
 
 As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.
