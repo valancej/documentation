@@ -9,7 +9,7 @@ tags:
   - gitlab
   - bitbucket
   - organizations
-category: Getting Started
+category: Account
 
 ---
 
