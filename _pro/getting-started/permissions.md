@@ -36,7 +36,7 @@ Codeship requires different permission levels depending on the source control se
 
 ### What permissions can I assign my team members?
 
-You can learn more about organization management on Codeship [by clicking here]({% link general/account/organizations.md %}), but in general there are four basic security levels for teams on Codeship:
+You can learn more about organization management on Codeship [by clicking here]({% link _general/account/organizations.md %}), but in general there are four basic security levels for teams on Codeship:
 
 - **Owners** have control over all aspects of an organization. From changing the subscription to managing organization projects and teams.
 
@@ -48,7 +48,7 @@ You can learn more about organization management on Codeship [by clicking here](
 
 ### Can Codeship staff see my code or builds?
 
-You can learn more about security on Codeship [by clicking here]({% link general/about/security.md %}), but there are two Codeship services and staff have different levels of access for each:
+You can learn more about security on Codeship [by clicking here]({% link _general/about/security.md %}), but there are two Codeship services and staff have different levels of access for each:
 
 - On Codeship Basic, with permission our support team can open an SSH debug session in to your build machine which allows us to see your source code.
 
