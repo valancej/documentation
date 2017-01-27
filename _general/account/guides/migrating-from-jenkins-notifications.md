@@ -1,5 +1,5 @@
 ---
-title: Migrating From Jenkins To Codeship Pro - Notifications
+title: Migrating From Jenkins To Codeship - Notifications
 weight: 48
 tags:
   - jenkins

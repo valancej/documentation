@@ -1,5 +1,5 @@
 ---
-title: Migrating From Jenkins To Codeship Pro - Organizations
+title: Migrating From Jenkins To Codeship - Organizations
 weight: 48
 tags:
   - jenkins
