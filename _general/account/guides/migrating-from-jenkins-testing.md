@@ -1,5 +1,5 @@
 ---
-title: Migrating From Jenkins To Codeship Pro - Testing
+title: Migrating From Jenkins To Codeship - Testing
 weight: 48
 tags:
   - jenkins
