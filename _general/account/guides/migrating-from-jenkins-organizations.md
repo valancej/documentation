@@ -1,5 +1,5 @@
 ---
-title: Migrating From Jenkins To Codeship - Organizations
+title: Migrating From Jenkins To Codeship Pro - Organizations
 weight: 48
 tags:
   - jenkins
@@ -86,6 +86,17 @@ We can now set up notifications per group. Navigate to the project by clicking o
 
 ## Conclusion
 
-Codeship handles setup of organizations and users simply, with informative visibility into the project for team members while providing a seamless and low maintenance way to manage users and roles within Codeship.
+Codeship handles setup of organizations and users simply, with informative visibility into the project for team members while providing a seamless and low maintenance way to manage users and roles within Codeship, whether it be [Codeship Basic](https://codeship.com/features/basic) or [Codeship Pro](https://codeship.com/features/pro).
+
+Now that you know how to migrate your Organizations, Users, and Permissions from Jenkins to Codeship we suggest looking into our other walk-throughs:
+
+- [Migrating your Tests from Jenkins to Codeship](https://documentation.codeship.com/general/account/guides/migrating-from-jenkins-testing/)
+- [Migrating your Notifications from Jenkins to Codeship](https://documentation.codeship.com/general/account/guides/migrating-from-jenkins-notifications/)
+
+You also might be interested in downloading these migration guides as PDFs. You can do so here.
+
+- [Migrating your Tests from Jenkins to Codeship (pdf)](https://resources.codeship.com/hubfs/Codeship_Migrating_from_Jenkins_to_Codeship-Testing.pdf)
+- [Migrating your Organizations, Users, and Permissions from Jenkins to Codeship (pdf)](https://resources.codeship.com/hubfs/Codeship_Migrating_from_Jenkins_to_Codeship-Organizations_Roles_and_Users.pdf)
+- [Migrating your Notifications from Jenkins to Codeship (pdf)](https://resources.codeship.com/hubfs/Codeship_Migrating_from_Jenkins_to_Codeship-Testing.pdf)
 
 If you want to learn more please contact us at [helpdesk@codeship.com](mailto:helpdesk@codeship.com).

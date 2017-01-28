@@ -1,5 +1,5 @@
 ---
-title: Migrating From Jenkins To Codeship - Testing
+title: Migrating From Jenkins To Codeship Pro - Testing
 weight: 48
 tags:
   - jenkins
@@ -88,5 +88,17 @@ Finally the build succeeds, and the green check box displays. The Merge pull req
 ## Conclusion
 
 In this document we’ve shown some of the power and options for testing on [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro]({% link _pro/getting-started/getting-started.md %}). It opens the door to add unit, integration, smoke, or other systems testing. Even further testing could be implemented by pushing deployment to utilize remote UI testing or other means.
+
+Now that you know how to migrate your tests from Jenkins to Codeship we suggest looking into our other walk-throughs:
+
+- [Migrating your Organizations, Users, and Permissions from Jenkins to Codeship](https://documentation.codeship.com/general/account/guides/migrating-from-jenkins-organizations/)
+- [Migrating your Notifications from Jenkins to Codeship](https://documentation.codeship.com/general/account/guides/migrating-from-jenkins-notifications/)
+
+You also might be interested in downloading these migration guides as PDFs. You can do so here.
+
+- [Migrating your Tests from Jenkins to Codeship (pdf)](https://resources.codeship.com/hubfs/Codeship_Migrating_from_Jenkins_to_Codeship-Testing.pdf)
+- [Migrating your Organizations, Users, and Permissions from Jenkins to Codeship (pdf)](https://resources.codeship.com/hubfs/Codeship_Migrating_from_Jenkins_to_Codeship-Organizations_Roles_and_Users.pdf)
+- [Migrating your Notifications from Jenkins to Codeship (pdf)](https://resources.codeship.com/hubfs/Codeship_Migrating_from_Jenkins_to_Codeship-Testing.pdf)
+
 
 If you want to learn more please contact us at [helpdesk@codeship.com](mailto:helpdesk@codeship.com).
