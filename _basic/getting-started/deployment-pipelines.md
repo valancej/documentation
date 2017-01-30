@@ -42,6 +42,8 @@ If you want to create a deployment pipeline for another branch, click on "Add a 
 After saving the deployment pipeline you can add your deployment methods for that branch.
 ![Additional Branch]({{ site.baseurl }}/images/continuous-deployment/second_branch.png)
 
+**Note:** you can also use a wildcard branch to setup one deployment pipeline to be used for similar branches, e.g. feature branches. See [Wildcard Deployments]({% link _basic/getting-started/wildcard-deployment-pipelines.md %}) for more details on using wildcard branches.
+
 ## Edit Branch Settings
 By clicking on "Edit Branch Settings" you can change the branch name or delete that branch.
 
