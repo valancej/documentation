@@ -8,7 +8,7 @@ tags:
 category: Guides
 ---
 <div class="info-block">
-This was originally featured [as an eBook](https://resources.codeship.com/ebooks/deploy-docker-kubernetes-codeship-aw) in your[Resources Library](https://resources.codeship.com).
+This was originally featured [as an eBook](https://resources.codeship.com/ebooks/deploy-docker-kubernetes-codeship-aw) in our[Resources Library](https://resources.codeship.com).
 </div>
 
 ## What Is Kubernetes?
@@ -147,8 +147,6 @@ Now that we have your deployment script set up (I've saved mine to the root of m
 
 ## To Learn More
 
-[Codeship Pro]({% link _pro/getting-started/getting-started.md %})
-
-![Slack Screenshot]({{ site.baseurl }}/images/jenkins-guide/slack_screenshot.png)
+[Get stared with Codeship Pro.]({% link _pro/getting-started/getting-started.md %})
 
 If you want to learn more please contact us at [helpdesk@codeship.com](mailto:helpdesk@codeship.com).
