@@ -8,7 +8,7 @@ tags:
 category: Guides
 ---
 <div class="info-block">
-This was originally featured [as an eBook](https://resources.codeship.com/ebooks/deploy-docker-kubernetes-codeship-aw) inyour[Resources Library](https://resources.codeship.com).
+This was originally featured [as an eBook](https://resources.codeship.com/ebooks/deploy-docker-kubernetes-codeship-aw) in your[Resources Library](https://resources.codeship.com).
 </div>
 
 ## What Is Kubernetes?
@@ -41,15 +41,15 @@ We should point out that, even though Deployment updates need to be triggered in
 
 ## Integrating Codeship with Kubernetes
 
-So, given a functioning Kubernetes Deployment, how do we integrate it intoyourCodeship work now? The answer to this question ultimately depends on your Kubernetes host, but because the official documentation uses [Google Cloud](https://documentation.codeship.com/pro/continuous-deployment/google-cloud/) as an example, this is the platform we'll address. To make this easier we've built out some Google Cloud integrations into Codeship Pro that we can use to authenticate and deploy new images to Google Cloud.
+So, given a functioning Kubernetes Deployment, how do we integrate it in to your Codeship work now? The answer to this question ultimately depends on your Kubernetes host, but because the official documentation uses [Google Cloud](https://documentation.codeship.com/pro/continuous-deployment/google-cloud/) as an example, this is the platform we'll address. To make this easier we've built out some Google Cloud integrations into Codeship Pro that we can use to authenticate and deploy new images to Google Cloud.
 
-Before we can do anything, however, we need to create an encrypted environment fileyour[Jet CLI]({% link _pro/getting-started/installation.md %}) tool in order to authenticate to Google Cloud. We have a [documentation article](https://documentation.codeship.com/pro/getting-started/encryption/) on how to do this, so we won't go over it here - but the environment variables that need to be set are:
+Before we can do anything, however, we need to create an encrypted environment file using the [Jet CLI]({% link _pro/getting-started/installation.md %}) tool in order to authenticate to Google Cloud. We have a [documentation article](https://documentation.codeship.com/pro/getting-started/encryption/) on how to do this, so we won't go over it here - but the environment variables that need to be set are:
 
 - a Google Cloud Key – `GOOGLE_AUTH_JSON`
 - a Google Authentication Email – `GOOGLE_AUTH_EMAIL`
 - a Google Project ID – `GOOGLE_PROJECT_ID`
 
-Once we have an encrypted environment file (and have savedyourGoogle Cloud environment variables to `gc.env.encrypted`), we next need to define the Google Cloud service in the `codeship-services.yml` file.
+Once we have an encrypted environment file (and have saved your Google Cloud environment variables to `gc.env.encrypted`), we next need to define the Google Cloud service in the `codeship-services.yml` file.
 
 ```
 google_cloud_deployment:
@@ -69,9 +69,9 @@ Notice that there are two services defined, rather than one. This is because one
 
 ## Google Container Registry Pushing
 
-Your `codeship-steps.yml` file supports `push` steps, to make pushing Docker images to a remote registry more efficient. We'll use a `push` step to push toyourGoogle Container Registry accout.
+Your `codeship-steps.yml` file supports `push` steps, to make pushing Docker images to a remote registry more efficient. We'll use a `push` step to push to your Google Container Registry accout.
 
-Using the `gcr_dockercfg` service defined above, all we need to do is add a step to the `codeship-steps.yml` file withyourGoogle Container Registry URL as the destination. It's important to remember here that we will be deployingyourapplication image, so be sure to replace the app service name with the name of the service your own application is running on.
+Using the `gcr_dockercfg` service defined above, all we need to do is add a step to the `codeship-steps.yml` file with your Google Container Registry URL as the destination. It's important to remember here that we will be deploying your application image, so be sure to replace the app service name with the name of the service your own application is running on.
 
 ```
 - service: app
@@ -132,13 +132,13 @@ deployment-name app=gcr.io/project-name/app-name:$CI_TIMESTAMP
 
 You can find the complete repository including the `codeship-steps.yml` and the `codeship-services.yml` files here: [https://github.com/codeship/codeship-kubernetes-demo](https://github.com/codeship/codeship-kubernetes-demo)
 
-Let's step through the above script really quick. The first important command is the authentication piece. The `google_cloud_deployment` service needs to be authenticated with the Google Cloud Platform before we can run any commands. Since we set up the necessary environment variables already, all it takes to authenticate is to run the `codeship_google authenticate` command at the beginning ofyourscript.
+Let's step through the above script really quick. The first important command is the authentication piece. The `google_cloud_deployment` service needs to be authenticated with the Google Cloud Platform before we can run any commands. Since we set up the necessary environment variables already, all it takes to authenticate is to run the `codeship_google authenticate` command at the beginning of your script.
 
 Next, we need to set the compute zone. This example shows `us-central1-a`, but you should change this to suit your needs. The next set of commands is the actual Kubernetes interactions. The first sets the Kubernetes cluster that we need to interact with, while the second is the actual Deployment update command. As you can see, it's not very different from the example provided by Kubernetes itself.
 
 It's important to note here that Codeship provides an environment variable of the current build's timestamp, which allows us to correlate the Kubernetes command with the registry push step above.
 
-Now that we haveyourdeployment script set up (I've saved mine to the root of my project as `deploy.sh`), all we havefileft to do is to add a step to the `codeship-steps.yml` file that calls it:
+Now that we have your deployment script set up (I've saved mine to the root of my project as `deploy.sh`), all we have left to do is to add a step to the `codeship-steps.yml` file that calls it:
 
 ```
 - service: google_cloud_deployment
@@ -151,4 +151,4 @@ Now that we haveyourdeployment script set up (I've saved mine to the root of my 
 
 ![Slack Screenshot]({{ site.baseurl }}/images/jenkins-guide/slack_screenshot.png)
 
-If you want tofilearn more please contact us at [helpdesk@codeship.com](mailto:helpdesk@codeship.com).
+If you want to learn more please contact us at [helpdesk@codeship.com](mailto:helpdesk@codeship.com).
