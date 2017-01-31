@@ -8,7 +8,7 @@ tags:
   - Docker
 category: Continuous Deployment
 redirect_from:
-  - /Docker-integration/aws/
+  - /docker-integration/aws/
 ---
 <div class="info-block">
 You can find a sample repo for deploying to Microsoft Azure with Codeship Pro on Github [here](https://github.com/Codeship-library/azure-deployment).
@@ -67,7 +67,7 @@ Auzre Deployment Service Definition and Examples
 
 Before reading through the documentation, please take a look at the Services and Steps documentation page so you have a good understanding how services and steps on Codeship work.
 
-The `codeship-services.yml` file uses the `microsoft/azure-cli` container and sets the encrypted environment file created by running the Service Principal Creation Script. Additionally, it sets the resource group name (`resource`) and location (`location`) through the environment config setting. We set up a [volume]({% link _pro/getting-started/Docker-volumes.md %}) that shares `./` (the repository folder) to `/deploy`. This gives us access to all files in the repository in `/deploy/...` for the following deployment step.
+The `codeship-services.yml` file uses the `microsoft/azure-cli` container and sets the encrypted environment file created by running the Service Principal Creation Script. Additionally, it sets the resource group name (`resource`) and location (`location`) through the environment config setting. We set up a [volume]({% link _pro/getting-started/docker-volumes.md %}) that shares `./` (the repository folder) to `/deploy`. This gives us access to all files in the repository in `/deploy/...` for the following deployment step.
 
 Note: The following step only deploys out infrastructure in Azure with a pre-built Ubuntu 16.04 virtual machine and the Docker engine pre-configured.
 
