@@ -10,9 +10,9 @@ redirect_from:
   - /docker-integration/google-cloud/
 ---
 
-In this article we'll walk you through using our [Google deployment docker container](https://github.com/codeship-library/google-cloud-deployment), set up authentication and interact with resources in the Google Cloud. The Google Cloud SDK is installed supporting all Google Cloud services, including App Engine (in preview), Google Compute Engine and Google Container Engine.
-
-We've set up a full example of using the cloud-sdk container in the [codeship-library/google-cloud-deployment](https://github.com/codeship-library/google-cloud-deployment) Github repository.
+<div class="info-block">
+You can find a sample repo for deploying to Google Cloud with Codeship Pro on Github [here](https://github.com/codeship-library/google-cloud-deployment).
+</div>
 
 ## Authentication
 
