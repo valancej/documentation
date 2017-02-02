@@ -35,7 +35,7 @@ Jet also allows you to encrypt your project's environment variables and image re
 
 ## Prerequisites
 
-In order to run the _Jet_ binary on your computer, you need to have Docker installed and configured. We recommend you follow the guides regarding [Docker Toolbox](https://www.docker.com/toolbox) to get both Docker Engine and Docker Machine installed, as well as a Docker host configured.
+In order to run the _Jet_ binary on your computer, you need to have Docker installed and configured, with a running Docker host. We recommend you follow the guides regarding [Docker For Windows](https://docs.docker.com/docker-for-windows/) or [Docker For Mac](https://docs.docker.com/docker-for-mac/).
 
 ## Jet
 
@@ -47,7 +47,7 @@ See the [sha256sums]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/sh
 shasum -c -a 256 sha256sums
 ```
 
-### Mac OS X
+### Installing Jet On Mac OS X
 
 The `jet` CLI is now included in [Homebrew Cask](https://caskroom.github.io/). If you already have [Homebrew installed](http://brew.sh/) and the [Caskroom tapped](https://caskroom.github.io/)[^1] you can install `jet` by running the following command
 
@@ -67,7 +67,7 @@ chmod u+x /usr/local/bin/jet
 
 [^1]: Instructions for tapping the _Caskroom_ are at the very bottom of the page.
 
-### Linux
+### Installing Jet On Linux
 
 ```bash
 curl -SLO "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-linux_amd64_{{ site.data.jet.version }}.tar.gz"
@@ -75,7 +75,7 @@ sudo tar -xaC /usr/local/bin -f jet-linux_amd64_{{ site.data.jet.version }}.tar.
 sudo chmod +x /usr/local/bin/jet
 ```
 
-### Windows
+### Installing Jet On  Windows
 
 Please download the version (`{{ site.data.jet.version }}`) from [our download site]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-windows_amd64_{{ site.data.jet.version }}.tar.gz). Once you have done this, you need to extract the archive and copy the binary to your path.
 
@@ -102,7 +102,7 @@ Usage:
 
 ## Docker Configuration
 
-`DOCKER_HOST` must be set. `DOCKER_TLS_VERIFY` and `DOCKER_CERT_PATH` are respected in the same way as with the official Docker client.
+`DOCKER_HOST` must be set. `DOCKER_TLS_VERIFY` and `DOCKER_CERT_PATH` are respected in the same way as with the official Docker client. If you installed Docker via [Docker For Windows](https://docs.docker.com/docker-for-windows/) or [Docker For Mac](https://docs.docker.com/docker-for-mac/) this is typically done by default during installation.
 
 If you installed and configured your Docker environment via [Docker Machine](https://docs.docker.com/machine/) (and you are on OS X or Linux) and named the environment _dev_, running the following command will set those variables.
 
