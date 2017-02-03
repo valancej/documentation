@@ -2,10 +2,8 @@
 title: Signing Up For Codeship
 weight: 150
 tags:
-- testing
-- continuous integration
-- getting started
-category: Getting Started
+- account
+category: Account
 ---
 
 ## Setting Up A New Codeship Account
