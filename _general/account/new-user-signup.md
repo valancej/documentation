@@ -1,5 +1,5 @@
 ---
-title: Setting Up Codeship Basic
+title: Signing Up For Codeship
 weight: 150
 tags:
 - testing
