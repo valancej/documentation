@@ -105,8 +105,8 @@ composer install --prefer-dist --no-interaction
 As we already have a version of PHPUnit preinstalled on our build VMs, you need to remove this version first, before upgrading to a different version via Composer.
 
 ```shell
-composer global remove "phpunit/phpunit" --update-with-dependencies
-composer global require "phpunit/phpunit=5.*"
+composer global remove phpunit/phpunit
+composer global require phpunit/phpunit:5.*
 ```
 
 ### Pecl
