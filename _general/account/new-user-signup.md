@@ -1,6 +1,6 @@
 ---
 title: Signing Up For Codeship
-weight: 150
+weight: 10
 tags:
 - account
 category: Account
@@ -66,7 +66,7 @@ Now that you’ve connected your repo, it’s time to select your infrastructure
 
 - You want out of the box configuration
 - Pre-installed CI dependencies
-- 1-click App integrations
+- 1-click app integrations
 
 **Pro** is a good place to start if:
 
