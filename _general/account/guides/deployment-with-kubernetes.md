@@ -69,7 +69,7 @@ Notice that there are two services defined, rather than one. This is because one
 
 ## Google Container Registry Pushing
 
-Your `codeship-steps.yml` file supports `push` steps, to make pushing Docker images to a remote registry more efficient. We'll use a `push` step to push to your Google Container Registry accout.
+Your `codeship-steps.yml` file supports `push` steps, to make pushing Docker images to a remote registry more efficient. We'll use a `push` step to push to your Google Container Registry account.
 
 Using the `gcr_dockercfg` service defined above, all we need to do is add a step to the `codeship-steps.yml` file with your Google Container Registry URL as the destination. It's important to remember here that we will be deploying your application image, so be sure to replace the app service name with the name of the service your own application is running on.
 
@@ -91,7 +91,7 @@ To accomplish this, we provide an `image_tag` declaration that allows you to set
 - service: app
   type: push
   image_name: gcr.io/project-name/app-name
-  image_tag: "{{ .Timestamp }}"
+  image_tag: "{% raw %}{{ .Timestamp }}{% endraw %}"
   registry: https://gcr.io
   dockercfg_service: gcr_dockercfg
 ```
