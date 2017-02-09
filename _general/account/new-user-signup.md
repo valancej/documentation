@@ -14,6 +14,8 @@ If you're looking to sign up and create a project on Codeship, this guide will w
 
 **Sign up** [Navigate to our signup page](https://codeship.com/registrations/new).  You can sign up either via your Source Code Management (SCM) or email address.  SCMs we currently support are: GitLab, Bitbucket, or GitHub.
 
+Note that these oAuth login pages come directly from the SCM tools themselves and we do not have access to them or to the credentials you provide.
+
 ![SCM Choice]({{ site.baseurl }}/images/new-user-setup/scm-choice.png)
 
 - **Via GitHub:**  After selecting GitHub, you are automatically navigated to a login page where you must enter your GitHub login credentials in order to give Codeship access to your account.
@@ -34,7 +36,7 @@ If you're looking to sign up and create a project on Codeship, this guide will w
 
 *You can learn more about the permissions we ask when authenticating with SCM [here](https://documentation.codeship.com/general/account/permissions/).  Learn more about security at Codeship [here](https://documentation.codeship.com/general/about/security/).*
 
-### New User setup
+### New User Setup
 
 Once you’ve signed-up for Codeship you’ll be directed to a short form where we ask a few questions about your team size and type of product you’re looking for.  We ask these questions so that we can get a better sense of what you’d like to achieve with Codeship and so that we can direct you to the correct resources/help.
 
@@ -50,7 +52,7 @@ Simply click on the SCM icon you would like to connect with and proceed to provi
 
 _Examples_:
 - git@gitlab.com:<username>/<repository_name>.git
--https://username@gitlab.com/<username>/<repository_name>.git
+- https://username@gitlab.com/<username>/<repository_name>.git
 - https://gitlab.com/<username>/<respository_name>.git
 
 ![Bitbucket Repo]({{ site.baseurl }}/images/new-user-setup/bb-repo.png)
@@ -65,8 +67,8 @@ Now that you’ve connected your repo, it’s time to select your infrastructure
 **Basic** is a good place to start if:
 
 - You want out of the box configuration
-- Pre-installed CI dependencies
-- 1-click app integrations
+- You can use common, pre-installed CI dependencies
+- You would prefer easy, 1-click app integrations
 
 **Pro** is a good place to start if:
 
@@ -80,4 +82,4 @@ Once you know which type of infrastructure you’d like to use, simply click ‘
 
 ## For More Information
 
-If you want to learn more please contact us at [helpdesk@codeship.com](mailto:helpdesk@codeship.com).
+If you want to learn more please contact us at [https://helpdesk.codeship.com](https://helpdesk.codeship.com).
