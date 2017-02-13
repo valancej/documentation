@@ -114,7 +114,7 @@ The most often used feature of Jet is `jet steps`.
 
 By running `jet steps`, you are running your full CI/CD process on your local machine. This lets you test your builds, configuration files and pipelines locally without having to commit your code.
 
-**Note** that `jet steps` skips [image pushes]({{ site.baseurl }}{% link _pro/getting-started/steps.md/#push-steps %}) and any [branch-specific commands]({{ site.baseurl }}{% link _pro/getting-started/steps.md/#limiting-steps-to-specific-branches--tags %}) by default, but you can always run `jet steps --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
+**Note** that `jet steps` skips [image pushes]({{ site.baseurl }}{% link _pro/getting-started/steps.md#push-steps %}) and any [branch-specific commands]({{ site.baseurl }}{% link _pro/getting-started/steps.md#limiting-steps-to-specific-branches--tags %}) by default, but you can always run `jet steps --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
 
 ### Jet Encrypt
 
