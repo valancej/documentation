@@ -97,7 +97,7 @@ rvm rubies
 
 ## Installed Packages
 ```
-{% include ami/a1a8ded9-6829-4564-9737-0476c5a8228a_96757e2f2d95.md %}
+{% include ami/ami-397ebe2f.md %}
 ```
 
 ```
