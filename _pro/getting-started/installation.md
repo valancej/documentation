@@ -27,17 +27,11 @@ Jet is used to locally debug and test builds for Codeship Pro, as well as to ass
 
 Jet is a CLI tool designed to make working with Codeship Pro faster and easier, as well as to put more power in a developer's hands so that there is less time spent configuring and debugging projects via a web UI.
 
-Jet allows you to run your CI/CD pipeline on your local machine, making it much faster to test your configuration, troubleshoot errors and discover the best setup for your project. By default, Jet skips image pushes and deployments but you can instruct it not to skip them with special options.
-
-You can also pass a variety of environment and setup variables, making Jet a powerful way to simulate your CI/CD process without having to wait for the full push/run/feedback cycle of a real build.
-
-Jet also allows you to encrypt your project's environment variables and image repository credentials, helping you keep your critical information secure without impacting the flexibility of your CI/CD process.
-
 ## Prerequisites
 
 In order to run the _Jet_ binary on your computer, you need to have Docker installed and configured, with a running Docker host. We recommend you follow the guides regarding [Docker For Windows](https://docs.docker.com/docker-for-windows/) or [Docker For Mac](https://docs.docker.com/docker-for-mac/).
 
-## Jet
+## Installing Jet
 
 Please follow the steps below for the operating system you are using. See the [Jet Release Notes]({{ site.baseurl }}{% link _pro/getting-started/release-notes.md %}) for the ChangeLog.
 
@@ -87,7 +81,7 @@ The above version is statically linked and will work the same way on all platfor
 * [Linux]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-linux_amd64_{{ site.data.jet.version }}-dynamic.tar.gz)
 * [Windows]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-windows_amd64_{{ site.data.jet.version }}-dynamic.tar.gz)
 
-## Validating Installation
+### Validating Installation
 
 Once this is done you can check that _Jet_ is working by running `jet help`. This will print output similar to the following.
 
@@ -100,7 +94,7 @@ Usage:
 ...
 ```
 
-## Docker Configuration
+### Docker Configuration
 
 `DOCKER_HOST` must be set. `DOCKER_TLS_VERIFY` and `DOCKER_CERT_PATH` are respected in the same way as with the official Docker client. If you installed Docker via [Docker For Windows](https://docs.docker.com/docker-for-windows/) or [Docker For Mac](https://docs.docker.com/docker-for-mac/) this is typically done by default during installation.
 
@@ -113,6 +107,26 @@ eval $(docker-machine env dev)
 ## Using Jet
 
 Now that you have Jet installed and configured, [learn how to use it.]({{ site.baseurl }}{% link _pro/getting-started/cli.md %})
+
+### Jet Steps
+
+The most often used feature of Jet is `jet steps`.
+
+By running `jet steps`, you are running your full CI/CD process on your local machine. This lets you test your builds, configuration files and pipelines locally without having to commit your code.
+
+**Note** that `jet steps` skips [image pushes]({{ site.baseurl }}{% link _pro/getting-started/steps.md/#push-steps %}) and any [branch-specific commands]({{ site.baseurl }}{% link _pro/getting-started/steps.md/#limiting-steps-to-specific-branches--tags %}) by default, but you can always run `jet steps --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
+
+### Jet Encrypt
+
+Jet also allows you to encrypt [environment variables]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %}), [build arguments]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %}) and [registry credentials]({{ site.baseurl }}{% link _pro/getting-started/docker-pull.md %}). This is done with the `jet encrypt` command. Click the links in this paragraph for specific instructions on encrypting different types of secrets.
+
+### Jet Run
+
+While `jet steps` runs your CI/CD pipeline locally, you can also use `jet run` to instead build a single service or run a single command.
+
+For instance, you can run `jet run service_app` or `jet run service_app echo "hello"` where `service_app` is one of the services defined in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/getting-started/services.md %}).
+
+**Note** that you can also run `jet run --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
 
 ## Questions
 If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com) page.
