@@ -2,7 +2,7 @@
 source "https://rubygems.org"
 ruby "2.3.1"
 
-gem 'jekyll', '~> 3.3.0'
+gem 'jekyll', '~> 3.4.0'
 gem 'rouge', '~> 1.10.1'
 gem 'sass', '~> 3.4.22'
 
