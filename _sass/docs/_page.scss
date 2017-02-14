@@ -302,18 +302,18 @@ body.is-blue {
   text-align: left;
   border-right: 1px solid $cInputBorder;
 
+   & a {
+     font-size: 85%;
+     line-height: 85%;
+   }
+
+   & li {
+     margin-bottom: .5em;     
+   }
+
   @media (max-width: $bpMedium) {
     width: 100%;
   }
-}
-
-.Sidebar a {
-  font-size: 85%;
-  line-height: 85%;
-}
-
-.Sidebar li {
-  margin-bottom: .5em;
 }
 
 .Content {
