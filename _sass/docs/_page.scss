@@ -302,13 +302,13 @@ body.is-blue {
   text-align: left;
   border-right: 1px solid $cInputBorder;
 
-   & a {
-     font-size: 85%;
-     line-height: 85%;
+  a {
+    font-size: 85%;
+    line-height: 85%;
    }
 
-   & li {
-     margin-bottom: .5em;     
+  li {
+    margin-bottom: .5em;
    }
 
   @media (max-width: $bpMedium) {
