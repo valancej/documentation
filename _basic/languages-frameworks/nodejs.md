@@ -4,6 +4,8 @@ weight: 80
 tags:
   - nodejs
   - iojs
+  - npm
+  - yarn
   - framework
 category: Languages &amp; Frameworks
 redirect_from:
@@ -127,9 +129,12 @@ If you use the same scope all the time, you will probably want to set this optio
 npm config set scope username
 ```
 
+## yarn
+You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as an alternative to npm. Yarn is pre-installed on the build VMs and requires Node.js 4.0 or higher.
+
 ## Tools and Test frameworks
 
-You can use all test frameworks or tools including karma, mocha, grunt or any other node based tool. Make sure you install the first through npm. Use the same commands you are using on your own system to start your tests, for example:
+You can use all test frameworks or tools including karma, mocha, grunt or any other node based tool. Make sure you install them first through npm. Use the same commands you are using on your own system to start your tests, for example:
 
 *Note:* Do not run `npm test` to execute grunt tests. When a grunt test fails, it will return a non-zero exit code to `npm`. `npm` will ignore this exit code and return with an exit code of zero. We determine the status of your test commands based on the exit code of that command. An exit code of zero will make the command succeed, even if your tests failed.
 
