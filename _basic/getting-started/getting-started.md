@@ -28,7 +28,7 @@ Since this article is about setting up a Codeship Basic project, you'll want to 
 
 After selecting the Basic infrastructure for your project, Codeship will next ask you to configure your setup and test commands.
 
-First, you will configure your setup commands. Setup commands are the commands you need the be able to run your tests and deployments. Typically these are things like fetching dependencies, seeding databases and installing packages.
+First, you will configure your setup commands. Setup commands are the commands you need to be able to run your tests and deployments. Typically these are things like fetching dependencies and seeding database.
 
 ![Setup Commands on Codeship Basic]({{ site.baseurl }}/images/basic-guide/setup-commands.png)
 
@@ -44,7 +44,7 @@ Next, you will enter in your test commands. These are all tests you want to have
 
 Now that you've defined your setup and test commands, you'll want to define your deployment pipelines. Deployment pipelines run only when a build's setup and tests commands have completed successful _and_ only when the branch defined for the deployment is matched. We call them deployment pipelines rather than deployments because you can have different deployment destinations - perhaps staging and master environments - triggered by different branches.
 
-Defining the branches that will trigger your deployment pipelines is the first step. You can either match a specific branch - i.e. `master` - or you can choose to match any branch that _starts with_ a specific string.
+Defining the branches that will trigger your deployment pipelines is the first step. You can either match a specific branch - i.e. `master` - or you can choose to match any branch that _starts with_ a [specific string]({{ site.baseurl }}{% link _basic/getting-started/wildcard-deployment-pipelines.md %}).
 
 ![Add New Deployment Pipeline on Codeship Basic]({{ site.baseurl }}/images/basic-guide/add-new-deployment.png)
 
@@ -68,7 +68,9 @@ From there you will be presented with a command window, just like when you enter
 
 ### Multiple Deployment Steps
 
-It's worth noting that for each deployment pipeline, you can add multiple deployments or multiple deployment steps. For instance, you can have one deployment on a `master` pipeline that runs your deployment scripts followed by another pipeline that runs notification scripts. To add multiple steps or deployments to a pipeline, just click on an additional deployment target and specify as needed.
+It's worth noting that for each deployment pipeline, you can add multiple deployments or multiple deployment steps. For instance, you can have one deployment on a `master` pipeline that runs your deployment scripts followed by another pipeline that runs notification scripts.
+
+To add multiple steps or deployments to a pipeline, just click on an additional deployment target and specify as needed. You can then use the simple drag-and-drop interface to arrange the deployment commands in the order you need them to run in.
 
 ![Custom Script Deployment on Codeship Basic]({{ site.baseurl }}/images/basic-guide/multiple-deployments.png)
 
@@ -76,17 +78,17 @@ It's worth noting that for each deployment pipeline, you can add multiple deploy
 
 ### Caching
 
-Codeship Basic has an automatic, built-in dependency cache, meaning we cache the packages directory for the most common frameworks, such as Node and Rails, to speed up future builds. You can clear your dependency cache at any time via the sidebar.
+Codeship Basic has an automatic, built-in dependency cache, meaning we cache the packages directory for the most common dependency management systems, like NPM and Rubygems. You can clear your dependency cache at any time via the sidebar.
 
 ![Reset Dependency Cache]({{ site.baseurl }}/images/basic-guide/reset-dependency-cache.png)
 
 ### Skipping Builds
 
-By using the string `skip-ci` in your commit message, you can instruct Codeship not to run a build for a particular commit. You can learn more about this [here]({{ site.baseurl }}{% link _basic/getting-started/skipping-builds.md %})
+By using the string `--skip-ci` in your commit message, you can instruct Codeship not to run a build for a particular commit. You can learn more about this [here]({{ site.baseurl }}{% link _basic/getting-started/skipping-builds.md %})
 
 ### Parallelizing
 
-Codeship offers the option to upgrade your Basic account with additional parallel test pipelines, allowing you to run multiple test commands simultaneously as a way to great speed up your build.
+Codeship offers the option to upgrade your Basic account with additional parallel test pipelines, allowing you to run multiple test commands simultaneously as a way to speed up your builds.
 
 ![Parallel test pipelines on Codeship Basic]({{ site.baseurl }}/images/basic-guide/two-pipelines.png)
 
