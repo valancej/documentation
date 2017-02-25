@@ -15,8 +15,6 @@ redirect_from:
 ---
 
 <div class="info-block">
-
-
 Jet is used to locally debug and test builds for Codeship Pro, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship Basic, you will not need to use Jet.
 </div>
 
