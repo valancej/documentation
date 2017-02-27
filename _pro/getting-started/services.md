@@ -212,7 +212,7 @@ Labels as they relate to images are supported by Codeship and should be [declare
 
 ## Timing And Waiting
 
-One common issue Docker users encounter is around the `links` directive, outlined above and used to orchestrate dependent containers. A container orchestrated via `links` does not force the primary container to wait until uptime to proceed.
+One common issue Docker users encounter is around the `links` directive, outlined above and used to orchestrate dependent containers. A container orchestrated via `links` does not force the primary container to wait until it is ready to proceed.
 
 This means that often your commands may begin executing before your dependent containers are ready. This is particularly problematic and common with databases.
 
@@ -222,7 +222,7 @@ There are two common solutions to this problem:
 
 - Writing a simple health poll script to check for service uptime before proceeding.
 
-An example of a health polll script may look something like this:
+An example of a health poll script may look something like this:
 
 ```bash
 #!/usr/bin/env bash
@@ -248,6 +248,10 @@ do
   sleep 0.1
 done
 ```
+
+Or, a health check poll could look like [this script](https://github.com/codeship/scripts/blob/master/utilities/check_port.sh) for checking to see if a port is available.
+
+**Note** that the above scripts require tools like `bash`, `pg_isready` and `redics-cli` that need to be running on the container running these scripts.
 
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
