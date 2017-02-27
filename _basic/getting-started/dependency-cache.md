@@ -29,7 +29,7 @@ Packages in the following directories will be automatically cached:
 
 ## Clearing The Cache
 
-You can manually clear the cache either by removing the populated cache directory in your setup commands at the start of your build (for instance, by adding a startup command `rm -rf node_modules`) or by clicking on **Reset Dependency Cache** on the right sidebar when viewing any build.
+You can manually clear the cache either by removing the populated cache directory in your setup commands at the start of your build (for instance, by adding a startup command `rm -rf node_modules`), by using our custom `cs clear-cache` command in your startup commands or by clicking on **Reset Dependency Cache** on the right sidebar when viewing any build.
 
 ![Clearing the dependency cache]({{ site.baseurl }}/images/continuous-integration/clear_cache.png)
 
