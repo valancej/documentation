@@ -33,7 +33,7 @@ Your Codeship builds run on infrastucture equipped with version {{ site.data.doc
 Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/getting-started/codeship-configuration.md %})
 
 ## Services File Setup & Configuration
-By default, we look for the filename `codeship-services.yml`. In its absense, Codeship will automatically search for a `docker-compose.yml` file to use in its place. 
+By default, we look for the filename `codeship-services.yml`. In its absense, Codeship will automatically search for a `docker-compose.yml` file to use in its place.
 
 Your services file is written in YAML and is structured similarly to a [Docker Compose](https://docs.docker.com/compose/) file, with each service declared in a block. You may choose to nest your services under a top-level services key, or declare each service in a top-level block. Both examples below are valid:
 
@@ -61,7 +61,7 @@ services:
     image: busybox
     volumes:
       - ./tmp/data:/data
-``` 
+```
 
 If your file includes a `version`, Codeship will ignore the value, as the features supported by Codeship are version independent.
 
@@ -208,7 +208,50 @@ All linking to the host is not allowed. This means the following directives are 
   * `ports`
   * `stdin_open`
 
-Labels as they relate to images are supported by Codeship and should be [declared in the Dockerfile](https://docs.docker.com/engine/reference/builder/#/label) using the `LABEL` instruction. `labels` as a key in the services file (to label the running container) is not supported. 
+Labels as they relate to images are supported by Codeship and should be [declared in the Dockerfile](https://docs.docker.com/engine/reference/builder/#/label) using the `LABEL` instruction. `labels` as a key in the services file (to label the running container) is not supported.
+
+## Timing And Waiting
+
+One common issue Docker users encounter is around the `links` directive, outlined above and used to orchestrate dependent containers. A container orchestrated via `links` does not force the primary container to wait until it is ready to proceed.
+
+This means that often your commands may begin executing before your dependent containers are ready. This is particularly problematic and common with databases.
+
+There are two common solutions to this problem:
+
+- Adding a short `sleep` command before your tests, giving the dependent service slightly more time to start up before proceeding.
+
+- Writing a simple health poll script to check for service uptime before proceeding.
+
+An example of a health poll script may look something like this:
+
+```bash
+#!/usr/bin/env bash
+
+function test_postgresql {
+  pg_isready -h "${POSTGRESQL_HOST}" -U "${POSTGRESQL_USER}"
+}
+
+function test_redis {
+  redis-cli -h "${REDIS_HOST}" PING
+}
+
+count=0
+# Chain tests together by using &&
+until ( test_postgresql && test_redis )
+do
+  ((count++))
+  if [ ${count} -gt 50 ]
+  then
+    echo "Services didn't become ready in time"
+    exit 1
+  fi
+  sleep 0.1
+done
+```
+
+Or, a health check poll could look like [this script](https://github.com/codeship/scripts/blob/master/utilities/check_port.sh) for checking to see if a port is available.
+
+**Note** that the above scripts require tools like `bash`, `pg_isready` and `redics-cli` that need to be running on the container running these scripts.
 
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
