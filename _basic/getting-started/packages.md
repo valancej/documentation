@@ -1,5 +1,5 @@
 ---
-title: AMI Packages
+title: Packages on Codeship Basic
 weight: 97
 tags:
 - AMI
@@ -7,7 +7,8 @@ tags:
 - packages
 category: Getting Started
 ---
-**current build: last edited on 2016/11/11**
+
+**current build: last edited on {{ site.data.basic.latest_update }}**
 
 * include a table of contents
 {:toc}
@@ -20,100 +21,92 @@ If you want to check a certain package or default version for yourself, you can 
 
 Click on the link to open an SSH debug session. You will be provided with the username, server, and port which you can use to access the build machine. You will need an SSH key in your .ssh folder (default). For more information, please read our documentation on [SSH access]({{ site.baseurl }}{% link _basic/getting-started/ssh-access.md %}).
 
-## nvm list
-```
+
+
+## NodeJS versions available via nvm
+```shell
 iojs-v1.8.4
 iojs-v2.5.0
 iojs-v3.3.1
     v0.8.28
     v0.9.12
-->  v0.10.48
-    v0.11.16
-    v0.12.17
-    v4.6.1
+   v0.10.48
+   v0.11.16
+   v0.12.18
+     v4.8.0
     v5.12.0
-    v6.9.1
+    v6.10.0
 default -> 0.10 (-> v0.10.48)
-node -> stable (-> v6.9.1) (default)
-stable -> 6.9 (-> v6.9.1) (default)
+node -> stable (-> v6.10.0) (default)
+stable -> 6.10 (-> v6.10.0) (default)
 unstable -> 0.11 (-> v0.11.16) (default)
 iojs -> iojs-v3.3 (-> iojs-v3.3.1) (default)
 ```
 
-## phpenv versions
-```
+## PHP Versions available via phpenv
+```shell
 system
-  5.3
-  5.3.29
-  5.4
-  5.4.45
+5.3
+5.3.29
+5.4
+5.4.45
 * 5.5
-  5.5.38
-  5.6
-  5.6.27
-  7.0
-  7.0.12
+5.5.38
+5.6
+5.6.30
+7.0
+7.0.16
+7.1
+7.1.2
 ```
 
-## rvm list
+## Ruby versions available via rvm
+```shell
+default [ x86_64 ]
+jruby-1.7.21 [ x86_64 ]
+jruby-1.7.22 [ x86_64 ]
+jruby-1.7.23 [ x86_64 ]
+jruby-1.7.24 [ x86_64 ]
+jruby-1.7.25 [ x86_64 ]
+jruby-1.7.26 [ x86_64 ]
+jruby-9.0.4.0 [ x86_64 ]
+jruby-9.0.5.0 [ x86_64 ]
+jruby-9.1.0.0 [ x86_64 ]
+jruby-9.1.1.0 [ x86_64 ]
+jruby-9.1.2.0 [ x86_64 ]
+jruby-9.1.3.0 [ x86_64 ]
+jruby-9.1.4.0 [ x86_64 ]
+jruby-9.1.5.0 [ x86_64 ]
+jruby-9.1.7.0 [ x86_64 ]
+ruby-1.8.7-p374 [ x86_64 ]
+ruby-1.9.2-p320 [ x86_64 ]
+ruby-1.9.3-p551 [ x86_64 ]
+ruby-2.0.0-p648 [ x86_64 ]
+ruby-2.1.0 [ x86_64 ]
+ruby-2.1.1 [ x86_64 ]
+ruby-2.1.2 [ x86_64 ]
+ruby-2.1.3 [ x86_64 ]
+ruby-2.1.4 [ x86_64 ]
+ruby-2.1.5 [ x86_64 ]
+ruby-2.1.6 [ x86_64 ]
+ruby-2.1.7 [ x86_64 ]
+ruby-2.1.8 [ x86_64 ]
+ruby-2.1.9 [ x86_64 ]
+ruby-2.2.0 [ x86_64 ]
+ruby-2.2.1 [ x86_64 ]
+ruby-2.2.2 [ x86_64 ]
+ruby-2.2.3 [ x86_64 ]
+ruby-2.2.4 [ x86_64 ]
+ruby-2.2.5 [ x86_64 ]
+ruby-2.2.6 [ x86_64 ]
+ruby-2.3.0 [ x86_64 ]
+ruby-2.3.1 [ x86_64 ]
+ruby-2.3.2 [ x86_64 ]
+ruby-2.3.3 [ x86_64 ]
+ruby-2.4.0 [ x86_64 ]
 ```
-rvm rubies
 
-   default [ x86_64 ]
-   jruby-1.7.21 [ x86_64 ]
-   jruby-1.7.22 [ x86_64 ]
-   jruby-1.7.23 [ x86_64 ]
-   jruby-1.7.24 [ x86_64 ]
-   jruby-1.7.25 [ x86_64 ]
-   jruby-9.0.4.0 [ x86_64 ]
-   jruby-9.0.5.0 [ x86_64 ]
-   ruby-1.8.7-p374 [ x86_64 ]
-   ruby-1.9.2-p320 [ x86_64 ]
-   ruby-1.9.3-p551 [ x86_64 ]
-   ruby-2.0.0-p648 [ x86_64 ]
-   ruby-2.1.0 [ x86_64 ]
-   ruby-2.1.1 [ x86_64 ]
-   ruby-2.1.2 [ x86_64 ]
-   ruby-2.1.3 [ x86_64 ]
-   ruby-2.1.4 [ x86_64 ]
-   ruby-2.1.5 [ x86_64 ]
-   ruby-2.1.6 [ x86_64 ]
-=* ruby-2.1.7 [ x86_64 ]
-   ruby-2.1.8 [ x86_64 ]
-   ruby-2.1.9 [ x86_64 ]
-   ruby-2.2.0 [ x86_64 ]
-   ruby-2.2.1 [ x86_64 ]
-   ruby-2.2.2 [ x86_64 ]
-   ruby-2.2.3 [ x86_64 ]
-   ruby-2.2.4 [ x86_64 ]
-   ruby-2.2.5 [ x86_64 ]
-   ruby-2.3.0 [ x86_64 ]
-   ruby-2.3.1 [ x86_64 ]
-
-# => - current
-# =* - current && default
-#  * - default
-```
-
-## Installed Packages
-```
-{% include ami/ami-397ebe2f.md %}
-```
-
-```
-ANT_VERSION:="1.9.2"
-CHROMEDRIVER_VERSION:="2.24"
-GECKODRIVER_VERSION:="0.11.1"
-GAE_VERSION:="1.9.40"
-GOLANG_VERSION:="1.4"
-GRADLE_VERSION:="1.10"
-LEININGEN_VERSION:="2.5.1"
-LIBGEOS_VERSION:="3.4.2"
-MAVEN_VERSION:="3.2.5"
-NVM_VERSION:="0.26.1"
-PARALLEL_VERSION:="20130922"
-SNAPPY_VERSION:="1.1.2"
-SNZIP_VERSION:="1.0.1"
-THRIFT_VERSION:="0.9.2"
-Mozilla Firefox 35.0.1
+## Full list of installed packages
+```shell
+{% include basic/ami/{{ site.data.basic.ami_id }}.md %}
 ```
