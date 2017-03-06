@@ -22,7 +22,7 @@ Going forward, we are now supporting our API documentation at a new location. [C
 
 ## Get an API Key
 
-You can get your API key on [your account page](https://codeship.com/user/edit).
+You can get your API key on [your account page](https://app.codeship.com/user/edit).
 
 ## Projects
 
