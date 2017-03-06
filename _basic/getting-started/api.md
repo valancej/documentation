@@ -10,11 +10,15 @@ redirect_from:
 ---
 
 <div class="info-block">
-The API is currently only available for projects on Codeship Basic and not available on Codeship Pro.
+The API is currently only available for projects on Codeship Basic and not available on Codeship Pro. An API upgrade that works with both Basic and Pro will be released soon.
 </div>
 
 * include a table of contents
 {:toc}
+
+## Updated API Documentation
+
+Going forward, we are now supporting our API documentation at a new location. [Click here to access it now.](https://codeship-api.api-docs.io/v1)
 
 ## Get an API Key
 
@@ -136,8 +140,8 @@ branch for the project you defined with the environment variables.
 codeship_restart_build
 ```
 
-Behind the scenes, the `codeship_restart_build` script calls the Codeship API to get information about the builds of a project and restart the latest build of the speficied branch. 
+Behind the scenes, the `codeship_restart_build` script calls the Codeship API to get information about the builds of a project and restart the latest build of the speficied branch.
 If you want to see how that's done, you can [check out the source](https://github.com/codeship/scripts/blob/master/utilities/codeship_restart_build.sh) (in case you want to do the same in your own systems).
 
-At a high level, the script calls `/api/v1/projects/:project_id.json?branch=valid_branch_name` to get builds from the project, for the specified branch. 
+At a high level, the script calls `/api/v1/projects/:project_id.json?branch=valid_branch_name` to get builds from the project, for the specified branch.
 Looking at the returned builds, it identifies the latest one and then calls `/api/v1/builds/:build_id/restart.json` to restart it.
