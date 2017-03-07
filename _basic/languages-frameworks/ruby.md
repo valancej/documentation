@@ -52,3 +52,11 @@ Make sure to run your commands with `bundle exec` (e.g. `bundle exec rspec`) so 
 
 ## Capybara
 Capybara is supported out of the box with the selenium-webdriver , capybara-webkit or the poltergeist driver for phantomjs.
+
+## Parallelization Gems
+In addition to parallelizing explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
+
+While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues, as well.
+
+- https://github.com/grosser/parallel_tests
+- https://github.com/ArturT/knapsack
