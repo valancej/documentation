@@ -19,6 +19,10 @@
     display: inline-block;
     vertical-align: middle;
 
+    .active {
+      font-weight: bold;
+    }
+
     button {
       background: 0;
       border: 0;

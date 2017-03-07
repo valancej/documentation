@@ -1,0 +1,45 @@
+---
+layout: default
+title: Documentation
+bodyclass: is-blue
+active: moreresources
+---
+{% assign collections = site.collections | sort: 'sort_order' %}
+
+<div class="contentWrapper">
+  <div class="grid">
+    <div class="row">
+        <h1>More Resources</h1>
+        <p>In addition to our documentation, we produce technical content in the form of ebooks, blogs and webinars covering a range of use cases and technologies to help you learn more and solve problems.</p>
+    </div>
+
+    <div class="grid grid--boxContainer">
+      <div class="colxs100 colsm100 colmd100 collg100">
+        <div class="box">
+          <a href="https://blog.codeship.com/"><h2>Blog</h2></a>
+          <p>Watch recaps of our monthly webinars and sign up to upcoming shows. Webinar partners include AWS, Docker, some of our customers, and more. <a href="https://blog.codeship.com/">Read our blog now.</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid--boxContainer">
+      <div class="colxs100 colsm100 colmd100 collg100">
+        <div class="box">
+          <a href="https://resources.codeship.com/webinars"><h2>Webinars</h2></a>
+          <p>Watch recaps of our monthly webinars and sign up to upcoming shows. Webinar partners include AWS, Docker, some of our customers, and more. <a href="https://resources.codeship.com/webinars">Watch our webinars now.</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid--boxContainer">
+      <div class="colxs100 colsm100 colmd100 collg100">
+        <div class="box">
+          <a href="https://resources.codeship.com/ebooks"><h2>Ebooks</h2></a>
+          <p>Browse through our Library of books about Continuous Integration and Delivery, Docker, efficient Software Development, distributed team workflows, and much more. <a href="https://resources.codeship.com/ebooks">Read our ebooks now.</a></p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

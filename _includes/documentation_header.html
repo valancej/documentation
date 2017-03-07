@@ -7,22 +7,34 @@
           <span class="icon fa fa-search"></span>
         </button>
       </li>
-      {% for collection in collections %}
-      {% if collection.label == 'posts' %}
-      {% continue %}
-      {% endif %}
       <li>
-        {% if collection.shortname == page.collection %}
-          <strong><a href="{{ collection.label | relative_url }}/">
-            {{ collection.title }}
-          </a></strong>
-        {% else %}
-          <a href="{{ collection.label | relative_url }}/">
-            {{ collection.title }}
-          </a>
-        {% endif %}
+        {% if page.active == "gettingstarted" %}
+        <a href="/getting-started" class="active">Getting Started</a>
+       {% else %}
+          <a href="/getting-started">Getting Started</a>
+       {% endif %}      </li>
+      <li>
+        {% if page.active == "pro" %}
+        <a href="/pro" class="active">Pro</a>
+       {% else %}
+          <a href="/pro">Pro</a>
+       {% endif %}      </li>
+      <li>
+        {% if page.active == "basic" %}
+        <a href="/basic" class="active">Basic</a>
+       {% else %}
+          <a href="/basic">Basic</a>
+       {% endif %}      </li>
+      <li>
+        {% if page.active == "moreresources" %}
+        <a href="/more-resources" class="active">More Resources</a>
+       {% else %}
+          <a href="/more-resources">More Resources</a>
+       {% endif %}
       </li>
-      {% endfor %}
+      <li>
+          <a href="https://codeship-api.api-docs.io/v1/introduction/auth">API</a>
+      </li>
     </ul>
   </div>
 
