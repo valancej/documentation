@@ -58,5 +58,5 @@ In addition to parallelizing explicitly [via parallel pipelines]({{ site.baseurl
 
 While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues, as well.
 
-- https://github.com/grosser/parallel_tests
-- https://github.com/ArturT/knapsack
+- [https://github.com/grosser/parallel_tests](https://github.com/grosser/parallel_tests)
+- [https://github.com/ArturT/knapsack](https://github.com/ArturT/knapsack)
