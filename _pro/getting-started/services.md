@@ -121,6 +121,8 @@ data:
     - ./tmp/data:/data
 ```
 
+**Note**: volumes should only be mounted from a relative path, as the hosts are ephemeral, and you should not rely on existence of certain directories. Although absolute paths are possible at the moment, we will remove support for them soon.
+
 [Learn more about using volumes.]({{ site.baseurl }}{% link _pro/getting-started/docker-volumes.md %})
 
 ### Environment Variables
