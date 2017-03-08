@@ -139,3 +139,8 @@ Also take a look at the PHP built-in webserver docs in the
 [PHP documentation](http://www.php.net/manual/en/features.commandline.webserver.php)
 
 Thanks to [Jeff Donios](https://github.com/doniosjm) for the tip.
+
+## Parallelization Modules
+In addition to parallelizing explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the [paratest]https://github.com/brianium/paratest) module is a great way to speed up your tests.
+
+Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
