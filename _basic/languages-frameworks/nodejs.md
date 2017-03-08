@@ -143,3 +143,9 @@ Instead of `npm test` run your test commands directly via `grunt` using the foll
 ```shell
 grunt test
 ```
+
+
+## Parallelization NPMs
+In addition to parallelizing explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the [mocha-parallel-tests npm](https://www.npmjs.com/package/mocha-parallel-tests) is a great way to speed up your tests.
+
+Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
