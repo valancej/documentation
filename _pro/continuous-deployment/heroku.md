@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-You can find a sample repo for deploying to Google Cloud with Codeship Pro on Github [here](https://github.com/codeship-library/heroku-deployment).
+You can find a sample repo for deploying to Heroku with Codeship Pro on Github [here](https://github.com/codeship-library/heroku-deployment).
 </div>
 
 To make it easy for you to deploy your application to Heroku we've built a container that has the Heroku Toolbelt and additional scripts installed. We will set up a simple example showing you how to configure the deployment.
