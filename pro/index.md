@@ -7,10 +7,10 @@ redirect_from:
   - /docker/introduction/
   - /docker/getting-started/
 ---
-Codeship Basic uses fast, performant VMs with preinstalled technology stacks to make it super  easy and fast to get started running a CI/CD pipeline.
+Codeship Pro uses containers built from Docker images to let you define and build your own completely flexible CI/CD environment.
 
 ## Getting Started
-To get started with Codeship Basic, there are a few couple articles that may be helpful.
+To get started with Codeship Pro, there are a few couple articles that may be helpful.
 
 - [Read the getting started guide]({{ site.baseurl }}{% link _pro/getting-started/getting-started.md %}) if you are a new to the service.
 
