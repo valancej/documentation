@@ -34,6 +34,8 @@ Also note that we automatically configure `bundler` to write into `~/cache/bundl
 
 You can manually clear the cache either by removing the populated cache directory in your setup commands at the start of your build (for instance, by adding a startup command `rm -rf node_modules`), by using our custom `cs clear-cache` command in your startup commands or by clicking on **Reset Dependency Cache** on the right sidebar when viewing any build.
 
+**Note** that when clearing your dependency cache, you should wait 30-60 seconds to let the system run before triggering your next build.
+
 ![Clearing the dependency cache]({{ site.baseurl }}/images/continuous-integration/clear_cache.png)
 
 ## Support
