@@ -75,7 +75,7 @@ On all other services that need to access this data, you can use either the `vol
 
 1. Volumes are mounted at run time, not at build time. During build time, the host directory is available but the directory mounted into the container is not. The inverse is true during run time. This means that if you were using the code snippet shown above, you would reference `tmp/artifacts` in your Dockerfile when running an `ADD` or a `COPY` command since those commands are running in the build context, but if you were accessing the volume from a step in your `codeship-steps.yml` file, then you would reference the mounted `/artifacts` directory instead since the host directory would be unavailable in the run context.
 1. As the hosts are ephemeral, you should not rely on existence of certain directories. Always make sure that you're mounting volumes from a directory relative to where your repo is checked out.
-1. When mounting volumes, ensure the directory you're attempting to mount already exists. Docker version 1.12 and earlier automatically created missing directories, but this behaviour have been removed in later versions.
+1. When mounting volumes, ensure the directory you're attempting to mount already exists. The simplest way to do that is to add the required directory to your repository. Docker version 1.12 and earlier automatically created missing directories, but this behaviour have been removed in later versions.
 
 ## Common Use Cases
 Volumes solve several common problems, including:
