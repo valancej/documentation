@@ -67,4 +67,4 @@ While we do not officially support or integrate with these modules, many Codeshi
 
 ## Dependency Cache
 
-Codeship automatically caches the `~/cache/bundler` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.
+Codeship automatically configures bundler to use the `~/cache/bundler` directory, which we save between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.

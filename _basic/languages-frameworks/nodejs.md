@@ -151,4 +151,4 @@ Note that we do not officially support or integrate with this module and that it
 
 ## Dependency Cache
 
-Codeship automatically caches the `~/node_modules` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.
+Codeship automatically caches the `~/node_modules` and the `~/clone/node_modules` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.
