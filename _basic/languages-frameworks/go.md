@@ -7,6 +7,10 @@ category: Languages &amp; Frameworks
 redirect_from:
   - /languages/go/
 ---
+
+* include a table of contents
+{:toc}
+
 We set the `GOPATH` to `${HOME}` and checkout your code into
 
 ```shell

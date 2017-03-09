@@ -9,6 +9,9 @@ redirect_from:
   - /languages/java-and-jvm-based-languages/
 ---
 
+* include a table of contents
+{:toc}
+
 ## JDKs
 
 The following JDKs are installed:
@@ -83,3 +86,7 @@ The following tools are preinstalled in our virtual machine. You can add them to
 
 ## JVM based languages
 Scala , Clojure, Groovy and other JVM based languages should be running fine on our systems as well. Let us know if you find something that doesn't work as expected
+
+## Dependency Cache
+
+Codeship automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.

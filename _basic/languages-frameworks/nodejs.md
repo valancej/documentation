@@ -15,7 +15,6 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-
 We use **nvm** to manage different node versions. We read the node version you set in your **package.json** and install the appropriate one.
 
 ## Default Version
@@ -149,3 +148,7 @@ grunt test
 In addition to parallelizing explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the [mocha-parallel-tests npm](https://www.npmjs.com/package/mocha-parallel-tests) is a great way to speed up your tests.
 
 Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
+
+## Dependency Cache
+
+Codeship automatically caches the `$REPO_ROOT/node_modules` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it. We also configure `yarn` to write into `$HOME/cache/yarn`, which is also cached.
