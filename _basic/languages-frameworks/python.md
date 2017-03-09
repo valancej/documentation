@@ -8,6 +8,10 @@ category: Languages &amp; Frameworks
 redirect_from:
   - /languages/python/
 ---
+
+* include a table of contents
+{:toc}
+
 We use **virtualenv** to manage Python environments for you. We currently support Python `2.7.6`. Version `3.4.3` of Python is installed as well and available via the `python3` binary.
 
 ## Dependencies
@@ -35,3 +39,7 @@ PYTHON_VERSION=3.6.0
 ```
 
 Next add [this command](https://github.com/codeship/scripts/blob/master/languages/python.sh#L10) to your _Setup Commands_ and the script will automatically be called at build time.
+
+## Dependency Cache
+
+Codeship automatically caches the `~/.virtualenv/lib/python2.7/site-packages` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.

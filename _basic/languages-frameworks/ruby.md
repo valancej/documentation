@@ -8,6 +8,10 @@ category: Languages &amp; Frameworks
 redirect_from:
   - /languages/ruby/
 ---
+
+* include a table of contents
+{:toc}
+
 We use RVM to manage different Ruby versions. We set <strong>{% default_ruby_version %}</strong> as the default version. Currently we do not load the Ruby version from your Gemfile. You can always change the Ruby version by running:
 
 ```shell
@@ -60,3 +64,7 @@ While we do not officially support or integrate with these modules, many Codeshi
 
 - [https://github.com/grosser/parallel_tests](https://github.com/grosser/parallel_tests)
 - [https://github.com/ArturT/knapsack](https://github.com/ArturT/knapsack)
+
+## Dependency Cache
+
+Codeship automatically caches the `~/cache/bundler` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.

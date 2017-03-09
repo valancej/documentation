@@ -7,6 +7,10 @@ category: Languages &amp; Frameworks
 redirect_from:
   - /languages/dart/
 ---
+
+* include a table of contents
+{:toc}
+
 `$DART_SDK` is available in the Environment and included in the PATH. The installed version of the Dart SDK is `1.5.1`
 
 You can use these commands from the Dart SDK:
