@@ -19,16 +19,17 @@ This means that all packages saved in these directories at the end of a build wi
 
 Packages in the following directories will be automatically cached:
 
-- `~/node_modules`
-- `~/clone/node_modules-cache`
-- `~/.virtualenv/bin/`
-- `~/.virtualenv/lib/python2.7/site-packages`
-- `~/.m2/repository`
-- `~/clone/tmp/parallel_runtime_cucumber.log`
-- `~/.ivy2`
-- `~/cache/bundler`
+- `$REPO_ROOT/node_modules`
+- `$REPO_ROOT/node_modules-cache`
+- `$REPO_ROOT/tmp/parallel_runtime_cucumber.log`
+- `$HOME/.virtualenv/bin/`
+- `$HOME/.virtualenv/lib/python2.7/site-packages`
+- `$HOME/.m2/repository`
+- `$HOME/.ivy2`
+- `$HOME/cache/yarn`
+- `$HOME/cache/bundler`
 
-Also note that we automatically configure `bundler` to write into `~/cache/bundler`.
+Also note that we automatically configure `bundler` to write into `~/cache/bundler` as well as `yarn` to write into `$HOME/cache/yarn`.
 
 ## Clearing The Cache
 

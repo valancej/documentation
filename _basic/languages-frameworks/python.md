@@ -42,4 +42,4 @@ Next add [this command](https://github.com/codeship/scripts/blob/master/language
 
 ## Dependency Cache
 
-Codeship automatically caches the `~/.virtualenv/lib/python2.7/site-packages` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.
+Codeship automatically caches the `$HOME/.virtualenv/lib/python2.7/site-packages` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.

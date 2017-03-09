@@ -89,4 +89,4 @@ Scala , Clojure, Groovy and other JVM based languages should be running fine on 
 
 ## Dependency Cache
 
-Codeship automatically caches the `~/.m2/repository` and `~/.ivy2` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.
+Codeship automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.
