@@ -11,7 +11,8 @@ redirect_from:
   - /continuous-deployment/deployment-to-aws-lambda/
 ---
 
-
+* include a table of contents
+{:toc}
 
 ## General
 [AWS Lambda](http://aws.amazon.com/lambda/)  is a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information.

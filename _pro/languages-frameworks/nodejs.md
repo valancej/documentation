@@ -9,6 +9,10 @@ category: Languages &amp; Frameworks
 redirect_from:
   - /docker-integration/nodejs/
 ---
+
+* include a table of contents
+{:toc}
+
 In this article you will learn about setting up a Node.js-based project on Codeship Pro.
 
 ## Services and Steps

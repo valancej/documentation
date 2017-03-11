@@ -12,12 +12,12 @@ redirect_from:
   - /docker/docker-pull/
 ---
 
-* include a table of contents
-{:toc}
-
 <div class="info-block">
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
 </div>
+
+* include a table of contents
+{:toc}
 
 ## Using A Private Base Image In Your Builds
 

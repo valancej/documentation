@@ -7,6 +7,10 @@ tags:
   - ansible
 category: Continuous Deployment
 ---
+
+* include a table of contents
+{:toc}
+
 Ansible is fully supported on the Codeship.
 
 ## Install ansible

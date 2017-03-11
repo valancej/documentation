@@ -6,6 +6,10 @@ tags:
 - languages
 category: Languages &amp; Frameworks
 ---
+
+* include a table of contents
+{:toc}
+
 [Rust](https://www.rust-lang.org/en-US) is not installed on the build VMs by default, but it can be easily added with a script.
 
 To install the latest Rust version add [this command](https://github.com/codeship/scripts/blob/master/languages/rust.sh#L6) to your _Setup Commands_ and the script will automatically be called at build time.

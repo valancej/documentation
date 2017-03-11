@@ -9,6 +9,10 @@ category: Languages &amp; Frameworks
 redirect_from:
   - /docker-integration/java/
 ---
+
+* include a table of contents
+{:toc}
+
 In this article you will learn about setting up a Java-based project on Codeship Pro. We will use Maven and Gradle for our build configuration, but the same concept applies for any other Java based language or tool.
 
 ## Services and Steps

@@ -10,6 +10,10 @@ redirect_from:
   - /databases/mongodb/
   - /classic/getting-started/mongodb/
 ---
+
+* include a table of contents
+{:toc}
+
 MongoDB **2.6.4** runs on the default port and doesn't require any credentials.
 
 If you need to test against another version of MongoDB, see the [MongoDB script](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh) on the [codeship/scripts](https://github.com/codeship/scripts) GitHub repository.

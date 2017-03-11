@@ -11,14 +11,14 @@ redirect_from:
   - /docker/encryption/
 ---
 
-If you need to make private information available to your build, you can save this information encrypted in your repository. This is most often needed to either make credentials used during deployment available or store credentials for a Docker registry. See e.g our [Docker Push]({{ site.baseurl }}{% link _pro/getting-started/docker-push.md %}) tutorial for a practical example.
+<div class="info-block">
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
+</div>
 
 * include a table of contents
 {:toc}
 
-<div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
-</div>
+If you need to make private information available to your build, you can save this information encrypted in your repository. This is most often needed to either make credentials used during deployment available or store credentials for a Docker registry. See e.g our [Docker Push]({{ site.baseurl }}{% link _pro/getting-started/docker-push.md %}) tutorial for a practical example.
 
 ## Getting the key
 

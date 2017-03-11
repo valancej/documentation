@@ -8,6 +8,10 @@ category: Continuous Integration
 redirect_from:
   - /continuous-integration/browser-testing/
 ---
+
+* include a table of contents
+{:toc}
+
 ## Firefox
 Firefox 35 is installed and available in the PATH.
 

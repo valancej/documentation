@@ -9,6 +9,10 @@ category: Getting Started
 redirect_from:
   - /faq/ignore-command-on-branch/
 ---
+
+* include a table of contents
+{:toc}
+
 ## Ignore command on a branch
 
 If you don't want to run a command on a specific branch use the following syntax. In this example we run your command on every branch except gh_pages

@@ -10,6 +10,10 @@ redirect_from:
   - /databases/mysql/
   - /classic/getting-started/mysql/
 ---
+
+* include a table of contents
+{:toc}
+
 MySQL **5.6** runs on the default port and the credentials are stored in the `MYSQL_USER` and `MYSQL_PASSWORD` environment variables.
 
 The default databases created for you are **development** and **test**.

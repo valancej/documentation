@@ -8,6 +8,10 @@ category: Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-with-capistrano/
 ---
+
+* include a table of contents
+{:toc}
+
 You can deploy any kind of Application with Capistrano. For detailed information about Capistrano check [capistranorb.com](http://capistranorb.com). Don't forget to [include Capistrano](#capistrano-is-not-installed-by-default) in your projects as it's not preinstalled on our build servers.
 
 ## Capistrano on Codeship

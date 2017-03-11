@@ -15,6 +15,9 @@ redirect_from:
   - /docker-guide/getting-started-part-three/
 ---
 
+* include a table of contents
+{:toc}
+
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
 ```bash
@@ -29,7 +32,7 @@ Now that you have a working CI process with a successful test, the next step is 
 
 ### A Codeship Pro Project
 
-The first thing you'll need is a working Codeship account with a Codeship Pro project (**Codeship Pro is now free for 100 builds per month, 1 concurrent build, unlimited projects and unlimited users**). 
+The first thing you'll need is a working Codeship account with a Codeship Pro project (**Codeship Pro is now free for 100 builds per month, 1 concurrent build, unlimited projects and unlimited users**).
 When creating your new project, make sure to select Codeship Pro after choosing the repo you're using.
 
 ![Selecting Codeship Pro]({{ site.baseurl }}/images/gettingstarted/setup_select_docker.png)

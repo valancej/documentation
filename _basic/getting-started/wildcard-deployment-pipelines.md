@@ -9,6 +9,9 @@ redirect_from:
   - /continuous-deployment/wildcard-deployment-pipelines/
 ---
 
+* include a table of contents
+{:toc}
+
 Get more flexible deployment workflows with wildcard deployment pipelines that trigger if a branch starts with a certain prefix. Use one deployment configuration for multiple branches and automatically deploy your feature, release, QA, etc. branches to the corresponding environments.
 
 See our article on [deployment pipelines]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}) for a general introduction on how to use deployments on Codeship.
