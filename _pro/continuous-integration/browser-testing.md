@@ -12,6 +12,9 @@ redirect_from:
   - /docker/browser-testing/
 ---
 
+* include a table of contents
+{:toc}
+
 Running on Codeship Pro, you have many different options to set up browser testing. Following we will describe how you can install different browsers. Please check the language documentation for specifics on how to test with your browser in a specific language.
 
 ## Xvfb

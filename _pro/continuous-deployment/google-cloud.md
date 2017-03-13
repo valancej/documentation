@@ -14,6 +14,9 @@ redirect_from:
 You can find a sample repo for deploying to Google Cloud with Codeship Pro on Github [here](https://github.com/codeship-library/google-cloud-deployment).
 </div>
 
+* include a table of contents
+{:toc}
+
 ## Authentication
 
 For authenticating with the Google Cloud Platform we're going to create a *Service account*.

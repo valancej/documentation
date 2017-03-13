@@ -12,6 +12,9 @@ redirect_from:
   - /continuous-integration/using-subdomains/
 ---
 
+* include a table of contents
+{:toc}
+
 Sometimes you need to access your application at a specific URL during the build.
 
 As it is not possible to modify the `/etc/hosts` file or run your own DNS server on the build VMs, we recommend you use a wildcard DNS service instead.

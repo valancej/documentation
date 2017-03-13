@@ -7,6 +7,10 @@ category: Getting Started
 redirect_from:
   - /continuous-deployment/deployment-pipelines/
 ---
+
+* include a table of contents
+{:toc}
+
 On Codeship, you are able to define **deployment pipelines**. A deployment pipeline is bound to a branch. Every time you push a new commit or tag to this branch, you trigger a build for it and the build will kick off your deployment pipeline.
 
 <div class="info-block">

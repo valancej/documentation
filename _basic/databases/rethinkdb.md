@@ -11,6 +11,9 @@ redirect_from:
   - /classic/getting-started/rethinkdb/
 ---
 
+* include a table of contents
+{:toc}
+
 RethinkDB is installed on our test VMs but not running by default. To use the RethinkDB during your builds, start the service via the following command:
 
 ```shell

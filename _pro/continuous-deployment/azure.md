@@ -13,6 +13,9 @@ category: Continuous Deployment
 You can find a sample repo for deploying to Microsoft Azure with Codeship Pro on Github [here](https://github.com/Codeship-library/azure-deployment).
 </div>
 
+* include a table of contents
+{:toc}
+
 ## Continuous delivery to Azure with Docker
 
 To make it easy for you to deploy your application to Azure we’ve built a container that has the AzureCLI installed. We will set up a simple example showing you how to configure any deployment to Azure.

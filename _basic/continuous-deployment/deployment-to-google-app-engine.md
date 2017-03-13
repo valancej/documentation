@@ -9,6 +9,10 @@ category: Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-to-google-app-engine/
 ---
+
+* include a table of contents
+{:toc}
+
 You can deploy your [Java]({{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}),[Python]({{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}), [NodeJS]({{ site.baseurl }}{% link _basic/languages-frameworks/nodejs.md  %}) , or [Go]({{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}) applications to Google App Engine through Codeship.
 
 ## Setup Google App Engine Deployment

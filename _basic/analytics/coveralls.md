@@ -9,6 +9,10 @@ redirect_from:
   - /analytics/coveralls/
   - /classic/getting-started/coveralls/
 ---
+
+* include a table of contents
+{:toc}
+
 ## Coveralls Discount Code
 
 Thanks to our partnership with Coveralls we can provide a 25% Discount for 3 months. Use the code **"coverallslovescodeship"** and [get started right away](https://coveralls.io/).

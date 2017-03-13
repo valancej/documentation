@@ -11,6 +11,12 @@ category: Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-with-awscli/
 ---
+
+* include a table of contents
+{:toc}
+
+## Setup
+
 The AWS CLI tool does NOT come pre-installed on Codeship Basic build machines.
 
 Please add the following command in the Setup Command section of your test settings to install the AWS CLI tool:

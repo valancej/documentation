@@ -8,6 +8,10 @@ category: Getting Started
 redirect_from:
   - /integrations/webhooks/
 ---
+
+* include a table of contents
+{:toc}
+
 ## Setup
 
 Go to the _Notification_ settings of your project and enter the HTTP endpoint of the service you want to notify.

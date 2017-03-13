@@ -10,6 +10,9 @@ tags:
 category: Continuous Integration
 ---
 
+* include a table of contents
+{:toc}
+
 ## Parallelizing on Codeship Pro
 
 One of the ways Codeship Pro makes it easy to get faster and more powerful build pipelines is with an open-ended approach to parallelization.
