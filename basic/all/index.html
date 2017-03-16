@@ -1,0 +1,41 @@
+---
+layout: default
+title: Documentation
+bodyclass: is-blue
+---
+{% assign collections = site.collections | sort: 'sort_order' %}
+
+<div class="contentWrapper">
+  <div class="grid">
+    <div class="row">
+        <h1>All Codeship Basic Documentation</h1>
+    </div>
+
+    <div class="grid grid--boxContainer">
+        {% for c in collections %}
+        {% if c.title %}
+                <div class="colxs100 colsm100 colmd100 collg100">
+                  <div class="box">
+                      {% for doc in c.docs limit: 10 %}
+                      <li><a href="{{ doc.url }}">{{ doc.title }}</a>
+                      {% endfor %}
+                    <ul>
+                    {% if c.docs.size > 10 %}
+                  {% endif %}
+                  </div>
+                </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="grid">
+      <div class="row">
+        <div class="colxs100 ta-center">
+          <p class="reportIssue">
+            <a href="https://github.com/codeship/documentation/issues/new">Report an issue</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
