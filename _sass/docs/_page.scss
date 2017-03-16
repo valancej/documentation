@@ -224,26 +224,22 @@ body.is-blue {
 .endcontent-block {
   display: block;
   position: relative;
-  padding: 0rem 0rem 1rem 0rem;
+  padding: 0 0 1rem;
   line-height: 1.2em;
   border-radius: 4px;
   padding-left: 40px;
-
-  & h2 {
-    margin: 2rem 0 1rem 0;
-  }
-
-}
-
-
-.endcontent-block {
   background: rgba($_cCSGreen, .2);
   border: 1px solid $_cCSGreen;
   box-shadow: -3px 0 0 $_cCSGreen;
 
+  h2 {
+    margin: 2rem 0 1rem;
+  }
+
   &::before {
     color: $_cCSGreen;
   }
+
 }
 
 // *******************************************************
@@ -266,7 +262,7 @@ body.is-blue {
 
   form {
     width: 100%;
-    max-width: 30rem;
+    max-width: 30;
     display: inline-block;
   }
 
