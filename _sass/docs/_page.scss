@@ -228,16 +228,16 @@ body.is-blue {
   line-height: 1.2em;
   border-radius: 4px;
   padding-left: 40px;
-  background: rgba($_cCSGreen, .2);
-  border: 1px solid $_cCSGreen;
-  box-shadow: -3px 0 0 $_cCSGreen;
+  background: rgba($_cCSYellow, .2);
+  border: 1px solid $_cCSYellow;
+  box-shadow: -3px 0 0 $_cCSYellow;
 
   h2 {
     margin: 2rem 0 1rem;
   }
 
   &::before {
-    color: $_cCSGreen;
+    color: $_cCSYellow;
   }
 
 }
