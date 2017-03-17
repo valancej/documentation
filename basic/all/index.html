@@ -12,22 +12,19 @@ bodyclass: is-blue
     </div>
 
     <div class="grid grid--boxContainer">
-        {% for c in collections %}
-          {% if c.title %}
-                  <div class="colxs100 colsm100 colmd100 collg100">
-                    <div class="box">
-                        {% for doc in c.docs %}
-                        <li><a href="{{ doc.url }}">{{ doc.title }}</a>
-                        {% endfor %}
-                      <ul>
-                      {% if c.docs.size > 10 %}
-                    {% endif %}
-                    </div>
+      {% for c in collections %}
+        {% if c.title %}
+                <div class="colxs100 colsm100 colmd100 collg100">
+                  <div class="box">
+                      {% for doc in c.docs %}
+                      <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
+                      {% endfor %}
+                    <ul>
                   </div>
-          {% endif %}
-        {% endfor %}
+                </div>
+        {% endif %}
+      {% endfor %}
     </div>
-
 
   </div>
 </div>
