@@ -26,13 +26,6 @@ layout: default
       <div data-swiftype-name="body" data-swiftype-type="text" data-swiftype-index='true'>
         {{ content }}
       </div>
-
-      {% if page.comments %}
-      <div class="comments">
-        {% capture url %}{{ page.url | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
-        {% include comments.html url=url %}
-      </div>
-      {% endif %}
       <div class="endcontent-block">
         <h2>Need More Help?</h2>
         <p>Get in touch if you need more help, or post on <a href="https://www.stackoverflow.com" target="_BLANK">Stackoverflow</a> using the tag <strong>#Codeship</strong>.</p>
