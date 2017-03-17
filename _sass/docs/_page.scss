@@ -221,6 +221,27 @@ body.is-blue {
   }
 }
 
+.endcontent-block {
+  display: block;
+  position: relative;
+  padding: 0 0 1rem;
+  line-height: 1.2em;
+  border-radius: 4px;
+  padding-left: 40px;
+  background: rgba($_cCSYellow, .2);
+  border: 1px solid $_cCSYellow;
+  box-shadow: -3px 0 0 $_cCSYellow;
+
+  h2 {
+    margin: 2rem 0 1rem;
+  }
+
+  &::before {
+    color: $_cCSYellow;
+  }
+
+}
+
 // *******************************************************
 // Newsletter Subscribe
 // *******************************************************
@@ -241,7 +262,7 @@ body.is-blue {
 
   form {
     width: 100%;
-    max-width: 30rem;
+    max-width: 30;
     display: inline-block;
   }
 
