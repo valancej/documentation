@@ -69,7 +69,6 @@ To push the data to Coveralls, add the following after your test commands on Cod
 bundle exec rake coveralls:push
 ```
 
-
 ## Setup for other languages
 
 Coveralls supports a lot of other languages. Check out their fantastic [documentation](https://coveralls.io/docs/supported_continuous_integration).

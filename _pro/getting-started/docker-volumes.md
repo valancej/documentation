@@ -95,5 +95,3 @@ Volumes solve several common problems, including:
 * https://docs.docker.com/compose/compose-file/#volumes-volume-driver
 
 * https://docs.docker.com/engine/userguide/containers/dockervolumes/
-
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.

@@ -98,5 +98,3 @@ You also might be interested in downloading these migration guides as PDFs. You 
 - [Migrating your Tests from Jenkins to Codeship (pdf)](https://resources.codeship.com/hubfs/Codeship_Migrating_from_Jenkins_to_Codeship-Testing.pdf)
 - [Migrating your Organizations, Users, and Permissions from Jenkins to Codeship (pdf)](https://resources.codeship.com/hubfs/Codeship_Migrating_from_Jenkins_to_Codeship-Organizations_Roles_and_Users.pdf)
 - [Migrating your Notifications from Jenkins to Codeship (pdf)](https://resources.codeship.com/hubfs/Codeship_Migrating_from_Jenkins_to_Codeship-Testing.pdf)
-
-If you want to learn more please contact us at [helpdesk@codeship.com](mailto:helpdesk@codeship.com).

@@ -69,7 +69,7 @@ While we do not officially support or integrate with any of these modules, many 
 ### PHPUnit
 - [https://github.com/brianium/paratest](https://github.com/brianium/paratest)
 
-## Troubleshooting
+## Common Issues
 
 If builds are running slow or failing intermittently and you think memory or CPU constraints may be a cause, you can [contact our helpdesk](https://helpdesk.codeship.com), and we can investigate your resource usage and see if a larger build machine makes sense.
 

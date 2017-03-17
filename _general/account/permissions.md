@@ -53,5 +53,3 @@ You can learn more about security on Codeship [by clicking here]({% link _genera
 - On [Codeship Basic](https://codeship.com/features/basic), with permission our support team can open an SSH debug session in to your build machine which allows us to see your source code.
 
 - On [Codeship Pro](https://codeship.com/features/pro), we have no direct access to your source control but our support team can see your builds and build logs, as well as account information.
-
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.

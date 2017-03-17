@@ -79,7 +79,3 @@ Now that you’ve connected your repo, it’s time to select your infrastructure
 Once you know which type of infrastructure you’d like to use, simply click ‘Select Infrastructure’ on the corresponding project.
 
 ![Select Codeship Infrastructure]({{ site.baseurl }}/images/new-user-setup/select-infra.png)
-
-## For More Information
-
-If you want to learn more please contact us at [https://helpdesk.codeship.com](https://helpdesk.codeship.com).

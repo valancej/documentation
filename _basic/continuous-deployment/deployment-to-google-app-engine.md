@@ -79,7 +79,3 @@ on [Connected Services](https://codeship.com/authentications) will update your a
 and allow deployments to App Engine.
 
 Please save the deployment settings after reconnecting to GAE to ensure that we use the newly created token.
-
-## Questions
-
-If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com/) page.

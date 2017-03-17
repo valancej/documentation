@@ -140,5 +140,3 @@ This `image_tag` field can contain a simple string, or be part of a [Go template
 * `CiName` (defaults to `codeship`)
 
 To tag your image based on the Commit ID, use the string `"{% raw %}{{ .CommitID }}{% endraw %}"`. You can template together multiple keys into a tag by simply concatenating the strings: `"{% raw %}{{ .CiName }}-{{ .Branch }}{% endraw %}"`. Be careful about using raw values, however, since the resulting string will be stripped of any invalid tag characters.
-
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.
