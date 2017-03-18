@@ -70,5 +70,3 @@ Here is a list of the standard dockercfg generators we support. If you don't see
 
 * [AWS ECR](https://github.com/codeship-library/aws-deployment)
 * [Google GCR](https://github.com/codeship-library/gcr-dockercfg-generator)
-
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.

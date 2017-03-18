@@ -86,5 +86,3 @@ The various RUN commands should also be ordered according to frequency of invali
 ### 3. Use a strict .dockerignore file
 
 The more files which get added to the Docker image during an ADD or COPY, the higher the chance that the image cached will be invalidated despite the functionality of the image remaining the same. To reduce the chances of this happening, strip down the number of files being added to the image to the bare essentials. Ignore any temporary files, logs, development files, and documentation, especially `.git`. A good rule of thumb for this process is if the resulting image will not utilize a file or folder, add it to the `.dockerignore` file.
-
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.

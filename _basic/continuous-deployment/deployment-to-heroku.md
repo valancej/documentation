@@ -91,6 +91,3 @@ This will enable your build to check the URL of your application to make sure th
 
 ## Troubleshooting
 - [check_url fails when deploying to Heroku]({{ site.baseurl }}{% link _general/projects/check_url-fails-for-heroku-deployment.md %})
-
-## Questions
-If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com/) page.

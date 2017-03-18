@@ -269,6 +269,3 @@ Or, a health check poll could look like [this script](https://github.com/codeshi
 ## Other Notes
 * `link` containers will be newly created for each step.
 * `volumes_from` containers will be created exactly once for all services.
-
-## Questions
-If you have any specific questions, you can submit a ticket to the the help desk or post on the [community forum](https://community.codeship.com).

@@ -41,7 +41,3 @@ You can manually clear the cache either by removing the populated cache director
 **Note** that when clearing your dependency cache, you should wait 30-60 seconds to let the system run before triggering your next build.
 
 ![Clearing the dependency cache]({{ site.baseurl }}/images/continuous-integration/clear_cache.png)
-
-## Support
-
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.
