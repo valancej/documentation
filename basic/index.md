@@ -10,7 +10,7 @@ redirect_from:
 Codeship Basic uses fast, performant VMs with preinstalled technology stacks to make it super easy and fast to get started running a CI/CD pipeline.
 
 ## Getting Started
-To get started with Codeship Basic, there are a few couple articles that may be helpful.
+To get started with Codeship Basic, there are a few articles that may be helpful.
 
 - [Read the getting started guide]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}) if you are a new to the service.
 
