@@ -12,13 +12,12 @@ redirect_from:
   - /docker/ssh-key-authentication/
 ---
 
-* include a table of contents
-{:toc}
-
 <div class="info-block">
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
 </div>
 
+* include a table of contents
+{:toc}
 
 During your build you might want to access other repositories to pull in dependencies or push your code to other servers.
 

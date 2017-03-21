@@ -11,6 +11,9 @@ redirect_from:
   - /continuous-deployment/push-to-remote-repository/
 ---
 
+* include a table of contents
+{:toc}
+
 If you want to deploy your application by doing a `git push` to a remote repository please follow these steps:
 
 1. Remove the Codeship deploy key from the repository. You'll find this option in the repository settings on the respective service.

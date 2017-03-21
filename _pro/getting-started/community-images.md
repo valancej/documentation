@@ -11,6 +11,9 @@ redirect_from:
   - /docker/community-images/
 ---
 
+* include a table of contents
+{:toc}
+
 Codeship community members can develop and maintain base images that they may want to share with other Docker users.
 
 These may make a great fit for your projects, although *troubleshooting with these images may be limited if available at all as they are not officially maintained by Codeship*.

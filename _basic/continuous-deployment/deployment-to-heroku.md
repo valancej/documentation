@@ -9,6 +9,10 @@ category: Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-to-heroku/
 ---
+
+* include a table of contents
+{:toc}
+
 Codeship makes makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}).
 
 * include a table of contents
@@ -87,6 +91,3 @@ This will enable your build to check the URL of your application to make sure th
 
 ## Troubleshooting
 - [check_url fails when deploying to Heroku]({{ site.baseurl }}{% link _general/projects/check_url-fails-for-heroku-deployment.md %})
-
-## Questions
-If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com/) page.

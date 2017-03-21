@@ -11,6 +11,9 @@ redirect_from:
   - /docker/image-push-fails/
 ---
 
+* include a table of contents
+{:toc}
+
 The **image** in `codeship-services.yml` has to match the **image_name** in `codeship-steps.yml`, like in the following example:
 
 ```yaml

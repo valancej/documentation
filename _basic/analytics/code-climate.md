@@ -9,6 +9,12 @@ redirect_from:
   - /analytics/code-climate/
   - /classic/getting-started/code-climate/
 ---
+
+* include a table of contents
+{:toc}
+
+## Setup
+
 There is no specific setup necessary to use Code Climate on Codeship.
 You can follow the [Code Climate docs](http://docs.codeclimate.com/article/219-setting-up-test-coverage)
 set it up with your application and just include the Code Climate API key either

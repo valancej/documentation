@@ -8,6 +8,9 @@ tags:
 category: Getting Started
 ---
 
+* include a table of contents
+{:toc}
+
 **current build: last edited on {{ site.data.basic.latest_update }}**
 
 * include a table of contents

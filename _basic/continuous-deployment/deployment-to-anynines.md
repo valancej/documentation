@@ -8,9 +8,16 @@ redirect_from:
   - /continuous-deployment/deployment-to-anynines/
 ---
 
+* include a table of contents
+{:toc}
+
+## What is anynines?
+
 [anynines](http://www.anynines.com) is a PaaS built on top of CloudFoundry and OpenStack.
 
 They have a great [Getting Started](https://support.anynines.com/entries/60238466-Getting-started-with-anynines-using-the-CLI-v6) guide which we definitely encourage you to check out. Also, see their documentation available at [support.anynines.com](https://support.anynines.com/forums).
+
+## Deploying
 
 As for getting started with **anynines** on Codeship, start by getting your application to deploy from your local machine. Once this is done, you need to add the following environment variables to your project settings.
 

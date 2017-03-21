@@ -15,6 +15,9 @@ redirect_from:
   - /docker-guide/getting-started-part-five/
 ---
 
+* include a table of contents
+{:toc}
+
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
 ```bash

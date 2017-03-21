@@ -3,47 +3,60 @@ layout: default
 title: Documentation
 bodyclass: is-blue
 ---
-{% assign collections = site.collections | sort: 'sort_order' %}
 
 <div class="contentWrapper">
   <div class="grid">
     <div class="row">
-        <h1>Welcome to the Codeship documentation!</h1>
-
-        <p>You can select a category or use the search to find the information you need. If you have suggestions for more topics or want to contribute to this documentation, please check out our <a href="https://github.com/codeship/documentation">GitHub repository</a>.</p>
+        <h1>Codeship Documentation & Resources</h1>
+        <p>In addition to our documentation, we produce technical content in the form of ebooks, blogs and webinars covering a range of use cases and technologies to help you learn more and solve problems.</p>
     </div>
 
     <div class="grid grid--boxContainer">
-        {% for c in collections %}
-        {% if c.title %}
-                <div class="colxs100 colsm50 colmd33 collg33">
-                  <div class="box">
-                    <h2 class="box__title"><a href="{{ c.shortname }}">{{ c.title }}</a></h2>
-                    <ul class="box__links ul">
-                      {% for doc in c.docs limit: 10 %}
-                      <li><a href="{{ doc.url }}">{{ doc.title }}</a>
-                      {% endfor %}
-                    <ul>
-                    {% if c.docs.size > 10 %}
-                      <div class="box__footer">
-                        <span class="box__counter">{{ c.docs.size }} Topics</span>
-                        <a href="{{ c.shortname }}/">Read More</a>
-                      </div>
-                  {% endif %}
-                  </div>
-                </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-
-    <div class="grid">
-      <div class="row">
-        <div class="colxs100 ta-center">
-          <p class="reportIssue">
-            <a href="https://github.com/codeship/documentation/issues/new">Report an issue</a>
-          </p>
+      <div class="colxs100 colsm100 colmd100 collg100">
+        <div class="box">
+          <h2 class="box__title">Getting Started Guides</h2>
+          <p>If you're looking to follow-along with a quick start guide and learn how to use Codeship quickly:</p>
+          <ul>
+            <li>- <a href="{{ site.baseurl }}{% link _pro/getting-started/getting-started.md %}">Get Started With Codeship Pro</a></li>
+            <li>- <a href="{{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}">Get Started With Codeship Basic</a></li>
+          </ul>
         </div>
       </div>
     </div>
+
+    <div class="grid grid--boxContainer">
+      <div class="colxs100 colsm100 colmd100 collg100">
+        <div class="box">
+          <h2 class="box__title">Documentation</h2>
+          	<p><strong>General:</strong> <a href="{{ site.baseurl }}{% link general/all/index.html %}">All Docs</a></p>
+						<p><strong>Codeship Pro:</strong> <a href="{{ site.baseurl }}{% link pro/all/index.html %}">All Docs</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/ruby.md %}">Ruby</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/nodejs.md %}">Node</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/php.md %}">PHP</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/python.md %}">Python</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/java.md %}">Java</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/go.md %}">Go</a>
+            <p><strong>Codeship Basic:</strong> <a href="{{ site.baseurl }}{% link basic/all/index.html %}">All Docs</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/ruby.md %}">Ruby</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/nodejs.md %}">Node</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/php.md %}">PHP</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}">Python</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}">Java</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}">Go</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid--boxContainer">
+      <div class="colxs100 colsm100 colmd100 collg100">
+        <div class="box">
+          <a href="https://resources.codeship.com/ebooks"><h2 class="box__title">Code Examples And Sample Projects</h2></a>
+          <p>Browse code examples and and sample projects for:</p>
+          <ul>
+            <li>- <a href="https://github.com/codeship-library">Codeship Pro</a>
+            <li>- <a href="https://github.com/codeship/scripts">Codeship Basic</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid--boxContainer">
+      <div class="colxs100 colsm100 colmd100 collg100">
+        <div class="box">
+          <a href="https://resources.codeship.com/ebooks"><h2 class="box__title">Webinars & Ebooks</h2></a>
+          <p>Browse through our library of webinars and ebooks about Continuous Integration and Delivery, Docker, efficient software development, distributed team workflows, and much more. <a href="https://resources.codeship.com" target="_BLANK">View our resources library here.</a></p>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </div>

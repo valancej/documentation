@@ -147,6 +147,4 @@ Now that we have your deployment script set up (I've saved mine to the root of m
 
 ## To Learn More
 
-[Get stared with Codeship Pro.]({% link _pro/getting-started/getting-started.md %})
-
-If you want to learn more please contact us at [helpdesk@codeship.com](mailto:helpdesk@codeship.com).
+[Get stared with Codeship Pro.]({% link _pro/getting-started/getting-started.md %})=

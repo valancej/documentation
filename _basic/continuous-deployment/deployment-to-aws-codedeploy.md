@@ -11,6 +11,9 @@ redirect_from:
   - /continuous-deployment/deployment-to-aws-codedeploy/
 ---
 
+* include a table of contents
+{:toc}
+
 ## General
 [AWS CodeDeploy](http://aws.amazon.com/codedeploy/) is a service that automates code deployments to Amazon EC2 instances.
 

@@ -9,6 +9,10 @@ redirect_from:
   - /services/elasticsearch/
   - /classic/getting-started/elasticsearch/
 ---
+
+* include a table of contents
+{:toc}
+
 Elasticsearch **1.2.2** is installed on the default port **9200** and doesn't require any credentials. However, it is not running by default. To use Elasticsearch during your builds, start the service via the following command:
 
 ```shell

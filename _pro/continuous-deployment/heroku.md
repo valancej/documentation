@@ -14,7 +14,13 @@ redirect_from:
 You can find a sample repo for deploying to Heroku with Codeship Pro on Github [here](https://github.com/codeship-library/heroku-deployment).
 </div>
 
+* include a table of contents
+{:toc}
+
 To make it easy for you to deploy your application to Heroku we've built a container that has the Heroku Toolbelt and additional scripts installed. We will set up a simple example showing you how to configure the deployment.
+
+<h1>{{ page.collection }}</h1>
+
 
 The deployment uses the [Heroku Platform API](https://devcenter.heroku.com/articles/build-and-release-using-the-api) to deploy your application, so no SSH key management is necessary.
 

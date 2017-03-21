@@ -1,0 +1,30 @@
+---
+layout: default
+title: Documentation
+bodyclass: is-blue
+---
+{% assign collections = site.collections | where:"title","General" %}
+
+<div class="contentWrapper">
+  <div class="grid">
+    <div class="row">
+        <h1>All Codeship Pro Documentation</h1>
+    </div>
+
+    <div class="grid grid--boxContainer">
+      {% for c in collections %}
+        {% if c.title %}
+                <div class="colxs100 colsm100 colmd100 collg100">
+                  <div class="box">
+                      {% for doc in c.docs %}
+                      <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
+                      {% endfor %}
+                    <ul>
+                  </div>
+                </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</div>

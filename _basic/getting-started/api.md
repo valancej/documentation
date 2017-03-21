@@ -9,6 +9,9 @@ redirect_from:
   - /integrations/api/
 ---
 
+* include a table of contents
+{:toc}
+
 <div class="info-block">
 The API is currently only available for projects on Codeship Basic and not available on Codeship Pro. An API upgrade that works with both Basic and Pro will be released soon.
 </div>

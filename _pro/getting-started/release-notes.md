@@ -14,3 +14,6 @@ redirect_from:
 <div class="info-block">
 Missing versions only improved the integration with our hosted platform and have no user facing changes / bug fixes.
 </div>
+
+* include a table of contents
+{:toc}

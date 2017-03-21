@@ -10,9 +10,6 @@ redirect_from:
   - /docker/docker-volumes/
 ---
 
-* include a table of contents
-{:toc}
-
 <div class="alert-block">
 We will be upgrading to Docker 1.13 (now 17.03.01) on **March 28, 2017**, which means you will have to ensure directories exist before mounting them as volumes to avoid errors. See more about [why Docker 1.13 will impact this](https://github.com/docker/docker/pull/22373).
 </div>
@@ -21,6 +18,9 @@ We will be upgrading to Docker 1.13 (now 17.03.01) on **March 28, 2017**, which 
 <div class="info-block">
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
 </div>
+
+* include a table of contents
+{:toc}
 
 ## What Are Docker Volumes?
 Volumes are directories on the host that your containers can read from and write to during your CI/CD process. Because every step of your CI/CD process on Codeship runs on a separate set of containers, the ability to persist and pass along data with volumes enables you to create efficient and flexible container-based workflows without having to rely on pre-compiled assets or data.
@@ -71,7 +71,7 @@ On all other services that need to access this data, you can use either the `vol
 
 [We have a downloadable example of this set up here](https://github.com/codeship/codeship-tool-examples/tree/master/08.deployment-container)
 
-## Important notes 
+## Important notes
 
 1. Volumes are mounted at run time, not at build time. During build time, the host directory is available but the directory mounted into the container is not. The inverse is true during run time. This means that if you were using the code snippet shown above, you would reference `tmp/artifacts` in your Dockerfile when running an `ADD` or a `COPY` command since those commands are running in the build context, but if you were accessing the volume from a step in your `codeship-steps.yml` file, then you would reference the mounted `/artifacts` directory instead since the host directory would be unavailable in the run context.
 1. As the hosts are ephemeral, you should not rely on existence of certain directories. Always make sure that you're mounting volumes from a directory relative to where your repo is checked out.
@@ -95,5 +95,3 @@ Volumes solve several common problems, including:
 * https://docs.docker.com/compose/compose-file/#volumes-volume-driver
 
 * https://docs.docker.com/engine/userguide/containers/dockervolumes/
-
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.

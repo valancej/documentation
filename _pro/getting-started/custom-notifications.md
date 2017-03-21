@@ -81,5 +81,3 @@ By adding a relevant step to the steps file, we can control under what condition
 ## Other integrations
 
 Since you can integrate any container you wish into your pipeline, there are no limitations on what notifications you can use. You can see some other examples of custom notifications [here](https://github.com/codeship/scripts/tree/master/notifications).
-
- As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.

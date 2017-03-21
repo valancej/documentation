@@ -12,12 +12,12 @@ redirect_from:
   - /docker/dockercfg-services/
 ---
 
-* include a table of contents
-{:toc}
-
 <div class="info-block">
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}). Note that if the generator service you select needs to write your local filesystem, you must use a local Docker host (Linux, Docker for Mac and Windows, Docker Machine with VirtualBox, etc), and not a remote Docker host.
 </div>
+
+* include a table of contents
+{:toc}
 
 ## Overview
 
@@ -70,5 +70,3 @@ Here is a list of the standard dockercfg generators we support. If you don't see
 
 * [AWS ECR](https://github.com/codeship-library/aws-deployment)
 * [Google GCR](https://github.com/codeship-library/gcr-dockercfg-generator)
-
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.

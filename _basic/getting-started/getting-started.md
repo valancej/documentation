@@ -97,7 +97,3 @@ You can sign up for a free ParallelCI trial from the sidebar or [get in touch wi
 ### Infrastructure
 
 Codeship Basic builds run on fresh VMs provisioned on Ubuntu Trusty. You can learn more about our infrastructure setup [here]({{ site.baseurl }}{% link _general/about/vm-and-infrastructure.md %})
-
-## Questions
-
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.

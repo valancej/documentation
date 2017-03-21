@@ -8,6 +8,10 @@ category: Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-to-digitalocean/
 ---
+
+* include a table of contents
+{:toc}
+
 ## Different Ways to Deploy
 DigitalOcean offers virtual servers (called Droplets).
 There are various ways to deploy your application to DigitalOcean.

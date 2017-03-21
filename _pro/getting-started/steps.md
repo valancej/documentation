@@ -237,6 +237,3 @@ For each step, the running container is provided with a set of environment varia
 * `CI_NAME` (defaults to `codeship`)
 
 Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/getting-started/docker-push.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.
-
-## Questions
-If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com) page.

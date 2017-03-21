@@ -10,6 +10,10 @@ category: Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-with-ftp-sftp-scp/
 ---
+
+* include a table of contents
+{:toc}
+
 <div class="info-block">
   You might also want to check out these related articles:
   * [Codeship public SSH key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %})

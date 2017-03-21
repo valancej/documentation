@@ -125,6 +125,3 @@ While `jet steps` runs your CI/CD pipeline locally, you can also use `jet run` t
 For instance, you can run `jet run service_app` or `jet run service_app echo "hello"` where `service_app` is one of the services defined in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/getting-started/services.md %}).
 
 **Note** that you can also run `jet run --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
-
-## Questions
-If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com) page.

@@ -80,10 +80,6 @@ When these private assets need to be accessed at buildtime, to successfully buil
 Build arguments can be passed to the image via your `codeship-services.yml` file either encrypted or unencrypted. [You can learn how to set up build arguments here](https://docs.docker.com/engine/reference/builder/#/arg))
 
 ## How can I provide deployment credentials to Codeship?
-For any secret that needs to be accessed during container runtime, meaning _after_ your containers have built when you are running commands via your `codeship-steps.yml` file, then you should use encrypted environment variables. 
+For any secret that needs to be accessed during container runtime, meaning _after_ your containers have built when you are running commands via your `codeship-steps.yml` file, then you should use encrypted environment variables.
 
 You can learn more about using encrypted environment variables in [this article](https://documentation.codeship.com/pro/getting-started/encryption/). You'll need to [download Jet](https://documentation.codeship.com/pro/getting-started/installation/), the CLI for running Codeship Pro builds locally, as well as grab your project's AES key from the Project Settings page.
-
-<br>
-
-**Have a use case that's missing from this article? Ask a question on the Codeship [https://community.codeship.com/c/docker](community forum)**
