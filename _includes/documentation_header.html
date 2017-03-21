@@ -1,51 +1,46 @@
 {% assign collections = site.collections | sort: 'sort_order' %}
 <nav class="Topmenu">
-  <div class="Topmenu_nav">
-    <ul>
-      <li>
-        <button>Search
-          <span class="icon fa fa-search"></span>
-        </button>
-      </li>
-      <li>
-        {% if page.active == "gettingstarted" %}
-        <a href="/getting-started" class="active">Getting Started</a>
-       {% else %}
-          <a href="/getting-started">Getting Started</a>
-       {% endif %}      </li>
-      <li>
-        {% if page.collection == "pro" %}
-        <a href="/pro" class="active">Pro</a>
-       {% else %}
-          <a href="/pro">Pro</a>
-       {% endif %}      </li>
-      <li>
-        {% if page.collection == "basic" %}
-        <a href="/basic" class="active">Basic</a>
-       {% else %}
-          <a href="/basic">Basic</a>
-       {% endif %}      </li>
-      <li>
-        {% if page.active == "moreresources" %}
-        <a href="/more-resources" class="active">More Resources</a>
-       {% else %}
-          <a href="/more-resources">More Resources</a>
-       {% endif %}
-      </li>
-      <li>
-          <a href="https://codeship-api.api-docs.io/v1/introduction/auth">API</a>
-      </li>
-    </ul>
+  <div class="collg50">
+    <div class="Topmenu_nav">
+      <ul>
+        <li>
+          {% if page.active == "gettingstarted" %}
+          <a href="/getting-started" class="active">Getting Started</a>
+         {% else %}
+            <a href="/getting-started">Getting Started</a>
+         {% endif %}      </li>
+        <li>
+          {% if page.active == "pro" %}
+          <a href="/pro" class="active">Pro</a>
+         {% else %}
+            <a href="/pro">Pro</a>
+         {% endif %}      </li>
+        <li>
+          {% if page.active == "basic" %}
+          <a href="/basic" class="active">Basic</a>
+         {% else %}
+            <a href="/basic">Basic</a>
+         {% endif %}      </li>
+        <li>
+          {% if page.active == "moreresources" %}
+          <a href="/more-resources" class="active">More Resources</a>
+         {% else %}
+            <a href="/more-resources">More Resources</a>
+         {% endif %}
+        </li>
+        <li>
+            <a href="https://codeship-api.api-docs.io/v1/introduction/auth">API</a>
+        </li>
+      </ul>
+    </div>
   </div>
-
-  <div class="Topmenu_search">
-    <span>
-      press <strong>esc</strong> to <button>close</button>
-    </span>
-    <form action="/">
-      <input type="search" id="search" name="search" autofocus="false" spellcheck="false" placeholder="Search the documentation">
-      <input class="is-hidden" type="submit" />
-    </form>
+  <div class="collg50">
+    <div class="Topmenu_search">
+      <form action="/">
+        <input type="search" id="search" name="search" autofocus="false" spellcheck="false" placeholder="Search the documentation">
+        <input class="is-hidden" type="submit" />
+      </form>
+    </div>
   </div>
 </nav>
 
