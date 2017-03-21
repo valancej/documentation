@@ -10,13 +10,13 @@
             <a href="/getting-started">Getting Started</a>
          {% endif %}      </li>
         <li>
-          {% if page.active == "pro" %}
+          {% if page.active == "pro" or page.collection == "pro" %}
           <a href="/pro" class="active">Pro</a>
          {% else %}
             <a href="/pro">Pro</a>
          {% endif %}      </li>
         <li>
-          {% if page.active == "basic" %}
+          {% if page.active == "basic" or page.collection == "basic" %}
           <a href="/basic" class="active">Basic</a>
          {% else %}
             <a href="/basic">Basic</a>
