@@ -51,7 +51,7 @@ ruby:
 elasticsearch:
   build:
     name: my_project/elasticsearch
-    dockerfile_path: Dockerfile.elasticsearch
+    dockerfile: Dockerfile.elasticsearch
 ```
 
 Now we have a fully customized instance of Elasticsearch running. This same process applies to any other service or database you might be using. To see how to customize them take a look at the specific Dockerfiles that are used to create the service you want to use.

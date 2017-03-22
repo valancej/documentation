@@ -66,7 +66,7 @@ We'll need to provide this container with the necessary environment variables. T
 deploynotify
   build:
     image: myuser/myrepo-deploynotify
-    dockerfile_path: Dockerfile.notify
+    dockerfile: Dockerfile.notify
   encrypted_env_file: deploy.env.encrypted
 ```
 

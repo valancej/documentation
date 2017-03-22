@@ -43,7 +43,7 @@ Now that the Dockerfile knows to expect an argument, you can pass the argument t
 ```bash
 app:
   build:
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
     args:
       build_env: staging
 ```
@@ -71,7 +71,7 @@ Pass that file to your service's build directive.
 ```yaml
 app:
   build:
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
     encrypted_args_file: build_args.encrypted
 ```
 
@@ -80,7 +80,7 @@ If your use case is simple enough, you may want to pass in encrypted values dire
 ```yaml
 app:
   build:
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
     encrypted_args: 8rD1P1xO1CwB4L99JBqnvoSOX+1wimf9qwHXATf9foasPtU6Sw==
 ```
 

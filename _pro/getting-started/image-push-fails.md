@@ -33,7 +33,7 @@ Note that our **image_name** here is *something/test-repo*. This is the name of 
 demo:
   build:
     image: something/test-repo
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
 ```
 
 Find out more about these two files in [steps configuration]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}) and [services configuration]({{ site.baseurl }}{% link _pro/getting-started/services.md %}).

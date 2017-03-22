@@ -117,7 +117,7 @@ So, once you've created a file named `codeship-services.yml` go ahead and add th
 demo:
   build:
     image: myapp
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   links:
     - redis
     - postgres

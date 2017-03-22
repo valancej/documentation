@@ -31,7 +31,7 @@ Taking advantage of this feature is fairly simple. First off, add a service usin
 # codeship-services.yml
 app:
   build:
-    dockerfile_path: ./Dockerfile
+    dockerfile: ./Dockerfile
     image: myservice.com/myuser/myapp
 myservice_generator:
   image: codeship/myservice-dockercfg-generator

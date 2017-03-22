@@ -100,7 +100,7 @@ To interact with the new Docker VM on Azure you configured in the previous step,
 azureappdeploy:
   build:
     image: alpine:latest
-    Dockerfile_path: deployment/Dockerfilessh
+    dockerfile: deployment/Dockerfilessh
   encrypted_env_file:
   - vm.env.encrypted
 ```

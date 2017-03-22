@@ -38,7 +38,7 @@ Let's open up our `codeship-services.yml` file and make a change to enable cachi
 demo:
   build:
     image: myapp
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   links:
     - redis
     - postgres
