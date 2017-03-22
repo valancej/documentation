@@ -13,7 +13,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}). Note that if the generator service you select needs to write your local filesystem, you must use a local Docker host (Linux, Docker for Mac and Windows, Docker Machine with VirtualBox, etc), and not a remote Docker host.
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}). Note that if the generator service you select needs to write your local filesystem, you must use a local Docker host such as Docker for Mac.
 </div>
 
 * include a table of contents
