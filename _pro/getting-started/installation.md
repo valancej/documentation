@@ -27,7 +27,7 @@ Jet is a CLI tool designed to make working with Codeship Pro faster and easier, 
 
 ## Prerequisites
 
-In order to run the _Jet_ binary on your computer, you need to have Docker installed and configured, with a running Docker host. We recommend you follow the guides regarding [Docker For Windows](https://docs.docker.com/docker-for-windows/) or [Docker For Mac](https://docs.docker.com/docker-for-mac/).
+In order to run the _Jet_ binary on your computer, you need to have Docker installed and configured, with a running Docker host such as [Docker For Mac](https://docs.docker.com/docker-for-mac/).
 
 ## Installing Jet
 
@@ -67,9 +67,9 @@ sudo tar -xaC /usr/local/bin -f jet-linux_amd64_{{ site.data.jet.version }}.tar.
 sudo chmod +x /usr/local/bin/jet
 ```
 
-### Installing Jet On  Windows
+### Installing Jet On Windows
 
-Please download the version (`{{ site.data.jet.version }}`) from [our download site]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-windows_amd64_{{ site.data.jet.version }}.tar.gz). Once you have done this, you need to extract the archive and copy the binary to your path.
+There is no supported Jet version for Windows machines, although [Windows Subsystem For Linux](https://blogs.msdn.microsoft.com/wsl/) works for many of our customers.
 
 ### Dynamically linked version
 
@@ -77,7 +77,6 @@ The above version is statically linked and will work the same way on all platfor
 
 * [Mac OS X]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-darwin_amd64_{{ site.data.jet.version }}-dynamic.tar.gz)
 * [Linux]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-linux_amd64_{{ site.data.jet.version }}-dynamic.tar.gz)
-* [Windows]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-windows_amd64_{{ site.data.jet.version }}-dynamic.tar.gz)
 
 ### Validating Installation
 
@@ -94,7 +93,7 @@ Usage:
 
 ### Docker Configuration
 
-`DOCKER_HOST` must be set. `DOCKER_TLS_VERIFY` and `DOCKER_CERT_PATH` are respected in the same way as with the official Docker client. If you installed Docker via [Docker For Windows](https://docs.docker.com/docker-for-windows/) or [Docker For Mac](https://docs.docker.com/docker-for-mac/) this is typically done by default during installation.
+`DOCKER_HOST` must be set. `DOCKER_TLS_VERIFY` and `DOCKER_CERT_PATH` are respected in the same way as with the official Docker client. If you installed Docker via [Docker For Mac](https://docs.docker.com/docker-for-mac/) this is typically done by default during installation.
 
 If you installed and configured your Docker environment via [Docker Machine](https://docs.docker.com/machine/) (and you are on OS X or Linux) and named the environment _dev_, running the following command will set those variables.
 
