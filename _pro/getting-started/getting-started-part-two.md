@@ -44,7 +44,7 @@ Opening up our `codeship-services.yml`, we'll add the following:
 demo:
   build:
     image: myapp
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   links:
     - redis
     - postgres

@@ -44,7 +44,7 @@ git commit -m "Adding encrypted credentials for docker push"
 app:
   build:
     image: username/repository_name
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
 ```
 
 * Configure your `codeship-steps.yml` file. Your service `image_name` can differ from the repository defined in your steps file. Your image will be tagged and pushed based on the `push` step.
@@ -87,7 +87,7 @@ git commit -m "Adding encrypted credentials for docker push"
 app:
   build:
     image: quay.io/username/repository_name
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
 ```
 
 * Configure your `codeship-steps.yml` file. Your service `image_name` can differ from the repository defined in your steps file. Your image will be tagged and pushed based on the `push` step.

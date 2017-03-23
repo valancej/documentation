@@ -44,7 +44,7 @@ Let's open our services file and find our main application service and make a qu
 demo:
   build:
     image: myapp
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   links:
     - redis
     - postgres
@@ -68,7 +68,7 @@ To read from the volume, we'll need to create a separate service in your `codesh
 demo_volumes:
   build:
     image: myapp
-    dockerfile_path: Dockerfile.volumes
+    dockerfile: Dockerfile.volumes
   volumes_from:
     - demo
 ```

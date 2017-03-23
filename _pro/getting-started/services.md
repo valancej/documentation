@@ -112,7 +112,7 @@ An example setup using volumes in your `codeship-services.yml` file would look l
 app:
   build:
     image: codeship/app
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   volumes_from:
     - data
 data:
@@ -134,7 +134,7 @@ An example setup explicitly declaring your environment variables in your `codesh
 app:
   build:
     image: codeship/app
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   environment:
     ENV: string
     ENV2: string
@@ -146,7 +146,7 @@ An example setup providing your encrypted environment variable file in your `cod
 app:
   build:
     image: codeship/app
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   encrypted_env_file: env.encrypted
 ```
 
@@ -174,7 +174,7 @@ An example setup using caching in your `codeship-services.yml` file would look l
 app:
   build:
     image: codeship/app
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   cached: true
 ```
 

@@ -29,7 +29,7 @@ To use caching on a particular service, you must add a `cached` declaration to y
 app:
   build:
     path: testpath
-    dockerfile_path: Dockerfile.foo
+    dockerfile: Dockerfile.foo
   cached: true
 ```
 
@@ -55,7 +55,7 @@ In some cases, you may want to specify a branch other than `master` to use as yo
 app:
   build:
     path: testpath
-    dockerfile_path: Dockerfile.foo
+    dockerfile: Dockerfile.foo
   cached: true
   default_cache_branch: "branch_name"
 ```

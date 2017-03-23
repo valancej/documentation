@@ -55,7 +55,7 @@ When accessing other containers please be aware that those services do not run o
 project_name:
   build:
     image: organisation_name/project_name
-    dockerfile_path: Dockerfile
+    dockerfile: Dockerfile
   # Linking Redis and Postgres into the container
   links:
     - redis
