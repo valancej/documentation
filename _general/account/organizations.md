@@ -56,14 +56,15 @@ Once the project is created, you can add it to any of your teams. Members of the
 
 ![Adding a project to a team]({{ site.baseurl }}/images/administration/add_project_to_team.png)
 
-## Importing projects from a personal account
+## Transfer A Project To An Organization
 
-All organization owners and managers have the option to import projects from their personal account.
+You can transfer your project to another account by navigating to:
 
-1. Go to your [Account Settings](https://codeship.com/user/edit) dropdown and select your organization.
-2. Navigate to the settings menu on the left side. Under your organization, select _Projects_
-3. Select the _Import existing projects_ link on the right of the page.
-4. You can then choose to import one, some or all of your Codeship projects.
+***Project Settings > General***
+
+A user with appropriate permission for the target account needs to confirm the transfer if you do not have project creation rights in the target account. When confirming the transfer, the user can choose which of the current team members to keep and which to remove.
+
+If you want to **bulk transfer projects**, please reach out to our support via [helpdesk.codeship.com](https://helpdesk.codeship.com).
 
 ![Importing a personal project to an organization]({{ site.baseurl }}/images/administration/import_projects.png)
 
