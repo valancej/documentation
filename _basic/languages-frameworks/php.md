@@ -141,6 +141,24 @@ Also take a look at the PHP built-in webserver docs in the
 
 Thanks to [Jeff Donios](https://github.com/doniosjm) for the tip.
 
+## Frameworks
+Codeship supports essentially all popular PHP frameworks.
+
+### Supported Frameworks
+Some of the most popular PHP frameworks used on Codeship are:
+
+- Laravel
+- Symfony
+- CodeIgniter
+- CakePHP
+
+These are not the only frameworks that will work, though. Most PHP frameworks will work without issue, as long as there are no extensions required that we do not install on the build machines.
+
+### Using Frameworks
+Using most frameworks is no different than using any other technology, you simply need to [configure your setup and test commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+
+**Note** that all commands must return an `exit code 0` to Codeship to report a successful result, or any other error code to report an unsuccessful result. This means you must configure your test scripts to exit with a `0` status if they do not do so by default.
+
 ## Parallelization Modules
 In addition to parallelizing explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the [paratest]https://github.com/brianium/paratest) module is a great way to speed up your tests.
 
