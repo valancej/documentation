@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 <div class="alert-block">
-We will be upgrading to Docker 1.13 (now 17.03.01) on **March 28, 2017**, which means you will have to ensure directories exist before mounting them as volumes to avoid errors. See more about [why Docker 1.13 will impact this](https://github.com/docker/docker/pull/22373).
+We will be upgrading to Docker 1.13 on **March 29, 2017**, which means you will have to ensure directories exist before mounting them as volumes to avoid errors. See more about [why Docker 1.13 will impact this](https://github.com/docker/docker/pull/22373).
 </div>
 
 
