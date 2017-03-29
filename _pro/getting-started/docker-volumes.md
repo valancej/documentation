@@ -10,11 +10,6 @@ redirect_from:
   - /docker/docker-volumes/
 ---
 
-<div class="alert-block">
-We will be upgrading to Docker 1.13 on **March 29, 2017**, which means you will have to ensure directories exist before mounting them as volumes to avoid errors. See more about [why Docker 1.13 will impact this](https://github.com/docker/docker/pull/22373).
-</div>
-
-
 <div class="info-block">
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
 </div>
