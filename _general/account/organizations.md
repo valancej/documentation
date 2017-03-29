@@ -48,7 +48,7 @@ Once you have created a new team, you can add new team members via their email a
 
 If you need to change the team settings (e.g., the name or the role), hover over the team card and click the gear icon showing on the right hand side.
 
-## Adding projects
+## Adding Projects
 
 You can either add a project via the _Select project_ dropdown at the top, or via the _Create a new project_ button in the organization's project settings. Please make sure the correct account (either organization or your private account) is selected first, as it's currently not possible to transfer projects to another account.
 
@@ -68,10 +68,16 @@ If you want to **bulk transfer projects**, please reach out to our support via [
 
 ![Importing a personal project to an organization]({{ site.baseurl }}/images/administration/import_projects.png)
 
-## Removing a user from all teams and projects
+## Removing A User From All Teams And Projects
 
 To remove a team member from all organization teams and projects, click into your team management page. At the top, you will see a link for "Show all Members".
 
 From the "Show all Members" screen, changes to a any team member will apply to all teams and projects, organization-wide.
 
 ![Importing a personal project to an organization]({{ site.baseurl }}/images/administration/remove_all.png)
+
+## Accessing Invoices
+
+For all users assigned the **owner** role in an organization, you can access invoices by clicking on your name in the top right and selecting an organization from the drop-down. Then, on the sidebar underneath the organization name, you will see a tab for "Invoices".
+
+![View invoices]({{ site.baseurl }}/images/general/download-invoice.png)
