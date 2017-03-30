@@ -12,7 +12,8 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-## Versions
+## Versions And Setup
+
 We use **PHPENV** to manage PHP versions. We currently have **5.3**, **5.4**, **5.5**, **5.6**, **7.0** and **7.1** installed.
 These are aliases that are pointing to the specific 5.x.x and 7.x.x versions we have installed.
 
@@ -36,7 +37,7 @@ For example
 phpenv local 5.5
 ```
 
-## PHP.ini
+### PHP.ini
 
 You can access and change the php.ini file in
 
@@ -44,9 +45,43 @@ You can access and change the php.ini file in
 /home/rof/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 ```
 
-## Dependencies and Extensions
+### phpenv Rehashing
 
-You can install dependencies through pear and composer. Extensions can be installed through pecl. If you need any other tools please send us a message.
+If you install a new executable through a pear package make sure to run
+
+```shell
+phpenv rehash
+```
+
+so phpenv is aware of the new executable and sets it up correctly
+
+## Dependencies
+
+You can install dependencies through pear and composer in your [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+
+For example:
+
+```shell
+composer install
+```
+
+### Dependency Cache
+
+If you want cache `composer` dependencies during builds, please add the following environment variable to your build configuration.
+
+```shell
+COMPOSER_HOME=${HOME}/cache/composer
+```
+
+To make sure that the dependency cache is used by all of your dependencies, please call `composer` via the following snippet.
+
+```
+composer install --prefer-dist  --no-interaction
+```
+
+### Extensions
+
+Extensions can be installed through pecl. If you need any other tools or are having trouble getting an extension to build, [please send us a message](https://helpdesk.codeship.com).
 
 ### xdebug
 
@@ -68,21 +103,13 @@ pear install pear/PHP_CodeSniffer
 composer install --no-interaction
 ```
 
-#### Cache
-
-If you want cache `composer` dependencies during builds, please add the following environment variable to your build configuration.
+### Pecl
 
 ```shell
-COMPOSER_HOME=${HOME}/cache/composer
+pecl install -f memcache
 ```
 
-To make sure that the dependency cache is used by all of your dependencies, please call `composer` via the following snippet.
-
-```
-composer install --prefer-dist  --no-interaction
-```
-
-#### GitHub API
+### GitHub API
 
 To speed up Composer you can install packages from `dist` by replacing `--prefer-source` with `--prefer-dist`. However as GitHub's API is rate limited, you then might see errors similar to this:
 
@@ -101,31 +128,11 @@ composer config -g github-oauth.github.com $GITHUB_ACCESS_TOKEN
 composer install --prefer-dist --no-interaction
 ```
 
-### PHPUnit
+## Notes And Known Issues
 
-As we already have a version of PHPUnit preinstalled on our build VMs, you need to remove this version first, before upgrading to a different version via Composer.
+Due to PHP version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/getting-started/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
-```shell
-composer global remove phpunit/phpunit
-composer global require phpunit/phpunit:5.*
-```
-
-### Pecl
-
-```shell
-pecl install -f memcache
-```
-
-## phpenv rehashing
-If you install a new executable through a pear package make sure to run
-
-```shell
-phpenv rehash
-```
-
-so phpenv is aware of the new executable and sets it up correctly
-
-## Running your PHP Server
+### Running your PHP Server
 
 If you want to test against a running PHP Server you can use the builtin one to
 start a server in the current directory. It will serve files from this directory.
@@ -141,25 +148,28 @@ Also take a look at the PHP built-in webserver docs in the
 
 Thanks to [Jeff Donios](https://github.com/doniosjm) for the tip.
 
-## Frameworks
-Codeship supports essentially all popular PHP frameworks.
+### Exiting Tests
 
-### Supported Frameworks
-Some of the most popular PHP frameworks used on Codeship are:
+All commands must return an `exit code 0` to Codeship to report a successful result, or any other error code to report an unsuccessful result. This means you must configure your test scripts to exit with a `0` status if they do not do so by default.
 
-- Laravel
-- Symfony
-- CodeIgniter
-- CakePHP
+## Frameworks And Testing
 
-These are not the only frameworks that will work, though. Most PHP frameworks will work without issue, as long as there are no extensions required that we do not install on the build machines.
+Codeship supports essentially all popular PHP frameworks, such as Laravel, Symfony, CodeIgniter and CakePHP. All frameworks that do not require root access for custom machine configuration should work without issue.
 
-### Using Frameworks
-Using most frameworks is no different than using any other technology, you simply need to [configure your setup and test commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+Additionally, all testing frameworks, such as phpunit and codeception, will work on Codeship.
 
-**Note** that all commands must return an `exit code 0` to Codeship to report a successful result, or any other error code to report an unsuccessful result. This means you must configure your test scripts to exit with a `0` status if they do not do so by default.
 
-## Parallelization Modules
-In addition to parallelizing explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the [paratest]https://github.com/brianium/paratest) module is a great way to speed up your tests.
+### Custom PHPUnit Version
+
+Note that if you need to install a custom versin of PHPUnit, you can do so with the following commands:
+
+```shell
+composer global remove phpunit/phpunit
+composer global require phpunit/phpunit:5.*
+```
+
+## Parallelization
+
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the [paratest]https://github.com/brianium/paratest) module is a great way to speed up your tests.
 
 Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
