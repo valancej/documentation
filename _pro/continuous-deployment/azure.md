@@ -92,24 +92,13 @@ The following script will use the [Azure GitHub QuickStart Templates](https://gi
 
 Disclaimer: It is always recommended to read any script thoroughly before executing it in your environment. These scripts are provided for demo purposes only.
 
-## Azure Docker App Deployment Service Definition and Examples
+## Deploying Your App
 
-To interact with the new Docker VM on Azure you configured in the previous step, we will now create a second service to connect to the Docker engine and pass the appropriate commands. An example of the code we use is as follows:
+Now that you can authenticate with Azure and build Azure infrastructure, you will want to deploy your application. There are multiple ways to do this, so we have sample projects showing two easy and popular deployment configurations:
 
-```
-azureappdeploy:
-  build:
-    image: alpine:latest
-    dockerfile: deployment/Dockerfilessh
-  encrypted_env_file:
-  - vm.env.encrypted
-```
+- You can SSH into your Azure instance and either deploy your code as normal, without Docker, or run Docker commands to build your containers after copying your code. [See here for an example.](https://github.com/codeship-library/azure-deployment/tree/ssh_deploy)
 
-To interact with the service, we will create a step that will call the [Azure App Deployment Script](https://github.com/codeship-library/azure-deployment/blob/ssh_deploy/deployment/app_deploy.sh), which copies the repo's app folder from Codeship's host to the Docker VM in Azure. From there, we can use ssh to pass Docker commands to build the image with our app and run the new image in a container accessible from the FQDN created in the previous step. At the end of the app deployment, you will also see the website where your webapp can be viewed.
-
-Note: The demo maps port `80:8080` for the node app running the container.
-
-Disclaimer: It is always recommended to read any script thoroughly before executing it in your environment. These scripts are provided for demo purposes only.
+- You can use Azure Container Service to natively deploy your containers to Azure.[See here for an example.](https://github.com/codeship-library/azure-deployment/tree/acs-swarm)
 
 ## See also
 
