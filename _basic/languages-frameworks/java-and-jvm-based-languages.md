@@ -12,7 +12,9 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-## JDKs
+## Versions And Setup
+
+### JDKs
 
 The following JDKs are installed:
 
@@ -29,7 +31,8 @@ This function can take one of two commands, `use` or `home`:
 The valid values for `use` or `home` are _openjdk7_, _oraclejdk7_, and _oraclejdk8_.
 By default, OpenJDK 7 is selected. The following would be the resulting Java version, JAVA_HOME, and JRE_HOME for each JDK:
 
-#### OpenJDK 7 (default)
+### OpenJDK 7 (default)
+
 ```shell
 jdk_switcher home openjdk7
 # /usr/lib/jvm/java-7-openjdk-amd64
@@ -44,7 +47,8 @@ java -version
 # OpenJDK 64-Bit Server VM (build 24.65-b04, mixed mode)
 ```
 
-#### Oracle JDK 7
+### Oracle JDK 7
+
 ```shell
 jdk_switcher home oraclejdk7
 # /usr/lib/jvm/java-7-oracle
@@ -59,7 +63,8 @@ java -version
 # Java HotSpot(TM) 64-Bit Server VM (build 24.72-b04, mixed mode)
 ```
 
-#### Oracle JDK 8
+### Oracle JDK 8
+
 ```shell
 jdk_switcher home oraclejdk8
 # /usr/lib/jvm/java-8-oracle
@@ -74,7 +79,7 @@ java -version
 # Java HotSpot(TM) 64-Bit Server VM (build 25.25-b02, mixed mode)
 ```
 
-## Build Tools
+### Build Tools
 
 The following tools are preinstalled in our virtual machine. You can add them to your setup or test commands to start your build:
 
@@ -84,9 +89,28 @@ The following tools are preinstalled in our virtual machine. You can add them to
 * sbt (0.13.5)
 * leiningen (2.4.0)
 
-## JVM based languages
-Scala , Clojure, Groovy and other JVM based languages should be running fine on our systems as well. Let us know if you find something that doesn't work as expected
+### JVM-based languages
+
+Scala , Clojure, Groovy and other JVM based languages should run without issue on Codeship, as well. [Let us know](https://helpdesk.codeship.com) if you find something that doesn't work as expected.
+
+## Dependencies
+
+Installing dependencies through Maven is fully supported.
 
 ## Dependency Cache
 
 Codeship automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.
+
+## Notes And Known Issues
+
+Due to Java version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/getting-started/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+
+## Frameworks And Testing
+
+All build tools and test frameworks, such as Junit, will work without issue as long as they do not require root access for custom machine configuration.
+
+## Parallelization
+
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the parallel features in Junit and other testing frameworks to be a good way to speed up your tests.
+
+Note that aggressive parallelization can cause resource and build failure issues, as well.
