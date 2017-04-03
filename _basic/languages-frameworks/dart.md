@@ -11,7 +11,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-`$DART_SDK` is available in the Environment and included in the PATH. The installed version of the Dart SDK is `1.5.1`
+`$DART_SDK` is available in the Environment and included in the PATH. The installed version of the Dart SDK is `1.5.1`.
 
 You can use these commands from the Dart SDK:
 
@@ -22,7 +22,7 @@ You can use these commands from the Dart SDK:
 
 ## Installing dependencies
 
-You can install any dependencies you defined in your pubspec.yaml by running
+You can install any dependencies you defined in your pubspec.yaml by running:
 
 ```shell
 pub get
@@ -31,7 +31,7 @@ pub get
 ## Running tests
 
 As dart currently doesn't have a default way to run your tests you can use
-exactly the same command to run those tests as you would on your own system
+exactly the same command to run those tests as you would on your own system.
 
 ## Browser testing
 
