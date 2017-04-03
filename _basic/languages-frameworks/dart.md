@@ -13,7 +13,7 @@ redirect_from:
 
 ## Versions And Setup
 
-`$DART_SDK` is available in the Environment and included in the PATH. The installed version of the Dart SDK is `1.5.1`
+`$DART_SDK` is available in the Environment and included in the PATH. The installed version of the Dart SDK is `1.5.1`.
 
 You can use these commands from the Dart SDK:
 
