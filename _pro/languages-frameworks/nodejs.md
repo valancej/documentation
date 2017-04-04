@@ -23,7 +23,7 @@ Any Node tool that can run inside a Docker container will run on Codeship Pro. T
 
 ## Example Repo
 
-We have a sample Rails repo that you can clone or take a look at [here](https://github.com/codeship-library/nodejs-express-todoapp). This may make a good starting point for your Rails or Ruby-based projects.
+We have a sample Node repo that you can clone or take a look at [here](https://github.com/codeship-library/nodejs-express-todoapp). This may make a good starting point for your Node-based projects.
 
 ## Services File
 
