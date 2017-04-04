@@ -21,6 +21,10 @@ You may want to read the [Codeship Pro Getting Started Guide]({% link _pro/getti
 
 Any PHP framework or tool that can run inside a Docker container will run on Codeship Pro. This documentation article will highlight simple configuration files for a PHP-based Dockerfile and phpunit tests.
 
+## Example Repo
+
+We have a sample PHP/Laravel repo that you can clone or take a look at [here](https://github.com/codeship-library/php-laravel-todoapp). This may make a good starting point for your PHP-based projects.
+
 ## Services File
 
 The following is an example of a [Codeship Services file]({% link _pro/getting-started/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
