@@ -10,20 +10,63 @@ redirect_from:
   - /docker-integration/nodejs/
 ---
 
+<div class="info-block">
+You may want to read the [Codeship Pro Getting Started Guide]({% link _pro/getting-started/getting-started.md %}) to learn more about how Codeship Pro works. You can also [watch a short demo video here](https://codeship.com/features/pro).
+</div>
+
 * include a table of contents
 {:toc}
 
-In this article you will learn about setting up a Node.js-based project on Codeship Pro.
+## Node on Codeship Pro
 
-## Services and Steps
-Before reading through the documentation please take a look at the [Services]({% link _pro/getting-started/services.md %}) and [Steps]({% link _pro/getting-started/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work.
+Any Node tool that can run inside a Docker container will run on Codeship Pro. This documentation article will highlight simple configuration files for a Node-based Dockerfile with tests.
+
+## Example Repo
+
+We have a sample Rails repo that you can clone or take a look at [here](https://github.com/codeship-library/nodejs-express-todoapp). This may make a good starting point for your Rails or Ruby-based projects.
+
+## Services File
+
+The following is an example of a [Codeship Services file]({% link _pro/getting-started/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
+
+When accessing other containers please be aware that those services do not run on `localhost`, but on a different hostname, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
+
+```
+project_name:
+  build:
+    image: organisation_name/project_name
+    dockerfile: Dockerfile
+  links:
+    - redis
+    - postgres
+  environment:
+    - DATABASE_URL=postgres://postgres@postgres/YOUR_DATABASE_NAME
+    - REDIS_URL=redis://redis
+redis:
+  image: redis:2.8
+postgres:
+  image: postgres:9.4
+```
+
+## Steps File
+
+The following is an example of a [Codeship Steps file]({% link _pro/getting-started/steps.md %}).
+
+Note that every step runs on isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
+
+```
+- name: ci
+  type: parallel
+  steps:
+  - service: project_name
+    command: npm run-script test-acceptance
+  - service: project_name
+    command: npm run-script test-unit
+```
 
 ## Dockerfile
-We will start by creating a `Dockerfile` that lets you run your Node.js based test suite in Codeship.
 
-Please take a look at our [Dockerfile Caching best practices]({{ site.baseurl }}{% link _pro/getting-started/caching.md %}) article first to make sure you build your Dockerfile in a way that only invalidates the Docker cache when necessary.
-
-Following is an example `Dockerfile` with inline comments describing each step in the file.
+Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Ruby container documentation on [the Docker Hub](https://hub.docker.com/_/node/).
 
 ```Dockerfile
 # We're starting from the Node.js 0.12.7 container
@@ -44,59 +87,12 @@ RUN npm install
 COPY . ./
 ```
 
-This Dockerfile will give you a good starting point to install any further packages or tools you might need. Take a look at our [browser testing documentation]({{ site.baseurl }}{% link _pro/continuous-integration/browser-testing.md %}) to find and install any further tools you might need for your build.
+## Notes And Known Issues
 
-## codeship-services.yml
+Because of version and test dependency issues, it is advised to try using [the Jet CLI]({% link _pro/getting-started/cli.md %}) to debug issues locally via `jet steps`.
 
-The following example will use the Dockerfile we created to set up a container we call project_name (please change to your specific project name) that will run your build. We're adding a [PostgreSQL container](https://hub.docker.com/_/postgres/) and [Redis container](https://hub.docker.com/_/redis/) so the tests have access to those two services.
+## Caching
 
-When accessing other containers please be aware that those services do not run on localhost, but on a different hostname, e.g. "postgres" or "mysql". If you reference localhost in any of your configuration files you have to change that to point to the hostname of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
+You can enable caching per service in your Services file.
 
-```yaml
-project_name:
-  build:
-    image: organisation_name/project_name
-    dockerfile: Dockerfile
-  # Linking Redis and Postgres into the container
-  links:
-    - redis
-    - postgres
-  # Set environment variables to connect to the service you need for your build. Those environment variables can overwrite settings from your configuration files (e.g. database.yml) if configured. Make sure that your environment variables and configuration files work work together as expected.
-  environment:
-    - DATABASE_URL=postgres://postgres@postgres/YOUR_DATABASE_NAME
-    - REDIS_URL=redis://redis
-# Service definition that specify a version of the service through container tags
-redis:
-  image: redis:2.8
-postgres:
-  image: postgres:9.4
-```
-
-For more information about other services you can use with Codeship check out our [services and databases documentation]({{ site.baseurl }}{% link _pro/getting-started/services-and-databases.md %}).
-
-## codeship-steps.yml
-
-Now we're going to set up our steps file that contains a parallelized build configuration.
-
-Every step in a build gets its own clean container and linked services. Any setup commands that are necessary to setup a linked container (e.g. database migrations) need to be run for every step. While this duplicates some of the work, it also makes sure your parallelized test commands run completely independently.
-
-In the following example we're running the acceptance and unit test separately to make the build faster. We're setting that up in our package.json file.
-
-```yaml
-- name: ci
-  type: parallel
-  steps:
-  - service: project_name
-    command: npm run-script test-acceptance
-  - service: project_name
-    command: npm run-script test-unit
-```
-
-And here is the corresponding script section you can put into your `package.json`. In this case we're running Mocha tests, but you can run any other testing tools as well of course.
-
-```json
-"scripts": {
-  "test-acceptance": "mocha --require test/support/env --reporter spec --bail --check-leaks test/ test/acceptance/",
-  "test-unit": "mocha --require test/support/env --reporter spec --bail --check-leaks test/ test/unit/"
-}
-```
+You can [read more about how caching works on Codeship Pro here]({{ site.baseurl }}{% link _pro/getting-started/caching.md %}).
