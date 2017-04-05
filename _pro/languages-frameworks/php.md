@@ -31,20 +31,17 @@ The following is an example of a [Codeship Services file]({% link _pro/getting-s
 
 When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
-```
+```yaml
 project_name:
   build:
     image: organisation_name/project_name
     dockerfile: Dockerfile
-  # Linking Redis and Postgres into the container
   links:
     - redis
     - postgres
-  # Set environment variables to connect to the service you need for your build. Those environment variables can overwrite settings from your configuration files if configured. Make sure that your environment variables and configuration files work work together as expected.
   environment:
     - DATABASE_URL=postgres://postgres@postgres/YOUR_DATABASE_NAME
     - REDIS_URL=redis://redis
-# Service definition that specify a version of the service through container tags
 redis:
   image: redis:2.8
 postgres:
@@ -57,7 +54,7 @@ The following is an example of a [Codeship Steps file]({% link _pro/getting-star
 
 Note that every step runs on isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
 
-```
+```yaml
 - service: php
   command: phpunit tests/unit
 - service: php
@@ -66,7 +63,7 @@ Note that every step runs on isolated containers, so changes made on one step do
 
 ## Dockerfile
 
-Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the PHP container documentation on [the Docker Hub](https://hub.docker.com/_/php/).
+Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the PHP image documentation on [the Docker Hub](https://hub.docker.com/_/php/).
 
 ```Dockerfile
 # Start from PHP 5.6

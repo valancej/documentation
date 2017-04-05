@@ -31,7 +31,7 @@ The following is an example of a [Codeship Services file]({% link _pro/getting-s
 
 When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
-```
+```yaml
 project_name:
   build:
     image: organisation_name/project_name
@@ -54,7 +54,7 @@ The following is an example of a [Codeship Steps file]({% link _pro/getting-star
 
 Note that every step runs on isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
 
-```
+```yaml
 - name: ci
   type: parallel
   steps:
@@ -74,7 +74,7 @@ Note that every step runs on isolated containers, so changes made on one step do
 
 ## Dockerfile
 
-Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Ruby container documentation on [the Docker Hub](https://hub.docker.com/_/ruby/).
+Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Ruby image documentation on [the Docker Hub](https://hub.docker.com/_/ruby/).
 
 ```Dockerfile
 # Article for Dockerfile at ADD_URL_FOR_THIS
