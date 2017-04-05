@@ -25,9 +25,9 @@ Any Java framework or tool that can run inside a Docker container will run on Co
 
 The following is an example of a [Codeship Services file]({% link _pro/getting-started/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
 
-When accessing other containers please be aware that those services do not run on `localhost`, but on a different hostname, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
+When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
-```
+```yaml
 project_name:
   build:
     image: organisation_name/project_name
@@ -50,7 +50,7 @@ The following is an example of a [Codeship Steps file]({% link _pro/getting-star
 
 Note that every step runs on isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
 
-```
+```yaml
 - name: ci
   service: project_name
   command: mvn test -B
@@ -66,7 +66,7 @@ Following are two example Dockerfiles, one for using Maven and one for using Gra
 ### Maven
 
 ```
-# We're using the official Maven 3 container from the Dockerhub (https://hub.docker.com/_/maven/).
+# We're using the official Maven 3 image from the Dockerhub (https://hub.docker.com/_/maven/).
 # Take a look at the available versions so you can specify the Java version you want to use.
 FROM maven:3
 
@@ -89,7 +89,7 @@ COPY . ./
 ### Gradle
 
 ```
-# We're using the official OpenJDK container from the Dockerhub (https://hub.docker.com/_/java/).
+# We're using the official OpenJDK image from the Dockerhub (https://hub.docker.com/_/java/).
 # Take a look at the available versions so you can specify the Java version you want to use.
 FROM java:openjdk-8-jdk
 
