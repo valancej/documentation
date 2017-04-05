@@ -23,19 +23,19 @@ Any Ruby framework or tool that can run inside a Docker container will run on Co
 
 ## Example Repo
 
-We have a sample Rails repo that you can clone or take a look at [here](https://github.com/codeship-library/ruby-rails-todoapp). This may make a good starting point for your Rails or Ruby-based projects.
+We have a sample Rails repo that you can clone or take a look at via the GitHub [codeship-library/ruby-rails-todoapp](https://github.com/codeship-library/ruby-rails-todoapp) repository. This may make a good starting point for your Rails or Ruby-based projects.
 
 ## Services File
 
 The following is an example of a [Codeship Services file]({% link _pro/getting-started/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
 
-When accessing other containers please be aware that those services do not run on `localhost`, but on a different hostname, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
+When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
 ```
 project_name:
   build:
     image: organisation_name/project_name
-    dockerfile: Dockerfile.ci
+    dockerfile: Dockerfile
   links:
     - redis
     - postgres
@@ -79,7 +79,7 @@ Following is an example Dockerfile with inline comments describing each step in 
 ```Dockerfile
 # Article for Dockerfile at ADD_URL_FOR_THIS
 # We're using the Ruby 2.2 base container and extend it
-FROM ruby:2.2
+FROM ruby:latest
 
 # We install certain OS packages necessary for running our build
 # Node.js needs to be installed for compiling assets
@@ -103,8 +103,7 @@ ENV RAILS_ENV test
 # COPY Gemfile and Gemfile.lock and install dependencies before adding the full code so the cache only
 # gets invalidated when dependencies are changed
 COPY Gemfile Gemfile.lock ./
-RUN gem install bundler
-RUN bundle install -j20
+RUN gem install bundler && bundle install -j20
 
 # Copy the whole repository into the container
 COPY . ./

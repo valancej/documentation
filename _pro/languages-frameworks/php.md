@@ -23,19 +23,19 @@ Any PHP framework or tool that can run inside a Docker container will run on Cod
 
 ## Example Repo
 
-We have a sample PHP/Laravel repo that you can clone or take a look at [here](https://github.com/codeship-library/php-laravel-todoapp). This may make a good starting point for your PHP-based projects.
+We have a sample PHP/Laravel repo that you can clone or take a look at via the GitHub [codeship-library/php-laravel-todoapp](https://github.com/codeship-library/php-laravel-todoapp) repository. This may make a good starting point for your PHP-based projects.
 
 ## Services File
 
 The following is an example of a [Codeship Services file]({% link _pro/getting-started/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
 
-When accessing other containers please be aware that those services do not run on `localhost`, but on a different hostname, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
+When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
 ```
 project_name:
   build:
     image: organisation_name/project_name
-    dockerfile: Dockerfile.ci
+    dockerfile: Dockerfile
   # Linking Redis and Postgres into the container
   links:
     - redis
@@ -72,7 +72,7 @@ Following is an example Dockerfile with inline comments describing each step in 
 # Start from PHP 5.6
 # Take a look at the PHP container documentation on the Dockerhub for more detailed
 # info on running the container: https://hub.docker.com/_/php/
-FROM php:5.6
+FROM php:latest
 
 # Installing git to install dependencies later and necessary libraries for postgres
 # and mysql including client tools. You can remove those if you don't need them for your build.
