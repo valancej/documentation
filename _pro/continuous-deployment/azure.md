@@ -98,7 +98,9 @@ Now that you can authenticate with Azure and build Azure infrastructure, you wil
 
 - You can SSH into your Azure instance and either deploy your code as normal, without Docker, or run Docker commands to build your containers after copying your code. [See here for an example.](https://github.com/codeship-library/azure-deployment/tree/ssh_deploy)
 
-- You can use Azure Container Service to natively deploy your containers to Azure.[See here for an example.](https://github.com/codeship-library/azure-deployment/tree/acs-swarm)
+- You can use Azure Container Service to deploy with Docker Swarm to Azure.[See here for an example.](https://github.com/codeship-library/azure-deployment/tree/acs-swarm)
+
+- You can use Azure Container Service and Kubernetes to deploy to Azure. [See here for an example.](https://github.com/codeship-library/azure-deployment/tree/acs-kubernetes)
 
 ## See also
 
