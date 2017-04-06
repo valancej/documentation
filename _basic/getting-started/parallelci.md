@@ -51,11 +51,12 @@ In addition to parallelizing explicitly in your via parallel pipelines, most pop
 While we do not officially support or integrate with any of these modules, many Codeship users find success speeding their tests up by using them. Note that in many cases these modules create additional strain on your machine resource usage, so you will want to keep an eye on this as misconfiguration can result in a resource max out that ultimately slows your builds down or causes failures.
 
 ### Rails
-https://github.com/grosser/parallel_tests
-https://github.com/ArturT/knapsack
+[https://github.com/grosser/parallel_tests](https://github.com/grosser/parallel_tests)
+
+[https://github.com/ArturT/knapsack](https://github.com/ArturT/knapsack)
 
 ### Node
-https://www.npmjs.com/package/mocha-parallel-tests
+[https://github.com/hellodigit/mocha-pipelines](https://github.com/hellodigit/mocha-pipelines)
 
 ### PHPUnit
-https://github.com/brianium/paratest
+[https://github.com/brianium/paratest](https://github.com/brianium/paratest)
