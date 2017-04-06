@@ -39,7 +39,7 @@ Now you have to copy the content of `keyfile.rsa` into an environment file `sshk
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
 ```
 
-After preparing the `sshkey.env` file we can encrypt it with Jet. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %}) to turn the `sshkey.env` file into a `sshkey.env.encrypted` file.
+After preparing the `sshkey.env` file we can encrypt it with Jet. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) to turn the `sshkey.env` file into a `sshkey.env.encrypted` file.
 
 You can then add it to a service with the `encrypted_env_file` option. It will be automatically decrypted on Codeship.
 

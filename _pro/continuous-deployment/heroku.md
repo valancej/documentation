@@ -28,7 +28,7 @@ The deployment uses the [Heroku Platform API](https://devcenter.heroku.com/artic
 
 Before setting up the `codeship-services.yml` and `codeship-steps.yml` file we're going to create an encrypted environment file that contains the Heroku API Key.
 
-Take a look at our [encrypted environment files documentation]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %}) and add a `heroku-deployment.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
+Take a look at our [encrypted environment files documentation]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) and add a `heroku-deployment.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
 
 ```bash
 HEROKU_API_KEY=your_api_key_here

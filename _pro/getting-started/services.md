@@ -150,13 +150,13 @@ app:
   encrypted_env_file: env.encrypted
 ```
 
-The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %}) to root directory (and adding it to our `.gitignore` file.)
+The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) to root directory (and adding it to our `.gitignore` file.)
 
 Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}))
 
 Lastly, we would either delete the unencrypted `env` file or add it to our `.gitignore`.
 
-[Learn more about encrypting your environment variables.]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %})
+[Learn more about encrypting your environment variables.]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %})
 
 ### Docker Inside Docker
 The boolean directive `add_docker` is available. If specified for a service, it will:
@@ -259,7 +259,7 @@ Or, a health check poll could look like [this script](https://github.com/codeshi
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
 * [Build Directive In Compose](https://docs.docker.com/compose/compose-file/#build)
-* [Encrypting environment variables and build arguments]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %})
+* [Encrypting environment variables and build arguments]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %})
 * [Steps File]({% link _pro/getting-started/steps.md %})
 * [Volumes]({{ site.baseurl }}{% link _pro/getting-started/docker-volumes.md %})
 * [Add_Docker Directive in Compose](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker)

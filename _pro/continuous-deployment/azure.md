@@ -45,7 +45,7 @@ Before setting up the `codeship-services.yml` and `codeship-steps.yml` file weâ€
 
 ## Azure Authentication
 
-Take a look at Codeship's [encrypted environment files documentation]({% link _pro/getting-started/encryption.md %}) and add a `azure.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
+Take a look at Codeship's [encrypted environment files documentation]({% link _pro/getting-started/environment-variables.md %}) and add a `azure.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
 
 ```
 spn=service_principal_name
