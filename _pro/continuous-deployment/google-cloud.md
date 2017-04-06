@@ -43,7 +43,7 @@ Store the json file you received from the GCP console into a file named *google_
 echo 'google_deployment.env' >> .gitignore
 ```
 
-Now you can encrypt the env file into a file called `google_deployment.env.encrypted`. Take a look at the [encrypted environment files tutorial]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %}) to encrypt the file properly.
+Now you can encrypt the env file into a file called `google_deployment.env.encrypted`. Take a look at the [encrypted environment files tutorial]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) to encrypt the file properly.
 
 Now we're all set with the environment file and can set up our deployment script, codeship-services.yml and codeship-steps.yml.
 

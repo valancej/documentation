@@ -35,7 +35,7 @@ While the container we provide for interacting with AWS gives you an easy and st
 
 Before setting up the `codeship-services.yml` and `codeship-steps.yml` file we're going to create an encrypted environment file that contains the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
-Take a look at our [encrypted environment files documentation]({{ site.baseurl }}{% link _pro/getting-started/encryption.md %}) and add a `aws-deployment.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
+Take a look at our [encrypted environment files documentation]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) and add a `aws-deployment.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
 
 ```bash
 AWS_ACCESS_KEY_ID=your_access_key_id

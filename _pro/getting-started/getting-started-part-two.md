@@ -52,7 +52,7 @@ demo:
     TEST_TOKEN: Testing123
 ```
 
-This new `environment` directive creates a new environment variable in our build named `TEST_TOKEN`. Note that even though we're explicitly declaring our environment variables here, in a production application we'd actual prefer to [encrypt them]({% link _pro/getting-started/encryption.md %}).
+This new `environment` directive creates a new environment variable in our build named `TEST_TOKEN`. Note that even though we're explicitly declaring our environment variables here, in a production application we'd actual prefer to [encrypt them]({% link _pro/getting-started/environment-variables.md %}).
 
 ### Look For The Variable
 
