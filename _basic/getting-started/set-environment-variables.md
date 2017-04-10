@@ -1,8 +1,9 @@
 ---
-title: Setting Environment Variables
+title: Environment Variables on Codeship Basic
 weight: 96
 tags:
   - testing
+  - environment variables
 category: Getting Started
 redirect_from:
   - /continuous-integration/set-environment-variables/
@@ -11,9 +12,14 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-If you set environment variables, they will be available for the whole build. You can set your environment variables in two different ways:
+## Environment Variables On Codeship Basic
+
+For most applications, you will need to set environment variables to be passed in your project's build so that build steps, tests and deployments can all run successfully.
+
+On Codeship Basic, this can be done either through your project's *Project Settings* screen or through exporting environment variables during your setup or test commands. Additionally, we provide a set of pre-populated, global environment variables with information related to your build and the commit that triggered it.
 
 ## Environment Page on Project Settings
+
 On the ***Environment*** page of your project settings you can enter the variable name and values into the corresponding fields.
 
 ![Environment Settings page]({{ site.baseurl }}/images/continuous-integration/environment-variables.png)
@@ -28,7 +34,8 @@ Single (`'`) and double quotes (`"`), as well as backticks (`` ` ``) in the _val
 
 We export your environment variables before all other commands of your build. This is pure convenience for setting up the environment but completely equal to exporting environment variables yourself.
 
-## Directly in Setup or Test Commands
+### Directly in Setup or Test Commands
+
 You can also export environment variables in your setup or test commands. So, for example, you could enter the following setup commands:
 
 ```bash
@@ -39,7 +46,8 @@ bundle install
 
 There is no difference between setting ***RAILS_ENV*** like this and adding it on the ***Environment*** page of your project settings. The advantage of putting it into the environment configuration is that secret values will not show up in your build log.
 
-## Default Environment Variables
+### Default Environment Variables
+
 The following environment variables are exported automatically. You can use them to build your own scripts, run specific commands only if you are on a specific branch or even add flags to your ***CI_MESSAGE*** and use those flags to influence your build.
 
 You can get the value of an environment variable by adding `$` in front of the variable name. For example:
