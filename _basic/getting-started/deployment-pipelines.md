@@ -6,6 +6,7 @@ tags:
 category: Getting Started
 redirect_from:
   - /continuous-deployment/deployment-pipelines/
+  - /basic/getting-started/wildcard-deployment-pipelines/
 ---
 
 * include a table of contents
@@ -56,6 +57,28 @@ You can add **multiple deployments within one deployment pipeline**. One easy ex
 
 ![Multiple Deployments]({{ site.baseurl }}/images/continuous-deployment/multiple_deployments.png)
 
+### Wildcard Deployment Pipelines
+
+Get more flexible deployment workflows with wildcard deployment pipelines that trigger if a branch starts with a certain prefix. Use one deployment configuration for multiple branches and automatically deploy your feature, release, QA, etc. branches to the corresponding environments.
+
+See our article on [deployment pipelines]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}) for a general introduction on how to use deployments on Codeship.
+
+## Static Branch Deployment Pipelines
+
+If you choose _Branch is exactly_ the branch name will need to match exactly the branch that is currently being tested for the deployment to be triggered.
+
+## Wildcard Branch Deployment Pipelines
+
+When you add a new branch to be deployed you can choose whether you are specifying an **exact branch name** or if this is a **wildcard deployment**.
+
+For the latter select _Branch starts with_ from the dropdown and then specify the common part of the branches you want to deploy.
+
+![Wildcard Deployment Pipeline Configuration]({{ site.baseurl }}/images/continuous-deployment/wildcard_deployment_pipelines_configuration.png)
+
+Using a wildcard deployment, you can specify it to run a deployment on any branch that _starts with_ a string. For instance:
+
+- Run deployments on builds that _start with_ `features/dev-name-1/`. In this scenario, `features/dev-name-1/test-case` **would** trigger a build, but `features/dev-name-2/test-case` would **not**.
+
 ### Creating Additional Deployment Pipelines
 
 It is likely that you will want multiple deployment pipelines, for instance one to deploy to a staging environment from your `staging` branch and another to deploy to your production environment from your `master` branch.
@@ -66,7 +89,6 @@ To create separate deployment pipeline for another branch, click on "Add a branc
 After saving the deployment pipeline you can add your deployment methods for that branch.
 ![Additional Branch]({{ site.baseurl }}/images/continuous-deployment/second_branch.png)
 
-**Note:** you can also use a wildcard branch to setup one deployment pipeline to be used for similar branches, e.g. feature branches. See [Wildcard Deployments]({% link _basic/getting-started/wildcard-deployment-pipelines.md %}) for more details on using wildcard branches.
 
 ### Editing Branch Specifications
 
