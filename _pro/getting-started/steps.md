@@ -17,10 +17,8 @@ redirect_from:
 
 ## What Is codeship-steps.yml?
 
-`codeship-steps.yml` contains all the Steps for your CI/CD process. Steps are used for the `jet steps` command, which defines your continuous integration and delivery steps. By default, steps are expected to be in one of these 4 files:
+`codeship-steps.yml` contains all the Steps for your CI/CD process. Steps are used for the `jet steps` command, which defines your continuous integration and delivery steps. By default, steps are expected to be in one of these 2 files:
 
-* `jet-steps.yml`
-* `jet-steps.json`
 * `codeship-steps.yml`
 * `codeship-steps.json`
 
