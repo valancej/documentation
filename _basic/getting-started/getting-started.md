@@ -44,7 +44,7 @@ Next, you will enter in your test commands. These are all tests you want to have
 
 Now that you've defined your setup and test commands, you'll want to define your deployment pipelines. Deployment pipelines run only when a build's setup and tests commands have completed successful _and_ only when the branch defined for the deployment is matched. We call them deployment pipelines rather than deployments because you can have different deployment destinations - perhaps staging and master environments - triggered by different branches.
 
-Defining the branches that will trigger your deployment pipelines is the first step. You can either match a specific branch - i.e. `master` - or you can choose to match any branch that _starts with_ a [specific string]({{ site.baseurl }}{% link _basic/getting-started/wildcard-deployment-pipelines.md %}).
+Defining the branches that will trigger your deployment pipelines is the first step. You can either match a specific branch - i.e. `master` - or you can choose to match any branch that _starts with_ a [specific string]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}).
 
 ![Add New Deployment Pipeline on Codeship Basic]({{ site.baseurl }}/images/basic-guide/add-new-deployment.png)
 
