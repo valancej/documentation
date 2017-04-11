@@ -26,7 +26,7 @@ You are able to activate an SSH debug session via the sidebar when you are looki
 
 When you start a SSH Debug session we will clone the repository and set up all environment variables that you defined and that we set by default.
 
-Your application itself is cloned into a directory named `clone`, and you will want to `cd` into this directory to run your debug commands.
+Your application itself is cloned into a directory named `$HOME/clone`, and you will want to `cd` into this directory to run your debug commands.
 
 **Note** that we do not run any setup or test commands when preparing a machine for an SSH debug session. This gives you a clean machine so you can fully test and debug your application on Codeship. The SSH session is completely separate from any builds run before.
 
@@ -80,7 +80,7 @@ cs clear-cache
 
 ### SSH Debug Session Timeout
 
-The debug build will shutdown itself after `60 minutes`
+The debug build will shutdown itself after **60 minutes**
 
 You can shutdown the debug build manually by using
 
