@@ -32,9 +32,6 @@ Fill out the deployment configuration and click the green checkmark on the top r
 ![Save Deployment]({{ site.baseurl }}/images/continuous-deployment/save_deployment.png)
 
 On the next push to this branch (in this case 'master') the deployment will be triggered under the condition that all setup and test commands pass successfully.
-![Saved Deployment]({{ site.baseurl }}/images/continuous-deployment/saved_deployment.png)
-
-Now you can add additional deployments or configure another deployment pipeline.
 
 ### Deployment Integrations
 
@@ -74,11 +71,9 @@ Using a wildcard deployment, you can specify it to run a deployment on any branc
 It is likely that you will want multiple deployment pipelines, for instance one to deploy to a staging environment from your `staging` branch and another to deploy to your production environment from your `master` branch.
 
 To create separate deployment pipeline for another branch, click on "Add a branch to deploy" and enter the branch name.
-![Add additional Branch]({{ site.baseurl }}/images/continuous-deployment/add_additional_branch.png)
+![Add additional Branch]({{ site.baseurl }}/images/continuous-deployment/create_branch.png)
 
 After saving the deployment pipeline you can add your deployment methods for that branch.
-![Additional Branch]({{ site.baseurl }}/images/continuous-deployment/second_branch.png)
-
 
 ### Editing Branch Specifications
 
