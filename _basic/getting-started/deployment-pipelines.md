@@ -38,7 +38,7 @@ Now you can add additional deployments or configure another deployment pipeline.
 
 ### Deployment Integrations
 
-As part of our deployment pipelines, Codeship provides turnkey deployment integrations for many common hosting providers, such as AWS ElasticBeanstalk, Heroku, Google App Engine and more.
+As part of our deployment pipelines, Codeship provides turnkey deployment integrations for many common hosting providers, such as AWS Elastic Beanstalk, Heroku, Google App Engine and more.
 
 To use a deployment integration, just click on the logo of your provider after creating your pipeline and add your authentication and configuration information as required.
 
@@ -48,7 +48,7 @@ To use a deployment integration, just click on the logo of your provider after c
 
 While Codeship does provide many helpful deployment integrations, you may find that you want to run your own commands or your own custom scripts as part of a deployment pipeline.
 
-You can use the [Script Deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) to run your custom deployment commands or to execute other tasks right after or before a deployment. These will run as part of a deployment pipeline exactly as any of our deployment integrations would, but will rely on your scripts to provide exit status codes of `0` or `1` to indicate that they have either passed or failed.
+You can use the [Script Deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) to run your custom deployment commands or to execute other tasks right after or before a deployment. These will run as part of a deployment pipeline exactly as any of our deployment integrations would, but will rely on your scripts to provide exit status codes of `0` or any non-zero status code to indicate that they have either passed or failed.
 
 ### Multi-Step Deployment Pipelines
 
@@ -57,17 +57,7 @@ You can add **multiple deployments within one deployment pipeline**. One easy ex
 
 ![Multiple Deployments]({{ site.baseurl }}/images/continuous-deployment/multiple_deployments.png)
 
-### Wildcard Deployment Pipelines
-
-Get more flexible deployment workflows with wildcard deployment pipelines that trigger if a branch starts with a certain prefix. Use one deployment configuration for multiple branches and automatically deploy your feature, release, QA, etc. branches to the corresponding environments.
-
-See our article on [deployment pipelines]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}) for a general introduction on how to use deployments on Codeship.
-
-## Static Branch Deployment Pipelines
-
-If you choose _Branch is exactly_ the branch name will need to match exactly the branch that is currently being tested for the deployment to be triggered.
-
-## Wildcard Branch Deployment Pipelines
+### Wildcard Branch Deployment Pipelines
 
 When you add a new branch to be deployed you can choose whether you are specifying an **exact branch name** or if this is a **wildcard deployment**.
 
