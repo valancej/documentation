@@ -79,9 +79,10 @@ The `codeship-services.yml` file uses the `codeship/google-cloud-deployment` con
 
 ```yaml
 googleclouddeployment:
-  image: codeship/google-cloud-deployment
+  build:
+    image: codeship/google-cloud-deployment
+    dockerfile: Dockerfile
   encrypted_env_file: test/google_deployment.env.encrypted
-  # Add Docker if you want to interact with the Google Container Engine and Google Container Registry
   add_docker: true
   volumes:
     - ./:/deploy
@@ -93,7 +94,13 @@ In the steps we're now calling the deployment script we created before in `scrip
 
 ```yaml
 - service: googleclouddeployment
-  command: /deploy/scripts/deploy_to_gcp.sh
+  command: /deploy/test/deploy_to_google.sh
+- service: googleclouddeployment
+  tag: master
+  type: push
+  image_name: codeship/google-cloud-deployment
+  registry: https://index.docker.io/v1/
+  encrypted_dockercfg_path: dockercfg.encrypted
 ```
 
 Now you have a working integration with the Google Cloud that will automatically update with the latest `codeship/google-cloud-deployment` container.
