@@ -8,10 +8,6 @@ tags:
 category: Getting Started
 ---
 
-* include a table of contents
-{:toc}
-
-
 <div class="info-block">
 **current build: last edited on {{ site.data.basic.latest_update }}**
 </div>
