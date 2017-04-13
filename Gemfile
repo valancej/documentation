@@ -1,6 +1,6 @@
 # A sample Gemfile
 source "https://rubygems.org"
-ruby "2.3.1"
+ruby "2.4.1"
 
 # work around an issue with jekyll-redirect-from, see the following ticket for
 # more information:
