@@ -2,6 +2,11 @@
 source "https://rubygems.org"
 ruby "2.3.1"
 
+# work around an issue with jekyll-redirect-from, see the following ticket for
+# more information:
+# https://github.com/jekyll/jekyll-redirect-from/issues/150
+Encoding.default_external = Encoding::UTF_8
+
 gem 'jekyll', '~> 3.4.0'
 gem 'rouge', '~> 1.10.1'
 gem 'sass', '~> 3.4.23'
