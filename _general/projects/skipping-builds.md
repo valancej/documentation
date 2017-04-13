@@ -3,19 +3,26 @@ title: Skipping builds
 weight: 38
 tags:
   - docker
+  - basic
+  - pro
   - jet
   - git
   - builds
   - testing
+  - skipping
 
 redirect_from:
   - /docker/skipping-builds/
+  - /pro/getting-started/skipping-builds/
+  - /basic/getting-started/skipping-builds/
 ---
 
 * include a table of contents
 {:toc}
 
 ## Skipping Builds
+
+You can skip builds on both Codeship Basic and Codeship Pro by using a special commit directive.
 
 ### Skipping Via Commit Message
 
@@ -32,6 +39,6 @@ Skipped builds do not have a build record and will not show up in the Codeship U
 
 When you merge a pull request you can add one of the skip directives to the commit message as well.
 
-### Skipping Via A Step Tag
+### Skipping Via A Step Tag on Pro
 
-In addition to using a commit message, you can also de-facto skip builds by making sure that every step in your `codeship-steps.yml` file has a `tag`, which limits that step to a certain branch. You can learn more about limiting your steps to a certain branch [codeship-steps.yml documentation]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}).
+On [Codeship Pro](), in addition to using a commit message, you can also de-facto skip builds by making sure that every step in your `codeship-steps.yml` file has a `tag`, which limits that step to a certain branch. You can learn more about limiting your steps to a certain branch [codeship-steps.yml documentation]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}).
