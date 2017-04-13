@@ -22,7 +22,7 @@ redirect_from:
 
 ## Skipping Builds
 
-You can skip builds on both Codeship Basic and Codeship Pro by using a special commit directive.
+You can skip builds on both [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro) by using a special commit directive.
 
 ### Skipping Via Commit Message
 
@@ -41,4 +41,4 @@ When you merge a pull request you can add one of the skip directives to the comm
 
 ### Skipping Via A Step Tag on Pro
 
-On [Codeship Pro](), in addition to using a commit message, you can also de-facto skip builds by making sure that every step in your `codeship-steps.yml` file has a `tag`, which limits that step to a certain branch. You can learn more about limiting your steps to a certain branch [codeship-steps.yml documentation]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}).
+On [Codeship Pro](https://codeship.com/features/pro), in addition to using a commit message, you can also de-facto skip builds by making sure that every step in your `codeship-steps.yml` file has a `tag`, which limits that step to a certain branch. You can learn more about limiting your steps to a certain branch [codeship-steps.yml documentation]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}).
