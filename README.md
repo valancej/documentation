@@ -1,7 +1,6 @@
 # [Codeship Documentation](https://documentation.codeship.com/)
 
 [![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)](https://codeship.com/projects/102044)
-[![Waffle.io Board](https://badge.waffle.io/codeship/documentation.svg?label=ready&title=Ready)](http://waffle.io/codeship/documentation)
 [![Dependency Status](https://gemnasium.com/codeship/documentation.svg)](https://gemnasium.com/codeship/documentation)
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/codeship/documentation/blob/master/LICENSE.md)
 
@@ -37,7 +36,7 @@ docker build --tag codeship/documentation .
 You can now run commands via that container. By default, it will build the site and start the Jekyll development server.
 
 ```bash
-docker run -it -p 4000:4000 -v $(pwd):/docs codeship/documentation
+docker run -it --rm -p 4000:4000 -v $(pwd):/docs codeship/documentation
 ```
 
 To access the site open http://IP_OF_YOUR_DOCKER_SERVER:4000 in your browser. Usually, this is `localhost:4000`.
@@ -51,13 +50,13 @@ On **Windows**, the Docker commands are executed via the Docker Quickstart Termi
 To update Rubygem based dependencies, update the `Gemfile` (if required) and run
 
 ```bash
-docker run -it -v $(pwd):/docs codeship/documentation bundle update
+docker run -it --rm -v $(pwd):/docs codeship/documentation bundle update
 ```
 
 For NPM based dependencies, run the following two commands
 
 ```bash
-docker run -it -v $(pwd):/docs codeship/documentation yarn upgrade
+docker run -it --rm -v $(pwd):/docs codeship/documentation yarn upgrade
 ```
 
 ### Linting
@@ -67,7 +66,7 @@ docker run -it -v $(pwd):/docs codeship/documentation yarn upgrade
 SCSS files are automatically linted using [scss-lint](https://github.com/causes/scss-lint). To run it, execute the following command
 
 ```bash
-docker run -it -v $(pwd):/docs codeship/documentation bundle exec scss-lint
+docker run -it --rm -v $(pwd):/docs codeship/documentation bundle exec scss-lint
 ```
 
 It's configured in [.scss-lint.yml](.scss-lint.yml) and the default configuration is [available online](https://github.com/causes/scss-lint/blob/master/config/default.yml) as well.
@@ -75,13 +74,13 @@ It's configured in [.scss-lint.yml](.scss-lint.yml) and the default configuratio
 #### JSON
 
 ```bash
-docker run -it -v $(pwd):/docs codeship/documentation gulp lint
+docker run -it --rm -v $(pwd):/docs codeship/documentation gulp lint
 ```
 
 #### Jekyll
 
 ```bash
-docker run -it -v $(pwd):/docs codeship/documentation bundle exec jekyll doctor
+docker run -it --rm -v $(pwd):/docs codeship/documentation bundle exec jekyll doctor
 ```
 
 ## Markup
