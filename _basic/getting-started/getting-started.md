@@ -4,7 +4,6 @@ layout: page
 tags:
   - getting started
   - codeship basic
-  
 ---
 
 * include a table of contents
@@ -84,7 +83,7 @@ Codeship Basic has an automatic, built-in dependency cache, meaning we cache the
 
 ### Skipping Builds
 
-By using the string `--skip-ci` in your commit message, you can instruct Codeship not to run a build for a particular commit. You can learn more about this [here]({{ site.baseurl }}{% link _basic/getting-started/skipping-builds.md %})
+By using the string `--skip-ci` in your commit message, you can instruct Codeship not to run a build for a particular commit. You can learn more about this via our article on [skipping builds]({{ site.baseurl }}{% link _general/projects/skipping-builds.md %})
 
 ### Parallelizing
 
