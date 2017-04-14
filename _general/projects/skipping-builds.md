@@ -15,6 +15,7 @@ redirect_from:
   - /docker/skipping-builds/
   - /pro/getting-started/skipping-builds/
   - /basic/getting-started/skipping-builds/
+  - /continuous-integration/skipping-builds/
 ---
 
 * include a table of contents
