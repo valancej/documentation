@@ -115,7 +115,7 @@ If you want to set environment variables just for the purpose of using secrets i
 
 ### Image Push Registry Authentication
 
-See the tutorials on [Docker Push]({{ site.baseurl }}{% link _pro/getting-started/docker-push.md %}) and [Private Base Images]({{ site.baseurl }}{% link _pro/getting-started/docker-pull.md %}) for the exact steps required to encrypt the Docker configuration.
+See the tutorials on [Docker Push]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}) and [Private Base Images]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}) for the exact steps required to encrypt the Docker configuration.
 
 ### Managing Local Credential Differences
 
