@@ -8,8 +8,6 @@ tags:
   - ssh key
   - encryption
 
-redirect_from:
-  - /docker/ssh-key-authentication/
 ---
 
 <div class="info-block">
