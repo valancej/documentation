@@ -14,4 +14,4 @@ redirect_from:
 
 ## Updated API Documentation
 
-Going forward, we are now supporting our API documentation at a new location. [Click here to access it now.](https://codeship-api.api-docs.io/v1)
+Going forward, we are now supporting our API documentation at a new location. [Click here to access it now.](https://apidocs.codeship.com/v1/)
