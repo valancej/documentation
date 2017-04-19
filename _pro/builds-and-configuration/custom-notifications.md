@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Custom Notifications"
 layout: page
-weight: 99
+weight: 16
 tags:
   - docker
   - tutorial
