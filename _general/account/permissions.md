@@ -29,7 +29,9 @@ When we say permissions, we are  talking about access you give Codeship to your 
 
 ### What permissions are needed on my source control?
 
-Codeship requires different permission levels depending on the source control service being used:
+Codeship requires different permission levels depending on the source control service being used.
+
+**Note** that because we're using the Oauth integration with GiHub, we require admin permissions so that we can clone the repos and report back status. We are looking to move to improved integration options to offer you more granular control.
 
 - **Github**: We require admin permissions so that we can clone the repos and report back status.
 
