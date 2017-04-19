@@ -130,7 +130,7 @@ composer install --prefer-dist --no-interaction
 
 ## Notes And Known Issues
 
-Due to PHP version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/getting-started/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to PHP version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
 ### Running your PHP Server
 
@@ -170,6 +170,6 @@ composer global require phpunit/phpunit:5.*
 
 ## Parallelization
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the [paratest]https://github.com/brianium/paratest) module is a great way to speed up your tests.
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the [paratest]https://github.com/brianium/paratest) module is a great way to speed up your tests.
 
 Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.

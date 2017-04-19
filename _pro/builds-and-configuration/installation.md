@@ -32,7 +32,7 @@ In order to run the _Jet_ binary on your computer, you need to have Docker insta
 
 ## Installing Jet
 
-Please follow the steps below for the operating system you are using. See the [Jet Release Notes]({{ site.baseurl }}{% link _pro/getting-started/release-notes.md %}) for the ChangeLog.
+Please follow the steps below for the operating system you are using. See the [Jet Release Notes]({{ site.baseurl }}{% link _pro/builds-and-configuration/release-notes.md %}) for the ChangeLog.
 
 See the [sha256sums]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/sha256sums) file for checksums for the latest release. To check the downloaded files on Linux / Unix based systems run the following command.
 
@@ -104,7 +104,7 @@ eval $(docker-machine env dev)
 
 ## Using Jet
 
-Now that you have Jet installed and configured, [learn how to use it.]({{ site.baseurl }}{% link _pro/getting-started/cli.md %})
+Now that you have Jet installed and configured, [learn how to use it.]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %})
 
 ### Jet Steps
 
@@ -112,16 +112,16 @@ The most often used feature of Jet is `jet steps`.
 
 By running `jet steps`, you are running your full CI/CD process on your local machine. This lets you test your builds, configuration files and pipelines locally without having to commit your code.
 
-**Note** that `jet steps` skips [image pushes]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}#push-steps) and any [branch-specific commands]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}#limiting-steps-to-specific-branches--tags) by default, but you can always run `jet steps --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
+**Note** that `jet steps` skips [image pushes]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#push-steps) and any [branch-specific commands]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#limiting-steps-to-specific-branches--tags) by default, but you can always run `jet steps --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
 
 ### Jet Encrypt
 
-Jet also allows you to encrypt [environment variables]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}), [build arguments]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %}) and [registry credentials]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}). This is done with the `jet encrypt` command. Click the links in this paragraph for specific instructions on encrypting different types of secrets.
+Jet also allows you to encrypt [environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), [build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}) and [registry credentials]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}). This is done with the `jet encrypt` command. Click the links in this paragraph for specific instructions on encrypting different types of secrets.
 
 ### Jet Run
 
 While `jet steps` runs your CI/CD pipeline locally, you can also use `jet run` to instead build a single service or run a single command.
 
-For instance, you can run `jet run service_app` or `jet run service_app echo "hello"` where `service_app` is one of the services defined in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/getting-started/services.md %}).
+For instance, you can run `jet run service_app` or `jet run service_app echo "hello"` where `service_app` is one of the services defined in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 **Note** that you can also run `jet run --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.

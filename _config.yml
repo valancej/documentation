@@ -55,6 +55,10 @@ defaults:
     values:
       category: "Databases"
   - scope:
+      path: "_basic/builds-and-configuration"
+    values:
+      category: "Builds &amp; Configuration"
+  - scope:
       path: "_pro/continuous-deployment"
     values:
       category: "Continuous Deployment"
@@ -66,6 +70,10 @@ defaults:
       path: "_pro/getting-started"
     values:
       category: "Getting Started"
+  - scope:
+      path: "pro/builds-and-configuration"
+    values:
+      category: "Builds &amp; Configuration"
   - scope:
       path: "_pro/languages-frameworks"
     values:
@@ -89,6 +97,7 @@ defaults:
 
 sidebar_order:
   - "Getting Started"
+  - "Builds &amp; Configuration"
   - "Languages &amp; Frameworks"
   - "Databases"
   - "Continuous Deployment"

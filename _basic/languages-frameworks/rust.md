@@ -37,4 +37,4 @@ Frameworks such as Iron and testing via the standard Rust test attribute or via 
 
 ## Parallelization
 
-Rust tests can be parallelized via our [ParallelCI]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}) feature by manually specifying different test specs per pipeline.
+Rust tests can be parallelized via our [ParallelCI]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}) feature by manually specifying different test specs per pipeline.

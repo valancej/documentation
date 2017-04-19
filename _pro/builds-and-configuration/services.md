@@ -17,7 +17,7 @@ redirect_from:
 {:toc}
 
 ## What Is Your Codeship Services File?
-Your services file - `codeship-services.yml` - is where you configure each service you need to run your CI/CD builds with Codeship. During the build, these services will be used to run the testing steps you've defined in your `codeship-steps.yml` [file]({% link _pro/getting-started/steps.md %}). You can have as many services as you'd like, and customize each of them. Each of these services will be run inside a Docker container.
+Your services file - `codeship-services.yml` - is where you configure each service you need to run your CI/CD builds with Codeship. During the build, these services will be used to run the testing steps you've defined in your `codeship-steps.yml` [file]({% link _pro/builds-and-configuration/steps.md %}). You can have as many services as you'd like, and customize each of them. Each of these services will be run inside a Docker container.
 
 Your services can be built from your own Dockerfiles, or pulled from any registry. Your `codeship-services.yml` will be very similar to a `docker-compose.yml` file, and most of the syntax is compatible.
 
@@ -31,7 +31,7 @@ Running with Docker, your Codeship services allow you to:
 Your Codeship builds run on infrastucture equipped with version {{ site.data.docker.version }} of the Docker Engine.
 
 ## Prerequisites
-Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/getting-started/codeship-configuration.md %})
+Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/builds-and-configuration/codeship-configuration.md %})
 
 ## Services File Setup & Configuration
 By default, we look for the filename `codeship-services.yml`. In its absense, Codeship will automatically search for a `docker-compose.yml` file to use in its place.
@@ -85,9 +85,9 @@ app:
 
 * `dockerfile` allows you to specify a specific Dockerfile to use, rather than inheriting one from the build context. It does not, however, change the build context or override the root directory.
 
-* `args`: build arguments passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %})
+* `args`: build arguments passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %})
 
-* `encrypted_args_file`: an encrypted file of build arguments that are passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %})
+* `encrypted_args_file`: an encrypted file of build arguments that are passed to the image at build time. [Learn more about build arguments.]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %})
 
 
 #### Deprecated keys
@@ -124,7 +124,7 @@ data:
 
 **Note**: volumes should only be mounted from a relative path, as the hosts are ephemeral, and you should not rely on existence of certain directories. Although absolute paths are possible at the moment, we will remove support for them soon.
 
-[Learn more about using volumes.]({{ site.baseurl }}{% link _pro/getting-started/docker-volumes.md %})
+[Learn more about using volumes.]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %})
 
 ### Environment Variables
 The standard `environment` and `env_file` directives are supported. Additionally, we support encrypted environment variables with `encrypted_environment` and `encrypted_env_file` directives. These are the same format, but they expect encrypted variables.
@@ -151,13 +151,13 @@ app:
   encrypted_env_file: env.encrypted
 ```
 
-The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) to root directory (and adding it to our `.gitignore` file.)
+The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to root directory (and adding it to our `.gitignore` file.)
 
-Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}))
+Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/builds-and-configuration/installation.md %}))
 
 Lastly, we would either delete the unencrypted `env` file or add it to our `.gitignore`.
 
-[Learn more about encrypting your environment variables.]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %})
+[Learn more about encrypting your environment variables.]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
 
 ### Docker Inside Docker
 The boolean directive `add_docker` is available. If specified for a service, it will:
@@ -179,7 +179,7 @@ app:
   cached: true
 ```
 
-There are several specific requirements and considerations when using caching, so it is recommended that you [read our caching documentation.]({{ site.baseurl }}{% link _pro/getting-started/caching.md %}) before enabling caching on your builds.
+There are several specific requirements and considerations when using caching, so it is recommended that you [read our caching documentation.]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %}) before enabling caching on your builds.
 
 ## Unavailable Features
 The following features available in Docker Compose are not available on Codeship. If these keys exist in your `codeship-services.yml` file, don't panic -- we'll just ignore them.
@@ -260,13 +260,13 @@ Or, a health check poll could look like [this script](https://github.com/codeshi
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
 * [Build Directive In Compose](https://docs.docker.com/compose/compose-file/#build)
-* [Encrypting environment variables and build arguments]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %})
-* [Steps File]({% link _pro/getting-started/steps.md %})
-* [Volumes]({{ site.baseurl }}{% link _pro/getting-started/docker-volumes.md %})
+* [Encrypting environment variables and build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
+* [Steps File]({% link _pro/builds-and-configuration/steps.md %})
+* [Volumes]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %})
 * [Add_Docker Directive in Compose](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker)
 * [Docker-in-Docker](https://registry.hub.docker.com/u/jpetazzo/dind).
-* [Caching]({{ site.baseurl }}{% link _pro/getting-started/caching.md %})
-* [Build Arguments]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %})
+* [Caching]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %})
+* [Build Arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %})
 
 ## Other Notes
 * `link` containers will be newly created for each step.

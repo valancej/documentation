@@ -37,4 +37,4 @@ demo:
     dockerfile: Dockerfile
 ```
 
-Find out more about these two files in [steps configuration]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}) and [services configuration]({{ site.baseurl }}{% link _pro/getting-started/services.md %}).
+Find out more about these two files in [steps configuration]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) and [services configuration]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).

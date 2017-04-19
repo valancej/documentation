@@ -12,7 +12,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/installation.md %}).
 </div>
 
 * include a table of contents
@@ -26,7 +26,7 @@ Volumes let your containers work together without needing to tightly couple them
 There are two primary ways to use Docker volumes in your CI/CD process with Codeship.
 
 ## Configuration #1: Passing Data Between Containers
-You can mount volumes in your containers and allow other containers to access the volume without persisting the data between steps. In this configuration, the volume (along with the rest of your containers) will be re-build at the beginning of each new step. ([Learn more about steps.]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}))
+You can mount volumes in your containers and allow other containers to access the volume without persisting the data between steps. In this configuration, the volume (along with the rest of your containers) will be re-build at the beginning of each new step. ([Learn more about steps.]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}))
 
 It's important to note that with this setup, data will be available between containers but will __not__ persist when the current step finishes and the next step begins.
 

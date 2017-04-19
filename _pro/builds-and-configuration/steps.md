@@ -26,7 +26,7 @@ redirect_from:
 _Jet_ will look for a steps file in this order. If you are running _Jet_ locally, you can override the filename with the `--steps-path` flag. Both YAML and JSON formats are accepted.
 
 ## Prerequisites
-Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/getting-started/codeship-configuration.md %}). It will also require that you have configured your [codeship-services.yml file]({% link _pro/getting-started/services.md %}).
+Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/builds-and-configuration/codeship-configuration.md %}). It will also require that you have configured your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
 
 ## Using codeship-steps.yml
 
@@ -76,7 +76,7 @@ If you're looking at running steps - such as setup commands, test commands or de
       command: echo two
 ```
 
-All steps you indent underneath the `type: parallel` directive will spin up separate containers on the host machine to run simultaneously. As with individual steps, if any parallel step fails the pipeline would not move past the current step group (although all still-running parallel steps will be allowed to finish.) It's important to note that, since every parallel step runs on a separate container, [you may need to use volumes]({{ site.baseurl }}{% link _pro/getting-started/docker-volumes.md %}) to persist or share data between your steps.
+All steps you indent underneath the `type: parallel` directive will spin up separate containers on the host machine to run simultaneously. As with individual steps, if any parallel step fails the pipeline would not move past the current step group (although all still-running parallel steps will be allowed to finish.) It's important to note that, since every parallel step runs on a separate container, [you may need to use volumes]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}) to persist or share data between your steps.
 
 It is also worth noting that because parallel steps run separate containers simultaneously on the host machine, they will cause your build to use more resources (CPU and memory on the host machine) which can occasionally cause build issues if resources are maxed out (although you always have the option of upgrading to a larger build machine.)
 
@@ -235,4 +235,4 @@ For each step, the running container is provided with a set of environment varia
 * `CI` (defaults to `true`)
 * `CI_NAME` (defaults to `codeship`)
 
-Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.
+Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.

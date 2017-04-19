@@ -20,7 +20,7 @@ When your Capistrano task is ready and working, you just need to add the _Capist
 
 ![Capistrano]({{ site.baseurl }}/images/continuous-deployment/capistrano_deployment_setup.png)
 
-Checkout our [Deployment Pipelines]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}) if you want to add multiple Capistrano Deployments.
+Checkout our [Deployment Pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) if you want to add multiple Capistrano Deployments.
 
 ## Capistrano with a script-based deployment
 

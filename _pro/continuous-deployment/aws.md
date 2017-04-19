@@ -35,7 +35,7 @@ While the container we provide for interacting with AWS gives you an easy and st
 
 Before setting up the `codeship-services.yml` and `codeship-steps.yml` file we're going to create an encrypted environment file that contains the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
-Take a look at our [encrypted environment files documentation]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) and add a `aws-deployment.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
+Take a look at our [encrypted environment files documentation]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and add a `aws-deployment.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
 
 ```bash
 AWS_ACCESS_KEY_ID=your_access_key_id
@@ -46,7 +46,7 @@ You can get the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from the IAM set
 
 ## Service Definition
 
-Before reading through the documentation please take a look at the [Services]({% link _pro/getting-started/services.md %}) and [Steps]({% link _pro/getting-started/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work.
+Before reading through the documentation please take a look at the [Services]({% link _pro/builds-and-configuration/services.md %}) and [Steps]({% link _pro/builds-and-configuration/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work.
 
 The `codeship-services.yml` file uses the `codeship/aws-deployment` container and sets the encrypted environment file. Additionally it sets the `AWS_DEFAULT_REGION` through the environment config setting. We set up a volume that shares `./` (the repository folder) to `/deploy`. This gives us access to all files in the repository in `/deploy/...` for the following steps.
 
@@ -64,7 +64,7 @@ awsdeployment:
 
 To interact with different AWS services you can simply call the `aws` command directly. You can use any AWS service or command provided by the [AWSCLI](https://aws.amazon.com/cli/). You can use environment variables or command arguments to set the AWS Region or other parameters. Take a look at their (environment variable documentation](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-environment).
 
-Take a look at the [Steps]({% link _pro/getting-started/steps.md %}) documentation page so you have a good understanding how steps on Codeship work and how to set it up in your `codeship-steps.yml`.
+Take a look at the [Steps]({% link _pro/builds-and-configuration/steps.md %}) documentation page so you have a good understanding how steps on Codeship work and how to set it up in your `codeship-steps.yml`.
 
 ### S3
 
@@ -77,7 +77,7 @@ In the following example we're uploading a file to S3 from the source repository
 
 ### Deploying to EC2 Container Service
 
-To interact with ECS you can simply use the corresponding AWS CLI commands. The following example will register two new task definitions and then update a service and run a batch task. In the following example the deployment is running one after the other, but with our parallelization feature you could start both deployments at the same time as well to gain more speed. Our [Steps]({% link _pro/getting-started/steps.md %}) documentation can give you more information on that.
+To interact with ECS you can simply use the corresponding AWS CLI commands. The following example will register two new task definitions and then update a service and run a batch task. In the following example the deployment is running one after the other, but with our parallelization feature you could start both deployments at the same time as well to gain more speed. Our [Steps]({% link _pro/builds-and-configuration/steps.md %}) documentation can give you more information on that.
 
 If you have more complex workflows for deploying your ECS tasks you can put those commands into a script and run the script as part of your workflow. Then you could stop load balancers, gracefully shut down running tasks or anything else you would like to do as part of your deployment.
 

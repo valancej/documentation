@@ -16,7 +16,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/installation.md %}).
 </div>
 
 * include a table of contents
@@ -34,7 +34,7 @@ Once you decide which workflow you like, there are two main ways to combine your
 
 ## Using Image Pushes
 
-If you opt to create separate CI/CD projects for each individual component, you can have each component's pipeline end with an [image push]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}) to an image registry.
+If you opt to create separate CI/CD projects for each individual component, you can have each component's pipeline end with an [image push]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) to an image registry.
 
 Then, either with a separate project or as a part of the build process for each component, you can pull in the latest images for each component to build and test your combined application.
 
@@ -58,7 +58,7 @@ Now you have to copy the content of `keyfile.rsa` into an environment file `sshk
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
 ```
 
-After preparing the `sshkey.env` file we can encrypt it with Jet. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) to turn the `sshkey.env` file into a `sshkey.env.encrypted` file.
+After preparing the `sshkey.env` file we can encrypt it with Jet. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to turn the `sshkey.env` file into a `sshkey.env.encrypted` file.
 
 You can then add it to a service with the `encrypted_env_file` option. It will be automatically decrypted on Codeship.
 

@@ -32,7 +32,7 @@ You can use [SauceConnect](https://saucelabs.com/docs/connect) to connect the Sa
 browser testing service with the application running in your Codeship build.
 
 There is no special integration necessary for SauceConnect on Codeship. Make sure you set the username and api key
-or other necessary variables in the [environment configuration]({{ site.baseurl }}{% link _basic/getting-started/set-environment-variables.md %}). You can run your tests exactly the same
+or other necessary variables in the [environment configuration]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}). You can run your tests exactly the same
 way as you would run them on your own development machine through SauceConnect.
 
 ## PhantomJS

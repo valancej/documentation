@@ -58,7 +58,7 @@ Note: YAML boolean values (true, false, yes, no, on, off) must be enclosed in qu
 ## Encrypted Build Arguments
 In a lot of cases, the values needed by the image at build time are secrets -- credentials, passwords, and other things that you don't want to check in to source control in plain text. Because of this, Codeship supports encrypted build arguments. You can either encrypt a build argument individually, or encrypt an entire file containing all of the build arguments you need.
 
-First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) to root directory (and add it to the `.gitignore` file.)
+First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to root directory (and add it to the `.gitignore` file.)
 
 ```bash
 GEM_SERVER_TOKEN=XXXXXXXXXXXX
@@ -67,7 +67,7 @@ SECRET_BUILDTIME_PASSWORD=XXXXXXXXXXXX
 
 Take care to use `KEY=value` syntax and not `key: value`.
 
-Once the AES key is in the root directory, run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt build_args build_args.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}))
+Once the AES key is in the root directory, run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt build_args build_args.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/builds-and-configuration/installation.md %}))
 
 Pass that file to your service's build directive.
 

@@ -73,7 +73,7 @@ You can use `grep` to filter the Environment:
 printenv | grep CI
 ```
 
-You can clear the [Dependency Cache]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}):
+You can clear the [Dependency Cache]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}):
 
 ```shell
 cs clear-cache

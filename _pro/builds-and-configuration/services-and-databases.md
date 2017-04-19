@@ -19,7 +19,7 @@ redirect_from:
 
 Through Docker we support many different databases and services you can use for your build. By adding them to your `codeship-services.yml` file you have a lot of control on how to set up your build environment.
 
-Before reading through the documentation please take a look at the [Services]({% link _pro/getting-started/services.md %}) and [Steps]({% link _pro/getting-started/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work. At first we want to show you how to customize a service or database container so it has the exact configuration you need for your build.
+Before reading through the documentation please take a look at the [Services]({% link _pro/builds-and-configuration/services.md %}) and [Steps]({% link _pro/builds-and-configuration/steps.md %}) documentation page so you have a good understanding how services and steps on Codeship work. At first we want to show you how to customize a service or database container so it has the exact configuration you need for your build.
 
 ## Customizing a service container
 

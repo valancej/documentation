@@ -41,7 +41,7 @@ You can either delete additional test pipelines, or comment out any commands by 
 
 Using ParallelCI to create parallel pipelines is unrelated to creating your deployment pipelines, which are specific to deploying your application at the end of your tests and can **not** run in parallel.
 
-You can [learn more about deployment pipelines here.]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %})
+You can [learn more about deployment pipelines here.]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %})
 
 ### Artifacts Support
 

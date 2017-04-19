@@ -71,7 +71,7 @@ echo "//${REGISTRY_URL}/:_authToken=${AUTH_TOKEN}" > "${HOME}/.npmrc"
 
 ### Dependency Cache
 
-Codeship automatically caches the `$REPO_ROOT/node_modules` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it. We also configure `yarn` to write into `$HOME/cache/yarn`, which is also cached.
+Codeship automatically caches the `$REPO_ROOT/node_modules` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it. We also configure `yarn` to write into `$HOME/cache/yarn`, which is also cached.
 
 ### Caching Globally Installed Dependencies
 
@@ -115,7 +115,7 @@ You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as 
 
 ## Notes And Known Issues
 
-Due to Node version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/getting-started/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to Node version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
 ### Running grunt
 
@@ -152,6 +152,6 @@ Combined with setting the engine to e.g `iojs-v1.5.1` this installs and selects 
 
 ## Parallelization
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the [mocha-parallel-tests npm](https://www.npmjs.com/package/mocha-parallel-tests) is a great way to speed up your tests.
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the [mocha-parallel-tests npm](https://www.npmjs.com/package/mocha-parallel-tests) is a great way to speed up your tests.
 
 Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.

@@ -10,10 +10,10 @@ tags:
   - pro
   - build arguments
 
-  redirect_from:
-    - /docker/encryption/
-    - /pro/getting-started/encryption/
-    - /pro/getting-started/handling-secrets/
+redirect_from:
+  - /docker/encryption/
+  - /pro/getting-started/encryption/
+  - /pro/getting-started/handling-secrets/
 ---
 
 * include a table of contents

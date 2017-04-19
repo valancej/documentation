@@ -31,7 +31,7 @@ We will use the [microsoft/azure-cli](https://hub.Docker.com/r/microsoft/azure-c
 Prior to getting started, please ensure you have the following installed in your local linux/unix environment.
 
 - [An Understanding Of Codeship Pro]({% link _pro/getting-started/getting-started.md %})
-- [Codeship's Jet CLI]({% link _pro/getting-started/installation.md %})
+- [Codeship's Jet CLI]({% link _pro/builds-and-configuration/installation.md %})
 - [Docker](https://www.Docker.com/products/overview)
 - [A Microsoft Azure Account](https://azure.microsoft.com/)
 
@@ -45,7 +45,7 @@ Before setting up the `codeship-services.yml` and `codeship-steps.yml` file weâ€
 
 ## Azure Authentication
 
-Take a look at Codeship's [encrypted environment files documentation]({% link _pro/getting-started/environment-variables.md %}) and add a `azure.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
+Take a look at Codeship's [encrypted environment files documentation]({% link _pro/builds-and-configuration/environment-variables.md %}) and add a `azure.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
 
 ```
 spn=service_principal_name
@@ -69,7 +69,7 @@ Auzre Deployment Service Definition and Examples
 
 Before reading through the documentation, please take a look at the Services and Steps documentation page so you have a good understanding how services and steps on Codeship work.
 
-The `codeship-services.yml` file uses the `microsoft/azure-cli` container and sets the encrypted environment file created by running the Service Principal Creation Script. Additionally, it sets the resource group name (`resource`) and location (`location`) through the environment config setting. We set up a [volume]({% link _pro/getting-started/docker-volumes.md %}) that shares `./` (the repository folder) to `/deploy`. This gives us access to all files in the repository in `/deploy/...` for the following deployment step.
+The `codeship-services.yml` file uses the `microsoft/azure-cli` container and sets the encrypted environment file created by running the Service Principal Creation Script. Additionally, it sets the resource group name (`resource`) and location (`location`) through the environment config setting. We set up a [volume]({% link _pro/builds-and-configuration/docker-volumes.md %}) that shares `./` (the repository folder) to `/deploy`. This gives us access to all files in the repository in `/deploy/...` for the following deployment step.
 
 Note: The following step only deploys out infrastructure in Azure with a pre-built Ubuntu 16.04 virtual machine and the Docker engine pre-configured.
 
@@ -86,7 +86,7 @@ azuredeployment:
 
 To interact with different Azure services you can simply call the Azure command directly. You can use any Azure service or command provided by the [AzureCLI](https://docs.microsoft.com/en-us/azure/xplat-cli-install). You can use [environment variables or command arguments](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates) to set the `Azure Datacenter Location` or other parameters.
 
-Take a look at the [Steps documentation page](({% link _pro/getting-started/steps.md %})) so you have a good understanding how steps on Codeship work and how to set it up in your  `codeship-steps.yml`.
+Take a look at the [Steps documentation page](({% link _pro/builds-and-configuration/steps.md %})) so you have a good understanding how steps on Codeship work and how to set it up in your  `codeship-steps.yml`.
 
 The following script will use the [Azure GitHub QuickStart Templates](https://github.com/Azure/azure-quickstart-templates) to deploy your new Docker virtual machine and resource group. The deployment script can access any files in your repository through `/deploy`. To confirm, the [Azure Deployment Script](https://github.com/codeship-library/azure-deployment/blob/master/deployment/azure_deploy.sh), stands up an AzureRM resource group with all necessary dependencies for an Ubuntu 16.04 image with Docker pre-installed.
 
