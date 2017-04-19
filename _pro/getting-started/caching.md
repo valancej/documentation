@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Caching"
 layout: page
-weight: 47
+weight: 14
 tags:
   - docker
   - tutorial

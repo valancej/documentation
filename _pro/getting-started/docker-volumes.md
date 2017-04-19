@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Docker volumes"
 layout: page
-weight: 45
+weight: 13
 tags:
   - docker
   - tutorial

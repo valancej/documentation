@@ -1,7 +1,7 @@
 ---
 title: "Using Image Registries"
 layout: page
-weight: 44
+weight: 12
 tags:
   - docker
   - tutorial
