@@ -13,6 +13,8 @@ redirect_from:
   - /pro/getting-started/docker-push/
   - /pro/getting-started/docker-pull/
   - /pro/getting-started/dockercfg-services/
+  - /docker/docker-pull/
+  - /docker/dockercfg-service/
 ---
 
 <div class="info-block">
@@ -276,13 +278,13 @@ This means your AES key is missing from your project directory and must be downl
 
 #### Need a key regenerated
 
-If you need a key regenerated, you can submit a ticket to the help desk from your account. Keep in mind that this will leave current encrypted credentials and environmental variables invalid for future builds on Codeship until they are re-encrypted using the new key.
+If you need a key regenerated, you can [submit a ticket to the help desk](https://helpdesk.codeship.com) from your account. Keep in mind that this will leave current encrypted credentials and environmental variables invalid for future builds on Codeship until they are re-encrypted using the new key.
 
 ## Generating Credentials With A Service
 
 Codeship supports using private registries for pulling and pushing images by allowing static dockercfg credentials to be encrypted as part of your codebase. Due to an increasing number of container registry vendors using different methods to generate Docker temporary credentials, we have added support for custom dockercfg credential generation. By using a custom service within your list of Codeship services, you can integrate with a standard dockercfg generation container for your desired provider. Codeship will provide a basic set of images supporting common providers, however you will also be able to use custom images to integrate with custom registries.
 
-### Using a service to generate Docker credentials
+### Using A Service To Generate Docker Credentials
 
 Taking advantage of this feature is fairly simple. First off, add a service using the image for your desired registry provider to your `codeship-services.yml` file. You can add any links, environment variables or volumes you need, just like with a regular service.
 
@@ -312,7 +314,7 @@ Codeship will run the service to generate a dockercfg as needed. Under the hood,
 
 Keep in mind that different generator images may have different requirements. If your generator image, for example, performs a `docker login`, you may need to set `add_docker: true` in order to use it. Be sure to read the documentation for your specific provider when implementing these generator services.
 
-### Creating your own dockercfg generator image
+### Creating Your Own Dockercfg Generator Image
 
 The majority of container registries use standard, static credentials, and even using a custom authentication proxy, most of the time you can generate a compatible static dockercfg and encrypt it for use within your pipeline. Should you need to use dynamic credentials, or some other method of securely retrieving static credentials during the CI/CD process, you'll need to use a generator service. Luckily creating your own image is simple, the only requirement is that the image writes the dockercfg to a path provided via a `CMD` argument.
 
