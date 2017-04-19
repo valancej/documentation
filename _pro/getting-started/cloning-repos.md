@@ -43,7 +43,7 @@ In addition to the above method using images in a regsitry, you can also clone t
 
 ### Creating Your SSH Key
 
-The first step of cloning a repo into your build process is to create your SSH key authentication. Another optoin for cloning from Github would  be to use their [OAuth Key instead of an SSH key](https://github.com/blog/1270-easier-builds-and-deployments-using-git-over-https-and-oauth).
+The first step of cloning a repo into your build process is to create your SSH key authentication. Another option for cloning from GitHub would be to use [OAuth instead of an SSH key](https://github.com/blog/1270-easier-builds-and-deployments-using-git-over-https-and-oauth).
 
 The following command will create two files in your local repository. `keyfile.rsa` contains your private key that we will encrypt and put into your repository. This encrypted file will be decrypted on Codeship as part of your build. The second file `keyfile.rsa.pub` can be added to services that you want to access.
 
@@ -80,11 +80,12 @@ echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa
 
 Once you have the SSH authentication working, then you'll just need a Dockerfile that grabs git and clones the repo you want:
 
-```yaml
+```bash
 FROM ubuntu:latest
+COPY .
 RUN apt-get update && apt-get install -y ca-certificates git-core ssh
-mkdir -p "$HOME/.ssh"
-echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa
+RUN mkdir -p "$HOME/.ssh"
+RUN echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa
 RUN git clone repo:repo.git
 ```
 
@@ -92,4 +93,4 @@ Note that this is a high-level, directional example and will require additional 
 
 ## Building With Repos Via API
 
-Codeship Pro does not yet have an API for triggering building, but we will be launching an API for this purpose later in 2017.
+Codeship Pro does not yet have an API for triggering builds, but we will be launching an API for this purpose later in 2017.
