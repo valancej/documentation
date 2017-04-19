@@ -19,7 +19,7 @@
           {% assign documents = documents | sort:"weight" %}
           {% for document in documents %}
             <li>
-              <a href="{{ document.url | relative_url }}">{{ document.title }} + {{ document.weight }}</a>
+              <a href="{{ document.url | relative_url }}">{{ document.title }}</a>
             </li>
           {% endfor %}
         </ul>
