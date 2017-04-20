@@ -7,6 +7,7 @@ ruby "2.4.1"
 # https://github.com/jekyll/jekyll-redirect-from/issues/150
 Encoding.default_external = Encoding::UTF_8
 
+gem 'rake', '~>12.0.0'
 gem 'jekyll', '~> 3.4.0'
 gem 'rouge', '~> 1.11.1'
 gem 'sass', '~> 3.4.23'
