@@ -35,7 +35,7 @@ rvm use $(cat .ruby-version) --install
 One use case is that you can change your Ruby version for different branches.
 
 ## Dependencies
-You can install dependencies using bundler in your [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+You can install dependencies using bundler in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 For example:
 

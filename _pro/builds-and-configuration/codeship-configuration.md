@@ -22,7 +22,7 @@ The configuration information below is specific to Codeship Pro. For more inform
 * include a table of contents
 {:toc}
 
-Once you have your [project running locally]({{ site.baseurl }}{% link _pro/getting-started/getting-started.md %}) you can configure the repository on Codeship and have the builds run on each push.
+Once you have your [project running locally]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) you can configure the repository on Codeship and have the builds run on each push.
 
 If you already worked with Codeship the process will be familiar (and if not, it should be very simple nonetheless).
 

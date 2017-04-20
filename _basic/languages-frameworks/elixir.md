@@ -11,7 +11,7 @@ tags:
 
 ## Versions And Setup
 
-We currently don't have Elixir pre-installed on our build VMs so we'd recommend using our [Docker]({{ site.baseurl }}{% link pro/index.md %}) platform or downloading Elixir via the shell commands in your project's [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+We currently don't have Elixir pre-installed on our build VMs so we'd recommend using our [Docker]({{ site.baseurl }}{% link pro/index.md %}) platform or downloading Elixir via the shell commands in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 The easiest way to do this is by using our [scripts repository](https://github.com/codeship/scripts), specifically the [Erlang](https://github.com/codeship/scripts/blob/master/languages/erlang.sh) and [Elixir](https://github.com/codeship/scripts/blob/master/languages/elixir.sh) scripts both. After connecting your repository, you can add these setup commands that will automatically download Elixir and Erlang. Both are needed to be able to run Elixir.
 
@@ -38,7 +38,7 @@ Due to Elixir version and build issues, you may find it helpful to tests your co
 ## Frameworks And Testing
 
 Elixir frameworks such as Phoenix, and test tools
-such as ExUnit, are all supported on Codeship. Note that you will need to manually install all tools needed, in your project's [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+such as ExUnit, are all supported on Codeship. Note that you will need to manually install all tools needed, in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 ## Parallelization
 

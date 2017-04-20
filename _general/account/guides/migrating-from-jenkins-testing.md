@@ -19,7 +19,7 @@ The complexity of managing this in a set server build with Jenkins and the respe
 
 ## Testing your Applications with Codeship Pro as Compared to Jenkins
 
-With [Codeship Pro]({% link _pro/getting-started/getting-started.md %}), the testing options open up massively, without any plugins or extra configuration.
+With [Codeship Pro]({% link _pro/quickstart/getting-started.md %}), the testing options open up massively, without any plugins or extra configuration.
 
 Codeship Pro’s simple configuration files ([codeship-services.yml]({% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml]({% link _pro/builds-and-configuration/steps.md %})) can be run on the container instances that are completing the actual build. By association, not only does this provide testing insight into the Codeship build that is run but it also provides the ability to run the build locally using the Codeship Pro Jet CLI.
 
@@ -87,7 +87,7 @@ Finally the build succeeds, and the green check box displays. The Merge pull req
 
 ## Conclusion
 
-In this document we’ve shown some of the power and options for testing on [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro]({% link _pro/getting-started/getting-started.md %}). It opens the door to add unit, integration, smoke, or other systems testing. Even further testing could be implemented by pushing deployment to utilize remote UI testing or other means.
+In this document we’ve shown some of the power and options for testing on [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro]({% link _pro/quickstart/getting-started.md %}). It opens the door to add unit, integration, smoke, or other systems testing. Even further testing could be implemented by pushing deployment to utilize remote UI testing or other means.
 
 Now that you know how to migrate your tests from Jenkins to Codeship we suggest looking into our other walk-throughs:
 

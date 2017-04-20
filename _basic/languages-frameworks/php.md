@@ -57,7 +57,7 @@ so phpenv is aware of the new executable and sets it up correctly
 
 ## Dependencies
 
-You can install dependencies through pear and composer in your [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+You can install dependencies through pear and composer in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 For example:
 

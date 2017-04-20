@@ -40,7 +40,7 @@ Next add [this command](https://github.com/codeship/scripts/blob/master/language
 
 ## Dependencies
 
-You can use **pip** to install any dependencies in your [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+You can use **pip** to install any dependencies in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 For example:
 

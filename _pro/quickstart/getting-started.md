@@ -189,4 +189,4 @@ Looking at the same logs as before, you'll see that now your *redis* service is 
 
 ## Next: Adding Tests
 
-Now that we've covered the basics of how Codeship Pro uses Jet CLI, `codeship-services.yml`, `codeship-steps.yml` and containers to create a flexible, powerful CI/CD process, we'll move on to explore some more robust examples. Up next, [running your tests.]({% link _pro/getting-started/getting-started-part-two.md %})
+Now that we've covered the basics of how Codeship Pro uses Jet CLI, `codeship-services.yml`, `codeship-steps.yml` and containers to create a flexible, powerful CI/CD process, we'll move on to explore some more robust examples. Up next, [running your tests.]({% link _pro/quickstart/getting-started-part-two.md %})

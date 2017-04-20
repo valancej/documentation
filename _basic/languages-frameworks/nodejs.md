@@ -17,7 +17,7 @@ redirect_from:
 
 ## Versions And Setup
 
-We use **nvm** to manage different node versions. We read the node version you set in your **package.json** and install the appropriate one. You can use **nvm** in your [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}), such as:
+We use **nvm** to manage different node versions. We read the node version you set in your **package.json** and install the appropriate one. You can use **nvm** in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), such as:
 
 ```shell
 nvm install NODE_VERSION

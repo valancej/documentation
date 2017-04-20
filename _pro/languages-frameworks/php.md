@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-You may want to read the [Codeship Pro Getting Started Guide]({% link _pro/getting-started/getting-started.md %}) to learn more about how Codeship Pro works. You can also [watch a short demo video here](https://codeship.com/features/pro).
+You may want to read the [Codeship Pro Getting Started Guide]({% link _pro/quickstart/getting-started.md %}) to learn more about how Codeship Pro works. You can also [watch a short demo video here](https://codeship.com/features/pro).
 </div>
 
 * include a table of contents

@@ -151,4 +151,4 @@ Of course, every application is different so there are a ton of potential reason
 
 ## Next: Parallel, Speed, etc
 
-Next we're going to look at two of the more powerful and productive things you can do to create really fast and efficient CI/CD pipelines with Codeship Pro. [Taking a look at parallel steps and caching.]({% link _pro/getting-started/getting-started-part-five.md %})
+Next we're going to look at two of the more powerful and productive things you can do to create really fast and efficient CI/CD pipelines with Codeship Pro. [Taking a look at parallel steps and caching.]({% link _pro/quickstart/getting-started-part-five.md %})
