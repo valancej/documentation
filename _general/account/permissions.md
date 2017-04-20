@@ -33,7 +33,7 @@ Codeship requires different permission levels depending on the source control se
 
 - **Github**
   - We require read/write permissions to your private repositoties so that we can clone the repos and report back status.
-  - Like all providers that integrate with Github, we'd love to request fewer permissions than we currently do, but as we're currently using the GiHub's Oauth integration, we're limited to the [few options GitHub provides](https://developer.github.com/v3/oauth/#scopes). We are looking to move to the new [GitHub Integration](https://developer.github.com/early-access/integrations/integrations-vs-oauth-applications/) options, to offer you more granular control, in the near future.
+  - Like all providers that integrate with Github, we'd love to request fewer permissions than we do, but as we're currently using the GiHub's Oauth integration, we're limited to the [few options GitHub provides](https://developer.github.com/v3/oauth/#scopes). We are looking to move to the new [GitHub Integration](https://developer.github.com/early-access/integrations/integrations-vs-oauth-applications/) options, to offer you more granular control, in the near future.
 
 - **Bitbucket**
   - We require master or owner permissions so that we can clone the repos and report back status.
