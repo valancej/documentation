@@ -31,13 +31,17 @@ When we say permissions, we are  talking about access you give Codeship to your 
 
 Codeship requires different permission levels depending on the source control service being used.
 
-**Note** that because we're using the Oauth integration with GiHub, we require admin permissions so that we can clone the repos and report back status. We are looking to move to improved integration options to offer you more granular control.
+- **Github**
+  - We require read/write permissions to your private repositoties so that we can clone the repos and report back status.
+  - Like all providers that integrate with Github, we'd love to request fewer permissions than we currently do, but as we're currently using the GiHub's Oauth integration, we're limited to the [few options GitHub provides](https://developer.github.com/v3/oauth/#scopes). We are looking to move to the new [GitHub Integration](https://developer.github.com/early-access/integrations/integrations-vs-oauth-applications/) options, to offer you more granular control, in the near future.
 
-- **Github**: We require admin permissions so that we can clone the repos and report back status.
+- **Bitbucket**
+  - We require master or owner permissions so that we can clone the repos and report back status.
+  - At this point in time, we're asking for full access, but will change this soon to only cover reading/writing to your repos and webhooks as well as reading your email addresses. You can see the full list of permission options available from BitBucket [here](https://developer.atlassian.com/bitbucket/concepts/bitbucket-rest-scopes.html).
 
-- **Bitbucket**: We require master or owner permissions so that we can clone the repos and report back status.
-
-- **Gitlab**: We require admin permissions so that we can clone the repos and report back status.
+- **Gitlab**
+  - We require admin permissions so that we can clone the repos and report back status.
+  - For GitLab we can only ask for the `api` scope, as it's the only of [the two options GitLab provides](https://docs.gitlab.com/ee/integration/oauth_provider.html#authorized-applications) that will allow us to access your repos.
 
 ### What permissions can I assign my team members?
 
