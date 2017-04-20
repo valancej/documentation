@@ -257,9 +257,9 @@ You will also need to configure your `codeship-steps.yml` file to provide your a
   encrypted_dockercfg_path: dockercfg.encrypted
 ```
 
-### Common Problems
+## Common Problems
 
-#### Invalid character / Failed to parse dockercfg
+### Invalid character / Failed to parse dockercfg
 
 You might see an error like this when pulling a private base image using your encrypted `dockercfg` file:
 
@@ -269,7 +269,7 @@ This  means that either your `dockercfg` has a syntax problem or that it was enc
 
 Try deleting your `dockercfg` and your AES key, then re-downloading the AES key and re-encrypting the `dockercfg` file.
 
-#### No key
+### No key
 
 Sometimes you might see this error the first time you go to encrypt your `dockercfg` file:
 
@@ -277,7 +277,7 @@ Sometimes you might see this error the first time you go to encrypt your `docker
 
 This means your AES key is missing from your project directory and must be downloaded according to [the instructions above.](#configuring-a-build-with-a-private-base-image)
 
-#### Need a key regenerated
+### Need a key regenerated
 
 If you need a key regenerated, you can [submit a ticket to the help desk](https://helpdesk.codeship.com) from your account. Keep in mind that this will leave current encrypted credentials and environmental variables invalid for future builds on Codeship until they are re-encrypted using the new key.
 

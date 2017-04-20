@@ -11,7 +11,11 @@ tags:
 ---
 
 <div class="info-block">
+<<<<<<< 7a32e5b70933f4cf2b307a3df9ae4966b8685553
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/installation.md %}).
+=======
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}).
+>>>>>>> Fixing links
 </div>
 
 * include a table of contents
