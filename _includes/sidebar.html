@@ -16,6 +16,7 @@
         <i></i>
         <h5 class="title">{{ current.name }}</h5>
         <ul>
+          {% assign documents = documents | sort:"weight" %}
           {% for document in documents %}
             <li>
               <a href="{{ document.url | relative_url }}">{{ document.title }}</a>

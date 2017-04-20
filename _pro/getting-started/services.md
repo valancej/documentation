@@ -1,7 +1,7 @@
 ---
 title: Services Configuration
 layout: page
-weight: 32
+weight: 7
 tags:
   - docker
   - jet
