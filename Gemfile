@@ -9,7 +9,6 @@ Encoding.default_external = Encoding::UTF_8
 
 gem 'rake', '~>12.0.0'
 gem 'jekyll', '~> 3.4.0'
-gem 'rouge', '~> 1.11.1'
 gem 'sass', '~> 3.4.23'
 
 # Jekyll plugins
