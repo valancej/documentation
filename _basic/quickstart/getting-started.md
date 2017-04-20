@@ -4,6 +4,10 @@ layout: page
 tags:
   - getting started
   - codeship basic
+
+redirect_from:
+  - /basic/getting-started/getting-started/
+
 ---
 
 * include a table of contents

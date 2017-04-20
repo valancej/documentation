@@ -13,6 +13,7 @@ tags:
 
 redirect_from:
   - /docker-guide/getting-started-part-two/
+  - /pro/getting-started/getting-started-part-two/
 ---
 
 * include a table of contents
