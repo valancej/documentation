@@ -26,7 +26,7 @@ redirect_from:
 _Jet_ will look for a steps file in this order. If you are running _Jet_ locally, you can override the filename with the `--steps-path` flag. Both YAML and JSON formats are accepted.
 
 ## Prerequisites
-Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/builds-and-configuration/codeship-configuration.md %}). It will also require that you have configured your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
+Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %}). It will also require that you have configured your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
 
 ## Using codeship-steps.yml
 

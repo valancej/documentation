@@ -1,7 +1,7 @@
 ---
 title: Getting Started With Codeship Pro Part 1
 layout: page
-weight: 11
+weight: 1
 tags:
   - docker
   - jet
@@ -14,7 +14,7 @@ tags:
 redirect_from:
   - /docker-guide/getting-started/
   - /pro/getting-started/getting-started/
-  
+
 ---
 
 * include a table of contents

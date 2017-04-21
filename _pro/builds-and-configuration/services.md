@@ -31,7 +31,7 @@ Running with Docker, your Codeship services allow you to:
 Your Codeship builds run on infrastucture equipped with version {{ site.data.docker.version }} of the Docker Engine.
 
 ## Prerequisites
-Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/builds-and-configuration/codeship-configuration.md %})
+Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %})
 
 ## Services File Setup & Configuration
 By default, we look for the filename `codeship-services.yml`. In its absense, Codeship will automatically search for a `docker-compose.yml` file to use in its place.
