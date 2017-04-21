@@ -1,7 +1,7 @@
 ---
 title: Migrating from Codeship Basic to Codeship Pro
 layout: page
-weight: 40
+weight: 99
 tags:
   - docker
   - jet

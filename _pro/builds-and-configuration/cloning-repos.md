@@ -1,7 +1,7 @@
 ---
 title: "Using Multiple Repos In Your Build"
 layout: page
-weight: 41
+weight: 10
 tags:
   - docker
   - tutorial

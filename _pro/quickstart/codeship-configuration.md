@@ -1,7 +1,7 @@
 ---
 title: Configuring the project on Codeship
 layout: page
-weight: 30
+weight: 6
 tags:
   - docker
   - jet

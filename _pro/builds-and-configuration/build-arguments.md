@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Build Arguments"
 layout: page
-weight: 46
+weight: 7
 tags:
   - docker
   - tutorial

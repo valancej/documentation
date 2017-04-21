@@ -1,7 +1,7 @@
 ---
 title: Jet Release Notes
 layout: page
-weight: 99
+weight: 11
 tags:
   - docker
   - jet

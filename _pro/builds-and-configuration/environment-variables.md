@@ -1,7 +1,7 @@
 ---
 title: "Environment Variables With Codeship Pro"
 layout: page
-weight: 41
+weight: 4
 tags:
   - docker
   - encryption
