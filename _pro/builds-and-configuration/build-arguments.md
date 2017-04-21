@@ -67,7 +67,7 @@ SECRET_BUILDTIME_PASSWORD=XXXXXXXXXXXX
 
 Take care to use `KEY=value` syntax and not `key: value`.
 
-Once the AES key is in the root directory, run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt build_args build_args.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/quickstart/cli.md %}))
+Once the AES key is in the root directory, run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt build_args build_args.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}))
 
 Pass that file to your service's build directive.
 

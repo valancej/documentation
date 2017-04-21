@@ -74,11 +74,7 @@ NAME=codeship
 URL=www.codeship.com
 ```
 
-<<<<<<< 7a32e5b70933f4cf2b307a3df9ae4966b8685553:_pro/builds-and-configuration/environment-variables.md
-Once you create this file and save it in your project directory, we'll encrypt it. This will require that you have installed the [Jet CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/installation.md %}) and that you have downloaded your [AES key](#downloading-your-aes-key) to your project root, as well.
-=======
-Once you create this file and save it in your project directory, we'll encrypt it. This will require that you have installed the [Jet CLI]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}) and that you have downloaded your [AES key](#downloading-your-aes-key) to your project root, as well.
->>>>>>> Fixing links:_pro/getting-started/environment-variables.md
+Once you create this file and save it in your project directory, we'll encrypt it. This will require that you have installed the [Jet CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) and that you have downloaded your [AES key](#downloading-your-aes-key) to your project root, as well.
 
 From your terminal, you will run:
 
@@ -129,7 +125,7 @@ In some situations, you may find that you want to run one set of credentials loc
 For the time being, there are several workarounds that may be worth investigating for your team if you have this need:
 
 <<<<<<< 7a32e5b70933f4cf2b307a3df9ae4966b8685553:_pro/builds-and-configuration/environment-variables.md
-- You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/installation.md %}), you would run `jet steps service_name command` rather than just `jet steps`.
+- You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), you would run `jet steps service_name command` rather than just `jet steps`.
 =======
 - You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/getting-started/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}), you would run `jet steps service_name command` rather than just `jet steps`.
 >>>>>>> Fixing links:_pro/getting-started/environment-variables.md
