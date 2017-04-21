@@ -15,20 +15,11 @@ redirect_from:
   - /pro/getting-started/installation/
   - /docker/cli/
   - /pro/cli/
-<<<<<<< 7a32e5b70933f4cf2b307a3df9ae4966b8685553:_pro/builds-and-configuration/cli.md
-  - /jet/
-  - /pro/getting-started/cli/
----
-
-<div class="info-block">
-These commands are applicable if you want to run the Codeship local development CLI, `jet` binary, locally. Some of these options are only available locally and are unavailable in the hosted Codeship environment. If you haven't already, [you will need to install Jet.]({{ site.baseurl }}{% link _pro/builds-and-configuration/installation.md %})
-=======
   - /jet/  
 ---
 
 <div class="info-block">
 Jet is used to locally debug and test builds for Codeship Pro, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship Basic, you will not need to use Jet.
->>>>>>> Fixing links:_pro/getting-started/cli.md
 </div>
 
 * include a table of contents
