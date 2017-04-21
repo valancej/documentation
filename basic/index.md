@@ -12,7 +12,7 @@ Codeship Basic uses fast, performant VMs with preinstalled technology stacks to 
 ## Getting Started
 To get started with Codeship Basic, there are a few articles that may be helpful.
 
-- [Read the getting started guide]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}) if you are a new to the service.
+- [Read the getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) if you are a new to the service.
 
 - For significant speed improvements via parallelization, check out [ParallelCI](https://codeship.com/features/parallelci).
 
