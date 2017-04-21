@@ -24,7 +24,6 @@ Once you have your [project running locally]({{ site.baseurl }}{% link _pro/quic
 ## Setting Up A New Project
 
 Once you have your [project running locally]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) you can configure the repository on Codeship and have the builds run on each push.
->>>>>>> Merging migration and setup articles together:_pro/getting-started/codeship-configuration.md
 
 If you already worked with Codeship the process will be familiar (and if not, it should be very simple nonetheless).
 
@@ -34,7 +33,7 @@ If you already worked with Codeship the process will be familiar (and if not, it
 
 3. Select the repository you want to build on Codeship. You can filter the list via the search form. (If a repository belonging to an organization on GitHub isn't listed, please take a look at [3rd party restrictions]({{ site.baseurl }}{% link _general/account/permissions.md %}).)
 
-	So far these are the standard steps to add a new project on Codeship.
+So far these are the standard steps to add a new project on Codeship.
 
 4. You can now choose between Codeship Basic (hosted) and Codeship Pro (Docker). Choose the latter.
 	![Select Codeship Pro]({{ site.baseurl }}/images/docker/setup_select_docker.png)
