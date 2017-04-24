@@ -1,7 +1,7 @@
 ---
 title: "Handling Secrets During Codeship Pro Builds"
 layout: page
-weight: 9
+weight: 10
 tags:
   - docker
   - secrets
