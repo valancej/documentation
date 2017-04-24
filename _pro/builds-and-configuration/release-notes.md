@@ -1,5 +1,5 @@
 ---
-title: Jet Release Notes
+title: Pro Release Notes
 layout: page
 weight: 14
 tags:
