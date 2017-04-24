@@ -6,7 +6,7 @@ tags:
   - dependencies
 
 redirect_from:
-  - /basic/getting-started/dependence-cache/
+  - /basic/getting-started/dependency-cache/
 ---
 
 * include a table of contents
