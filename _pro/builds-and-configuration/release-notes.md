@@ -1,5 +1,5 @@
 ---
-title: Pro Release Notes
+title: CLI Release Notes
 layout: page
 weight: 14
 tags:
