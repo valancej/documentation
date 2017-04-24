@@ -11,7 +11,7 @@ tags:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}).
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}).
 </div>
 
 * include a table of contents
@@ -37,7 +37,7 @@ Now you have to copy the content of `keyfile.rsa` into an environment file `sshk
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
 ```
 
-After preparing the `sshkey.env` file we can encrypt it with Jet. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) to turn the `sshkey.env` file into a `sshkey.env.encrypted` file.
+After preparing the `sshkey.env` file we can encrypt it with Jet. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to turn the `sshkey.env` file into a `sshkey.env.encrypted` file.
 
 You can then add it to a service with the `encrypted_env_file` option. It will be automatically decrypted on Codeship.
 
@@ -58,7 +58,7 @@ echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa
 
 ## Deploying Your Code
 
-Once you've established your SSH connection, you will want to deploy your code. This is accomplished via your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}) file by using SSH deployment commands with your authenticated container.
+Once you've established your SSH connection, you will want to deploy your code. This is accomplished via your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file by using SSH deployment commands with your authenticated container.
 
 ```yaml
 - service: ssh

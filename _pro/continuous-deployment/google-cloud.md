@@ -43,7 +43,7 @@ Store the json file you received from the GCP console into a file named *google_
 echo 'google_deployment.env' >> .gitignore
 ```
 
-Now you can encrypt the env file into a file called `google_deployment.env.encrypted`. Take a look at the [encrypted environment files tutorial]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) to encrypt the file properly.
+Now you can encrypt the env file into a file called `google_deployment.env.encrypted`. Take a look at the [encrypted environment files tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to encrypt the file properly.
 
 Now we're all set with the environment file and can set up our deployment script, codeship-services.yml and codeship-steps.yml.
 
@@ -99,9 +99,9 @@ Now you have a working integration with the Google Cloud that will automatically
 
 ## Google Container Engine
 
-Our container also works with the Google Container Engine and Container Registry. At first we will set up a [push step]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}) to push a container to the registry. Then a script will authenticate with Google and interact with kubectl to start the service.
+Our container also works with the Google Container Engine and Container Registry. At first we will set up a [push step]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}) to push a container to the registry. Then a script will authenticate with Google and interact with kubectl to start the service.
 
-First we define the [dockercfg generator service]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}) container in the ***codeship-services.yml*** file which will create temporary credentials for us. You can check out the code behind the container in the [codeship-library/gcr-dockercfg-generator](https://github.com/codeship-library/gcr-dockercfg-generator) repository. Make sure the environment variables mentioned above are set up in the encrypted_env_file.
+First we define the [dockercfg generator service]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}) container in the ***codeship-services.yml*** file which will create temporary credentials for us. You can check out the code behind the container in the [codeship-library/gcr-dockercfg-generator](https://github.com/codeship-library/gcr-dockercfg-generator) repository. Make sure the environment variables mentioned above are set up in the encrypted_env_file.
 
 ```yaml
 gcr_dockercfg:

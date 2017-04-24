@@ -35,7 +35,7 @@ rvm use $(cat .ruby-version) --install
 One use case is that you can change your Ruby version for different branches.
 
 ## Dependencies
-You can install dependencies using bundler in your [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+You can install dependencies using bundler in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 For example:
 
@@ -47,7 +47,7 @@ If you want to use a version of bundler different than what is preinstalled on t
 
 ### Dependency Cache
 
-Codeship automatically configures bundler to use the `$HOME/cache/bundler` directory, which we save between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.
+Codeship automatically configures bundler to use the `$HOME/cache/bundler` directory, which we save between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
 
 ## Frameworks And Testing
 
@@ -71,7 +71,7 @@ Make sure to run your commands with `bundle exec` (e.g. `bundle exec rspec`) so 
 
 ## Parallelization Gems
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
 
 While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues, as well.
 

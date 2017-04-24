@@ -26,7 +26,7 @@ Note, this is one of the only commands available via `sudo` and root access to r
 
 If you need to install a later version or use a custom configuration, please take a look at [this script](https://github.com/codeship/scripts/blob/master/packages/elasticsearch.sh).
 
-For example if you wanted to install **5.2.0** you would set the desired version as an [environment variable]({{ site.baseurl }}{% link _basic/getting-started/set-environment-variables.md %}) in your project.
+For example if you wanted to install **5.2.0** you would set the desired version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project.
 
 ```shell
 ELASTICSEARCH_VERSION=5.2.0

@@ -45,7 +45,7 @@ We do not cache Dart dependencies between builds.
 
 ## Notes And Known Issues
 
-Due to Dart version and build issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/getting-started/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to Dart version and build issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
 
 ## Frameworks And Testing
@@ -61,6 +61,6 @@ or PhantomJS to run your Dart tests in a browser. You can read more in our
 
 ## Parallelization
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using Dart test runner's built-in test parallelization is a good way to speed up your tests.
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using Dart test runner's built-in test parallelization is a good way to speed up your tests.
 
 Note that aggressive parallelization can cause resource and build failure issues, as well.

@@ -73,7 +73,7 @@ SCP allows you to copy files from your local system to another server. With the 
 you can also recursively upload directories. You can read more about the different options
 in the [SCP man page]({% man_url scp %}).
 
-For the [branch you want to deploy]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}) you create a script deployment that contains:
+For the [branch you want to deploy]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) you create a script deployment that contains:
 
 ```shell
 scp -rp ~/clone/* ssh_user@your.server.com:/path/on/server/
@@ -87,7 +87,7 @@ into your servers `~/.ssh/authorized_keys` file.
 Rsync is an amazing tool to sync your local filesystem with an external server. Rsync
 will check the files and only upload files that have changed.
 
-For the [branch you want to deploy]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}) you create a script deployment that contains the following code.
+For the [branch you want to deploy]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) you create a script deployment that contains the following code.
 
 ```shell
 rsync -avz ~/clone/ ssh_user@your.server.com:/path/on/server/
@@ -111,7 +111,7 @@ We will deploy the complete repository contents onto a remote server. Please add
 put -rp /home/rof/clone /path/on/server/
 ```
 
-For the [branch you want to deploy]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}) you create a script deployment that contains:
+For the [branch you want to deploy]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) you create a script deployment that contains:
 
 ```shell
 sftp -b deploy/production ssh_user@your.server.com

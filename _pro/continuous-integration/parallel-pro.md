@@ -22,7 +22,7 @@ The [pricing](https://codeship.com/pricing/pro) for Codeship Pro is centered aro
 
 ## Setting Up Parallel Steps
 
-To set up your parallel steps in Codeship Pro, you will be making changes to your [codeship-services.yml]({% link _pro/getting-started/services.md %}) file.
+To set up your parallel steps in Codeship Pro, you will be making changes to your [codeship-services.yml]({% link _pro/builds-and-configuration/services.md %}) file.
 
 A parallel step group is just defined by using the `type: parallel` header and then nesting all steps you want parallelized underneath, as seen in this example:
 
@@ -54,7 +54,7 @@ To break a larger test suite into parallelized groups of test specs running simu
 
 ## Parallel Modules
 
-In addition to parallelizing explicitly in your [codeship-services.yml]({% link _pro/getting-started/services.md %}), most popular frameworks offer modules that you can install to parallelize within the codebase itself.
+In addition to parallelizing explicitly in your [codeship-services.yml]({% link _pro/builds-and-configuration/services.md %}), most popular frameworks offer modules that you can install to parallelize within the codebase itself.
 
 While we do not officially support or integrate with any of these modules, many Codeship users find success speeding their tests up by using them. **Note** that in many cases these modules create additional strain on your machine resource usage, so you will want to keep an eye on this as misconfiguration can result in a resource max out that ultimately slows your builds down or causes failures.
 

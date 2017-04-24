@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-You may want to read the [Codeship Pro Getting Started Guide]({% link _pro/getting-started/getting-started.md %}) to learn more about how Codeship Pro works. You can also [watch a short demo video here](https://codeship.com/features/pro).
+You may want to read the [Codeship Pro Getting Started Guide]({% link _pro/quickstart/getting-started.md %}) to learn more about how Codeship Pro works. You can also [watch a short demo video here](https://codeship.com/features/pro).
 </div>
 
 * include a table of contents
@@ -28,7 +28,7 @@ We have a sample Node repo that you can clone or take a look at via the GitHub [
 
 ## Services File
 
-The following is an example of a [Codeship Services file]({% link _pro/getting-started/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
+The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
 
 When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
@@ -51,7 +51,7 @@ postgres:
 
 ## Steps File
 
-The following is an example of a [Codeship Steps file]({% link _pro/getting-started/steps.md %}).
+The following is an example of a [Codeship Steps file]({% link _pro/builds-and-configuration/steps.md %}).
 
 Note that every step runs on isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
 
@@ -89,10 +89,10 @@ COPY . ./
 
 ## Notes And Known Issues
 
-Because of version and test dependency issues, it is advised to try using [the Jet CLI]({% link _pro/getting-started/cli.md %}) to debug issues locally via `jet steps`.
+Because of version and test dependency issues, it is advised to try using [the Jet CLI]({% link _pro/builds-and-configuration/cli.md %}) to debug issues locally via `jet steps`.
 
 ## Caching
 
 You can enable caching per service in your Services file.
 
-You can [read more about how caching works on Codeship Pro here]({{ site.baseurl }}{% link _pro/getting-started/caching.md %}).
+You can [read more about how caching works on Codeship Pro here]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %}).

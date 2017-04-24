@@ -35,7 +35,7 @@ Of course among all of these notifications and pieces of information, the most c
 
 Smart Notifications are a key feature of Codeship.
 
-[Codeship Pro]({% link _pro/getting-started/getting-started.md %}) uses commands inside containers. Because of this, you can define your own notifications per the baked container images however the need arises. This also provides the advantage of being part of the actual application system versus being part of the build tooling. This removes the need for plugins and adds the advantage of being able to reuse notifications for monitoring within the deployed application.
+[Codeship Pro]({% link _pro/quickstart/getting-started.md %}) uses commands inside containers. Because of this, you can define your own notifications per the baked container images however the need arises. This also provides the advantage of being part of the actual application system versus being part of the build tooling. This removes the need for plugins and adds the advantage of being able to reuse notifications for monitoring within the deployed application.
 
 [Codeship Basic](https://codeship.com/features/basic), too, provides a lot of granular build notification options, giving you good visibility into the health of your projects.
 

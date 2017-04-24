@@ -99,11 +99,11 @@ Installing dependencies through Maven is fully supported.
 
 ## Dependency Cache
 
-Codeship automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/getting-started/dependency-cache.md %}) about the dependency cache and how to clear it.
+Codeship automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
 
 ## Notes And Known Issues
 
-Due to Java version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/getting-started/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to Java version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
 ## Frameworks And Testing
 
@@ -111,6 +111,6 @@ All build tools and test frameworks, such as Junit, will work without issue as l
 
 ## Parallelization
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}), some customers have found using the parallel features in Junit and other testing frameworks to be a good way to speed up your tests.
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the parallel features in Junit and other testing frameworks to be a good way to speed up your tests.
 
 Note that aggressive parallelization can cause resource and build failure issues, as well.

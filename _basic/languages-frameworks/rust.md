@@ -20,7 +20,7 @@ Rust is installed via [rustup](https://github.com/rust-lang-nursery/rustup.rs) s
 
 ## Dependencies
 
-After installing Rust, fetching dependencies via Cargo should work as normal in your [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+After installing Rust, fetching dependencies via Cargo should work as normal in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 
 ### Dependency Cache
@@ -29,7 +29,7 @@ We do not cache Rust dependencies between builds.
 
 ## Notes And Known Issues
 
-As mentioned above, as Rust is not preinstalled you will need to manually install Rust and necessary dependencies yourself in your [setup commands]({{ site.baseurl }}{% link _basic/getting-started/getting-started.md %}).
+As mentioned above, as Rust is not preinstalled you will need to manually install Rust and necessary dependencies yourself in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 ## Frameworks And Testing
 
@@ -37,4 +37,4 @@ Frameworks such as Iron and testing via the standard Rust test attribute or via 
 
 ## Parallelization
 
-Rust tests can be parallelized via our [ParallelCI]({{ site.baseurl }}{% link _basic/getting-started/parallelci.md %}) feature by manually specifying different test specs per pipeline.
+Rust tests can be parallelized via our [ParallelCI]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}) feature by manually specifying different test specs per pipeline.

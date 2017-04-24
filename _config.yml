@@ -35,9 +35,9 @@ defaults:
     values:
       category: "Continuous Integration"
   - scope:
-      path: "_basic/getting-started"
+      path: "_basic/quickstart"
     values:
-      category: "Getting Started"
+      category: "Quickstart"
   - scope:
       path: "_basic/languages-frameworks"
     values:
@@ -55,6 +55,10 @@ defaults:
     values:
       category: "Databases"
   - scope:
+      path: "_basic/builds-and-configuration"
+    values:
+      category: "Builds &amp; Configuration"
+  - scope:
       path: "_pro/continuous-deployment"
     values:
       category: "Continuous Deployment"
@@ -63,9 +67,13 @@ defaults:
     values:
       category: "Continuous Integration"
   - scope:
-      path: "_pro/getting-started"
+      path: "_pro/quickstart"
     values:
-      category: "Getting Started"
+      category: "Quickstart"
+  - scope:
+      path: "_pro/builds-and-configuration"
+    values:
+      category: "Builds &amp; Configuration"
   - scope:
       path: "_pro/languages-frameworks"
     values:
@@ -88,7 +96,8 @@ defaults:
       category: "Projects"
 
 sidebar_order:
-  - "Getting Started"
+  - "Quickstart"
+  - "Builds &amp; Configuration"
   - "Languages &amp; Frameworks"
   - "Databases"
   - "Continuous Deployment"

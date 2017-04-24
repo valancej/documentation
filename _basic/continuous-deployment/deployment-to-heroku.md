@@ -13,7 +13,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-Codeship makes makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/getting-started/deployment-pipelines.md %}).
+Codeship makes makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
 * include a table of contents
 {:toc}
