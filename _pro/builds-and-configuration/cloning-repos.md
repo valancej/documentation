@@ -1,5 +1,5 @@
 ---
-title: Using Multiple Repos
+title: Using Multiple Repositories
 layout: page
 weight: 11
 tags:
