@@ -11,7 +11,7 @@ tags:
 ---
 
 <div class="info-block">
-ow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}).
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}).
 </div>
 
 * include a table of contents

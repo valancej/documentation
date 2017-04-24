@@ -1,6 +1,7 @@
 ---
 title: Supported Services and Databases
 layout: page
+weight: 51
 tags:
   - docker
   - jet
@@ -10,7 +11,7 @@ tags:
 
 redirect_from:
   - /docker/services-and-databases/
-  - /pro/getting-started/services-and-databases/  
+  - /pro/getting-started/services-and-databases/
 ---
 
 * include a table of contents

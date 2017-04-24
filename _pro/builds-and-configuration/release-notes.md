@@ -9,7 +9,7 @@ tags:
 
 redirect_from:
   - /docker/release-notes/
-  - /pro/getting-started/release-notes/  
+  - /pro/getting-started/release-notes/
 ---
 
 <div class="info-block">

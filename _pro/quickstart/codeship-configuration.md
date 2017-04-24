@@ -19,8 +19,6 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-Once you have your [project running locally]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) you can configure the repository on Codeship and have the builds run on each push.
-
 ## Setting Up A New Project
 
 Once you have your [project running locally]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) you can configure the repository on Codeship and have the builds run on each push.

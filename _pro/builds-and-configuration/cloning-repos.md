@@ -15,6 +15,7 @@ redirect_from:
   - /pro/getting-started/cloning-repos/
 ---
 
+<div class="info-block">
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}).
 </div>
 
