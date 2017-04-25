@@ -140,6 +140,22 @@ Now, if we go over to our Dockerhub repo, we should see some meta data indicatin
 
 ![Dockerhub repo screenshot]({{ site.baseurl }}/images/gettingstarted/dockerhub-recent-push.png)
 
+## Debugging Your Builds
+
+Let's take a quick detour to discuss debugging your builds, in case something has gone wrong in the build you just pushed up and you're trying to solve the problem. Codeship Pro does not offer SSH access to build machines for debugging like Codeship Basic does, but can debug your builds locally using `jet`.
+
+You will just need to use `jet run` (a command we didn't see earlier, which leaves your containers running until you kill them) and then connect to your running containers to manually run the commands from your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file.
+
+To do this, you will need to execute the following commands:
+
+```bash
+jet run PRIMARY_SERVICE_NAME
+docker ps -a
+docker exec CONTAINERID
+```
+
+Note that you are running your containers, looking up the container ID and then connecting to the running container using the container ID.
+
 ## Up Next: Using Volumes
 
 Now we've built an app, added a test, pushed an image and deployed our code. What's next?

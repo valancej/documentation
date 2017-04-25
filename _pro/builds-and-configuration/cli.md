@@ -128,3 +128,17 @@ While `jet steps` runs your CI/CD pipeline locally, you can also use `jet run` t
 For instance, you can run `jet run service_app` or `jet run service_app echo "hello"` where `service_app` is one of the services defined in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 **Note** that you can also run `jet run --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
+
+### Debugging Your Builds
+
+While Codeship Pro does not offer SSH access to build machines for debugging like Codeship Basic does, you can  debug your builds locally in a similar way using `jet`. You will just need to use `jet run`, as seen above, and then connect to your running containers to manually run the commands from your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file.
+
+To do this, you will need to execute the following commands:
+
+```bash
+jet run PRIMARY_SERVICE_NAME
+docker ps -a
+docker exec CONTAINERID
+```
+
+Note that you are running your containers, looking up the container ID and then connecting to the running container using the container ID.
