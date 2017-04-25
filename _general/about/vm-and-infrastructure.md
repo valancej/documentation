@@ -26,3 +26,7 @@ All builds on both Codeship Basic and Codeship Pro have 10gb of disk space alloc
 ## System Timeouts
 
 If a command runs for longer than 10 minutes without printing any log output, the command and build will be automatically failed. Additionally, if a build runs for longer than 3 hours, it will be automatically failed.
+
+## Docker Version On Codeship Pro
+
+On Codeship Pro, builds run on infrastructure equipped with version {{ site.data.docker.version }} of Docker.
