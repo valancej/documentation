@@ -22,3 +22,7 @@ All incoming ports except for ssh port 22 are rejected by default. Outgoing port
 
 ## Disk Space
 All builds on both Codeship Basic and Codeship Pro have 10gb of disk space allocation for the build environment.
+
+## Docker Version On Codeship Pro
+
+On Codeship Pro, builds run on infrastructure equipped with version {{ site.data.docker.version }} of Docker.
