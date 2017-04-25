@@ -1,5 +1,5 @@
 ---
-title: "Using Image Registries"
+title: Using Image Registries
 layout: page
 weight: 5
 tags:

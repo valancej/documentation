@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Docker volumes"
+title: Using Docker Volumes
 layout: page
 weight: 8
 tags:

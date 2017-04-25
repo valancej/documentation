@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Custom Notifications"
+title: Custom Notifications
 layout: page
 weight: 13
 tags:

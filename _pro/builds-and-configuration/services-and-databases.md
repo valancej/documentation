@@ -1,5 +1,5 @@
 ---
-title: Supported Services and Databases
+title: Services and Databases
 layout: page
 weight: 12
 tags:

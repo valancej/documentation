@@ -1,5 +1,5 @@
 ---
-title: "Using Multiple Repos In Your Build"
+title: Using Multiple Repositories
 layout: page
 weight: 11
 tags:

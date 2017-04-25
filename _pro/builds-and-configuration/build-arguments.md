@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Build Arguments"
+title: Docker Build Arguments
 layout: page
 weight: 7
 tags:

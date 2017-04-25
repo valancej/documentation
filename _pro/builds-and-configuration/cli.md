@@ -1,5 +1,5 @@
 ---
-title: Jet Local CLI For Codeship Pro
+title: Local CLI (Codeship Pro)
 layout: page
 weight: 1
 tags:
