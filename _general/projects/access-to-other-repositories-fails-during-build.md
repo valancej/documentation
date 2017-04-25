@@ -39,3 +39,9 @@ fatal: Could not read from remote repository
 ```shell
 Permission denied (publickey).
 ```
+
+```
+Please make sure you have the correct access rights
+and the repository exists.
+Clone of 'git@bitbucket.com:username/reponame.git' into submodule path 'path' failed
+```
