@@ -236,3 +236,7 @@ For each step, the running container is provided with a set of environment varia
 * `CI_NAME` (defaults to `codeship`)
 
 Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.
+
+## Step Timeouts
+
+If a step runs for longer than 10 minutes without printing any log output, the command and build will be automatically failed. Additionally, if a build runs for longer than 3 hours, it will be automatically failed.

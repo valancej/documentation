@@ -101,3 +101,7 @@ You can sign up for a free ParallelCI trial from the sidebar or [get in touch wi
 ### Infrastructure
 
 Codeship Basic builds run on fresh VMs provisioned on Ubuntu Trusty. You can learn more about our infrastructure setup [here]({{ site.baseurl }}{% link _general/about/vm-and-infrastructure.md %})
+
+### System Timeouts
+
+If a command runs for longer than 10 minutes without printing any log output, the command and build will be automatically failed. Additionally, if a build runs for longer than 3 hours, it will be automatically failed.
