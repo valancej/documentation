@@ -7,6 +7,10 @@ tags:
   - migrating
 
 ---
+
+* include a table of contents
+{:toc}
+
 There’s always someone who ends up with the responsibility of managing users and roles within an organization. This is a task that just needs done, and it has a sunk investment in setup and maintenance. However, it’s a vitally important task that needs to be finished and managed reliably each day.
 
 With the Swiss Army knife that is Jenkins, that management and setup can actually be time-consuming and, in the worst case, need dedicated, specialized personnel.

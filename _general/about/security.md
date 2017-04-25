@@ -9,10 +9,11 @@ redirect_from:
   - /security/
   - /security/security/
 ---
-We fully understand and recognize, that the security of your source code and configuration data is important, as it forms the base of your and our endeavors. Therefore we put a lot of effort and thought into providing a secure infrastructure for you to use.
 
 * include a table of contents
 {:toc}
+
+We fully understand and recognize, that the security of your source code and configuration data is important, as it forms the base of your and our endeavors. Therefore we put a lot of effort and thought into providing a secure infrastructure for you to use.
 
 ## System Security Overview
 

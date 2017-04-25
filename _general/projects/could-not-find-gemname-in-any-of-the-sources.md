@@ -9,6 +9,10 @@ tags:
 redirect_from:
   - /faq/could-not-find-gemname-in-any-of-the-sources/
 ---
+
+* include a table of contents
+{:toc}
+
 Sometimes you might see errors like the following:
 
 ```shell

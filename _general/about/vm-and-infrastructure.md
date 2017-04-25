@@ -9,6 +9,9 @@ redirect_from:
   - /security/vm-and-infrastructure/
 ---
 
+* include a table of contents
+{:toc}
+
 ## OS & Virtualization
 
 **Note:** The following information is specific to Codeship Basic. Codeship Pro has several build instance configurations that vary according to account setup.

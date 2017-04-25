@@ -11,6 +11,9 @@ tags:
 This was originally featured [as an eBook](https://resources.codeship.com/ebooks/deploy-docker-kubernetes-codeship-aw) in our[Resources Library](https://resources.codeship.com).
 </div>
 
+* include a table of contents
+{:toc}
+
 ## What Is Kubernetes?
 
 According to the official website, Kubernetes is a system that groups containers into logical units, which makes management of containers across multiple nodes "as simple as managing containers on a single system." Kubernetes essentially acts as a digital datacenter, allowing you to seamlessly manage hundreds of servers across as many nodes without ever having to step foot inside an overly air-conditioned clean room.

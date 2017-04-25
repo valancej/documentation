@@ -10,6 +10,10 @@ redirect_from:
   - /continuous-integration/where-can-i-find-the-ssh-public-key-for-my-project/
   - /general/projects/where-can-i-find-the-ssh-public-key-for-my-project/
 ---
+
+* include a table of contents
+{:toc}
+
 For communication between your Codeship project and outside via SSH, you will need your project's SSH public key which you can find in the Codeship dashboard.
 
 * Open the project navigation on top of the page.

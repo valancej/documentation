@@ -8,6 +8,10 @@ tags:
 redirect_from:
   - /faq/getting_started_with_ci/
 ---
+
+* include a table of contents
+{:toc}
+
 Continuous Integration and Continuous Deployment are essential parts of agile software development. In agile software development, there is no versioning of software. Instead, builds get rolled out continuously, which means that new features and bugfixes are integrated almost instantly rather than waiting for the next version release.
 
 Continuous Integration (CI) and Continuous Deployment (CD) are sometimes used interchangeably, although they mean different things.

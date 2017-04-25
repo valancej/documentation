@@ -15,6 +15,10 @@ redirect_from:
   - /general/projects/limit_builds/
   - /general/projects/transfer-project-to-new-owner/
 ---
+
+* include a table of contents
+{:toc}
+
 This article will teach you how to create and delete a project as well as give some further information on specific questions.
 
 * include a table of contents
