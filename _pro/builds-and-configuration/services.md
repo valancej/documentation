@@ -28,7 +28,7 @@ Running with Docker, your Codeship services allow you to:
 * Build specialized deployment images to unify deployment across your company
 * Use any Docker image available on an image registry for your builds
 
-Your Codeship builds run on infrastucture equipped with version {{ site.data.docker.version }} of Docker.
+**Your Codeship builds run on infrastructure equipped with version {{ site.data.docker.version }} of Docker.**
 
 ## Prerequisites
 Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %})
