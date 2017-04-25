@@ -1,6 +1,6 @@
 ---
-title: Environment Variables on Codeship Basic
-weight: 96
+title: Environment Variables On Codeship Basic
+weight: 2
 tags:
   - testing
   - environment variables

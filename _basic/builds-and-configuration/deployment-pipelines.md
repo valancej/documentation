@@ -1,6 +1,7 @@
 ---
-title: Deployment Pipelines
+title: Deployment Pipelines On Codeship Basic
 layout: page
+weight: 6
 tags:
   - deployment
 

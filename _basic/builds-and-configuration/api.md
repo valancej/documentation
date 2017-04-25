@@ -1,6 +1,7 @@
 ---
 title: API
 layout: page
+weight: 11
 tags:
   - api
   - integrations

@@ -1,6 +1,6 @@
 ---
-title: ParallelCI
-weight: 97
+title: Parallel Tests On Codeship Basic
+weight: 5
 tags:
 - testing
 - continuous integration

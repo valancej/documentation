@@ -1,6 +1,7 @@
 ---
-title: Setting Timezone On Codeship Basic
+title: Setting Timezone
 layout: page
+weight: 10
 tags:
   - timezone
 

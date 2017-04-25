@@ -1,6 +1,7 @@
 ---
-title: Sudo and Root On Codeship Basic
+title: Sudo And Root On Codeship Basic
 layout: page
+weight: 7
 tags:
   - faq
   - sudo
