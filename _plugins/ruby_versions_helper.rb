@@ -18,6 +18,6 @@ module RubyVersionsHelper
   end
 
   def get_builds_ruby_file(relative_path)
-    URI.parse("http://codeship.io.s3.amazonaws.com/checkbot/builds/ruby/#{relative_path}").read.split("\n")
+    URI.parse("https://s3.amazonaws.com/codeship-checkbot/builds/ruby/#{relative_path}").read.split("\n")
   end
 end
