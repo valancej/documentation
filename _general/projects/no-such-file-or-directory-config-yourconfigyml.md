@@ -9,6 +9,10 @@ redirect_from:
   - /troubleshooting/no-such-file-or-directory-config-yourconfigyml/
   - /faq/no-such-file-or-directory-config-yourconfigyml/
 ---
+
+* include a table of contents
+{:toc}
+
 If it's a configuration file which you ignored in your repository, create a `your_config.yml.example` with data that works for your tests an add it to your repository. Then add the following command to your **setup commands** so the YAML file is properly set up.
 
 ```shell

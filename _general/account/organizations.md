@@ -11,12 +11,12 @@ redirect_from:
   - /administration/organizations/
 ---
 
+* include a table of contents
+{:toc}
+
 Organizations simplify and enhance team management as well as subscription management for (larger) teams on Codeship.
 
 You can define arbitrary teams and add them to any organization project and add Codeship accounts to those teams. You can also provide read-only access to some of your team members.
-
-* include a table of contents
-{:toc}
 
 We currently offer the following roles (though more roles are already on our todo list):
 

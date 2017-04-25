@@ -7,6 +7,10 @@ tags:
   - migrating
 
 ---
+
+* include a table of contents
+{:toc}
+
 We often get questions regarding the differences and migration path from Jenkins to Codeship. Here, we’ll walk through the almost effortless ways to migrate your notifications from Jenkins to Codeship. For those that aren’t using Jenkins, this documentation will still convey ways that could be used to migrate from any number of privately managed, hosted, and maintained build servers.
 
 Jenkins is a build server used by many developers, but as practices have matured and more streamlined tooling is needed, your development team may be dissatisfied with the granular treatment to the continuous integration and delivery process that Jenkins provides.

@@ -13,6 +13,9 @@ redirect_from:
   - /faq/builds-are-not-triggered/
 ---
 
+* include a table of contents
+{:toc}
+
 Builds on Codeship are triggered via a webhook from your VCS. We add this hook to your repository when you configure the project on Codeship, but sometimes those settings get out of sync.
 
 That's why we show the status of the webhook configuration on the _General_ page of your project settings.

@@ -15,6 +15,10 @@ redirect_from:
   - /troubleshooting/push-to-remote-repositories/
   - /faq/push-to-remote-repositories/
 ---
+
+* include a table of contents
+{:toc}
+
 If you want to push to a remote git repository during your deployment steps on Codeship, and the build fails with an error message such as the following:
 
 In case you push to a remote git repository and encounter an error with an error message like the following

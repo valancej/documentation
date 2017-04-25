@@ -20,6 +20,9 @@ redirect_from:
 
 ---
 
+* include a table of contents
+{:toc}
+
 ## Setting Up A New Codeship Account
 
 If you're looking to sign up and create a project on Codeship, this guide will walk you through the initial onboarding process.
