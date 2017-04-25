@@ -1,6 +1,7 @@
 ---
-title: Running A Command If A Step Fails
+title: Run A Command If A Step Fails
 layout: page
+weight: 9
 tags:
   - faq
   - build error

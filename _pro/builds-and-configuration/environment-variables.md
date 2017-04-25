@@ -1,5 +1,5 @@
 ---
-title: Environment Variables With Codeship Pro
+title: Environment Variables On Codeship Pro
 layout: page
 weight: 4
 tags:

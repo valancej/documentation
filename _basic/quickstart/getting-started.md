@@ -1,5 +1,6 @@
 ---
 title: Getting Started With Codeship Basic
+weight: 1
 layout: page
 tags:
   - getting started

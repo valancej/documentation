@@ -1,6 +1,6 @@
 ---
-title: What's Intalled on Codeship Basic
-weight: 97
+title: What's Installed On Codeship Basic
+weight: 1
 tags:
 - AMI
 - continuous integration

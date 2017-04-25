@@ -1,6 +1,6 @@
 ---
-title: Debugging Your Builds Via SSH Sessions
-weight: 1
+title: Debug Your Builds Via SSH
+weight: 3
 tags:
   - testing
   - ssh
