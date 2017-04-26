@@ -8,6 +8,7 @@ tags:
 redirect_from:
   - /administration/notifications/
   - /basic/getting-started/webhooks/
+  - /integrations/webhooks/
 
 ---
 

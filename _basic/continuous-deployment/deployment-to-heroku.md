@@ -8,6 +8,8 @@ tags:
 
 redirect_from:
   - /continuous-deployment/deployment-to-heroku/
+  - /faq/push-to-heroku-rejected/
+  - /tutorials/continuous-deployment-heroku-github-ruby-rails/
 ---
 
 * include a table of contents

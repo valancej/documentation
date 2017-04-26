@@ -8,6 +8,7 @@ tags:
 
 redirect_from:
   - /continuous-deployment/deployment-to-google-app-engine/
+  - /tutorials/continuous-deployment-google-app-engine-github-django-python/
 ---
 
 * include a table of contents

@@ -9,6 +9,7 @@ redirect_from:
   - /continuous-deployment/deployment-pipelines/
   - /basic/getting-started/wildcard-deployment-pipelines/
   - /basic/getting-started/deployment-pipelines/
+  - /continuous-deployment/wildcard-deployment-pipelines/
 
 ---
 
