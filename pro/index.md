@@ -6,6 +6,7 @@ active: pro
 redirect_from:
   - /docker/introduction/
   - /docker/getting-started/
+  - /docker/
 ---
 Codeship Pro uses containers built from Docker images to let you define and build your own completely flexible CI/CD environment.
 

@@ -6,22 +6,5 @@
     "Key": "404/index.html"
   },
   "RoutingRules": [{
-    "Condition": {
-      "KeyPrefixEquals": "classic/"
-    },
-    "Redirect": {
-      "HostName": "documentation.codeship.com",
-      "ReplaceKeyPrefixWith": "basic/",
-      "HttpRedirectCode": "302"
-    }
-  }, {
-    "Condition": {
-      "KeyPrefixEquals": "docker/"
-    },
-    "Redirect": {
-      "HostName": "documentation.codeship.com",
-      "ReplaceKeyPrefixWith": "pro/",
-      "HttpRedirectCode": "302"
-    }
   }]
 }
