@@ -2,6 +2,8 @@
 title: General
 layout: page
 collection: general
+redirect_from:
+  - /administration/
 ---
 
 Welcome to the Documentation about the _General_ category.

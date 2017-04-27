@@ -6,7 +6,15 @@ active: basic
 redirect_from:
   - /continuous-integration/welcome-classic-infrastructure/
   - /classic/getting-started/welcome-classic-infrastructure/
-  - /classic/
+  - analytics
+  - continuous-deployment
+  - databases
+  - continuous-integration
+  - languages
+  - queues
+  - integrations
+  - services
+  - classic
 ---
 Codeship Basic uses fast, performant VMs with preinstalled technology stacks to make it super easy and fast to get started running a CI/CD pipeline.
 
