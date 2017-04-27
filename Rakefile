@@ -10,6 +10,11 @@ task :serve do
 	sh "docker run -it --rm -p 4000:4000 -v $(pwd):/docs #{IMAGE_NAME}"
 end
 
+desc 'Run tests'
+task :test do
+	sh "jet steps"
+end
+
 desc 'Update Ruby and NodeJS based dependencies'
 task update: %w[build update:rubygems update:yarn]
 namespace :update do
