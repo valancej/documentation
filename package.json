@@ -10,17 +10,17 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "^6.9.3",
-    "yarn": "^0.18.1"
+    "node": "^6.10.2",
+    "yarn": "^0.23.2"
   },
   "dependencies": {
-    "autoprefixer": "^6.0.0",
+    "autoprefixer": "^6.7.7",
     "gulp": "^3.9.0",
     "gulp-folders": "^1.1.0",
-    "gulp-image-resize": "^0.7.1",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-jsonlint": "^1.1.1",
-    "gulp-postcss": "^6.0.0",
+    "gulp-image-resize": "^0.12.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-jsonlint": "^1.2.0",
+    "gulp-postcss": "^6.4.0",
     "gulp-print": "^2.0.1"
   }
 }
