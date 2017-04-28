@@ -16,11 +16,13 @@ You can find a sample repo for deploying to Microsoft Azure with Codeship Pro on
 * include a table of contents
 {:toc}
 
-## Continuous delivery to Azure with Docker
+## Continuous Delivery To Azure With Docker
 
 To make it easy for you to deploy your application to Azure we’ve built a container that has the AzureCLI installed. We will set up a simple example showing you how to configure any deployment to Azure.
 
-## Codeship Azure deployment container
+**Note** that since Codeship Pro runs Docker containers on Linux build machines, in addition to deploying to Azure, we also support all Microsoft .NET builds that do not require Windows build machines.
+
+## Codeship Azure Deployment Container
 
 The Azure deployment container lets you plugin your deployment tools without the need to include that in the testing or even production container. That keeps your containers small and focused on the specific task they need to accomplish in the build. By using the Azure deployment container, you get the tools you need to deploy to any Azure service and still have the flexibility to adapt it to your needs.
 
@@ -35,7 +37,7 @@ Prior to getting started, please ensure you have the following installed in your
 - [Docker](https://www.Docker.com/products/overview)
 - [A Microsoft Azure Account](https://azure.microsoft.com/)
 
-## Using other tools
+## Using Other Tools
 
 While the container we provide for interacting with Azure gives you an easy and straight forward way to run your deployments it is not the only way you can interact with Azure services. You can install your own dependencies, write your own deployment scripts, talk to the Azure API directly or bring 3rd party tools to do it for you. By installing those tools into a Docker container and running them you have a lot of flexibility in how to deploy to Azure.
 
@@ -102,6 +104,6 @@ Now that you can authenticate with Azure and build Azure infrastructure, you wil
 
 - You can use Azure Container Service and Kubernetes to deploy to Azure. [See here for an example.](https://github.com/codeship-library/azure-deployment/tree/acs-kubernetes)
 
-## See also
+## See Also
 
 - [Create a Docker environment in Azure using the Docker VM extension](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-Dockerextension)
