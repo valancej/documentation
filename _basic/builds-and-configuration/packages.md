@@ -25,7 +25,7 @@ In a best effort to list everything installed on  our hosted Codeship Basic envi
 
 If you want to check for a certain package or see what the default version is for yourself, you can use the [SSH Debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) within your project and connect directly to our build machine.
 
-![Open SSH Debug Session]({{ site.baseurl }}/images/basic/open_ssh.png)
+![Reset Dependency Cache]({{ site.baseurl }}/images/basic-guide/ssh-debug.png)
 
 Click on the link to open an SSH debug session. You will be provided with the username, server, and port which you can use to access the build machine. You will need an SSH key in your .ssh folder (default). For more information, please read our documentation on [SSH access]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}).
 
