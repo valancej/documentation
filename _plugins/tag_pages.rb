@@ -18,8 +18,15 @@ module Jekyll
     def generate(site)
       if site.layouts.key? 'tags'
         dir = site.config['tags_dir'] || 'tags'
-        site.tags.keys.each do |tag|
-          site.pages << TagPage.new(site, site.source, File.join(dir, tag.downcase.gsub(' ', '-')), tag)
+
+        collections = site.collections.map(&:first)
+
+        collections.each do |collection|
+          site.collections[collection].docs.each do |post|
+            post["tags"].each do |tag|
+              site.pages << TagPage.new(site, site.source, File.join(dir, tag.downcase.gsub(' ', '-')), tag)
+            end
+          end
         end
       end
     end

@@ -1,14 +1,27 @@
 ---
-layout: page
+layout: default
+title: Documentation
+bodyclass: is-blue
 ---
-{% assign tag_pages = site.tags[page.tag] | sort: 'title' %}
+{% assign collections = site.collections %}
 
-{% if site.data.tags[page.tags].introduction %}
-{{ site.data.tags[page.tags].introduction | markdownify }}
-{% endif %}
-
-<ul class="ul">
-  {% for content_page in tag_pages %}
-    <li><a href="{{ site.baseurl }}{{ content_page.url }}">{{ content_page.title }}</a></li>
-  {% endfor %}
-</ul>
+<div class="contentWrapper">
+  <div class="grid">
+    <div class="row">
+        <h1>#{{ page.tag }}</h1>
+    </div>
+    <div class="grid grid--boxContainer">
+      <div class="colxs100 colsm100 colmd100 collg100">
+        <div class="box">
+          {% for c in collections %}
+            {% for doc in c.docs %}
+              {% if doc.tags contains page.tag %}
+              <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
