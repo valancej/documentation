@@ -1,6 +1,6 @@
 module Jekyll
   class TagPage < Page
-    def initialize(site, base, dir, tag)
+    def initialize(site, base, dir, tag, documents)
       @site = site
       @base = base
       @dir = dir
@@ -9,27 +9,35 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tags.html')
       self.data['tag'] = tag
+			self.data['documents'] = documents
     end
   end
 
   class TagPageGenerator < Generator
     safe true
+		@@tags = {}
 
     def generate(site)
       if site.layouts.key? 'tags'
         dir = site.config['tags_dir'] || 'tags'
+				site.collections.each do |name, collection|
+					collection.docs.each do |document|
+						next unless document.data['tags']
+						document.data['tags'].each { |tag| collect_document(tag, document) }
+					end
+				end
 
-        collections = site.collections.map(&:first)
-
-        collections.each do |collection|
-          site.collections[collection].docs.each do |post|
-            post["tags"].each do |tag|
-              site.pages << TagPage.new(site, site.source, File.join(dir, tag.downcase.gsub(' ', '-')), tag)
-            end
-          end
-        end
+				@@tags.each {|tag, documents|
+					site.pages << TagPage.new(site, site.source, File.join(dir, tag.downcase.gsub(' ', '-')), tag, documents)
+				}
       end
     end
+
+		def collect_document(tag, document)
+			tag = tag.downcase
+			@@tags[tag] = [] unless @@tags.has_key?(tag)
+			@@tags[tag] << document
+		end
   end
 
   class TagUrl < Liquid::Tag
