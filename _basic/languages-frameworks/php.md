@@ -1,6 +1,6 @@
 ---
 title: PHP
-weight: 60
+weight: 3
 tags:
   - php
   - languages

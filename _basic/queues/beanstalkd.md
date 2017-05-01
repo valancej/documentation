@@ -5,7 +5,7 @@ tags:
   - services
   - queues
   - beanstalkd
-
+weight: 2
 redirect_from:
   - /queues/beanstalkd/
   - /classic/getting-started/beanstalkd/

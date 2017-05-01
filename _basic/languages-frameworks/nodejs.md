@@ -1,6 +1,6 @@
 ---
 title: Node.JS
-weight: 80
+weight: 2
 tags:
   - nodejs
   - iojs

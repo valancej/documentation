@@ -5,7 +5,7 @@ tags:
   - services
   - databases
   - cassandra
-
+weight: 5
 redirect_from:
   - /databases/cassandra/
   - /classic/getting-started/cassandra/

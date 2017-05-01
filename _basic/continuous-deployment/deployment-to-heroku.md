@@ -1,6 +1,6 @@
 ---
 title: Deploy to Heroku
-weight: 1
+weight: 3
 layout: page
 tags:
   - deployment

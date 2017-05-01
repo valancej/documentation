@@ -5,7 +5,7 @@ tags:
   - services
   - databases
   - mysql
-
+weight: 1
 redirect_from:
   - /databases/mysql/
   - /classic/getting-started/mysql/

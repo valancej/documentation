@@ -4,6 +4,7 @@ layout: page
 tags:
   - analytics
   - integrations
+weight: 1  
 redirect_from:
   - /analytics/code-climate/
   - /classic/getting-started/code-climate/

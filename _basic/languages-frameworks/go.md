@@ -3,7 +3,7 @@ title: Go
 tags:
 - go
 - languages
-
+weight: 6
 redirect_from:
   - /languages/go/
 ---

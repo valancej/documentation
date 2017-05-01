@@ -1,6 +1,7 @@
 ---
 title: Deploy via Capistrano
 layout: page
+weight: 11
 tags:
   - deployment
   - capistrano

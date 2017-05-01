@@ -1,6 +1,6 @@
 ---
 title: Git Submodules
-weight: 50
+weight: 3
 tags:
   - git
   - submodules

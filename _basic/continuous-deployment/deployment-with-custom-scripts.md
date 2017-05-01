@@ -1,6 +1,6 @@
 ---
 title: Deploy via Custom Script
-weight: 6
+weight: 2
 layout: page
 tags:
   - deployment

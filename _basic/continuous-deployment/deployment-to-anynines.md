@@ -3,7 +3,7 @@ title: Deploy to anynines
 tags:
   - deployment
   - anynines
-
+weight: 4
 redirect_from:
   - /continuous-deployment/deployment-to-anynines/
 ---
