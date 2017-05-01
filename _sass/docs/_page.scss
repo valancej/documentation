@@ -77,7 +77,6 @@ body.is-blue {
 }
 
 .pageContent {
-  padding-top: 2rem;
 
   h2 { @extend .like-h4; margin-bottom: 0; margin-top: 2em; }
   h3 { @extend .like-h5; margin-bottom: 0; margin-top: 2em; }
@@ -174,6 +173,37 @@ body.is-blue {
       width: 100%;
     }
   }
+}
+
+.product-indicator {
+
+  span {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 25px;
+    margin: 0 0 2rem;
+    font-size: .9rem;
+  }
+
+  .product-basic {
+    background-color: #52c45c;
+  }
+
+  .product-pro {
+    background-color: #132132;
+  }
+
+  .product-general {
+    background-color: #5c92d6;
+  }
+
+  a {
+    color: #fff !important;
+    font-weight: bold;
+    font-size: .9rem;
+  }
+
 }
 
 // *******************************************************
