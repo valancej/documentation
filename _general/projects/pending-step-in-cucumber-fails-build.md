@@ -1,6 +1,7 @@
 ---
 title: Pending step in cucumber fails build
 layout: page
+weight: 12
 tags:
   - troubleshooting
   - build error

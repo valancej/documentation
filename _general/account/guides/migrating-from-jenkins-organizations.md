@@ -1,6 +1,6 @@
 ---
 title: Migrating From Jenkins To Codeship - Organizations
-weight: 48
+weight: 1
 tags:
   - jenkins
   - organizations

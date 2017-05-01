@@ -1,6 +1,6 @@
 ---
 title: Project SSH Key
-weight: 93
+weight: 2
 tags:
   - project settings
   - ssh key

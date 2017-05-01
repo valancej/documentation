@@ -1,6 +1,7 @@
 ---
 title: Could not find gemname in any of the sources
 layout: page
+weight: 9
 tags:
   - faq
   - build error

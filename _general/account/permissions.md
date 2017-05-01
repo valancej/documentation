@@ -13,7 +13,7 @@ redirect_from:
   - /troubleshooting/github-3rd-party-restrictions/
   - /faq/github-3rd-party-restrictions/
   - /general/account/github-3rd-party-restrictions/
-
+weight: 4
 ---
 
 * include a table of contents
@@ -33,7 +33,7 @@ In terms of access you give Codeship, there are two different types that are in 
 
 For Codeship to configure your repo correctly, the account that connects a repo needs to have the necessary permissions to setup a webhook etc on the repository. For this, we expect that account to have `admin` permissions (or master or owner depending on your source control system).
 
-As for access permissons, these influence what we're allowed to do on your behalf, on a per-build basis. We need access to clone your repo, as well as report back with the test results, but not full admin permissions. 
+As for access permissons, these influence what we're allowed to do on your behalf, on a per-build basis. We need access to clone your repo, as well as report back with the test results, but not full admin permissions.
 
 The next section explains which specific permissions we ask for, depending on your source control system.
 

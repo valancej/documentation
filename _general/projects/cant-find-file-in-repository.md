@@ -1,6 +1,7 @@
 ---
 title: Can't find a file in the repository, classpath or during tests
 layout: page
+weight: 11
 tags:
   - troubleshooting
   - build error
