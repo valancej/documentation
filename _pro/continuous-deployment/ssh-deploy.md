@@ -1,7 +1,7 @@
 ---
 title: "Deploy Via SSH With Codeship Pro"
 layout: page
-weight: 45
+weight: 5
 tags:
   - docker
   - deployment

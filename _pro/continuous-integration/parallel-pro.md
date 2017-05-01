@@ -1,7 +1,7 @@
 ---
 title: Running Tests In Parallel on Codeship Pro
 layout: page
-weight: 47
+weight: 1
 tags:
   - docker
   - jet

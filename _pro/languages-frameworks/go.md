@@ -1,6 +1,6 @@
 ---
 title: Go on Docker
-weight: 48
+weight: 4
 tags:
   - go
   - languages

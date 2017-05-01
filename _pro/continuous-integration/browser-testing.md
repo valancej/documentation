@@ -1,7 +1,7 @@
 ---
 title: Browser testing
 layout: page
-weight: 47
+weight: 5
 tags:
   - docker
   - jet
