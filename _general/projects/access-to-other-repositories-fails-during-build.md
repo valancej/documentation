@@ -1,6 +1,7 @@
 ---
 title: Access to other repositories fails during build
 layout: page
+weight: 5
 tags:
   - faq
   - build error

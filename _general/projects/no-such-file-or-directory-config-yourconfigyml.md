@@ -1,6 +1,7 @@
 ---
 title: No such file or directory config/your_config.yml
 layout: page
+weight: 8
 tags:
   - troubleshooting
   - build error

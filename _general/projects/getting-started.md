@@ -1,5 +1,6 @@
 ---
 title: Getting Started With Projects
+weight: 1
 layout: page
 tags:
   - administration

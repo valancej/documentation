@@ -4,7 +4,7 @@ layout: page
 tags:
   - security
   - gpg key
-
+weight: 3
 redirect_from:
   - /security/
   - /security/security/

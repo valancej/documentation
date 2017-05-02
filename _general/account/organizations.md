@@ -9,6 +9,7 @@ tags:
 
 redirect_from:
   - /administration/organizations/
+weight: 3  
 ---
 
 * include a table of contents

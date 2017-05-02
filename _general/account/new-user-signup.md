@@ -17,7 +17,7 @@ redirect_from:
   - /general/about/codeship-badge/
   - /faq/configure-your-avatar/
   - /faq/other-scm/  
-
+weight: 1
 ---
 
 * include a table of contents

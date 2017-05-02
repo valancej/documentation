@@ -1,6 +1,7 @@
 ---
 title: How to enable access for Codeship on your Firewall
 layout: page
+weight: 4
 tags:
   - faq
   - firewall

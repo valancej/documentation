@@ -1,6 +1,7 @@
 ---
 title: check_url fails for Heroku deployment
 layout: page
+weight: 10
 tags:
   - faq
   - build error

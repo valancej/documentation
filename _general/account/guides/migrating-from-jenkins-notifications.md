@@ -1,6 +1,6 @@
 ---
 title: Migrating From Jenkins To Codeship - Notifications
-weight: 48
+weight: 2
 tags:
   - jenkins
   - notifications

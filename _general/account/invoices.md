@@ -6,7 +6,7 @@ tags:
   - account
   - invoices
   - billing
-
+weight: 5
 redirect_from:
   - /administration/invoices/
 ---

@@ -1,6 +1,7 @@
 ---
 title: Pushing to git remote fails
 layout: page
+weight: 7
 tags:
   - troubleshooting
   - build error

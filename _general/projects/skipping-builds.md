@@ -1,6 +1,6 @@
 ---
 title: Skipping builds
-weight: 38
+weight: 3
 tags:
   - docker
   - basic
