@@ -69,7 +69,6 @@ During local builds, there is no need for a remote or persistent caching solutio
 
 In previous versions of Jet, you were able to use the remote cache when running a local build with `jet steps`. This feature has been deprecated, because Codeship no longer relies on registries to provide remote caching. Instead, rely on the local Docker image cache for image caching during local builds.
 
-
 ## Optimizing Your Build To Use The Docker Image Cache
 
 In order to fully utilize the caching provided by Codeship, you should optimize your Docker builds to take advantage of the Docker image cache. Here is a simple guide to optimizing your build:
@@ -87,3 +86,9 @@ The various RUN commands should also be ordered according to frequency of invali
 ### 3. Use a strict .dockerignore file
 
 The more files which get added to the Docker image during an ADD or COPY, the higher the chance that the image cached will be invalidated despite the functionality of the image remaining the same. To reduce the chances of this happening, strip down the number of files being added to the image to the bare essentials. Ignore any temporary files, logs, development files, and documentation, especially `.git`. A good rule of thumb for this process is if the resulting image will not utilize a file or folder, add it to the `.dockerignore` file.
+
+## Caching With Multi-stage Builds
+
+Docker's multi-stage build feature allows you to build Docker images with multiple build stages in the Dockerfile, ultimately saving an image from just the final stage. You can [read more about Docker multi-stage builds on our blog](link to laura's blog), but this has certain impacts on caching your image with Codeship Pro.
+
+You can [read more about Docker multi-stage builds on our blog](link to laura's blog).

@@ -116,6 +116,30 @@ RUN gradle assemble
 ADD . ./
 ```
 
+### Multi-stage Builds
+
+Using Docker's multi-stage build feature, you can implement some changes to your Dockerfile to allow you to build and use a Java binary from a single Dockerfile, outputting a Docker image with the JAVA binary but none of the build tools - meaning a smaller and more efficient image with a less complex setup.
+
+Multi-stage builds allow you to specify multiple `FROM` lines in a Dockerfile, where each `FROM` line begins a new stage. The image saves with _the result of the last stage_, which means any previous stages are not saved in the final image. This is great for creating "builder" workflows easily.
+
+Here's an example using Java in a Dockerfile:
+
+```
+# phase one, labeled as BUILD
+FROM maven:latest as BUILD
+
+COPY src /usr/src/app/src
+COPY pom.xml /usr/src/app
+RUN mvn -f /usr/src/app/pom.xml clean package
+
+# phase two, which uses the java binary produced above
+FROM org/app:latest
+
+COPY --from=BUILD /usr/src/app/target/binary.war /opt/org/app/path/deployments/binary.war
+```
+
+Notice that the second `FROM` line begins the second stage, and this second stage is what the final image will consist of.
+
 ## Notes And Known Issues
 
 Because of version and test dependency issues, it is advised to try using [the Jet CLI]({% link _pro/builds-and-configuration/cli.md %}) to debug issues locally via `jet steps`.
