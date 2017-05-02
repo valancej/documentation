@@ -1,7 +1,7 @@
 ---
 title: Project Setup Or Migration
 layout: page
-weight: 30
+weight: 6
 tags:
   - docker
   - jet

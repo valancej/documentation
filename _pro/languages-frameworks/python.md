@@ -1,6 +1,6 @@
 ---
 title: Python on Docker
-weight: 48
+weight: 2
 tags:
   - python
   - languages

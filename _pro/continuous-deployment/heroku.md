@@ -1,6 +1,6 @@
 ---
 title: Continuous Delivery to Heroku with Docker
-weight: 46
+weight: 4
 tags:
   - deployment
   - heroku

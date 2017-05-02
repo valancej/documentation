@@ -1,6 +1,6 @@
 ---
 title: Continuous Delivery to Google Cloud Platform with Docker
-weight: 46
+weight: 3
 tags:
   - deployment
   - heroku

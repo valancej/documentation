@@ -1,6 +1,6 @@
 ---
 title: PHP on Docker
-weight: 48
+weight: 6
 tags:
   - php
   - languages

@@ -1,6 +1,6 @@
 ---
 title: Continuous Delivery to Microsoft Azure with Docker
-weight: 47
+weight: 2
 tags:
   - deployment
   - azure

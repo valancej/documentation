@@ -1,6 +1,6 @@
 ---
 title: Java on Docker
-weight: 48
+weight: 5
 tags:
   - java
   - languages
