@@ -4,7 +4,7 @@ tags:
   - java
   - scala
   - languages
-
+weight: 7
 redirect_from:
   - /languages/java-and-jvm-based-languages/
 ---

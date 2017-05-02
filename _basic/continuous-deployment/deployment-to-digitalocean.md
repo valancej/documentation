@@ -1,6 +1,7 @@
 ---
 title: Deploy to DigitalOcean
 layout: page
+weight: 5
 tags:
   - deployment
   - digital ocean

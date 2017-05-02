@@ -1,6 +1,6 @@
 ---
 title: Deploy to Google App Engine
-weight: 3
+weight: 6
 layout: page
 tags:
   - deployment

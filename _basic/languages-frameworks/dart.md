@@ -3,7 +3,7 @@ title: Dart
 tags:
   - dart
   - languages
-
+weight: 8
 redirect_from:
   - /languages/dart/
 ---

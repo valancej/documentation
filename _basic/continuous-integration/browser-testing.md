@@ -1,6 +1,6 @@
 ---
 title: Browser Testing
-weight: 80
+weight: 1
 tags:
   - testing
   - continuous integration

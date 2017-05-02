@@ -1,6 +1,6 @@
 ---
 title: Python
-weight: 70
+weight: 4
 tags:
   - python
   - languages

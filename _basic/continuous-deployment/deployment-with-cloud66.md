@@ -3,7 +3,7 @@ title: Deploy via Cloud66
 tags:
   - deployment
   - cloud66
-
+weight: 13
 redirect_from:
   - /continuous-deployment/deployment-with-cloud66/
 ---

@@ -5,7 +5,7 @@ tags:
   - services
   - databases
   - rethinkdb
-
+weight: 6
 redirect_from:
   - /databases/rethinkdb/
   - /classic/getting-started/rethinkdb/

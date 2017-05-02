@@ -4,6 +4,7 @@ layout: page
 tags:
   - analytics
   - integrations
+weight: 2  
 redirect_from:
   - /analytics/coveralls/
   - /classic/getting-started/coveralls/

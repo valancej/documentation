@@ -5,7 +5,7 @@ tags:
   - services
   - queues
   - redis
-
+weight: 1
 redirect_from:
   - /queues/redis/
   - /classic/getting-started/redis/
