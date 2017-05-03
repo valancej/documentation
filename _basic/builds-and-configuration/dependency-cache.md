@@ -30,14 +30,13 @@ Any packages, up to 500mb, in the following directories at the end of your build
 - `$REPO_ROOT/node_modules-cache`
 - `$REPO_ROOT/tmp/parallel_runtime_cucumber.log`
 - `$HOME/.virtualenv/bin/`
-- `$HOME/.virtualenv/lib/python2.7/site-packages`
 - `$HOME/.m2/repository`
 - `$HOME/.ivy2`
 - `$HOME/cache/yarn`
 - `$HOME/cache/bundler`
 - `$HOME/cache`
 
-Also note that we automatically configure `bundler` to write into `~/cache/bundler` as well as `yarn` to write into `$HOME/cache/yarn`.
+Also note that we automatically configure `bundler` to write into `~/cache/bundler` as well as `yarn` to write into `$HOME/cache/yarn` and `pip` to write into `$HOME/cache`.
 
 ### Clearing The Cache
 

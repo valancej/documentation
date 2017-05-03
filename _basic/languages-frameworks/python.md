@@ -14,29 +14,21 @@ redirect_from:
 
 ## Versions And Setup
 
-We use **virtualenv** to manage Python environments for you. We currently support Python `2.7.6`. Version `3.4.3` of Python is installed as well and available via the `python3` binary.
+We use **pyenv** to manage Python environments for you.
 
-### Using Python 3
+By default, we run Python version `2.7.13`, but versions `3.4.6`, `3.5.3` and `3.6.1` are all preinstalled as well.
 
-The virtual environment from `${HOME}/.virtualenv` is activated and configured for use with Python 2 by default. If you want to switch to version 3, simply add the following commands to your _Setup Commands_.
+All other Python versions can be installed using **pyenv**. If you need the system Python version for any reason, they are available at `/usr/bin/python2` and `/usr/bin/python3`.
 
-```shell
-virtualenv -p $(which python3) "${HOME}/cache/python3_env"
-source "${HOME}/cache/python3_env/bin/activate"
-```
+### Specifying Version
 
-### Changing Versions
+You have several options to specify which Python version you would like to use.
 
-If you need a specific Python version installed, use [this script](https://github.com/codeship/scripts/blob/master/languages/python.sh) in your _Setup Commands_.
+In your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) you can use **pyenv** commands. For instance: `pyenv local $version`
 
-First set the desired version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project.
+You can also use the environment vairable `PYENV_VERSION` to choose from one of the installed Python versions.
 
-```shell
-PYTHON_VERSION=3.6.0
-```
-
-Next add [this command](https://github.com/codeship/scripts/blob/master/languages/python.sh#L10) to your _Setup Commands_ and the script will automatically be called at build time.
-
+Alternatively, you can specify a version to use by committing a file named `.python-version` into your code repository with a version specification.
 
 ## Dependencies
 
@@ -50,7 +42,7 @@ pip install -r requirements.txt
 
 ### Dependency Cache
 
-Codeship automatically caches the `$HOME/.virtualenv/lib/python2.7/site-packages` directory between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
+Codeship automatically caches all dependencies installed through `pip`. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
 
 ## Notes And Known Issues
 
