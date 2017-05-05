@@ -14,17 +14,19 @@ redirect_from:
 
 ## Versions And Setup
 
-We use **pyenv** to manage Python environments for you.
+We use [pyenv](https://github.com/pyenv/pyenv ) to manage Python environments for you.
 
-By default, we run Python version `2.7.13`, but versions `3.4.6`, `3.5.3` and `3.6.1` are all preinstalled as well.
-
-All other Python versions can be installed using **pyenv**. If you need the system Python version for any reason, they are available at `/usr/bin/python2` and `/usr/bin/python3`.
+By default, we run Python version `2.7.13`, but versions `3.4`, `3.5` and `3.6` are all preinstalled as well.
 
 ### Specifying Version
 
 You have several options to specify which Python version you would like to use.
 
-In your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) you can use **pyenv** commands. For instance: `pyenv local $version`
+In your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) you can use **pyenv** commands. For instance:
+
+```
+pyenv local $version
+```
 
 You can also use the environment vairable `PYENV_VERSION` to choose from one of the installed Python versions.
 
