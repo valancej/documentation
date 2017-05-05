@@ -81,15 +81,15 @@ RUN go get
 
 Using Docker's multi-stage build feature, you can implement some changes to you Dockerfile to allow you to build and use a Go binary from a single Dockerfile, outputting a Docker image with the Go binary but none of the Golang build tools - meaning a smaller and more efficient image with a less complex setup.
 
-Multi-stage builds allow you to specify multiple `FROM` lines in a Dockerfile, where each `FROM` line begins a new stage. The image saves with _the result of the last stage_, which means any previous stages are not saved in the final image. This is great for creating "builder" workflows easily.
+Multi-stage builds allow you to specify multiple `FROM` lines in a Dockerfile, where each `FROM` line begins a new stage. The final image is _the result of the last stage_, which means any previous stages are not saved in the final image. This is great for creating "builder" workflows easily.
 
 Here's an example using Go in a Dockerfile:
 
 ```
+# phase one, labeled as build-stage
 # first stage does the building
-# for UX purposes, I'm naming this stage `build-stage`
 
-FROM golang:1.8 as build-stage
+FROM golang:latest as build-stage
 WORKDIR /go/src/github.com/codeship/go-hello-world
 COPY hello-world.go .
 RUN go build -o hello-world .
