@@ -159,6 +159,29 @@ Lastly, we would either delete the unencrypted `env` file or add it to our `.git
 
 [Learn more about encrypting your environment variables.]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
 
+#### Service-defined Environment Variables
+
+Additionally, environment variables are populated based on services defined in your [codeship-services.yml]({% link _pro/builds-and-configuration/services.md %}), as defined by the images used.
+
+For instance, building a `redis` service would provide the environment variables:
+
+```
+REDIS_PORT=
+REDIS_NAME=
+REDIS_ENV_REDIS_VERSION=3.0.5
+REDIS_ENV_REDIS_DOWNLOAD_URL=
+```
+
+Note that this is an incomplete list of the variables provided by `redis`, and that all images define their own environment variables to be exported by default during build time.
+
+
+#### Default Environment Variables
+
+By default, Codeship populates a list of CI/CD related environment variables, such as the branch and the commit ID.
+
+For a full list of globally defined environment variables, see the [Codeship Pro environment variables documentation.]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
+
+
 ### Docker Inside Docker
 The boolean directive `add_docker` is available. If specified for a service, it will:
 

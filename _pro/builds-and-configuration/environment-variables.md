@@ -108,6 +108,44 @@ jet decrypt env.encrypted env
 
 Just like when encrypting but in reverse, `env.encrypted` is the name of the file you want to decrypt and `env` is the name you give to the decrypted file.
 
+## Default Environment Variables
+
+By default, Codeship populates a list of CI/CD related environment variables, such as the branch and the commit ID.
+
+The environment variables Codeship populates are:
+
+```
+CI_COMMITTER_EMAIL
+CI_NAME
+CI_STRING_TIME
+CI_COMMITTER_USERNAME
+CI_COMMIT_DESCRIPTION
+CI_COMMITTER_NAME
+CI_TIMESTAMP
+CI_BRANCH
+CI_COMMIT_ID
+CI_PROJECT_ID
+CI_COMMIT_MESSAGE
+CI_BUILD_ID
+CI
+CI_REPO_NAME
+```
+
+### Service-defined Environment Variables
+
+Additionally, environment variables are populated based on services defined in your [codeship-services.yml]({% link _pro/builds-and-configuration/services.md %}), as defined by the images used.
+
+For instance, building a `redis` service would provide the environment variables:
+
+```
+REDIS_PORT=
+REDIS_NAME=
+REDIS_ENV_REDIS_VERSION=3.0.5
+REDIS_ENV_REDIS_DOWNLOAD_URL=
+```
+
+Note that this is an incomplete list of the variables provided by `redis`, and that all images define their own environment variables to be exported by default during build time.
+
 ## Notes And Common Questions
 
 ### Build Arguments
