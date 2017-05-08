@@ -16,6 +16,7 @@ redirect_from:
   - /docker/cli/
   - /pro/cli/
   - /jet/  
+  - /docker/getting-started/installation/
 ---
 
 <div class="info-block">
