@@ -55,7 +55,7 @@ If this is not desirable for your project make sure to manually move the steps t
 
 ### Parallel Modules
 
-In addition to parallelizing explicitly in your via parallel pipelines, most popular frameworks offer modules that you can install to parallelize within the codebase itself.
+In addition to parallelizing explicitly with parallel pipelines, most popular frameworks offer modules that you can install to parallelize within the codebase itself.
 
 While we do not officially support or integrate with any of these modules, many Codeship users find success speeding their tests up by using them. Note that in many cases these modules create additional strain on your machine resource usage, so you will want to keep an eye on this as misconfiguration can result in a resource max out that ultimately slows your builds down or causes failures.
 
@@ -65,6 +65,7 @@ While we do not officially support or integrate with any of these modules, many 
 
 **Node**
 - [https://www.npmjs.com/package/mocha-parallel-tests](https://www.npmjs.com/package/mocha-parallel-tests)
+- [https://www.npmjs.com/package/mocha-pipelines](https://www.npmjs.com/package/mocha-pipelines)
 
 **PHPUnit**
 - [https://github.com/brianium/paratest](https://github.com/brianium/paratest)
