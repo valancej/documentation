@@ -26,12 +26,12 @@ This means that all packages saved in these directories at the end of a build wi
 
 Any packages, up to 500mb, in the following directories at the end of your build will be automatically cached:
 
-- `$REPO_ROOT/node_modules`
-- `$HOME/.m2/repository`
 - `$HOME/.ivy2`
-- `$HOME/cache/yarn`
+- `$HOME/.m2/repository`
 - `$HOME/cache/bundler`
+- `$HOME/cache/yarn`
 - `$HOME/cache`
+- `$REPO_ROOT/node_modules`
 
 Also note that we automatically configure `bundler` to write into `~/cache/bundler` as well as `yarn` to write into `$HOME/cache/yarn` and `pip` to write into `$HOME/cache/pip`.
 
