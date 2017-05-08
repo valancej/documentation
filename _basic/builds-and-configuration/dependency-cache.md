@@ -31,6 +31,7 @@ Any packages, up to 500mb, in the following directories at the end of your build
 - `$HOME/cache/bundler`
 - `$HOME/cache/yarn`
 - `$HOME/cache`
+- `$HOME/cache/pip`
 - `$REPO_ROOT/node_modules`
 
 Also note that we automatically configure `bundler` to write into `~/cache/bundler` as well as `yarn` to write into `$HOME/cache/yarn` and `pip` to write into `$HOME/cache/pip`.
