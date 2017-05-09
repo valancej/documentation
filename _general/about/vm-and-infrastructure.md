@@ -44,6 +44,6 @@ All builds on both Codeship Basic and Codeship Pro have 10gb of disk space alloc
 
 ## System Timeouts
 
-If a command runs for longer than 15 minutes without printing any log output, the command and build will be automatically failed.
+On **Codeship Basic**, a build can up for up to 3 hours, although builds will time out if there is no log activity for 10 minutes.
 
-Additionally, if a build runs for longer than 2 hours, it will be automatically failed.
+On **Codeship Pro**, a build can up for up to 2 hours, although builds will time out if there is no log activity for 15 minutes.
