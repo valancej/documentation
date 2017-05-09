@@ -50,6 +50,10 @@ Codeship automatically caches all dependencies installed through `pip`. You can 
 
 Due to Python version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
+### Executable Not Available
+
+As we use **pyenv**, if an executable is not available after installation you may need to run the command `pyenv rehash` after installing the package. [You can read pyenv's documentation](https://github.com/pyenv/pyenv) for more information.
+
 ## Frameworks And Testing
 
 All Python frameworks, including Django, Flask and Pyramid, should work without issue as long as they do not require root-access for customized system configuration.
