@@ -55,10 +55,10 @@ If you want to add a badge showing your last builds status to your ReadMe, you c
 The raw URL for the image looks like the this:
 
 ```
-https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master
+https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=BRANCH_NAME
 ```
 
-The UUID for a specific project is available on the **General** tab in your project settings)
+(The UUID for a specific project is available on the **General** tab in your project settings)
 
 ## Shipscope - Chrome Extension
 
@@ -132,9 +132,12 @@ First of all, we can create a simple notification script, pulling all configurat
 #!/bin/sh
 # Post to Slack channel on new deployment
 # https://api.slack.com/incoming-webhooks
-#
+
+# script available at: https://github.com/codeship/scripts/blob/master/notifications/slack.sh
+
 # You can either add those here, or configure them on the environment tab of your
 # project settings.
+
 SLACK_WEBHOOK_TOKEN=${SLACK_WEBHOOK_TOKEN:?'You need to configure the SLACK_WEBHOOK_TOKEN environment variable!'}
 SLACK_BOT_NAME=${SLACK_BOT_NAME:="Codeship Bot"}
 SLACK_ICON_URL=${SLACK_ICON_URL:="https://d1089v03p3mzyq.cloudfront.net/assets/website/logo-dark-90f893a2645c98929b358b2f93fa614b.png"}
@@ -181,7 +184,7 @@ By adding a relevant step to the steps file, we can control under what condition
 
 #### Other integrations
 
-Since you can integrate any container you wish into your pipeline, there are no limitations on what notifications you can use. You can see some other examples of custom notifications [here](https://github.com/codeship/scripts/tree/master/notifications).
+Since you can integrate any container you wish into your pipeline, there are no limitations on what notifications you can use. In our scripts repo, [you can see other examples of custom notifications.](https://github.com/codeship/scripts/tree/master/notifications).
 
 ## GitHub, Bitbucket and Gitlab Status API
 

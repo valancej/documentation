@@ -14,7 +14,7 @@ redirect_from:
 
 ## Build machines
 
-### Codeship Baisc
+### Codeship Basic
 
 Codeship Basic uses **Ubuntu 14.04 (Trusty Tahr)** on our test machines. To virtualize the test machines we use **Linux Containers**.
 
@@ -44,6 +44,6 @@ All builds on both Codeship Basic and Codeship Pro have 10gb of disk space alloc
 
 ## System Timeouts
 
-If a command runs for longer than 10 minutes without printing any log output, the command and build will be automatically failed. Additionally, if a build runs for longer than 3 hours, it will be automatically failed.
+If a command runs for longer than 15 minutes without printing any log output, the command and build will be automatically failed.
 
-Another important note is that Codeship Pro (though **not** Codeship Basic) also has an approximate 2-hour build timeout, with builds becoming unreliable or failing after the 2 hour mark.
+Additionally, if a build runs for longer than 2 hours, it will be automatically failed.
