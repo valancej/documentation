@@ -8,6 +8,7 @@ tags:
 
 redirect_from:
   - /pro/getting-started/build-arguments/
+  - /docker/getting-started/build-arguments/
 
 ---
 
