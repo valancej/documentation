@@ -239,4 +239,4 @@ Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/builds-and-
 
 ## Step Timeouts
 
-If a step runs for longer than 10 minutes without printing any log output, the command and build will be automatically failed. Additionally, if a build runs for longer than 3 hours, it will be automatically failed.
+On **Codeship Pro**, a build can up for up to 2 hours, although builds will time out if there is no log activity for 15 minutes.

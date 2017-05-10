@@ -46,6 +46,20 @@ We have support for the following chat notification systems. Currently you can't
 * include a table of contents
 {:toc}
 
+## Status Badges On Your Repo
+
+If you want to add a badge showing your last builds status to your ReadMe, you can find the code in the **Notification** settings of your project.
+
+![Codeship Status for codeship/documentation](https://codeship.com/projects/0bdb0440-3af5-0133-00ea-0ebda3a33bf6/status?branch=master)
+
+The raw URL for the image looks like the this:
+
+```
+https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=BRANCH_NAME
+```
+
+(The UUID for a specific project is available on the **General** tab in your project settings)
+
 ## Shipscope - Chrome Extension
 
 Monitor your Codeship projects and builds with [Shipscope](https://chrome.google.com/webstore/detail/shipscope/jdedmgopefelimgjceagffkeeiknclhh). Shipscope lists all of your Codeship projects and presents the status of recent builds in the Chrome toolbar. You can restart a build or go straight to the build details on the Codeship service.
@@ -101,6 +115,76 @@ The _status_ field can have one of the following values:
 - `ignored` for builds ignored because the account is over the monthly build limit
 - `blocked` for builds blocked because of excessive resource consumption
 - `infrastructure_failure` for builds which failed because of an internal error on the build VM
+
+### Custom Notifications With Codeship Pro
+
+Due to Codeship Pro's unique architecture, you have  more flexibility in implementing custom notifications via your [codeship-steps.yml file]({% link _pro/builds-and-configuration/steps.md %}).
+
+In addition to using the above webhooks method, you can also define custom steps in your build pipeline to push notifications via methods not otherwise supported by Codeship.
+
+#### The notification script
+
+To look at using your Codeship Pro pipeline for flexible, custom notifications we will review a simple Slack script as a custom notification method.
+
+First of all, we can create a simple notification script, pulling all configuration and credentials from environment variables, or mounted volumes should we need to use build artifacts.
+
+```bash
+#!/bin/sh
+# Post to Slack channel on new deployment
+# https://api.slack.com/incoming-webhooks
+
+# script available at: https://github.com/codeship/scripts/blob/master/notifications/slack.sh
+
+# You can either add those here, or configure them on the environment tab of your
+# project settings.
+
+SLACK_WEBHOOK_TOKEN=${SLACK_WEBHOOK_TOKEN:?'You need to configure the SLACK_WEBHOOK_TOKEN environment variable!'}
+SLACK_BOT_NAME=${SLACK_BOT_NAME:="Codeship Bot"}
+SLACK_ICON_URL=${SLACK_ICON_URL:="https://d1089v03p3mzyq.cloudfront.net/assets/website/logo-dark-90f893a2645c98929b358b2f93fa614b.png"}
+SLACK_MESSAGE=${SLACK_MESSAGE:?"${CI_COMMITTER_USERNAME} just deployed version ${CI_COMMIT_ID}"}
+
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"username": "'"${SLACK_BOT_NAME}"'",
+  "text": "'"${SLACK_MESSAGE}"'",
+  "icon_url": "'"${SLACK_ICON_URL}"'"}' \
+  https://hooks.slack.com/services/$SLACK_WEBHOOK_TOKEN
+```
+
+#### Integrating the notification script
+
+It's quite simple to integrate a simple script like this into the deployment pipeline. First we can build it into a standalone container, or use an existing one from elsewhere in the pipeline which has the deploy script added to it.
+
+```
+# Dockerfile.notify
+FROM ubuntu
+
+RUN apt-get install -y curl
+
+ADD ./slack ./
+```
+
+We'll need to provide this container with the necessary environment variables. The standard `CI_*` variables will be provided automatically, however we'll need to provide the `SLACK_WEBHOOK_TOKEN`. This can be safely injected via the `encrypted_env_file` service declaration, and the [encryption commands]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}#encryption-commands). By encrypting this environment variable, and adding it to our repository, it can be later decoded and provided to our notifications container.
+
+```yaml
+deploynotify
+  build:
+    image: myuser/myrepo-deploynotify
+    dockerfile: Dockerfile.notify
+  encrypted_env_file: deploy.env.encrypted
+```
+
+By adding a relevant step to the steps file, we can control under what conditions this notification fires.
+
+```yaml
+- service: deploynotify
+  command: ./slack
+  tag: master
+```
+
+#### Other integrations
+
+Since you can integrate any container you wish into your pipeline, there are no limitations on what notifications you can use. In our scripts repo, [you can see other examples of custom notifications.](https://github.com/codeship/scripts/tree/master/notifications).
 
 ## GitHub, Bitbucket and Gitlab Status API
 

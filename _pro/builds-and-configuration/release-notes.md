@@ -1,7 +1,7 @@
 ---
 title: CLI Release Notes
 layout: page
-weight: 14
+weight: 13
 tags:
   - docker
   - jet
