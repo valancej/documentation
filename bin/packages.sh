@@ -37,7 +37,7 @@ echo '```' >> "${ami}/ruby.md"
 
 # Python versions
 echo '```shell' > "${ami}/python.md"
-phpenv versions >> "${ami}/python.md"
+pyenv versions >> "${ami}/python.md"
 echo '```' >> "${ami}/python.md"
 
 # Packages
