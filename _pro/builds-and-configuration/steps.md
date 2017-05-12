@@ -11,6 +11,7 @@ tags:
 redirect_from:
   - /docker/steps/
   - /pro/getting-started/steps/
+  - /docker/dockercfg-services
 ---
 
 * include a table of contents
