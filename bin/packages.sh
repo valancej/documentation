@@ -35,6 +35,11 @@ echo '```shell' > "${ami}/ruby.md"
 rvm list >> "${ami}/ruby.md"
 echo '```' >> "${ami}/ruby.md"
 
+# Python versions
+echo '```shell' > "${ami}/python.md"
+phpenv versions >> "${ami}/python.md"
+echo '```' >> "${ami}/python.md"
+
 # Packages
 echo '```shell' > "${ami}/packages.md"
 dpkg -l | grep '^ii' | awk '{print $2 "\t" $3}' | column -t >> "${ami}/packages.md"
