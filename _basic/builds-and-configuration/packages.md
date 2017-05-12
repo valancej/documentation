@@ -38,5 +38,8 @@ Click on the link to open an SSH debug session. You will be provided with the us
 ## PHP Versions available via phpenv
 {% include basic/ami/{{ site.data.basic.ami_id }}/php.md %}
 
+## Python Versions available via pyenv
+{% include basic/ami/{{ site.data.basic.ami_id }}/python.md %}
+
 ## Ruby versions available via rvm
 {% include basic/ami/{{ site.data.basic.ami_id }}/ruby.md %}
