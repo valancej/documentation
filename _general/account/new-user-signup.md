@@ -115,7 +115,7 @@ The raw URL for the image looks like the this:
 https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master
 ```
 
-The UUID for a specific project is available on the **General** tab in your project settings) 
+The UUID for a specific project is available on the **General** tab in your project settings.
 
 ## Configuring Your Avatar
 
