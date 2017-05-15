@@ -34,6 +34,16 @@ In the next step, you can choose whether you want to import from a GitHub, GitLa
 
 After connecting to a repository, you will either continue with [Codeship Basic]({{ site.baseurl }}{% link basic/index.md %}) or be able to choose between Codeship Basic and [Codeship Pro]({{ site.baseurl }}{% link pro/index.md %}) if the latter is activated on your account.
 
+## Requirements For Creating A New Project
+
+To get started with a Codeship project, you will want to have a few resources available:
+
+- A Github, Bitbucket or Gitlab account with admin permissions for a repo or organization
+
+- A Codeship account, either using your email or using source control authentication
+
+- A code base with either setup or test commands (or both) that you need to automate 
+
 ## Delete a Project
 You need to have project ownership for deleting a project. Once you click the delete button, you will have to confirm the deletion once more. A project can be deleted by going to:
 
