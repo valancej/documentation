@@ -229,8 +229,10 @@ The following features available in Docker Compose are not available on Codeship
   * `ulimits`
   * `volume_driver`
   * `volumes` (top-level key)
+  * `privileged`
 
 All linking to the host is not allowed. This means the following directives are excluded:
+
   * `external_links`
   * `ports`
   * `stdin_open`
