@@ -91,5 +91,6 @@ The more files which get added to the Docker image during an ADD or COPY, the hi
 
 Docker's multi-stage build feature allows you to build Docker images with multiple build stages in the Dockerfile, ultimately saving an image from just the final stage. You can [read more about Docker multi-stage builds on our blog](link to laura's blog), but this has certain impacts on caching your image with Codeship Pro.
 
-TBD
-TBD
+Since the build stage layers are untagged and not associated with the final image, they are not part of the cached image. This means that -- for now -- it’s possible that your build may take a bit longer if you relied on caching all of the layers to speed up the build.
+
+If build speed AND small images are both critical for your application, you may choose to create a separate service in your `codeship-services.yml` file and cache that service, using a primary service to build and test your code and a secondary service - with a multi-stage Dockerfile - to produce your production image.
