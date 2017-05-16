@@ -35,7 +35,7 @@ We currently offer the following roles (though more roles are already on our tod
 
 ## Managing Teams
 
-On the _Teams_ tab of the organization settings, you can manage your different teams, add new teams and add or remove team members from the available teams.
+On the _Teams_ tab of the organization settings, you can manage your different teams, add new teams and invite or remove team members from the available teams.
 
 Two teams are created for each organization by default:
 * _Owners_, containing only the user who created the organization by default. You can however add any other Codeship account to the _Owners_ team as well.
@@ -45,7 +45,7 @@ If you want to create a new team, click the _Create new team_ button and select 
 
 ![Creating a Team]({{ site.baseurl }}/images/administration/create_team.png)
 
-Once you have created a new team, you can add new team members via their email address as well as any existing projects.
+Once you have created a new team, you can invite your colleagues and add new team members via their email address as well as any existing projects.
 
 If you need to change the team settings (e.g., the name or the role), hover over the team card and click the gear icon showing on the right hand side.
 

@@ -30,6 +30,7 @@ The screenshot below shows the initial [dashboard](https://app.codeship.com/proj
 ![new project screen]({{ site.baseurl }}/images/general/1welcome.png)
 
 In the next step, you can choose whether you want to import from a GitHub, GitLab, or Bitbucket repository by providing the repository link as shown in the examples.
+
 ![connecting to repository examples]({{ site.baseurl }}/images/general/2importrep.png)
 
 After connecting to a repository, you will either continue with [Codeship Basic]({{ site.baseurl }}{% link basic/index.md %}) or be able to choose between Codeship Basic and [Codeship Pro]({{ site.baseurl }}{% link pro/index.md %}) if the latter is activated on your account.
@@ -42,7 +43,7 @@ To get started with a Codeship project, you will want to have a few resources av
 
 - A Codeship account, either using your email or using source control authentication
 
-- A code base with either setup or test commands (or both) that you need to automate 
+- A code base with either setup or test commands (or both) that you need to automate
 
 ## Delete a Project
 You need to have project ownership for deleting a project. Once you click the delete button, you will have to confirm the deletion once more. A project can be deleted by going to:
@@ -76,3 +77,11 @@ If you wish to skip a build, please refer to the article about [skipping builds]
 
 ## Testing PRs from Forked Repositories
 Codeship **does not support testing pull requests from forked repositories** at the moment. You'd need to configure the forked repository separately on Codeship or push the branch to the already configured repository instead.
+
+## Invite Team Members To Your Projects
+
+Once you've created your project, you can invite colleagues members to give them access.
+
+Under ***Project Settings > Team members***, simply add their email address to send them an invite.
+
+![Invite team members to project]({{ site.baseurl }}/images/general/invite-team-member.png)
