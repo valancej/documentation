@@ -7,7 +7,8 @@ tags:
   - deployment
   - k8s
   - k8
-
+redirect_from:
+  - /general/account/guides/deployment-with-kubernetes/
 ---
 <div class="info-block">
 This was originally featured [as an eBook](https://resources.codeship.com/ebooks/deploy-docker-kubernetes-codeship-aw) in our[Resources Library](https://resources.codeship.com).

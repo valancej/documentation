@@ -13,6 +13,7 @@ redirect_from:
   - /troubleshooting/github-3rd-party-restrictions/
   - /faq/github-3rd-party-restrictions/
   - /general/account/github-3rd-party-restrictions/
+  - /general/account/permissions/
 weight: 4
 ---
 

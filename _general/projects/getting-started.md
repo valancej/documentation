@@ -15,6 +15,7 @@ redirect_from:
   - /general/projects/testing-prs-from-forked-repositories/
   - /general/projects/limit_builds/
   - /general/projects/transfer-project-to-new-owner/
+  - /general/projects/enabling-access-to-servers/
 ---
 
 * include a table of contents
@@ -85,3 +86,11 @@ Once you've created your project, you can invite colleagues members to give them
 Under ***Project Settings > Team members***, simply add their email address to send them an invite.
 
 ![Invite team members to project]({{ site.baseurl }}/images/general/invite-team-member.png)
+
+## Whitelisting Codeship On Your Firewall
+
+Codeship is hosted on AWS EC2 us-east-1 region. Because of this, Codeship services do not have a static IP address. AWS publishes their most up-to-date [IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json).
+
+You can enable access for those ranges on your own server's firewall settings.
+
+Another option, while not fully supported, would be to set up and run your own bastion host. This would allow yu to route all Codeship calls through your bastion host and white list only this host.
