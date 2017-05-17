@@ -19,6 +19,7 @@ redirect_from:
   - /general/projects/cant-find-file-in-repository/
   -  /troubleshooting/no-such-file-or-directory-config-yourconfigyml/
   - /faq/no-such-file-or-directory-config-yourconfigyml/
+  - /general/projects/cant-find-file-in-repository/
 ---
 
 * include a table of contents
@@ -106,3 +107,5 @@ If your build can't locate a configuration file which you ignored in your reposi
 # project settings > test settings > setup commands
 cp your_config.yml.example your_config.yml
 ```
+
+You should also check that you are not coming from a case-insensitive operating system where you may not have noticed that the file name is different, i.e. `File.yml` compared to `file.yml`.
