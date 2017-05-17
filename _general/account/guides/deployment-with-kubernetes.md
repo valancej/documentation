@@ -5,6 +5,8 @@ tags:
   - kubernetes
   - notifications
   - deployment
+  - k8s
+  - k8
 
 ---
 <div class="info-block">
