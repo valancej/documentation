@@ -183,11 +183,11 @@ There are several specific requirements and considerations when using caching, s
 
 ### Multi-stage Builds
 
-Docker's multi-stage build feature allows you to build Docker images with multiple build stages in the Dockerfile, ultimately saving an image from just the final stage. This is great for creating "builder" workflows easily.
+Docker's multi-stage build feature allows you to build Docker images with multiple build stages in the Dockerfile, ultimately saving an image from just the final stage. This is great for creating "builder" workflows easily, and reducing the image size of your final Docker image.
 
-Because Codeship supports Docker natively, you will not need to do anything to get your multi-stage builds working on Codeship and we will fully support your multi-stage Dockerfiles, however caching may be ?TBD CACHING IMPACT LANGUAGE?
+Because Codeship supports Docker natively, you will not need to do anything to get your multi-stage builds working on Codeship and we will fully support your multi-stage Dockerfiles. If you use the CLI to run builds locally, you must use CLI version 1.18 or above in order to use multi-stage bulds. Please note that using multi-stage image builds can impact the way that caching works during your Codeship Pro builds. For more information, refer to our [our caching documentation.]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %})
 
-You can [read more about Docker multi-stage builds on our blog](https://blog.codeship.com/docker-17-05-on-codeship-pro/).
+You can also [read more about Docker multi-stage builds on our blog](https://blog.codeship.com/docker-17-05-on-codeship-pro/). A note that
 
 ## Unavailable Features
 The following features available in Docker Compose are not available on Codeship. If these keys exist in your `codeship-services.yml` file, don't panic -- we'll just ignore them.
