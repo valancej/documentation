@@ -54,6 +54,14 @@ app:
 
 When the `app` service is built, the value of `build_env` becomes `staging`. If no value was set, `build_env` would remain `test`. You are not required to declare a default, but you must add an `ARG` instruction to the Dockerfile for each build argument you pass in via `codeship-services.yml`.
 
+You may also declare a build argument before the `FROM` instruction, which is a new feature introduced in Docker 17.05. Following the same pattern, you must first declare the argument before consuming it.
+
+```bash
+ARG BASE_IMAGE_TAG
+
+FROM ubuntu:$BASE_IMAGE_TAG
+```
+
 Note: YAML boolean values (true, false, yes, no, on, off) must be enclosed in quotes, so that the parser interprets them as strings.
 
 ## Encrypted Build Arguments
