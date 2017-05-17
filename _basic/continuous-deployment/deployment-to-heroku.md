@@ -95,7 +95,6 @@ heroku run --exit-code --app ${HEROKU_APPLICATION_NAME} -- bundle exec rake db:m
 This will enable your build to check the URL of your application to make sure that it is up.
 
 ## Troubleshooting
-- [check_url fails when deploying to Heroku]({{ site.baseurl }}{% link _general/projects/check_url-fails-for-heroku-deployment.md %})
 
 ### check_url fails for Heroku deployment
 
