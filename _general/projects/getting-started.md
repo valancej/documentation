@@ -16,6 +16,9 @@ redirect_from:
   - /general/projects/limit_builds/
   - /general/projects/transfer-project-to-new-owner/
   - /general/projects/enabling-access-to-servers/
+  - /general/projects/cant-find-file-in-repository/
+  -  /troubleshooting/no-such-file-or-directory-config-yourconfigyml/
+  - /faq/no-such-file-or-directory-config-yourconfigyml/
 ---
 
 * include a table of contents
@@ -94,3 +97,12 @@ Codeship is hosted on AWS EC2 us-east-1 region. Because of this, Codeship servic
 You can enable access for those ranges on your own server's firewall settings.
 
 Another option, while not fully supported, would be to set up and run your own bastion host. This would allow yu to route all Codeship calls through your bastion host and white list only this host.
+
+## Can't Locate A File
+
+If your build can't locate a configuration file which you ignored in your repository, via `.gitignore`, create a `your_config.yml.example` with data that works for your tests an add it to your repository. Then add the following command to your **setup commands** so the YAML file is properly set up.
+
+```shell
+# project settings > test settings > setup commands
+cp your_config.yml.example your_config.yml
+```
