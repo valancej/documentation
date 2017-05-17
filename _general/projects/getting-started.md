@@ -19,7 +19,6 @@ redirect_from:
   - /general/projects/cant-find-file-in-repository/
   -  /troubleshooting/no-such-file-or-directory-config-yourconfigyml/
   - /faq/no-such-file-or-directory-config-yourconfigyml/
-  - /general/projects/cant-find-file-in-repository/
 ---
 
 * include a table of contents
