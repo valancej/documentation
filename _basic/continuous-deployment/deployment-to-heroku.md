@@ -10,8 +10,6 @@ redirect_from:
   - /continuous-deployment/deployment-to-heroku/
   - /faq/push-to-heroku-rejected/
   - /tutorials/continuous-deployment-heroku-github-ruby-rails/
-  - /troubleshooting/cant-find-file-in-repository/
-  - /faq/cant-find-file-in-repository/
   - /general/projects/check_url-fails-for-heroku-deployment/
 ---
 
