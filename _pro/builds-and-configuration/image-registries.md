@@ -68,6 +68,10 @@ app:
 
 * Commit and push the changes to your remote repository, head over to [Codeship](https://codeship.com/), watch your build and then check out your new image!
 
+### Generating Credentials On OSX
+
+**Note that if you are using Mac OSX** current version of Docker store credentials in the OSX keychain rather than in a configuration file. To get the appropriate authentication file on OSX, you will need to remove the `credsStore` line from Docker's `config.json`, re-run `docker login` and it use the values it then generates in your updated `dockercfg`.
+
 ### Pushing to Quay.io
 
 **Prerequisites:** You will need to have a robot account for your Quay repository. Please see the documentation on [Robot Accounts](http://docs.quay.io/glossary/robot-accounts.html) for Quay.io on how to set it up for your repository.
