@@ -187,7 +187,7 @@ Docker's multi-stage build feature allows you to build Docker images with multip
 
 Because Codeship supports Docker natively, you will not need to do anything to get your multi-stage builds working on Codeship and we will fully support your multi-stage Dockerfiles, however caching may be ?TBD CACHING IMPACT LANGUAGE?
 
-You can [read more about Docker multi-stage builds on our blog](link to laura's blog).
+You can [read more about Docker multi-stage builds on our blog](https://blog.codeship.com/docker-17-05-on-codeship-pro/).
 
 ## Unavailable Features
 The following features available in Docker Compose are not available on Codeship. If these keys exist in your `codeship-services.yml` file, don't panic -- we'll just ignore them.
