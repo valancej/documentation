@@ -70,7 +70,7 @@ app:
 
 ### Generating Credentials On OSX
 
-**Note that if you are using Mac OSX** current version of Docker store credentials in the OSX keychain rather than in a configuration file. To get the appropriate authentication file on OSX, you will need to remove the `credsStore` line from Docker's `config.json`, re-run `docker login` and it use the values it then generates in your updated `dockercfg`.
+**Note that if you are using Mac OSX** current version of Docker stores credentials in the OSX keychain rather than in a configuration file. To get the appropriate authentication file on OSX, you will need to remove the `credsStore` line from Docker's `config.json`, re-run `docker login` and then use the values it then generates in your updated `dockercfg`.
 
 ### Pushing to Quay.io
 
