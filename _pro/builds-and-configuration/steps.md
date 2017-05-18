@@ -50,19 +50,21 @@ Steps are executed in the order they are specified. All steps share these direct
 * `exclude` this field prevents the step from being executed on branches or tags that match the `exclude` tag value. During a Codeship build, the build tag is either the branch name or tag associated with the commit. If you are using this feature locally, you can pass in `jet steps --tag TAG_NAME` to create a build tag. This field is the functional opposite of the `tag` field above. This field is optional. It takes precedence over the `tag` field.
 * `encrypted_dockercfg_path` the path to your relevant dockercfg file, encrypted using `jet encrypt`. This is required for any steps using private base images or push steps. The dockercfg **must** contain an account for the registry being hit (e.g. _quay.io_ or _index.docker.io_)  with access to the repository being pulled.
 
-## Limiting steps to specific branches / tags
+## Limiting steps to specific branches or tags
 
-As already mentioned you can specify a `tag` or `exclude`  attribute for each step. Jet supports two types of values for these attributes:
+As already mentioned you can specify a `tag` or `exclude`  attribute for each step. Codeship Pro supports two types of values for these attributes:
 
-* A simple string will match the complete branch name and allows you to limit a command to a single matching branch. (This is the default mode if the value is a simple string.)
+* A simple string will match the complete branch or tag name and allows you to limit a command to a single matching branch or tag. (This is the default mode if the value is a simple string.)
 
-    * `tag: gh-pages` would limit the step to the `gh-pages` branch only.
+    * `tag: gh-pages` would limit the step to branches or tags matching `gh-pages`.
     * `exclude: gh-pages` would run the step on every branch or tag *except* `gh-pages`.
 
-* A regular expression for more advanced configurations. Please note, that you need to specify line matchers `^` or `$` to trigger regular expression matching for tags. __Note__ that because we use Go for our Regex support, negative regexes and conditional regexes are  not supported.
+* A regular expression for more advanced configurations. Please note, that you need to specify line matchers `^` or `$` to trigger regular expression matching for tags.  __Note__ Codeship Pro uses the Golang regex library, so negative lookahead and conditional regexes are not supported.
 
-    * `tag: ^(master|staging)` would run a command on any of these branches: `master`, `staging`, or any branch beginning with `master` or `staging`, like `master-rebase`.
-    * `exclude: ^(master|staging)` would skip the step on any of these branches: `master`, `staging`, or any branch beginning with `master` or `staging`, like `master-rebase`.
+    * `tag: ^(master|staging)` would run a command on `master` or `staging`, or any branch or tag beginning with `master` or `staging`, like `master-rebase`.
+    * `exclude: ^(master|staging)` would skip the step on `master` or `staging`, or any branch or tag beginning with `master` or `staging`, like `master-rebase`.
+
+If you are running your builds locally via the Jet CLI, you can pass in a branch or tag name for the build via the `--tag` flag, i.e. `jet steps --tag master`.
 
 ## Parallelizing steps and tests
 
