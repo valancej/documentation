@@ -7,6 +7,7 @@ tags:
 
 redirect_from:
   - /languages/ruby/
+  - /general/projects/could-not-find-gemname-in-any-of-the-sources/
 ---
 
 * include a table of contents
@@ -66,8 +67,19 @@ On **Ruby 2.3 only**, Nokogiri will fail to compile with the bundled _libxml_ an
 bundle config build.nokogiri --use-system-libraries
 ```
 
-### Run with bundle exec
+### Run With Bundle Exec
+
 Make sure to run your commands with `bundle exec` (e.g. `bundle exec rspec`) so all commands you run are executed with the versions of the ruby gems you configured in your Gemfile.lock
+
+### Can Not Find Gem In Sources
+
+Sometimes you might see errors like the following:
+
+```shell
+Could not find safe_yaml-0.9.2 in any of the sources
+```
+
+Please make sure that the version of the gem you want to install there wasn't yanked from [Rubygems](http://rubygems.org/){:target="_blank"}.
 
 ## Parallelization Gems
 

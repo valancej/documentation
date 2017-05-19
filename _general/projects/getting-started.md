@@ -15,6 +15,10 @@ redirect_from:
   - /general/projects/testing-prs-from-forked-repositories/
   - /general/projects/limit_builds/
   - /general/projects/transfer-project-to-new-owner/
+  - /general/projects/enabling-access-to-servers/
+  - /general/projects/cant-find-file-in-repository/
+  - /troubleshooting/no-such-file-or-directory-config-yourconfigyml/
+  - /faq/no-such-file-or-directory-config-yourconfigyml/
 ---
 
 * include a table of contents
@@ -85,3 +89,22 @@ Once you've created your project, you can invite colleagues members to give them
 Under ***Project Settings > Team members***, simply add their email address to send them an invite.
 
 ![Invite team members to project]({{ site.baseurl }}/images/general/invite-team-member.png)
+
+## Whitelisting Codeship On Your Firewall
+
+Codeship is hosted on AWS EC2 us-east-1 region. Because of this, Codeship services do not have a static IP address. AWS publishes their most up-to-date [IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json).
+
+You can enable access for those ranges on your own server's firewall settings.
+
+Another option, while not fully supported, would be to set up and run your own bastion host. This would allow yu to route all Codeship calls through your bastion host and white list only this host.
+
+## Can't Locate A File
+
+If your build can't locate a configuration file which you ignored in your repository, via `.gitignore`, create a `your_config.yml.example` with data that works for your tests an add it to your repository. Then add the following command to your **setup commands** so the YAML file is properly set up.
+
+```shell
+# project settings > test settings > setup commands
+cp your_config.yml.example your_config.yml
+```
+
+You should also check that you are not coming from a case-insensitive operating system where you may not have noticed that the file name is different, i.e. `File.yml` compared to `file.yml`.

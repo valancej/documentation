@@ -29,7 +29,7 @@ If you already worked with Codeship the process will be familiar (and if not, it
 
 2. Select the repository provider you want to host your repositories with.
 
-3. Select the repository you want to build on Codeship. You can filter the list via the search form. (If a repository belonging to an organization on GitHub isn't listed, please take a look at [3rd party restrictions]({{ site.baseurl }}{% link _general/account/permissions.md %}).)
+3. Select the repository you want to build on Codeship. You can filter the list via the search form. (If a repository belonging to an organization on GitHub isn't listed, please take a look at [3rd party restrictions]({{ site.baseurl }}{% link _general/about/permissions.md %}).)
 
 So far these are the standard steps to add a new project on Codeship.
 

@@ -1,7 +1,7 @@
 ---
-title: My builds are not triggered anymore
+title: Builds Not Being Triggered
 layout: page
-weight: 6
+weight: 4
 tags:
   - troubleshooting
   - build error
