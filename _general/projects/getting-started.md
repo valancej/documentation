@@ -17,7 +17,7 @@ redirect_from:
   - /general/projects/transfer-project-to-new-owner/
   - /general/projects/enabling-access-to-servers/
   - /general/projects/cant-find-file-in-repository/
-  -  /troubleshooting/no-such-file-or-directory-config-yourconfigyml/
+  - /troubleshooting/no-such-file-or-directory-config-yourconfigyml/
   - /faq/no-such-file-or-directory-config-yourconfigyml/
 ---
 
