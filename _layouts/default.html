@@ -1,27 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-  {% include head.html %}
+	{% include head.html %}
 </head>
 <body class="{{page.bodyclass}}">
-  {% include codeship_header.html %}
-  {% include documentation_header.html %}
+	{% include codeship_header.html %}
+	{% include documentation_header.html %}
 
-  <div class="Layout">
-    {% if page.collection %}
-      {% include sidebar.html %}
-    {% endif %}
+	<div class="Layout">
+		{% if page.collection %}
+			{% include sidebar.html %}
+		{% endif %}
 
-    <div class="Content">
-      {{ content }}
-    </div>
-  </div>
+		<div class="Content">
+			{{ content }}
+		</div>
+	</div>
 
-  {% include footer.html %}
+	{% include footer.html %}
 
-  {% include mixpanel.html %}
-  {% include google_analytics.html %}
-  {% include crazy_egg.html %}
-  {% include hubspot.html %}
+	{% include mixpanel.html %}
+	{% include google_analytics.html %}
+	{% include crazy_egg.html %}
+	{% include hubspot.html %}
+	{% include zendesk.html %}
 </body>
 </html>

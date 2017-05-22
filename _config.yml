@@ -4,6 +4,9 @@ baseurl:
 permalink: /:categories/:title/
 tags_dir: tags
 ubuntu_version: trusty
+zendesk:
+  widget: true
+  chat: false
 
 # SEO Tag
 title: Codeship Documentation
