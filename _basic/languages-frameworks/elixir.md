@@ -1,5 +1,5 @@
 ---
-title: Elixir
+title: Using Elixir In CI/CD with Codeship Basic
 tags:
   - elixir
   - languages

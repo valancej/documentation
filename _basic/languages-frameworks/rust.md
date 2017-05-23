@@ -1,5 +1,5 @@
 ---
-title: Rust
+title: Using Rust In CI/CD with Codeship Basic
 tags:
 - rust
 - cargo

@@ -1,5 +1,5 @@
 ---
-title: Elasticsearch
+title: Using Elasticsearch In CI/CD with Codeship Basic
 layout: page
 tags:
   - services

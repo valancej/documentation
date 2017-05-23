@@ -1,5 +1,5 @@
 ---
-title: Running Tests In Parallel on Codeship Pro
+title: Speed Up Your Builds With Parallel Testing on Codeship Pro
 layout: page
 weight: 1
 tags:
@@ -7,6 +7,8 @@ tags:
   - jet
   - tools
   - tests
+  - speed
+  - parallel
 ---
 
 * include a table of contents

@@ -1,5 +1,5 @@
 ---
-title: "Deploy Via SSH With Codeship Pro"
+title: Continuous Delivery Via SSH With Docker
 layout: page
 weight: 5
 tags:

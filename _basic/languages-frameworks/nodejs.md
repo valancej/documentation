@@ -1,5 +1,5 @@
 ---
-title: Node.JS
+title: Using Node.js In CI/CD with Codeship Basic
 weight: 2
 tags:
   - nodejs

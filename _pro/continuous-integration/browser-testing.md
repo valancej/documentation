@@ -1,5 +1,5 @@
 ---
-title: Browser testing
+title: Browser Testing During CI/CD With Codeship Pro
 layout: page
 weight: 5
 tags:
@@ -7,6 +7,7 @@ tags:
   - jet
   - tools
   - browser
+  - browser testing
 redirect_from:
   - /docker/browser-testing/
 ---

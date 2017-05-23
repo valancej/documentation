@@ -1,10 +1,12 @@
 ---
-title: Docker Build Arguments
+title: Using Docker Build Arguments In CI/CD
 layout: page
 weight: 7
 tags:
   - docker
   - tutorial
+  - build arguments
+  - secrets
 
 redirect_from:
   - /pro/getting-started/build-arguments/
