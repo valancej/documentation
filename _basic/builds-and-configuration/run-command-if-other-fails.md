@@ -1,5 +1,5 @@
 ---
-title: Run a fallback command after another command fails
+title: Run A Fallback Command After Another Command Fails
 layout: page
 weight: 9
 tags:

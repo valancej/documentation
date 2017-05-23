@@ -1,5 +1,5 @@
 ---
-title: Using Java And JVM In CI/CD with Codeship Basic
+title: Using Java And The JVM In CI/CD with Codeship Basic
 tags:
   - java
   - scala

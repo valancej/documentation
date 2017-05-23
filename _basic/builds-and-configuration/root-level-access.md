@@ -1,5 +1,5 @@
 ---
-title: Running commands as sudo or root
+title: Running Commands As Sudo or Root
 layout: page
 weight: 7
 tags:
