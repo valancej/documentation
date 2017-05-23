@@ -1,5 +1,5 @@
 ---
-title: Codeship Basic Is Simple, Fast Hosted CI/CD
+title: Codeship Basic Documentation
 layout: page
 collection: basic
 active: basic
