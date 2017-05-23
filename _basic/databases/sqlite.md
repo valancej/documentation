@@ -1,5 +1,5 @@
 ---
-title: SQLite
+title: Using SQLite In CI/CD with Codeship Basic
 layout: page
 tags:
   - services

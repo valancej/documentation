@@ -1,5 +1,5 @@
 ---
-title: Include / Exclude Commands On Specific Branches
+title: Ignore command on specific branch or run only on a branch
 layout: page
 weight: 8
 tags:

@@ -1,5 +1,5 @@
 ---
-title: API
+title: Using The Codeship API For CI/CD Workflows
 layout: page
 weight: 11
 tags:

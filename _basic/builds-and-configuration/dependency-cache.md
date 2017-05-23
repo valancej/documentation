@@ -1,9 +1,11 @@
 ---
-title: Dependency Cache On Codeship Basic
+title: Speed Up Your Builds With Caching on Codeship Basic
 weight: 4
 tags:
   - cache
   - dependencies
+  - speed
+  - caching
 
 redirect_from:
   - /basic/getting-started/dependency-cache/

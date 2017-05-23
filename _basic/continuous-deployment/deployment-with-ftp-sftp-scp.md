@@ -6,6 +6,8 @@ tags:
   - ftp
   - scp
   - rsync
+  - ssh
+  - sftp
 
 redirect_from:
   - /continuous-deployment/deployment-with-ftp-sftp-scp/

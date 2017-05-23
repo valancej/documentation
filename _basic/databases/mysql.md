@@ -1,5 +1,5 @@
 ---
-title: MySQL
+title: Using MySQL In CI/CD with Codeship Basic 
 layout: page
 tags:
   - services

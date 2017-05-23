@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL
+title: Using PostgreSQL In CI/CD with Codeship Basic
 layout: page
 tags:
   - services
