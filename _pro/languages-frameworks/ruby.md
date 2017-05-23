@@ -1,5 +1,5 @@
 ---
-title: Ruby on Docker
+title: Using Ruby In CI/CD with Docker and Codeship Pro
 weight: 1
 tags:
   - ruby

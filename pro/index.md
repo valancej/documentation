@@ -1,5 +1,5 @@
 ---
-title: Codeship Pro
+title: Codeship Pro: Flexible, Customizable Hosted CI/CD With Docker
 layout: page
 collection: pro
 active: pro

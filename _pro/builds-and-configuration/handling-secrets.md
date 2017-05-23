@@ -1,5 +1,5 @@
 ---
-title: Handling Secrets With Docker
+title: Handling Secrets With Docker And Codeship Pro
 layout: page
 weight: 10
 tags:

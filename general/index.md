@@ -1,5 +1,5 @@
 ---
-title: General
+title: Account And Setup Troubleshooting For Codeship
 layout: page
 collection: general
 redirect_from:

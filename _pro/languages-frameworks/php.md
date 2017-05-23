@@ -1,5 +1,5 @@
 ---
-title: PHP on Docker
+title: Using PHP In CI/CD with Docker and Codeship Pro
 weight: 6
 tags:
   - php
