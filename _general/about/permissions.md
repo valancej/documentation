@@ -1,5 +1,5 @@
 ---
-title: "Permissions And Security Management"
+title: Repository Permissions and Access On Codeship
 layout: page
 weight: 27
 tags:

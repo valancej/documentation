@@ -1,11 +1,12 @@
 ---
-title: Debug Your Builds Via SSH
+title: Debugging Your Builds Via SSH Sessions
 weight: 3
 tags:
   - testing
   - ssh
   - key
   - debug
+  - troubleshooting
 
 redirect_from:
   - /continuous-integration/ssh-access/

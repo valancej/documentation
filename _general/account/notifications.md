@@ -1,10 +1,10 @@
 ---
-title: Build Notifications
+title: Managing Up Your CI/CD Build Notifications
 layout: page
 tags:
   - administration
   - notifications
-
+  - alerts
 redirect_from:
   - /administration/notifications/
   - /basic/getting-started/webhooks/
