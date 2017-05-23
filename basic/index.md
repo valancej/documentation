@@ -1,5 +1,5 @@
 ---
-title: Codeship Basic
+title: Codeship Basic Documentation
 layout: page
 collection: basic
 active: basic

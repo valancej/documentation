@@ -1,5 +1,5 @@
 ---
-title: Using Image Registries
+title: Using Docker Image Registries With Your CI/CD Builds
 layout: page
 weight: 5
 tags:
@@ -7,6 +7,11 @@ tags:
   - tutorial
   - push
   - registry
+  - registries
+  - dockerhub
+  - quay
+  - ecr
+  - gcr
 
 redirect_from:
   - /docker/docker-push/

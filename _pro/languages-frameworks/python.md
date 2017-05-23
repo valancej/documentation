@@ -1,5 +1,5 @@
 ---
-title: Python on Docker
+title: Using Python In CI/CD with Docker and Codeship Pro
 weight: 2
 tags:
   - python

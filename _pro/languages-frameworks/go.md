@@ -1,5 +1,5 @@
 ---
-title: Go on Docker
+title: Using Go In CI/CD with Docker and Codeship Pro
 weight: 4
 tags:
   - go

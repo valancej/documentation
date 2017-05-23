@@ -1,5 +1,5 @@
 ---
-title: Codeship Pro
+title: Codeship Pro Documentation
 layout: page
 collection: pro
 active: pro

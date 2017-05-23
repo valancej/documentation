@@ -1,5 +1,5 @@
 ---
-title: Local CLI (Codeship Pro)
+title: Debugging And Setup With The Codeship Local CLI (Codeship Pro)
 layout: page
 weight: 1
 tags:
@@ -8,6 +8,8 @@ tags:
   - introduction
   - installation
   - running locally
+  - debugging
+  - setup
 
 redirect_from:
   - /docker/installation/

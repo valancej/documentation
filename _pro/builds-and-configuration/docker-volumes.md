@@ -1,10 +1,11 @@
 ---
-title: Using Docker Volumes
+title: Using Docker Volumes In CI/CD
 layout: page
 weight: 8
 tags:
   - docker
   - tutorial
+  - volumes
 
 redirect_from:
   - /docker/docker-volumes/

@@ -1,5 +1,5 @@
 ---
-title: Java on Docker
+title: Using Java In CI/CD with Docker and Codeship Pro
 weight: 5
 tags:
   - java

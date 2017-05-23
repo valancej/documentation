@@ -1,5 +1,5 @@
 ---
-title: Project Setup Or Migration
+title: Setting Up Or Migrating A Project To Codeship Pro
 layout: page
 weight: 6
 tags:
@@ -9,6 +9,8 @@ tags:
   - getting started
   - project configuration
   - tutorial
+  - migrating
+  - migration
 
 redirect_from:
   - /docker/codeship-configuration/
