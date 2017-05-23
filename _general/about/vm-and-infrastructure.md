@@ -1,9 +1,11 @@
 ---
-title: VM and Infrastructure
+title: VM And Infrastructure Specifics
 layout: page
 tags:
   - security
   - infrastructure
+  - linux
+  - firewall
 weight: 2
 redirect_from:
   - /security/vm-and-infrastructure/

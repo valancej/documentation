@@ -7,6 +7,7 @@ tags:
   - deployment
   - k8s
   - k8
+  - deployment
 redirect_from:
   - /general/account/guides/deployment-with-kubernetes/
 ---

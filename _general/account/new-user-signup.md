@@ -1,5 +1,5 @@
 ---
-title: Signing Up For Codeship
+title: Signing Up For A New Codeship Account
 weight: 10
 tags:
 - account

@@ -1,5 +1,5 @@
 ---
-title: Support For Mobile Applications on Codeship
+title: CI/CD For Mobile Apps on Codeship
 layout: page
 tags:
   - mobile

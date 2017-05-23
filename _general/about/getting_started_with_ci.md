@@ -4,6 +4,10 @@ layout: page
 tags:
   - faq
   - getting started
+  - continuous Integration
+  - ci
+  - cd
+  - continuous deployment
 weight: 1
 redirect_from:
   - /faq/getting_started_with_ci/

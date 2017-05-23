@@ -6,6 +6,7 @@ tags:
   - project
   - organizations
   - team management
+  - teams
 
 redirect_from:
   - /administration/organizations/
