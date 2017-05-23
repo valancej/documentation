@@ -1,5 +1,5 @@
 ---
-title: Python
+title: Using Python In CI/CD with Codeship Basic
 weight: 4
 tags:
   - python

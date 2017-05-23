@@ -1,5 +1,5 @@
 ---
-title: RabbitMQ
+title: Using RabbitMQ In CI/CD with Codeship Basic
 layout: page
 tags:
   - services

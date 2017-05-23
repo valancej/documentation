@@ -1,5 +1,5 @@
 ---
-title: Java and JVM based languages
+title: Using Java And JVM In CI/CD with Codeship Basic
 tags:
   - java
   - scala

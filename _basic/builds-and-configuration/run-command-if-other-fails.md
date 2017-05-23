@@ -1,5 +1,5 @@
 ---
-title: Run A Command If A Step Fails
+title: Run a fallback command after another command fails
 layout: page
 weight: 9
 tags:

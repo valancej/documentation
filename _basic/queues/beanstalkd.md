@@ -1,5 +1,5 @@
 ---
-title: Beanstalkd
+title: Using Beanstalkd In CI/CD with Codeship Basic
 layout: page
 tags:
   - services

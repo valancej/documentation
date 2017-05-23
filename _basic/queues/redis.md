@@ -1,5 +1,5 @@
 ---
-title: Redis
+title: Using Redis In CI/CD with Codeship Basic
 layout: page
 tags:
   - services

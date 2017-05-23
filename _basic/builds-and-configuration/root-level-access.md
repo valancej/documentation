@@ -1,11 +1,12 @@
 ---
-title: Sudo And Root On Codeship Basic
+title: Running commands as sudo or root
 layout: page
 weight: 7
 tags:
   - faq
   - sudo
   - packages
+  - root
 
 redirect_from:
   - /faq/root-level-access/

@@ -1,5 +1,5 @@
 ---
-title: Ruby
+title: Using Ruby In CI/CD with Codeship Basic
 weight: 1
 tags:
   - ruby
