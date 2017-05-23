@@ -1,5 +1,5 @@
 ---
-title: Using Docker Image Registreis With Your CI/CD Builds
+title: Using Docker Image Registries With Your CI/CD Builds
 layout: page
 weight: 5
 tags:

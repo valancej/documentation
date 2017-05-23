@@ -1,5 +1,5 @@
 ---
-title: Setting Up Or Migrating A Project With Codeship Pro
+title: Setting Up Or Migrating A Project To Codeship Pro
 layout: page
 weight: 6
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Debugging And Setup With The Local CLI (Codeship Pro)
+title: Debugging And Setup With The Codeship Local CLI (Codeship Pro)
 layout: page
 weight: 1
 tags:
