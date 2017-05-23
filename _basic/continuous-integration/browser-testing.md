@@ -1,9 +1,11 @@
 ---
-title: Browser Testing
+title: Browser Testing During CI/CD With Codeship Basic
 weight: 1
 tags:
   - testing
   - continuous integration
+  - browser testing
+  - browsers
 
 redirect_from:
   - /continuous-integration/browser-testing/

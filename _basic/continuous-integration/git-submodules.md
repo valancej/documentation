@@ -1,5 +1,5 @@
 ---
-title: Git Submodules
+title: Using Git Submodules In CI/CD with Codeship Basic
 weight: 3
 tags:
   - git

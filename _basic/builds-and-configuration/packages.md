@@ -1,5 +1,5 @@
 ---
-title: What's Installed On Codeship Basic
+title: All Packages Installed On Codeship Basic
 weight: 1
 tags:
 - AMI

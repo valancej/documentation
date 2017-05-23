@@ -1,5 +1,5 @@
 ---
-title: Parallel Tests On Codeship Basic
+title: Speed Up Your Builds With Parallel Testing on Codeship Basic
 weight: 5
 tags:
 - testing

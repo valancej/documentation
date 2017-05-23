@@ -1,9 +1,10 @@
 ---
-title: Coveralls Integration
+title: Integrating Codeship With Coveralls for Code Coverage Reports
 layout: page
 tags:
   - analytics
   - integrations
+  - code coverage
 weight: 2  
 redirect_from:
   - /analytics/coveralls/

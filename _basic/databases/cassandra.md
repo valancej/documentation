@@ -1,5 +1,5 @@
 ---
-title: Apache Cassandra
+title: Using Apache Cassandra In CD/CD With Codeship Basic
 layout: page
 tags:
   - services

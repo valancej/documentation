@@ -1,9 +1,10 @@
 ---
-title: Code Climate Integration
+title: Integrating Codeship With CodeClimate for Code Coverage Reports
 layout: page
 tags:
   - analytics
   - integrations
+  - code coverage
 weight: 1  
 redirect_from:
   - /analytics/code-climate/

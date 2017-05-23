@@ -1,5 +1,5 @@
 ---
-title: RethinkDB
+title: Using RethinkDB In CI/CD with Codeship Basic
 layout: page
 tags:
   - services
