@@ -2,36 +2,11 @@
 <nav class="Topmenu">
   <div class="collg50">
     <div class="Topmenu_nav">
-      <ul>
-        <li>
-          {% if page.active == "gettingstarted" %}
-          <a href="/getting-started" class="active">Getting Started</a>
-         {% else %}
-            <a href="/getting-started">Getting Started</a>
-         {% endif %}      </li>
-        <li>
-          {% if page.active == "pro" or page.collection == "pro" %}
-          <a href="/pro" class="active">Pro</a>
-         {% else %}
-            <a href="/pro">Pro</a>
-         {% endif %}      </li>
-        <li>
-          {% if page.active == "basic" or page.collection == "basic" %}
-          <a href="/basic" class="active">Basic</a>
-         {% else %}
-            <a href="/basic">Basic</a>
-         {% endif %}      </li>
-        <li>
-          {% if page.active == "moreresources" %}
-          <a href="/more-resources" class="active">More Resources</a>
-         {% else %}
-            <a href="/more-resources">More Resources</a>
-         {% endif %}
-        </li>
-        <li>
-            <a href="https://codeship-api.api-docs.io/v1/introduction/auth">API</a>
-        </li>
-      </ul>
+			<ul>
+				{% for item in site.menus.main %}
+        <li><a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+      	{% endfor %}
+			</ul>
     </div>
   </div>
   <div class="collg50">

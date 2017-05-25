@@ -1,0 +1,40 @@
+main:
+  - title: Getting Started
+    identifier: getting-started
+    url: /getting-started
+  - title: Basic
+    identifier: basic
+    url: /basic
+  - title: Pro
+    identifier: pro
+    url: /pro
+  - title: More Resources
+    identifier: more-resources
+    url: /more-resources
+  - title: API
+    identifier: api
+    url: https://codeship-api.api-docs.io/v1/introduction/auth
+
+general:
+  - title: About
+    identifier: general/about
+    url: general/about
+  - title: Account
+    identifier: general/account
+    url: general/account
+
+basic:
+  - title: Quickstart
+    identifier: basic/quickstart
+    url: basic/quickstart
+  - title: Builds & Configuration
+    identifier: basic/builds
+    url: basic/builds
+
+pro:
+  - title: Quickstart
+    identifier: pro/quickstart
+    url: pro/quickstart
+  - title: Builds & Configuration
+    identifier: pro/builds
+    url: pro/builds
