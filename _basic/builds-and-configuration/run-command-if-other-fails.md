@@ -1,16 +1,17 @@
 ---
 title: Run A Fallback Command After Another Command Fails
 layout: page
-weight: 9
+menus:
+  basic/builds:
+    title: Run A Command In Case Of An Error
+    weight: 9
 tags:
   - faq
   - build error
   - commands
-
 redirect_from:
   - /faq/run-command-if-other-fails/
-  - /basic/getting-started/run-command-if-other-fails/  
-
+  - /basic/getting-started/run-command-if-other-fails/
 ---
 
 * include a table of contents

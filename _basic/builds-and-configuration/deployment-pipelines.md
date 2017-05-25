@@ -1,16 +1,17 @@
 ---
 title: Deployment Pipelines On Codeship Basic
 layout: page
-weight: 6
+menus:
+  basic/builds:
+    title: Deployment Pipelines
+    weight: 6
 tags:
   - deployment
-
 redirect_from:
   - /continuous-deployment/deployment-pipelines/
   - /basic/getting-started/wildcard-deployment-pipelines/
   - /basic/getting-started/deployment-pipelines/
   - /continuous-deployment/wildcard-deployment-pipelines/
-
 ---
 
 * include a table of contents

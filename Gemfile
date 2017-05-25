@@ -16,6 +16,7 @@ gem 'jekyll-coffeescript', '~> 1.0.2'
 gem 'jekyll-seo-tag', '~> 2.2.0'
 gem 'jekyll-sitemap', '~> 1.1.1'
 gem 'jekyll-redirect-from', '~> 0.12.1'
+gem 'jekyll-menus', '~> 0.5.0'
 
 group :test do
   gem 'scss_lint'

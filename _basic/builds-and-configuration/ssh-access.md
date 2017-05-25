@@ -1,16 +1,18 @@
 ---
 title: Debugging Your Builds Via SSH Sessions
-weight: 3
+menus:
+  basic/builds:
+    title: Debugging Builds
+    weight: 3
 tags:
   - testing
   - ssh
   - key
   - debug
   - troubleshooting
-
 redirect_from:
   - /continuous-integration/ssh-access/
-  - /basic/getting-started/ssh-access/  
+  - /basic/getting-started/ssh-access/
 ---
 
 * include a table of contents
