@@ -83,9 +83,9 @@ To get the appropriate authentication file on OSX, you will need to remove the `
 
 **Prerequisites:** You will need to have a robot account for your Quay repository. Please see the documentation on [Robot Accounts](http://docs.quay.io/glossary/robot-accounts.html) for Quay.io on how to set it up for your repository.
 
-* Once you have configured the robot account, download the `.dockercfg` file for this account, by heading over to the _Robots Account_ tab in your settings, clicking the gear icon, and selecting _View Credentials_. Then select _Docker Configuration_ and download the credentials config file.
+**Note** that permissions can be set per robot account, so if you are seeing authentication failures you should check that the individual robot account being used is configured with appropriate access.
 
-    Save the file as `dockercfg` in your repository (you'll probably want to add it to the `.gitignore` file as well).
+* Once you have configured the robot account, download the `.dockercfg` file for this account, by heading over to the _Robots Account_ tab in your settings. From there, either credit a new robot account or click on an existing robot account. In the pop-up window, the _Docker Configuration_ tab will have an option to download an `auth.json` file that you will download and use in the next steps.
 
 * Get the AES encryption key from the _General_ settings page of your Codeship project and save it to your repository as `codeship.aes` (again, adding it to the `.gitignore` file is a good idea).
 
