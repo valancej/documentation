@@ -150,7 +150,3 @@ Now that we have your deployment script set up (I've saved mine to the root of m
 - service: google_cloud_deployment
   command: /deploy/deploy.sh
 ```
-
-## To Learn More
-
-[Get stared with Codeship Pro.]({% link _pro/quickstart/getting-started.md %})=

@@ -28,11 +28,11 @@ All Codeship Pro builds run on dedicated, single tenant build machines, on indiv
 
 The Codeship Pro build environment is configurable depending on plan and available in the following configurations:
 
-**Small**: 2 CPUs, 3.75gb RAM
-**Medium**: 4 CPUs, 7.5gb RAM
-**Big**: 8 CPUs, 15gb RAM
-**Huge**: 16 CPUs, 30gb RAM
-**Massive**: 32 CPUs, 60gb RAM
+- **Small**: 2 CPUs, 3.75gb RAM
+- **Medium**: 4 CPUs, 7.5gb RAM
+- **Big**: 8 CPUs, 15gb RAM
+- **Huge**: 16 CPUs, 30gb RAM
+- **Massive**: 32 CPUs, 60gb RAM
 
 ### Docker Version On Codeship Pro
 
