@@ -1,8 +1,11 @@
+{% for menu in page.menus %}
+	{% assign category = menu[0] %}
+{% endfor %}
 <ul {% if include.toplevel %} class="ul" {% endif %}>
   {% for item in include.menu %}
 		{% if include.toplevel %}
 		<li class="ul__title">
-			<input type="checkbox" {% if unfold %} checked {% endif %}>
+			<input type="checkbox" {% if category == item.identifier %} checked {% endif %}>
 			<i></i>
 			<h5 class="title">{{ item.title }}</h5>
 		{% else %}
