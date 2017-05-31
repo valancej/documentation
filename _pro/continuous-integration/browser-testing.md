@@ -1,7 +1,7 @@
 ---
 title: Browser Testing During CI/CD With Codeship Pro
 layout: page
-weight: 5
+weight: 2
 tags:
   - docker
   - jet
