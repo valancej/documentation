@@ -27,7 +27,11 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 ### Static Sites
 
-To use Percy with static sites on Codeship Basic, you will need to install the `percy-cli` gem, either in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or in your `Gemfile` itself.
+To use Percy with static sites on Codeship Basic, you will need to install the `percy-cli` gem, either in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or in your `Gemfile` itself. You can install the gem with the command:
+
+```bash
+gem install percy-cli
+```
 
 From there, you will need to add the following command to your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
@@ -39,7 +43,11 @@ Note that you can use multiple commands to take snapshots of multiple directorie
 
 ### Ruby
 
-To integrate Percy with Codeship Basic on a Ruby project, you will want to install the `percy-capybara` gem in either your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or your Gemfile.
+To integrate Percy with Codeship Basic on a Ruby project, you will want to install the `percy-capybara` gem in either your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or your Gemfile. You can install the gem with the command:
+
+```bash
+gem install percy-capybara
+```
 
 From there, you will need to add specific hooks to your Rspec, Capybara, Minitest, or any other test specs you may have. You can find specific integration integration for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/ruby/capybara-rails).
 

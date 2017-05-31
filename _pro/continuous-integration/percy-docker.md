@@ -28,6 +28,8 @@ To use Percy with static sites inside Docker images on Codeship Pro, you will ne
 RUN gem install percy-cli
 ```
 
+**Note** that this will require you to be building an image that contains both Ruby and Rubygems. If the image does not contain both of these, you will be unable to install the necessary `percy-cli` gem.
+
 From there, you will need to add the following command a step or inside of a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```bash
@@ -44,6 +46,8 @@ To integrate Percy with Codeship Pro on a Ruby and Docker project, you will want
 ```bash
 RUN gem install percy-capybara
 ```
+
+**Note** that this will require you to be building an image that contains both Ruby and Rubygems. If the image does not contain both of these, you will be unable to install the necessary `percy-cli` gem.
 
 From there, you will need to add specific hooks to your Rspec, Capybara, Minitest, or any other test specs you may have. You can find specific integration integration for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/ruby/capybara-rails).
 
