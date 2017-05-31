@@ -5,10 +5,12 @@ tags:
   - analytics
   - integrations
   - code coverage
-weight: 2  
+  - browsers
+weight: 8
 redirect_from:
   - /analytics/coveralls/
   - /classic/getting-started/coveralls/
+  - /basic/analytics/coveralls/
 ---
 
 * include a table of contents
