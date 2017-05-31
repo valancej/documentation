@@ -1,29 +1,29 @@
 {% assign collections = site.collections | sort: 'sort_order' %}
 <nav class="Topmenu">
-  <div class="collg50">
-    <div class="Topmenu_nav">
+	<div class="collg50">
+		<div class="Topmenu_nav">
 			<ul>
 				{% for item in site.menus.main %}
-        <li><a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
-      	{% endfor %}
+					<li><a href="{{ item.url | prepend: site.baseurl }}" {% if item.identifier == page.collection %} class="active" {% endif %}>{{ item.title }}</a></li>
+				{% endfor %}
 			</ul>
-    </div>
-  </div>
-  <div class="collg50">
-    <div class="Topmenu_search">
-      <form action="/">
-        <input type="search" id="search" name="search" autofocus="false" spellcheck="false" placeholder="Search the documentation">
-        <input class="is-hidden" type="submit" />
-      </form>
-    </div>
-  </div>
+		</div>
+	</div>
+	<div class="collg50">
+		<div class="Topmenu_search">
+			<form action="/">
+				<input type="search" id="search" name="search" autofocus="false" spellcheck="false" placeholder="Search the documentation">
+				<input class="is-hidden" type="submit" />
+			</form>
+		</div>
+	</div>
 </nav>
 
 <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+	(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+	(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+	e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+	})(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
 
-  _st('install','bkVUpGdrMMVM73Lx7EQp');
+	_st('install','bkVUpGdrMMVM73Lx7EQp');
 </script>
