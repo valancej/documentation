@@ -26,10 +26,6 @@ defaults:
       comments: true
       image: /assets/img/og_documentation.jpg
   - scope:
-      path: "_basic/analytics"
-    values:
-      category: "Analytics"
-  - scope:
       path: "_basic/continuous-deployment"
     values:
       category: "Continuous Deployment"
@@ -105,7 +101,6 @@ sidebar_order:
   - "Databases"
   - "Continuous Deployment"
   - "Continuous Integration"
-  - "Analytics"
   - "Queues"
   - "Services"
   - "About"

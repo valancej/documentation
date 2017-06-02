@@ -5,10 +5,12 @@ tags:
   - analytics
   - integrations
   - code coverage
-weight: 1  
+  - browsers
+weight: 7  
 redirect_from:
   - /analytics/code-climate/
   - /classic/getting-started/code-climate/
+  - /basic/analytics/code-climate/
 ---
 
 * include a table of contents
