@@ -16,7 +16,7 @@ redirect_from:
 ## Versions And Setup
 
 ### RVM
-We use RVM to manage different Ruby versions. We set <strong>{% default_ruby_version %}</strong> as the default version. Currently we do not load the Ruby version from your Gemfile. You can always change the Ruby version by running:
+We use RVM to manage different Ruby versions. We set <strong>{{ site.data.basic.defaults.ruby }}</strong> as the default version. Currently we do not load the Ruby version from your Gemfile. You can always change the Ruby version by running:
 
 ```shell
 rvm use RUBY_VERSION_YOU_WANT_TO_USE
@@ -24,7 +24,7 @@ rvm use RUBY_VERSION_YOU_WANT_TO_USE
 
 The following Ruby versions are preinstalled
 
-{% ruby_versions %}
+{% include basic/ami/{{ site.data.basic.ami_id }}/ruby.md %}
 
 ### Using a .ruby-version file
 You can also use your .ruby-version file on Codeship. The .ruby-version file lives in the project root and its content is just your Ruby version, for example: `2.0.0-p195`. You can just read the ruby version to use from that file:
