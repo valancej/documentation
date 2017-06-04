@@ -14,7 +14,10 @@ redirect_from:
   - /faq/github-3rd-party-restrictions/
   - /general/account/github-3rd-party-restrictions/
   - /general/account/permissions/
-weight: 4
+menus:
+  general/about:
+  title: Permissions & Access
+  weight: 4
 ---
 
 * include a table of contents

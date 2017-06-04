@@ -1,6 +1,9 @@
 ---
 title: Skipping builds
-weight: 3
+menus:
+  general/projects:
+    title: Skipping Builds
+    weight: 4
 tags:
   - docker
   - basic

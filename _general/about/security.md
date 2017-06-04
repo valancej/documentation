@@ -6,7 +6,10 @@ tags:
   - gpg key
   - permissions
   - ssh
-weight: 3
+menus:
+  general/about:
+  title: Security Information
+  weight: 3
 redirect_from:
   - /security/
   - /security/security/

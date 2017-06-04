@@ -22,6 +22,9 @@ general:
   - title: Account
     identifier: general/account
     url: general/account
+  - title: Projects
+    identifier: general/projects
+    url: general/projects
 
 basic:
   - title: Quickstart

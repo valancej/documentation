@@ -8,7 +8,10 @@ tags:
   - ios
   - swift
   - objective-c
-weight: 4
+menus:
+  general/about:
+  title: Mobile Support
+  weight: 5
 ---
 
 * include a table of contents

@@ -6,7 +6,10 @@ tags:
   - infrastructure
   - linux
   - firewall
-weight: 2
+menus:
+  general/about:
+  title: VM & Machine Information
+  weight: 2
 redirect_from:
   - /security/vm-and-infrastructure/
 ---

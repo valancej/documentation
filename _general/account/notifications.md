@@ -9,7 +9,10 @@ redirect_from:
   - /administration/notifications/
   - /basic/getting-started/webhooks/
   - /integrations/webhooks/
-weight: 2
+menus:
+  general/account:
+    title: Notifications
+    weight: 3
 ---
 
 * include a table of contents
