@@ -1,7 +1,10 @@
 ---
 title: Repository Permissions and Access On Codeship
 layout: page
-weight: 27
+menus:
+  general/about:
+    title: Required Permissions for Remote SCMs
+    weight: 4
 tags:
   - security
   - permissions
@@ -14,10 +17,6 @@ redirect_from:
   - /faq/github-3rd-party-restrictions/
   - /general/account/github-3rd-party-restrictions/
   - /general/account/permissions/
-menus:
-  general/about:
-  title: Permissions & Access
-  weight: 4
 ---
 
 * include a table of contents

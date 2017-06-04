@@ -1,13 +1,13 @@
 ---
 title: Support For Git LFS Codeship
 layout: page
+menus:
+  general/about:
+    title: GIT LFS
+    weight: 5
 tags:
   - git
   - lfs
-menus:
-  general/about:
-  title: Git LFS
-  weight: 5
 ---
 
 * include a table of contents
