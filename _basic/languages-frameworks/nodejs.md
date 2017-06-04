@@ -1,6 +1,9 @@
 ---
 title: Using Node.js In CI/CD with Codeship Basic
-weight: 2
+menus:
+  basic/languages:
+    title: Node.js
+    weight: 2
 tags:
   - nodejs
   - iojs

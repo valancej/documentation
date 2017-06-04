@@ -3,10 +3,10 @@ title: Deploy with Cloud Foundry
 tags:
   - deployment
   - cloudfoundry
-  menus:
-    basic/cd:
-      title: Cloud Foundry
-      weight: 12
+menus:
+  basic/cd:
+    title: Cloud Foundry
+    weight: 12
 redirect_from:
   - /continuous-deployment/deployment-to-cloudfoundry/
 ---
