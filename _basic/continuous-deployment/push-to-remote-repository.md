@@ -1,7 +1,9 @@
 ---
 title: Push to Remote Repository
-weight: 10
-layout: page
+menus:
+  basic/cd:
+    title: Git Push
+    weight: 11
 tags:
   - deployment
   - git

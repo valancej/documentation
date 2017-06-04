@@ -33,6 +33,12 @@ basic:
   - title: Builds & Configuration
     identifier: basic/builds
     url: basic/builds
+  - title: Continuous Integration
+    identifier: basic/ci
+    url: basic/ci
+  - title: Continuous Deployment
+    identifier: basic/cd
+    url: basic/cd
 
 pro:
   - title: Quickstart

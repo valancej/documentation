@@ -1,6 +1,9 @@
 ---
 title: Run a command in the background
-weight: 2
+menus:
+  basic/ci:
+    title: Background Commands
+    weight: 2
 tags:
   - testing
   - faq
