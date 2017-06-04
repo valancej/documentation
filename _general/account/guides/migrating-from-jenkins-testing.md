@@ -1,6 +1,9 @@
 ---
 title: Migrating From Jenkins To Codeship - Testing
-weight: 3
+menus:
+  general/account:
+    title: Jenkins To Codeship - Testing
+    weight: 8
 tags:
   - jenkins
   - testing

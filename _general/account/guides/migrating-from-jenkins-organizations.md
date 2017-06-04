@@ -1,6 +1,9 @@
 ---
 title: Migrating From Jenkins To Codeship - Organizations
-weight: 1
+menus:
+  general/account:
+    title: Jenkins to Codeship - Teams
+    weight: 6
 tags:
   - jenkins
   - organizations

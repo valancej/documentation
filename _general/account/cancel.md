@@ -1,6 +1,9 @@
 ---
 title: How To Cancel Or Delete Your Account
-weight: 11
+menus:
+  general/account:
+    title: Cancelling Account
+    weight: 5
 tags:
 - cancel
 - account

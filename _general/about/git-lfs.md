@@ -4,7 +4,10 @@ layout: page
 tags:
   - git
   - lfs
-weight: 5
+menus:
+  general/about:
+  title: Git LFS
+  weight: 5
 ---
 
 * include a table of contents

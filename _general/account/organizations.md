@@ -10,7 +10,10 @@ tags:
 
 redirect_from:
   - /administration/organizations/
-weight: 3  
+menus:
+  general/account:
+    title: Organization Accounts
+    weight: 2
 ---
 
 * include a table of contents

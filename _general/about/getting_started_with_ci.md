@@ -8,7 +8,10 @@ tags:
   - ci
   - cd
   - continuous deployment
-weight: 1
+menus:
+  general/about:
+  title: Getting Started With CI/CD
+  weight: 1
 redirect_from:
   - /faq/getting_started_with_ci/
 ---

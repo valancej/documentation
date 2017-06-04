@@ -1,7 +1,10 @@
 ---
 title: Troubleshooting Cucumber Failures In CI/CD with Codeship Basic
 layout: page
-weight: 7
+menus:
+  general/projects:
+    title: Cucumber Failures
+    weight: 7
 tags:
   - troubleshooting
   - build error
