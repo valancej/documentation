@@ -33,7 +33,7 @@ Now that we've covered the basic pieces of the service, we should take a few min
 
 ## Caching
 
-Next up, let's take a look at caching. When you use caching, we'll push your image out to a private, secure S3 bucket with access credentials unique to your project. Then, on your next build, we'll quickly check your Dockerfile to see if anything has changed. If nothing has changed - meaning, if building the Dockerfile would result in the exact same image as last time - we'll reuse the cached image. This is a layer by layer cache, so we'll reuse as much of the image as we can before rebuilding the rest of the image once we encounter a change.
+Next up, let's take a look at caching. When you use caching, we'll push your image out to a secure image registry. Then, on your next build, we'll quickly check your Dockerfile to see what has changed and we'll pull the cached image to reuse any layers we can. This is a layer by layer cache, so we'll reuse as much of the image as we can before rebuilding the rest of the image once we encounter a change.
 
 Let's open up our `codeship-services.yml` file and make a change to enable caching.
 
