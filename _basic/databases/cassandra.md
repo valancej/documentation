@@ -5,7 +5,10 @@ tags:
   - services
   - databases
   - cassandra
-weight: 5
+menus:
+  basic/db:
+    title: Apache Cassandra
+    weight: 5
 redirect_from:
   - /databases/cassandra/
   - /classic/getting-started/cassandra/

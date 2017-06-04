@@ -1,9 +1,12 @@
 ---
-title: Using Dart In CI/CD with Codeship Basic 
+title: Using Dart In CI/CD with Codeship Basic
 tags:
   - dart
   - languages
-weight: 8
+menus:
+  basic/languages:
+    title: Dart
+    weight: 8
 redirect_from:
   - /languages/dart/
 ---

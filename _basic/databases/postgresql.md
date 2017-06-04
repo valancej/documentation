@@ -5,7 +5,10 @@ tags:
   - services
   - databases
   - postgresql
-weight: 2
+menus:
+  basic/db:
+    title: PostgreSQL
+    weight: 2
 redirect_from:
   - /databases/postgresql/
   - /classic/getting-started/postgresql/

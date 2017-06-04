@@ -5,7 +5,10 @@ tags:
   - services
   - databases
   - mongodb
-weight: 3
+menus:
+  basic/db:
+    title: MongoDB
+    weight: 3
 redirect_from:
   - /databases/mongodb/
   - /classic/getting-started/mongodb/

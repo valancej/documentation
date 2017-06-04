@@ -39,6 +39,18 @@ basic:
   - title: Continuous Deployment
     identifier: basic/cd
     url: basic/cd
+  - title: Databases
+    identifier: basic/db
+    url: basic/db
+  - title: Queues
+    identifier: basic/queues
+    url: basic/queues
+  - title: Services
+    identifier: basic/services
+    url: basic/services
+  - title: Languages And Frameworks
+    identifier: basic/languages
+    url: basic/languages
 
 pro:
   - title: Quickstart

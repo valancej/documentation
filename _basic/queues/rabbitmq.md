@@ -5,7 +5,10 @@ tags:
   - services
   - queues
   - rabbitmq
-weight: 3
+menus:
+  basic/queues:
+    title: RabbitMQ
+    weight: 1
 redirect_from:
   - /queues/rabbitmq/
   - /classic/getting-started/rabbitmq/

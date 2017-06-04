@@ -3,7 +3,10 @@ title: Using Go In CI/CD with Codeship Basic
 tags:
 - go
 - languages
-weight: 6
+menus:
+  basic/languages:
+    title: Go
+    weight: 6
 redirect_from:
   - /languages/go/
 ---

@@ -1,6 +1,9 @@
 ---
 title: Using Ruby In CI/CD with Codeship Basic
-weight: 1
+menus:
+  basic/languages:
+    title: Ruby
+    weight: 1
 tags:
   - ruby
   - languages
