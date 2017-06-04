@@ -1,6 +1,9 @@
 ---
 title: Using Git Submodules In CI/CD with Codeship Basic
-weight: 3
+menus:
+  basic/ci:
+    title: Git Submodules
+    weight: 3
 tags:
   - git
   - submodules

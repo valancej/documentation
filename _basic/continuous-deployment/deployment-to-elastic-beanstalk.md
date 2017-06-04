@@ -1,7 +1,9 @@
 ---
 title: Deploy to Elastic Beanstalk
-weight: 4
-layout: page
+menus:
+  basic/cd:
+    title: AWS Elastic Beanstalk
+    weight: 4
 tags:
   - deployment
   - elastic beanstalk

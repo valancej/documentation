@@ -1,7 +1,9 @@
 ---
 title: Deploy to AWS CodeDeploy
-weight: 8
-layout: page
+menus:
+  basic/cd:
+    title: AWS CodeDeploy
+    weight: 5
 tags:
   - deployment
   - amazon

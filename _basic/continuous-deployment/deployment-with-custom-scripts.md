@@ -1,7 +1,9 @@
 ---
 title: Deploy via Custom Script
-weight: 2
-layout: page
+menus:
+  basic/cd:
+    title: Custom Script
+    weight: 2
 tags:
   - deployment
   - custom

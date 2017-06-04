@@ -1,6 +1,9 @@
 ---
 title: Keeping Build Artifacts After CI/CD
-weight: 4
+menus:
+  basic/ci:
+    title: Artifacts
+    weight: 4
 tags:
   - faq
   - artifacts
