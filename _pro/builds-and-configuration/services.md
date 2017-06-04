@@ -190,7 +190,7 @@ The boolean directive `add_docker` is available. If specified for a service, it 
 See [add_docker](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker) for an example using [Docker-in-Docker](https://registry.hub.docker.com/u/jpetazzo/dind).
 
 ### Caching the Docker image
-Caching is declared per service. For a service with caching enabled, Codeship will store your image remotely in an encrypted S3 bucket, and then use that image to repopulate the local build cache on future build runs. This prevents the Docker image from building from scratch each time, to save time and speed up your CI/CD process. By default, we will fall back to the latest image that was built on the `master` branch.
+Caching is declared per service. For a service with caching enabled Codeship will push your image out to a secure image registry, and then use pull and use that image on future builds. This prevents the Docker image from building from scratch each time, to save time and speed up your CI/CD process. By default, we will fall back to the latest image that was built on the `master` branch.
 
 An example setup using caching in your `codeship-services.yml` file would look like this:
 
