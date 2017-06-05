@@ -14,7 +14,7 @@ tags:
 
 ## Logging Deployments With Rollbar
 
-[Rollbar](https://www.rollbar.com) lets you collect and track errors and events related to your web applications. During your continuous deployment workflow with Codeship Pro, you can use Rollbar to log information relate to your deployments.
+[Rollbar](https://www.rollbar.com) lets you collect and track errors and events related to your web applications. During your continuous deployment workflow with Codeship Pro, you can use Rollbar to log information related to your deployments.
 
 ## Setting Your Rollbar Access Token
 

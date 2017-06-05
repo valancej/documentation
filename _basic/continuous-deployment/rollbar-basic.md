@@ -14,7 +14,7 @@ tags:
 
 ## Logging Deployments With Rollbar
 
-[Rollbar](https://www.rollbar.com) lets you collect and track errors and events related to your web applications. During your continuous deployment workflow with Codeship Basic, you can use Rollbar to log information relate to your deployments.
+[Rollbar](https://www.rollbar.com) lets you collect and track errors and events related to your web applications. During your continuous deployment workflow with Codeship Basic, you can use Rollbar to log information related to your deployments.
 
 ## Setting Your Rollbar Access Token
 
@@ -24,7 +24,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 ##  Logging During Deployment
 
-To send logs during deployments, you will want to add a new custom-script step to all of your [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
+To log a deployment-related datapoint in Rollbar, you will want to add a new custom-script step to all of your [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
 This new step will either run the following commands, or run a script that includes the following commands:
 
