@@ -1,7 +1,10 @@
 ---
 title: Environment Variables On Codeship Pro
 layout: page
-weight: 4
+menus:
+  pro/builds:
+    title: Environment Variables
+    weight: 4
 tags:
   - docker
   - encryption

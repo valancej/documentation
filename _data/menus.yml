@@ -65,3 +65,15 @@ pro:
   - title: Builds & Configuration
     identifier: pro/builds
     url: pro/builds
+  - title: Quickstart
+    identifier: pro/quickstart
+    url: pro/quickstart
+  - title: Continuous Deployment
+    identifier: pro/cd
+    url: pro/cd
+  - title: Continuous Integration
+    identifier: pro/ci
+    url: pro/ci
+  - title: Languages And Frameworks
+    identifier: pro/languages
+    url: pro/languages

@@ -1,6 +1,9 @@
 ---
 title: Using PHP In CI/CD with Docker and Codeship Pro
-weight: 6
+menus:
+  pro/languages:
+    title: PHP
+    weight: 6
 tags:
   - php
   - languages

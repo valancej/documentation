@@ -1,7 +1,10 @@
 ---
 title: Using Docker Build Arguments In CI/CD
 layout: page
-weight: 7
+menus:
+  pro/builds:
+    title: Build Arguments
+    weight: 7
 tags:
   - docker
   - tutorial

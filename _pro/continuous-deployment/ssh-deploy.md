@@ -1,7 +1,10 @@
 ---
 title: Continuous Delivery Via SSH With Docker
 layout: page
-weight: 5
+menus:
+  pro/cd:
+    title: Deploy Via SSH
+    weight: 6
 tags:
   - docker
   - deployment
