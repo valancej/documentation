@@ -1,2 +1,8 @@
 latest_update: '2017/06/05'
 ami_id: 'ami-1b97c20d'
+defaults:
+  ruby: '2.1.7'
+  php: '5.6'
+  node: '0.10'
+  python: '2.7'
+  
