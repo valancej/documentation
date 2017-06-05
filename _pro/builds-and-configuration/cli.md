@@ -1,7 +1,10 @@
 ---
 title: Debugging And Setup With The Codeship Local CLI (Codeship Pro)
 layout: page
-weight: 1
+menus:
+  pro/builds:
+    title: Local CLI
+    weight: 1
 tags:
   - docker
   - jet

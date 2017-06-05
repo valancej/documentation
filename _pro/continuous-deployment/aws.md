@@ -1,6 +1,9 @@
 ---
 title: Continuous Delivery to AWS with Docker
-weight: 1
+menus:
+  pro/cd:
+    title: AWS
+    weight: 1
 tags:
   - deployment
   - aws

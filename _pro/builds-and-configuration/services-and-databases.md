@@ -1,7 +1,10 @@
 ---
 title: Supported Services and Databases
 layout: page
-weight: 12
+menus:
+  pro/builds:
+    title: Services And Databases
+    weight: 12
 tags:
   - docker
   - jet

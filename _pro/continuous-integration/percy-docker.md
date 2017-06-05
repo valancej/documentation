@@ -4,7 +4,10 @@ layout: page
 tags:
   - screenshots
   - visual testing
-weight: 3
+menus:
+  pro/ci:
+    title: Using Percy
+    weight: 3
 ---
 
 * include a table of contents

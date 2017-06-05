@@ -1,7 +1,10 @@
 ---
 title: Speed Up Your Builds With Caching on Codeship Pro
 layout: page
-weight: 6
+menus:
+  pro/builds:
+    title: Image Caching
+    weight: 6
 tags:
   - docker
   - tutorial

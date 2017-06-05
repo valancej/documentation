@@ -1,7 +1,10 @@
 ---
 title: Handling Secrets With Docker And Codeship Pro
 layout: page
-weight: 10
+menus:
+  pro/builds:
+    title: Handling Secrets
+    weight: 10
 tags:
   - docker
   - secrets
