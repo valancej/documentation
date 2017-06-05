@@ -18,7 +18,7 @@ Percy is a visual testing tool that lets you take screen shots, monitor visual c
 
 ### Setting Your Percy Variables
 
-You will need to add the two values Percy provides when you create a new project inside their application - `PERCY_TOKEN` and `PERCY_PROJECT` - to your project's environment variables.
+You will need to add the two values Percy provides when you create a new project inside their application - `PERCY_TOKEN` and `PERCY_PROJECT` - to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 

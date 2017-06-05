@@ -28,7 +28,7 @@ To use Percy with static sites inside Docker images on Codeship Pro, you will ne
 RUN gem install percy-cli
 ```
 
-**Note** that this will require you to be building an image that contains both Ruby and Rubygems. If the image does not contain both of these, you will be unable to install the necessary `percy-cli` gem.
+**Note** that this will require you to be building an image that contains both Ruby and Rubygems. If the image does not contain both of these, you will be unable to install the necessary `percy-capybara` gem.
 
 From there, you will need to add the following command a step or inside of a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
@@ -55,11 +55,7 @@ These test specs will be called via your [codeship-steps.yml file]({{ site.baseu
 
 ### Ember
 
-To integrate Percy with Codeship Pro on an Ember and Docker project, you will want to install the `ember-percy` package inside your images by adding the following command to the Dockerfile:
-
-```bash
-RUN ember install ember-percy
-```
+To integrate Percy with Codeship Pro on an Ember and Docker project, you will want to install the `ember-percy` package into your application, typically via your `package.json`.
 
 From there, you will need to add specific hooks in to your project's test specs. You can find specific integration integration for calling Percy from your test specs [at the Percy documentation](https://percy.io/docs/clients/javascript/ember).
 
