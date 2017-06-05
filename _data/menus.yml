@@ -24,19 +24,21 @@ general:
     title: Account
     identifier: general/account
     url: general/account
-  - title: Projects
+  - &GENERAL_PROJECTS
+    title: Projects
     identifier: general/projects
     url: general/projects
 
 basic:
-  - <<: *GENERAL_ABOUT
-  - <<: *GENERAL_ACCOUNT
   - title: Quickstart
     identifier: basic/quickstart
     url: basic/quickstart
   - title: Builds & Configuration
     identifier: basic/builds
     url: basic/builds
+  - title: Languages And Frameworks
+    identifier: basic/languages
+    url: basic/languages
   - title: Continuous Integration
     identifier: basic/ci
     url: basic/ci
@@ -52,28 +54,26 @@ basic:
   - title: Services
     identifier: basic/services
     url: basic/services
-  - title: Languages And Frameworks
-    identifier: basic/languages
-    url: basic/languages
-
-pro:
   - <<: *GENERAL_ABOUT
   - <<: *GENERAL_ACCOUNT
+  - <<: *GENERAL_PROJECTS
+
+pro:
   - title: Quickstart
     identifier: pro/quickstart
     url: pro/quickstart
   - title: Builds & Configuration
     identifier: pro/builds
     url: pro/builds
-  - title: Quickstart
-    identifier: pro/quickstart
-    url: pro/quickstart
-  - title: Continuous Deployment
-    identifier: pro/cd
-    url: pro/cd
-  - title: Continuous Integration
-    identifier: pro/ci
-    url: pro/ci
   - title: Languages And Frameworks
     identifier: pro/languages
     url: pro/languages
+  - title: Continuous Integration
+    identifier: pro/ci
+    url: pro/ci
+  - title: Continuous Deployment
+    identifier: pro/cd
+    url: pro/cd
+  - <<: *GENERAL_ABOUT
+  - <<: *GENERAL_ACCOUNT
+  - <<: *GENERAL_PROJECTS
