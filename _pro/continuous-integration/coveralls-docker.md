@@ -10,10 +10,6 @@ menus:
   pro/ci:
     title: Git Submodules
     weight: 4
-redirect_from:
-  - /analytics/coveralls/
-  - /classic/getting-started/coveralls/
-  - /basic/analytics/coveralls/
 ---
 
 * include a table of contents
