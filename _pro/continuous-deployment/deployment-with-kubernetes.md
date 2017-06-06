@@ -1,6 +1,9 @@
 ---
 title: Continuous Deployment With Docker, Kubernetes And Codeship Pro
-weight: 1
+menus:
+  pro/cd:
+    title: Kubernetes
+    weight: 5
 tags:
   - kubernetes
   - notifications

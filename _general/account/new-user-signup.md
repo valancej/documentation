@@ -1,6 +1,9 @@
 ---
 title: Signing Up For A New Codeship Account
-weight: 10
+menus:
+  general/account:
+    title: New User Signup
+    weight: 1
 tags:
 - account
 - faq
@@ -16,7 +19,7 @@ redirect_from:
   - /faq/codeship-badge/
   - /general/about/codeship-badge/
   - /faq/configure-your-avatar/
-  - /faq/other-scm/  
+  - /faq/other-scm/
 weight: 1
 ---
 
@@ -65,7 +68,7 @@ Once you’ve signed-up for Codeship you’ll be directed to a short form where 
 
 Simply click on the SCM icon you would like to connect with and proceed to provide your login credentials in order to give Codeship access to your account (see step 1 for further information).
 
-**Choose your repository:** Once you have authenticated your SCM you have to select your repository.  To choose your repository, simply paste your Git clone URL into the provided area and click ‘Connect’.  
+**Choose your repository:** Once you have authenticated your SCM you have to select your repository.  To choose your repository, simply paste your Git clone URL into the provided area and click ‘Connect’.
 
 _Examples_:
 - git@gitlab.com:<username>/<repository_name>.git

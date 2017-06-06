@@ -3,7 +3,10 @@ title: Using Elixir In CI/CD with Codeship Basic
 tags:
   - elixir
   - languages
-weight: 5
+menus:
+  basic/languages:
+    title: Elixir
+    weight: 5
 ---
 
 * include a table of contents

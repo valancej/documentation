@@ -4,7 +4,10 @@ tags:
 - rust
 - cargo
 - languages
-weight: 9
+menus:
+  basic/languages:
+    title: Rust
+    weight: 9
 ---
 
 * include a table of contents

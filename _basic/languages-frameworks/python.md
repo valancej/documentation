@@ -1,6 +1,9 @@
 ---
 title: Using Python In CI/CD with Codeship Basic
-weight: 4
+menus:
+  basic/languages:
+    title: Python
+    weight: 4
 tags:
   - python
   - languages

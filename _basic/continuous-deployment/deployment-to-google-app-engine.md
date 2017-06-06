@@ -1,7 +1,9 @@
 ---
 title: Deploy to Google App Engine
-weight: 6
-layout: page
+menus:
+  basic/cd:
+    title: Google App Engine
+    weight: 9
 tags:
   - deployment
   - google app engine

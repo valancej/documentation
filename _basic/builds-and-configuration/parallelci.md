@@ -1,12 +1,14 @@
 ---
 title: Speed Up Your Builds With Parallel Testing on Codeship Basic
-weight: 5
+menus:
+  basic/builds:
+    title: Parallel Testing
+    weight: 5
 tags:
 - testing
 - continuous integration
 - parallelci
 - parallelism
-
 redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/

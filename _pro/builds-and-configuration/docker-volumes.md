@@ -1,7 +1,10 @@
 ---
 title: Using Docker Volumes In CI/CD
 layout: page
-weight: 8
+menus:
+  pro/builds:
+    title: Volumes
+    weight: 8
 tags:
   - docker
   - tutorial

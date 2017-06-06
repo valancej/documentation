@@ -1,7 +1,10 @@
 ---
 title: Speed Up Your Builds With Parallel Testing on Codeship Pro
 layout: page
-weight: 1
+menus:
+  pro/ci:
+    title: Parallel Testing
+    weight: 1
 tags:
   - docker
   - jet

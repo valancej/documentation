@@ -1,6 +1,9 @@
 ---
 title: Browser Testing During CI/CD With Codeship Basic
-weight: 1
+menus:
+  basic/ci:
+    title: Browser Testing
+    weight: 1
 tags:
   - testing
   - continuous integration

@@ -1,6 +1,9 @@
 ---
 title: Using PHP In CI/CD with Codeship Basic
-weight: 3
+menus:
+  basic/languages:
+    title: PHP
+    weight: 3
 tags:
   - php
   - languages

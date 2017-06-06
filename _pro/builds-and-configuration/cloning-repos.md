@@ -1,7 +1,10 @@
 ---
 title: Using Multiple Repositories
 layout: page
-weight: 11
+menus:
+  pro/builds:
+    title: Multiple Repos
+    weight: 11
 tags:
   - docker
   - tutorial

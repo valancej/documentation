@@ -1,30 +1,11 @@
-{% assign c = site.collections | where: 'label', page.collection | first %}
-{% assign g = site.collections | where: 'label', 'general' | first %}
-{% assign c = c.docs | group_by: 'category' %}
-{% assign g = g.docs | group_by: 'category' %}
-{% assign collection = c | concat: g  %}
-{% assign categories = collection %}
-
 <aside class="Sidebar">
-  <ul class="ul">
-    {% for category in site.sidebar_order %}
-      {% assign current = categories | where:"name", category | first %}
-      {% assign documents = current.items %}
-      {% unless documents == nil %}
-      <li class="ul__title">
-        <input type="checkbox" {% if page.category == current.name %}checked{% endif %}>
-        <i></i>
-        <h5 class="title">{{ current.name }}</h5>
-        <ul>
-          {% assign documents = documents | sort:"weight" %}
-          {% for document in documents %}
-            <li>
-              <a href="{{ document.url | relative_url }}">{{ document.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
-      {% endunless %}
-    {% endfor %}
-  </ul>
+	{% case page.collection %}
+		{% when 'basic'%}
+			{% assign menu=site.menus.basic %}
+		{% when 'pro' %}
+			{% assign menu=site.menus.pro %}
+		{% when 'general' %}
+			{% assign menu=site.menus.general %}
+	{% endcase %}
+	{% include menus.html menu=menu toplevel=true %}
 </aside>

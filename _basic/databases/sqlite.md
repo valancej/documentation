@@ -5,7 +5,10 @@ tags:
   - services
   - databases
   - sqlite
-weight: 4
+menus:
+  basic/db:
+    title: SQLite
+    weight: 4
 redirect_from:
   - /databases/sqlite/
   - /classic/getting-started/sqlite/

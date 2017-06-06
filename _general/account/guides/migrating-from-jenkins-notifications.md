@@ -1,6 +1,9 @@
 ---
 title: Migrating From Jenkins To Codeship - Notifications
-weight: 2
+menus:
+  general/account:
+    title: Jenkins To Codeship - Notifications
+    weight: 7
 tags:
   - jenkins
   - notifications

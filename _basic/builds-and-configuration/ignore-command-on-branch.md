@@ -1,15 +1,17 @@
 ---
 title: Ignore command on specific branch or run only on a branch
 layout: page
-weight: 8
+menus:
+  basic/builds:
+    title: Ignoring Commands
+    weight: 8
 tags:
   - faq
   - commands
   - branch
-
 redirect_from:
   - /faq/ignore-command-on-branch/
-  - /basic/getting-started/ignore-command-on-branch/  
+  - /basic/getting-started/ignore-command-on-branch/
 ---
 
 * include a table of contents

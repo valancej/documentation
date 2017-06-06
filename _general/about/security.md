@@ -1,12 +1,15 @@
 ---
 title: Security Information For CI/CD Infrastructure
 layout: page
+menus:
+  general/about:
+    title: Security Information
+    weight: 3
 tags:
   - security
   - gpg key
   - permissions
   - ssh
-weight: 3
 redirect_from:
   - /security/
   - /security/security/

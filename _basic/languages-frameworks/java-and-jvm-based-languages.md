@@ -4,7 +4,10 @@ tags:
   - java
   - scala
   - languages
-weight: 7
+menus:
+  basic/languages:
+    title: Java And JVM
+    weight: 7
 redirect_from:
   - /languages/java-and-jvm-based-languages/
 ---

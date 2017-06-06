@@ -4,7 +4,10 @@ layout: page
 tags:
   - services
   - memcached
-weight: 2
+menus:
+  basic/services:
+    title: Memcached
+    weight: 2
 redirect_from:
   - /services/memcached/
   - /classic/getting-started/memcached/

@@ -1,7 +1,10 @@
 ---
 title: Cloning other repositories fails during build
 layout: page
-weight: 5
+menus:
+  general/projects:
+    title: Accessing Other Repos
+    weight: 3
 tags:
   - faq
   - build error

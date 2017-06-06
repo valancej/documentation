@@ -1,7 +1,10 @@
 ---
 title: Steps Configuration
 layout: page
-weight: 3
+menus:
+  pro/builds:
+    title: Steps Config
+    weight: 3
 tags:
   - docker
   - jet

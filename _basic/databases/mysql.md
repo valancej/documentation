@@ -1,11 +1,14 @@
 ---
-title: Using MySQL In CI/CD with Codeship Basic 
+title: Using MySQL In CI/CD with Codeship Basic
 layout: page
 tags:
   - services
   - databases
   - mysql
-weight: 1
+menus:
+  basic/db:
+    title: MySQL
+    weight: 1
 redirect_from:
   - /databases/mysql/
   - /classic/getting-started/mysql/

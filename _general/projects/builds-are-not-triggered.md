@@ -1,7 +1,10 @@
 ---
 title: Troubleshooting Issues With Builds Not Starting
 layout: page
-weight: 4
+menus:
+  general/projects:
+    title: Builds Not Starting
+    weight: 6
 tags:
   - troubleshooting
   - build error
