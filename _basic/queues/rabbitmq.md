@@ -8,7 +8,7 @@ tags:
 menus:
   basic/queues:
     title: RabbitMQ
-    weight: 1
+    weight: 2
 redirect_from:
   - /queues/rabbitmq/
   - /classic/getting-started/rabbitmq/
