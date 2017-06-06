@@ -15,7 +15,7 @@ menus:
 
 ## What Is Percy?
 
-Percy is a visual testing tool that lets you take screen shots, monitor visual changes and require team approval to these visual captures in an automated way as part of your CI/CD pipeline.
+[Percy](https://percy.io) is a visual testing tool that lets you take screen shots, monitor visual changes and require team approval to these visual captures in an automated way as part of your CI/CD pipeline.
 
 ## Setting Up Percy
 
