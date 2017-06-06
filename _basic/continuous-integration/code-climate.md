@@ -6,7 +6,10 @@ tags:
   - integrations
   - code coverage
   - browsers
-weight: 7  
+menus:
+  basic/ci:
+    title: Git Submodules
+    weight: 8
 redirect_from:
   - /analytics/code-climate/
   - /classic/getting-started/code-climate/

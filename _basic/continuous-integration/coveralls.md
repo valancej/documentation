@@ -1,12 +1,15 @@
 ---
-title: Integrating Codeship With Coveralls for Code Coverage Reports
+title: Integrating Codeship Basic With Coveralls for Code Coverage Reports
 layout: page
 tags:
   - analytics
   - integrations
   - code coverage
   - browsers
-weight: 8
+menus:
+  basic/ci:
+    title: Git Submodules
+    weight: 7
 redirect_from:
   - /analytics/coveralls/
   - /classic/getting-started/coveralls/
@@ -20,9 +23,11 @@ redirect_from:
 
 Thanks to our partnership with Coveralls we can provide a 25% Discount for 3 months. Use the code **"coverallslovescodeship"** and [get started right away](https://coveralls.io/).
 
-## Setup for Ruby Project
+## Setting Up Coveralls
 
-Starting with Coveralls and Codeship is easy. Their docs do a great job of guiding you, but all there is to set up your Ruby app is add a .coveralls.yml file to your codebase that contains your Coveralls key:
+### Setting Your Coveralls Variables
+
+Starting with Coveralls and Codeship is easy. [Their docs](https://coveralls.io) do a great job of guiding you, but all there is to set up your Ruby app is add a .coveralls.yml file to your codebase that contains your Coveralls key:
 
 ```
 repo_token: YOUR_COVERALLS_TOKEN
@@ -34,20 +39,24 @@ It is also possible to set this in the Environment setting of your Codeship proj
 COVERALLS_REPO_TOKEN=YOUR_COVERALLS_REPO_TOKEN
 ```
 
-then simply require the Gem in your Gemfile
+### Coveralls Gem
+
+Next, you'll need to require the Gem in your Gemfile.
 
 ```
 gem 'coveralls', require: false
 ```
 
-and put the initializers into your spec_helper.rb or env.rb depending on which framework you use
+### Application Configuration
+
+Now, you'll need to put the Covealls initializers into your `spec_helper.rb` or `env.rb` file, depending on which framework you use.
 
 ```ruby
 require 'coveralls'
 Coveralls.wear!
 ```
 
-If you want to combine the coverage data from different frameworks, add the following to your spec_helper.rb and env.rb (also take a look at Coveralls Docs – mentioned above – on that topic).
+If you want to combine the coverage data from different frameworks, add the following to your `spec_helper.rb` or `env.rb`.
 
 ```ruby
 # Coveralls with Rspec and Cucumber
@@ -66,12 +75,14 @@ require 'coveralls/rake/task'
 Coveralls::RakeTask.new
 ```
 
-To push the data to Coveralls, add the following after your test commands on Codeship:
+### Pushing Data
+
+To push the data to Coveralls, add the following after your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) on Codeship:
 
 ```ruby
 bundle exec rake coveralls:push
 ```
 
-## Setup for other languages
+### Setup for other languages
 
 Coveralls supports a lot of other languages. Check out their fantastic [documentation](https://coveralls.io/docs/supported_continuous_integration).
