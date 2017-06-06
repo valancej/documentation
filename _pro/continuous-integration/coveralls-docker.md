@@ -1,5 +1,5 @@
 ---
-title: Integrating Codeship Basic With Coveralls for Code Coverage Reports
+title: Integrating Codeship Pro With Coveralls for Code Coverage Reports
 layout: page
 tags:
   - analytics
@@ -7,9 +7,9 @@ tags:
   - code coverage
   - browsers
 menus:
-  basic/ci:
+  pro/ci:
     title: Git Submodules
-    weight: 7
+    weight: 4
 redirect_from:
   - /analytics/coveralls/
   - /classic/getting-started/coveralls/
@@ -27,25 +27,17 @@ Thanks to our partnership with Coveralls we can provide a 25% Discount for 3 mon
 
 ### Setting Your Coveralls Variables
 
-Starting with Coveralls and Codeship is easy. [Their docs](https://coveralls.io) do a great job of guiding you, but all there is to set up your Ruby app is add a .coveralls.yml file to your codebase that contains your Coveralls key:
-
-```
-repo_token: YOUR_COVERALLS_TOKEN
-```
-
-It is also possible to set this in the Environment setting of your Codeship project
-
-```
-COVERALLS_REPO_TOKEN=YOUR_COVERALLS_REPO_TOKEN
-```
+Starting with Coveralls and Codeship is easy. [Their docs](https://coveralls.io) do a great job of guiding you, but the first step is to add your Coveralls repo token to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Coveralls Gem
 
-Next, you'll need to require the Gem in your Gemfile.
+Next, you'll want to either manually install the Coveralls Gem in your Dockerfile, or add it to the Gemfile that you install your dependencies from in your Docker image build.
 
 ```
 gem 'coveralls', require: false
 ```
+
+**Note** that this will require you to be building an image that contains both Ruby and Rubygems. If the image does not contain both of these, you will be unable to install the necessary `coveralls` gem.
 
 ### Application Configuration
 
@@ -68,7 +60,7 @@ SimpleCov.merge_timeout 3600
 SimpleCov.command_name "RSpec/Cucumber:#{Process.pid.to_s}#{ENV['TEST_ENV_NUMBER']}"
 ```
 
-Then you need to add a rake task that pushes your coverage report as soon as your build is finished.
+Finally, you'll you need to add a rake task that pushes your coverage report as soon as your build is finished.
 
 ```ruby
 require 'coveralls/rake/task'
@@ -77,10 +69,13 @@ Coveralls::RakeTask.new
 
 ### Pushing Data
 
-To push the data to Coveralls, add the following after your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) on Codeship:
+The last thing you'll need to be sure to do is to actually push your data out to Coveralls. This will happen with a command either run directly or inside of a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```ruby
-bundle exec rake coveralls:push
+
+```bash
+- name: coveralls_push
+  service: your_service
+  command: bundle exec rake coveralls:push
 ```
 
 ### Setup for other languages

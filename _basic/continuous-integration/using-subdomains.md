@@ -3,7 +3,7 @@ title: Custom DNS Resolution
 menus:
   basic/ci:
     title: Custom DNS
-    weight: 5
+    weight: 4
 tags:
   - subdomain
   - testing
