@@ -248,13 +248,27 @@ body.is-blue {
 }
 
 .info-block {
-  background: rgba($cBlue, .2);
-  border: 1px solid $cBlue;
-  box-shadow: -3px 0 0 $cBlue;
+  background-color: $_cGreen;
+  border: 1px solid $_cGreen;
+  box-shadow: -3px 0 0 $_cGreen;
+  color: #fff;
 
   &::before {
-    color: $cBlue;
+    color: #fff;
   }
+
+  a {
+    color: #fff;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, transparent 50%, #fff 50%)
+  }
+
+  a:hover {
+    color: #fff;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, transparent 50%, #fff 50%)
+  }
+
 }
 
 .endcontent-block {
@@ -265,16 +279,34 @@ body.is-blue {
   line-height: 1.2em;
   border-radius: 4px;
   padding-left: 40px;
-  background: rgba($_cCSYellow, .2);
-  border: 1px solid $_cCSYellow;
-  box-shadow: -3px 0 0 $_cCSYellow;
+  background: $_cBlue;
+  border: 1px solid $_cBlue;
+  box-shadow: -3px 0 0 $_cBlue;
+  color: #fff;
 
   h2 {
     margin: 2rem 0 1rem;
+    color: #fff;
   }
 
   &::before {
     color: $_cCSYellow;
+  }
+
+  a {
+    color: #fff;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, transparent 50%, #fff 50%)
+  }
+
+  a:hover {
+    color: #fff;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, transparent 50%, #fff 50%)
+  }
+
+  h4 {
+    color: #fff;
   }
 
 }

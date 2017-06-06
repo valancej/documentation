@@ -98,16 +98,16 @@ $_cWhite:           #FFFFFF;
 $_cBlack:           #000000;
 
 // RGB
-$_cRed:             #FC594A;
-$_cGreen:           #60CC69;
-$_cBlue:            #5A95E5;
-$_cDarkblue:        #20334d;
-$_cCSYellow:         #CBC975;
+$_cRed:             #9ED8F5;
+$_cGreen:           #77dca4;
+$_cBlue:            #1CA1E3;
+$_cDarkblue:        #5EB9E6;
+$_cCSYellow:        #FFD87E;
 
-$_cDarkblue:        #101b27;
-$_cLightgrey:       #F3F6FB;
-$_cGrey:            #E2E5E9;
-$_cDarkgrey:        #58626D;
+$_cDarkblue:        #9ED8F5;
+$_cLightgrey:       #F2F5F7;
+$_cGrey:            #BAC5D2;
+$_cDarkgrey:        #1e252c;
 
 // Body
 $cBody:             #7B889A;
@@ -139,8 +139,8 @@ $cButtonPrimaryBg:        $_cGreen;
 $cButtonPrimaryBgHover:   darken($cButtonPrimaryBg, 8%);
 
 // Code
-$cCode:             $_cWhite;
-$cCodeBg:           $_cDarkblue;
+$cCode:             $_cGrey;
+$cCodeBg:           $_cDarkgrey;
 
 // Blockquote
 $cBlockquote:       $_cDarkgrey;
