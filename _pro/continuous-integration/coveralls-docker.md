@@ -8,7 +8,7 @@ tags:
   - browsers
 menus:
   pro/ci:
-    title: Git Submodules
+    title: Using Coveralls
     weight: 4
 ---
 
