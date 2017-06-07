@@ -8,7 +8,7 @@ tags:
   - browsers
 menus:
   basic/ci:
-    title: Git Submodules
+    title: Using CodeClimate
     weight: 8
 redirect_from:
   - /analytics/code-climate/
