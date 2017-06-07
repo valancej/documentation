@@ -17,7 +17,7 @@ menus:
 
 ### Setting Your Coveralls Variables
 
-[The SourceClear docs](https://www.sourceclear.com/docs/) do a great job of guiding you, but to get started all you need to do is add your SourceClear API token to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
+[The SourceClear documentation](https://www.sourceclear.com/docs/) does a great job of guiding you, but to get started all you need to do is add your SourceClear API token to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 

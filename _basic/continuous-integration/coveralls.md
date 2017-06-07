@@ -27,7 +27,7 @@ Thanks to our partnership with Coveralls we can provide a 25% Discount for 3 mon
 
 ### Setting Your Coveralls Variables
 
-Starting with Coveralls and Codeship is easy. [Their docs](https://coveralls.io) do a great job of guiding you, but all there is to set up your Ruby app is add a .coveralls.yml file to your codebase that contains your Coveralls key:
+Starting with Coveralls and Codeship is easy. [Their documentation](https://coveralls.io) do a great job of guiding you, but all there is to set up your Ruby app is add a .coveralls.yml file to your codebase that contains your Coveralls key:
 
 ```
 repo_token: YOUR_COVERALLS_TOKEN

@@ -23,7 +23,7 @@ Thanks to our partnership with Coveralls we can provide a 25% Discount for 3 mon
 
 ### Setting Your Coveralls Variables
 
-Starting with Coveralls and Codeship is easy. [Their docs](https://coveralls.io) do a great job of guiding you, but the first step is to add your Coveralls repo token to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+Starting with Coveralls and Codeship is easy. [Their documentation](https://coveralls.io) do a great job of guiding you, but the first step is to add your Coveralls repo token to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Coveralls Gem
 
