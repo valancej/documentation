@@ -1,5 +1,5 @@
 ---
-title: Integrating Codeship Basic With SourceClear for Security Analysis
+title: Integrating Codeship Pro With SourceClear for Security Analysis
 layout: page
 tags:
   - security
