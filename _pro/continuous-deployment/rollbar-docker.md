@@ -25,7 +25,7 @@ You will need to add your Rollbar access token to your [encrypted environment va
 
 ##  Logging During Deployment
 
-Next, you will need to add the following commands to a script, place in your repository, that you will call from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
+Next, you will need to add the following commands to a script, placed in your repository, that you will call from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 
 ```bash

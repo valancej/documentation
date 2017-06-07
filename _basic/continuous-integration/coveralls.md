@@ -8,7 +8,7 @@ tags:
   - browsers
 menus:
   basic/ci:
-    title: Git Submodules
+    title: Using Coveralls
     weight: 7
 redirect_from:
   - /analytics/coveralls/
@@ -27,17 +27,15 @@ Thanks to our partnership with Coveralls we can provide a 25% Discount for 3 mon
 
 ### Setting Your Coveralls Variables
 
-Starting with Coveralls and Codeship is easy. [Their docs](https://coveralls.io) do a great job of guiding you, but all there is to set up your Ruby app is add a .coveralls.yml file to your codebase that contains your Coveralls key:
+Starting with Coveralls and Codeship is easy. [Their documentation](https://coveralls.io) do a great job of guiding you, but all there is to set up your Ruby app is add a .coveralls.yml file to your codebase that contains your Coveralls key:
 
 ```
 repo_token: YOUR_COVERALLS_TOKEN
 ```
 
-It is also possible to set this in the Environment setting of your Codeship project
+It is also possible to set this in the [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) for your project.
 
-```
-COVERALLS_REPO_TOKEN=YOUR_COVERALLS_REPO_TOKEN
-```
+You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
 ### Coveralls Gem
 

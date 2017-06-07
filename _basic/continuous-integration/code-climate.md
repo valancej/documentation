@@ -8,7 +8,7 @@ tags:
   - browsers
 menus:
   basic/ci:
-    title: Git Submodules
+    title: Using CodeClimate
     weight: 8
 redirect_from:
   - /analytics/code-climate/
@@ -22,7 +22,7 @@ redirect_from:
 ## Setup
 
 There is no specific setup necessary to use Code Climate on Codeship.
-You can follow the [Code Climate docs](http://docs.codeclimate.com/article/219-setting-up-test-coverage)
+You can follow the [Code Climate documentation](http://docs.codeclimate.com/article/219-setting-up-test-coverage)
 set it up with your application and just include the Code Climate API key either
 in the environment settings or prefix your test commands with it as explained in their docs.
 
