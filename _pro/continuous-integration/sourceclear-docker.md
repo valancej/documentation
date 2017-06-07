@@ -15,7 +15,7 @@ menus:
 
 ## Setting Up SourceClear
 
-### Setting Your Coveralls Variables
+### Setting Your SourceClear Variables
 
 [The SourceClear documentation](https://www.sourceclear.com/docs/) does a great job of guiding you, but to get started all need to do is to add your SourceClear API token to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
