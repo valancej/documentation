@@ -1,5 +1,5 @@
 ---
-title: Integrating Codeship With CodeClimate for Code Coverage Reports
+title: Integrating Codeship Basic With CodeClimate for Code Coverage Reports
 layout: page
 tags:
   - analytics
