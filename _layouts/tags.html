@@ -35,7 +35,7 @@ bodyclass: is-blue
           {% for document in pro %}
             <li><a href="{{ site.baseurl }}{{ document.url }}">{{ document.title }}</a>
           {% endfor %}
-          {% if basic.first == null %}
+          {% if pro.first == null %}
             <p><em>No Codeship Pro articles for <strong>#{{ page.tag }}</strong> found.</em></p>
           {% endif %}
         </div>
@@ -47,7 +47,7 @@ bodyclass: is-blue
           {% for document in general %}
             <li><a href="{{ site.baseurl }}{{ document.url }}">{{ document.title }}</a>
           {% endfor %}
-          {% if basic.first == null %}
+          {% if general.first == null %}
             <p><em>No general articles for <strong>#{{ page.tag }}</strong> found.</em></p>
           {% endif %}
         </div>
