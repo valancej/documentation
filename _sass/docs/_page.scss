@@ -74,7 +74,7 @@ body.is-blue {
 
 .pageTitle {
   margin-top: 0;
-  width: 90%;
+  width: 80%;
 }
 
 .pageContent {
@@ -101,11 +101,20 @@ body.is-blue {
     &:hover a {
       display: inline-block;
     }
+
+    img {
+      margin: 1.5em 0 1.5em;
+    }
+
+    ul li {
+      padding: .5rem 0 .5rem 0 !important;
+    }
+
   }
 
   img,
   table {
-    margin: .7rem 0;
+    margin: 1.5em 0 1.5em;
   }
 
   ul {
@@ -180,7 +189,7 @@ body.is-blue {
 
   span {
     display: inline-block;
-    padding: 10px 5px 5px 0px;
+    padding: 0px 5px 5px 0px;
     margin: 0 0 1rem;
     font-size: .9rem;
   }
@@ -286,13 +295,18 @@ body.is-blue {
     background-image: linear-gradient(to bottom, transparent 50%, #fff 50%)
   }
 
+  strong {
+    color: #fff;
+    text-transform: capitalize;
+  }
+
 }
 
 .endcontent-block {
   margin: 4rem 0 0;
   display: block;
   position: relative;
-  padding: 0 0 1rem;
+  padding: 0;
   line-height: 1.2em;
   border-radius: 4px;
   padding-left: 40px;
@@ -313,23 +327,28 @@ body.is-blue {
   a {
     color: #fff;
     font-weight: bold;
-    background-image: linear-gradient(to bottom, transparent 50%, #fff 50%)
+    border-bottom: 1px solid #fff;
   }
 
   a:hover {
     color: #fff;
-    font-weight: bold;
-    background-image: linear-gradient(to bottom, transparent 50%, #fff 50%)
+    font-weight: normal;
+    border-bottom: 1px solid #fff;
   }
 
   h4 {
     color: #fff;
   }
 
-}
+  .rating-nero-value {
+    margin: 0 3rem 0 0;
+    color: #fff !important;
+  }
 
-.rating-nero-value {
-  margin: 0 3rem 0 0;
+  strong {
+    color: #fff !important;
+  }
+
 }
 
 .polldaddy {
