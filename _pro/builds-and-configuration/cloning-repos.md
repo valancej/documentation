@@ -11,6 +11,8 @@ tags:
   - ssh key
   - encryption
   - repo
+  - git
+  - ssh
 
 redirect_from:
   - /docker/ssh-key-authentication/

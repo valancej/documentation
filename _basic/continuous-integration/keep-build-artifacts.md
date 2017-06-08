@@ -5,7 +5,7 @@ menus:
     title: Artifacts
     weight: 5
 tags:
-  - faq
+  - cdn
   - artifacts
 
 redirect_from:

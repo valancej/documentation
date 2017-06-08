@@ -9,6 +9,9 @@ tags:
   - rollbar
   - deployment
   - logging
+  - analytics
+  - reports
+  - reporting
 
 ---
 

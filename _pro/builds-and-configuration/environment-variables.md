@@ -9,6 +9,9 @@ tags:
   - docker
   - encryption
   - environment variables
+  - security
+  - variables
+  - environment
 
 redirect_from:
   - /docker/encryption/

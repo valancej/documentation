@@ -7,6 +7,7 @@ menus:
 tags:
   - deployment
   - google app engine
+  - google
 
 redirect_from:
   - /continuous-deployment/deployment-to-google-app-engine/

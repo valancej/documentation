@@ -10,6 +10,11 @@ tags:
   - jet
   - configuration
   - steps
+  - commands
+  - testing
+  - deployment
+  - images
+  - image registry
 
 redirect_from:
   - /docker/steps/

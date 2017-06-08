@@ -5,6 +5,7 @@ tags:
   - services
   - databases
   - postgresql
+  - db
 menus:
   basic/db:
     title: PostgreSQL

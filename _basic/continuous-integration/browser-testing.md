@@ -6,9 +6,9 @@ menus:
     weight: 1
 tags:
   - testing
-  - continuous integration
   - browser testing
   - browsers
+  - visual testing
 
 redirect_from:
   - /continuous-integration/browser-testing/

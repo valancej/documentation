@@ -13,6 +13,8 @@ tags:
   - running locally
   - debugging
   - setup
+  - troubleshooting
+  - cli
 
 redirect_from:
   - /docker/installation/

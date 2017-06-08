@@ -7,6 +7,7 @@ menus:
 tags:
   - deployment
   - digital ocean
+  - digitalocean
 
 redirect_from:
   - /continuous-deployment/deployment-to-digitalocean/

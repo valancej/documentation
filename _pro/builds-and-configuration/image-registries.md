@@ -15,6 +15,8 @@ tags:
   - quay
   - ecr
   - gcr
+  - images
+  - image registry
 
 redirect_from:
   - /docker/docker-push/

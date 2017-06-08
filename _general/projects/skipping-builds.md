@@ -13,6 +13,7 @@ tags:
   - builds
   - testing
   - skipping
+  - skip
 
 redirect_from:
   - /docker/skipping-builds/

@@ -6,13 +6,12 @@ menus:
     weight: 1
 tags:
 - account
-- faq
 - scm
 - svn
-- faq
 - badge
 - avatar
 - gravatar
+- getting started
 redirect_from:
   - /general/about/other-scm/
   - /general/account/configure-your-avatar/

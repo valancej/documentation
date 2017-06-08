@@ -3,9 +3,10 @@ title: Integrating Codeship Pro With Coveralls for Code Coverage Reports
 layout: page
 tags:
   - analytics
-  - integrations
   - code coverage
-  - browsers
+  - coverage
+  - reports
+  - reporting
 menus:
   pro/ci:
     title: Using Coveralls

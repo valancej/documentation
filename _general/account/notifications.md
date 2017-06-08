@@ -5,6 +5,8 @@ tags:
   - administration
   - notifications
   - alerts
+  - account
+  - slack
 redirect_from:
   - /administration/notifications/
   - /basic/getting-started/webhooks/

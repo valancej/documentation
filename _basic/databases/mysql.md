@@ -5,6 +5,7 @@ tags:
   - services
   - databases
   - mysql
+  - db
 menus:
   basic/db:
     title: MySQL

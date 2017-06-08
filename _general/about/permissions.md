@@ -12,6 +12,7 @@ tags:
   - gitlab
   - bitbucket
   - organizations
+  - git
 redirect_from:
   - /troubleshooting/github-3rd-party-restrictions/
   - /faq/github-3rd-party-restrictions/

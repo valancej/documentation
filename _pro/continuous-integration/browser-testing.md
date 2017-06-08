@@ -9,8 +9,11 @@ tags:
   - docker
   - jet
   - tools
-  - browser
+  - testing
   - browser testing
+  - browsers
+  - visual testing
+
 redirect_from:
   - /docker/browser-testing/
 ---

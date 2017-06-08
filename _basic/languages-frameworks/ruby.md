@@ -7,6 +7,8 @@ menus:
 tags:
   - ruby
   - languages
+  - rails
+  - sinatra  
 
 redirect_from:
   - /languages/ruby/

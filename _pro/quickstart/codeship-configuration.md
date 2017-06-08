@@ -13,7 +13,8 @@ tags:
   - project configuration
   - tutorial
   - migrating
-  - migration
+  - account
+  - projects
 
 redirect_from:
   - /docker/codeship-configuration/

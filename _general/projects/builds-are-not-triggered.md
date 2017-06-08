@@ -11,6 +11,7 @@ tags:
   - github
   - bitbucket
   - gitlab
+  - git
 
 redirect_from:
   - /troubleshooting/builds-are-not-triggered/

@@ -6,10 +6,9 @@ menus:
     title: Parallel Testing
     weight: 1
 tags:
-  - docker
-  - jet
-  - tools
-  - tests
+  - testing
+  - continuous integration
+  - parallelism
   - speed
   - parallel
 ---

@@ -6,7 +6,9 @@ menus:
     weight: 4
 tags:
   - deployment
-  - elastic beanstalk
+  - elastic Beanstalk
+  - aws
+  - amazon
 
 redirect_from:
   - /continuous-deployment/deployment-to-elastic-beanstalk/

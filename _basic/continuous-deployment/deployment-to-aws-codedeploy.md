@@ -8,6 +8,7 @@ tags:
   - deployment
   - amazon
   - codedeploy
+  - aws
 
 redirect_from:
   - /continuous-deployment/deployment-to-aws-codedeploy/

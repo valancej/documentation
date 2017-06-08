@@ -7,6 +7,8 @@ menus:
 tags:
   - php
   - languages
+  - cakephp
+  - laravel
 
 redirect_from:
   - /languages/php/

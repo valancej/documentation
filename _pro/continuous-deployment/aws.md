@@ -8,6 +8,9 @@ tags:
   - deployment
   - aws
   - docker
+  - amazon
+  - ecr
+  - ecs
 
 redirect_from:
   - /docker-integration/aws/

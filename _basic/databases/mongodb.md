@@ -5,6 +5,7 @@ tags:
   - services
   - databases
   - mongodb
+  - db
 menus:
   basic/db:
     title: MongoDB

@@ -10,7 +10,6 @@ tags:
   - microsoft
   - Docker
 
-
 ---
 <div class="info-block">
 You can find a sample repo for deploying to Microsoft Azure with Codeship Pro on Github [here](https://github.com/Codeship-library/azure-deployment).

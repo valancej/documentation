@@ -4,6 +4,7 @@ tags:
   - java
   - scala
   - languages
+  - jvm
 menus:
   basic/languages:
     title: Java And JVM

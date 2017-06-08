@@ -5,10 +5,12 @@ menus:
     title: Parallel Testing
     weight: 5
 tags:
-- testing
-- continuous integration
-- parallelci
-- parallelism
+  - testing
+  - continuous integration
+  - parallelci
+  - parallelism
+  - speed
+  - parallel
 redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/

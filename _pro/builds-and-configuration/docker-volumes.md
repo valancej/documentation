@@ -9,6 +9,7 @@ tags:
   - docker
   - tutorial
   - volumes
+  - docker compose
 
 redirect_from:
   - /docker/docker-volumes/

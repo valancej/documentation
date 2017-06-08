@@ -5,6 +5,7 @@ tags:
   - services
   - databases
   - sqlite
+  - db
 menus:
   basic/db:
     title: SQLite

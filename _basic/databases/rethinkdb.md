@@ -5,6 +5,7 @@ tags:
   - services
   - databases
   - rethinkdb
+  - db
 menus:
   basic/db:
     title: RethinkDB

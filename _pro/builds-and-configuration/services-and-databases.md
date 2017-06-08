@@ -11,6 +11,7 @@ tags:
   - configuration
   - services
   - databases
+  - db
 
 redirect_from:
   - /docker/services-and-databases/

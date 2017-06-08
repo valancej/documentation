@@ -10,6 +10,7 @@ tags:
   - dns
   - xip.io
   - lvh.me
+  - domain
 
 redirect_from:
   - /continuous-integration/using-subdomains/

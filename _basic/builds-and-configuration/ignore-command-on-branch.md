@@ -6,9 +6,8 @@ menus:
     title: Ignoring Commands
     weight: 8
 tags:
-  - faq
   - commands
-  - branch
+  - testing
 redirect_from:
   - /faq/ignore-command-on-branch/
   - /basic/getting-started/ignore-command-on-branch/

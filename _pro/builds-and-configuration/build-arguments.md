@@ -10,6 +10,9 @@ tags:
   - tutorial
   - build arguments
   - secrets
+  - environment
+  - security
+  - encryption
 
 redirect_from:
   - /pro/getting-started/build-arguments/

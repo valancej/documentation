@@ -7,6 +7,8 @@ menus:
 tags:
   - python
   - languages
+  - flask
+  - django
 
 redirect_from:
   - /languages/python/

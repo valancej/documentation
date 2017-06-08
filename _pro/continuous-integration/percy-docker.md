@@ -4,6 +4,8 @@ layout: page
 tags:
   - screenshots
   - visual testing
+  - browsers
+  - browser testing
 menus:
   pro/ci:
     title: Using Percy
