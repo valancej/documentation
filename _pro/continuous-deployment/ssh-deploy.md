@@ -10,6 +10,9 @@ tags:
   - deployment
   - ssh key
   - encryption
+  - ssh
+  - rsync
+  - sftp
 
 ---
 

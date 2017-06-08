@@ -8,6 +8,8 @@ tags:
   - python
   - languages
   - docker
+  - flask
+  - django
 
 redirect_from:
   - /docker-integration/python/

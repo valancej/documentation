@@ -10,6 +10,9 @@ tags:
   - jet
   - configuration
   - services
+  - images
+  - image registry
+  - docker compose
 
 redirect_from:
   - /docker/services/

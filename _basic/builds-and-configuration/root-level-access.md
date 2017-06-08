@@ -6,10 +6,10 @@ menus:
     title: Running Commands As Root
     weight: 7
 tags:
-  - faq
   - sudo
   - packages
   - root
+  - admin
 redirect_from:
   - /faq/root-level-access/
   - /basic/getting-started/root-level-access/

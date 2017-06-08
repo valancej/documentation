@@ -7,6 +7,7 @@ tags:
   - organizations
   - team management
   - teams
+  - account
 
 redirect_from:
   - /administration/organizations/

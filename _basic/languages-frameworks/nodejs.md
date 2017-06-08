@@ -10,6 +10,8 @@ tags:
   - npm
   - yarn
   - framework
+  - javascript
+  - languages
 
 redirect_from:
   - /languages/nodejs/

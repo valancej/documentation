@@ -3,9 +3,10 @@ title: Integrating Codeship Basic With CodeClimate for Code Coverage Reports
 layout: page
 tags:
   - analytics
-  - integrations
+  - reports
+  - reporting
   - code coverage
-  - browsers
+  - coverage
 menus:
   basic/ci:
     title: Using CodeClimate

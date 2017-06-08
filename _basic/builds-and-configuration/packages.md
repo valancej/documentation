@@ -6,7 +6,6 @@ menus:
     weight: 1
 tags:
 - AMI
-- continuous integration
 - packages
 redirect_from:
   - /basic/getting-started/packages/

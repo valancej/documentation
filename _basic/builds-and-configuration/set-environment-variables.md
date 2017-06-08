@@ -5,8 +5,10 @@ menus:
     title: Environment Variables
     weight: 2
 tags:
-  - testing
+  - secrets
   - environment variables
+  - variables
+  - environment
 redirect_from:
   - /continuous-integration/set-environment-variables/
   - /basic/getting-started/set-environment-variables/

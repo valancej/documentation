@@ -8,6 +8,8 @@ tags:
   - php
   - languages
   - docker
+  - cakephp
+  - laravel
 
 redirect_from:
   - /docker-integration/php/

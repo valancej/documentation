@@ -6,7 +6,9 @@ menus:
     weight: 4
 tags:
   - deployment
-  - heroku
+  - google
+  - google cloud
+  - gcr
   - docker
 
 redirect_from:

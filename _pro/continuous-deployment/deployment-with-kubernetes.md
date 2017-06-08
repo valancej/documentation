@@ -10,6 +10,9 @@ tags:
   - deployment
   - k8s
   - k8
+  - google
+  - google cloud
+  
 redirect_from:
   - /general/account/guides/deployment-with-kubernetes/
 ---

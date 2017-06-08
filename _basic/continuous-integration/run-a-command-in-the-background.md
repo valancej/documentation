@@ -6,7 +6,8 @@ menus:
     weight: 2
 tags:
   - testing
-  - faq
+  - background
+  - commands
 
 redirect_from:
   - /continuous-integration/run-a-command-in-the-background/

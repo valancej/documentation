@@ -10,6 +10,8 @@ tags:
   - infrastructure
   - linux
   - firewall
+  - virtual machine
+  - build machine
 redirect_from:
   - /security/vm-and-infrastructure/
 ---

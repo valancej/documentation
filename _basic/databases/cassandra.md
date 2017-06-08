@@ -4,6 +4,7 @@ layout: page
 tags:
   - services
   - databases
+  - db
   - cassandra
 menus:
   basic/db:

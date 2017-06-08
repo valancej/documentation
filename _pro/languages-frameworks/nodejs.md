@@ -8,6 +8,9 @@ tags:
   - node.js
   - languages
   - docker
+  - frameworks
+  - nodejs
+  - javascript
 
 redirect_from:
   - /docker-integration/nodejs/

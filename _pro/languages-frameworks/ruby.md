@@ -8,6 +8,8 @@ tags:
   - ruby
   - languages
   - docker
+  - rails
+  - sinatra
 
 redirect_from:
   - /docker-integration/ruby/

@@ -8,6 +8,9 @@ layout: page
 tags:
   - administration
   - project
+  - getting started
+  - account
+  - projects
 
 redirect_from:
   - /administration/delete-a-project/

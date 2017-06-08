@@ -8,6 +8,7 @@ tags:
   - java
   - languages
   - docker
+  - jvm
 
 redirect_from:
   - /docker-integration/java/

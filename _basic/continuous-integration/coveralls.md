@@ -3,9 +3,10 @@ title: Integrating Codeship Basic With Coveralls for Code Coverage Reports
 layout: page
 tags:
   - analytics
-  - integrations
   - code coverage
-  - browsers
+  - coverage
+  - reports
+  - reporting
 menus:
   basic/ci:
     title: Using Coveralls

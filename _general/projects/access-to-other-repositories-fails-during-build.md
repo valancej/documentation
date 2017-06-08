@@ -6,13 +6,14 @@ menus:
     title: Accessing Other Repos
     weight: 3
 tags:
-  - faq
   - build error
   - ssh key
   - github
   - bitbucket
   - gitlab
   - private repository
+  - git
+  - clone
 
 redirect_from:
   - /faq/access-to-other-repositories-fails-during-build/

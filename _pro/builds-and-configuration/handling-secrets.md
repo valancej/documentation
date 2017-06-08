@@ -12,6 +12,8 @@ tags:
   - environment
   - pro
   - build arguments
+  - environment variables
+  - variables
 
 redirect_from:
   - /pro/getting-started/handling-secrets/

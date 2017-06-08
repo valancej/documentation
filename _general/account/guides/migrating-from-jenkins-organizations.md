@@ -8,6 +8,8 @@ tags:
   - jenkins
   - organizations
   - migrating
+  - account
+  - teams
 
 ---
 

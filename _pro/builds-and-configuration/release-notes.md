@@ -9,6 +9,7 @@ tags:
   - docker
   - jet
   - release notes
+  - cli
 
 redirect_from:
   - /docker/release-notes/

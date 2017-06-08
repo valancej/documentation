@@ -10,6 +10,8 @@ tags:
   - build error
   - ruby
   - cucumber
+  - debug
+  - ssh
 
 redirect_from:
   - /troubleshooting/pending-step-in-cucumber-fails-build/

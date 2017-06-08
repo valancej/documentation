@@ -6,9 +6,8 @@ menus:
     title: Getting Started with CI & CD
     weight: 1
 tags:
-  - faq
   - getting started
-  - continuous Integration
+  - continuous integration
   - ci
   - cd
   - continuous deployment

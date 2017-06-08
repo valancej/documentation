@@ -10,6 +10,7 @@ tags:
   - gpg key
   - permissions
   - ssh
+  - git
 redirect_from:
   - /security/
   - /security/security/

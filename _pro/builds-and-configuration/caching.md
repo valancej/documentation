@@ -11,6 +11,8 @@ tags:
   - speed
   - caching
   - dependencies
+  - cache
+  - images
 
 redirect_from:
   - /docker/caching/

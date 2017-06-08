@@ -4,6 +4,8 @@ layout: page
 tags:
   - security
   - reports
+  - reporting
+  - coverage
 menus:
   basic/ci:
     title: Using SourceClear
