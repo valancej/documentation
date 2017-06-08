@@ -68,23 +68,28 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1, .like-h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+  text-transform: capitalize;
 }
 
 h2, .like-h2 {
   font-size: 2.5rem;
+  text-transform: capitalize;
 }
 
 h3, .like-h3 {
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
 h4, .like-h4 {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  text-transform: capitalize;
 }
 
 h5, .like-h5 {
   font-size: 1.4rem;
+  text-transform: capitalize;
 }
 
 h6, .like-h6 {
@@ -96,7 +101,7 @@ a {
   cursor: pointer;
   transition: color 100ms, background-image 100ms;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: $base-line-height;
   letter-spacing: -.004em;
 
@@ -136,7 +141,7 @@ p {
 
 strong {
   font-weight: 700;
-  color: $_cDarkblue;
+  color: #000;
 }
 
 em {
@@ -231,7 +236,7 @@ figure {
 img {
   display: inline-block;
   max-height: 100%;
-  max-width: 100%
+  max-width: 600px
 }
 
 /*
@@ -465,7 +470,7 @@ input:focus, button:focus, textarea:focus, select:focus {
   min-height: 100%;
   max-width: $bpLarge+10rem;
   text-align: left;
-  padding: 0 $base-padding;
+  padding: 0 1em 0 1em;
 
   @media only screen and (max-width: $bpMedium) {
     margin: 0;

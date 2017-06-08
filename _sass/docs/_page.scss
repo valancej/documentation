@@ -1,5 +1,5 @@
 body.is-blue {
-  background: #f1f5fa;
+  background: #f2f5f7;
 }
 
 .grid--boxContainer {
@@ -13,9 +13,9 @@ body.is-blue {
 .box {
   background: $_cWhite;
   box-shadow: $vBoxshadow;
-  padding: 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   border-radius: .2rem;
-  margin: 1rem 0;
+  margin: .5rem 0;
 
   .box__title {
     @extend .like-h5;
@@ -74,11 +74,12 @@ body.is-blue {
 
 .pageTitle {
   margin-top: 0;
+  width: 90%;
 }
 
 .pageContent {
 
-  h2 { @extend .like-h4; margin-bottom: 0; margin-top: 2em; }
+  h2 { @extend .like-h4; margin-bottom: .5em; margin-top: 1em; }
   h3 { @extend .like-h5; margin-bottom: 0; margin-top: 2em; }
   h4 { @extend .like-h6; margin-bottom: 0; margin-top: 2em; }
 
@@ -179,37 +180,52 @@ body.is-blue {
 
   span {
     display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 25px;
-    margin: 0 0 2rem;
+    padding: 10px 5px 5px 0px;
+    margin: 0 0 1rem;
     font-size: .9rem;
   }
 
   .product-basic {
-    background-color: #52c45c;
+    color: #52c45c;
+    border-bottom: 1px solid #52c45c;
+
+    a {
+      color: #52c45c !important;
+      font-weight: bold;
+      font-size: .9rem;
+    }
+
   }
 
   .product-pro {
-    background-color: #132132;
+    border-bottom: 1px solid #132132;
+
+    a {
+      color: #132132 !important;
+      font-weight: bold;
+      font-size: .9rem;
+    }
+
   }
 
   .product-general {
-    background-color: #5c92d6;
-  }
+    border-bottom: 1px solid #5c92d6;
 
-  a {
-    color: #fff !important;
-    font-weight: bold;
-    font-size: .9rem;
+    a {
+      color: #5c92d6 !important;
+      font-weight: bold;
+      font-size: .9rem;
+    }
+
   }
 
 }
 
 .reading-time {
-  margin: 0 0 2em;
+  margin: 1em 0 1.5em;
   padding: 0;
   font-weight: bold;
+  color: #101b28;
 }
 
 // *******************************************************
@@ -252,6 +268,7 @@ body.is-blue {
   border: 1px solid $_cGreen;
   box-shadow: -3px 0 0 $_cGreen;
   color: #fff;
+  margin-bottom: 2em;
 
   &::before {
     color: #fff;
@@ -279,9 +296,9 @@ body.is-blue {
   line-height: 1.2em;
   border-radius: 4px;
   padding-left: 40px;
-  background: $_cBlue;
-  border: 1px solid $_cBlue;
-  box-shadow: -3px 0 0 $_cBlue;
+  background: $_cLightblue;
+  border: 1px solid $_cLightblue;
+  box-shadow: -3px 0 0 $_cLightblue;
   color: #fff;
 
   h2 {
