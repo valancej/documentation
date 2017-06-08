@@ -193,6 +193,6 @@ Since you can integrate any container you wish into your pipeline, there are no 
 
 We will automatically use the status API for pull requests on Github, Bitbucket and Gitlab. This does not need to be explicitly enabled, although it can be disabled via your *Project Settings*.
 
-## Ccmenu
+## CCMenu
 
-Ccmenu is not supported at this time, although we hope to address it by offering an API as soon as we can.
+CCMenu is not supported at this time, although we hope to address it by offering an API as soon as we can.
