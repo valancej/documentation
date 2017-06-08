@@ -3,17 +3,53 @@ layout: default
 title: Support Information About CI/CD And Codeship
 bodyclass: is-blue
 ---
+{% assign basic = page.documents | where: "collection", "basic" %}
+{% assign pro = page.documents | where: "collection", "pro" %}
+{% assign general = page.documents | where: "collection", "general" %}
 <div class="contentWrapper">
   <div class="grid">
     <div class="row">
         <h1>#{{ page.tag }}</h1>
+        <br />
+        <p><a href="#basic">Codeship Basic</a> | <a href="#pro">Codeship Pro</a> | <a href="#general">General</a></p>
     </div>
     <div class="grid grid--boxContainer">
       <div class="colxs100 colsm100 colmd100 collg100">
         <div class="box">
-          {% for document in page.documents %}
+          <a name="basic"></a>
+          <h4>#{{ page.tag }} for Codeship Basic</h4>
+          <p>Codeship Basic uses fast, performant VMs with preinstalled technology stacks to make it super easy and fast to get started running a CI/CD pipeline.</p>
+          <br />
+          {% for document in basic %}
             <li><a href="{{ site.baseurl }}{{ document.url }}">{{ document.title }}</a>
           {% endfor %}
+          {% if basic.first == null %}
+            <p><em>No Codeship Basic articles for <strong>#{{ page.tag }}</strong> found.</em></p>
+          {% endif %}
+        </div>
+        <div class="box">
+          <a name="pro"></a>
+          <h4>#{{ page.tag }} for Codeship Pro</h4>
+          <p>Codeship Pro uses containers built from Docker images to let you define and build your own completely flexible CI/CD environment.</p>
+          <br />
+          {% for document in pro %}
+            <li><a href="{{ site.baseurl }}{{ document.url }}">{{ document.title }}</a>
+          {% endfor %}
+          {% if pro.first == null %}
+            <p><em>No Codeship Pro articles for <strong>#{{ page.tag }}</strong> found.</em></p>
+          {% endif %}
+        </div>
+        <div class="box">
+          <a name="general"></a>
+          <h4>#{{ page.tag }} General Articles</h4>
+          <p>Information related to Codeship accounts, projects and general questions.</p>
+          <br />
+          {% for document in general %}
+            <li><a href="{{ site.baseurl }}{{ document.url }}">{{ document.title }}</a>
+          {% endfor %}
+          {% if general.first == null %}
+            <p><em>No general articles for <strong>#{{ page.tag }}</strong> found.</em></p>
+          {% endif %}
         </div>
       </div>
     </div>
