@@ -170,3 +170,9 @@ For the time being, there are several workarounds that may be worth investigatin
 - You could keep a different encrypted env file on hand locally. From there, you would maintain local `.gitignore` files so that the local credential files are not committed by individual developers and only the canonical, production encrypted environment file would be in the repo. The developers would then need to override the pulled encrypted enviroment variables file with their own, but it would be ignored on all commits back to the repo because of the `.gitignore`.
 
 - Your team could also maintain branches just for local development, and these branches would not have any environment variables file committed on them. Developers could then maintain a local env file that is never committed, with the main branches continuing to host a primary, encrypted environment variables file.
+
+### Error: "docker: no decryptor available"
+
+This error means that the encrypted file was unable to be decrypted locally. This is because the AES key is missing.
+
+See the instructions above for downloading your AES key locally to address this issue.

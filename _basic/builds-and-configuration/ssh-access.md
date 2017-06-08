@@ -91,3 +91,11 @@ You can shutdown the debug build manually by using
 ```shell
 cs exit
 ```
+
+### SSH Prompting For Password
+
+If your SSH debug session is asking for a passphrase when attempting to connect, this likely means the key you have added is not being recognized.
+
+Try deleting the key from [your Codeship account](https://app.codeship.com/user/edit), generating a new key or verifying your key locally and then re-adding it to your account.
+
+**Note** that you will need to run a build _after_ adding your key to be able to connect, previously run build will not recognize the updated key.
