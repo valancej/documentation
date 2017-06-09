@@ -34,7 +34,7 @@ body {
     family: $fBody;
     weight: 400;
     style: normal;
-    size: 1rem; }
+    size: .9rem; }
 
   // Better Font Smoothing
   font-smoothing: subpixel-antialiased;
@@ -69,16 +69,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, .like-h1 {
   font-size: 3rem;
+  font-weight: normal;
   text-transform: capitalize;
 }
 
 h2, .like-h2 {
   font-size: 2.5rem;
+  font-weight: normal;
   text-transform: capitalize;
 }
 
 h3, .like-h3 {
   font-size: 2rem;
+  font-weight: bold;
   text-transform: capitalize;
 }
 
@@ -88,12 +91,12 @@ h4, .like-h4 {
 }
 
 h5, .like-h5 {
-  font-size: 1.4rem;
+  font-size: 2rem;
   text-transform: capitalize;
 }
 
 h6, .like-h6 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 a {

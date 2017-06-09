@@ -12,12 +12,12 @@
   border-radius: 5px;
 
   a {
-    font-size: 85%;
-    line-height: 85%;
+    font-size: 75%;
+    line-height: 75%;
   }
 
   li {
-    margin-bottom: .5rem;
+    margin-bottom: .2rem;
   }
 
   ul li {
@@ -36,7 +36,8 @@
     h5.title {
       margin: 0;
       padding: 0;
-      font-size: 1rem;
+      font-size: .9rem;
+      font-weight: normal
     }
 
     ul:first-of-type {
