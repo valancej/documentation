@@ -250,6 +250,10 @@ body.is-blue {
   padding: 0;
   color: #101b28;
   font-size: 1.5rem;
+
+  p {
+    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
+  }
 }
 
 // *******************************************************
@@ -275,6 +279,11 @@ body.is-blue {
     text-align: center;
     transform: translateY(-50%);
   }
+
+  p {
+    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
+  }
+
 }
 
 .alert-block {
@@ -318,17 +327,21 @@ body.is-blue {
 }
 
 .endcontent-block {
-  margin: 4rem 0 0;
+  margin: 2rem 0 0;
   display: block;
   position: relative;
   padding: 0;
   line-height: 1.2em;
   border-radius: 4px;
   padding-left: 40px;
-  background: $_cLightblue;
-  border: 1px solid $_cLightblue;
-  box-shadow: -3px 0 0 $_cLightblue;
+  background: $_cRed;
+  border: 1px solid $_cRed;
+  box-shadow: -3px 0 0 $_cRed;
   color: #fff;
+
+  p {
+    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
+  }
 
   h2 {
     margin: 2rem 0 1rem;

@@ -47,6 +47,17 @@ body {
   text-align: center;
   color: $cBody;
   background: $cBodyBg;
+
+  p {
+    font-family: 'Bariol';
+    src: url('../fonts/bariol_regular-webfont.eot');
+    src: url('../fonts/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bariol_regular-webfont.woff') format('woff'),
+         url('../fonts/bariol_regular-webfont.ttf') format('truetype'),
+         url('../fonts/bariol_regular-webfont.svg#bariol-regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 
@@ -129,7 +140,7 @@ a {
 
 p {
   margin: $base-padding/2 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: $base-line-height;
   letter-spacing: -.004em;
 
