@@ -20,9 +20,6 @@ redirect_from:
 
 Codeship makes makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
-* include a table of contents
-{:toc}
-
 ## Setup Heroku Deployment
 
 ### Step 1 - Navigate to Deployment Configuration
