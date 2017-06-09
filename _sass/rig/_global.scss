@@ -48,7 +48,7 @@ body {
   color: $cBody;
   background: $cBodyBg;
 
-  p {
+  p, .Content ul li {
     font-family: 'Bariol';
     src: url('../fonts/bariol_regular-webfont.eot');
     src: url('../fonts/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
