@@ -57,20 +57,20 @@ The following command will create two files in your local repository. `keyfile.r
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f keyfile.rsa
 ```
 
-Now you have to copy the content of `keyfile.rsa` into an environment file `sshkey.env`. Make sure to replace newlines with \n so the whole SSH key is in one line. The following is an example of ssh_key.env.
+Now you have to copy the content of `keyfile.rsa` into a [build arguments file]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}), in this case we'll name it `sshkey.args`. Make sure to replace newlines with \n so the whole SSH key is in one line. The following is an example of `ssh_key.args`.
 
 ```bash
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
 ```
 
-After preparing the `sshkey.env` file we can encrypt it with Jet. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to turn the `sshkey.env` file into a `sshkey.env.encrypted` file.
+After preparing the `sshkey.args` file we can encrypt it with the local CLI. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}) to turn the `sshkey.args` file into a `sshkey.args.encrypted` file.
 
-You can then add it to a service with the `encrypted_env_file` option. It will be automatically decrypted on Codeship.
+You can then add it to a service with the `encrypted_args_file` option. It will be automatically decrypted on Codeship.
 
 ```yaml
 app:
   build: .
-  encrypted_env_file: sshkey.env.encrypted
+    encrypted_args_file: sshkey.args.encrypted
 ```
 
 ### Using The Key During The Build
