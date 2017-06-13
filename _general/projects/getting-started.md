@@ -93,10 +93,10 @@ Codeship **does not support testing pull requests from forked repositories** at 
 
 To make it easier to navigate through your Codeship projects, we've provided several keyboard shortcuts for quickly jumping through the interface:
 
-- `gp` to view all of your projects
-- Escape key, inside a project, to go back to viewing all projects
-- Arrow keys to navigate between your projects, while inside a project
-- Enter key to select an activate project
+- `gp`, available from inside your projects, will return you to your projects overview page
+- Escape key, available on your projects overview page, will return you to the previous page
+- Arrow keys, available on your projects overview page, will navigate between your projects
+- Enter key, available on your projects overview page, will select the highlighted project
 
 ## Invite Team Members To Your Projects
 
