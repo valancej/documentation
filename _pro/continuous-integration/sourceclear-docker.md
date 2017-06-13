@@ -9,7 +9,7 @@ tags:
 menus:
   pro/ci:
     title: Using SourceClear
-    weight: 4
+    weight: 5
 ---
 
 * include a table of contents

@@ -1,5 +1,5 @@
 ---
-title: Integrating Codeship Basic With CodeClimate for Code Coverage Reports
+title: Integrating Codeship Basic With Code Climate for Code Coverage Reports
 layout: page
 tags:
   - analytics
@@ -9,7 +9,7 @@ tags:
   - coverage
 menus:
   basic/ci:
-    title: Using CodeClimate
+    title: Using Code Climate
     weight: 8
 redirect_from:
   - /analytics/code-climate/
@@ -22,20 +22,16 @@ redirect_from:
 
 ## Setup
 
-There is no specific setup necessary to use Code Climate on Codeship.
-You can follow the [Code Climate documentation](http://docs.codeclimate.com/article/219-setting-up-test-coverage)
-set it up with your application and just include the Code Climate API key either
-in the environment settings or prefix your test commands with it as explained in their docs.
+[The Code Climate documentation](http://docs.CodeClimate.com/article/219-setting-up-test-coverage) does a great job of guiding you, but to get started all you need to do is add your Code Climate API token to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
 
-For example execute your rake tests with the Code Climate token:
+You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
-```shell
-# After adding Code Climate to your application
-CODECLIMATE_REPO_TOKEN=ACDDD1111222223333 bundle exec rake
-```
+### Application Configuration
 
-## Successful build, even though tests failed
+Once your API key is loaded, you will want to configure Code Climate to run inside your application, during your test, as you would normally without any additional modification.
+
+### Successful build, even though tests failed
 
 Because of a bug with version 0.8.x of simplecov, tests are reported as successful, even though they actually failed. This is caused by simplecov overriding the exit code of the test framework.
 
-According the the [issue report on GitHub](https://github.com/colszowka/simplecov/issues/281) this won't be fixed in the 0.8 release any more. Please either use versions prior to 0.8 or higher than 0.9.
+According the the [issue report on GitHub](https://github.com/colszowka/simplecov/issues/281) this won't be fixed in the 0.8 release. Please either use versions prior to 0.8 or higher than 0.9.
