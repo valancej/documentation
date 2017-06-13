@@ -134,3 +134,10 @@ git config --get user.email
 ```
 
 Note that different projects can have different email addresses configured and that your VCS can have other email addresses configured for the actions you take via their interfaces.
+
+To make it easier to navigate through your Codeship projects, we've provided several keyboard shortcuts for quickly jumping through the interface:
+
+- `gp` to view all of your projects
+- Escape key, inside a project, to go back to viewing all projects
+- Arrow keys to navigate between your projects, while inside a project
+- Enter key to select an activate project
