@@ -20,7 +20,9 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-## Setup
+## Setting Up Code Climate
+
+### Setting Your Code Climate API Token
 
 [The Code Climate documentation](http://docs.CodeClimate.com/article/219-setting-up-test-coverage) does a great job of guiding you, but to get started all you need to do is add your Code Climate API token to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
 

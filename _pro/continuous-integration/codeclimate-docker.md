@@ -18,7 +18,7 @@ menus:
 
 ## Setting Up Code Climate
 
-### Setting Your Code Climate Variables
+### Setting Your Code Climate API Token
 
 Starting with Code Climate and Codeship is easy. [Their documentation](http://docs.CodeClimate.com/article/219-setting-up-test-coverage) do a great job of guiding you, but the first step is to add your Code Climate API key to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
