@@ -86,7 +86,17 @@ We **build your project on every push** (that is, we run your setup and test com
 If you wish to skip a build, please refer to the article about [skipping builds]({{ site.baseurl }}{% link _general/projects/skipping-builds.md %}).
 
 ## Testing PRs from Forked Repositories
+
 Codeship **does not support testing pull requests from forked repositories** at the moment. You'd need to configure the forked repository separately on Codeship or push the branch to the already configured repository instead.
+
+## Keyboard Shortcuts
+
+To make it easier to navigate through your Codeship projects, we've provided several keyboard shortcuts for quickly jumping through the interface:
+
+- `gp`, available from inside your projects, will return you to your projects overview page
+- Escape key, available on your projects overview page, will return you to the previous page
+- Arrow keys, available on your projects overview page, will navigate between your projects
+- Enter key, available on your projects overview page, will select the highlighted project
 
 ## Invite Team Members To Your Projects
 
