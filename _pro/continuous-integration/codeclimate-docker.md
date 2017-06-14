@@ -31,8 +31,8 @@ Starting with Code Climate and Codeship is easy. [Their documentation](http://do
 Once your Code Climate project ID is loaded via your environment variables, you will need to install Code Climate into one of your services via your Dockerfile by using the following command:
 
 ```bash
-curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "${HOME}/bin/cc-test-reporter"
-chmod +x "${HOME}/bin/cc-test-reporter"
+curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "$/usr/local/bin/cc-test-reporter"
+chmod +x "/usr/local/bin/cc-test-reporter"
 ```
 
 Next, you will need to add a couple additional commands to your pipeline via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
@@ -70,7 +70,7 @@ After each parallel test command you'll run a new script:
       command: tests2.sh
 ```
 
-Note that we're using script filesto run our tests, so that we can execute the tests and export the coverage report as one command. This is because each step uses a new container, so the coverage report will not persist if the commands are separated. Inside the new `tests.sh` files, you will have:
+Note that we're using script files to run our tests, so that we can execute the tests and export the coverage report as one command. This is because each step uses a new container, so the coverage report will not persist if the commands are separated. Inside the new `tests.sh` files, you will have:
 
 ```bash
 # your test commands go here
@@ -79,7 +79,7 @@ Note that we're using script filesto run our tests, so that we can execute the t
 aws s3 sync coverage/ "s3://my-bucket/coverage/$CI_COMMIT_ID"
 ```
 
-Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value value by manually declaring the number of pipelines.
+Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value value by manually declaring separate pipeline IDs.
 
 Next, at the end of your build itself, as a new test command placed after your normal tests:
 

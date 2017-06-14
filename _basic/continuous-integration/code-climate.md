@@ -68,9 +68,15 @@ At the end of each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-a
 aws s3 sync coverage/ "s3://my-bucket/coverage/$CI_COMMIT_ID"
 ```
 
-Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value value by manually declaring the number of pipelines.
+Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value value by manually declaring separate parallel test pipeline IDs.
 
-At the end of your build itself, as a command run via a the [custom-script deployment option]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}):
+At the end of your build itself, you will need to complete the parallel coverage reports in one of two ways.
+
+- As a command, run via a the [custom-script deployment option]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). This means code coverage for parallel testing will only run on branches you have configured deployments.
+
+- As an additional test step placed at the end of one of your parallel test pipelines. This method will require additional logic to be written to pause the script while it queries your external storage service for the existence of the appropriately-named coverage reports for all the additional pipelines, so that it doesn't erroneously combine coverage reports for pipelines that are still in progress.
+
+The code to use to end the parallel coverage report is: 
 
 ```bash
 cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
