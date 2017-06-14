@@ -20,11 +20,77 @@ menus:
 
 ### Setting Your Code Climate API Token
 
-Starting with Code Climate and Codeship is easy. [Their documentation](http://docs.CodeClimate.com/article/219-setting-up-test-coverage) do a great job of guiding you, but the first step is to add your Code Climate API key to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+Starting with Code Climate and Codeship is easy. [Their documentation](http://docs.CodeClimate.com/article/219-setting-up-test-coverage) do a great job of guiding you, but the first step is to add your `CC_TEST_REPORTER_ID` to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Application Configuration
 
-Once your API key is loaded, you will want to configure Code Climate to run inside your application, during your test, as you would normally without any additional modification.
+Once your Code Climate project ID is loaded via your environment variables, you will need to add a couple additional commands to your pipeline via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+
+Before your test commands:
+
+```bash
+- name: codeclimate_pre
+  service: YOURSERVICE
+  command: cc-test-reporter before-build
+```
+
+After your test commands:
+
+```bash
+- name: codeclimate_post
+  service: YOURSERVICE
+  command: cc-test-reporter after-build
+```
+
+### Parallel Test Coverage
+
+Code Climate supports parallel test reports by uploading the partial result to an external CDN. In addition to the pre-test and post-test commands up, to use Code Climate with parallel reporting you will need to add another command after your individual tests, and after all tests have completed, in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+
+Here are [Code Climate's example](https://github.com/codeclimate/test-reporter#low-level-usage) scripts for doing so.
+
+After each parallel test command you'll run a new script:
+
+```bash
+- type: parallel
+  steps:
+  - type: serial
+    steps:
+    - service: YOURSERVICE
+      command: test_commands
+    - service: demo
+      command: codeclimate-post.sh      
+  - type: serial
+    steps:
+    - service: YOURSERVICE
+      command: test_commands
+    - service: demo
+      command: codeclimate-post.sh  
+```
+
+Note that we're using serial step groups being run in parallel, s that we can run our script after each parallel test thread completes. Inside the new `codeclimate-post.sh` file, you will have:
+
+```bash
+./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
+aws s3 sync coverage/ "s3://my-bucket/coverage/$SHA"
+```
+
+Note that you will need to modify the S3 path (or provide an alternative CDN), as well as the `$SHA` and the `$N` value.
+
+Next, at the end of your build itself, as a new test command placed after your normal tests:
+
+```bash
+- name: codeclimate_assemble_results
+  service: YOURSERVICE
+  command: codeclimate-assemble.sh
+```
+
+Inside the `codeclimate-assemble.sh` file, you will have:
+
+```bash
+cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
+```
+
+Note that you will need `$PARTS` to reflect the number of parallel threads.
 
 ### Successful build, even though tests failed
 

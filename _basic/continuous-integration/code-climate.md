@@ -24,13 +24,50 @@ redirect_from:
 
 ### Setting Your Code Climate API Token
 
-[The Code Climate documentation](http://docs.CodeClimate.com/article/219-setting-up-test-coverage) does a great job of guiding you, but to get started all you need to do is add your Code Climate API token to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
+[The Code Climate documentation](http://docs.CodeClimate.com/article/219-setting-up-test-coverage) does a great job of guiding you, but to get started all you need to do is add your `CC_TEST_REPORTER_ID` to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
 ### Application Configuration
 
-Once your API key is loaded, you will want to configure Code Climate to run inside your application, during your test, as you would normally without any additional modification.
+Once your Code Climate project ID is loaded via your environment variables, you will need to add special Code Climate commands before and after your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
+
+Before your tests:
+
+```bash
+cc-test-reporter before-build
+```
+
+After your tests:
+
+```bash
+cc-test-reporter after-build
+```
+
+### Parallel Test Coverage
+
+Code Climate supports parallel test reports by uploading the partial result to an external CDN. In addition to the pre-test and post-test commands up, to use Code Climate with parallel reporting you will need to add another command at the end of your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), in each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}) that you run tests in - as well as a new command at the end of your build.
+
+Here are [Code Climate's example](https://github.com/codeclimate/test-reporter#low-level-usage) scripts for doing so.
+
+At the end of each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}):
+
+```bash
+./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
+aws s3 sync coverage/ "s3://my-bucket/coverage/$SHA"
+```
+
+Note that you will need to modify the S3 path (or provide an alternative CDN), as well as the `$SHA` and the `$N` value.
+
+At the end of your build itself, as a new test command placed after your normal tests:
+
+```bash
+cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
+```
+
+Note that you will need `$PARTS` to reflect the number of parallel threads.
+
+All of these commands will work best when executed from script files.
 
 ### Successful build, even though tests failed
 
