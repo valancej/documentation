@@ -26,7 +26,12 @@ body.is-blue {
     margin-bottom: 1rem;
   }
 
-  a, strong {
+  a {
+    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
+    font-size: .9em !important;
+  }
+
+  strong {
     font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
     font-size: .9em !important;
   }
