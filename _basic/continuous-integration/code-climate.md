@@ -46,7 +46,7 @@ cc-test-reporter after-build
 
 ### Parallel Test Coverage
 
-Code Climate supports parallel test reports by uploading the partial result to an external CDN. In addition to the pre-test and post-test commands up, to use Code Climate with parallel reporting you will need to add another command at the end of your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), in each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}) that you run tests in - as well as a new command at the end of your build.
+Code Climate supports parallel test reports, as a new beta feature, by uploading the partial result to an external CDN. In addition to the pre-test and post-test commands up, to use Code Climate with parallel reporting you will need to add another command at the end of your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), in each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}) that you run tests in - as well as a new command at the end of your build.
 
 Here are [Code Climate's example](https://github.com/codeclimate/test-reporter#low-level-usage) scripts for doing so.
 
