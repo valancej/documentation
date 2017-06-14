@@ -23,6 +23,12 @@ body.is-blue {
     color: #000;
     padding: 1rem 0;
     border-bottom: $vBorder;
+    margin-bottom: 1rem;
+  }
+
+  a, strong {
+    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
+    font-size: .9em !important;
   }
 
   p.box-link {
@@ -327,17 +333,16 @@ body.is-blue {
 }
 
 .endcontent-block {
-  margin: 2rem 0 0;
+  margin: 3rem 0 0;
   display: block;
   position: relative;
   padding: 0;
   line-height: 1.2em;
-  border-radius: 4px;
+  border-radius: 8px;
   padding-left: 40px;
-  background: $_cRed;
-  border: 1px solid $_cRed;
-  box-shadow: -3px 0 0 $_cRed;
-  color: #fff;
+  background: #fff;
+  border: 4px solid $_cBlue;
+  color: #000;
 
   p {
     font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
@@ -345,36 +350,36 @@ body.is-blue {
 
   h2 {
     margin: 2rem 0 1rem;
-    color: #fff;
+    color: #000;
   }
 
   &::before {
-    color: $_cCSYellow;
+    color: $_cBlue;
   }
 
   a {
-    color: #fff;
+    color: $_cBlue;
     font-weight: bold;
     border-bottom: 1px solid #fff;
   }
 
   a:hover {
-    color: #fff;
+    color: $_cBlue;
     font-weight: bold;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid $_cBlue;
   }
 
   h4 {
-    color: #fff;
+    color: #000;
   }
 
   .rating-nero-value {
     margin: 0 3rem 0 0;
-    color: #fff !important;
+    color: #000 !important;
   }
 
   strong {
-    color: #fff !important;
+    color: #000 !important;
   }
 
 }
