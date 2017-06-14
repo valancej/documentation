@@ -1,20 +1,16 @@
 ---
-title: Integrating Codeship Basic With Code Climate for Code Coverage Reports
+title: Integrating Codeship Pro With Code Climate for Code Coverage Reports
 layout: page
 tags:
   - analytics
-  - reports
-  - reporting
   - code coverage
   - coverage
+  - reports
+  - reporting
 menus:
-  basic/ci:
+  pro/ci:
     title: Using Code Climate
-    weight: 8
-redirect_from:
-  - /analytics/code-climate/
-  - /classic/getting-started/code-climate/
-  - /basic/analytics/code-climate/
+    weight: 6
 ---
 
 * include a table of contents
@@ -24,9 +20,7 @@ redirect_from:
 
 ### Setting Your Code Climate API Token
 
-[The Code Climate documentation](http://docs.CodeClimate.com/article/219-setting-up-test-coverage) does a great job of guiding you, but to get started all you need to do is add your Code Climate API token to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
-
-You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
+Starting with Code Climate and Codeship is easy. [Their documentation](http://docs.CodeClimate.com/article/219-setting-up-test-coverage) do a great job of guiding you, but the first step is to add your Code Climate API key to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Application Configuration
 
