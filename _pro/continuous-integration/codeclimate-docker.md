@@ -28,7 +28,14 @@ Starting with Code Climate and Codeship is easy. [Their documentation](http://do
 
 ### Application Configuration
 
-Once your Code Climate project ID is loaded via your environment variables, you will need to add a couple additional commands to your pipeline via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+Once your Code Climate project ID is loaded via your environment variables, you will need to install Code Climate into one of your services via your Dockerfile by using the following command:
+
+```bash
+curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "${HOME}/bin/cc-test-reporter"
+chmod +x "${HOME}/bin/cc-test-reporter"
+```
+
+Next, you will need to add a couple additional commands to your pipeline via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 
 Before your test commands:
 
@@ -38,47 +45,41 @@ Before your test commands:
   command: cc-test-reporter before-build
 ```
 
-After your test commands:
+After your final test commands:
 
 ```bash
 - name: codeclimate_post
   service: YOURSERVICE
-  command: cc-test-reporter after-build
+  command: cc-test-reporter after-build --exit-code $
 ```
 
 ### Parallel Test Coverage
 
-Code Climate supports parallel test reports, as a new beta feature, by uploading the partial result to an external CDN. In addition to the pre-test and post-test commands up, to use Code Climate with parallel reporting you will need to add another command after your individual tests, and after all tests have completed, in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+Code Climate supports parallel test reports, as a new beta feature, by uploading the partial result to an external service, such as S3. In addition to the pre-test and post-test commands up, to use Code Climate with parallel reporting you will need to add another command after your individual tests, and after all tests have completed, in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 
 Here are [Code Climate's example](https://github.com/codeclimate/test-reporter#low-level-usage) scripts for doing so.
 
 After each parallel test command you'll run a new script:
 
-```bash
+``````
 - type: parallel
   steps:
-  - type: serial
-    steps:
     - service: YOURSERVICE
-      command: test_commands
-    - service: demo
-      command: codeclimate-post.sh      
-  - type: serial
-    steps:
+      command: tests1.sh
     - service: YOURSERVICE
-      command: test_commands
-    - service: demo
-      command: codeclimate-post.sh  
+      command: tests2.sh
 ```
 
-Note that we're using serial step groups being run in parallel, s that we can run our script after each parallel test thread completes. Inside the new `codeclimate-post.sh` file, you will have:
+Note that we're using script filesto run our tests, so that we can execute the tests and export the coverage report as one command. This is because each step uses a new container, so the coverage report will not persist if the commands are separated. Inside the new `tests.sh` files, you will have:
 
 ```bash
+# your test commands go here
+
 ./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
-aws s3 sync coverage/ "s3://my-bucket/coverage/$SHA"
+aws s3 sync coverage/ "s3://my-bucket/coverage/$CI_COMMIT_ID"
 ```
 
-Note that you will need to modify the S3 path (or provide an alternative CDN), as well as the `$SHA` and the `$N` value.
+Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value value by manually declaring the number of pipelines.
 
 Next, at the end of your build itself, as a new test command placed after your normal tests:
 
@@ -94,7 +95,7 @@ Inside the `codeclimate-assemble.sh` file, you will have:
 cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
 ```
 
-Note that you will need `$PARTS` to reflect the number of parallel threads.
+Note that you will need to manually `$PARTS` to reflect the number of parallel threads.
 
 ### Successful build, even though tests failed
 
