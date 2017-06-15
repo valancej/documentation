@@ -1,9 +1,8 @@
 ---
 title: Setting Timezone
-layout: page
 menus:
   basic/builds:
-    title: Customizing The Timzone
+    title: Setting Timezone
     weight: 10
 tags:
   - timezone

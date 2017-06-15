@@ -1,5 +1,5 @@
 ---
-title: Deploy via Custom Script
+title: Deploy With Custom Scripts
 menus:
   basic/cd:
     title: Custom Script

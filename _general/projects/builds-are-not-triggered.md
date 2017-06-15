@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Issues With Builds Not Starting
-layout: page
+shortTitle: Builds Not Starting
 menus:
   general/projects:
     title: Builds Not Starting

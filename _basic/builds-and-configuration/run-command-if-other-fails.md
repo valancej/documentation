@@ -1,5 +1,6 @@
 ---
 title: Run A Fallback Command After Another Command Fails
+shortTitle: Running A Fallback Command
 menus:
   basic/builds:
     title: Run A Command In Case Of An Error

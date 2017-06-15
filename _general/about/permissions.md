@@ -1,6 +1,6 @@
 ---
 title: Repository Permissions and Access On Codeship
-layout: page
+shortTitle: Repository Permissions and Access
 menus:
   general/about:
     title: Required Permissions for Remote SCMs

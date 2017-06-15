@@ -1,6 +1,6 @@
 ---
 title: Using SQLite In CI/CD with Codeship Basic
-layout: page
+shortTitle: SQLite
 tags:
   - services
   - databases

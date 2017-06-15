@@ -1,6 +1,6 @@
 ---
 title: Integrating Codeship Pro And Docker With Percy Visual Testing
-layout: page
+shortTitle: Using Percy Visual Testing
 tags:
   - screenshots
   - visual testing

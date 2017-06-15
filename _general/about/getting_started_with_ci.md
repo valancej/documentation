@@ -1,6 +1,6 @@
 ---
 title: Getting started with Continuous Integration and Continuous Deployment
-layout: page
+shortTitle: Getting Started With CI/CD
 menus:
   general/about:
     title: Getting Started with CI & CD

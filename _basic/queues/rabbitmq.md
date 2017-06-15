@@ -1,6 +1,6 @@
 ---
 title: Using RabbitMQ In CI/CD with Codeship Basic
-layout: page
+shortTitle: RabbitMQ
 tags:
   - services
   - queues

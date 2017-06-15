@@ -1,5 +1,6 @@
 ---
 title: Using PHP In CI/CD with Docker and Codeship Pro
+shortTitle: PHP
 menus:
   pro/languages:
     title: PHP

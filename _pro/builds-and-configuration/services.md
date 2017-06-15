@@ -1,6 +1,5 @@
 ---
 title: Services Configuration
-layout: page
 menus:
   pro/builds:
     title: Services Config

@@ -1,6 +1,6 @@
 ---
 title: Using Rollbar To Track Deployments With Codeship Pro
-layout: page
+shortTitle: Tracking Deployments With Rollbar
 menus:
   pro/cd:
     title: Using Rollbar

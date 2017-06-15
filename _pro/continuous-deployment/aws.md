@@ -1,5 +1,6 @@
 ---
 title: Continuous Delivery to AWS with Docker
+shortTitle: Deploying To AWS
 menus:
   pro/cd:
     title: AWS

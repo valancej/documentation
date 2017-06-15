@@ -1,5 +1,6 @@
 ---
 title: Using Go In CI/CD with Codeship Basic
+shortTitle: Go
 tags:
 - go
 - languages

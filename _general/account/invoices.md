@@ -1,6 +1,5 @@
 ---
 title: Invoices
-layout: page
 tags:
   - administration
   - account

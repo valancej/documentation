@@ -1,5 +1,6 @@
 ---
 title: Keeping Build Artifacts After CI/CD
+shortTitle: Build Artifacts
 menus:
   basic/ci:
     title: Artifacts

@@ -1,6 +1,6 @@
 ---
 title: Using Docker Build Arguments In CI/CD
-layout: page
+shortTitle: Build Arguments
 menus:
   pro/builds:
     title: Build Arguments

@@ -1,6 +1,6 @@
 ---
 title: Using Beanstalkd In CI/CD with Codeship Basic
-layout: page
+shortTitle: Beanstalkd
 tags:
   - services
   - queues

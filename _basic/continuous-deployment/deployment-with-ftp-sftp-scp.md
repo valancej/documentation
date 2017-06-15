@@ -1,5 +1,5 @@
 ---
-title: Deploy via FTP, SFTP, SCP, RSYNC, and SSH
+title: Deploy With FTP, SFTP, SCP, RSYNC, and SSH
 menus:
   basic/cd:
     title: FTP/SSH/SFTP/RSYNC

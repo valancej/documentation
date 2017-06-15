@@ -1,6 +1,6 @@
 ---
 title: Handling Secrets With Docker And Codeship Pro
-layout: page
+shortTitle: Handling Secrets
 menus:
   pro/builds:
     title: Handling Secrets

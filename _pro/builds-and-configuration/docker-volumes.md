@@ -1,6 +1,6 @@
 ---
 title: Using Docker Volumes In CI/CD
-layout: page
+shortTitle: Using Volumes
 menus:
   pro/builds:
     title: Volumes

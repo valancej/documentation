@@ -1,5 +1,6 @@
 ---
 title: Using Python In CI/CD with Docker and Codeship Pro
+shortTitle: Python
 menus:
   pro/languages:
     title: Python

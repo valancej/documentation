@@ -1,5 +1,6 @@
 ---
 title: Continuous Deployment With Docker, Kubernetes And Codeship Pro
+shortTitle: Deploying With Kubernetes
 menus:
   pro/cd:
     title: Kubernetes
@@ -12,7 +13,7 @@ tags:
   - k8
   - google
   - google cloud
-  
+
 redirect_from:
   - /general/account/guides/deployment-with-kubernetes/
 ---

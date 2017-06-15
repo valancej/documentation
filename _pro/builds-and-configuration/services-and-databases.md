@@ -1,6 +1,6 @@
 ---
 title: Supported Services and Databases
-layout: page
+shortTitle: Services and Databases
 menus:
   pro/builds:
     title: Services And Databases

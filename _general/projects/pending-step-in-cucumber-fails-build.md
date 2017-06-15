@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Cucumber Failures In CI/CD with Codeship Basic
-layout: page
+shortTitle: Troubleshooting Cucumber Failures
 menus:
   general/projects:
     title: Cucumber Failures

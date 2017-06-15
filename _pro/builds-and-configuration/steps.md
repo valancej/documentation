@@ -1,6 +1,5 @@
 ---
 title: Steps Configuration
-layout: page
 menus:
   pro/builds:
     title: Steps Config

@@ -1,5 +1,6 @@
 ---
 title: Using Ruby In CI/CD with Codeship Basic
+shortTitle: Ruby
 menus:
   basic/languages:
     title: Ruby

@@ -1,6 +1,6 @@
 ---
 title: Integrating Codeship Pro With Coveralls for Code Coverage Reports
-layout: page
+shortTitle: Using Coveralls For Code Coverage
 tags:
   - analytics
   - code coverage

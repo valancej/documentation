@@ -1,5 +1,6 @@
 ---
 title: Continuous Delivery to Microsoft Azure with Docker
+shortTitle: Deploying To Azure
 menus:
   pro/cd:
     title: Azure

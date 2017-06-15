@@ -1,5 +1,6 @@
 ---
 title: Environment Variables On Codeship Basic
+shortTitle: Environment Variables
 menus:
   basic/builds:
     title: Environment Variables

@@ -1,5 +1,5 @@
 ---
-title: Deploy via Ansible
+title: Deploy With Ansible
 menus:
   basic/cd:
     title: Ansible

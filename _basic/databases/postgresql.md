@@ -1,6 +1,6 @@
 ---
 title: Using PostgreSQL In CI/CD with Codeship Basic
-layout: page
+shortTitle: PostgreSQL
 tags:
   - services
   - databases

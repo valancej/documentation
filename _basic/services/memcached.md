@@ -1,6 +1,6 @@
 ---
 title: Using Memcached In CI/CD with Codeship Basic
-layout: page
+shortTitle: Memcached
 tags:
   - services
   - memcached

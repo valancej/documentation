@@ -1,5 +1,6 @@
 ---
 title: All Packages Installed On Codeship Basic
+shortTitle: Codeship Basic Package List
 menus:
   basic/builds:
     title: Installed Packages

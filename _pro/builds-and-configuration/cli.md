@@ -1,6 +1,6 @@
 ---
 title: Debugging And Setup With The Codeship Local CLI (Codeship Pro)
-layout: page
+shortTitle: Using The Local CLI
 menus:
   pro/builds:
     title: Local CLI

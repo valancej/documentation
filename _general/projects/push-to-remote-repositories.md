@@ -1,6 +1,5 @@
 ---
 title: Pushing to git remote fails
-layout: page
 menus:
   general/projects:
     title: Git Remote Push

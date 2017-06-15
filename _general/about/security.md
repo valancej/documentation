@@ -1,6 +1,6 @@
 ---
 title: Security Information For CI/CD Infrastructure
-layout: page
+shortTitle: Security Specifications
 menus:
   general/about:
     title: Security Information

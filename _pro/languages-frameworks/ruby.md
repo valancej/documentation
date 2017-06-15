@@ -1,5 +1,6 @@
 ---
 title: Using Ruby In CI/CD with Docker and Codeship Pro
+shortTitle: Ruby
 menus:
   pro/languages:
     title: Ruby

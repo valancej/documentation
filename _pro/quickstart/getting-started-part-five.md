@@ -1,6 +1,5 @@
 ---
 title: Getting Started With Codeship Pro Part 5
-layout: page
 menus:
   pro/quickstart:
     title: Getting Started Pt. 5
