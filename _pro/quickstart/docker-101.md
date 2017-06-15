@@ -53,7 +53,7 @@ If you're going to explore Docker and Codeship Pro, there are some basic concept
 
 - **Dockerfiles** are image specifications, essentially blueprints for what is inside of your images and the containers built from those images. Dockerfiles are often similar to the commands you would run locally to get an environment working: Adding your code, installing your dependencies, fetching packages, etc. [Learn more about Dockerfiles](https://docs.docker.com/engine/reference/builder/).
 
-- **Compose/Services file**, alternatively called a Docker Compose file or a Codeship Services file, is a schema for how to orchestrate your containers to build the environment. Compose is a product maintained by Docker, whereas a Services file is a Codeship-specific file for defining your CI/CD environment that borrows heavily from Compose syntax. [Learn more about codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/service.md %}).
+- **Compose/Services file**, alternatively called a Docker Compose file or a Codeship Services file, is a schema for how to orchestrate your containers to build the environment. Compose is a product maintained by Docker, whereas a Services file is a Codeship-specific file for defining your CI/CD environment that borrows heavily from Compose syntax. [Learn more about codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 - **Images** are built from Dockerfiles. They are saved locally and remotely, via image registries, and are used to orchestrate containers. Images compile and save a fully loadable environment for your code to run in, in a standardized way. [Learn more about Docker images](https://docs.docker.com/engine/reference/commandline/images/).
 
