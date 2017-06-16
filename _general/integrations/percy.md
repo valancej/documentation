@@ -19,7 +19,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-## About Is Percy?
+## About Percy
 
 [Percy](https://percy.io) is a visual testing tool that lets you take screenshots, monitor visual changes, and require team approval to these visual captures in an automated way as part of your CI/CD pipeline.
 
