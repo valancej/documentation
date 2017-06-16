@@ -28,6 +28,10 @@ general:
     title: Projects
     identifier: general/projects
     url: general/projects
+  - &GENERAL_INTEGRATIONS
+    title: Integrations
+    identifier: general/integrations
+    url: general/integrations
 
 basic:
   - title: Quickstart
@@ -54,6 +58,7 @@ basic:
   - title: Services
     identifier: basic/services
     url: basic/services
+  - <<: *GENERAL_INTEGRATIONS    
   - <<: *GENERAL_ABOUT
   - <<: *GENERAL_ACCOUNT
   - <<: *GENERAL_PROJECTS
@@ -74,6 +79,7 @@ pro:
   - title: Continuous Deployment
     identifier: pro/cd
     url: pro/cd
+  - <<: *GENERAL_INTEGRATIONS
   - <<: *GENERAL_ABOUT
   - <<: *GENERAL_ACCOUNT
   - <<: *GENERAL_PROJECTS
