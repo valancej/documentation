@@ -1,6 +1,5 @@
 ---
 title: Organization Accounts
-layout: page
 tags:
   - administration
   - project

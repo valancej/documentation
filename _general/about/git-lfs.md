@@ -1,6 +1,6 @@
 ---
 title: Support For Git LFS Codeship
-layout: page
+shortTitle: Git LFS
 menus:
   general/about:
     title: GIT LFS

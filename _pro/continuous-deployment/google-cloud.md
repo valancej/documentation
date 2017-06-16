@@ -1,5 +1,6 @@
 ---
 title: Continuous Delivery to Google Cloud Platform with Docker
+shortTitle: Deploying To Google Cloud
 menus:
   pro/cd:
     title: Google Cloud

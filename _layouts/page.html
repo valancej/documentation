@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-{% if page.title %}
+{% if page.shortTitle %}
+  {% assign title = page.shortTitle %}
+{% elsif page.shortTitle == null %}
   {% assign title = page.title %}
 {% elsif page.category %}
   {% assign title = page.category | capitalize %}

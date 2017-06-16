@@ -1,5 +1,6 @@
 ---
 title: Using Git Submodules In CI/CD with Codeship Basic
+shortTitle: Git Submodules
 menus:
   basic/ci:
     title: Git Submodules

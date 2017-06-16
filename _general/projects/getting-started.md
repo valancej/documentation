@@ -4,7 +4,6 @@ menus:
   general/projects:
     title: Creating New Projects
     weight: 1
-layout: page
 tags:
   - administration
   - project

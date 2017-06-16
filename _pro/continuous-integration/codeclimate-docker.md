@@ -1,6 +1,6 @@
 ---
 title: Integrating Codeship Pro With Code Climate for Code Coverage Reports
-layout: page
+shortTitle: Using Code Climate For Code Coverage
 tags:
   - analytics
   - code coverage

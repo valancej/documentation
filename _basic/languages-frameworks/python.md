@@ -1,5 +1,6 @@
 ---
 title: Using Python In CI/CD with Codeship Basic
+shortTitle: Python
 menus:
   basic/languages:
     title: Python

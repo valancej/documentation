@@ -1,6 +1,6 @@
 ---
 title: Using Docker Image Registries With Your CI/CD Builds
-layout: page
+shortTitle: Using Docker Image Registries
 menus:
   pro/builds:
     title: Image Registries

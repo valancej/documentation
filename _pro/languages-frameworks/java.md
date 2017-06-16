@@ -1,5 +1,6 @@
 ---
 title: Using Java In CI/CD with Docker and Codeship Pro
+shortTitle: Java And The JVM
 menus:
   pro/languages:
     title: Java And JVM

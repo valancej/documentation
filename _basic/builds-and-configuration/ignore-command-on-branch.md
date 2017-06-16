@@ -1,6 +1,6 @@
 ---
 title: Ignore command on specific branch or run only on a branch
-layout: page
+shortTitle: Ignoring Commands Per Branch
 menus:
   basic/builds:
     title: Ignoring Commands

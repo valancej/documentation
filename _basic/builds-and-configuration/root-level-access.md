@@ -1,6 +1,6 @@
 ---
 title: Running Commands As Sudo or Root
-layout: page
+shortTitle: Using Sudo Or Root
 menus:
   basic/builds:
     title: Running Commands As Root

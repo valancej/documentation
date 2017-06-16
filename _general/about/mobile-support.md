@@ -1,6 +1,6 @@
 ---
 title: CI/CD For Mobile Apps on Codeship
-layout: page
+shortTitle: Mobile CI/CD Support
 menus:
   general/about:
     title: CI & CD for mobile

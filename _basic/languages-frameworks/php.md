@@ -1,5 +1,6 @@
 ---
 title: Using PHP In CI/CD with Codeship Basic
+shortTitle: PHP
 menus:
   basic/languages:
     title: PHP

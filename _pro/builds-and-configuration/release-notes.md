@@ -1,6 +1,5 @@
 ---
 title: CLI Release Notes
-layout: page
 menus:
   pro/builds:
     title: CLI Release Notes

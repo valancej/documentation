@@ -1,5 +1,6 @@
 ---
 title: Signing Up For A New Codeship Account
+shortTitle: Signing Up For A New Account
 menus:
   general/account:
     title: New User Signup

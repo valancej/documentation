@@ -1,6 +1,6 @@
 ---
 title: Speed Up Your Builds With Parallel Testing on Codeship Pro
-layout: page
+shortTitle: Parallel Testing
 menus:
   pro/ci:
     title: Parallel Testing

@@ -1,6 +1,6 @@
 ---
 title: Browser Testing During CI/CD With Codeship Pro
-layout: page
+shortTitle: Browser Testing
 menus:
   pro/ci:
     title: Browser Testing

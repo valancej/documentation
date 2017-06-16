@@ -1,5 +1,6 @@
 ---
 title: Speed Up Your Builds With Caching on Codeship Basic
+shortTitle: Dependency Caching
 menus:
   basic/builds:
     title: Caching

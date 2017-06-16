@@ -1,5 +1,6 @@
 ---
 title: Using Dart In CI/CD with Codeship Basic
+shortTitle: Dart
 tags:
   - dart
   - languages

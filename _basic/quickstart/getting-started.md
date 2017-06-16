@@ -1,6 +1,5 @@
 ---
 title: Getting Started With Codeship Basic
-layout: page
 menus:
   basic/quickstart:
     title: Getting Started

@@ -1,6 +1,6 @@
 ---
 title: Using The Codeship API For CI/CD Workflows
-layout: page
+shortTitle: API
 menus:
   basic/builds:
     title: API

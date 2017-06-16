@@ -1,5 +1,6 @@
 ---
 title: Debugging Your Builds Via SSH Sessions
+shortTitle: Debugging Builds Via SSH
 menus:
   basic/builds:
     title: Debugging Builds

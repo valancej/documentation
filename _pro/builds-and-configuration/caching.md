@@ -1,6 +1,6 @@
 ---
 title: Speed Up Your Builds With Caching on Codeship Pro
-layout: page
+shortTitle: Image Caching
 menus:
   pro/builds:
     title: Image Caching

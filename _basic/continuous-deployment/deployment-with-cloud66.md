@@ -1,5 +1,5 @@
 ---
-title: Deploy via Cloud66
+title: Deploy With Cloud66
 tags:
   - deployment
   - cloud66

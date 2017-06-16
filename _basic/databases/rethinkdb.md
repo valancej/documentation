@@ -1,6 +1,6 @@
 ---
 title: Using RethinkDB In CI/CD with Codeship Basic
-layout: page
+shortTitle: RethinkDB
 tags:
   - services
   - databases

@@ -1,6 +1,6 @@
 ---
 title: Using MySQL In CI/CD with Codeship Basic
-layout: page
+shortTitle: MySQL
 tags:
   - services
   - databases

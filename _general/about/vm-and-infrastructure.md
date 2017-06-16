@@ -1,6 +1,6 @@
 ---
 title: VM And Infrastructure Specifics
-layout: page
+shortTitle: VM And Infrastructure
 menus:
   general/about:
     title: VM & Infrastructure Specifics

@@ -1,6 +1,5 @@
 ---
 title: Setting Up Or Migrating A Project To Codeship Pro
-layout: page
 menus:
   pro/quickstart:
     title: Migrating To Pro

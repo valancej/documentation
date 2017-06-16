@@ -1,6 +1,6 @@
 ---
 title: Using Redis In CI/CD with Codeship Basic
-layout: page
+shortTitle: Redis
 tags:
   - services
   - queues

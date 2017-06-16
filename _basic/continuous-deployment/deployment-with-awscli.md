@@ -1,5 +1,5 @@
 ---
-title: Deployment with AWS CLI
+title: Deployment With AWS CLI
 menus:
   basic/cd:
     title: AWS CLI

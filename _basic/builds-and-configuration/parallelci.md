@@ -1,5 +1,6 @@
 ---
 title: Speed Up Your Builds With Parallel Testing on Codeship Basic
+shortTitle: Parallel Testing
 menus:
   basic/builds:
     title: Parallel Testing

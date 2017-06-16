@@ -1,6 +1,6 @@
 ---
 title: Continuous Delivery Via SSH With Docker
-layout: page
+shortTitle: Deploying With SSH
 menus:
   pro/cd:
     title: Deploy Via SSH

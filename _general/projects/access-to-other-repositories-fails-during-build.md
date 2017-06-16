@@ -1,6 +1,6 @@
 ---
 title: Cloning other repositories fails during build
-layout: page
+shortTitle: Cloning other repositories fails
 menus:
   general/projects:
     title: Accessing Other Repos

@@ -1,5 +1,6 @@
 ---
 title: Run a command in the background
+shortTitle: Background Commands
 menus:
   basic/ci:
     title: Background Commands

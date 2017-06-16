@@ -1,6 +1,6 @@
 ---
 title: Environment Variables On Codeship Pro
-layout: page
+shortTitle: Environment Variables
 menus:
   pro/builds:
     title: Environment Variables

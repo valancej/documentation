@@ -1,5 +1,5 @@
 ---
-title: Deploy via Capistrano
+title: Deploy With Capistrano
 menus:
   basic/cd:
     title: Capistrano

@@ -1,5 +1,5 @@
 ---
-title: Deploy to AWS CodeDeploy
+title: Deploy To AWS CodeDeploy
 menus:
   basic/cd:
     title: AWS CodeDeploy

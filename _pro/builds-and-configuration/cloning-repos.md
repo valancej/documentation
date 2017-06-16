@@ -1,6 +1,5 @@
 ---
 title: Using Multiple Repositories
-layout: page
 menus:
   pro/builds:
     title: Multiple Repos

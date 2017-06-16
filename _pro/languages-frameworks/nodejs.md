@@ -1,5 +1,6 @@
 ---
 title: Using Node.js In CI/CD with Docker and Codeship Pro
+shortTitle: Node.js
 menus:
   pro/languages:
     title: Node.js

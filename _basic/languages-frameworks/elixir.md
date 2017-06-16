@@ -1,5 +1,6 @@
 ---
 title: Using Elixir In CI/CD with Codeship Basic
+shortTitle: Elixir
 tags:
   - elixir
   - languages

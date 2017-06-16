@@ -1,5 +1,6 @@
 ---
 title: Using Node.js In CI/CD with Codeship Basic
+shortTitle: Node.js
 menus:
   basic/languages:
     title: Node.js

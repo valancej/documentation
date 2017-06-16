@@ -1,6 +1,6 @@
 ---
 title: Deployment Pipelines On Codeship Basic
-layout: page
+shortTitle: Deployment Pipelines
 menus:
   basic/builds:
     title: Deployment Pipelines

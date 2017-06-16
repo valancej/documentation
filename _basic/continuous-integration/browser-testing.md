@@ -1,5 +1,6 @@
 ---
 title: Browser Testing During CI/CD With Codeship Basic
+shortTitle: Browser Testing
 menus:
   basic/ci:
     title: Browser Testing

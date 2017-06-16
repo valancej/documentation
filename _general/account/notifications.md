@@ -1,6 +1,6 @@
 ---
 title: Managing Up Your CI/CD Build Notifications
-layout: page
+shortTitle: Managing Notifications
 tags:
   - administration
   - notifications

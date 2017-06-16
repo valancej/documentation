@@ -1,6 +1,6 @@
 ---
 title: Integrating Codeship Pro With SourceClear for Security Analysis
-layout: page
+shortTitle: Using SourceClear For Security Analysis
 tags:
   - security
   - reports

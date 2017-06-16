@@ -1,5 +1,5 @@
 ---
-title: Deploy to Heroku
+title: Deploy To Heroku
 menus:
   basic/cd:
     title: Heroku

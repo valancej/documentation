@@ -1,5 +1,5 @@
 ---
-title: Push to Remote Repository
+title: Push To Remote Repository
 menus:
   basic/cd:
     title: Git Push

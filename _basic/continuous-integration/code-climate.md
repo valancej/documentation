@@ -1,6 +1,6 @@
 ---
 title: Integrating Codeship Basic With Code Climate for Code Coverage Reports
-layout: page
+shortTitle: Using Code Climate For Code Coverage
 tags:
   - analytics
   - reports
@@ -76,7 +76,7 @@ At the end of your build itself, you will need to complete the parallel coverage
 
 - As an additional test step placed at the end of one of your parallel test pipelines. This method will require additional logic to be written to pause the script while it queries your external storage service for the existence of the appropriately-named coverage reports for all the additional pipelines, so that it doesn't erroneously combine coverage reports for pipelines that are still in progress.
 
-The code to use to end the parallel coverage report is: 
+The code to use to end the parallel coverage report is:
 
 ```bash
 cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \

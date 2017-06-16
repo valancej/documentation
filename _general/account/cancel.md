@@ -1,5 +1,6 @@
 ---
 title: How To Cancel Or Delete Your Account
+shortTitle: Cancel Or Delete Your Account
 menus:
   general/account:
     title: Cancelling Account
