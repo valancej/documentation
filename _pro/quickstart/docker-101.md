@@ -1,5 +1,5 @@
 ---
-title: Docker For CI/CD
+title: Docker 101 For Continuous Integration And Continuous Deployments
 layout: page
 menus:
   pro/quickstart:
