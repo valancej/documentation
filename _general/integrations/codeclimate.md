@@ -16,6 +16,9 @@ menus:
 redirect_from:
   - /basic/continuous-integration/code-climate/
   - /pro/continuous-integration/codeclimate-docker/
+  -  /analytics/code-climate/
+  - /classic/getting-started/code-climate/
+  -  /basic/analytics/code-climate/  
 ---
 
 <div class="info-block">

@@ -16,6 +16,9 @@ menus:
 redirect_from:
   - /basic/continuous-integration/coveralls/
   - /pro/continuous-integration/coveralls-docker/
+  - /analytics/coveralls/
+  - /classic/getting-started/coveralls/
+  - /basic/analytics/coveralls/
 ---
 
 * include a table of contents
