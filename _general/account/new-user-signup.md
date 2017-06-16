@@ -1,5 +1,5 @@
 ---
-title: Signing Up For A New Codeship Accounts
+title: Signing Up For A New Codeship Account
 shortTitle: Signing Up For A New Account
 menus:
   general/account:
