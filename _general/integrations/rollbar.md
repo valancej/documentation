@@ -2,7 +2,7 @@
 title: Using Rollbar To Track Deployments With Codeship Pro
 shortTitle: Tracking Deployments With Rollbar
 menus:
-  pro/cd:
+  general/integrations:
     title: Using Rollbar
     weight: 3
 tags:
@@ -13,10 +13,6 @@ tags:
   - reports
   - reporting
   - integrations
-menus:
-  general/integrations:
-    title: Using Rollbar
-    weight: 4
 redirect_from:
   - /basic/continuous-deployment/rollbar-basic/
   - /pro/continuous-deployment/rollbar-docker/
