@@ -81,3 +81,16 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 ### Sending Alerts
 
 Next, you will need to add [API calls to OpsGenie](https://www.opsgenie.com/docs/rest-api/alert-api) via a custom-script deployment added to your [[deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}), most likely to alert of a successful deployment or combined with your deployment commands in a script to alert of a failed deployment.
+
+The OpsGenie API call will likely look similar to:
+
+```bash
+curl -XPOST 'https://api.opsgenie.com/v1/json/alert' -d '
+{
+    "apiKey": "YOUR_API_KEY",
+    "message" : "Deployment Failed",
+    "teams" : ["ops", "managers"]
+}'
+```
+
+Although it is worth noting that [their API](https://www.opsgenie.com/docs) provides a variety of endpoints and services you can implement.
