@@ -42,6 +42,7 @@ rvm use $(cat .ruby-version) --install
 One use case is that you can change your Ruby version for different branches.
 
 ## Dependencies
+
 You can install dependencies using bundler in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 For example:
@@ -64,7 +65,32 @@ We also support all Ruby based test frameworks from RSpec, Cucumber to Minitest 
 
 Capybara is also supported out of the box with the selenium-webdriver , capybara-webkit or the poltergeist driver for phantomjs.
 
+## Parallel Testing
+
+If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you will want separate your RSpec tests into groups and call a group specifically in each pipeline. For instance:
+
+**Pipeline 1**:
+```shell
+rspec spec/spec_1
+```
+
+**Pipeline 2**:
+```shell
+rspec spec/spec_2
+```
+
+### Parallelization Gems
+
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
+
+While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues, as well.
+
+- [https://github.com/grosser/parallel_tests](https://github.com/grosser/parallel_tests)
+- [https://github.com/ArturT/knapsack](https://github.com/ArturT/knapsack)
+
+
 ## Notes And Known Issues
+
 ### Nokogiri
 On **Ruby 2.3 only**, Nokogiri will fail to compile with the bundled _libxml_ and _libxslt_ libraries. To install the gem you need to use the system libraries instead.
 
@@ -85,13 +111,4 @@ Sometimes you might see errors like the following:
 Could not find safe_yaml-0.9.2 in any of the sources
 ```
 
-Please make sure that the version of the gem you want to install there wasn't yanked from [Rubygems](http://rubygems.org/){:target="_blank"}.
-
-## Parallelization Gems
-
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
-
-While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues, as well.
-
-- [https://github.com/grosser/parallel_tests](https://github.com/grosser/parallel_tests)
-- [https://github.com/ArturT/knapsack](https://github.com/ArturT/knapsack)
+Please make sure that the version of the gem you want to install there wasn't yanked from [Rubygems](http://rubygems.org/)

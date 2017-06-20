@@ -52,6 +52,32 @@ pip install -r requirements.txt
 
 Codeship automatically caches all dependencies installed through `pip`. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
 
+## Frameworks And Testing
+
+All Python frameworks, including Django, Flask and Pyramid, should work without issue as long as they do not require root-access for customized system configuration.
+
+All test frameworks and tools, including pytest and unittest, should also work without issue.
+
+## Parallel Testing
+
+If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
+
+**Pipeline 1**
+```shell
+py.test tests_1.py
+```
+
+**Pipeline 2**
+```shell
+py.test tests_2.py
+```
+
+### Parallelization Modules
+
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you may find that there are packages available for parallelizing different types of testing, such as [nose-parallel](https://pypi.python.org/pypi/nose-parallel), to speed your tests up.
+
+While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these modules to cause resource and build failure issues, as well.
+
 ## Notes And Known Issues
 
 Due to Python version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
@@ -59,15 +85,3 @@ Due to Python version issues, you may find it helpful to tests your commands wit
 ### Executable Not Available
 
 As we use **pyenv**, if an executable is not available after installation you may need to run the command `pyenv rehash` after installing the package. [You can read pyenv's documentation](https://github.com/pyenv/pyenv) for more information.
-
-## Frameworks And Testing
-
-All Python frameworks, including Django, Flask and Pyramid, should work without issue as long as they do not require root-access for customized system configuration.
-
-All test frameworks and tools, including pytest and unittest, should also work without issue.
-
-## Parallelization
-
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you may find that there are packages available for parallelizing different types of testing, such as [nose-parallel](https://pypi.python.org/pypi/nose-parallel), to speed your tests up.
-
-While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these modules to cause resource and build failure issues, as well.
