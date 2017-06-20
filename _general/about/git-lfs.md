@@ -2,15 +2,12 @@
 title: Support For Git LFS Codeship
 shortTitle: Git LFS
 menus:
-  general/integrations:
+  general/about:
     title: GIT LFS
-    weight: 7
+    weight: 5
 tags:
   - git
   - lfs
-  - integrations
-redirect_from:
-  - /general/about/git-lfs/
 ---
 
 * include a table of contents
