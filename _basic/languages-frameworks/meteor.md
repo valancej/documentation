@@ -3,7 +3,7 @@ title: Using Meteor In CI/CD with Codeship Basic
 menus:
   basic/languages:
     title: Meteor
-    weight: 2
+    weight: 9
 tags:
   - meteor
   - npm
@@ -20,6 +20,14 @@ Meteor's default installer requires sudo on Linux. We use a script to change ins
 
 ```shell
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/meteor.sh | bash -s
+```
+
+### Custom Versions
+
+This setup script will always pull for the most recent meteor tool. You can also call meteor commands with a specified release:
+
+```shell
+meteor create test --release 0.6.1
 ```
 
 ## Dependencies
@@ -39,6 +47,21 @@ You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as 
 ```shell
 meteor npm install -g yarn
 meteor yarn
+```
+
+## Deployment
+
+Add the following environment variables to your project configuration:
+
+* METEOR_SESSION
+* METEOR_USER_ID
+* METEOR_TOKEN
+* METEOR_APP_URL
+
+And include the following command to your deployment pipeline:
+
+```shell
+\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/deployments/meteor.sh | bash -s
 ```
 
 ## Parallelization
