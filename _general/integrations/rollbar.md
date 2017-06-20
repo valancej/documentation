@@ -2,7 +2,7 @@
 title: Using Rollbar To Track Deployments With Codeship Pro
 shortTitle: Tracking Deployments With Rollbar
 menus:
-  pro/cd:
+  general/integrations:
     title: Using Rollbar
     weight: 3
 tags:
@@ -13,10 +13,6 @@ tags:
   - reports
   - reporting
   - integrations
-menus:
-  general/integrations:
-    title: Using Rollbar
-    weight: 4
 redirect_from:
   - /basic/continuous-deployment/rollbar-basic/
   - /pro/continuous-deployment/rollbar-docker/
@@ -36,7 +32,7 @@ redirect_from:
 
 ### Setting Your Access Token
 
-You will need to add your Rollbar access token to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+You will need to add your Rollbar access token to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ###  Logging During Deployment
 

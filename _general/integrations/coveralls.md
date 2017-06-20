@@ -40,7 +40,7 @@ Coveralls supports a lot of other languages. Check out their fantastic [document
 
 ### Setting Your Variables
 
-To start, you need to add your Coveralls repo token to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To start, you need to add your Coveralls repo token to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Coveralls Gem
 
