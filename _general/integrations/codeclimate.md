@@ -36,7 +36,7 @@ Code Climate is an automated code coverage service. Starting with Code Climate a
 
 ### Adding Reporter ID
 
-To start, you need to add your `CC_TEST_REPORTER_ID` to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To start, you need to add your `CC_TEST_REPORTER_ID` to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Project Configuration
 

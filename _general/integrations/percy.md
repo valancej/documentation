@@ -29,7 +29,7 @@ redirect_from:
 
 ### Setting Your Percy Variables
 
-You will need to add the two values Percy provides when you create a new project inside their application - `PERCY_TOKEN` and `PERCY_PROJECT` - to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you define in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+You will need to add the two values Percy provides when you create a new project inside their application - `PERCY_TOKEN` and `PERCY_PROJECT` - to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you  encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Static Sites
 
