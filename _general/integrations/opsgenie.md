@@ -57,6 +57,19 @@ Alternatively, you could combine your deployment scripts with an OpsGenie API ca
   command: deploy.sh
 ```
 
+The OpsGenie API call itself, however implemented, will likely look similar to:
+
+```bash
+curl -XPOST 'https://api.opsgenie.com/v1/json/alert' -d '
+{
+    "apiKey": "YOUR_API_KEY",
+    "message" : "Deployment Failed",
+    "teams" : ["ops", "managers"]
+}'
+```
+
+Although it is worth noting that [their API](https://www.opsgenie.com/docs) provides a variety of endpoints and services you can implement.
+
 ## Codeship Basic
 
 ### Setting Your API Key
