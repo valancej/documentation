@@ -49,6 +49,12 @@ meteor npm install -g yarn
 meteor yarn
 ```
 
+## Parallelization
+
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the [mocha-parallel-tests npm](https://www.npmjs.com/package/mocha-parallel-tests) is a great way to speed up your tests.
+
+Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
+
 ## Notes and Known Issues
 
 ### Deployment
@@ -73,9 +79,3 @@ And include the following command to your deployment pipeline:
 ```shell
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/deployments/meteor.sh | bash -s
 ```
-
-## Parallelization
-
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the [mocha-parallel-tests npm](https://www.npmjs.com/package/mocha-parallel-tests) is a great way to speed up your tests.
-
-Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
