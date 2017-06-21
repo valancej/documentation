@@ -49,15 +49,17 @@ meteor npm install -g yarn
 meteor yarn
 ```
 
-## Deployment
+## Notes and Known Issues
 
-### Basic Deployment
+### Deployment
+
+#### Basic Deployment
 
 ```shell
 meteor deploy METEOR_APP_URL
 ```
 
-### Deployment with Session Info
+#### Deployment with Session Info
 
 Add the following environment variables to your project configuration:
 
