@@ -33,7 +33,7 @@ ParallelCI allows you to split your test commands across multiple test pipelines
 
 ## Using ParallelCI
 
-Once ParallelCI is enabled, ehach project can have multiple **test pipelines** that will be run in parallel. Codeship will first run your setup commands and then any arbitrary _test commands_ you defined for this specific pipeline via the interface.
+Once ParallelCI is enabled, each project can have multiple **test pipelines** that will be run in parallel. Codeship will first run your setup commands and then any arbitrary _test commands_ you defined for this specific pipeline via the interface.
 
 To ease distinguishing different pipelines you can provide a name for each one.
 
