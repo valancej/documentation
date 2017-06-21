@@ -51,6 +51,14 @@ meteor yarn
 
 ## Deployment
 
+### Basic Deployment
+
+```shell
+meteor deploy METEOR_APP_URL
+```
+
+### Deployment with Session Info
+
 Add the following environment variables to your project configuration:
 
 * METEOR_SESSION
