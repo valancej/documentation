@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1, .like-h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: normal;
   text-transform: capitalize;
 }
@@ -91,7 +91,7 @@ h2, .like-h2 {
 }
 
 h3, .like-h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -139,9 +139,9 @@ a {
 }
 
 p {
-  margin: $base-padding/2 0;
+  margin: 0 0 1rem;
   font-size: 1.1rem;
-  line-height: $base-line-height;
+  line-height: 1.2rem;
   letter-spacing: -.004em;
 
   a {

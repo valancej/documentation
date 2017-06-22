@@ -36,8 +36,13 @@ body.is-blue {
     font-size: .9em !important;
   }
 
+  p {
+    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
+    border-bottom: .5rem;
+  }
+
   p.box-link {
-    margin: .5rem 0 !important;
+    margin: .2rem 0 !important;
 
     a.more-link {
       font-size: .9rem;
@@ -103,14 +108,14 @@ body.is-blue {
 
 .pageTitle {
   margin-top: 0;
-  width: 90%;
+  width: 80%;
 }
 
 .pageContent {
 
-  h2 { @extend .like-h4; margin-bottom: .5em; margin-top: 1.5em; }
-  h3 { font-size: 1.5rem; margin-bottom: .5em; margin-top: 1.5em; }
-  h4 { font-size: 1.5rem; margin-bottom: .5em; margin-top: 1.5em; }
+  h2 { font-size: 2.3rem; margin-bottom: .5em; margin-top: 1.2em; }
+  h3 { font-size: 1.7rem; margin-bottom: .5em; margin-top: 1.2em; }
+  h4 { font-size: 1.3rem; margin-bottom: .5em; margin-top: 1.2em; }
 
   h2,
   h3,
@@ -480,7 +485,7 @@ div#rating_info_8520732 {
 }
 
 ul#markdown-toc {
-  margin: 1.5rem 0;
+  margin: 1rem 0 2rem;
 
   li {
     margin: 0 !important;
