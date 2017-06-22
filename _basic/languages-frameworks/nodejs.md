@@ -32,6 +32,7 @@ nvm install NODE_VERSION
 If the version isn't already pre-installed on the build VMs `nvm` will download the version from the official repositories and make it available to your build.
 
 ### Default Version
+
 The default version when we can't find a setting in your `package.json` is the latest version of the `0.10` release.
 
 ### Pre-installed versions
@@ -119,6 +120,26 @@ npm config set scope username
 
 You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as an alternative to npm. Yarn is pre-installed on the build VMs and requires Node.js 4.0 or higher.
 
+## Parallel Testing
+
+If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
+
+**Pipeline 1:**
+```shell
+mocha tests/test_1.js
+```
+
+**Pipeline 2:**
+```shell
+mocha tests/test_2.js
+```
+
+### Parallelization Modules
+
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the [mocha-parallel-tests npm](https://www.npmjs.com/package/mocha-parallel-tests) is a great way to speed up your tests.
+
+Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
+
 ## Notes And Known Issues
 
 Due to Node version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
@@ -155,9 +176,3 @@ nvm install "$(jq -r '.engines.node' package.json)"
 ```
 
 Combined with setting the engine to e.g `iojs-v1.5.1` this installs and selects the required version.
-
-## Parallelization
-
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the [mocha-parallel-tests npm](https://www.npmjs.com/package/mocha-parallel-tests) is a great way to speed up your tests.
-
-Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
