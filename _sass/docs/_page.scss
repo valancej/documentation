@@ -39,18 +39,19 @@ body.is-blue {
   p {
     font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
     border-bottom: .5rem;
+
+    .box-link {
+      margin: .2rem 0 !important;
+
+      a.more-link {
+        font-size: .9rem;
+        display: block;
+        margin: 2rem 0 0;
+        background: none !important;
+        font-weight: bold;
+      }
+
   }
-
-  p.box-link {
-    margin: .2rem 0 !important;
-
-    a.more-link {
-      font-size: .9rem;
-      display: block;
-      margin: 2rem 0 0;
-      background: none !important;
-      font-weight: bold;
-    }
 
     ul li {
       margin-left: 0 !important;
