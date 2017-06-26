@@ -111,7 +111,7 @@ Codeship is hosted on AWS EC2 us-east-1 region. Because of this, Codeship servic
 
 You can enable access for those ranges on your own server's firewall settings.
 
-Another option, while not fully supported, would be to set up and run your own bastion host. This would allow yu to route all Codeship calls through your bastion host and white list only this host.
+Another option, while not fully supported, would be to set up and run your own bastion host. This would allow you to route all Codeship calls through your bastion host and white list only this host.
 
 ## Can't Locate A File
 
