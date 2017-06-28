@@ -69,7 +69,7 @@ awsdeployment:
 
 ## Deployment examples
 
-To interact with different AWS services you can simply call the `aws` command directly. You can use any AWS service or command provided by the [AWSCLI](https://aws.amazon.com/cli/). You can use environment variables or command arguments to set the AWS Region or other parameters. Take a look at their (environment variable documentation](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-environment).
+To interact with different AWS services you can simply call the `aws` command directly. You can use any AWS service or command provided by the [AWSCLI](https://aws.amazon.com/cli/). You can use environment variables or command arguments to set the AWS Region or other parameters. Take a look at their [environment variable documentation](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-environment).
 
 Take a look at the [Steps]({% link _pro/builds-and-configuration/steps.md %}) documentation page so you have a good understanding how steps on Codeship work and how to set it up in your `codeship-steps.yml`.
 
