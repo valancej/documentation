@@ -59,11 +59,9 @@ As outlined in our Terms of Service we only access your source code for a build 
 
 ## Does Codeship Save My Code?
 
-Codeship never takes ownership of your code or files. All builds run on containers or machines that are shut down at the end of your build, with your cloned repository and generated assets never persisting between builds.
+Codeship never takes ownership of your code or files. All builds run on containers or machines that are shut down at the end of your build, with your cloned repository and generated assets never persisted between builds.
 
-The one exception is with opt-in caching. On Codeship Basic we will save your dependencies and on Codeship Pro we will save your images - but only if you explicitly tell us to in your project configuration.
-
-In the case of caching, we save each project's cache in AWS with security credentials specific to that project.
+The one exception is with opt-in caching. On Codeship Basic we will save your dependencies automatically (but not your code) and on Codeship Pro we will save your images if you explicitly tell us to in your project configuration.
 
 ## Does Codeship Conduct External Security Audits?
 
