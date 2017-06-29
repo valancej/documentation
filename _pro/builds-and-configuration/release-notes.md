@@ -1,11 +1,14 @@
 ---
 title: CLI Release Notes
-layout: page
-weight: 13
+menus:
+  pro/builds:
+    title: CLI Release Notes
+    weight: 13
 tags:
   - docker
   - jet
   - release notes
+  - cli
 
 redirect_from:
   - /docker/release-notes/

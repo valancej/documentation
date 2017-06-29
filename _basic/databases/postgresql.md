@@ -1,11 +1,15 @@
 ---
 title: Using PostgreSQL In CI/CD with Codeship Basic
-layout: page
+shortTitle: PostgreSQL
 tags:
   - services
   - databases
   - postgresql
-weight: 2
+  - db
+menus:
+  basic/db:
+    title: PostgreSQL
+    weight: 2
 redirect_from:
   - /databases/postgresql/
   - /classic/getting-started/postgresql/

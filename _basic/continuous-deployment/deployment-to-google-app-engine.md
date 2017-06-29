@@ -1,10 +1,13 @@
 ---
-title: Deploy to Google App Engine
-weight: 6
-layout: page
+title: Deploy To Google App Engine
+menus:
+  basic/cd:
+    title: Google App Engine
+    weight: 9
 tags:
   - deployment
   - google app engine
+  - google
 
 redirect_from:
   - /continuous-deployment/deployment-to-google-app-engine/

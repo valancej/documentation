@@ -1,13 +1,18 @@
 ---
 title: Speed Up Your Builds With Caching on Codeship Pro
-layout: page
-weight: 6
+shortTitle: Image Caching
+menus:
+  pro/builds:
+    title: Image Caching
+    weight: 6
 tags:
   - docker
   - tutorial
   - speed
   - caching
   - dependencies
+  - cache
+  - images
 
 redirect_from:
   - /docker/caching/

@@ -1,9 +1,15 @@
 ---
 title: Using PHP In CI/CD with Codeship Basic
-weight: 3
+shortTitle: PHP
+menus:
+  basic/languages:
+    title: PHP
+    weight: 3
 tags:
   - php
   - languages
+  - cakephp
+  - laravel
 
 redirect_from:
   - /languages/php/
@@ -128,6 +134,32 @@ composer config -g github-oauth.github.com $GITHUB_ACCESS_TOKEN
 composer install --prefer-dist --no-interaction
 ```
 
+## Frameworks And Testing
+
+Codeship supports essentially all popular PHP frameworks, such as Laravel, Symfony, CodeIgniter and CakePHP. All frameworks that do not require root access for custom machine configuration should work without issue.
+
+Additionally, all testing frameworks, such as phpunit and codeception, will work on Codeship.
+
+## Parallel Testing
+
+If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
+
+**Pipeline 1:**
+```shell
+phpunit tests/tests_1
+```
+
+**Pipeline 2:**
+```shell
+phpunit tests/tests_2
+```
+
+### Parallelization Modules
+
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the [paratest](https://github.com/brianium/paratest) module is a great way to speed up your tests.
+
+Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
+
 ## Notes And Known Issues
 
 Due to PHP version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
@@ -152,13 +184,6 @@ Thanks to [Jeff Donios](https://github.com/doniosjm) for the tip.
 
 All commands must return an `exit code 0` to Codeship to report a successful result, or any other error code to report an unsuccessful result. This means you must configure your test scripts to exit with a `0` status if they do not do so by default.
 
-## Frameworks And Testing
-
-Codeship supports essentially all popular PHP frameworks, such as Laravel, Symfony, CodeIgniter and CakePHP. All frameworks that do not require root access for custom machine configuration should work without issue.
-
-Additionally, all testing frameworks, such as phpunit and codeception, will work on Codeship.
-
-
 ### Custom PHPUnit Version
 
 Note that if you need to install a custom versin of PHPUnit, you can do so with the following commands:
@@ -167,9 +192,3 @@ Note that if you need to install a custom versin of PHPUnit, you can do so with 
 composer global remove phpunit/phpunit
 composer global require phpunit/phpunit:5.*
 ```
-
-## Parallelization
-
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the [paratest](https://github.com/brianium/paratest) module is a great way to speed up your tests.
-
-Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.

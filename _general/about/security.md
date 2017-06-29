@@ -1,12 +1,16 @@
 ---
 title: Security Information For CI/CD Infrastructure
-layout: page
+shortTitle: Security Specifications
+menus:
+  general/about:
+    title: Security Information
+    weight: 3
 tags:
   - security
   - gpg key
   - permissions
   - ssh
-weight: 3
+  - git
 redirect_from:
   - /security/
   - /security/security/
@@ -43,19 +47,21 @@ Our whole infrastructure is based on Amazon EC2 or services built on top of it. 
 * Heroku
 * Openredis
 
-Additionally for collecting Metrics (but without any sensitive data) we use
+Additionally for collecting metrics (but without any sensitive data) we use:
 
 + Google Analytics
-+ Mixpanel
 + Intercom
 + Google Docs
++ Looker
 + Source code access
 
 As outlined in our Terms of Service we only access your source code for a build or support request. We do not have any way to access your repository outside of our build environment.
 
-## How Does Codeship Back Up Data?
+## Does Codeship Save My Code?
 
-Codeship never takes ownership of a customer's files, with the exception of opt-in image caching on Codeship Pro. However, all Codeship file storage and backup is held in an encrypted state off-site.
+Codeship never takes ownership of your code or files. All builds run on containers or machines that are shut down at the end of your build, with your cloned repository and generated assets never persisted between builds.
+
+The one exception is with opt-in caching. On Codeship Basic we will save your dependencies automatically (but not your code) and on Codeship Pro we will save your images if you explicitly tell us to in your project configuration.
 
 ## Does Codeship Conduct External Security Audits?
 

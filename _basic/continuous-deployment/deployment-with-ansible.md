@@ -1,6 +1,9 @@
 ---
-title: Deploy via Ansible
-layout: page
+title: Deploy With Ansible
+menus:
+  basic/cd:
+    title: Ansible
+    weight: 15
 published: false
 tags:
   - deployment

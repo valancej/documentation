@@ -1,10 +1,13 @@
 ---
 title: Deploy to DigitalOcean
-layout: page
-weight: 5
+menus:
+  basic/cd:
+    title: Digital Ocean
+    weight: 8
 tags:
   - deployment
   - digital ocean
+  - digitalocean
 
 redirect_from:
   - /continuous-deployment/deployment-to-digitalocean/

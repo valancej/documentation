@@ -1,9 +1,12 @@
 ---
-title: Deploy to anynines
+title: Deploy To anynines
 tags:
   - deployment
   - anynines
-weight: 4
+menus:
+  basic/cd:
+    title: anynines
+    weight: 14
 redirect_from:
   - /continuous-deployment/deployment-to-anynines/
 ---

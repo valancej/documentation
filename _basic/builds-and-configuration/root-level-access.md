@@ -1,16 +1,18 @@
 ---
 title: Running Commands As Sudo or Root
-layout: page
-weight: 7
+shortTitle: Using Sudo Or Root
+menus:
+  basic/builds:
+    title: Running Commands As Root
+    weight: 7
 tags:
-  - faq
   - sudo
   - packages
   - root
-
+  - admin
 redirect_from:
   - /faq/root-level-access/
-  - /basic/getting-started/root-level-access/  
+  - /basic/getting-started/root-level-access/
 ---
 
 * include a table of contents

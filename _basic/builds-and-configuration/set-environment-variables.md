@@ -1,13 +1,18 @@
 ---
 title: Environment Variables On Codeship Basic
-weight: 2
+shortTitle: Environment Variables
+menus:
+  basic/builds:
+    title: Environment Variables
+    weight: 2
 tags:
-  - testing
+  - secrets
   - environment variables
-
+  - variables
+  - environment
 redirect_from:
   - /continuous-integration/set-environment-variables/
-  - /basic/getting-started/set-environment-variables/   
+  - /basic/getting-started/set-environment-variables/
 ---
 
 * include a table of contents

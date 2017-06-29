@@ -1,12 +1,18 @@
 ---
 title: Using Docker Build Arguments In CI/CD
-layout: page
-weight: 7
+shortTitle: Build Arguments
+menus:
+  pro/builds:
+    title: Build Arguments
+    weight: 7
 tags:
   - docker
   - tutorial
   - build arguments
   - secrets
+  - environment
+  - security
+  - encryption
 
 redirect_from:
   - /pro/getting-started/build-arguments/

@@ -1,12 +1,18 @@
 ---
 title: Continuous Delivery Via SSH With Docker
-layout: page
-weight: 5
+shortTitle: Deploying With SSH
+menus:
+  pro/cd:
+    title: Deploy Via SSH
+    weight: 6
 tags:
   - docker
   - deployment
   - ssh key
   - encryption
+  - ssh
+  - rsync
+  - sftp
 
 ---
 

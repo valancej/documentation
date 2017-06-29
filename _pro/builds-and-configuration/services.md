@@ -1,12 +1,17 @@
 ---
 title: Services Configuration
-layout: page
-weight: 2
+menus:
+  pro/builds:
+    title: Services Config
+    weight: 2
 tags:
   - docker
   - jet
   - configuration
   - services
+  - images
+  - image registry
+  - docker compose
 
 redirect_from:
   - /docker/services/

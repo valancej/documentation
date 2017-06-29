@@ -1,6 +1,10 @@
 ---
 title: Continuous Delivery to Heroku with Docker
-weight: 4
+shortTitle: Deploying To Heroku
+menus:
+  pro/cd:
+    title: Heroku
+    weight: 3
 tags:
   - deployment
   - heroku

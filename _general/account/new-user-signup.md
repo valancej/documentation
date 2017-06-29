@@ -1,22 +1,25 @@
 ---
 title: Signing Up For A New Codeship Account
-weight: 10
+shortTitle: Signing Up For A New Account
+menus:
+  general/account:
+    title: New User Signup
+    weight: 1
 tags:
 - account
-- faq
 - scm
 - svn
-- faq
 - badge
 - avatar
 - gravatar
+- getting started
 redirect_from:
   - /general/about/other-scm/
   - /general/account/configure-your-avatar/
   - /faq/codeship-badge/
   - /general/about/codeship-badge/
   - /faq/configure-your-avatar/
-  - /faq/other-scm/  
+  - /faq/other-scm/
 weight: 1
 ---
 
@@ -65,7 +68,7 @@ Once you’ve signed-up for Codeship you’ll be directed to a short form where 
 
 Simply click on the SCM icon you would like to connect with and proceed to provide your login credentials in order to give Codeship access to your account (see step 1 for further information).
 
-**Choose your repository:** Once you have authenticated your SCM you have to select your repository.  To choose your repository, simply paste your Git clone URL into the provided area and click ‘Connect’.  
+**Choose your repository:** Once you have authenticated your SCM you have to select your repository.  To choose your repository, simply paste your Git clone URL into the provided area and click ‘Connect’.
 
 _Examples_:
 - git@gitlab.com:<username>/<repository_name>.git
@@ -132,3 +135,12 @@ git config --get user.email
 ```
 
 Note that different projects can have different email addresses configured and that your VCS can have other email addresses configured for the actions you take via their interfaces.
+
+## Keyboard Shortcuts
+
+To make it easier to navigate through your Codeship projects, we've provided several keyboard shortcuts for quickly jumping through the interface:
+
+- `gp`, available from inside your projects, will return you to your projects overview page
+- Escape key, available on your projects overview page, will return you to the previous page
+- Arrow keys, available on your projects overview page, will navigate between your projects
+- Enter key, available on your projects overview page, will select the highlighted project

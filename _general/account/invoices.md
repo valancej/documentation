@@ -1,12 +1,14 @@
 ---
 title: Invoices
-layout: page
 tags:
   - administration
   - account
   - invoices
   - billing
-weight: 5
+menus:
+  general/account:
+    title: Invoices
+    weight: 4
 redirect_from:
   - /administration/invoices/
 ---
@@ -33,3 +35,7 @@ Here, you will see the history of all previous invoices. All invoices can be dow
 You can also change the email address to receive the invoices in **Manage Subscriptions** > _Update credit card and billing address_.
 
 ![Billing Info Link]({{ site.baseurl }}/images/administration/update_cc_info_link.png)
+
+### Update Credit Card
+
+As long as you are looking at your account, or are an owner of the organization you are viewing, you can update the card on file in the "Subscription" tab in your top menu and then clicking the "Payment Data" button.

@@ -1,10 +1,17 @@
 ---
 title: Using Node.js In CI/CD with Docker and Codeship Pro
-weight: 3
+shortTitle: Node.js
+menus:
+  pro/languages:
+    title: Node.js
+    weight: 3
 tags:
   - node.js
   - languages
   - docker
+  - frameworks
+  - nodejs
+  - javascript
 
 redirect_from:
   - /docker-integration/nodejs/

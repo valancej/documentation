@@ -1,11 +1,14 @@
 ---
 title: Deploy to AWS Lambda
-weight: 9
-layout: page
+menus:
+  basic/cd:
+    title: AWS Lambda
+    weight: 6
 tags:
   - deployment
   - amazon
   - lambda
+  - aws
 
 redirect_from:
   - /continuous-deployment/deployment-to-aws-lambda/

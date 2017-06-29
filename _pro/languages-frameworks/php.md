@@ -1,10 +1,16 @@
 ---
 title: Using PHP In CI/CD with Docker and Codeship Pro
-weight: 6
+shortTitle: PHP
+menus:
+  pro/languages:
+    title: PHP
+    weight: 6
 tags:
   - php
   - languages
   - docker
+  - cakephp
+  - laravel
 
 redirect_from:
   - /docker-integration/php/

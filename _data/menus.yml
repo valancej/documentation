@@ -1,0 +1,85 @@
+main:
+  - title: Getting Started
+    identifier: getting-started
+    url: /getting-started
+  - title: Basic
+    identifier: basic
+    url: /basic
+  - title: Pro
+    identifier: pro
+    url: /pro
+  - title: More Resources
+    identifier: more-resources
+    url: /more-resources
+  - title: API
+    identifier: api
+    url: https://codeship-api.api-docs.io/v1/introduction/auth
+
+general:
+  - &GENERAL_ABOUT
+    title: About
+    identifier: general/about
+    url: general/about
+  - &GENERAL_ACCOUNT
+    title: Account
+    identifier: general/account
+    url: general/account
+  - &GENERAL_PROJECTS
+    title: Projects
+    identifier: general/projects
+    url: general/projects
+  - &GENERAL_INTEGRATIONS
+    title: Integrations
+    identifier: general/integrations
+    url: general/integrations
+
+basic:
+  - title: Quickstart
+    identifier: basic/quickstart
+    url: basic/quickstart
+  - title: Builds & Configuration
+    identifier: basic/builds
+    url: basic/builds
+  - title: Languages And Frameworks
+    identifier: basic/languages
+    url: basic/languages
+  - title: Continuous Integration
+    identifier: basic/ci
+    url: basic/ci
+  - title: Continuous Deployment
+    identifier: basic/cd
+    url: basic/cd
+  - title: Databases
+    identifier: basic/db
+    url: basic/db
+  - title: Queues
+    identifier: basic/queues
+    url: basic/queues
+  - title: Services
+    identifier: basic/services
+    url: basic/services
+  - <<: *GENERAL_INTEGRATIONS    
+  - <<: *GENERAL_ABOUT
+  - <<: *GENERAL_ACCOUNT
+  - <<: *GENERAL_PROJECTS
+
+pro:
+  - title: Quickstart
+    identifier: pro/quickstart
+    url: pro/quickstart
+  - title: Builds & Configuration
+    identifier: pro/builds
+    url: pro/builds
+  - title: Languages And Frameworks
+    identifier: pro/languages
+    url: pro/languages
+  - title: Continuous Integration
+    identifier: pro/ci
+    url: pro/ci
+  - title: Continuous Deployment
+    identifier: pro/cd
+    url: pro/cd
+  - <<: *GENERAL_INTEGRATIONS
+  - <<: *GENERAL_ABOUT
+  - <<: *GENERAL_ACCOUNT
+  - <<: *GENERAL_PROJECTS

@@ -1,15 +1,20 @@
 ---
 title: Managing Up Your CI/CD Build Notifications
-layout: page
+shortTitle: Managing Notifications
 tags:
   - administration
   - notifications
   - alerts
+  - account
+  - slack
 redirect_from:
   - /administration/notifications/
   - /basic/getting-started/webhooks/
   - /integrations/webhooks/
-weight: 2
+menus:
+  general/account:
+    title: Notifications
+    weight: 3
 ---
 
 * include a table of contents
@@ -189,3 +194,7 @@ Since you can integrate any container you wish into your pipeline, there are no 
 ## GitHub, Bitbucket and Gitlab Status API
 
 We will automatically use the status API for pull requests on Github, Bitbucket and Gitlab. This does not need to be explicitly enabled, although it can be disabled via your *Project Settings*.
+
+## CCMenu
+
+CCMenu is not supported at this time, although we hope to address it by offering an API as soon as we can.

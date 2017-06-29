@@ -1,7 +1,9 @@
 ---
-title: Deployment with AWS CLI
-weight: 7
-layout: page
+title: Deployment With AWS CLI
+menus:
+  basic/cd:
+    title: AWS CLI
+    weight: 7
 tags:
   - deployment
   - aws

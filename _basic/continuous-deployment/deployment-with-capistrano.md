@@ -1,7 +1,9 @@
 ---
-title: Deploy via Capistrano
-layout: page
-weight: 11
+title: Deploy With Capistrano
+menus:
+  basic/cd:
+    title: Capistrano
+    weight: 10
 tags:
   - deployment
   - capistrano

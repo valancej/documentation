@@ -1,10 +1,15 @@
 ---
 title: Using Java In CI/CD with Docker and Codeship Pro
-weight: 5
+shortTitle: Java And The JVM
+menus:
+  pro/languages:
+    title: Java And JVM
+    weight: 5
 tags:
   - java
   - languages
   - docker
+  - jvm
 
 redirect_from:
   - /docker-integration/java/

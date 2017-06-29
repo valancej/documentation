@@ -1,11 +1,15 @@
 ---
 title: Using RethinkDB In CI/CD with Codeship Basic
-layout: page
+shortTitle: RethinkDB
 tags:
   - services
   - databases
   - rethinkdb
-weight: 6
+  - db
+menus:
+  basic/db:
+    title: RethinkDB
+    weight: 6
 redirect_from:
   - /databases/rethinkdb/
   - /classic/getting-started/rethinkdb/

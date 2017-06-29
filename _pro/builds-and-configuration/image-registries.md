@@ -1,7 +1,10 @@
 ---
 title: Using Docker Image Registries With Your CI/CD Builds
-layout: page
-weight: 5
+shortTitle: Using Docker Image Registries
+menus:
+  pro/builds:
+    title: Image Registries
+    weight: 5
 tags:
   - docker
   - tutorial
@@ -12,6 +15,8 @@ tags:
   - quay
   - ecr
   - gcr
+  - images
+  - image registry
 
 redirect_from:
   - /docker/docker-push/
@@ -279,13 +284,11 @@ This  means that either your `dockercfg` has a syntax problem or that it was enc
 
 Try deleting your `dockercfg` and your AES key, then re-downloading the AES key and re-encrypting the `dockercfg` file.
 
-### No key
+### Error: "docker: no decryptor available"
 
-Sometimes you might see this error the first time you go to encrypt your `dockercfg` file:
+This error means that the encrypted file was unable to be decrypted locally. This is because the AES key is missing.
 
-``jet: no key``
-
-This means your AES key is missing from your project directory and must be downloaded according to [the instructions above.](#configuring-a-build-with-a-private-base-image)
+See the instructions above for downloading your AES key locally to address this issue.
 
 ### Need a key regenerated
 

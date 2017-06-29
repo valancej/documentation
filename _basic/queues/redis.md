@@ -1,11 +1,14 @@
 ---
 title: Using Redis In CI/CD with Codeship Basic
-layout: page
+shortTitle: Redis
 tags:
   - services
   - queues
   - redis
-weight: 1
+menus:
+  basic/queues:
+    title: Redis
+    weight: 1
 redirect_from:
   - /queues/redis/
   - /classic/getting-started/redis/

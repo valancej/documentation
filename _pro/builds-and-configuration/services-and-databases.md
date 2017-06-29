@@ -1,13 +1,17 @@
 ---
 title: Supported Services and Databases
-layout: page
-weight: 12
+shortTitle: Services and Databases
+menus:
+  pro/builds:
+    title: Services And Databases
+    weight: 12
 tags:
   - docker
   - jet
   - configuration
   - services
   - databases
+  - db
 
 redirect_from:
   - /docker/services-and-databases/

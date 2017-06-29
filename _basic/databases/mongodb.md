@@ -1,11 +1,15 @@
 ---
 title: Using MongoDB In CI/CD with Codeship Basic
-layout: page
+shortTitle: MongoDB
 tags:
   - services
   - databases
   - mongodb
-weight: 3
+  - db
+menus:
+  basic/db:
+    title: MongoDB
+    weight: 3
 redirect_from:
   - /databases/mongodb/
   - /classic/getting-started/mongodb/

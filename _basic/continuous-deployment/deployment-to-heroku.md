@@ -1,7 +1,9 @@
 ---
-title: Deploy to Heroku
-weight: 3
-layout: page
+title: Deploy To Heroku
+menus:
+  basic/cd:
+    title: Heroku
+    weight: 3
 tags:
   - deployment
   - heroku

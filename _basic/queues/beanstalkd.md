@@ -1,11 +1,14 @@
 ---
 title: Using Beanstalkd In CI/CD with Codeship Basic
-layout: page
+shortTitle: Beanstalkd
 tags:
   - services
   - queues
   - beanstalkd
-weight: 2
+menus:
+  basic/queues:
+    title: Beanstalkd
+    weight: 2
 redirect_from:
   - /queues/beanstalkd/
   - /classic/getting-started/beanstalkd/

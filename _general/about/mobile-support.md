@@ -1,6 +1,10 @@
 ---
 title: CI/CD For Mobile Apps on Codeship
-layout: page
+shortTitle: Mobile CI/CD Support
+menus:
+  general/about:
+    title: CI & CD for mobile
+    weight: 4
 tags:
   - mobile
   - osx
@@ -8,7 +12,6 @@ tags:
   - ios
   - swift
   - objective-c
-weight: 4
 ---
 
 * include a table of contents

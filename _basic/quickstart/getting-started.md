@@ -1,14 +1,14 @@
 ---
 title: Getting Started With Codeship Basic
-weight: 1
-layout: page
+menus:
+  basic/quickstart:
+    title: Getting Started
+    weight: 1
 tags:
   - getting started
   - codeship basic
-
 redirect_from:
   - /basic/getting-started/getting-started/
-
 ---
 
 * include a table of contents

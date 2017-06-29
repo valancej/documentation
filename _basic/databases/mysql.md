@@ -1,11 +1,15 @@
 ---
-title: Using MySQL In CI/CD with Codeship Basic 
-layout: page
+title: Using MySQL In CI/CD with Codeship Basic
+shortTitle: MySQL
 tags:
   - services
   - databases
   - mysql
-weight: 1
+  - db
+menus:
+  basic/db:
+    title: MySQL
+    weight: 1
 redirect_from:
   - /databases/mysql/
   - /classic/getting-started/mysql/
@@ -16,7 +20,7 @@ redirect_from:
 
 MySQL **5.6** runs on the default port and the credentials are stored in the `MYSQL_USER` and `MYSQL_PASSWORD` environment variables.
 
-The default databases created for you are **development** and **test**.
+A **development** and **test** database are setup by default for you in addition to the system databases.
 
 ## Ruby on Rails
 

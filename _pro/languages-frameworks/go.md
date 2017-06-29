@@ -1,6 +1,10 @@
 ---
 title: Using Go In CI/CD with Docker and Codeship Pro
-weight: 4
+shortTitle: Go
+menus:
+  pro/languages:
+    title: Go
+    weight: 4
 tags:
   - go
   - languages

@@ -1,9 +1,14 @@
 ---
 title: Run a command in the background
-weight: 2
+shortTitle: Background Commands
+menus:
+  basic/ci:
+    title: Background Commands
+    weight: 2
 tags:
   - testing
-  - faq
+  - background
+  - commands
 
 redirect_from:
   - /continuous-integration/run-a-command-in-the-background/

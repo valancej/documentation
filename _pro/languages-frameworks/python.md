@@ -1,10 +1,16 @@
 ---
 title: Using Python In CI/CD with Docker and Codeship Pro
-weight: 2
+shortTitle: Python
+menus:
+  pro/languages:
+    title: Python
+    weight: 2
 tags:
   - python
   - languages
   - docker
+  - flask
+  - django
 
 redirect_from:
   - /docker-integration/python/

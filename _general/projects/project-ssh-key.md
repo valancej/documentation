@@ -1,6 +1,9 @@
 ---
 title: Project SSH Public Key
-weight: 2
+menus:
+  general/projects:
+    title: SSH Public Key
+    weight: 2
 tags:
   - project settings
   - ssh key

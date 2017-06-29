@@ -1,12 +1,19 @@
 ---
 title: Steps Configuration
-layout: page
-weight: 3
+menus:
+  pro/builds:
+    title: Steps Config
+    weight: 3
 tags:
   - docker
   - jet
   - configuration
   - steps
+  - commands
+  - testing
+  - deployment
+  - images
+  - image registry
 
 redirect_from:
   - /docker/steps/

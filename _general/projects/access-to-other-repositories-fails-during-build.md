@@ -1,15 +1,19 @@
 ---
 title: Cloning other repositories fails during build
-layout: page
-weight: 5
+shortTitle: Cloning other repositories fails
+menus:
+  general/projects:
+    title: Accessing Other Repos
+    weight: 3
 tags:
-  - faq
   - build error
   - ssh key
   - github
   - bitbucket
   - gitlab
   - private repository
+  - git
+  - clone
 
 redirect_from:
   - /faq/access-to-other-repositories-fails-during-build/

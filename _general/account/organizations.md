@@ -1,16 +1,19 @@
 ---
 title: Organization Accounts
-layout: page
 tags:
   - administration
   - project
   - organizations
   - team management
   - teams
+  - account
 
 redirect_from:
   - /administration/organizations/
-weight: 3  
+menus:
+  general/account:
+    title: Organization Accounts
+    weight: 2
 ---
 
 * include a table of contents

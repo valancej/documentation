@@ -1,12 +1,16 @@
 ---
 title: Custom DNS Resolution
-weight: 6
+menus:
+  basic/ci:
+    title: Custom DNS
+    weight: 4
 tags:
   - subdomain
   - testing
   - dns
   - xip.io
   - lvh.me
+  - domain
 
 redirect_from:
   - /continuous-integration/using-subdomains/

@@ -1,10 +1,13 @@
 ---
 title: Using Elasticsearch In CI/CD with Codeship Basic
-layout: page
+shortTitle: Elasticsearch
 tags:
   - services
   - elasticsearch
-weight: 1
+menus:
+  basic/services:
+    title: Elasticsearch
+    weight: 1
 redirect_from:
   - /services/elasticsearch/
   - /classic/getting-started/elasticsearch/

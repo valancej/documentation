@@ -1,11 +1,14 @@
 ---
 title: Using RabbitMQ In CI/CD with Codeship Basic
-layout: page
+shortTitle: RabbitMQ
 tags:
   - services
   - queues
   - rabbitmq
-weight: 3
+menus:
+  basic/queues:
+    title: RabbitMQ
+    weight: 2
 redirect_from:
   - /queues/rabbitmq/
   - /classic/getting-started/rabbitmq/

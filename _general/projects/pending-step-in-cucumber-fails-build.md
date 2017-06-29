@@ -1,12 +1,17 @@
 ---
 title: Troubleshooting Cucumber Failures In CI/CD with Codeship Basic
-layout: page
-weight: 7
+shortTitle: Troubleshooting Cucumber Failures
+menus:
+  general/projects:
+    title: Cucumber Failures
+    weight: 7
 tags:
   - troubleshooting
   - build error
   - ruby
   - cucumber
+  - debug
+  - ssh
 
 redirect_from:
   - /troubleshooting/pending-step-in-cucumber-fails-build/

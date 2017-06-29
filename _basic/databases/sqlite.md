@@ -1,11 +1,15 @@
 ---
 title: Using SQLite In CI/CD with Codeship Basic
-layout: page
+shortTitle: SQLite
 tags:
   - services
   - databases
   - sqlite
-weight: 4
+  - db
+menus:
+  basic/db:
+    title: SQLite
+    weight: 4
 redirect_from:
   - /databases/sqlite/
   - /classic/getting-started/sqlite/

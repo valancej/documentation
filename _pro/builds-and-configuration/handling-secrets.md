@@ -1,7 +1,10 @@
 ---
 title: Handling Secrets With Docker And Codeship Pro
-layout: page
-weight: 10
+shortTitle: Handling Secrets
+menus:
+  pro/builds:
+    title: Handling Secrets
+    weight: 10
 tags:
   - docker
   - secrets
@@ -9,6 +12,8 @@ tags:
   - environment
   - pro
   - build arguments
+  - environment variables
+  - variables
 
 redirect_from:
   - /pro/getting-started/handling-secrets/

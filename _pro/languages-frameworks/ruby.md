@@ -1,10 +1,16 @@
 ---
 title: Using Ruby In CI/CD with Docker and Codeship Pro
-weight: 1
+shortTitle: Ruby
+menus:
+  pro/languages:
+    title: Ruby
+    weight: 1
 tags:
   - ruby
   - languages
   - docker
+  - rails
+  - sinatra
 
 redirect_from:
   - /docker-integration/ruby/

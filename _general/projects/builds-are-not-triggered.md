@@ -1,13 +1,17 @@
 ---
 title: Troubleshooting Issues With Builds Not Starting
-layout: page
-weight: 4
+shortTitle: Builds Not Starting
+menus:
+  general/projects:
+    title: Builds Not Starting
+    weight: 6
 tags:
   - troubleshooting
   - build error
   - github
   - bitbucket
   - gitlab
+  - git
 
 redirect_from:
   - /troubleshooting/builds-are-not-triggered/
@@ -28,6 +32,18 @@ That's why we show the status of the webhook configuration on the _General_ page
 Make sure the _Codeship_ service is added under the _Webhooks & Services_ section of your repository settings. Also check that the UUID configured for the repository matches the one shown on the _General_ page of your project settings on Codeship.
 
 ![GitHub Service Configuration]({{ site.baseurl }}/images/faq/service_github.png)
+
+-Make sure a webhook for Codeship is added under the _Webhooks_ section in the settings of your repository. Please also check the the UUID in the hook URL matches the UUID from your project. The hook URL itself should match the following pattern.
+ -
+ -```
+ -https://lighthouse.codeship.io/bitbucket/YOUR_PROJECT_UUID
+ -```
+ -
+ -![BitBucket Webhooks Configuration]({{ site.baseurl }}/images/general/bitbucket_webhooks.jpg)
+
+## Gitlab
+
+Make sure a webhook for Codeship is added under the _Webhooks_ section in the settings of your repository. The [Gitlab documentation](https://docs.gitlab.com/ce/user/project/integrations/webhooks.html) has more information.
 
 ## Bitbucket
 

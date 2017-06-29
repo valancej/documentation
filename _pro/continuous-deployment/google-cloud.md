@@ -1,9 +1,15 @@
 ---
 title: Continuous Delivery to Google Cloud Platform with Docker
-weight: 3
+shortTitle: Deploying To Google Cloud
+menus:
+  pro/cd:
+    title: Google Cloud
+    weight: 4
 tags:
   - deployment
-  - heroku
+  - google
+  - google cloud
+  - gcr
   - docker
 
 redirect_from:

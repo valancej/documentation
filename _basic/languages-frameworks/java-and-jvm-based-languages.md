@@ -1,10 +1,15 @@
 ---
 title: Using Java And The JVM In CI/CD with Codeship Basic
+shortTitle: Java And The JVM
 tags:
   - java
   - scala
   - languages
-weight: 7
+  - jvm
+menus:
+  basic/languages:
+    title: Java And JVM
+    weight: 7
 redirect_from:
   - /languages/java-and-jvm-based-languages/
 ---
@@ -101,16 +106,30 @@ Installing dependencies through Maven is fully supported.
 
 Codeship automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` directories between builds to optimize build performance. You can [read this article to learn more]({{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}) about the dependency cache and how to clear it.
 
-## Notes And Known Issues
-
-Due to Java version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
-
 ## Frameworks And Testing
 
 All build tools and test frameworks, such as Junit, will work without issue as long as they do not require root access for custom machine configuration.
 
-## Parallelization
+## Parallel Testing
+
+If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
+
+**Pipeline 1:**
+```shell
+mvn test -Dtest=class_1
+```
+
+**Pipeline 2:**
+```shell
+mvn test -Dtest=class_2
+```
+
+### Parallelization Modules
 
 In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the parallel features in Junit and other testing frameworks to be a good way to speed up your tests.
 
 Note that aggressive parallelization can cause resource and build failure issues, as well.
+
+## Notes And Known Issues
+
+Due to Java version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.

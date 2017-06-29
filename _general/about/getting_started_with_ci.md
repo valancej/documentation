@@ -1,14 +1,16 @@
 ---
 title: Getting started with Continuous Integration and Continuous Deployment
-layout: page
+shortTitle: Getting Started With CI/CD
+menus:
+  general/about:
+    title: Getting Started with CI & CD
+    weight: 1
 tags:
-  - faq
   - getting started
-  - continuous Integration
+  - continuous integration
   - ci
   - cd
   - continuous deployment
-weight: 1
 redirect_from:
   - /faq/getting_started_with_ci/
 ---

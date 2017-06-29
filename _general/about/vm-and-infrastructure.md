@@ -1,12 +1,17 @@
 ---
 title: VM And Infrastructure Specifics
-layout: page
+shortTitle: VM And Infrastructure
+menus:
+  general/about:
+    title: VM & Infrastructure Specifics
+    weight: 2
 tags:
   - security
   - infrastructure
   - linux
   - firewall
-weight: 2
+  - virtual machine
+  - build machine
 redirect_from:
   - /security/vm-and-infrastructure/
 ---
@@ -28,11 +33,11 @@ All Codeship Pro builds run on dedicated, single tenant build machines, on indiv
 
 The Codeship Pro build environment is configurable depending on plan and available in the following configurations:
 
-- **Small**: 2 CPUs, 3.75gb RAM
-- **Medium**: 4 CPUs, 7.5gb RAM
-- **Big**: 8 CPUs, 15gb RAM
-- **Huge**: 16 CPUs, 30gb RAM
-- **Massive**: 32 CPUs, 60gb RAM
+**Small**: 2 CPUs, 3.75gb RAM
+**Medium**: 4 CPUs, 7.5gb RAM
+**Big**: 8 CPUs, 15gb RAM
+**Huge**: 16 CPUs, 30gb RAM
+**Massive**: 32 CPUs, 60gb RAM
 
 ### Docker Version On Codeship Pro
 
@@ -46,6 +51,6 @@ All builds on both Codeship Basic and Codeship Pro have 10gb of disk space alloc
 
 ## System Timeouts
 
-On **Codeship Basic**, a build can up for up to 3 hours, although builds will time out if there is no log activity for 10 minutes.
+On **Codeship Basic**, a build can run for up to 3 hours, although builds will time out if there is no log activity for 10 minutes.
 
-On **Codeship Pro**, a build can up for up to 2 hours, although builds will time out if there is no log activity for 15 minutes.
+On **Codeship Pro**, a build can run for up to 2 hours, although builds will time out if there is no log activity for 15 minutes.

@@ -1,11 +1,13 @@
 ---
 title: All Packages Installed On Codeship Basic
-weight: 1
+shortTitle: Codeship Basic Package List
+menus:
+  basic/builds:
+    title: Installed Packages
+    weight: 1
 tags:
 - AMI
-- continuous integration
 - packages
-
 redirect_from:
   - /basic/getting-started/packages/
 ---

@@ -1,11 +1,14 @@
 ---
-title: Deploy to AWS CodeDeploy
-weight: 8
-layout: page
+title: Deploy To AWS CodeDeploy
+menus:
+  basic/cd:
+    title: AWS CodeDeploy
+    weight: 5
 tags:
   - deployment
   - amazon
   - codedeploy
+  - aws
 
 redirect_from:
   - /continuous-deployment/deployment-to-aws-codedeploy/

@@ -1,7 +1,10 @@
 ---
 title: Debugging And Setup With The Codeship Local CLI (Codeship Pro)
-layout: page
-weight: 1
+shortTitle: Using The Local CLI
+menus:
+  pro/builds:
+    title: Local CLI
+    weight: 1
 tags:
   - docker
   - jet
@@ -10,6 +13,8 @@ tags:
   - running locally
   - debugging
   - setup
+  - troubleshooting
+  - cli
 
 redirect_from:
   - /docker/installation/

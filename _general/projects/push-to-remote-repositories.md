@@ -1,7 +1,9 @@
 ---
 title: Pushing to git remote fails
-layout: page
-weight: 6
+menus:
+  general/projects:
+    title: Git Remote Push
+    weight: 5
 tags:
   - troubleshooting
   - build error

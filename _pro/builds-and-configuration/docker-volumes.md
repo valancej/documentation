@@ -1,17 +1,22 @@
 ---
 title: Using Docker Volumes In CI/CD
-layout: page
-weight: 8
+shortTitle: Using Volumes
+menus:
+  pro/builds:
+    title: Volumes
+    weight: 8
 tags:
   - docker
   - tutorial
   - volumes
+  - docker compose
 
 redirect_from:
   - /docker/docker-volumes/
   - /pro/getting-started/docker-volumes/
 ---
 
+<div class="info-block">
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}).
 </div>
 

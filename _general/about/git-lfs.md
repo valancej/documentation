@@ -1,10 +1,13 @@
 ---
 title: Support For Git LFS Codeship
-layout: page
+shortTitle: Git LFS
+menus:
+  general/about:
+    title: GIT LFS
+    weight: 5
 tags:
   - git
   - lfs
-weight: 5
 ---
 
 * include a table of contents
@@ -16,7 +19,17 @@ Git LFS is not natively supported on Codeship, although we do provide [a script]
 
 To use Git LFS on [Codeship Pro](https://codeship.com/features/pro) you will need to use [these lines of this script](https://github.com/codeship/scripts/blob/master/packages/git-lfs.sh#L31-L33).
 
-You will need to run this script inside a container with both Git and Git LFS installed via the Dockerfile. This container will also need to mount your entire cloned repository as volume.
+You will need to run this script inside a container with both Git and Git LFS installed via the Dockerfile.
+
+This container will also need to mount your entire cloned repository as volume in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as:
+
+```bash
+app:
+  image: alpine:3.6
+  volumes:
+    - .:/data/
+```
+Within the container, in this `app` using an Alpine base image, you can then run `git lfs fetch` and `git lfs checkout` to get the files stored via LFS.
 
 ## LFS On Codeship Basic
 

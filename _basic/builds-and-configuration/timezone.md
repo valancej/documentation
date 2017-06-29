@@ -1,10 +1,11 @@
 ---
 title: Setting Timezone
-layout: page
-weight: 10
+menus:
+  basic/builds:
+    title: Setting Timezone
+    weight: 10
 tags:
   - timezone
-
 redirect_from:
   - /basic/getting-started/timezone/
 ---

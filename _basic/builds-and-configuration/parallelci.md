@@ -1,15 +1,21 @@
 ---
 title: Speed Up Your Builds With Parallel Testing on Codeship Basic
-weight: 5
+shortTitle: Parallel Testing
+menus:
+  basic/builds:
+    title: Parallel Testing
+    weight: 5
 tags:
-- testing
-- continuous integration
-- parallelci
-- parallelism
-
+  - testing
+  - continuous integration
+  - parallelci
+  - parallelism
+  - speed
+  - parallel
 redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/
+  - /classic/getting-started/parallelci
 ---
 
 <div class="info-block">
@@ -27,7 +33,7 @@ ParallelCI allows you to split your test commands across multiple test pipelines
 
 ## Using ParallelCI
 
-Once ParallelCI is enabled, ehach project can have multiple **test pipelines** that will be run in parallel. Codeship will first run your setup commands and then any arbitrary _test commands_ you defined for this specific pipeline via the interface.
+Once ParallelCI is enabled, each project can have multiple **test pipelines** that will be run in parallel. Codeship will first run your setup commands and then any arbitrary _test commands_ you defined for this specific pipeline via the interface.
 
 To ease distinguishing different pipelines you can provide a name for each one.
 
