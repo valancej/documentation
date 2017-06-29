@@ -26,11 +26,23 @@ tags:
 
 ## Codeship Pro
 
-### Setting Your API Key
+### Webhook Method
 
-To get started, you will need to add your OpsGenie API key to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+The simplest way to integrate OpsGenie with Codeship is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [Codeship integration](https://app.opsgenie.com/integration#/add/Codeship).
 
-### Sending Alerts
+Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/account/notifications.md %}#webhooks-for-custom-notifications) using the webhook destination URL provided by the integrations page in OpsGenie.
+
+All successful Codeship builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
+
+### Manual Integration
+
+For a more granular implementation, where you can choose exactly what to trigger on OpsGenie and when, you can manually integrate the OpsGenie API into your pipeline.
+
+#### Setting Your API Key
+
+First, you will need to add your OpsGenie API key to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+
+#### Sending Alerts
 
 Next, you will need to add [API calls to OpsGenie](https://www.opsgenie.com/docs/rest-api/alert-api), in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 
@@ -78,13 +90,25 @@ Although it is worth noting that [their API](https://www.opsgenie.com/docs) prov
 
 ## Codeship Basic
 
-### Setting Your API Key
+### Webhook Method
 
-You will need to add your OpsGenie API key to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
+The simplest way to integrate OpsGenie with Codeship is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [Codeship integration](https://app.opsgenie.com/integration#/add/Codeship).
+
+Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/account/notifications.md %}#webhooks-for-custom-notifications) using the webhook destination URL provided by the integrations page in OpsGenie.
+
+All successful Codeship builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
+
+### Manual Integration
+
+For a more granular implementation, where you can choose exactly what to trigger on OpsGenie and when, you can manually integrate the OpsGenie API into your pipeline.
+
+#### Setting Your API Key
+
+First, you will need to add your OpsGenie API key to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
-### Sending Alerts
+#### Sending Alerts
 
 Next, you will need to add [API calls to OpsGenie](https://www.opsgenie.com/docs/rest-api/alert-api) via a custom-script deployment added to your [[deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}), most likely to alert of a successful deployment or combined with your deployment commands in a script to alert of a failed deployment.
 
