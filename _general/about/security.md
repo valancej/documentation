@@ -63,6 +63,8 @@ Codeship never takes ownership of your code or files. All builds run on containe
 
 The one exception is with opt-in caching. On Codeship Basic we will save your dependencies automatically (but not your code) and on Codeship Pro we will save your images if you explicitly tell us to in your project configuration.
 
+In the case of Codeship Pro's image caching, we save each project's images in AWS with security credentials specific to that project.
+
 ## Does Codeship Conduct External Security Audits?
 
 Yes, from time to time Codeship will hire external parties to examine and audit current security practices.
