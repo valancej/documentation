@@ -97,7 +97,7 @@ We send you a POST request containing the following build data
                   commit/96943dc5269634c211b6fbb18896ecdcbd40a047",
     "project_id":10213,
     "build_id":973711,
-    "status":"testing",
+    "status":"initiated",
     # PROJECT_FULL_NAME IS DEPRECATED AND WILL BE REMOVED IN THE FUTURE
     "project_full_name":"codeship/docs",
     "project_name":"codeship/docs",
