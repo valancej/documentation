@@ -1,15 +1,19 @@
 {% assign collections = site.collections | sort: 'sort_order' %}
 <nav class="Topmenu">
-	<div class="collg50">
+	<div class="colsm100 colmd100 collg50">
 		<div class="Topmenu_nav">
-			<ul>
-				{% for item in site.menus.main %}
-					<li><a href="{{ item.url | prepend: site.baseurl }}" {% if item.identifier == page.collection %} class="active" {% endif %}>{{ item.title }}</a></li>
-				{% endfor %}
-			</ul>
+			<div id="topmenu_nav">
+				<a class="Topmenu_nav_mobile" href="#">Less</a>
+				<ul >
+					{% for item in site.menus.main %}
+						<li><a href="{{ item.url | prepend: site.baseurl }}" {% if item.identifier == page.collection %} class="active" {% endif %}>{{ item.title }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<a class="Topmenu_nav_mobile" href="#topmenu_nav">More</a>
 		</div>
 	</div>
-	<div class="collg50">
+	<div class="colsm100 colmd100 collg50">
 		<div class="Topmenu_search">
 			<form action="/">
 				<input type="search" id="search" name="search" autofocus="false" spellcheck="false" placeholder="Search the documentation">
