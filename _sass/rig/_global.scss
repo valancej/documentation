@@ -119,7 +119,6 @@ a {
   text-decoration: none;
   font-size: 1rem;
   line-height: $base-line-height;
-  letter-spacing: -.004em;
 
   &:hover {
     color: $cAnchorHover;
@@ -145,9 +144,12 @@ p {
   letter-spacing: -.004em;
 
   a {
-    @extend .link;
     text-decoration: none;
     margin: 0 .2em;
+
+    &:hover {
+      @extend .link
+    }
   }
 
   &.is-bold {
@@ -480,6 +482,7 @@ input:focus, button:focus, textarea:focus, select:focus {
  }
 
 .contentWrapper {
+  vertical-align: top;
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
