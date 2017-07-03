@@ -184,9 +184,9 @@ To encrypt your image registry credentials:
 
 * Run the `jet encrypt` command against your image registry `dockercfg` file. See below for guidance on creating this file depending on which image registry you're using.
 
-### Using Private Base Images From Dockerhub
+### Using Private Base Images From Docker Hub
 
-To use an image from Dockerhub, you'll first need to login locally and `mv` the credentials file to your registry.
+To use an image from Docker Hub, you'll first need to login locally and `mv` the credentials file to your registry.
 
 ```bash
 docker login
@@ -204,7 +204,7 @@ FROM username/registry_name
 # ...
 ```
 
-You will also need to configure your `codeship-steps.yml` file to provide your account credentials on every step that uses an image from your Dockerhub account.
+You will also need to configure your `codeship-steps.yml` file to provide your account credentials on every step that uses an image from your Docker Hub account.
 
 ```yaml
 - service: app
@@ -214,7 +214,7 @@ You will also need to configure your `codeship-steps.yml` file to provide your a
 
 ### Using Private Base Images From Quay.io
 
-Quay.io has slightly different permissions and specification requirement than Dockerhub, so make sure to provide the necessary specifications for accessing your Quay repos.
+Quay.io has slightly different permissions and specification requirement than Docker Hub, so make sure to provide the necessary specifications for accessing your Quay repos.
 
 * First configure a [robot account](http://docs.quay.io/glossary/robot-accounts.html)
 

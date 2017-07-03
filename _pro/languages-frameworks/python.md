@@ -29,7 +29,7 @@ Any Python framework or tool that can run inside a Docker container will run on 
 
 ## Services File
 
-The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
+The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL image](https://hub.docker.com/_/postgres/) and a [Redis image](https://hub.docker.com/_/redis/) via the Docker Hub as linked services.
 
 When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
@@ -45,16 +45,16 @@ project_name:
     - DATABASE_URL=postgres://postgres@postgres/YOUR_DATABASE_NAME
     - REDIS_URL=redis://redis
 redis:
-  image: redis:2.8
+  image: redis:3
 postgres:
-  image: postgres:9.4
+  image: postgres:9.6
 ```
 
 ## Steps File
 
 The following is an example of a [Codeship Steps file]({% link _pro/builds-and-configuration/steps.md %}).
 
-Note that every step runs on isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
+Note that every step runs in isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
 
 ```yaml
 - name: ci
@@ -75,8 +75,8 @@ Note that every step runs on isolated containers, so changes made on one step do
 Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Python image documentation on [the Docker Hub](https://hub.docker.com/_/python/).
 
 ```
-# Starting from Python 2.7 base image
-FROM python:latest
+# Starting from Python 3 base image
+FROM python:3
 
 # Set the WORKDIR to /app so all following commands run in /app
 WORKDIR /app
@@ -88,7 +88,7 @@ COPY requirements.txt dev-requirements.txt ./
 # nostest, pytest or any other test framework you use
 RUN pip install -r requirements.txt -r dev-requirements.txt
 
-# Adding the whole repository to the container
+# Adding the whole repository to the image
 COPY . ./
 ```
 

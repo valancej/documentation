@@ -27,7 +27,7 @@ Any Go service or tool that can run inside a Docker container will run on Codesh
 
 ## Services File
 
-The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
+The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL image](https://hub.docker.com/_/postgres/) and a [Redis image](https://hub.docker.com/_/redis/) via the Docker Hub as linked services.
 
 When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
@@ -52,7 +52,7 @@ postgres:
 
 The following is an example of a [Codeship Steps file]({% link _pro/builds-and-configuration/steps.md %}).
 
-Note that every step runs on isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
+Note that every step runs in isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
 
 ```yaml
 - service: project_name
@@ -64,20 +64,20 @@ Note that every step runs on isolated containers, so changes made on one step do
 Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Golang image documentation on [the Docker Hub](https://hub.docker.com/_/golang/).
 
 ```Dockerfile
-# Starting from the latest Golang container
-FROM golang:latest
+# Starting from the latest Golang image
+FROM golang:1.9
 
 # INSTALL any further tools you need here so they are cached in the docker build
 
 # Set the WORKDIR to the project path in your GOPATH, e.g. /go/src/github.com/go-martini/martini/
 WORKDIR /go/src/your/package/name
 
-# Copy the content of your repository into the container
+# Copy the content of your repository into the image
 COPY . ./
 
 # Install dependencies through go get, unless you vendored them in your repository before
-# Vendoring can be done through the godeps tool or Go vendoring available with
-# Go versions after 1.5.1
+# Vendoring can be done with an external tool like godep or glide
+# Go versions after 1.5.1 include support for a vendor directory
 RUN go get
 ```
 
@@ -93,13 +93,13 @@ Here's an example using Go in a Dockerfile:
 # phase one, labeled as build-stage
 # first stage does the building
 
-FROM golang:latest as build-stage
+FROM golang:1.9 as build-stage
 WORKDIR /go/src/github.com/codeship/go-hello-world
 COPY hello-world.go .
 RUN go build -o hello-world .
 
 # starting second stage
-FROM alpine:latest
+FROM alpine:3.6
 
 # copy the binary from the `build-stage`
 COPY --from=build-stage /go/src/github.com/codeship/go-hello-world/hello-world /bin
