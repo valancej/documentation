@@ -83,9 +83,8 @@ Note that every step runs on isolated containers, so changes made on one step do
 Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Ruby image documentation on [the Docker Hub](https://hub.docker.com/_/ruby/).
 
 ```Dockerfile
-# Article for Dockerfile at ADD_URL_FOR_THIS
-# We're using the Ruby 2.2 base container and extend it
-FROM ruby:latest
+# We're using the Ruby 2.4 base image and extending it
+FROM ruby:2.4
 
 # We install certain OS packages necessary for running our build
 # Node.js needs to be installed for compiling assets
@@ -111,7 +110,7 @@ ENV RAILS_ENV test
 COPY Gemfile Gemfile.lock ./
 RUN gem install bundler && bundle install -j20
 
-# Copy the whole repository into the container
+# Copy the whole repository into the image
 COPY . ./
 ```
 
