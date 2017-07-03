@@ -45,7 +45,7 @@ If you don't have a repo configured, just create a new repo on Github and push t
 
 ### An Image Registry Account
 
-Now, you're also gonna need an image repo account. For this example, we're gonna go with Dockerhub but you could use Quay.io or your own self-hosted image repo.
+Now, you're also gonna need an image repo account. For this example, we're gonna go with Docker Hub but you could use Quay.io or your own self-hosted image repo.
 
 ## Let's Do A Push
 
@@ -77,9 +77,9 @@ There are a few things to note here:
 
 * `Push` is the step type we use to signify that we're pushing out the image defined or built by our service.
 
-* `Image name` takes a slightly different form depending on the repo - if it's Dockerhub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
+* `Image name` takes a slightly different form depending on the repo - if it's Docker Hub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
 
-* `Registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Dockerhub be sure to verify that you get the right value for this.
+* `Registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Docker Hub be sure to verify that you get the right value for this.
 
 * `Encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
 
@@ -91,7 +91,7 @@ First, if you didn't do it on the last step, you'll need to download your projec
 
 ![Downloading AES key]({{ site.baseurl }}/images/gettingstarted/aes_key.png)
 
-Now that you've downloaded your AES key, we'll created a new file named `dockercfg` where we'll drop in our Dockerhub credentials:
+Now that you've downloaded your AES key, we'll created a new file named `dockercfg` where we'll drop in our Docker Hub credentials:
 
 ```json
 {
@@ -139,9 +139,9 @@ When we click in to our build logs, we should able to click our push step and se
 
 ![Push step log output]({{ site.baseurl }}/images/gettingstarted/pushlogs.png)
 
-Now, if we go over to our Dockerhub repo, we should see some meta data indicating a successful push:
+Now, if we go over to our Docker Hub repo, we should see some meta data indicating a successful push:
 
-![Dockerhub repo screenshot]({{ site.baseurl }}/images/gettingstarted/dockerhub-recent-push.png)
+![Docker Hub repo screenshot]({{ site.baseurl }}/images/gettingstarted/dockerhub-recent-push.png)
 
 ## Debugging Your Builds
 
