@@ -65,7 +65,7 @@ Following is an example Dockerfile with inline comments describing each step in 
 
 ```Dockerfile
 # Starting from the latest Golang image
-FROM golang:latest
+FROM golang:1.9
 
 # INSTALL any further tools you need here so they are cached in the docker build
 
@@ -76,8 +76,8 @@ WORKDIR /go/src/your/package/name
 COPY . ./
 
 # Install dependencies through go get, unless you vendored them in your repository before
-# Vendoring can be done through the godeps tool or Go vendoring available with
-# Go versions after 1.5.1
+# Vendoring can be done with an external tool like godep or glide
+# Go versions after 1.5.1 include support for a vendor directory
 RUN go get
 ```
 
@@ -93,13 +93,13 @@ Here's an example using Go in a Dockerfile:
 # phase one, labeled as build-stage
 # first stage does the building
 
-FROM golang:latest as build-stage
+FROM golang:1.9 as build-stage
 WORKDIR /go/src/github.com/codeship/go-hello-world
 COPY hello-world.go .
 RUN go build -o hello-world .
 
 # starting second stage
-FROM alpine:latest
+FROM alpine:3.6
 
 # copy the binary from the `build-stage`
 COPY --from=build-stage /go/src/github.com/codeship/go-hello-world/hello-world /bin

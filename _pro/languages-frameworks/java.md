@@ -71,7 +71,7 @@ Following are two example Dockerfiles, one for using Maven and one for using Gra
 ### Maven
 
 ```
-# We're using the official Maven 3 image from the Dockerhub (https://hub.docker.com/_/maven/).
+# We're using the official Maven 3 image from the Docker Hub (https://hub.docker.com/_/maven/).
 # Take a look at the available versions so you can specify the Java version you want to use.
 FROM maven:3
 
@@ -133,7 +133,7 @@ Here's an example using Java in a Dockerfile:
 # phase one, labeled as build-stage
 # first stage does the building
 
-FROM maven:latest as build-stage
+FROM maven:3 as build-stage
 
 COPY src /usr/src/app/src
 COPY pom.xml /usr/src/app

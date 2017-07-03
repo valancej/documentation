@@ -73,9 +73,9 @@ Following is an example Dockerfile with inline comments describing each step in 
 
 ```Dockerfile
 # Start from PHP 5.6
-# Take a look at the PHP image documentation on theDocker Hub for more detailed
+# Take a look at the PHP image documentation on the Docker Hub for more detailed
 # info on running the container: https://hub.docker.com/_/php/
-FROM php:latest
+FROM php:5.6
 
 # Installing git to install dependencies later and necessary libraries for postgres
 # and mysql including client tools. You can remove those if you don't need them for your build.

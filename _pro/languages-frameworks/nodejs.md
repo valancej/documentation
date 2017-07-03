@@ -51,9 +51,9 @@ project_name:
     - DATABASE_URL=postgres://postgres@postgres/YOUR_DATABASE_NAME
     - REDIS_URL=redis://redis
 redis:
-  image: redis:2.8
+  image: redis:3
 postgres:
-  image: postgres:9.4
+  image: postgres:9.6
 ```
 
 ## Steps File
@@ -77,8 +77,8 @@ Note that every step runs in isolated containers, so changes made on one step do
 Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Node image documentation on [the Docker Hub](https://hub.docker.com/_/node/).
 
 ```Dockerfile
-# We're starting from the Node.js 0.12.7 image
-FROM node:latest
+# We're starting from the Node 8 image
+FROM node:8
 
 # INSTALL any further tools you need here so they are cached in the docker build
 
