@@ -28,7 +28,7 @@ Any Java framework or tool that can run inside a Docker container will run on Co
 
 ## Services File
 
-The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
+The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL image](https://hub.docker.com/_/postgres/) and a [Redis image](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
 
 When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
@@ -53,7 +53,7 @@ postgres:
 
 The following is an example of a [Codeship Steps file]({% link _pro/builds-and-configuration/steps.md %}).
 
-Note that every step runs on isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
+Note that every step runs in isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
 
 ```yaml
 - name: ci
@@ -79,15 +79,15 @@ FROM maven:3
 
 WORKDIR /app
 
-# Copy the pom.xml into the container to install all dependencies
+# Copy the pom.xml into the image to install all dependencies
 COPY pom.xml ./
 
 # Run install task so all necessary dependencies are downloaded and cached in
-# the Docker container. We're running through the whole process but disable
+# the Docker image. We're running through the whole process but disable
 # testing and make sure the command doesn't fail.
 RUN mvn install clean --fail-never -B -DfailIfNoTests=false
 
-# Copy the whole repository into the container
+# Copy the whole repository into the image
 COPY . ./
 ```
 

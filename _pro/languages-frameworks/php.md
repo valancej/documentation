@@ -33,7 +33,7 @@ We have a sample PHP/Laravel repo that you can clone or take a look at via the G
 
 ## Services File
 
-The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL container](https://hub.docker.com/_/postgres/) and a [Redis container](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
+The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL image](https://hub.docker.com/_/postgres/) and a [Redis image](https://hub.docker.com/_/redis/) via the Dockerhub as linked services.
 
 When accessing other containers please be aware that those services do not run on `localhost`, but on a different host, e.g. `postgres` or `mysql`. If you reference `localhost` in any of your configuration files you will have to change that to point to the service name of the service you want to access. Setting them through environment variables and using those inside of your configuration files is the cleanest approach to setting up your build environment.
 
@@ -58,7 +58,7 @@ postgres:
 
 The following is an example of a [Codeship Steps file]({% link _pro/builds-and-configuration/steps.md %}).
 
-Note that every step runs on isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
+Note that every step runs in isolated containers, so changes made on one step do not persist to the next step.  Because of this, any required setup commands, such as migrating a database, should be done via a custom Dockerfile, via a `command` or `entrypoint` on a service or repeated on every step.
 
 ```yaml
 - service: php
@@ -73,7 +73,7 @@ Following is an example Dockerfile with inline comments describing each step in 
 
 ```Dockerfile
 # Start from PHP 5.6
-# Take a look at the PHP container documentation on the Dockerhub for more detailed
+# Take a look at the PHP image documentation on theDocker Hub for more detailed
 # info on running the container: https://hub.docker.com/_/php/
 FROM php:latest
 
@@ -96,7 +96,7 @@ RUN echo "extension=hrtime.so" > $PHP_INI_DIR/conf.d/hrtime.ini
 # Install Composer and make it available in the PATH
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
 
-# Install extensions through the scripts the container provides
+# Install extensions through the scripts the image provides
 # Here we install the pdo_pgsql and pdo_mysql extensions to access PostgreSQL and MySQL.
 RUN docker-php-ext-install pdo_pgsql
 RUN docker-php-ext-install pdo_mysql
@@ -108,7 +108,7 @@ WORKDIR /app
 COPY composer.json composer.lock ./
 
 # Install dependencies with Composer.
-# --prefer-source fixes issues with download limits on Github.
+# --prefer-source fixes issues with download limits on GitHub.
 # --no-interaction makes sure composer can run fully automated
 RUN composer install --prefer-source --no-interaction
 
