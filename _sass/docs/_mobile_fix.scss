@@ -29,13 +29,13 @@
       display: flex;
       position: relative;
       flex-direction: column;
-      background: rgba(0,0,0,.05);
+      background: rgba(0, 0, 0, .05);
       padding: 10px;
 
       &::before {
         content: '';
         border: 10px solid transparent;
-        border-bottom-color: rgba(0,0,0,.05);
+        border-bottom-color: rgba(0, 0, 0, .05);
         font-size: 0;
         display: block;
         box-sizing: border-box;
@@ -49,9 +49,6 @@
 
     }
 
-    li {
-
-    }
   }
 
   #topmenu_nav {
