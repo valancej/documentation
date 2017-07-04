@@ -56,4 +56,4 @@ After adding the API token, you'll just need to add the SourceClear command to y
 curl -sSL https://download.sourceclear.com/ci.sh | bash
  ```
 
-**Note** that if you are using [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}) then you likely only want to add this command to a single pipeline, rather than multiple pipelines.
+**Note** that if you are using [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}) then you likely only want to add this command to a single pipeline, rather than multiple pipelines.

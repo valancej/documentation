@@ -142,7 +142,7 @@ Additionally, all testing frameworks, such as phpunit and codeception, will work
 
 ## Parallel Testing
 
-If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
+If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
 
 **Pipeline 1:**
 ```shell
@@ -156,7 +156,7 @@ phpunit tests/tests_2
 
 ### Parallelization Modules
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), some customers have found using the [paratest](https://github.com/brianium/paratest) module is a great way to speed up your tests.
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), some customers have found using the [paratest](https://github.com/brianium/paratest) module is a great way to speed up your tests.
 
 Note that we do not officially support or integrate with this module and that it is possible for this to cause resource and build failure issues, as well.
 
