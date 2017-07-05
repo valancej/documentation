@@ -112,7 +112,7 @@ We send you a POST request containing the following build data
 
 The _status_ field can have one of the following values:
 
-- `testing` for newly started build
+- `initiated` for newly started build
 - `error` for failed builds
 - `success` for passed builds
 - `stopped` for stopped builds
