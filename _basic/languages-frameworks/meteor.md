@@ -80,3 +80,16 @@ And include the following command to your deployment pipeline:
 ```shell
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/deployments/meteor.sh | bash -s
 ```
+
+### Process Out of Memory
+
+Sometimes Meteor commands will run into Node's default memory limit resulting in this error:
+
+```
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
+Aborted (core dumped)
+```
+
+If this happens in your build you can increase the memory limit by setting this environment variable for the project:
+
+* TOOL_NODE_FLAGS=--max-old-space-size=4096
