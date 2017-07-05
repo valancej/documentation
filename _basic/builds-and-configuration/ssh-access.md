@@ -21,21 +21,11 @@ redirect_from:
 
 ## What Is An SSH Debug Session?
 
-You may find yourself trying to figure out why a particular build is failing, especially if the build succeeds locally or succeeded in the past. Often times the solution to these problems is to change versions, change dependencies, or change timing.
+You may find yourself trying to figure out why a particular build is failing, especially if the build succeeds locally or succeeded in the past.
 
-To make this troubleshooting and debugging process faster, we allow you to open an SSH debug session and connect to your build machine directly, where you can directly run different commands yourself to test for different solutions to the issue you may be having. This is often the fastest way to solve problems with builds that are failing.
+In order to effectively diagnose the issue, we provide command line access to a replicated instance of your failing build. This SSH debug session will include all configured environment variables from the original build run.
 
-## Using SSH Debug Sessions
-
-You are able to activate an SSH debug session via the sidebar when you are looking at the log output screen for an individual build. One activated, the machine will take about a minute to prepare the session and then you will be giving an SSH command you can copy and paste into your local terminal to access the machine.
-
-When you start a SSH Debug session we will clone the repository and set up all environment variables that you defined and that we set by default.
-
-Your application itself is cloned into a directory named `$HOME/clone`, and you will want to `cd` into this directory to run your debug commands.
-
-**Note** that we do not run any setup or test commands when preparing a machine for an SSH debug session. This gives you a clean machine so you can fully test and debug your application on Codeship. The SSH session is completely separate from any builds run before.
-
-### Configuring SSH Access
+## Configuring SSH Access
 
 To be able to open an SSH debug session, you will need to configure SSH access on your account. The first thing you will need to do is get your local machine's SSH key.
 
@@ -55,7 +45,25 @@ Once you have your local key, you will need to add it to your Codeship *Account 
 
 ![Public Key Setup]({{ site.baseurl }}/images/basic/public-key.png)
 
-### Default Codeship Commands
+## Using SSH Debug Sessions
+
+When you start a SSH Debug session from your build's dropdown menu, we will clone the repository and set up all environment variables that you defined and that we set by default.
+
+**Note** that your setup commands have _not_ run yet on the debug machine. You usually want to start with those commands. Also note that you default directory is `$HOME`, and that your project will be found in `$HOME/clone`.
+
+![Start A Debug Build]({{ site.baseurl }}/images/continuous-integration/ssh.png)
+
+There are several key ways to use SSH sessions to solve your issues:
+
+- You can try different versions of your tools and technologies combined with your tests to see if you can isolate any version issues.
+
+- Consider manually trying different package versions, or removing packages, to see if modifying the packages installed impacts the behavior you're trying to solve.
+
+- You can see the environment variables with a `printenv` command to check for configuration and availability.
+
+- You can interact directly with the databases and other services, allowing you to workshop your setup commands before having to run live builds with them.
+
+### Useful Commands
 
 Inside the SSH session, you have access to default Codeship commands. It provides some convenient methods to debug your project. You can view the available methods by running:
 
@@ -63,9 +71,7 @@ Inside the SSH session, you have access to default Codeship commands. It provide
 cs help
 ```
 
-### Useful commands
-
-Get insight into Environment variables:
+You can view all your environment variables by running:
 
 ```shell
 printenv
@@ -83,7 +89,17 @@ You can clear the [Dependency Cache]({{ site.baseurl }}{% link _basic/builds-and
 cs clear-cache
 ```
 
-### SSH Debug Session Timeout
+### Common issues
+
+#### Prompted For Password
+
+If you are being prompted for a password while connecting to your SSH debug session, you likely have a mismatch with the key you added to your Codeship account.
+
+Try removing the key, verifying or regenerating the key locally and then re-adding it.
+
+**Note** that after saving your key it will only apply to new builds, so you must trigger your builds _after_ you add your key to be able to connect.
+
+#### SSH Debug Session Timeout
 
 The debug build will shutdown itself after **60 minutes**
 
@@ -93,10 +109,6 @@ You can shutdown the debug build manually by using
 cs exit
 ```
 
-### SSH Prompting For Password
+#### Branch No Longer Exists
 
-If your SSH debug session is asking for a passphrase when attempting to connect, this likely means the key you have added is not being recognized.
-
-Try deleting the key from [your Codeship account](https://app.codeship.com/user/edit), generating a new key or verifying your key locally and then re-adding it to your account.
-
-**Note** that you will need to run a build _after_ adding your key to be able to connect, previously run build will not recognize the updated key.
+If you restart a build, or trigger an SSH debug build for a branch that has since been removed from your source control repo you will see the build fail as it is unable to clone the branch it is keyed to.
