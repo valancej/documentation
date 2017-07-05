@@ -47,9 +47,11 @@ Once you have your local key, you will need to add it to your Codeship *Account 
 
 ## Using SSH Debug Sessions
 
-When you start a SSH Debug session we will clone the repository and set up all environment variables that you defined and that we set by default.
+When you start a SSH Debug session from your build's dropdown menu, we will clone the repository and set up all environment variables that you defined and that we set by default.
 
 **Note** that your setup commands have _not_ run yet on the debug machine. You usually want to start with those commands. Also note that you default directory is `$HOME`, and that your project will be found in `$HOME/clone`.
+
+![Start A Debug Build]({{ site.baseurl }}/images/continuous-integration/ssh.png)
 
 There are several key ways to use SSH sessions to solve your issues:
 
