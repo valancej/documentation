@@ -12,6 +12,7 @@ tags:
   - registry
   - registries
   - Docker Hub
+  - Dockerhub
   - quay
   - ecr
   - gcr
