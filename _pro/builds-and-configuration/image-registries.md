@@ -321,7 +321,7 @@ Note that ECR requires the fully registry path in our image name, and the accoun
 
 Learn more about [using AWS with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
 
-## Pulling From ECR
+### Pulling From ECR
 
 To pull images from ECR, you will need to provide the image, including the registry path, as well as use the service generator for authentication in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
