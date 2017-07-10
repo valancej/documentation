@@ -7,14 +7,13 @@
 */
 
 // BARIOL WEBFONT
-
 @font-face {
     font-family: 'Bariol';
     src: url('../fonts/bariol_regular-webfont.eot');
     src: url('../fonts/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/bariol_regular-webfont.woff') format('woff'),
-         url('../fonts/bariol_regular-webfont.ttf') format('truetype'),
-         url('../fonts/bariol_regular-webfont.svg#bariol-regular') format('svg');
+            url('../fonts/bariol_regular-webfont.woff') format('woff'),
+            url('../fonts/bariol_regular-webfont.ttf') format('truetype'),
+            url('../fonts/bariol_regular-webfont.svg#bariol-regular') format('svg');
     font-weight: 400;
     font-style: normal;
 }

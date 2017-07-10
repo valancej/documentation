@@ -34,7 +34,7 @@ body {
     family: $fBody;
     weight: 400;
     style: normal;
-    size: 1rem; }
+    size: .9rem; }
 
   // Better Font Smoothing
   font-smoothing: subpixel-antialiased;
@@ -47,6 +47,17 @@ body {
   text-align: center;
   color: $cBody;
   background: $cBodyBg;
+
+  p, .Content ul li {
+    font-family: 'Bariol';
+    src: url('../fonts/bariol_regular-webfont.eot');
+    src: url('../fonts/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bariol_regular-webfont.woff') format('woff'),
+         url('../fonts/bariol_regular-webfont.ttf') format('truetype'),
+         url('../fonts/bariol_regular-webfont.svg#bariol-regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 
@@ -68,27 +79,37 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1, .like-h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 
 h2, .like-h2 {
   font-size: 2.5rem;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 
 h3, .like-h3 {
   font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 h4, .like-h4 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+
 }
 
 h5, .like-h5 {
-  font-size: 1.4rem;
+  font-size: 2rem;
+  text-transform: capitalize;
 }
 
 h6, .like-h6 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 a {
@@ -96,9 +117,8 @@ a {
   cursor: pointer;
   transition: color 100ms, background-image 100ms;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: $base-line-height;
-  letter-spacing: -.004em;
 
   &:hover {
     color: $cAnchorHover;
@@ -118,15 +138,18 @@ a {
 }
 
 p {
-  margin: $base-padding/2 0;
-  font-size: 1.2rem;
-  line-height: $base-line-height;
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
   letter-spacing: -.004em;
 
   a {
-    @extend .link;
     text-decoration: none;
     margin: 0 .2em;
+
+    &:hover {
+      @extend .link
+    }
   }
 
   &.is-bold {
@@ -136,7 +159,7 @@ p {
 
 strong {
   font-weight: 700;
-  color: $_cDarkblue;
+  color: #000;
 }
 
 em {
@@ -231,7 +254,7 @@ figure {
 img {
   display: inline-block;
   max-height: 100%;
-  max-width: 100%
+  max-width: 600px;
 }
 
 /*
@@ -459,13 +482,14 @@ input:focus, button:focus, textarea:focus, select:focus {
  }
 
 .contentWrapper {
+  vertical-align: top;
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
   min-height: 100%;
   max-width: $bpLarge+10rem;
   text-align: left;
-  padding: 0 $base-padding;
+  padding: 0 1em 0 1em;
 
   @media only screen and (max-width: $bpMedium) {
     margin: 0;
