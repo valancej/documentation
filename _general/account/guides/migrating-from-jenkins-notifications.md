@@ -56,39 +56,42 @@ Codeship’s Slack integration works with webhooks to deliver updates to builds 
 
 ![Slack Screenshot]({{ site.baseurl }}/images/jenkins-guide/slack_screenshot.png)
 
-You can implement this by going to your project’s notification settings and choosing the Slack integration.
-
-In Slack, select the Apps & integrations menu.
+You can implement this by going to your Slack team's "Apps & Integrations" settings, search for "Codeship" and click the app that shows up.
+Once on the app, you can select to create a new configuration via the button on the left hand side, and you'll see the following screen:
 
 ![Slack Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/slack_screenshot_two.png)
 
-Then click on the Manage tab on the Apps & integrations screen. Next, click the Edit button to gain access to the settings.
+Select the channel you want the notifications to be posted in and click "Add Codeship Integration". On the following screen you will find the webhook URL you need to configure Codeship notifications.
 
 ![Slack Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/slack_screenshot_three.png)
 
-In this window, we can now set the channel in which to post, the webhook URL, a label, and other settings.
-
-![Slack Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/slack_screenshot_four.png)
-
-The Webhook URL and more can easily be found in the Codeship app’s interface. Navigate to the notifications screen and click Enable. Copy the webhook from here and paste it into the webhook URL field on the Slack screen shown above. Now everything is set for Slack notifications.
+Copy the webhook and head to your the Codeship project you want to setup with notifications. In the project settings -> notifications tab, you will be able to add the Slack integration to one or more branches or branch matches.
+To add a Slack notification, simply click either of the Add buttons (supply the branch if you're setting up a new rule), select Slack, paste in your webhook URL, and select which events you want the notification to trigger on:
 
 ![Slack Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/codeship_notifications.png)
 
+If you want different branches to send notifications to the same channel, simply re-use the webhook you just created. If you want to have notifications to different channels, you will need to create multiple integrations on Slack and copy the respective webhook URLs to Codeship.
+
 ## The Codeship HipChat Integration
 
-The HipChat plugin for Atlassian’s chat client provides notifications for builds and additional information and links back to commits. To enable this plugin, again, just navigate to the notifications section in the Codeship interface and click Enable.
+The HipChat plugin for Atlassian’s chat client provides notifications for builds and additional information and links back to commits. 
+
+To setup this Codeship to send notifications to Hipchat, first go to your Hipchat team's integrations page and find the Codeship integration.
 
 ![Hipchat Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/hipchat_one.png)
 
-Get the notification token and room from the HipChat interface. In HipChat, go to their integrations and click Add integration.
-
 ![Hipchat Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/hipchat_two.png)
 
-Another tab, Configure, will appear next to the Overview tab. This is where your token is available.
+Once the integration have been added, you are given a token which you will need to setup Codeship. 
 
 ![Hipchat Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/hipchat_three.png)
 
-Grab your HipChat token and put it into Codeship’s notification settings screen for HipChat. Once that’s configured, you’re all set.
+Copy the token and go to your Codeship project you want to setup with notifications. In the project settings -> notifications tab, you will be able to add the Hipchat integration to one or more branches or branch matches.
+To add a Hipchat notification, simply click either of the Add buttons (supply the branch if you're setting up a new rule), select Hipchat, paste in the token, supply a channel name and select which events you want the notification to trigger on:
+
+![Hipchat Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/hipchat_codeship.png)
+
+The token is good for any notification rule you want to create; just make sure to supply the right channel name so that notifications are sent to the right people. If you want notifications to be sent to multiple channels for the same branch, you will have to create multiple rules as each one only handles one channel name.
 
 ## Google Chrome Browser notifications with Codeship’s Shipscope
 
