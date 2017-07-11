@@ -23,7 +23,7 @@ If you want to use a third-party tool or service with Codeship that we do not cu
 
 If the service or tool you are integrating requires something like an API key or authentication token to be set as an environment variable, you will do this via a project's [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that are encrypted and included in the [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-**Note** that environment variables are loaded at runtime, so they are only available after your services have built and become available. If you have a token (such as an SSH key) that instead needs to be available at buildtime for use inside the project's Dockerfile, you will instead wanted to use [encrypted build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}).
+**Note** that environment variables are loaded at runtime, so they are only available after your services have built and become available. If you have a token (such as an SSH key) that instead needs to be available at buildtime for use inside the project's Dockerfile, you will instead need to use [encrypted build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}) which are available at buildtime.
 
 ### Tooling And Environment
 
@@ -31,7 +31,7 @@ The Codeship Pro build environment is defined in a project's [codeship-services.
 
 Due to the fact that the containers built from the service definitions in the [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) execute all of the commands in the pipeline, any packages or environment-specific setup must be defined via this file as well as the project's Dockerfiles.
 
-As one example of this, if you have a CLI tool that is required to execute the tool's commands, you will need the CLI to be installed in the project's Dockerfile so that when the [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) passes the necessary command to that service the container has the tooling it needs to execute the command.
+As one example of this, if you have a CLI tool that is required to execute the tool's commands, you will need the CLI to be installed via the project's Dockerfile so that when the [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) passes the necessary command to that service the container has the tooling it needs to execute the command.
 
 ### Executing Commands
 
