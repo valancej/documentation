@@ -50,7 +50,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 ### Adding Commands
 
-After adding the API token, you'll just need to add the SourceClear command to your project's test commands. The command to add is:
+After adding the API token, you'll just need to add the SourceClear command to your [project's test commands[project's test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %})]. The command to add is:
 
 ```bash
 curl -sSL https://download.sourceclear.com/ci.sh | bash
