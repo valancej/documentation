@@ -18,17 +18,17 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-Codeship makes makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
+Codeship makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
 ## Setup Heroku Deployment
 
 ### Step 1 - Navigate to Deployment Configuration
-Navigate to your project's deployment configuration page by selecting _Project Settings_ > _Deployment_ on the top right side of the page.
+Navigate to your project's deployment configuration page by selecting _Project Settings_ > _Deploy_ on the top right side of the page.
 
 ![Project Settings Deployment]({{ site.baseurl }}/images/continuous-deployment/project_configuration.png)
 
 ### Step 2 - Add New Deployment Pipeline
-Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}/continuous-deployment/wildcard-deployment-pipelines/).
+Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}#wildcard-branch-deployment-pipelines).
 
 ![Create branch deploy]({{ site.baseurl }}/images/continuous-deployment/create_deploy_branch.png)
 
@@ -40,9 +40,20 @@ Select _Heroku_
 
 ### Step 4 - Deployment Configuration
 
+#### Add SSH Key to Heroku
+Get the public SSH key for your project under _Project Settings_ > _General_ and [add it to Heroku](https://devcenter.heroku.com/articles/keys#adding-keys-to-heroku). If you miss this step you may see an error like this during the `git push` step of the deploy:
+
+```
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
 ![Configure Heroku]({{ site.baseurl }}/images/continuous-deployment/configure_heroku.png)
 
-#### Application URL
+#### Application Name
 Insert the name of the Heroku application you want the pipeline to deploy to.
 
 #### Heroku API Key
@@ -78,7 +89,7 @@ This causes git to disable some checks and can cause the remote repository to lo
 See [git push -f](https://git-scm.com/docs/git-push) for more info.
 
 #### Run Migrations (Ruby on Rails only)
-You can specify to run the migration during the Heroku deployment. If you want to run your migration after the deployment, you can add a [custom script]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) after the Heroku deployment and run the migration.
+You can specify to run the migration during the Heroku deployment. If you want to run your migration after the deployment, you can add a [custom script]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) after the Heroku deployment and run the migration. If you are not using Rails you will need to use a custom script to run the correct migration command for your framework.
 
 **Example**:
 
