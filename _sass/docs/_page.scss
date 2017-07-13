@@ -15,7 +15,7 @@ body.is-blue {
   box-shadow: $vBoxshadow;
   padding: 1rem 2rem 2rem;
   border-radius: .2rem;
-  margin: .5rem 0 0;
+  margin: .5rem 0 1.5rem;
 
   .box__title {
     @extend .like-h5;
@@ -205,6 +205,37 @@ body.is-blue {
       width: 100%;
     }
   }
+}
+
+div#integrations {
+
+  .box {
+
+    img {
+      display: block;
+      width: 75px;
+      height: 75px;
+      margin: auto !important;
+    }
+
+    p {
+      display: block !important;
+      height: 75px !important;
+    }
+
+    h3 {
+      margin-left: 5.5rem !important;
+      font-size: 2rem;
+    }
+
+    h4 {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+      font-size: 1.1rem !important;
+    }
+
+  }
+
 }
 
 .product-indicator {
