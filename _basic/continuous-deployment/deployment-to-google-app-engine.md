@@ -14,10 +14,10 @@ redirect_from:
   - /tutorials/continuous-deployment-google-app-engine-github-django-python/
 ---
 
+**Please note:** Codeship Basic currently runs Google App Engine SDK version `1.9.40` and supports the following languages: [Java]({{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}),[Python]({{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}) and [Go]({{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}).
+
 * include a table of contents
 {:toc}
-
-You can deploy your [Java]({{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}),[Python]({{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}), [NodeJS]({{ site.baseurl }}{% link _basic/languages-frameworks/nodejs.md  %}) , or [Go]({{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}) applications to Google App Engine through Codeship.
 
 ## Setup Google App Engine Deployment
 
@@ -55,7 +55,7 @@ Once connected, you will be brought back to your Google App Engine deployment se
 
 You can set the path of your `appcfg.*` file in the _Update Path:_ field. If the file exists on the root of your repository, simply leave it blank.
 
-By default we search for a `app.yml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. Otherwise we expect it to be a Java application and use `appcfg.sh`.
+By default we search for a `app.yml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. If the `app.yml` file is not located, we'll presume the application to be Java based and will use the `appcfg.sh` script insteaad.
 
 #### Application URL
 
