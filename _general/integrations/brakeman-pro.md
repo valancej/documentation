@@ -13,6 +13,8 @@ menus:
   general/integrations:
     title: Using Brakeman Pro
     weight: 9
+redirect_from:
+  - /general/integrations/brakeman/
 ---
 
 * include a table of contents
