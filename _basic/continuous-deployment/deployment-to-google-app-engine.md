@@ -14,7 +14,7 @@ redirect_from:
   - /tutorials/continuous-deployment-google-app-engine-github-django-python/
 ---
 
-**Please note:** Codeship currently supports Google App Engine deployments for the following environments: [Java]({{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}),[Python]({{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}), and [Go]({{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}).
+**Please note:** Codeship Basic currently runs Google App Engine SDK version `1.9.40` and supports the following languages: [Java]({{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}),[Python]({{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}) and [Go]({{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}).
 
 * include a table of contents
 {:toc}
