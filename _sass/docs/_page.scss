@@ -207,6 +207,37 @@ body.is-blue {
   }
 }
 
+div#integrations {
+
+  .box {
+
+    img {
+      display: block;
+      width: 75px;
+      height: 75px;
+      margin: auto !important;
+    }
+
+    p {
+      display: block !important;
+      height: 75px !important;
+    }
+
+    h3 {
+      margin-left: 5.5rem !important;
+      font-size: 2rem;
+    }
+
+    h4 {
+      margin-top: 0rem !important;
+      padding-top: 0rem !important;
+      font-size: 1.5rem !important;
+    }
+
+  }
+
+}
+
 .product-indicator {
 
   span {
