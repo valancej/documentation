@@ -1,6 +1,6 @@
 ---
-title: Integrating Codeship With Brakeman for Rails Security Analysis
-shortTitle: Using Brakeman For Rails Security Analysis
+title: Integrating Codeship With Brakeman Pro for Rails Security Analysis
+shortTitle: Using Brakeman Pro For Rails Security Analysis
 tags:
   - security
   - reports
@@ -11,16 +11,16 @@ tags:
   - ruby
 menus:
   general/integrations:
-    title: Using Brakeman
+    title: Using Brakeman Pro
     weight: 9
 ---
 
 * include a table of contents
 {:toc}
 
-## About Brakeman
+## About Brakeman Pro
 
-Brakeman is as service for automatically testing and reporting on your Rails application's security vulnerabilities. [Their documentation](https://brakemanpro.com/docs) does a great job of providing more information, in addition to the setup instructions below.
+Brakeman Pro is as service for automatically testing and reporting on your Rails application's security vulnerabilities. [Their documentation](https://brakemanpro.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
@@ -30,7 +30,7 @@ To start, you need to add your `BRAKEMAN_PRO_USER` and `BRAKEMAN_PRO_PASSWORD` c
 
 ### Adding The Gem
 
-After adding the credentials, you'll need to install the Brakeman gem via your project's Dockerfile, which is built by your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+After adding the credentials, you'll need to install the Brakeman Pro gem via your project's Dockerfile, which is built by your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 This can be done with the following command in your Dockerfile, or by adding the gem to your project's `Gemfile` (which requires `bundle install` in your Dockerfile instead):
 
@@ -40,15 +40,15 @@ RUN gem install brakeman-pro --source https://$BRAKEMAN_PRO_USER:$BRAKEMAN_PRO_P
 
 ### Running Reports
 
-Next, you'll want to run the actual command to generate a Brakeman report as a new step in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
+Next, you'll want to run the actual command to generate a Brakeman Pro report as a new step in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```bash
-- name: brakeman
+- name: brakeman-pro
   service: your_service
   command: brakeman-pro --exit-on-warn --quiet -f plain
 ```
 
-There are several specific options that Brakeman recommends for modifying the report behavior:
+There are several specific options that Brakeman Pro recommends for modifying the report behavior:
 
 - `--exit-on-warn`: This option is important because it will cause the build to fail if any warnings are found
 
@@ -66,7 +66,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 ### Adding The Gem
 
-After adding the credentials, you'll need to install the Brakeman gem via your [project's setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}). This can be done with the following command, or by adding the gem to your project's `Gemfile` (which requires `bundle install` in your setup commands instead):
+After adding the credentials, you'll need to install the Brakeman Pro gem via your [project's setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}). This can be done with the following command, or by adding the gem to your project's `Gemfile` (which requires `bundle install` in your setup commands instead):
 
 ```bash
 gem install brakeman-pro --source https://$BRAKEMAN_PRO_USER:$BRAKEMAN_PRO_PASSWORD@brakemanpro.com/gems/
@@ -74,13 +74,13 @@ gem install brakeman-pro --source https://$BRAKEMAN_PRO_USER:$BRAKEMAN_PRO_PASSW
 
 ### Running Reports
 
-Next, you'll want to run the actual command to generate a Brakeman report in your [project's test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
+Next, you'll want to run the actual command to generate a Brakeman Pro report in your [project's test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
 ```bash
 brakeman-pro --exit-on-warn --quiet -f plain
 ```
 
-There are several specific options that Brakeman recommends for modifying the report behavior:
+There are several specific options that Brakeman Pro recommends for modifying the report behavior:
 
 - `--exit-on-warn`: This option is important because it will cause the build to fail if any warnings are found
 
