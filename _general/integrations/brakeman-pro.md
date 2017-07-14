@@ -90,4 +90,4 @@ There are several specific options that Brakeman Pro recommends for modifying th
 
 - `--f plain`: Generates a nice, colored text report
 
-**Note** that if you are using [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}) then you likely only want to add this command to a single pipeline, rather than multiple pipelines.
+**Note** that if you are using [parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}) then you likely only want to add this command to a single pipeline, rather than multiple pipelines.
