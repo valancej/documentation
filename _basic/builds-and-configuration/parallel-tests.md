@@ -16,36 +16,37 @@ redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/
   - /classic/getting-started/parallelci
+  - /basic/builds-and-configuration/parallelci
 ---
 
 <div class="info-block">
-ParallelCI is an account upgrade. You can try [a free trial](https://codeship.com/projects#start-trial) to test using up to 20 parallel test pipelines for two weeks on all your projects.
+Parallel test pipelines are an account upgrade. You can try [a free trial](https://codeship.com/projects#start-trial) to test using up to 20 parallel test pipelines for two weeks on all your projects.
 </div>
 
 * include a table of contents
 {:toc}
 
-## What Is ParallelCI?
+## What Are Parllel Test Pipelines?
 
-ParallelCI allows you to split your test commands across multiple test pipelines to speed up your build time. See the [ParallelCI feature page](http://codeship.com/features/parallelci) to check out how this helped users improve their build times tremendously.
+Parallel test pipelines allow you to split your test commands across multiple test pipelines to speed up your build time.
 
 **Note** that all test pipelines run on separate build VMs to avoid the possibility of race conditions or resource limitations.
 
-## Using ParallelCI
+## Using Parallel Test Pipelines
 
-Once ParallelCI is enabled, each project can have multiple **test pipelines** that will be run in parallel. Codeship will first run your setup commands and then any arbitrary _test commands_ you defined for this specific pipeline via the interface.
+Once parallel test pipelines are enabled, each project can have multiple **test pipelines** that will be run in parallel. Codeship will first run your setup commands and then any arbitrary _test commands_ you defined for this specific pipeline via the interface.
 
 To ease distinguishing different pipelines you can provide a name for each one.
 
 ![Configuration of test pipelines]({{ site.baseurl }}/images/continuous-integration/parallelization-test-pipelines-configuration.png)
 
-### Disabling ParallelCI
+### Disabling Parallel Test Pipelines
 
 You can either delete additional test pipelines, or comment out any commands by prepending a `#` symbol to each line. A test pipeline is only active if it contains at least one command.
 
 ### Deployment Pipeline
 
-Using ParallelCI to create parallel pipelines is unrelated to creating your deployment pipelines, which are specific to deploying your application at the end of your tests and can **not** run in parallel.
+Using parallel test pipelines is unrelated to creating your deployment pipelines, which are specific to deploying your application at the end of your tests and can **not** run in parallel.
 
 You can [learn more about deployment pipelines here.]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %})
 

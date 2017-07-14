@@ -23,7 +23,7 @@ To get started with Codeship Basic, there are a few articles that may be helpful
 
 - [Read the getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) if you are a new to the service.
 
-- For significant speed improvements via parallelization, check out [ParallelCI](https://codeship.com/features/parallelci).
+- For significant speed improvements via parallelization, check out [parallel test pipelines](https://codeship.com/features/parallelci).
 
 - [View all documentation articles]({{ site.baseurl }}{% link basic/all/index.html %}) to find more information on a specific topic.
 

@@ -146,11 +146,11 @@ cc-test-reporter after-build --exit-code $
 
 Code Climate supports parallel test reports by uploading the partial result to an external service, such as S3.
 
-In addition to the pre-test and post-test commands above, to use Code Climate with parallel reporting you will need to add another command at the end of your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), in each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}) that you run tests in - as well as a new command at the end of your build.
+In addition to the pre-test and post-test commands above, to use Code Climate with parallel reporting you will need to add another command at the end of your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), in each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}) that you run tests in - as well as a new command at the end of your build.
 
 Here are [Code Climate's example](https://github.com/codeclimate/test-reporter#low-level-usage) scripts for doing so.
 
-At the end of each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}):
+At the end of each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}):
 
 ```bash
 ./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
