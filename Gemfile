@@ -8,16 +8,19 @@ ruby "2.4.1"
 Encoding.default_external = Encoding::UTF_8
 
 gem 'rake', '~>12.0.0'
-gem 'jekyll', '~> 3.4.0'
-gem 'sass', '~> 3.4.23'
+# Jekyll 3.5.0 includes a bug with Liquid Plugins, see
+# https://github.com/jekyll/jekyll/issues/6181 for the bug report. We'll have to
+# wait for 3.5.1 to upgrade.
+gem 'jekyll', '~> 3.4.5'
+gem 'sass', '~> 3.4.25'
 
 # Jekyll plugins
 gem 'jekyll-coffeescript', '~> 1.0.2'
-gem 'jekyll-seo-tag', '~> 2.2.0'
+gem 'jekyll-seo-tag', '~> 2.2.3'
 gem 'jekyll-sitemap', '~> 1.1.1'
 gem 'jekyll-redirect-from', '~> 0.12.1'
-gem 'jekyll-menus', '~> 0.5.0'
+gem 'jekyll-menus', '~> 0.6.0'
 
 group :test do
-  gem 'scss_lint'
+  gem 'scss_lint', '~> 0.54.0'
 end

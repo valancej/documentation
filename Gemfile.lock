@@ -25,7 +25,7 @@ GEM
     jekyll-coffeescript (1.0.2)
       coffee-script (~> 2.2)
       coffee-script-source (~> 1.11.1)
-    jekyll-menus (0.5.0)
+    jekyll-menus (0.6.0)
       jekyll (~> 3.1)
     jekyll-redirect-from (0.12.1)
       jekyll (~> 3.3)
@@ -61,15 +61,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (~> 3.4.0)
+  jekyll (~> 3.4.5)
   jekyll-coffeescript (~> 1.0.2)
-  jekyll-menus (~> 0.5.0)
+  jekyll-menus (~> 0.6.0)
   jekyll-redirect-from (~> 0.12.1)
-  jekyll-seo-tag (~> 2.2.0)
+  jekyll-seo-tag (~> 2.2.3)
   jekyll-sitemap (~> 1.1.1)
   rake (~> 12.0.0)
-  sass (~> 3.4.23)
-  scss_lint
+  sass (~> 3.4.25)
+  scss_lint (~> 0.54.0)
 
 RUBY VERSION
    ruby 2.4.1p111
