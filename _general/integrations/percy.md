@@ -41,7 +41,7 @@ RUN gem install percy-cli
 
 **Note** that this will require you to be building an image that contains both Ruby and Rubygems. If the image does not contain both of these, you will be unable to install the necessary `percy-capybara` gem.
 
-From there, you will need to add the following command a step or inside of a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
+From there, you will need to add the following command as a step or inside of a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```bash
 - service: your_service

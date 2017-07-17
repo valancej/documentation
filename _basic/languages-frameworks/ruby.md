@@ -67,7 +67,7 @@ Capybara is also supported out of the box with the selenium-webdriver , capybara
 
 ## Parallel Testing
 
-If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you will want separate your RSpec tests into groups and call a group specifically in each pipeline. For instance:
+If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), you will want separate your RSpec tests into groups and call a group specifically in each pipeline. For instance:
 
 **Pipeline 1**:
 ```shell
@@ -81,7 +81,7 @@ rspec spec/spec_2
 
 ### Parallelization Gems
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
 
 While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues, as well.
 

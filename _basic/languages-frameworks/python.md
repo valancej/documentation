@@ -60,7 +60,7 @@ All test frameworks and tools, including pytest and unittest, should also work w
 
 ## Parallel Testing
 
-If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
+If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
 
 **Pipeline 1**
 ```shell
@@ -74,7 +74,7 @@ py.test tests_2.py
 
 ### Parallelization Modules
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallelci.md %}), you may find that there are packages available for parallelizing different types of testing, such as [nose-parallel](https://pypi.python.org/pypi/nose-parallel), to speed your tests up.
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), you may find that there are packages available for parallelizing different types of testing, such as [nose-parallel](https://pypi.python.org/pypi/nose-parallel), to speed your tests up.
 
 While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these modules to cause resource and build failure issues, as well.
 
