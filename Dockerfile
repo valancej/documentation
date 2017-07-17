@@ -28,7 +28,7 @@ RUN \
 		libyaml-0-2 \
 		nodejs \
 		yarn && \
-	ln -s $(which nodejs) /usr/local/bin/node && \
+	ln -s "$(which nodejs)" /usr/local/bin/node && \
 	apt-get clean -y && \
 	rm -rf /var/lib/apt/lists/*
 
@@ -41,7 +41,7 @@ RUN \
 # Ruby based dependencies
 COPY Gemfile Gemfile.lock ./
 RUN \
-	echo "gem: --no-rdoc --no-ri" >> ${HOME}/.gemrc && \
+	echo "gem: --no-rdoc --no-ri" >> "${HOME}/.gemrc" && \
 	bundle install --jobs 20 --retry 5 --without development
 
 # Copy the complete site
