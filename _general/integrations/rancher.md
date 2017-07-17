@@ -16,17 +16,19 @@ menus:
 
 ## About Racher
 
-Rancher is a container management platform that helps bridge the gap between container stacks and infrastructure platforms. [Their documentation](http://rancher.com/docs/rancher/v1.6/en/) does a great job of providing more information, in addition to the setup instructions below.
-
-**Note** that Rancher only integrates with [Codeship Pro](https://codeship.com/features/pro) and will not work with [Codeship Basic](https://codeship.com/features/basic).
+<div class="info-block">
+Note that Rancher only integrates with [Codeship Pro](https://codeship.com/features/pro) and will not work with [Codeship Basic](https://codeship.com/features/basic).
 
 If you do not have a familiarity with Codeship Pro, we recommend watching this [introductory webinar](https://resources.codeship.com/webinars/env-parity-docker-codeship-jet) before proceeding with your Rancher setup.
+</div>
+
+Rancher is a container management platform that helps bridge the gap between container stacks and infrastructure platforms. [Their documentation](http://rancher.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Using Rancher
 
 We will not cover Rancher-side setup for your application in this documentation article, but if you are looking for more information on using Rancher itself we have a comprehensive [post on our blog](https://blog.codeship.com/deploying-rancher-using-codeship-pro/)
 
-You can also learn more from [their documentation](http://rancher.com/docs/rancher/v1.6/en/).
+You can also learn more from [their documentation](http://rancher.com/docs/).
 
 ## Adding Rancher Keys
 
@@ -79,7 +81,7 @@ After creating your encrypted Rancher keys and defining a service to execute you
 ```bash
 - name: rancher-deploy
   service: rancher
-  command: "rancher-compose  --p $STACK_NAME --verbose up -d --force-upgrade --pull --confirm-upgrade $SERVICE_NAME"
+  command: "rancher-compose  --p YOUR_STACK_NAME --verbose up -d --force-upgrade --pull --confirm-upgrade YOUR_SERVICE_NAME"
  ```
 
  Note that this specific Rancher Compose command can be substituted for any command you need to run. The important thing is that the `service` directive is pointing to the service defined via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) with the Rancher Compose packages installed.
