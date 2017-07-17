@@ -347,12 +347,25 @@ div#integrations {
   a {
     color: #fff;
     font-weight: bold;
+    font-size: 1rem !important;
+  }
+
+  code {
+    background: none !important;
+    color: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: bold !important;
   }
 
   a:hover {
     color: #fff;
     font-weight: bold;
     background-image: linear-gradient(to bottom, transparent 50%, #fff 50%);
+  }
+
+  p {
+    margin-top: 1rem !important;
   }
 
   strong {
