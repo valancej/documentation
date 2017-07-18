@@ -4,7 +4,7 @@ shortTitle: Deploying With SSH
 menus:
   pro/cd:
     title: Deploy Via SSH
-    weight: 6
+    weight: 7
 tags:
   - docker
   - deployment
