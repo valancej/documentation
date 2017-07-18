@@ -62,7 +62,7 @@ After your final test commands:
 ```bash
 - name: codeclimate_post
   service: YOURSERVICE
-  command: cc-test-reporter after-build --exit-code $
+  command: cc-test-reporter after-build --exit-code $?
 ```
 
 ### Parallel Test Coverage
@@ -139,7 +139,7 @@ cc-test-reporter before-build
 After your final tests have run:
 
 ```bash
-cc-test-reporter after-build --exit-code $
+cc-test-reporter after-build --exit-code $?
 ```
 
 ### Parallel Test Coverage
