@@ -26,7 +26,7 @@ redirect_from:
 
 ## About Coveralls
 
-Coveralls is an automated code coverage service. Starting with Code Climate and Codeship is fast and easy. [Their documentation](https://coveralls.zendesk.com/hc/en-us/categories/200131159-Documentation) does a great job of providing more information, in addition to the setup instructions below.
+Coveralls is an automated code coverage service. Starting with Coveralls and Codeship is fast and easy. [Their documentation](https://coveralls.zendesk.com/hc/en-us/categories/200131159-Documentation) does a great job of providing more information, in addition to the setup instructions below.
 
 ### Coveralls Discount Code
 
