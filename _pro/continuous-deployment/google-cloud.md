@@ -92,6 +92,12 @@ codeship_google authenticate
 
 Since this authentication does not persist between steps in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}), you will need to run the provided authentication command at the beginning of each step that attempts to run commands via the Google Cloud deployment container.
 
+### Codeship Public Key
+
+Some Google Cloud services will require that you add your [Codeship public key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) for authentication purposes.
+
+**Note** that Google may fail authentication if you do not add the Google Cloud user the key is for to the end of the key. For example, if the Google Cloud user is `deploy@Codeship`, you will want to add `deploy@Codeship` to the end of the SSH key itself, otherwise Google will not load the key for the user appropriately.
+
 ## Commands And Deployments
 
 ### Creating Your Services
