@@ -75,7 +75,7 @@ Also note above that the deployment container has the Heroku Toolbelt installed 
 
 ### Deployment Option #2: Docker Deployment
 
-If you are using [Heroku's Docker suppport](https://devcenter.heroku.com/articles/container-registry-and-runtime), you can trigger a deployment simply by doing an [image push]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}/#push-steps) to the Heroku registry.
+If you are using [Heroku's Docker suppport](https://devcenter.heroku.com/articles/container-registry-and-runtime), you can trigger a deployment simply by doing an [image push]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#push-steps) to the Heroku registry.
 
 On Codeship Pro, a push step happens in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) and requires that we generate an authentication token to authenticate with the Heroku registry. Codeship maintains an image that you will use to generate your authentication token, simply add it to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and provide your Heroku API key via the encrypted environment variables file discussed above.
 
