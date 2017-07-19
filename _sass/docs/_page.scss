@@ -330,7 +330,7 @@ div#integrations {
   border: 1px solid $cRed;
   box-shadow: -3px 0 0 $cRed;
   color: #fff !important;
-  margin: 2.5em 0 2.5em;
+  margin: 2.5em 0;
 
   &::before {
     color: $cRed;
@@ -352,11 +352,6 @@ div#integrations {
     padding: 0 !important;
     font-weight: bold !important;
   }
-
-}
-
-alert-block {
-
 
 }
 
