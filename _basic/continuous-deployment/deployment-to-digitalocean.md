@@ -23,13 +23,40 @@ While not necessary, selecting the Ubuntu 14.04 image for your Droplet will prov
 
 For the ssh key section, be sure that you are including/authorizing your [Codeship project's ssh key](https://documentation.codeship.com/general/projects/project-ssh-key/) with your Droplet.
 
-## Deployment Integrations
+With the exception of the Capistrano tool, all the following options would need to be configured as [custom scripts]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) in your deployment pipeline.
+
+## Option One: Instructing the Droplet to pull changes directly from Github/Bitbucket/Gitlab
+
+### Capistrano
 
 If you have a Ruby on Rails application the most common way to deploy to DigitalOcean is with Capistrano.
-Check out our article on [Capistrano Deployments in Codeship]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-capistrano.md %}) as well as DigitialOcean's own [tutorial](https://www.digitalocean.com/community/tutorials/deploying-a-rails-app-on-ubuntu-14-04-with-capistrano-nginx-and-puma) for deploying a Rails application to your Droplet with Capistrano.
+Check out our article on [Capistrano Deployments in Codeship]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-capistrano.md %}) for general guidance on how to run Capistrano commands from Codeship as well as DigitialOcean's own [example](https://www.digitalocean.com/community/tutorials/deploying-a-rails-app-on-ubuntu-14-04-with-capistrano-nginx-and-puma) on setting up Capistrano within a Droplet to receive deployment commands.
 
-DigitalOcean also provides deployment integration tutorials for [PHP](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-basic-php-application-using-ansible-on-ubuntu-14-04), [Node](https://www.digitalocean.com/community/tutorials/how-to-deploy-node-js-applications-using-systemd-and-nginx) and [Python](https://www.digitalocean.com/community/tutorials/how-to-deploy-python-web-applications-with-the-bottle-micro-framework-on-ubuntu-14-04).
+```ruby
+bundle exec cap production deploy
+```
 
-## Custom Script Deployments
+### SSH
 
-You can also deploy to your DigitalOcean Droplet directly via [ftp, sftp, scp, rsync or ssh]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-ftp-sftp-scp.md %}). Your custom deployment commands would be included in your deployment pipeline as a [custom script]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}).
+You can also provide explicit commands on the Droplet shell via [ssh]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-ftp-sftp-scp.md %}).
+
+```bash
+ssh codeship_user@your.droplet.com \
+'cd ~/src/repo ; systemctl stop node-sample ; git pull ; systemctl restart node-sample'
+```
+
+## Option Two: Copy files directly from Codeship build to Droplet
+
+Files can be copied directly over from your Codeship deployment build to your Droplet via [ftp, sftp, scp or rsync]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-ftp-sftp-scp.md %}). Your custom deployment commands would be included in your deployment pipeline as a [custom script]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}).
+
+### SCP
+
+```bash
+scp -rp ~/clone/* codeship_user@your.droplet.com:/path/on/droplet/
+```
+
+### Rsync
+
+```bash
+rsync -avz ~/clone/ codeship_user@your.droplet.com:/path/on/droplet/
+```
