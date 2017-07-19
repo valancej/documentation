@@ -72,6 +72,12 @@ jet encrypt your_env_file your_env_file.encrypted
 
  This encrypted file will be committed to your repository and used in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
+### Codeship Public Key
+
+Some Google Cloud services will require that you add your [Codeship public key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) for authentication purposes.
+
+**Note** that Google may fail authentication if you do not add the Google Cloud user the key is for to the end of the key. For example, if the Google Cloud user is `deploy@Codeship`, you will want to add `deploy@Codeship` to the end of the SSH key itself, otherwise Google will not load the key for the user appropriately.
+
 ## Pushes And Deployments
 
 ### Creating Your Services
