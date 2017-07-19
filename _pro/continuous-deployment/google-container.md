@@ -38,7 +38,7 @@ Go to the [GCP console](https://console.developers.google.com), select your proj
 
 Next, click *Add credentials* and add a *Service account*. Then, select the JSON download option when prompted on the next page.
 
-This will download a json file that contains credentials that you will use for authentication in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+This will download a JSON file that contains credentials that you will use for authentication in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 First, you will need to provide these credentials as [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}).
 
@@ -54,15 +54,23 @@ GOOGLE_AUTH_EMAIL=...
 GOOGLE_PROJECT_ID=...
 ```
 
-- `GOOGLE_AUTH_JSON` should be populated with the account credential string you received in the json file you downloaded earlier.  **Note** that you will need to remove all newlines from the file. On Linux and OSX you can use `tr '\n' ' ' < your_file_name` to get the line and copy it back into the file. You can find the
+- `GOOGLE_AUTH_JSON` should be populated with the account credential string you received in the JSON file you downloaded earlier.  **Note** that you will need to remove all newlines from the file. On Linux and macOS you can use `tr '\n' ' ' < your_file_name` to get the line and copy it back into the file.
 
 - `GOOGLE_AUTH_EMAIL` should be populated with the account email address that you can find on the *credentials* page in the *Service accounts* section. **Note** that it has to be from the *Service account* we just created.
 
 - `GOOGLE_PROJECT_ID` should be populated with the value found on the Dashboard of your project in the Google developer console.
 
+<div class="alert-block">
 **Be sure to put this unencrypted env file into `.gitignore` so its never committed, or delete it altogether following encryption.**
+</div>
 
-After creating this environment variables file, you will need to encrypt it using the instructions from our [encrypted environment variables tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). This encrypted file will be committed to your repository and used in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+After creating this environment variables file, you will need to encrypt it using the instructions from our [encrypted environment variables tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or by using the commands below:
+
+```bash
+jet encrypt your_env_file your_env_file.encrypted
+```
+
+ This encrypted file will be committed to your repository and used in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ## Pushes And Deployments
 
@@ -168,4 +176,4 @@ gcloud container clusters delete $KUBERNETES_APP_NAME -q
 
 ## Other Google Cloud Services
 
-If you are looking to use other Google Cloud services, we main [specific documentation]({{ site.baseurl }}{% link _pro//continuous-deployment/google-cloud.md %}) for using the Google Cloud CLI for all other deployments.
+If you are looking to use other Google Cloud services, we maintain [specific documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}) for using the Google Cloud CLI for all other deployments.

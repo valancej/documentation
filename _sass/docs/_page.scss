@@ -326,13 +326,38 @@ div#integrations {
 }
 
 .alert-block {
-  background: rgba($cRed, .2);
+  background-color: $cRed;
   border: 1px solid $cRed;
   box-shadow: -3px 0 0 $cRed;
+  color: #fff !important;
+  margin: 2.5em 0 2.5em;
 
   &::before {
     color: $cRed;
   }
+
+  p {
+    margin-top: 1rem !important;
+    color: #fff !important;
+  }
+
+  strong {
+    color: #fff !important;
+  }
+
+  code {
+    background: none !important;
+    color: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: bold !important;
+  }
+
+}
+
+alert-block {
+
+
 }
 
 .info-block {
