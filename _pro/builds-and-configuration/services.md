@@ -39,7 +39,7 @@ Running with Docker, your Codeship services allow you to:
 Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %})
 
 ## Services File Setup & Configuration
-By default, we look for the filename `codeship-services.yml`. In its absense, Codeship will automatically search for a `docker-compose.yml` file to use in its place.
+By default, we look for the filename `codeship-services.yml`. In its absence, Codeship will automatically search for a `docker-compose.yml` file to use in its place.
 
 Your services file is written in YAML and is structured similarly to a [Docker Compose](https://docs.docker.com/compose/) file, with each service declared in a block. You may choose to nest your services under a top-level services key, or declare each service in a top-level block. Both examples below are valid:
 
