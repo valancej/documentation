@@ -30,7 +30,7 @@ This tutorial describes the way caching works on Codeship's infrastructure durin
 
 As a way to speed up your build pipelines, Codeship supports image caching that works per-service and per-branch.
 
-This mean's at the end of builds, we will push any images you enabling caching for out to a secure registry and pull the image at the start of future builds to reuse as many of the image layers as possible rather than rebuilding them. [Read more about optimizing your Dockerfile for caching.](#optimizing-your-build-to-use-the-docker-image-cache)
+This mean's after your build is finished, we will push any images you enable caching for out to a secure registry and pull the image at the start of future builds to reuse as many of the image layers as possible rather than rebuilding them. [Read more about optimizing your Dockerfile for caching.](#optimizing-your-build-to-use-the-docker-image-cache)
 
 To use caching on a particular service, you must add a `cached` declaration to your services description:
 
@@ -70,6 +70,8 @@ app:
 ```
 
 If the `default_cache_branch` directive is not present, we will always use `master` as your cache fallback branch by default.
+
+Note that branch-cache images are automatically removed after 90 days of inactivity.
 
 ## Using The Remote Cache Locally [deprecated]
 
