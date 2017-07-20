@@ -21,7 +21,7 @@ tags:
 
 [PagerDuty](https://www.pagerduty.com) lets you send alerts and notifications about critical events to your on-call or development team.
 
-[Their documentation](https://v2.developer.pagerduty.com/docs) does a great job of providing more information, in addition to the setup instructions below.
+[The PagerDuty documentation](https://v2.developer.pagerduty.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
@@ -29,7 +29,7 @@ tags:
 
 First, you will need to add your PagerDuty API token to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-You will need to provide this API token in your request headers. The [PagerDuty documentation](https://v2.developer.pagerduty.com/docs/authentication) provided language-specific examples for this authentication.
+You will need to provide this API token in your request headers. The [PagerDuty authentication documentation](https://v2.developer.pagerduty.com/docs/authentication) provided language-specific examples for this authentication.
 
 ### Sending Events
 
@@ -42,7 +42,6 @@ There are a couple common ways you may do this:
 - Combined with your deployment commands in a script, to alert of a failed deployment.
 
 You will want to add the PagerDuty API calls to a new script file in your repository and call that via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) using the service you defined for authenticating with PagerDuty:
-
 
 ```yaml
 - name: pagerduty-alert
@@ -108,7 +107,7 @@ First, you will need to add your PagerDuty API token to your to your project's [
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
-You will need to provide this API token in your request headers. The [PagerDuty documentation](https://v2.developer.pagerduty.com/docs/authentication) provided language-specific examples for this authentication.
+You will need to provide this API token in your request headers. The [PagerDuty authentication documentation](https://v2.developer.pagerduty.com/docs/authentication) provided language-specific examples for this authentication.
 
 #### Sending Events
 
