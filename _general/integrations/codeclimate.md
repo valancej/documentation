@@ -169,6 +169,7 @@ The code to use to end the parallel coverage report is:
 
 ```bash
 cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
+    ./cc-test-reporter upload-coverage
 ```
 
 Note that you will need to manually `$PARTS` to reflect the number of parallel threads.
