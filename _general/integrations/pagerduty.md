@@ -109,7 +109,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 You will need to provide this API token in your request headers. The [PagerDuty authentication documentation](https://v2.developer.pagerduty.com/docs/authentication) provided language-specific examples for this authentication.
 
-#### Sending Events
+### Sending Events
 
 Next, you will need to add [API calls to PagerDuty](https://v2.developer.pagerduty.com/docs/send-an-event-events-api-v2) via a custom-script deployment added to your [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}), most likely to alert of a successful deployment or combined with your deployment commands in a script to alert of a failed deployment.
 
