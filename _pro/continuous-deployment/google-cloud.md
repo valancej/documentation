@@ -185,4 +185,4 @@ Google also publishes stack and language specific tutorials for deploying to App
 
 ## Container Engine And Container Registry
 
-If you are looking to use Google Container Engine and Google Container registry, we main [specific documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-container.md %}) for using those services.
+If you are looking to use Google Container Engine and Google Container registry, we maintain [specific documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-container.md %}) for using those services.
