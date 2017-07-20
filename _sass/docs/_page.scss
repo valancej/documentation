@@ -305,96 +305,75 @@ div#integrations {
   position: relative;
   padding: 1rem;
   line-height: 1.2em;
+  border: 1px solid #fff;
   border-radius: 4px;
   padding-left: 40px;
+  color: #fff;
+  margin: 1rem 0;
 
   &::before {
     font-family: 'FontAwesome';
-    content: '\f05a';
     position: absolute;
     top: 50%;
     width: 40px;
     left: 0;
     text-align: center;
     transform: translateY(-50%);
+    color: #fff;
   }
 
   p {
-    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
-  }
-
-}
-
-.alert-block {
-  background-color: $cRed;
-  border: 1px solid $cRed;
-  box-shadow: -3px 0 0 $cRed;
-  color: #fff !important;
-  margin: 2.5em 0;
-
-  &::before {
-    color: $cRed;
-  }
-
-  p {
-    margin-top: 1rem !important;
-    color: #fff !important;
+    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif;
+    margin: .2rem;
   }
 
   strong {
-    color: #fff !important;
-  }
-
-  code {
-    background: none !important;
-    color: #fff !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-weight: bold !important;
-  }
-
-}
-
-.info-block {
-  background-color: $_cLightblue;
-  border: 1px solid $_cLightblue;
-  box-shadow: -3px 0 0 $_cLightblue;
-  color: #fff;
-  margin-bottom: 2.5em;
-
-  &::before {
     color: #fff;
   }
 
   a {
     color: #fff;
-    font-weight: bold;
-    font-size: 1rem !important;
-  }
-
-  code {
-    background: none !important;
-    color: #fff !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-weight: bold !important;
+    font-size: 1em;
+    margin: 0;
   }
 
   a:hover {
     color: #fff;
-    font-weight: bold;
-    background-image: linear-gradient(to bottom, transparent 50%, #fff 50%);
+  }
+}
+
+.alert-block {
+  background-color: $_cRed;
+  border-color: $_cRed;
+
+  &::before {
+    content: '\f071';
   }
 
-  p {
-    margin-top: 1rem !important;
+  a {
+    color: $_cDarkred;
   }
 
-  strong {
-    color: #fff;
-    text-transform: capitalize;
+  code {
+    background-color: $_cDarkred;
+  }
+}
+
+.info-block {
+  background-color: $_cLightblue;
+  border-color: $_cLightblue;
+
+  &::before {
+    content: '\f05a';
   }
 
+  a {
+    color: $_cDarkblue;
+  }
+
+  code {
+    background-color: $_cDarkblue;
+  }
 }
 
 .endcontent-block {

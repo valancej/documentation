@@ -13,7 +13,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-**current build: last edited on {{ site.data.basic.latest_update }}**
+This page was last updated on {{ site.data.basic.latest_update }}.
 </div>
 
 * include a table of contents
