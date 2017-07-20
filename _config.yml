@@ -63,7 +63,7 @@ exclude:
   - README.md
   - templates
 encoding: utf-8
-gems:
+plugins:
   - jekyll-coffeescript
   - jekyll-seo-tag
   - jekyll-sitemap
