@@ -157,6 +157,32 @@ As you can see, the deployment script is essentially just standard Google Cloud 
 
 You can also take a look at a [longer example we use for integration testing our container](https://github.com/codeship-library/google-cloud-deployment/blob/master/deployment/test/deploy_to_google.sh).
 
+## App Engine
+
+Deploying your application to App Engine via the `gcloud` utility only involves a couple of commands. The following steps are assuming you already [created followed the steps for authenticating](#authentication) and [added a gcloud service](#creating-your-services) to your `codeship-services.yml` file.
+
+In your repository create a script like the following to configure the individual steps required for the App Engine deployment.
+
+```bash
+#!/bin/bash
+
+# Authenticate with the Google Services
+codeship_google authenticate
+
+# switch to the directory containing your app.yml (or similar) configuration file
+# note that your repository is mounted as a volume to the /deploy directory
+cd /deploy/
+
+# deploy the application
+gcloud app deploy
+```
+
+This is the most basic version of an App Engine deployment script. You can customize the script to fit your specific needs, e.g. by specifying custom configuration files that will drive the deployment instead of the default `app.yml`.
+
+Please see the [documentation for `gcloud app deploy`](https://cloud.google.com/sdk/gcloud/reference/app/deploy) on which options are available and how they affect the deployment.
+
+Google also publishes stack and language specific tutorials for deploying to App Engine via their documentation, detailing more advanced options. See their [App Engine documentation](https://cloud.google.com/appengine/docs/) for specific articles on deploying [Ruby](https://cloud.google.com/appengine/docs/flexible/ruby/testing-and-deploying-your-app), [Node.js](https://cloud.google.com/appengine/docs/flexible/nodejs/testing-and-deploying-your-app) or [PHP](https://cloud.google.com/appengine/docs/flexible/php/testing-and-deploying-your-app) based applications (among others).
+
 ## Container Engine And Container Registry
 
 If you are looking to use Google Container Engine and Google Container registry, we main [specific documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-container.md %}) for using those services.
