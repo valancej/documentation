@@ -157,6 +157,10 @@ As you can see, the deployment script is essentially just standard Google Cloud 
 
 You can also take a look at a [longer example we use for integration testing our container](https://github.com/codeship-library/google-cloud-deployment/blob/master/deployment/test/deploy_to_google.sh).
 
+## App Engine
+
+Deploying your application to App Engine via the `gcloud` utility only involves a couple of commands. Head over to our [Google App Engine]({{ site.baseurl }}{% link _pro/continuous-deployment/google-app-engine.md %}) deployment articles for the details.
+
 ## Container Engine And Container Registry
 
-If you are looking to use Google Container Engine and Google Container registry, we main [specific documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-container.md %}) for using those services.
+If you are looking to use Google Container Engine and Google Container registry, we maintain [specific documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-container.md %}) for using those services.

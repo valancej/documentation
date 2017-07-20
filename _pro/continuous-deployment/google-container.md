@@ -4,7 +4,7 @@ shortTitle: Deploying To Google Container Engine
 menus:
   pro/cd:
     title: Google Container Engine
-    weight: 5
+    weight: 6
 tags:
   - deployment
   - google
@@ -97,7 +97,7 @@ googleclouddeployment:
   encrypted_env_file: google-credentials.encrypted
   add_docker: true
   volumes:
-    - ./:/deploy  
+    - ./:/deploy
 ```
 
 **Note** that this example adds your Google Cloud account credentials as encrypted environment variables and adds the repository folder as a [volume]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}) at `/deploy` so that we can use it as part of the build.
