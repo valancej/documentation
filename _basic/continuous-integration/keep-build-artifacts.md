@@ -32,7 +32,7 @@ then add the following commands to the your setup / test steps
 
 ```shell
 pip install awscli
-aws s3 cp artifact.zip s3://mybucket/artifact.zip
+aws s3 cp your_artifact_file.zip s3://mybucket/your_artifact_file.zip
 ```
 
 For more advanced usage of the S3 CLI, please see the [S3 documentation](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html) on amazon.com
