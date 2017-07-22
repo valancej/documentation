@@ -127,7 +127,7 @@ Because each step runs in a separate group of containers, you will likely want t
   command: google-deploy.sh
 ```
 
-Inside this deployment script will be all commands you want to run via the Google Cloud or Kubernetes CLI, both included in the [deployment image that we maintain]((https://hub.docker.com/r/codeship/google-cloud-deployment/).
+Inside this deployment script will be all commands you want to run via the Google Cloud or Kubernetes CLI, both included in the [deployment image that we maintain](https://hub.docker.com/r/codeship/google-cloud-deployment/).
 
 Here is an example deployment script that you can use as a basis for your own deployments. Note that it authenticates at the top using the command discussed earlier.
 
