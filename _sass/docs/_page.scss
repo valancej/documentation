@@ -321,7 +321,7 @@ div#integrations {
 
   h2 {
     font: bolder 20px/1.6 "Lato", sans-serif;
-    margin: .8em 0;
+    margin: 1.2em 0 .8em 0;
     color: #fff;
   }
 
@@ -380,6 +380,7 @@ div#integrations {
 }
 
 .feedback-block {
+  padding-top: .1em;
   background-color: $_cLightgrey;
   border-color: $_cLightgrey;
 
@@ -394,6 +395,10 @@ div#integrations {
 
   code {
     background-color: $_cDarkgrey;
+  }
+
+  .rating-nero-value {
+    margin-right: 2em;
   }
 }
 
