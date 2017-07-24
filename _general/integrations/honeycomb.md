@@ -81,7 +81,7 @@ RUN honeymarker
 
 **Note** that Honeymarker installs via `go get`, requiring that Go is installed in the same container.
 
-#### Using Honeymarker
+#### Running Honeymarker Commands
 
 Once you have Honeymarker installed via a new service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will need to run Honeymarker commands as a new step, using the service with Honeymarker installed, in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
@@ -140,7 +140,7 @@ $ honeymarker
 
 **Note** that Honeymarker installs via `go get`, which is configured by default on Codeship Basic build machines.
 
-#### Using Honeymarker
+#### Running Honeymarker Commands
 
 Once you have Honeymarker installed via your project's setup commands, you will need to add new commands to your projet's [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) to make use of it:
 
