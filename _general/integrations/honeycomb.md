@@ -66,11 +66,11 @@ If you want to limit this step only to certain branches, for instance on deploym
 
 ### Using Honeymarker
 
-Honeycomb also provides [Honeymarker][https://github.com/honeycombio/honeymarker] to make it even easier to use markets within your specific datasets.
+Honeycomb also provides [Honeymarker](https://github.com/honeycombio/honeymarker) to make it even easier to use markets within your specific datasets.
 
 #### Installing Honeymarker
 
-To use [Honeymarker][https://github.com/honeycombio/honeymarker], you will need to install the tool into one of the services defined via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To use [Honeymarker](https://github.com/honeycombio/honeymarker), you will need to install the tool into one of the services defined via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 In the Dockerfile for the service you are building, or in the Dockerfile for a new Honeymarker service, you will need to add:
 
@@ -127,11 +127,11 @@ curl https://api.honeycomb.io/1/batch/Dataset%20Name -X POST \
 
 ### Using Honeymarker
 
-Honeycomb also provides [Honeymarker][https://github.com/honeycombio/honeymarker] to make it even easier to use markets within your specific datasets.
+Honeycomb also provides [Honeymarker](https://github.com/honeycombio/honeymarker) to make it even easier to use markets within your specific datasets.
 
 #### Installing Honeymarker
 
-To use [Honeymarker][https://github.com/honeycombio/honeymarker], you will need to install the tool by adding a couple of new commands to your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
+To use [Honeymarker](https://github.com/honeycombio/honeymarker), you will need to install the tool by adding a couple of new commands to your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
 ```bash
 $ go get github.com/honeycombio/honeymarker
