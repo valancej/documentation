@@ -24,7 +24,7 @@ We use the [GitHub issue tracker][issues] to track bugs and features for the doc
 
 Please don't create new issues on this repository when you experience issues with your builds on https://codeship.com, want to request new features for the CI system or have general questions on how to use https://codeship.com for your projects.
 
-In all of the above cases, reach out to our support team at support@codeship.com or on Twitter at [@CodeshipSupport](https://twitter.com/CodeshipSupport).
+In all of the above cases, reach out to our support team at [support@codeship.com](mailto:support@codeship.com) or on Twitter at [@CodeshipSupport](https://twitter.com/CodeshipSupport). See "[Getting Support](SUPPORT.md)" for more information.
 
 *This file was taken from https://github.com/middleman/middleman-heroku/blob/master/CONTRIBUTING.md and extended for use with the Codeship documentation.*
 
