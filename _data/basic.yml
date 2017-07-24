@@ -1,7 +1,7 @@
-latest_update: '2017/07/13'
-ami_id: 'ami-c44246d2'
+latest_update: '2017/07/24'
+ami_id: 'ami-05574713'
 defaults:
   ruby: '2.1.7'
-  php: '5.6'
+  php: '5.5'
   node: '0.10'
   python: '2.7'
