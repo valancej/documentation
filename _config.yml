@@ -61,6 +61,7 @@ exclude:
   - npm-shrinkwrap.json
   - package.json
   - README.md
+  - SUPPORT.md
   - templates
 encoding: utf-8
 plugins:
