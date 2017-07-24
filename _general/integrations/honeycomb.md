@@ -64,6 +64,35 @@ If you want to limit this step only to certain branches, for instance on deploym
   command: honeycomb.sh
 ```
 
+### Using Honeymarker
+
+Honeycomb also provides [Honeymarker][https://github.com/honeycombio/honeymarker] to make it even easier to use markets within your specific datasets.
+
+#### Installing Honeymarker
+
+To use [Honeymarker][https://github.com/honeycombio/honeymarker], you will need to install the tool into one of the services defined via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+
+In the Dockerfile for the service you are building, or in the Dockerfile for a new Honeymarker service, you will need to add:
+
+```bash
+RUN go get github.com/honeycombio/honeymarker
+RUN honeymarker
+```
+
+**Note** that Honeymarker installs via `go get`, requiring that Go is installed in the same container.
+
+#### Running Honeymarker Commands
+
+Once you have Honeymarker installed via a new service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will need to run Honeymarker commands as a new step, using the service with Honeymarker installed, in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
+
+```bash
+- name: honeymarker
+  service: your_service
+  command: "honeymarker -k <your-writekey> -d <dataset> COMMAND [command-specific flags]"
+```
+
+You can view the [Honeymarker documentation](https://github.com/honeycombio/honeymarker) for a full list of commands that you can use.
+
 ## Codeship Basic
 
 ### Setting Your Team Write Key
@@ -95,3 +124,28 @@ curl https://api.honeycomb.io/1/batch/Dataset%20Name -X POST \
         }
       ]'
 ```
+
+### Using Honeymarker
+
+Honeycomb also provides [Honeymarker][https://github.com/honeycombio/honeymarker] to make it even easier to use markets within your specific datasets.
+
+#### Installing Honeymarker
+
+To use [Honeymarker][https://github.com/honeycombio/honeymarker], you will need to install the tool by adding a couple of new commands to your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
+
+```bash
+$ go get github.com/honeycombio/honeymarker
+$ honeymarker
+```
+
+**Note** that Honeymarker installs via `go get`, which is configured by default on Codeship Basic build machines.
+
+#### Running Honeymarker Commands
+
+Once you have Honeymarker installed via your project's setup commands, you will need to add new commands to your projet's [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) to make use of it:
+
+```bash
+honeymarker -k <your-writekey> -d <dataset> COMMAND [command-specific flags]
+```
+
+You can view the [Honeymarker documentation](https://github.com/honeycombio/honeymarker) for a full list of commands that you can use.
