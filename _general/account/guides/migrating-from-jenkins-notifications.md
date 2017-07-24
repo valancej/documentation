@@ -31,7 +31,7 @@ Because of the number of options, Jenkins can become a time-consuming tool to ma
 Here’s a shortlist of notifications that are useful to maintain consistent visibility, with respective links to get them set up on Codeship:
 
 - [GitHub Status API](https://github.com/blog/1227-commit-status-api)
-- [Set up email notification](https://codeship.com/user/edit)
+- [Set up email notification](https://app.codeship.com/user/edit)
 - [Chrome Notifications with Codeship’s Shipscope](https://chrome.google.com/webstore/detail/shipscope/jdedmgopefelimgjceagffkeeiknclhh)
 - [Codeship Slack integration](https://blog.codeship.com/codeship-slack/)
 - [Flowdock and Grove.io](https://blog.codeship.com/grove-and-flowdock/)
@@ -74,7 +74,7 @@ If you want different branches to send notifications to the same channel, simply
 
 ## The Codeship HipChat Integration
 
-The HipChat plugin for Atlassian’s chat client provides notifications for builds and additional information and links back to commits. 
+The HipChat plugin for Atlassian’s chat client provides notifications for builds and additional information and links back to commits.
 
 To setup this Codeship to send notifications to Hipchat, first go to your Hipchat team's integrations page and find the Codeship integration.
 
@@ -82,7 +82,7 @@ To setup this Codeship to send notifications to Hipchat, first go to your Hipcha
 
 ![Hipchat Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/hipchat_two.png)
 
-Once the integration have been added, you are given a token which you will need to setup Codeship. 
+Once the integration have been added, you are given a token which you will need to setup Codeship.
 
 ![Hipchat Setup Screenshot]({{ site.baseurl }}/images/jenkins-guide/hipchat_three.png)
 
