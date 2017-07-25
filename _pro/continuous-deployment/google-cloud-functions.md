@@ -85,4 +85,6 @@ cd /deploy/
 gcloud beta functions deploy "${CLOUD_FUNCTION_NAME}" --stage-bucket "${GOOGLE_CLOUD_BUCKET_NAME}" <TRIGGER>
 ```
 
+`<TRIGGER>` refers to how you want to call your Cloud Function, possible values are `--trigger-http` for functions invoked via HTTP requests. Additional possible values are documented on the [Calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) documentation page.
+
 Please see the [documentation for deploying Cloud Functions](https://cloud.google.com/functions/docs/deploying/filesystem) on which additional options are available and how they affect the deployment.
