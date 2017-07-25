@@ -34,7 +34,7 @@ Some Google Cloud services will require that you add your [Codeship public key](
 
 **Note** that Google may fail authentication if you do not add the Google Cloud user the key is for to the end of the key. For example, if the Google Cloud user is `deploy@Codeship`, you will want to add `deploy@Codeship` to the end of the SSH key itself, otherwise Google will not load the key for the user appropriately.
 
-## Cloud Storage Buckket for Temporary Storage
+## Cloud Storage Bucket
 
 To deploy Google Cloud Functions from a local filesystem you will need a Cloud Storage Bucket to act as a temporary staging area. If you haven't already created such a bucket, please head over to the [Cloud Storage Console](https://console.cloud.google.com/storage/browser) and create a new bucket.
 
