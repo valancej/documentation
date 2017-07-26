@@ -342,6 +342,67 @@ This will use the  image we maintain for AWS authentication to generate credenti
 
 Learn more about [using AWS with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
 
+## IBM Bluemix Registry
+
+### Pushing To Bluemix Registry
+
+To push to IBM Bluemix in your builds, you will want to make use of our service generator method for registry authentication. This is because Bluemix uses a CLI-based login system.
+
+[We maintain an image](https://github.com/codeship-library/ibm-bluemix-utilities) you can easily add to your push step to generate these credentials for you.
+
+First, you will need to provide your IBM `BLUEMIX_API_KEY` credential as an [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for your IBM authentication service. Also note that our image name must include your Bluemix registry path for your push step to authenticate. Here is an example [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+
+```yaml
+app:
+  build:
+    image: your_org/your_image
+    dockerfile_path: ./Dockerfile
+
+bluemix_dockercfg:
+  image: codeship/ibm-bluemix-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: bluemix.env.encrypted
+```
+
+Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
+
+Note that Bluemix requires the fully registry path in our image name, and the account you are authenticating with must have at least one namespace configured with the IBM Bluemix Container Registry product:
+
+```yaml
+- name: Push To Bluemix
+  service: app
+  type: push
+  image_name: registry.ng.bluemix.net/codeship/codeship-testing
+  registry: registry.ng.bluemix.net
+  dockercfg_service: bluemix_dockercfg
+```
+
+To see a full example of using IBM Bluemix Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+
+### Pulling From Bluemix Registry
+
+To pull images from Bluemix, you will need to provide the image, including the registry path, as well as use the service generator for authentication in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+
+For example:
+
+```yaml
+base:
+  build:
+    image: registry.ng.bluemix.net/your_namespace/image    
+    path: ./base
+    dockerfile_path: Dockerfile
+  dockercfg_service: bluemix_dockercfg
+
+bluemix_dockercfg:
+  image: codeship/ibm-bluemix-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: bluemix.env.encrypted
+```
+
+This will use the  image we maintain for IBM Bluemix authentication to generate credentials on image pull. Note that you will need to have your IBM `BLUEMIX_API_KEY` credential set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service.
+
+To see a full example of using IBM Bluemix Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+
 ## Common Questions
 
 ### Pushing To tags
