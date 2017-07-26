@@ -9,6 +9,10 @@
     margin-top: 0;
   }
 
+  a {
+    font-size: 1rem !important;
+  }
+
   button {
     cursor: pointer;
   }
@@ -40,7 +44,7 @@
       }
 
       li {
-        padding: 0 1rem;
+        padding: 0 .7rem;
       }
     }
   }

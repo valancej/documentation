@@ -8,6 +8,9 @@ main:
   - title: Pro
     identifier: pro
     url: /pro
+  - title: Integrations
+    identifier: integrations
+    url: /integrations
   - title: More Resources
     identifier: more-resources
     url: /more-resources
@@ -58,7 +61,7 @@ basic:
   - title: Services
     identifier: basic/services
     url: basic/services
-  - <<: *GENERAL_INTEGRATIONS    
+  - <<: *GENERAL_INTEGRATIONS
   - <<: *GENERAL_ABOUT
   - <<: *GENERAL_ACCOUNT
   - <<: *GENERAL_PROJECTS
