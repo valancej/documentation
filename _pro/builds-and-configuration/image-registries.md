@@ -342,9 +342,9 @@ This will use the  image we maintain for AWS authentication to generate credenti
 
 Learn more about [using AWS with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
 
-## IBM Bluemix
+## IBM Bluemix Registry
 
-### Pushing To Bluemix
+### Pushing To Bluemix Registry
 
 To push to IBM Bluemix in your builds, you will want to make use of our service generator method for registry authentication. This is because Bluemix uses a CLI-based login system.
 
@@ -379,7 +379,7 @@ Note that Bluemix requires the fully registry path in our image name, and the ac
 
 To see a full example of using IBM Bluemix Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
 
-### Pulling From Bluemix
+### Pulling From Bluemix Registry
 
 To pull images from Bluemix, you will need to provide the image, including the registry path, as well as use the service generator for authentication in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
