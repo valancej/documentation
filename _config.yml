@@ -70,6 +70,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-menus
+  - shipyard
 
 # SASS
 sass:
