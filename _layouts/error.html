@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% if page.shortTitle %}
+  {% assign title = page.shortTitle %}
+{% elsif page.shortTitle == null %}
+  {% assign title = page.title %}
+{% elsif page.category %}
+  {% assign title = page.category | capitalize %}
+{% elsif page.tag %}
+  {% capture title %}#{{ page.tag }}{% endcapture %}
+{% endif %}
+
+<div class="contentWrapper">
+  <div class="grid">
+    <div class="colxs100 pageContent">
+
+      <h1 class="pageTitle" data-swiftype-name="title" data-swiftype-type="string"  data-swiftype-index='true'>{{ title }}</h1>
+
+      <div data-swiftype-name="body" data-swiftype-type="text" data-swiftype-index='true'>
+        {{ content }}
+      </div>
+
+    </div>
+  </div>
+</div>
