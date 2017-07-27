@@ -284,24 +284,14 @@ div#integrations {
 
 }
 
-.reading-time {
-  margin: 1em 0 1.5em;
-  padding: 0;
-  color: #101b28;
-  font-size: 1.5rem;
-
-  p {
-    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif !important;
-  }
-}
-
 // *******************************************************
 // Notification Blocks
 // *******************************************************
 
 .alert-block,
 .feedback-block,
-.info-block {
+.info-block,
+.reading-block {
   position: relative;
   padding: .5em;
   line-height: 1.2em;
@@ -399,6 +389,25 @@ div#integrations {
 
   .rating-nero-value {
     margin-right: 2em;
+  }
+}
+
+.reading-block {
+  background-color: #fff;
+  border-color: #fff;
+  color: #101b28;
+
+  &::before {
+    content: '\f02d';
+    color: #101b28;
+  }
+
+  a {
+    color: $_cDarkgrey;
+  }
+
+  code {
+    background-color: $_cDarkgrey;
   }
 }
 
