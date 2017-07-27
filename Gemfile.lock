@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/shipyard-framework/shipyard-rubygem
-  revision: ee2952e4f46bbc0b007718468ab47cf0895baeed
+  remote: git://github.com/shipyard-framework/shipyard-rubygem.git
+  revision: b6c62a5a95ae79d1382f5a5d164807231ad63462
   branch: master
   specs:
     shipyard (0.1.0)

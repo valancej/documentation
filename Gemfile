@@ -14,7 +14,7 @@ gem 'jekyll-redirect-from', '~> 0.12.1'
 gem 'jekyll-menus', '~> 0.6.0'
 
 gem 'shipyard', '~> 0.1.0',
-    git: 'https://github.com/shipyard-framework/shipyard-rubygem',
+    github: 'shipyard-framework/shipyard-rubygem',
     branch: 'master'
 
 group :test do
