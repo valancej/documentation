@@ -26,7 +26,7 @@ Parallel test pipelines are an account upgrade. You can try [a free trial](https
 * include a table of contents
 {:toc}
 
-## What Are Parllel Test Pipelines?
+## What Are Parallel Test Pipelines?
 
 Parallel test pipelines allow you to split your test commands across multiple test pipelines to speed up your build time.
 
