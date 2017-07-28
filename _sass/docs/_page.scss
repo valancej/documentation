@@ -395,14 +395,14 @@ div#integrations {
 .reading-block {
   background-color: #fff;
   border-color: #fff;
-  color: #BAC5D2;
-  margin: 0 0 .8em 0;
+  color: #bac5d2;
+  margin: 0 0 .8em;
   padding-top: 0;
   padding-bottom: 0;
 
   &::before {
     content: '\f017';
-    color: #BAC5D2;
+    color: #bac5d2;
     top: .3em;
   }
 }
