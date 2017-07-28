@@ -395,19 +395,15 @@ div#integrations {
 .reading-block {
   background-color: #fff;
   border-color: #fff;
-  color: #101b28;
+  color: #BAC5D2;
+  margin: 0 0 .8em 0;
+  padding-top: 0;
+  padding-bottom: 0;
 
   &::before {
-    content: '\f02d';
-    color: #101b28;
-  }
-
-  a {
-    color: $_cDarkgrey;
-  }
-
-  code {
-    background-color: $_cDarkgrey;
+    content: '\f017';
+    color: #BAC5D2;
+    top: .3em;
   }
 }
 
