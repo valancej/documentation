@@ -16,15 +16,24 @@ task :test do
 end
 
 desc 'Update Ruby and NodeJS based dependencies'
-task update: %w[build update:rubygems update:yarn]
+task update: %w[update:image build update:rubygems update:yarn]
 namespace :update do
+	desc 'Update the base image'
+	task :image do
+		File.foreach('Dockerfile'){ |line|
+			next unless line.start_with? 'FROM'
+			image = line.split(' ')[1]
+			sh "docker pull #{image}"
+		}
+	end
+
 	desc 'Update Ruby based dependencies'
-	task rubygems: %w[build] do
+	task rubygems: %w[update:image build] do
 		sh "docker run -it --rm -v $(pwd):/docs #{IMAGE_NAME} bundle update"
 	end
 
 	desc 'Update NodeJS based dependencies'
-	task yarn: %w[build] do
+	task yarn: %w[update:image build] do
 		sh "docker run -it --rm -v $(pwd):/docs #{IMAGE_NAME} yarn upgrade"
 	end
 end
