@@ -75,9 +75,9 @@ For various roles, Codeship will hire part-time workers or 3rd party contractors
 
 We have a more detailed security checklist available on request. [Get in touch](mailto:security@codeship.com) if you need more information.
 
-## What 3rd Party Services Track Data?
+## 3rd Party Javascript Tracking
 
-Codeship uses a variety of third-party tools and javascript to perform a variety of user and business functions.
+Codeship uses a variety of third-party javascript embeds to perform a variety of user and business functions.
 
 - NewRelic is used for capturing errors and other data, to help us with debugging issues
 
