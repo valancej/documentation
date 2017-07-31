@@ -293,26 +293,24 @@ div#integrations {
 .info-block,
 .reading-block {
   position: relative;
-  padding: .5em;
+  padding: 1rem 1rem 1rem 2.5rem;
   line-height: 1.2em;
   border: 1px solid #fff;
   border-radius: 4px;
-  padding-left: 2.4em;
-  color: #fff;
+  color: #313a44;
   margin: 1.5em 0;
 
-  &::before {
+  > *:first-child::before {
     font-family: 'FontAwesome';
-    position: absolute;
-    left: 1em;
-    top: .8em;
     color: #fff;
+    margin-left: -1.5em;
+    padding-right: .5em;
   }
 
   h2 {
     font: bolder 20px/1.6 "Lato", sans-serif;
     margin: 1.2em 0 .8em;
-    color: #fff;
+    color: #313a44;
   }
 
   p {
@@ -320,27 +318,21 @@ div#integrations {
     margin: .2em 0;
   }
 
-  strong {
-    color: #fff;
-  }
-
   a {
-    color: #fff;
+    color: #1e252c;
     font-size: 1em;
     margin: 0;
-  }
-
-  a:hover {
-    color: #fff;
+    text-decoration: underline;
   }
 }
 
 .alert-block {
-  background-color: $_cRed;
-  border-color: $_cRed;
+  background-color: #ffc6cb;
+  border-color: #ffc6cb;
 
-  &::before {
+  > *:first-child::before {
     content: '\f071';
+    color: $_cDarkred;
   }
 
   a {
@@ -353,11 +345,12 @@ div#integrations {
 }
 
 .info-block {
-  background-color: $_cLightblue;
-  border-color: $_cLightblue;
+  background-color: #9ed8f5;
+  border-color: #9ed8f5;
 
-  &::before {
+  > *:first-child::before {
     content: '\f05a';
+    color: $_cDarkblue;
   }
 
   a {
@@ -371,12 +364,12 @@ div#integrations {
 
 .feedback-block {
   padding-top: .1em;
-  background-color: $_cLightgrey;
-  border-color: $_cLightgrey;
+  background-color: #f2f5f7;
+  border-color: #f2f5f7;
 
-  &::before {
+  > *:first-child::before {
     content: '\f059';
-    top: 1.8em;
+    color: $_cDarkgrey;
   }
 
   a {
@@ -395,15 +388,14 @@ div#integrations {
 .reading-block {
   background-color: #fff;
   border-color: #fff;
-  color: #bac5d2;
+  color: #788594;
   margin: 0 0 .8em;
   padding-top: 0;
   padding-bottom: 0;
 
-  &::before {
+  > *:first-child::before {
     content: '\f017';
-    color: #bac5d2;
-    top: .3em;
+    color: #788594;
   }
 }
 
