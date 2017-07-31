@@ -75,6 +75,26 @@ For various roles, Codeship will hire part-time workers or 3rd party contractors
 
 We have a more detailed security checklist available on request. [Get in touch](mailto:security@codeship.com) if you need more information.
 
+## What 3rd Party Services Track Data?
+
+Codeship uses a variety of third-party tools and javascript to perform a variety of user and business functions.
+
+- NewRelic is used for capturing errors and other data, to help us with debugging issues
+
+- Segment is our main data analytics platform. We use the data (in aggregate) to see how Codeship is being used and to design improvements and new features.
+
+- Google Analytics is used to track visitor data to our front-end marketing pages.
+
+- CrazyEgg is used to visually chart the performance of our front-end marketing pages.
+
+- Intercom is used to communicate with users based on behavioral metrics, although we are soon moving to a different platform for this.
+
+- Zendesk is used for live chat and ticket handling.
+
+- PerfectAudience is used to help optimize our Facebook advertising through anonymized behavior metrics.
+
+- Profitwell is used to help notify users when a credit card (stored securely in Braintree, our payments provider) needs to be renewed or updated.
+
 ## How Can I Get In Touch About Security?
 
 If you have any further questions you can send an email to [contact@codeship.com](mailto:security@codeship.com).
