@@ -328,10 +328,12 @@ div#integrations {
     color: #fff;
     font-size: 1em;
     margin: 0;
+    font-weight: bold;
   }
 
   a:hover {
     color: #fff;
+    font-weight: bold;
   }
 }
 
@@ -362,6 +364,7 @@ div#integrations {
 
   a {
     color: #fff !important;
+    font-weight: bold;
   }
 
   code {
