@@ -129,14 +129,6 @@ a {
   }
 }
 
-.link {
-  @include sexyUnderline($cAnchor);
-
-  &:hover {
-    @include sexyUnderline($cAnchorHover);
-  }
-}
-
 p {
   margin: 0 0 1rem;
   font-size: 1.1rem;
