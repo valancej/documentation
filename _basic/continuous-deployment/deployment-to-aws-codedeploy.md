@@ -28,6 +28,8 @@ This deployment method does not create the required configuration on AWS CodeDep
 
 It is generally a good idea to create a separate [IAM user](http://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) for Codeship when deploying to AWS. This allows you to explicitly control which resources Codeship can access during your builds. Please take note of the **Access Key ID** and **Secret Access Key** created during the process, as you'll need this when configuring the deployment.
 
+It is advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
+
 ### S3
 
 To upload new application versions to the S3 bucket specified in the deployment configuration we need at least _Put_ access to the bucket (or a the _appname_ prefix). See the following snippet for an example.

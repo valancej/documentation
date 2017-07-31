@@ -49,7 +49,9 @@ AWS_ACCESS_KEY_ID=your_access_key_id
 AWS_SECRET_ACCESS_KEY=your_secret_access_key
 ```
 
-You can get the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from the IAM settings in your [AWS Console](https://console.aws.amazon.com/console/home). You can read more about this in the [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html). Do not use the admin keys provided to your main AWS account and make sure to limit the access to what is necessary for your deployment through IAM.
+You can get the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from the IAM settings in your [AWS Console](https://console.aws.amazon.com/console/home). Do not use the admin keys provided to your main AWS account and make sure to limit the access to what is necessary for your deployment through IAM.
+
+It is advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
 ## Service Definition
 

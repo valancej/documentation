@@ -28,6 +28,8 @@ This deployment method does not create the required configuration on AWS Lambda.
 
 It is generally a good idea to create a separate [IAM user](http://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) for Codeship when deploying to AWS. This allows you to explicitly control which resources Codeship can access during your builds. Please take note of the **Access Key ID** and **Secret Access Key** created during the process, as you'll need this when configuring the deployment.
 
+It is advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
+
 ### Lambda
 
 To deploy into Lambda we need to make sure you’ve given us the correct permissions to deploy into it. Add the following policy to the AWS account which you use for deploying the Lambda function.
