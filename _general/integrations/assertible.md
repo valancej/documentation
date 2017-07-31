@@ -4,17 +4,18 @@ shortTitle: Assertible API testing and monitoring
 menus:
   general/integrations:
     title: Using Assertible
-    weight: 8
+    weight: 14
 tags:
-- APIs
-- Web services
-- API testing
-- Web service testing
+- apis
+- api testing
+- service testing
 - integration testing
 - functional testing
 - smoke testing
-- API monitoring
-
+- integrations
+- reporting
+- monitoring
+- notifications
 ---
 
 * include a table of contents
