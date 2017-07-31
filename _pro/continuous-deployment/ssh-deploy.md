@@ -15,7 +15,8 @@ tags:
   - public key
   - private key
   - sftp
-
+  - linode
+  - digital ocean
 ---
 
 <div class="info-block">

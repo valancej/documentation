@@ -12,6 +12,7 @@ tags:
   - parallelism
   - speed
   - parallel
+  - concurrency
 redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/

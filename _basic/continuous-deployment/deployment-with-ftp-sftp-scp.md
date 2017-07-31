@@ -11,7 +11,8 @@ tags:
   - rsync
   - ssh
   - sftp
-
+  - linode
+  - digital ocean
 redirect_from:
   - /continuous-deployment/deployment-with-ftp-sftp-scp/
 ---
