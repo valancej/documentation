@@ -9,9 +9,18 @@ $footer-bg: #15202d;
 }
 
 .Footer_sitemap {
+  padding-left: 2rem;
+
   ul {
     display: inline-block;
     padding: 0;
+  }
+
+  .colxs100,
+  .colsm50,
+  .colmd33,
+  .collg33 {
+    margin-bottom: 2rem;
   }
 
   a {
