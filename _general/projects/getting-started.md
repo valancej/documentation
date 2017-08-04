@@ -32,9 +32,6 @@ redirect_from:
 
 This article will teach you how to create and delete a project as well as give some further information on specific questions.
 
-* include a table of contents
-{:toc}
-
 ## Create a Project
 The screenshot below shows the initial [dashboard](https://app.codeship.com/projects) after logging in to Codeship for the first time.
 ![new project screen]({{ site.baseurl }}/images/general/1welcome.png)
