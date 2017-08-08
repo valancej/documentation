@@ -71,6 +71,8 @@ Using a wildcard deployment, you can specify it to run a deployment on any branc
 
 - Run deployments on builds that _start with_ `features/dev-name-1/`. In this scenario, `features/dev-name-1/test-case` **would** trigger a build, but `features/dev-name-2/test-case` would **not**.
 
+Another trick is setting _Branch starts with_ to `%`. This will match on **all** branches so you could trigger a deploy for all branches. You could then setup a custom deploy script to further customize the deployment actions for each branch.
+
 ### Creating Additional Deployment Pipelines
 
 It is likely that you will want multiple deployment pipelines, for instance one to deploy to a staging environment from your `staging` branch and another to deploy to your production environment from your `master` branch.
