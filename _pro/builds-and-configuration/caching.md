@@ -28,9 +28,9 @@ This tutorial describes the way caching works on Codeship's infrastructure durin
 
 ## Using Caching
 
-As a way to speed up your build pipelines, Codeship supports persistent caching. This means we'll export your final image as a compressed tar file, which is stored in an encrypted bucket on AWS S3.
+As a way to speed up your build pipelines, Codeship supports image caching that works per-service and per-branch.
 
-For future builds, we'll import the image to your build's machine and repopulate the local Docker image cache. Then, when the service image is rebuilt, only the layers that changed will need to be updated. [Read more about optimizing your Dockerfile for caching.](#optimizing-your-build-to-use-the-docker-image-cache)
+This mean's after your build is finished, we will push any images you enable caching for out to a secure registry and pull the image at the start of future builds to reuse as many of the image layers as possible rather than rebuilding them. [Read more about optimizing your Dockerfile for caching.](#optimizing-your-build-to-use-the-docker-image-cache)
 
 To use caching on a particular service, you must add a `cached` declaration to your services description:
 
@@ -70,6 +70,8 @@ app:
 ```
 
 If the `default_cache_branch` directive is not present, we will always use `master` as your cache fallback branch by default.
+
+Note that branch-cache images are automatically removed after 90 days of inactivity.
 
 ## Using The Remote Cache Locally [deprecated]
 
