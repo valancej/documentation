@@ -220,6 +220,12 @@ Because Codeship supports Docker natively, you will not need to do anything to g
 
 You can also [read more about Docker multi-stage builds on our blog](https://blog.codeship.com/docker-17-05-on-codeship-pro/).
 
+## Build Flags
+
+There are several Docker build flags, such as `-w`, that are not executable on Codeship becaude we do not provide the ability for Docker build instructions (other than via Docker in Docker.)
+
+These flags should instead be implemented as directives in your Services file, as available. For instance, the `-w` instruction can be replaced with the `working_dir` directive applied to any of your services. Most Compose directives not specifically excluded below should function as expected.
+
 ## Unavailable Features
 The following features available in Docker Compose are not available on Codeship. If these keys exist in your `codeship-services.yml` file, don't panic -- we'll just ignore them.
 
