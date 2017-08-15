@@ -58,11 +58,19 @@ Once you have created a new team, you can invite your colleagues and add new tea
 
 If you need to change the team settings (e.g., the name or the role), hover over the team card and click the gear icon showing on the right hand side.
 
+### Managing team settings
+By going to _Edit Team Settings_ for a specific team you are able to
+* Rename a team
+* Change the role of a team
+* Delete a team
+
+![Creating a Team]({{ site.baseurl }}/images/administration/manage_team_settings.png)
+
 ### Adding Projects to teams
 
-Projects can be added it to any of your teams. Members of the _Owners_ and _Managers_ team will have access to all projects by default.
+Projects can be added it to any of your teams by members of the _Owners_ or _Managers_ team. Members of the _Owners_ and _Managers_ team will have access to all projects by default.
 
-![Adding a project to a team]({{ site.baseurl }}/images/administration/add_project_to_team.png)
+![Adding a project to a team]({{ site.baseurl }}/images/administration/add_projects_to_teams.gif)
 
 ## Removing A User From All Teams And Projects
 
