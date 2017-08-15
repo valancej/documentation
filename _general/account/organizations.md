@@ -37,6 +37,16 @@ We currently offer the following roles (though more roles are already on our tod
 
 ![Creating an Organization]({{ site.baseurl }}/images/administration/create_organization.png)
 
+## Changing the name of an account
+
+_The name of an account can be changed by members of the owner team only._
+
+In order to change the account name navigate to the _Settings_ page of your account.
+
+![Renaming your account]({{ site.baseurl }}/images/general/update_organization_name.png)
+
+Account names are required to be unique. Changing the account name will also change the dashboard url `app.codeship.com/<your_account_name>` for that account.
+
 ## Managing Teams
 
 On the _Teams_ tab of the organization settings, you can manage your different teams, add new teams and invite or remove team members from the available teams.
