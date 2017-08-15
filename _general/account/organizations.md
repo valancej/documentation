@@ -87,7 +87,7 @@ To remove yourself from an organization or team within an organization navigate 
 
 **Attention:** If you remove yourself from all teams, you will also remove yourself from access to this organization.
 
-![Remove yourself form team]({{ site.baseurl }}/images/general/remove_yourself_from_team.png)
+![Remove yourself from a team]({{ site.baseurl }}/images/general/remove_yourself_from_team.png)
 
 ## Accessing Invoices
 
