@@ -81,6 +81,14 @@ From the "Show all Members" screen, changes to a any team member will apply to a
 
 ![Importing a personal project to an organization]({{ site.baseurl }}/images/administration/remove_all.png)
 
+## Removing yourself from a team or organization
+
+To remove yourself from an organization or team within an organization navigate to the _Teams_ page which can be accessed through the main navigation. On the teams management page, next to each team that you are part of, you have to option to _Leave team_.
+
+**Attention:** If you remove yourself from all teams, you will also remove yourself from access to this organization.
+
+![Remove yourself form team]({{ site.baseurl }}/images/general/remove_yourself_from_team.png)
+
 ## Accessing Invoices
 
 For all users assigned the **owner** role in an organization, you can access invoices by clicking on your name in the top right and selecting an organization from the drop-down. Then, on the sidebar underneath the organization name, you will see a tab for "Invoices".
