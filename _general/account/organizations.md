@@ -101,8 +101,6 @@ Account names are required to be unique. Changing the account name will also cha
 
 For all users assigned the **owner** role in an organization, you can access invoices by clicking on your name in the top right and selecting an organization from the drop-down. Then, on the sidebar underneath the organization name, you will see a tab for "Invoices".
 
-![View invoices]({{ site.baseurl }}/images/general/download-invoice.png)
-
 ## Transfer A Project To An Organization
 
 You can transfer your project to another account by navigating to:
