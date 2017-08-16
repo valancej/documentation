@@ -21,9 +21,9 @@ Invoices are available every month on the date the subscription began via email 
 ### View and download invoices
 To view your invoices on Codeship
 
-- As member of the owner team within your account go to _Subscription_ in the main navigation
+- As member of the owner team within your account, go to Subscription in the main navigation
 
-- Select _View Invoices_ link in sub navigation
+- Select _View Invoices_ link in sub-navigation
 
 Here, you will see the history of all previous invoices. All invoices can be downloaded as a PDF file.
 
