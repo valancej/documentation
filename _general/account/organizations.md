@@ -23,12 +23,12 @@ Organizations simplify and enhance team management as well as subscription manag
 
 You can define arbitrary teams and add them to any organization project and add Codeship accounts to those teams. You can also provide read-only access to some of your team members.
 
-## Managing Teams and Projects
+## Managing Teams And Projects
 
 On the _Teams_ tab of the organization settings, you can manage your different teams, add new teams and invite or remove team members from the available teams.
 
 
-### Team Roles and Permissions
+### Team Roles And Permissions
 
 We currently offer the following roles (though more roles are already on our todo list):
 
@@ -41,15 +41,15 @@ We currently offer the following roles (though more roles are already on our tod
 ### Default Teams
 
 Two teams are created for each organization by default:
-* **Owners**, containing only the user who created the organization by default. You can however add any other Codeship account to the _Owners_ team as well.
+* **Owners**, containing only the user who created the organization by default. However, you can add any other Codeship account to the _Owners_ team, as well.
   * Use that team to share responsibility around subscription, team management and billing.
-* **Managers**, containing nobody by default and have the set role _Managers_
-  * Use that team to give everyone access to all projects with full permission to manage (CRUD) projects
+* **Managers**, which is empty by default but is assigned the Managers permissions level.
+  * Use that team to give everyone access to all projects with full permission to view, edit and configure projects.
 
 _Manage access and permissions to projects more granularly by creating specific teams that have access to specific projects by using the **Project Managers** or **Contributor** role._
 
 
-### Creating a new team
+### Creating A New Team
 If you want to create a new team, click the _Create new team_ button and select the appropriate role.
 
 ![Creating a Team]({{ site.baseurl }}/images/administration/create_team.png)
@@ -58,25 +58,25 @@ Once you have created a new team, you can invite your colleagues and add new tea
 
 If you need to change the team settings (e.g., the name or the role), hover over the team card and click the gear icon showing on the right hand side.
 
-### Managing team settings
-By going to _Edit Team Settings_ for a specific team you are able to
+### Managing Team Settings
+By going to _Edit Team Settings_ for a specific team you are able to:
 * Rename a team
 * Change the role of a team
 * Delete a team
 
 ![Creating a Team]({{ site.baseurl }}/images/administration/manage_team_settings.png)
 
-### Adding Projects to teams
+### Adding Projects To Teams
 
-Projects can be added it to any of your teams by members of the _Owners_ or _Managers_ team. Members of the _Owners_ and _Managers_ team will have access to all projects by default.
+Projects can be assigned to any team in your organization, but only _Owners_ and _Managers_ are able to do so. By default, _Owners_ and _Managers_ have permission to view all projects regardless of team assignments, as well.
 
 ![Adding a project to a team]({{ site.baseurl }}/images/administration/add_projects_to_teams.gif)
 
 ## Removing A User From All Teams And Projects
 
-To remove a team member from all organization teams and projects, click into your team management page. At the top, you will see a link for "Show all Members".
+To remove a team member from all organization teams and projects, click into your team management page. At the top, you will see a link for "Show All Members".
 
-From the "Show all Members" screen, changes to a any team member will apply to all teams and projects, organization-wide.
+From the "Show All Members" screen, changes to any team member will apply to all teams and projects, organization-wide.
 
 ![Importing a personal project to an organization]({{ site.baseurl }}/images/administration/remove_all.png)
 
