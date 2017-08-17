@@ -24,13 +24,13 @@ Deploying your application with Docker Swarm and Codeship Pro is easy. You'll ju
 
 - A Docker Compose v3 file to orchestrate your Swarm
 
-- Your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) to run your CI/CD pipeline on Codeship Pro
+- Your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) to run your CI/CD pipeline on Codeship Pro
 
 ## Setup
 
 ### Compose v3 and codeship-services.yml
 
-To deploy with Docker Swarm and Codeship Pro, an important first step is clarifying the difference between your [Docker Compose v3]() file and your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To deploy with Docker Swarm and Codeship Pro, an important first step is clarifying the difference between your [Docker Compose v3](https://docs.docker.com/compose/compose-file/) file and your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 - The Docker Compose v3 file is intended to orchestrate your production container setup. Your Swarm deployment will rely on this file for knowing what to deploy and how to configure it.
 
@@ -48,9 +48,9 @@ If you have any specific authentication questions or need help, [contact our hel
 
 ## Deploying With Swarm
 
-To deploy with Swarm, you will want to run a `docker stack deploy` command via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To deploy with Swarm, you will want to run a `docker stack deploy` command via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 
-The specifics of this command will depend on the specifics of your application, and we recommend reading the [Docker documentation]() to learn more.
+The specifics of this command will depend on the specifics of your application, and we recommend reading the [Docker documentation](https://docs.docker.com) to learn more.
 
 ```yml
 - name: swarm-deploy
@@ -60,4 +60,4 @@ The specifics of this command will depend on the specifics of your application, 
 
 ## Example Project
 
-To learn more, you can [visit our sample repository]([here](https://github.com/codeship-library/example-voting-app/tree/codeship-integration) to see a working example of using Compose v3 and Swarm to deploy to Google Cloud.
+To learn more, you can [visit our sample repository](https://github.com/codeship-library/example-voting-app/tree/codeship-integration) to see a working example of using Compose v3 and Swarm to deploy to Google Cloud.
