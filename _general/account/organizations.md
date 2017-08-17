@@ -82,40 +82,43 @@ From the "Show All Members" screen, changes to any team member will apply to all
 
 ## Removing yourself from a team or organization
 
-To remove yourself from an organization or team within an organization navigate to the _Teams_ page which can be accessed through the main navigation. On the teams management page, next to each team that you are part of, you have to option to _Leave team_.
+To remove yourself from an organization or team within an organization navigate to the _Teams_ page, which can be accessed through the main navigation. On this page, next to each team that you are a member of, you have the option to _Leave Team_.
 
-**Attention:** If you remove yourself from all teams, you will also remove yourself from access to this organization.
+**Note:** If you remove yourself from all teams, you will also remove yourself from access to this organization.
 
 ![Remove yourself from a team]({{ site.baseurl }}/images/general/remove_yourself_from_team.png)
 
-## Creating an Organization
+## Creating An Organization
 
 * Click on your name in the navigation bar at the top and click the green _Create Organization_ button.
+
 * Choose an available name and you're done!
 
 ![Creating an Organization]({{ site.baseurl }}/images/administration/create_organization.png)
 
-## Changing the name of an account
+## Changing The Name Of An Account
 
 _The name of an account can be changed by members of the owner team only._
 
-In order to change the account name navigate to the _Settings_ page of your account.
+In order to change the account name, navigate to the _Settings_ page of your account.
 
 ![Renaming your account]({{ site.baseurl }}/images/general/update_organization_name.png)
 
-Account names are required to be unique. Changing the account name will also change the dashboard url `app.codeship.com/<your_account_name>` for that account.
+Account names are required to be unique. Changing the account name will also change the dashboard url - `app.codeship.com/<your_account_name>` - for that account.
 
 ## Accessing Invoices
 
-For all users assigned the **owner** role in an organization, you can access invoices by clicking on your name in the top right and selecting an organization from the drop-down. Then, on the sidebar underneath the organization name, you will see a tab for "Invoices".
+For all users assigned the **Owner** role in an organization, you can access invoices by clicking on your name in the top right and selecting an organization from the drop-down. Then, on the sidebar underneath the organization name, you will see a tab for _Invoices_.
 
 ## Transfer A Project To An Organization
 
-You can transfer your project to another account by navigating to:
+You can transfer your project to another organization by navigating to:
 
 ***Project Settings > General***
 
-A user with appropriate permission for the target account needs to confirm the transfer if you do not have project creation rights in the target account. When confirming the transfer, the user can choose which of the current team members to keep and which to remove.
+A user with appropriate permissions for the target organization will need to confirm the transfer, unless your account also has **Owner** or **Manager** permissions on the organization you are transferring the project to.
+
+When confirming a project transfer, you can choose which of the current team members to keep and which to remove.
 
 If you want to **bulk transfer projects**, please reach out to our support via [helpdesk.codeship.com](https://helpdesk.codeship.com).
 
