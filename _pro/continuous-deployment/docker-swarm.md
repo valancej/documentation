@@ -22,17 +22,17 @@ Deploying your application with Docker Swarm and Codeship Pro is easy. You'll ju
 
 - A provider to host your Swarm (AWS/Google Cloud/Azure/Etc)
 
-- A Docker Compose v3 file to orchestrate your Swarm
+- A Docker Compose V3 file to orchestrate your Swarm
 
 - Your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) to run your CI/CD pipeline on Codeship Pro
 
 ## Setup
 
-### Compose v3 and codeship-services.yml
+### Compose V3 and codeship-services.yml
 
-To deploy with Docker Swarm and Codeship Pro, an important first step is clarifying the difference between your [Docker Compose v3](https://docs.docker.com/compose/compose-file/) file and your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To deploy with Docker Swarm and Codeship Pro, an important first step is clarifying the difference between your [Docker Compose V3](https://docs.docker.com/compose/compose-file/) file and your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-- The Docker Compose v3 file is intended to orchestrate your production container setup. Your Swarm deployment will rely on this file for knowing what to deploy and how to configure it.
+- The Docker Compose V3 file is intended to orchestrate your production container setup. Your Swarm deployment will rely on this file for knowing what to deploy and how to configure it.
 
 - The [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), while very similar in syntax to a Docker Compose file, is intended to outline the containers and commands you need for your CI/CD pipeline.
 
@@ -58,6 +58,8 @@ The specifics of this command will depend on the specifics of your application, 
   command: docker stack deploy --compose-file docker-stack.yml app
 ```
 
+Note that this example is using a `docker` command. This will only work if the container can find a Docker host. In a normal use case, this example would be assuming that your container has already authenticated with and connected to an external resource, such as AWS or Google Cloud, where the Docker host that is expected to run these commands is available.
+
 ## Example Project
 
-To learn more, you can [visit our sample repository](https://github.com/codeship-library/example-voting-app/tree/codeship-integration) to see a working example of using Compose v3 and Swarm to deploy to Google Cloud.
+To learn more, you can [visit our sample repository](https://github.com/codeship-library/example-voting-app/tree/codeship-integration) to see a working example of using Compose V3 and Swarm to deploy to Google Cloud.
