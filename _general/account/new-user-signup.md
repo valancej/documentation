@@ -32,7 +32,7 @@ If you're looking to sign up and create a project on Codeship, this guide will w
 
 ### Signing Up
 
-**Sign up** [Navigate to our signup page](https://codeship.com/registrations/new).  You can sign up either via your Source Code Management (SCM) or email address.  SCMs we currently support are: GitLab, Bitbucket, or GitHub.
+To **sign up**, [navigate to our signup page](https://app.codeship.com/registrations/new).  You can sign up either via your Source Code Management (SCM) or email address.  SCMs we currently support are: GitLab, Bitbucket, or GitHub.
 
 Note that these oAuth login pages come directly from the SCM tools themselves and we do not have access to them or to the credentials you provide.
 
@@ -56,11 +56,28 @@ Note that these oAuth login pages come directly from the SCM tools themselves an
 
 *You can learn more about the permissions we ask when authenticating with SCM [here](https://documentation.codeship.com/general/account/permissions/).  Learn more about security at Codeship [here](https://documentation.codeship.com/general/about/security/).*
 
-### New User Setup
+### New Account Setup
 
-Once you’ve signed-up for Codeship you’ll be directed to a short form where we ask a few questions about your team size and type of product you’re looking for.  We ask these questions so that we can get a better sense of what you’d like to achieve with Codeship and so that we can direct you to the correct resources/help.
+Once you’ve signed up, unless you were invited by a team member to an existing organization, you will be asked to create your account / organization. Account names must be unique since, you will be able to access your account with a unique URL - `app.codeship.com/<your-account-name>`.
 
-![Email Login]({{ site.baseurl }}/images/new-user-setup/new-user-form.png)
+* Organization accounts are free to start and offer 100 free private builds per month and unlimited open source builds.
+* Organization accounts offer [centralized team management and team permissions]({{ site.baseurl }}/general/account/organizations/).
+
+![Account Creation Page]({{ site.baseurl }}/images/new-user-setup/organization-creation.png)
+
+_In case you are expecting to be invited to an already existing organization, you will find the email you signed up with - sometimes less obvious for oauth signup - on the organization creation page._
+
+### First Steps After Account Creation
+
+Right after account creation, you can either create your first project right away or begin setting up your teams and inviting your colleagues.
+
+#### Invite Relevant Team Members
+
+If you need to invite your team members to help you set your first projects up, this can be done on the Teams page.
+
+We recommend inviting people to the _Managers_ team if they will need to create or delete projects or manage additional team members. [Read more]({{ site.baseurl }}/general/account/organizations/#managing-teams) about the team management and permissions.
+
+#### Create Your First Project
 
 **Authenticate SCM:**  If you signed up for Codeship via GitLab, Bitbucket, or Github, your SCM is already authenticated!  If you’ve signed up via email, you authenticate your SCM here:
 
