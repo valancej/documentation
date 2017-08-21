@@ -19,7 +19,7 @@ menus:
 
 [Snyk](https://www.Snyk.com) is an automated way to check for security vulnerabilities with your dependencies.
 
-Starting with Snyk and Codeship is fast and easy. [Their documentation](https://snyk.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
+Starting with Snyk and Codeship is fast and easy. [The Snyk documentation](https://snyk.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
@@ -38,7 +38,7 @@ To add the Snyk CLI, you will need to add the following command to the Dockerfil
 RUN npm install -g snyk
 ```
 
-**Note** that this requires the Dockerfile also have Node and NPM available, to use the Snyk CLI.
+**Note** that this requires the Dockerfile to also have Node and NPM available, to use the Snyk CLI.
 
 ### Running A Scan
 
@@ -54,7 +54,7 @@ We will combine the Snyk authentication and Snyk scan commands into a script fil
 
 Inside this `snyk.sh` script, you will have something similar to:
 
-```
+```bash
 snyk auth
 snyk test
 ```
