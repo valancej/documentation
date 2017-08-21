@@ -17,7 +17,7 @@ menus:
 
 [Gemnasium](https://gemnasium.com) is a service for analyzing and monitoring the security of your application dependencies.
 
-[Their documentation](https://github.com/gemnasium/toolbelt) does a great job of providing more information, in addition to the setup instructions below.
+[The Gemnasium documentation](https://github.com/gemnasium/toolbelt) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
@@ -25,7 +25,7 @@ menus:
 
 You will need to add your `GEMNASIUM_TOKEN` value to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you  encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-There are other options to configure your `.gemnasium.yml` file that you can set in your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), as well. [See their documentation](https://github.com/gemnasium/toolbelt) for a full list.
+There are other options to configure your `.gemnasium.yml` file that you can set in your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), as well. [See the Gemnasium documentation](https://github.com/gemnasium/toolbelt) for a full list.
 
 ### Installing The CLI
 
@@ -38,7 +38,7 @@ To add the Gemnasium CLI, you will need to add the following command to the Dock
 sudo apt-get install gemnasium-toolbelt
 ```
 
-**Note** that this requires the Dockerfile also have `apt` available, to be able to install the CLI.
+**Note** that this requires the Dockerfile to be using a Debian-based base image. [See the Gemnasium documentation](https://github.com/gemnasium/toolbelt) for a list of alternative installation instructions.
 
 ### Running An Evaluation
 
@@ -73,7 +73,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 ![Configuration of Gemnasium env vars]({{ site.baseurl }}/images/continuous-integration/Gemnasium-env-vars.png)
 
-There are other options to configure your `.gemnasium.yml` file that you can set in your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}), as well. [See their documentation](https://github.com/gemnasium/toolbelt) for a full list.
+There are other options to configure your `.gemnasium.yml` file that you can set in your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}), as well. [See the Gemnasium documentation](https://github.com/gemnasium/toolbelt) for a full list.
 
 ### Installing The CLI
 
