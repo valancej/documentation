@@ -50,7 +50,7 @@ To install the Hakiri Toolbelt, you will need to add the following command to th
 gem install hakiri
 ```
 
-**Note** that this requires the Dockerfile to also have Ruby, Rails and Ruby Gems installed.
+**Note** that this requires the Dockerfile to also have Ruby and the `gems` binary installed.
 
 ### Running A Scan
 
