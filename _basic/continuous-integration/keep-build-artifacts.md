@@ -16,7 +16,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-For security reasons Codeship doesn't keep any artifacts from your builds besides the build log shown on the website. If you want to keep artifacts, you need to push them to a remote server during your builds.
+For security reasons Codeship does not provide persistent storage of files between builds (aside from the build log). If you wish to retain artifacts for troubleshooting purposes, then you will need to implement steps to transfer them to a remote server during the build run.
 
 ## Upload artifacts to S3
 
@@ -34,6 +34,10 @@ then add the following commands to the your setup / test steps
 pip install awscli
 aws s3 cp your_artifact_file.zip s3://mybucket/your_artifact_file.zip
 ```
+
+<div class="info-block">
+For Codeship Pro, our [_Codeship AWS container_]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}) can be implemented to transfer artifacts to S3 storage.
+</div>
 
 For more advanced usage of the S3 CLI, please see the [S3 documentation](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html) on amazon.com
 
