@@ -4,6 +4,8 @@ shortTitle: Using Hakiri
 tags:
   - security
   - integrations
+  - rails
+  - ruby
 menus:
   general/integrations:
     title: Using Hakiri
@@ -15,85 +17,103 @@ menus:
 
 ## About Hakiri
 
-[Hakiri](https://Hakiri.com) is a service for analyzing and monitoring the security of your application dependencies.
+[Hakiri](https://hakiri.io) is a service for analyzing and monitoring the security of your Rails application dependencies.
 
-[The Hakiri documentation](https://github.com/Hakiri/toolbelt) does a great job of providing more information, in addition to the setup instructions below.
+[The Hakiri documentation](https://hakiri.io/docs) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
-### Setting Your Hakiri Token
+### Setting Your Hakiri Stack ID
 
-You will need to add your `Hakiri_TOKEN` value to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you  encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+You will need to add your `STACK_ID` value to the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you  encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-There are other options to configure your `.Hakiri.yml` file that you can set in your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), as well. [See the Hakiri documentation](https://github.com/Hakiri/toolbelt) for a full list.
+To generate your stack ID, you can follow [the Hakiri documentation](https://hakiri.io/docs/authentication-token).
 
-### Installing The CLI
+### Manifest File
 
-To use Hakiri in your CI/CD process, you'll need to add the Hakiri CLI to a service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+You will need a Hakiri manifest file to exist in your repo, unless you want to generate a new one each time you run your CI/CD process.
 
-To add the Hakiri CLI, you will need to add the following command to the Dockerfile for the service you want to run Hakiri on:
+To generate the manifest file (either in CI/CD or locally so that you can commit it to your repository), you will need to follow the instructions below to install the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) and then run the following command:
+
+```bash
+hakiri manifest:generate
+```
+
+### Installing The Hakiri Toolbelt
+
+To use Hakiri in your CI/CD process, you'll need to add the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) to a service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+
+To install the Hakiri Toolbelt, you will need to add the following command to the Dockerfile for the service you want to run Hakiri on:
 
 
 ```bash
-sudo apt-get install Hakiri-toolbelt
+gem install hakiri
 ```
 
-**Note** that this requires the Dockerfile to be using a Debian-based base image. [See the Hakiri documentation](https://github.com/Hakiri/toolbelt) for a list of alternative installation instructions.
+**Note** that this requires the Dockerfile to also have Ruby, Rails and Ruby Gems installed.
 
-### Running An Evaluation
+### Running A Scan
 
-Once your Hakiri token is loaded via your environment variables and you have defined a service that installs the Hakiri CLI, you can run a Hakiri evaluation during your CI/CD pipeline by passing the Hakiri CLI commands via the service you have it installed in.
+Once your Hakiri Stack ID is loaded via your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and you have defined a service that installs the Hakiri Toolbels, you can run a Hakiri scan during your CI/CD pipeline by passing the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) commands via the service you have it installed in.
 
-We will combine the Hakiri authentication and Hakiri scan commands into a script file that we call from a step:
+For example:
 
 ```bash
 - name: Hakiri
   service: app
-  command: Hakiri.sh
+  command: hakiri.sh
 ```
 
-Inside this `Hakiri.sh` script, you will have something similar to:
+Inside this `hakiri.sh` script, you will have something similar to:
 
 ```bash
-Hakiri configure $Hakiri-PROJECT-ID
-Hakiri eval -f=Gemfile,Gemfile.lock
+hakiri system:scan
+hakiri system:sync -s $STACK_ID
 ```
 
-There is a larger list of possible uses for Hakiri, and commands you can run, over at [the Hakiri documentation](https://github.com/Hakiri/toolbelt).
-
-**Note** that the above commands will require that the `Hakiri_TOKEN` environment variable be set, as instructions earlier. They will also require passing the `Hakiri-PROJECT-ID` either directly or through an environment variable.
+There is a larger list of commands you can run over at [the Hakiri documentation](https://hakiri.io/docs).
 
 ## Codeship Basic
 
-### Setting Your Hakiri Token
+### Setting Your Hakiri Stack ID
 
-You will need to add your `Hakiri_TOKEN` value to the your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
+You will need to add your `STACK_ID` value to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %})..
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
 ![Configuration of Hakiri env vars]({{ site.baseurl }}/images/continuous-integration/Hakiri-env-vars.png)
 
-There are other options to configure your `.Hakiri.yml` file that you can set in your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}), as well. [See the Hakiri documentation](https://github.com/Hakiri/toolbelt) for a full list.
+To generate your stack ID, you can follow [the Hakiri documentation](https://hakiri.io/docs/authentication-token).
 
-### Installing The CLI
+### Manifest File
 
-To use Hakiri in your CI/CD process, you'll need to install the Hakiri CLI via your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
+You will need a Hakiri manifest file to exist in your repo, unless you want to generate a new one each time you run your CI/CD process.
 
-```bash
-go build -o Hakiri
-```
-
-### Running An Evaluation
-
-Once your Hakiri token is loaded via your environment variables and you have installed the Hakiri CLI, you can run a Hakiri evaluation during your CI/CD pipeline.
-
-You will need to add the following commands to your project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %})
+To generate the manifest file (either in CI/CD or locally so that you can commit it to your repository), you will need to follow the instructions below to install the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) and then run the following command:
 
 ```bash
-Hakiri configure $Hakiri-PROJECT-ID
-Hakiri eval -f=Gemfile,Gemfile.lock
+hakiri manifest:generate
 ```
 
-There is a larger list of possible uses for Hakiri, and commands you can run, over at [the Hakiri documentation](https://github.com/Hakiri/toolbelt).
+### Installing The Hakiri Toolbelt
 
-**Note** that the above commands will require that the `Hakiri_TOKEN` environment variable be set, as instructions earlier. They will also require passing the `Hakiri-PROJECT-ID` either directly or through an environment variable.
+To use Hakiri in your CI/CD process, you'll need to install the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) via your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+
+```bash
+gem install hakiri
+```
+
+### Running A Scan
+
+Once your Hakiri Stack ID is loaded via your environment variables and you have installed the Hakiri Toolbelt, you can run a Hakiri scan during your CI/CD pipeline.
+
+You will need to add the following commands to your project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+
+For example:
+
+```bash
+hakiri system:scan
+hakiri system:sync -s $STACK_ID
+```
+
+There is a larger list of commands you can run over at [the Hakiri documentation](https://hakiri.io/docs).
