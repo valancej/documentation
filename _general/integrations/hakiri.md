@@ -54,7 +54,7 @@ gem install hakiri
 
 ### Running A Scan
 
-Once your Hakiri Stack ID is loaded via your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and you have defined a service that installs the Hakiri Toolbels, you can run a Hakiri scan during your CI/CD pipeline by passing the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) commands via the service you have it installed in.
+Once your Hakiri Stack ID is loaded via your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and you have defined a service that installs the Hakiri Toolbelt, you can run a Hakiri scan during your CI/CD pipeline by passing the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) commands via the service you have it installed in.
 
 For example:
 
@@ -77,7 +77,7 @@ There is a larger list of commands you can run over at [the Hakiri documentation
 
 ### Setting Your Hakiri Stack ID
 
-You will need to add your `STACK_ID` value to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %})..
+You will need to add your `STACK_ID` value to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
