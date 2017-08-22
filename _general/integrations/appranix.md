@@ -149,4 +149,5 @@ To use Appranix, you will need to call your `appranix.sh` script from your [depl
 After that add `sh appranix.sh` at the end. The script file will connect to Appranix and trigger deployment for the new build.
 
 <div class="info-block">
-Note: Make sure you have selected [Ruby version 2.3.3]({{ site.baseurl }}{% link _basic/languages-frameworks/ruby.md %}). or higher.</div>
+Note: Make sure you have selected [Ruby version 2.3.3]({{ site.baseurl }}{% link _basic/languages-frameworks/ruby.md %}). or higher.
+</div>
