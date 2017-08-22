@@ -81,8 +81,6 @@ You will need to add your `STACK_ID` value to your project's [environment variab
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
-![Configuration of Hakiri env vars]({{ site.baseurl }}/images/continuous-integration/Hakiri-env-vars.png)
-
 To generate your stack ID, you can follow [the Hakiri documentation](https://hakiri.io/docs/authentication-token).
 
 ### Manifest File

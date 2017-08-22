@@ -71,8 +71,6 @@ You will need to add your `GEMNASIUM_TOKEN` value to the your project's [environ
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
-![Configuration of Gemnasium env vars]({{ site.baseurl }}/images/continuous-integration/Gemnasium-env-vars.png)
-
 There are other options to configure your `.gemnasium.yml` file that you can set in your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}), as well. [See the Gemnasium documentation](https://github.com/gemnasium/toolbelt) for a full list.
 
 ### Installing The CLI
