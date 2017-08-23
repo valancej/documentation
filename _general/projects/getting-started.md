@@ -111,6 +111,8 @@ AWS publishes current [IP address ranges](http://docs.aws.amazon.com/general/lat
 
 Another option, while not fully supported, is to set up and run your own [bastion host](https://en.wikipedia.org/wiki/Bastion_host). This would allow you to route all Codeship calls through your bastion host and white list only this host.
 
+Finally, another option is configuring [port knocking](https://help.ubuntu.com/community/PortKnocking). The [knock package]({% man_url knock %}) is already installed on Codeship Basic and could also be installed in your Codeship Pro configuration.
+
 We realize these options may not work for all configurations. If there is something specific you would like to see, please [get in touch](mailto:support@codeship.com) and let us know more details about your environment.
 
 ## Can't Locate A File
