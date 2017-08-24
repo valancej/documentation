@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "2.4.1"
 
 gem 'rake', '~>12.0.0'
-gem 'jekyll', '~> 3.5.1'
+gem 'jekyll', '~> 3.5.2'
 gem 'sassc', '~> 1.11.4'
 
 # Jekyll Plugins
