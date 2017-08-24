@@ -96,7 +96,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (~> 3.5.2)
+  jekyll (~> 3.5.1)
   jekyll-coffeescript (~> 1.0.2)
   jekyll-menus (~> 0.6.0)
   jekyll-redirect-from (~> 0.12.1)
