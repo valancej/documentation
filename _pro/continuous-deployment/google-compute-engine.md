@@ -4,7 +4,7 @@ shortTitle: Deploying To Google Compute Engine
 menus:
   pro/cd:
     title: Google Compute Engine
-    weight: 8
+    weight: 12
 tags:
   - deployment
   - google
