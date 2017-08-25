@@ -8,7 +8,6 @@ menus:
 tags:
   - deployment
   - ibm
-  - Container Service
   - bluemix
   - bluemix container service
 
@@ -68,6 +67,11 @@ app:
   volumes:
     - ./deployment/tests:/tests
 
+dockercfg_generator:
+  image: codeship/ibm-bluemix-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: bluemix.env.encrypted
+
 deployment:
   image: codeship/ibm-bluemix-deployment
   encrypted_env_file: ibm.env.encrypted
@@ -77,19 +81,30 @@ deployment:
 
 ## Container Registry
 
+Using IBM Bluemix Container Service usually involves pushing images to the IBM Bluemix Container Registry as part of your CI/CD process.
+
+We recommend reading [our guide for pushing to the Bluemix registry]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}#ibm-bluemix-registry), as the deployment commands below will feature an image push based on those instructions.
+
 ## Deploying Your App
 
 Once you have added the deployment service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will now run Container Service deployment commands from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) using that service to execute the commands.
 
-Note that in this example, all of the Container Service deployment commands have been moved to a script file named `cloudfoundry.sh`.
+Note that in this example, all of the Container Service deployment commands have been moved to a script file named `kubernetes.sh`. The reason it is named `kubernetes.sh` is because the IBM Bluemix Container Service uses Kubernetes to orchestrate container deployments, so you will use Kubernetes commands in your deployment commands.
 
 ```yaml
-  - name: Container Service Deployment
-    service: deployment
-    command: /tests/cloudfoundry.sh
+- name: Push To Bluemix Container Registry
+  service: app
+  type: push
+  image_name: registry.ng.bluemix.net/your-org/your-image
+  registry: registry.ng.bluemix.net
+  dockercfg_service: dockercfg_generator  
+
+- name: Bluemix Container Service Kubernetes Deployment
+  service: deployment
+  command: /tests/kubernetes.sh
 ```
 
-Inside the `cloudfoundry.sh` script, you will have something similar to:
+Inside the `kubernetes.sh` script, you will have something similar to:
 
 ```bash
 #!/bin/bash
@@ -104,14 +119,18 @@ bluemix login \
   -o "${BLUEMIX_ORGANIZATION}" \
   -s "${BLUEMIX_SPACE}"
 
-# check that the CloudFoundry CLI is available via the Bluemix CLI wrapper
-bluemix cf version
+bluemix cs init \
+  --host "${BLUEMIX_CONTAINER_SERVICE_HOST}"
 
-# list available CloudFoundry applications
-bluemix cf apps
+# Get the required configuration for `kubectl` from Bluemix and load it
+bluemix cs cluster-config \
+  --export "${BLUEMIX_CONTAINER_SERVICE_CLUSTER_NAME}" \
+  > .kubectl_config
+source .kubectl_config && rm -rf .kubectl_config
 
-# push the application
-#bluemix cf push
+# run the commands required to deploy the application via `kubectl`
+kubectl version
+kubectl cluster-info
 ```
 
 ## See Also
