@@ -39,7 +39,9 @@ Prior to getting started, please ensure you have the following:
 
 ### Authentication
 
-To deploy to IBM, you will need to add the following values to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+To deploy to IBM, you will need to add authentication credentials to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), which you will encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+
+For the example deployment in this documentation, we will add the following:
 
 - BLUEMIX_API_ENDPOINT
 - BLUEMIX_CONTAINER_SERVICE_HOST
@@ -48,6 +50,8 @@ To deploy to IBM, you will need to add the following values to your [encrypted e
 - BLUEMIX_SPACE
 
 These variables will be set on the [IBM deployment container]((https://github.com/codeship-library/ibm-bluemix-utilities)), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the IBM Bluemix CLI when you run your deployment commands.
+
+You can name these variables anything you'd like depending on the specifics of your scripts, and different configurations may not require all of them to be used.
 
 ### Configuring Deployment Service
 
@@ -110,6 +114,8 @@ bluemix cf apps
 # push the application
 #bluemix cf push
 ```
+
+**Note** that the specifics of your deployment scripts may vary depending on what you are trying to do, and the above is intended only as an example and a starting place.
 
 ## See Also
 
