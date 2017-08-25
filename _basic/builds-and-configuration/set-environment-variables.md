@@ -70,6 +70,7 @@ CI_COMMITTER_EMAIL
 CI_COMMITTER_USERNAME
 CI_MESSAGE
 CI_NAME
+CI_REPO_NAME
 ```
 
 [^pull_request]: This value is hardcoded and doesn't indicate whether a build was triggered by a pull request or not at the moment. Once we add support for building external pull requests, we will update this environment variable accordingly as well.
