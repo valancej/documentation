@@ -89,7 +89,7 @@ We recommend reading [our guide for pushing to the Bluemix registry]({{ site.bas
 
 Once you have added the deployment service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will now run Container Service deployment commands from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) using that service to execute the commands.
 
-Note that in this example, all of the Container Service deployment commands have been moved to a script file named `kubernetes.sh`. The reason it is named `kubernetes.sh` is because the IBM Bluemix Container Service uses Kubernetes to orchestrate container deployments, so you will use Kubernetes commands in your deployment commands.
+Note that in this example, all of the Container Service deployment commands have been moved to a script file named `deploy_to_kubernetes.sh`. The reason it is named `deploy_to_kubernetes.sh` is because the IBM Bluemix Container Service uses Kubernetes to orchestrate container deployments, so you will use Kubernetes commands in your deployment commands.
 
 ```yaml
 - name: Push To Bluemix Container Registry
@@ -101,10 +101,10 @@ Note that in this example, all of the Container Service deployment commands have
 
 - name: Bluemix Container Service Kubernetes Deployment
   service: deployment
-  command: /tests/kubernetes.sh
+  command: /tests/deploy_to_kubernetes.sh
 ```
 
-Inside the `kubernetes.sh` script, you will have something similar to:
+Inside the `deploy_to_kubernetes.sh` script, you will have something similar to:
 
 ```bash
 #!/bin/bash
