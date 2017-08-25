@@ -27,7 +27,7 @@ You will simply need to add one of the IBM deployment images as a service in you
 
 ## IBM Bluemix Deployment Container
 
-## Prerequisites
+### Prerequisites
 
 Prior to getting started, please ensure you have the following:
 
@@ -37,7 +37,7 @@ Prior to getting started, please ensure you have the following:
 - [An IBM Bluemix Account](https://www.ibm.com/cloud-computing/bluemix/)
 - An understanding of using IBM Bluemix Cloud Foundry and the required manifest and database files for a Cloud Foundry application
 
-## Authentication
+### Authentication
 
 To deploy to IBM, you will need to add the following values to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
@@ -49,7 +49,7 @@ To deploy to IBM, you will need to add the following values to your [encrypted e
 
 These variables will be set on the [IBM deployment container]((https://github.com/codeship-library/ibm-bluemix-utilities)), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the IBM Bluemix CLI when you run your deployment commands.
 
-## Configuring Deployment Service
+### Configuring Deployment Service
 
 Once you have created your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), you will want to add a new service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
