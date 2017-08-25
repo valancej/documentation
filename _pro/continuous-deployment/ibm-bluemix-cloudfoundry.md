@@ -82,15 +82,15 @@ deployment:
 
 Once you have added the deployment service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will now run Cloud Foundry deployment commands from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) using that service to execute the commands.
 
-Note that in this example, all of the Cloud Foundry deployment commands have been moved to a script file named `cloudfoundry.sh`.
+Note that in this example, all of the Cloud Foundry deployment commands have been moved to a script file named `deploy_via_cloudfoundry.sh`.
 
 ```yaml
   - name: Cloud Foundry Deployment
     service: deployment
-    command: /tests/cloudfoundry.sh
+    command: /tests/deploy_via_cloudfoundry.sh
 ```
 
-Inside the `cloudfoundry.sh` script, you will have something similar to:
+Inside the `deploy_via_cloudfoundry.sh` script, you will have something similar to:
 
 ```bash
 #!/bin/bash
@@ -112,7 +112,7 @@ bluemix cf version
 bluemix cf apps
 
 # push the application
-#bluemix cf push
+bluemix cf push
 ```
 
 **Note** that the specifics of your deployment scripts may vary depending on what you are trying to do, and the above is intended only as an example and a starting place.
