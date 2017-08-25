@@ -34,7 +34,7 @@ The container configuration is open source and can be found in the [codeship-lib
 
 We will use the `codeship/aws-deployment` container throughout the documentation to interact with various AWS services.
 
-## Using other tools
+### Using other tools
 
 While the container we provide for interacting with AWS gives you an easy and straight forward way to run your deployments it is not the only way you can interact with AWS services. You can install your own dependencies, write your own deployment scripts, talk to the AWS API directly or bring 3rd party tools to do it for you. By installing those tools into a Docker container and running them you have a lot of flexibility in how to deploy to AWS.
 
@@ -69,196 +69,21 @@ awsdeployment:
     - ./:/deploy
 ```
 
-## Deployment examples
+## Deployment Examples
 
-To interact with different AWS services you can simply call the `aws` command directly. You can use any AWS service or command provided by the [AWSCLI](https://aws.amazon.com/cli/). You can use environment variables or command arguments to set the AWS Region or other parameters. Take a look at their [environment variable documentation](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-environment).
+Once you have used the above instructions to set up your AWS deployment service and authenticate with AWS, we provide specific documentation for deploying to the most popular AWS services.
 
-Take a look at the [Steps]({% link _pro/builds-and-configuration/steps.md %}) documentation page so you have a good understanding how steps on Codeship work and how to set it up in your `codeship-steps.yml`.
+- [S3]({% link _pro/continuous-deployment/aws-s3.md %})
+- [Elastic Beanstalk]({% link _pro/continuous-deployment/aws-elasticbeanstalk.md %})
+- [Elastic Container Service]({% link _pro/continuous-deployment/aws-ecs.md %})
+- [Elastic Container Registry]({% link _pro/builds-and-configuration/image-registries.md %}#aws-ecr)
+- [CodeDeploy]({% link _pro/continuous-deployment/aws-codedeploy.md %})
 
-### S3
+### Combining Various AWS Services In A Script
 
-In the following example we're uploading a file to S3 from the source repository which we access through the host volume at `/deploy`. Add the following into your `codeship-steps.yml`.
+If you want to interact with multiple AWS services simultaneously, in a more complex deployment or orchestration chain, you can set up a deployment script to be called from your AWS deployment service.
 
-```yaml
-- service: awsdeployment
-  command: aws s3 cp /deploy/FILE_TO_DEPLOY s3://SOME_BUCKET
-```
-
-### Deploying to EC2 Container Service
-
-To interact with ECS you can simply use the corresponding AWS CLI commands. The following example will register two new task definitions and then update a service and run a batch task. In the following example the deployment is running one after the other, but with our parallelization feature you could start both deployments at the same time as well to gain more speed. Our [Steps]({% link _pro/builds-and-configuration/steps.md %}) documentation can give you more information on that.
-
-If you have more complex workflows for deploying your ECS tasks you can put those commands into a script and run the script as part of your workflow. Then you could stop load balancers, gracefully shut down running tasks or anything else you would like to do as part of your deployment.
-
-We're using the task definitions from the [AWSCLI ECS docs](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_AWSCLI.html#AWSCLI_run_task)
-
-Add the following to your `codeship-steps.yml`
-
-```yaml
-- service: awsdeployment
-  command: aws ecs register-task-definition --cli-input-json file:///deploy/tasks/backend.json
-- service: awsdeployment
-  command: aws ecs update-service --service my-backend-service --task-definition backend
-- service: awsdeployment
-  command: aws ecs register-task-definition --cli-input-json file:///deploy/tasks/process_queue.json
-- service: awsdeployment
-  command: aws ecs run-task --cluster default --task-definition process_queue --count 5
-```
-
-### Deploying to AWS Elastic Beanstalk
-Deployment to Elastic Beanstalk is very straightforward. We implemented a `codeship_aws eb_deploy` command in the `codeship/aws-deployment` container so you can get started quickly. The arguments you have to set are the path to your deployable folder, the Elastic Beanstalk application and environment name, and the S3 bucket to which to upload the zipped artifact.
-
-The following example can be used in your `codeship-steps.yml` to deploy to Elastic Beanstalk.
-
-```yaml
-- service: awsdeployment
-  command: codeship_aws eb_deploy PATH_TO_FOLDER_TO_DEPLOY APPLICATION_NAME ENVIRONMENT_NAME S3_BUCKET_NAME
-```
-
-The command will zip up the content in the folder, upload it to S3, register a new version with Elastic Beanstalk and then deploy that new version. We're also validating that the environment is fine and that the new version was actually deployed.
-
-If you want to customize the deployment you can also use the [existing Script](https://github.com/codeship-library/aws-utilities/blob/master/deployment/scripts/codeship_aws_eb_deploy) from our open source AWS container and edit it so it fits exactly to your needs. This script can be added to your repository and then called directly as a step, as in the following example:
-
-```yaml
-- service: awsdeployment
-  command: /deploy/scripts/deploy_to_eb
-```
-
-To make sure the AWS credentials you've added before are authorized to deploy to Elastic Beanstalk use the following policies in IAM.
-
-#### S3 Policy
-
-To upload new application versions to the S3 bucket specified in the deployment configuration we need at least _Put_ access to the bucket (or a the _appname_ prefix). See the following snippet for an example.
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:PutObject",
-                "s3:GetObject",
-                "s3:ListBucket"
-            ],
-            "Resource": [
-                "arn:aws:s3:::[s3-bucket]/*"
-            ]
-        }
-    ]
-}
-```
-
-#### Elastic Beanstalk Policy
-
-Please replace `[region]` and `[accountid]` with the respective values for your AWS account / Elastic Beanstalk application.
-
-```json
-{
-  "Statement": [
-    {
-      "Action": [
-        "elasticbeanstalk:CreateApplicationVersion",
-        "elasticbeanstalk:DescribeEnvironments",
-        "elasticbeanstalk:DeleteApplicationVersion",
-        "elasticbeanstalk:UpdateEnvironment"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    },
-    {
-      "Action": [
-        "sns:CreateTopic",
-        "sns:GetTopicAttributes",
-        "sns:ListSubscriptionsByTopic",
-        "sns:Subscribe"
-      ],
-      "Effect": "Allow",
-      "Resource": "arn:aws:sns:[region]:[accountid]:*"
-    },
-    {
-      "Action": [
-        "autoscaling:SuspendProcesses",
-        "autoscaling:DescribeScalingActivities",
-        "autoscaling:ResumeProcesses",
-        "autoscaling:DescribeAutoScalingGroups"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    },
-    {
-      "Action": [
-        "cloudformation:GetTemplate",
-        "cloudformation:DescribeStackResource",
-        "cloudformation:UpdateStack"
-      ],
-      "Effect": "Allow",
-      "Resource": "arn:aws:cloudformation:[region]:[accountid]:*"
-    },
-    {
-      "Action": [
-        "ec2:DescribeImages",
-        "ec2:DescribeKeyPairs"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-   },
-   {
-    "Action": [
-     "s3:PutObject",
-     "s3:PutObjectAcl",
-     "s3:GetObject",
-     "s3:GetObjectAcl",
-     "s3:ListBucket",
-     "s3:DeleteObject",
-     "s3:GetBucketPolicy"
-   ],
-   "Effect": "Allow",
-   "Resource": [
-    "arn:aws:s3:::Elastic Beanstalk-[region]-[accountid]",
-    "arn:aws:s3:::Elastic Beanstalk-[region]-[accountid]/*"
-   ]
-  }
- ]
-}
-```
-
-If you are using more than one instance for your application you need to add at least the following permissions as well.
-
-```json
-{
-  "Action": [
-    "elasticloadbalancing:DescribeInstanceHealth",
-    "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
-    "elasticloadbalancing:RegisterInstancesWithLoadBalancer"
-  ],
-  "Effect": "Allow",
-  "Resource": "*"
-}
-```
-
-## Deploying to CodeDeploy
-
-To deploy your application to AWS CodeDeploy you can use the integrated `codeship_aws codedeploy_deploy` command. It will zip your application code, upload it to S3 and start a new deployment on CodeDeploy. You can take a look at the [full script](https://github.com/codeship-library/aws-deployment/blob/master/scripts/codeship_aws_codedeploy_deploy) in the [codeship-library/aws-deployment](https://github.com/codeship-library/aws-deployment) repository on Github.
-
-Add the following to your codeship-steps.yml to start deploying.
-
-```yaml
-- service: awsdeployment
-  command: codeship_aws codedeploy_deploy /PATH/TO/YOUR/CODE APPLICATION_NAME DEPLOYMENT_GROUP_NAME S3_BUCKET_NAME
-```
-
-Make sure to add policies to your IAM User used with Codeship that allow to interact with CodeDeploy. Take a look at the [getting started](http://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html) documentation from AWS to get the full policy template.
-
-## See also
-
-+ [Latest `awscli` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
-+ [Latest Elastic Beanstalk documentation](http://docs.aws.amazon.com/Elastic Beanstalk/latest/dg/Welcome.html)
-
-
-### Combining deployment to various services with a script
-
-If you want to interact with various AWS services in a more complex way you can do this by setting up a deployment script and running it inside the container. The following script will upload different files into S3 buckets and then trigger a redeployment on ECS. The deployment script can access any files in your repository through `/deploy`. In the following example we're putting the script into `scripts/aws_deployment`.
+Below is one example, which will upload files into S3 buckets and then trigger a redeployment on ECS. In the following example we're putting the script into `scripts/aws_deployment`.
 
 ```bash
 #!/bin/bash
@@ -285,3 +110,8 @@ And the corresponding `codeship-steps.yml`:
 - service: awsdeployment
   command: /deploy/scripts/aws_deployment
 ```
+
+## See Also
+
++ [Latest `awscli` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
++ [Latest Elastic Beanstalk documentation](http://docs.aws.amazon.com/Elastic Beanstalk/latest/dg/Welcome.html)

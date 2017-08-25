@@ -4,7 +4,7 @@ shortTitle: Deploying With Docker Swarm
 menus:
   pro/cd:
     title: Docker Swarm
-    weight: 11
+    weight: 15
 tags:
   - deployment
   - swarm
