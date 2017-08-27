@@ -114,4 +114,3 @@ And the corresponding `codeship-steps.yml`:
 ## See Also
 
 + [Latest `awscli` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
-+ [Latest Elastic Beanstalk documentation](http://docs.aws.amazon.com/Elastic Beanstalk/latest/dg/Welcome.html)
