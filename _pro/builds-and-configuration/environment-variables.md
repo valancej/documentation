@@ -121,20 +121,19 @@ By default, Codeship populates a list of CI/CD related environment variables, su
 The environment variables Codeship populates are:
 
 ```
+CI_BRANCH
+CI_BUILD_ID
 CI_COMMITTER_EMAIL
-CI_NAME
-CI_STRING_TIME
+CI_COMMITTER_NAME
 CI_COMMITTER_USERNAME
 CI_COMMIT_DESCRIPTION
-CI_COMMITTER_NAME
-CI_TIMESTAMP
-CI_BRANCH
 CI_COMMIT_ID
-CI_PROJECT_ID
 CI_COMMIT_MESSAGE
-CI_BUILD_ID
-CI
+CI_NAME
+CI_PROJECT_ID
 CI_REPO_NAME
+CI_STRING_TIME
+CI_TIMESTAMP
 ```
 
 ### Service-defined Environment Variables
