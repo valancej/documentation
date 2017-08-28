@@ -64,6 +64,12 @@ Whether using build arguments or environemnt variables, you will need to be sure
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
 ```
 
+And here is a `docker run` command that will do the work of replacing your newlines with `\n`
+
+```
+docker run -it --rm -v ${PATH_TO_PRIVATE_KEY}:/key alpine sed -E ':a;N;$!ba;s/\r?\n/\\n/g' /key
+```
+
 To encrypt your key and add it to your build process, follow the specific tutorials for either [build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or [environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) using your escaped key.
 
 You will ultimately add the encrypted  key to a service with the `encrypted_env_file` option or the `encrypted_args_file` option.
