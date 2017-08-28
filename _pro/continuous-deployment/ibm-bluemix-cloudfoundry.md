@@ -57,7 +57,7 @@ You can name these variables anything you'd like depending on the specifics of y
 
 Once you have created your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), you will want to add a new service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-This file will use [the image Codeship maintains]((https://github.com/codeship-library/ibm-bluemix-utilities) for IBM-based deployments, and will read your code from a volume connected to your primary service.
+This file will use [the image Codeship maintains](https://github.com/codeship-library/ibm-bluemix-utilities) for IBM-based deployments, and will read your code from a volume connected to your primary service.
 
 This service will be used for all of your Cloud Foundry deployment commands, and will use the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) you created above.
 
