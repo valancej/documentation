@@ -4,7 +4,7 @@ shortTitle: Deploying To Google Container Engine
 menus:
   pro/cd:
     title: Google Container Engine
-    weight: 7
+    weight: 11
 tags:
   - deployment
   - google
@@ -112,7 +112,6 @@ Next, you will reference the `gcr_dockercfg` service from the above example usin
   image_name: gcr.io/company_name/container_name
   registry: https://gcr.io
   dockercfg_service: gcr_dockercfg
-
 ```
 
 ### Using Container Engine

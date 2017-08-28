@@ -4,7 +4,7 @@ shortTitle: Deploying With Kubernetes
 menus:
   pro/cd:
     title: Kubernetes
-    weight: 9
+    weight: 13
 tags:
   - kubernetes
   - notifications

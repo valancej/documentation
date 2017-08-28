@@ -4,7 +4,7 @@ shortTitle: Deploying To Azure
 menus:
   pro/cd:
     title: Azure
-    weight: 2
+    weight: 6
 tags:
   - deployment
   - azure
