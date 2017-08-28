@@ -281,9 +281,17 @@ code {
   transform: translateY(-1px);
 }
 
-p > code, li > code{
-  background-color: $_cLightestgrey;
-  color: $_cDarkgrey;
+p > code,
+li > code {
+  @extend .code;
+  border-color: darken($gray-lighter, 3%);
+  background-color: $gray-lightest;
+  padding: 1px 4px;
+  .info-block & {
+    color: $blue-darkest;
+    background-color: $blue-light;
+    border-color: $blue;
+  }
 }
 
 [class^="highlighter-"] pre {
