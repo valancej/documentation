@@ -47,13 +47,13 @@ To deploy to IBM, you will need to add the following values to your [encrypted e
 - BLUEMIX_ORGANIZATION
 - BLUEMIX_SPACE
 
-These variables will be set on the [IBM deployment container]((https://github.com/codeship-library/ibm-bluemix-utilities)), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the IBM Bluemix CLI when you run your deployment commands.
+These variables will be set on the [IBM deployment container](https://github.com/codeship-library/ibm-bluemix-utilities), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the IBM Bluemix CLI when you run your deployment commands.
 
 ### Configuring Deployment Service
 
 Once you have created your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), you will want to add a new service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-This file will use [the image Codeship maintains]((https://github.com/codeship-library/ibm-bluemix-utilities) for IBM-based deployments, and will read your code from a volume connected to your primary service.
+This file will use [the image Codeship maintains](https://github.com/codeship-library/ibm-bluemix-utilities) for IBM-based deployments, and will read your code from a volume connected to your primary service.
 
 This service will be used for all of your Container Service deployment commands, and will use the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) you created above.
 
