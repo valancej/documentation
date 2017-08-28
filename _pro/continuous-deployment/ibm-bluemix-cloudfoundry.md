@@ -49,7 +49,7 @@ For the example deployment in this documentation, we will add the following:
 - BLUEMIX_ORGANIZATION
 - BLUEMIX_SPACE
 
-These variables will be set on the [IBM deployment container]((https://github.com/codeship-library/ibm-bluemix-utilities)), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the IBM Bluemix CLI when you run your deployment commands.
+These variables will be set on the [IBM deployment container](https://github.com/codeship-library/ibm-bluemix-utilities), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the IBM Bluemix CLI when you run your deployment commands.
 
 You can name these variables anything you'd like depending on the specifics of your scripts, and different configurations may not require all of them to be used.
 
