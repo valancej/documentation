@@ -35,6 +35,25 @@ You will need the AWS service, as well as your application itself, defined via y
 
 It is also advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
+### Pushing To ECR
+
+Next, you may want to push your images to the AWS Elastic Container Registry.
+
+To do so, you will need to reference the `dockercfg_generator` service from the above example using the `dockercfg_service` option in a [push step]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}) to ECR in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) to generate the AWS authentication token GCR requires, as shown below.
+
+You can read more in-depth instructions for pushing to an image registry, including ECR, on our [image registries documentation]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}#aws-ecr).
+
+```yaml
+- name: ECR Push
+  service: app
+  type: push
+  image_name: ecr-region-url/your-image
+  registry: ecr-region-url
+  dockercfg_service: dockercfg_generator
+```
+
+**Note** that `ecr-region-url` above shoudl be replaced with your region-specific ECR url.
+
 ## Deploying To AWS Elastic Container Service
 
 To interact with ECS, you will simply use the corresponding AWS CLI commands via the `awsdeployment` service defined in your [codeship-services.yml file]({% link _pro/builds-and-configuration/steps.md %}).
