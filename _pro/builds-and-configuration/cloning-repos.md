@@ -62,6 +62,12 @@ Now you have to copy the content of `keyfile.rsa` into a [build arguments file](
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
 ```
 
+And here is a `docker run` command that will do the work of replacing your newlines with `\n`
+
+```
+docker run -it --rm -v ${PATH_TO_PRIVATE_KEY}:/key alpine sed -E ':a;N;$!ba;s/\r?\n/\\n/g' /key
+```
+
 After preparing the `sshkey.args` file we can encrypt it with the local CLI. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}) to turn the `sshkey.args` file into a `sshkey.args.encrypted` file.
 
 You can then add it to a service with the `encrypted_args_file` option. It will be automatically decrypted on Codeship.
