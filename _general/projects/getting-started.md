@@ -109,7 +109,7 @@ Codeship is hosted on AWS EC2 in the us-east-1 region. Because of this, Codeship
 
 AWS publishes current [IP address ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json). You can enable access for those ranges on your own server's firewall settings.
 
-Another option, while not fully supported, is to set up and run your own [bastion host](https://en.wikipedia.org/wiki/Bastion_host). This would allow you to route all Codeship calls through your bastion host and white list only this host.
+Another option is to set up and run your own [bastion host](https://en.wikipedia.org/wiki/Bastion_host). This would allow you to route all Codeship calls through your bastion host and white list only this host.
 
 Finally, another option is configuring [port knocking](https://help.ubuntu.com/community/PortKnocking). The [knock package]({% man_url knock %}) is already installed on Codeship Basic and could also be installed in your Codeship Pro configuration.
 
