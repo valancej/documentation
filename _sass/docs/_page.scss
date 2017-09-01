@@ -333,22 +333,22 @@ div#integrations {
 }
 
 .alert-block {
-  background-color: $red-lightest;
-  border-color: $red-lightest;
+  background-color: $yellow-lightest;
+  border-color: $yellow-lightest;
 
   > *:first-child::before {
     content: '\f071';
-    color: $red-darkest;
+    color: $yellow-darkest;
   }
 
   a {
-    color: $red-darkest;
+    color: $yellow-darkest;
   }
 
   code {
-    color: $red-darkest;
-    background-color: $red-light;
-    border-color: $red;
+    color: $yellow-darkest;
+    background-color: $yellow-light;
+    border-color: $yellow;
   }
 }
 
