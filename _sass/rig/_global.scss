@@ -281,6 +281,15 @@ code {
   transform: translateY(-1px);
 }
 
+p > code,
+li > code {
+  @extend .code-inline;
+  border-color: darken($gray-lighter, 3%);
+  background-color: $gray-lightest;
+  padding: 1px 4px;
+  font-size: 0.8em;
+}
+
 [class^="highlighter-"] pre {
   overflow-x: scroll;
 
