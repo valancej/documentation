@@ -324,52 +324,73 @@ div#integrations {
     margin: 0;
     text-decoration: underline;
   }
+
+  code {
+    color: $blue-darkest;
+    background-color: $blue-light;
+    border-color: $blue;
+  }
 }
 
 .alert-block {
-  background-color: #ffc6cb;
-  border-color: #ffc6cb;
+  background-color: $red-lightest;
+  border-color: $red-lightest;
 
   > *:first-child::before {
     content: '\f071';
-    color: $_cDarkred;
+    color: $red-darkest;
   }
 
   a {
-    color: $_cDarkred;
+    color: $red-darkest;
   }
 
   code {
-    background-color: $_cDarkred;
+    color: $red-darkest;
+    background-color: $red-light;
+    border-color: $red;
   }
 }
 
 .info-block {
-  background-color: #9ed8f5;
-  border-color: #9ed8f5;
+  background-color: $blue-lightest;
+  border-color: $blue-lightest;
 
   > *:first-child::before {
     content: '\f05a';
-    color: $_cDarkblue;
+    color: $blue-darkest;
   }
 
   a {
-    color: $_cDarkblue;
+    color: $blue-darkest;
   }
+
+  code {
+    color: $blue-darkest;
+    background-color: $blue-light;
+    border-color: $blue;
+  }
+
 }
 
 .feedback-block {
   padding-top: .1em;
-  background-color: #f2f5f7;
-  border-color: #f2f5f7;
+  background-color: $gray-lightest;
+  border-color: $gray-lightest;
 
   > *:first-child::before {
     content: '\f059';
-    color: $_cDarkgrey;
+    color: $gray-darkest;
   }
 
   a {
-    color: $_cDarkgrey;
+    color: $gray-darkest;
+  }
+
+  code {
+    color: $gray-darkest;
+    background-color: $gray-light;
+    border-color: $gray;
   }
 
   .rating-nero-value {

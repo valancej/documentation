@@ -288,11 +288,6 @@ li > code {
   background-color: $gray-lightest;
   padding: 1px 4px;
   font-size: 0.8em;
-  .info-block & {
-    color: $blue-darkest;
-    background-color: $blue-light;
-    border-color: $blue;
-  }
 }
 
 [class^="highlighter-"] pre {
