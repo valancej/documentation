@@ -32,7 +32,6 @@ Any Node tool that can run inside a Docker container will run on Codeship Pro. T
 
 We have a sample Node repo that you can clone or take a look at via the GitHub [codeship-library/nodejs-express-todoapp](https://github.com/codeship-library/nodejs-express-todoapp) repository. This may make a good starting point for your Node-based projects.
 
-
 ## Services File
 
 The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL image](https://hub.docker.com/_/postgres/) and a [Redis image](https://hub.docker.com/_/redis/) via the Docker Hub as linked services.
@@ -97,6 +96,18 @@ COPY . ./
 ## Notes And Known Issues
 
 Because of version and test dependency issues, it is advised to try using [the Jet CLI]({% link _pro/builds-and-configuration/cli.md %}) to debug issues locally via `jet steps`.
+
+### Webpack
+
+### Webpack
+
+You can install webpack via NPM in your services' Dockerfile, as seen below:
+
+```bash
+RUN npm install webpack
+```
+
+**Note** that you may need to specify a specific version of Node in the Dockerfile to use webpack successfully.
 
 ## Caching
 
