@@ -137,7 +137,7 @@ For instance, you can run `jet run service_app` or `jet run service_app echo "he
 
 **Note** that you can also run `jet run --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
 
-### Debugging Your Builds
+## Debugging Your Builds
 
 While Codeship Pro does not offer SSH access to build machines for debugging like Codeship Basic does, you can  debug your builds locally in a similar way using `jet`. You will just need to use `jet run`, as seen above, and then connect to your running containers to manually run the commands from your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file.
 
@@ -150,3 +150,11 @@ docker exec CONTAINERID
 ```
 
 Note that you are running your containers, looking up the container ID and then connecting to the running container using the container ID.
+
+## Common Issues
+
+There are several common issues that you may experience when using the Jet CLI:
+
+- `No AES key provided` - this error occurs when the Jet CLI can not find an AES key during encryption or decryption. Note that the key file can be found in your _Project Settings_, must be in the same directory you are running `jet encrypt` from and must be named `jet encrypt`.
+
+- Sometimes a build will fail on Codeship and pass locally, or vice versa. A good first step is to delete your locally saved Docker images and re-run `jet steps`. On remote builds, we have to build the images every time, whereas locally by default Docker will use existing images when it can. This means that the images `jet` is running against locally may not be the same, up to date images being used remotely. By deleting your saved images, you are forcing the images to be rebuilt and thus increase parity between local and remote builds.
