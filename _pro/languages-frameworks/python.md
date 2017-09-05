@@ -27,6 +27,10 @@ You may want to read the [Codeship Pro Getting Started Guide]({% link _pro/quick
 
 Any Python framework or tool that can run inside a Docker container will run on Codeship Pro. This documentation article will highlight simple configuration files for a Node-based Dockerfile with nosetest and py.test.
 
+## Example Repo
+
+We have a sample Python/Django repo that you can clone or take a look at via the GitHub [codeship-library/python-django-todoapp](https://github.com/codeship-library/python-django-todoapp) repository. This may make a good starting point for your Python-based projects.
+
 ## Services File
 
 The following is an example of a [Codeship Services file]({% link _pro/builds-and-configuration/services.md %}). Note that it is using a [PostgreSQL image](https://hub.docker.com/_/postgres/) and a [Redis image](https://hub.docker.com/_/redis/) via the Docker Hub as linked services.
