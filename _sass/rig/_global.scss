@@ -281,6 +281,7 @@ code {
   transform: translateY(-1px);
 }
 
+a > code,
 p > code,
 li > code {
   @extend .code-inline;
