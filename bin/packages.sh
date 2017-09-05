@@ -29,6 +29,7 @@ mkdir -p "${ami}"
 
 # NodeJS versions
 set +u
+# shellcheck disable=1090
 source "${HOME}/.nvm/nvm.sh"
 echo '```shell' > "${ami}/node.md"
 nvm list >> "${ami}/node.md"
@@ -58,4 +59,4 @@ echo '```' >> "${ami}/packages.md"
 tar czf "${ami}.tar.gz" "./${ami}"
 
 info "Run the following command to download the archive to your local computer"
-debug "scp -P <SSH_DEBUG_VM_PORT> rof@<SSH_DEBUG_VM_IP>:$(pwd)/${ami}.tar.gz ./"
+debug "scp -P ${CI_DEBUG_PORT} ${CI_DEBUG_USER}@${CI_DEBUG_HOST}:$(pwd)/${ami}.tar.gz ./"
