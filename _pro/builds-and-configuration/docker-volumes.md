@@ -24,18 +24,26 @@ To follow this tutorial on your own computer, please [install the `jet` CLI loca
 {:toc}
 
 ## What Are Docker Volumes?
-Volumes are directories on the host that your containers can read from and write to during your CI/CD process. Because every step of your CI/CD process on Codeship runs on a separate set of containers, the ability to persist and pass along data with volumes enables you to create efficient and flexible container-based workflows without having to rely on pre-compiled assets or data.
+
+Volumes are directories on the host that your containers can read from and write to during your CI/CD process.
 
 Volumes let your containers work together without needing to tightly couple them or build out any direct communication between them. This is a great way to keep your containers efficient, and volumes solve a lot of problems in a Docker-based architecture.
 
+**Note** that every step of your CI/CD process on Codeship runs on a separate set of containers, so volumes are the only way to persist artifacts or changes between steps during your build pipeline.
+
+## Using Volumes
+
 There are two primary ways to use Docker volumes in your CI/CD process with Codeship.
 
-## Configuration #1: Passing Data Between Containers
-You can mount volumes in your containers and allow other containers to access the volume without persisting the data between steps. In this configuration, the volume (along with the rest of your containers) will be re-build at the beginning of each new step. ([Learn more about steps.]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}))
+### Configuration #1: Passing Data During A Single Step
 
-It's important to note that with this setup, data will be available between containers but will __not__ persist when the current step finishes and the next step begins.
+You can mount volumes in your containers and allow other containers to access the volume during a single step.
+
+It's important to note that with this setup, data will be available between containers but will __not__ persist when the current step finishes and the next step begins. This is because each step uses a separate set of containers. [Learn more about codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) if this is unclear to you.
 
 To mount a volume to share data between your containers, first you need to open up your `codeship-service.yml` and specify a directory using the `volumes` directive on one of your services:
+
+**Note** that in this case, `volumes` takes only a single path argument. This path is referring to a directory _inside_ the running container built from this service definition.
 
 ```yaml
 data:
@@ -44,7 +52,7 @@ data:
     - /artifacts
 ```
 
-Then, for your remaining services that require access to the volume, you will use the `volumes_from` directive in your other service definitions and specify which service you are mounting the volume from (i.e. the one specified with your `volumes` directive.)
+For the services that require access to the volume, you will use the `volumes_from` directive in your additional service definitions and specify which service you are mounting the volume from.
 
 ```yaml
 myapp:
@@ -55,11 +63,13 @@ myapp:
 
 [We have a downloadable example of this set up here.](https://github.com/codeship/codeship-tool-examples/tree/master/07.volumes)
 
-## Configuration #2: Passing Data Between Steps
+### Configuration #2: Passing Data Between Steps
 
-The second setup solves the problem of persisting data *between* steps in your CI/CD process. Since every step runs on a separate set of containers, date produced in one step is not usually available to a later step - but by mounting a volume on the host (rather than in your container) you can persist data throughout your entire build.
+In this configuration, you can persist data *between* steps in your CI/CD process by mounting a host volume. Since every step runs on a separate set of containers mounting a volume on the host is the only way to share data and artifacts across steps.
 
- To mount a volume on the host, open your `codeship-services.yml` file and map a host directory to your container directory:
+ To mount a volume on the host, open your `codeship-services.yml` file and map a host directory to your container directory.
+
+ **Note** that in this case, `volumes` takes two path arguments. The first path argument refers to a directory on the host, cloned from your repository. Because of this, the host directory must be a part of your Git repository. The second directory path is an alias for the host directory that will be parsed _inside_ your containers at runtime.
 
 ```yaml
 data:
@@ -68,17 +78,13 @@ data:
     - ./tmp/artifacts:/artifacts
 ```
 
+
 On all other services that need to access this data, you can use either the `volumes_from` directive as explained in the previous example or simply provide the exact same `volumes` directive (with the host:container mapping) on all services that require access to your volume.
 
 [We have a downloadable example of this set up here](https://github.com/codeship/codeship-tool-examples/tree/master/08.deployment-container)
 
-## Important notes
+## Use Cases
 
-1. Volumes are mounted at run time, not at build time. During build time, the host directory is available but the directory mounted into the container is not. The inverse is true during run time. This means that if you were using the code snippet shown above, you would reference `tmp/artifacts` in your Dockerfile when running an `ADD` or a `COPY` command since those commands are running in the build context, but if you were accessing the volume from a step in your `codeship-steps.yml` file, then you would reference the mounted `/artifacts` directory instead since the host directory would be unavailable in the run context.
-1. As the hosts are ephemeral, you should not rely on existence of certain directories. Always make sure that you're mounting volumes from a directory relative to where your repo is checked out.
-1. When mounting volumes, ensure the directory you're attempting to mount already exists. The simplest way to do that is to add the required directory to your repository. Docker version 1.12 and earlier automatically created missing directories, but this behaviour have been removed in later versions.
-
-## Common Use Cases
 Volumes solve several common problems, including:
 
 * Using a file in a shared volume as a "health check" to look for service availability or completion
@@ -89,10 +95,18 @@ Volumes solve several common problems, including:
 
 * Avoiding re-work between steps (such as not re-creating test data multiple times.)
 
+## Common Issues
+
+- Volumes are mounted at run time, not at build time. During build time, the host directory is available but the directory mounted into the container is not. The inverse is true during run time. This means that if you were using the code snippet shown above, you would reference `tmp/artifacts` in your Dockerfile when running an `ADD` or a `COPY` command since those commands are running in the build context, but if you were accessing the volume from a step in your `codeship-steps.yml` file, then you would reference the mounted `/artifacts` directory instead since the host directory would be unavailable in the run context.
+
+- As the hosts are ephemeral, you should not rely on existence of certain directories. Always make sure that you're mounting volumes from a directory relative to where your repo is checked out.
+
+- When mounting volumes, ensure the directory you're attempting to mount already exists. The simplest way to do that is to add the required directory to your repository. Docker version 1.12 and earlier automatically created missing directories, but this behavior have been removed in later versions.
+
 ## More Information
 
-* https://docs.docker.com/engine/reference/builder/#volume
+-  https://docs.docker.com/engine/reference/builder/#volume
 
-* https://docs.docker.com/compose/compose-file/#volumes-volume-driver
+- https://docs.docker.com/compose/compose-file/#volumes-volume-driver
 
-* https://docs.docker.com/engine/userguide/containers/dockervolumes/
+-  https://docs.docker.com/engine/userguide/containers/dockervolumes/
