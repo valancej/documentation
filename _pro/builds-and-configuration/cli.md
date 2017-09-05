@@ -155,6 +155,6 @@ Note that you are running your containers, looking up the container ID and then 
 
 There are several common issues that you may experience when using the Jet CLI:
 
-- `No AES key provided` - this error occurs when the Jet CLI can not find an AES key during encryption or decryption. Note that the key file can be found in your _Project Settings_, must be in the same directory you are running `jet encrypt` from and must be named `jet encrypt`.
+- `No AES key provided` - this error occurs when the Jet CLI can not find an AES key during encryption or decryption. Note that the key file can be found in your _Project Settings_, must be in the same directory you are running `jet encrypt` from and must be named `codeship.aes`.
 
 - Sometimes a build will fail on Codeship and pass locally, or vice versa. A good first step is to delete your locally saved Docker images and re-run `jet steps`. On remote builds, we have to build the images every time, whereas locally by default Docker will use existing images when it can. This means that the images `jet` is running against locally may not be the same, up to date images being used remotely. By deleting your saved images, you are forcing the images to be rebuilt and thus increase parity between local and remote builds.
