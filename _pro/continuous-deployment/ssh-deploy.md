@@ -97,11 +97,11 @@ Before running any command that requires the SSH key to be available, make sure 
 These commands will load the SSH key into the required container directory so that is available for use. This will usually happen inside your Dockerfile, although in some cases it may happen with via a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```bash
-mkdir -p "$HOME/.ssh"
-echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa
+mkdir -p "${HOME}/.ssh"
+echo "${PRIVATE_SSH_KEY}" >> "${HOME}/.ssh/id_rsa"
 ```
 
-**Note** that `$PRIVATE_SSH_KEY` will change depending on what you have specifically named your build argument or environment variable.
+**Note** that `${PRIVATE_SSH_KEY}` will change depending on what you have specifically named your build argument or environment variable.
 
 ### Deploying Your Code
 

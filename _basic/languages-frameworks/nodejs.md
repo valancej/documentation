@@ -120,6 +120,16 @@ npm config set scope username
 
 You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as an alternative to npm. Yarn is pre-installed on the build VMs and requires Node.js 4.0 or higher.
 
+### Webpack
+
+You can install webpack via NPM, as seen below:
+
+```bash
+npm install webpack
+```
+
+**Note** that you may need to specify a specific version of Node via `nvm` to use webpack successfully.
+
 ## Parallel Testing
 
 If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), you will want separate your tests into groups and call a group specifically in each pipeline. For instance:
