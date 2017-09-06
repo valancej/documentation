@@ -27,6 +27,10 @@ That's why we show the status of the webhook configuration on the _General_ page
 
 ![Hook Status and Project UUID]({{ site.baseurl }}/images/faq/hook_status_and_project_uuid.png)
 
+## Status
+
+If builds are not starting, the first thing to check is Codeship system status. You can [view our status page](https://www.codeshipstatus.com) to see if there are any active service issues impacting your builds.
+
 ## GitHub
 
 Make sure the _Codeship_ service is added under the _Webhooks & Services_ section of your repository settings. Also check that the UUID configured for the repository matches the one shown on the _General_ page of your project settings on Codeship.
