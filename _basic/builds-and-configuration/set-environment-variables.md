@@ -73,4 +73,4 @@ CI_PULL_REQUEST
 CI_REPO_NAME
 ```
 
-[^pull_request]: This value is hardcoded and doesn't indicate whether a build was triggered by a pull request or not at the moment. Once we add support for building external pull requests, we will update this environment variable accordingly as well.
+*Note*: The value of `CI_PULL_REQUEST` is `false`, and doesn't indicate if a commit has a corresponding pull request, or if the build was triggered by a pull request. The variable exists because some third-party integrations require its existence.
