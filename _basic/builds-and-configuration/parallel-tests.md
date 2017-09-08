@@ -16,8 +16,8 @@ tags:
 redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/
-  - /classic/getting-started/parallelci
-  - /basic/builds-and-configuration/parallelci
+  - /classic/getting-started/parallelci/
+  - /basic/builds-and-configuration/parallelci/
 ---
 
 <div class="info-block">
