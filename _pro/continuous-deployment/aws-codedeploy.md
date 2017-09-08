@@ -22,7 +22,7 @@ You can find a sample repo for deploying to AWS with Codeship Pro on Github [her
 * include a table of contents
 {:toc}
 
-To make it easy for you to deploy your application to AWS ECS, we've built a container that has the AWSCLI installed. We will set up a simple example showing you how to configure any deployment to AWS ECS.
+To make it easy for you to deploy your application to AWS CodeDeploy, we've built a container that has the AWSCLI installed. We will set up a simple example showing you how to configure any deployment to AWS CodeDeploy.
 
 ## Codeship AWS Deployment Container
 
