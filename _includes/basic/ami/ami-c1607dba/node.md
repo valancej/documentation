@@ -12,11 +12,11 @@
               v6.11.3
               v7.10.1
       default ->0.10 ( -> v0.10.48 )
-      node ->stable ( -> v7.10.1 )
-      stable ->7.10 ( -> v7.10.1 )
+       node ->stable ( -> v7.10.1 )
+        stable ->7.10 ( -> v7.10.1 )
       unstable ->0.11 ( -> v0.11.16 )
-      iojs->iojs-v3.3 ( -> iojs-v3.3.1 )
-      lts/*->lts/boron ( -> v6.11.3 )
-      lts/argon->v4.8.4
-      lts/boron-> v6.11.3
+     iojs->iojs-v3.3 ( -> iojs-v3.3.1 )
+    lts/*->lts/boron ( -> v6.11.3 )
+   lts/argon->v4.8.4
+  lts/boron-> v6.11.3
 ```
