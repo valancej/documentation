@@ -44,6 +44,17 @@ case "$action" in
 		done
 		cd - || exit 1
 		;;
+	'invalidate_cdn')
+		if [ "${CI_BRANCH}" = "master" ]; then
+			target='/'
+		else
+			target="/${CI_BRANCH}/"
+		fi
+		aws configure set preview.cloudfront true
+		aws cloudfront create-invalidation \
+			--distribution-id "${AWS_CLOUDFRONT_DISTRIBUTION}" \
+			--paths "${target}"
+		;;
 	*)
 		log "Invalid action ${action} :("
 		exit 1

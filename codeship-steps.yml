@@ -40,6 +40,9 @@
         - name: s3_redirects
           service: aws
           command: sh bin/s3.sh configure_redirects
+        - name: cloudfront
+          service: aws
+          command: sh bin/s3.sh invalidate_cdn
         - type: serial
           tag: "^master$"
           steps:
