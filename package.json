@@ -10,8 +10,8 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "^6.10.2",
-    "yarn": "^0.23.2"
+    "node": "^8.4.0",
+    "yarn": "^1.0.1"
   },
   "dependencies": {
     "autoprefixer": "^7.1.2",

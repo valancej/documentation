@@ -1,10 +1,9 @@
 FROM ruby:2.4.1-slim
 
-ENV \
-	CACHE_BUST=1 \
-	DEBIAN_DISTRIBUTION="jessie" \
-	DEBIAN_FRONTEND="noninteractive" \
-	NODE_VERSION="6.x"
+ENV CACHE_BUST=2017-09-12 \
+    DEBIAN_DISTRIBUTION="jessie" \
+    DEBIAN_FRONTEND="noninteractive" \
+    NODE_VERSION="8.x"
 
 # Basic project configuration
 WORKDIR /docs
