@@ -102,7 +102,7 @@ Some Google Cloud services will require that you add your [Codeship public key](
 
 ### Creating Your Services
 
-You will want to add a service to build [deployment image that we maintain]((https://hub.docker.com/r/codeship/google-cloud-deployment/) in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). For example:
+You will want to add a service to build [deployment image that we maintain](https://hub.docker.com/r/codeship/google-cloud-deployment/) in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). For example:
 
 ```yaml
 googleclouddeployment:
