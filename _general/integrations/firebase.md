@@ -6,6 +6,7 @@ tags:
   - db
   - databases
   - fire base
+  - firebase
 menus:
   general/integrations:
     title: Using Firebase
