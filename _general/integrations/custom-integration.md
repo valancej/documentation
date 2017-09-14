@@ -7,7 +7,7 @@ tags:
 menus:
   general/integrations:
     title: Custom Integrations
-    weight: 19
+    weight: 20
 ---
 
 * include a table of contents
