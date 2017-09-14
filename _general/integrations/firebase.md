@@ -33,7 +33,7 @@ This CLI is packaged with NPM, so you will need a service defined in your [codes
 Inside the service with Node and NPM installed, you will next need to either add `firebase-tools` to your `package.json` and run `npm install` inside your Dockerfile, or add the following line directly to your Dockerfile:
 
 ```bash
-RUN npm install firebase-tools --save
+RUN npm install firebase-tools
 ```
 
 ### Adding Firebase Token
@@ -60,7 +60,7 @@ For example:
 ```yaml
 - name: Deploy To Firebase
   service: app
-  command: firebase deploy --token "$FIREBASE_TOKEN" --project $PROJECT_NAME
+  command: bash -c "firebase deploy --token ${FIREBASE_TOKEN} --project ${PROJECT_NAME}"
 ```
 
 **Note** that in this example `app` would be the service defined in the [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) with the Firebase Tools CLI installed.
@@ -104,5 +104,5 @@ However, if you need to pass the Firebase Tools CLI specific commands - such as 
 For example, you can add the `firebase deploy` command to a [custom-script deployment pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}):
 
 ```yaml
-firebase deploy --token "$FIREBASE_TOKEN" --project $PROJECT_NAME
+firebase deploy --token "$FIREBASE_TOKEN" --project "$PROJECT_NAME"
 ```
