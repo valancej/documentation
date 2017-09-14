@@ -17,7 +17,7 @@ menus:
 
 ## About Firebase
 
-[Firebase](https://firebase.google.com/) is a cloud platform for handing operations and data for mobile and web applications.
+[Firebase](https://firebase.google.com/) is a cloud platform for handling operations and data for mobile and web applications.
 
 The [Firebase documentation](https://firebase.google.com/docs/) provides a great guide to getting started, and the instructions below have more information on integrating with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro).
 
@@ -27,12 +27,12 @@ The [Firebase documentation](https://firebase.google.com/docs/) provides a great
 
 To use Firebase with Codeship Pro, you'll need to install the `firebase-tools` CLI.
 
-This CLI is packaged as an NPM, so you will need a service defined in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) with Node and NPM installed.
+This CLI is packaged with NPM, so you will need a service defined in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) with Node and NPM installed.
 
 Inside the service with Node and NPM installed, you will next need to either add `firebase-tools` to your `package.json` and run `npm install` inside your Dockerfile, or add the following line directly to your Dockerfile:
 
 ```bash
-RUN npm install firebase --save
+RUN npm install firebase-tools --save
 ```
 
 ### Adding Firebase Token
@@ -46,7 +46,7 @@ Depending on how your app uses Firebase, or how you deploy to Firebase, you may 
 - `databaseURL`
 - `storageBucket`
 
-What environment variables are required depends on which Firebase services and commands you are trying to you, and the [Firebase documentation](https://firebase.google.com/docs/) can provide more specific instructions.
+What environment variables are required depends on which Firebase services and commands you are trying to use, and the [Firebase documentation](https://firebase.google.com/docs/) can provide more specific instructions.
 
 ### Using Firebase
 
@@ -92,13 +92,13 @@ Depending on how your app uses Firebase, or how you deploy to Firebase, you may 
 - `databaseURL`
 - `storageBucket`
 
-What environment variables are required depends on which Firebase services and commands you are trying to you, and the [Firebase documentation](https://firebase.google.com/docs/) can provide more specific instructions.
+What environment variables are required depends on which Firebase services and commands you are trying to use, and the [Firebase documentation](https://firebase.google.com/docs/) can provide more specific instructions.
 
 ### Using Firebase
 
 If your main application uses Firebase as a database or for other services, simply installing the Firebase Tools CLI and setting the required environment variables via your [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) should be all that is required.
 
-However, if you need to pass the Firebase Tools CLI specific commands - such as deploying your static site to Firebase - you can simply add those commands to either your [setup, test or deployment commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) .
+However, if you need to pass the Firebase Tools CLI specific commands - such as deploying your static site to Firebase - you can simply add those commands to either your [setup, test or deployment commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 For example, you can add the `firebase deploy` command to a [custom-script deployment pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}):
 
