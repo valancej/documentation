@@ -91,7 +91,7 @@ azuredeployment:
 
 To interact with different Azure services you can simply call the Azure command directly. You can use any Azure service or command provided by the [AzureCLI](https://docs.microsoft.com/en-us/azure/xplat-cli-install). You can use [environment variables or command arguments](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates) to set the `Azure Datacenter Location` or other parameters.
 
-Take a look at the [Steps documentation page](({% link _pro/builds-and-configuration/steps.md %})) so you have a good understanding how steps on Codeship work and how to set it up in your  `codeship-steps.yml`.
+Take a look at the [Steps documentation page]({% link _pro/builds-and-configuration/steps.md %}) so you have a good understanding how steps on Codeship work and how to set it up in your  `codeship-steps.yml`.
 
 The following script will use the [Azure GitHub QuickStart Templates](https://github.com/Azure/azure-quickstart-templates) to deploy your new Docker virtual machine and resource group. The deployment script can access any files in your repository through `/deploy`. To confirm, the [Azure Deployment Script](https://github.com/codeship-library/azure-deployment/blob/master/deployment/azure_deploy.sh), stands up an AzureRM resource group with all necessary dependencies for an Ubuntu 16.04 image with Docker pre-installed.
 
