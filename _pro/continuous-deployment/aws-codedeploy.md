@@ -45,6 +45,6 @@ Add the following into your [codeship-steps.yml file]({% link _pro/builds-and-co
   command: codeship_aws codedeploy_deploy /PATH/TO/YOUR/CODE APPLICATION_NAME DEPLOYMENT_GROUP_NAME S3_BUCKET_NAME
 ```
 
-This command will zip your application code, upload it to S3 and start a new deployment on CodeDeploy. You can take a look at the [full script](https://github.com/codeship-library/aws-deployment/blob/master/scripts/codeship_aws_codedeploy_deploy) if you would like to review or modify it.
+This command will zip your application code, upload it to S3 and start a new deployment on CodeDeploy. You can take a look at the [full script](https://github.com/codeship-library/aws-utilities/blob/master/deployment/scripts/codeship_aws_codedeploy_deploy) if you would like to review or modify it.
 
 Note that you will need to make sure that the IAM User used with Codeship has all necessary permissions to interact with CodeDeploy. Take a look at the [getting started](http://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html) documentation from AWS to get the full policy template.
