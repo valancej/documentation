@@ -1,7 +1,7 @@
 ---
-title: Debugging And Setup With The Codeship Local CLI (Codeship Pro)
+title: How to install and configure Codeship Pro's local CLI (Jet)
 shortTitle: Using The Local CLI
-description: Technical documentation for Codeship Pro's CLI tool that allows to debug and run builds locally on the development machine
+description: Technical documentation for Codeship Pro's CLI (Jet) that allows to debug and run builds locally on the development machine
 menus:
   pro/builds:
     title: Local CLI

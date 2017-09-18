@@ -1,5 +1,6 @@
 ---
-title: Continuous Delivery to Microsoft Azure with Docker
+title: Deploying to Microsoft Azure with Codeship Pro
+description: Technical documentation for deploying to Microsoft Azure with Codeship Pro and Docker
 shortTitle: Deploying To Azure
 menus:
   pro/cd:

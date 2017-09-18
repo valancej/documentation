@@ -1,6 +1,7 @@
 ---
-title: Security Information For CI/CD Infrastructure
+title: Security Specifications
 shortTitle: Security Specifications
+description: Technical documentation outlining Codeship's security specifications
 menus:
   general/about:
     title: Security Information
