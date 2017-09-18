@@ -1,28 +1,7 @@
-{% if page.title %}
-  {% assign title = page.title %}
-{% elsif page.category %}
-  {% if site.data.categories[page.category].title %}
-    {% assign title = site.data.categories[page.category].title %}
-  {% else %}
-    {% assign title = page.category | capitalize %}
-  {% endif %}
-{% elsif page.tag %}
-  {% if site.data.tags[page.tag].title %}
-    {% assign title = site.data.tags[page.tag].title %}
-  {% else %}
-    {% capture title %}#{{ page.tag }} {% endcapture %}
-  {% endif %}
-{% endif %}
 <meta charset="UTF-8" />
 <meta HTTP-equiv="Content-Language" content="en-us" />
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="Expires" content="30" />
-
-{% if title == 'Documentation' %}
-<title>Codeship Documentation: Continuous Deployment And Continuous Integration Support</title>
-{% else %}
-<title>{{ title | append:' | Codeship Documentation' }}</title>
-{% endif %}
 
 <link href="{{ site.baseurl }}/assets/css/docs.css" rel="stylesheet" />
 <link rel="shortcut icon" type="image/ico" href="https://codeship.com/favicon.ico" />
