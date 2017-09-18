@@ -1,6 +1,7 @@
 ---
-title: All Packages Installed On Codeship Basic
+title: Codeship Basic Package List
 shortTitle: Codeship Basic Package List
+description: The full list of pre-installed packages and tools of the Codeship Basic build environment
 menus:
   basic/builds:
     title: Installed Packages
