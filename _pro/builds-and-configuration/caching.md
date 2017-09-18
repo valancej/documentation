@@ -1,6 +1,7 @@
 ---
 title: Speed Up Your Builds With Caching on Codeship Pro
 shortTitle: Image Caching
+description: Technical documentation for speeding up Codeship Pro builds by utilizing Codeship's image cache that works per-branch and per-service
 menus:
   pro/builds:
     title: Image Caching

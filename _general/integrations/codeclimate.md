@@ -1,6 +1,7 @@
 ---
 title: Integrating Codeship With Code Climate for Code Coverage Reports
 shortTitle: Using Code Climate For Code Coverage
+description: Technical documentation for the how to integrate Codeship with Code Climate to automatically check your code coverage with every build
 tags:
   - analytics
   - code-coverage

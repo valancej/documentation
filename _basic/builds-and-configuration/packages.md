@@ -1,7 +1,7 @@
 ---
 title: Codeship Basic Package List
 shortTitle: Codeship Basic Package List
-description: The full list of pre-installed packages and tools of the Codeship Basic build environment
+description: Technical documentation listing all pre-installed packages and tools of the Codeship Basic build environment
 menus:
   basic/builds:
     title: Installed Packages
