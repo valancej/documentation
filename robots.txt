@@ -9,4 +9,5 @@
 User-agent: *
 Disallow: /staging/
 Disallow: /private/
+Disallow: /tags/
 Sitemap: https://documentation.codeship.com/sitemap.xml
