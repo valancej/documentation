@@ -27,19 +27,34 @@ Similarly, if you are on a plan that allows you to run multiple builds concurren
 
 ### Services Configuration
 
-Hashicorp publishes up to date [Docker images for Terraform](https://hub.docker.com/r/hashicorp/terraform/) on Docker Hub. In most use cases it is easiest to start with those and mount your Terraform configuration via a volume.
+Hashicorp publishes up to date [Docker images for Terraform](https://hub.docker.com/r/hashicorp/terraform/) on Docker Hub. In order to make working with the image a bit easier, we'll build a simple Docker image based on that file, with our Terraform configuration added.
 
 ```
-version: 2
+FROM hashicorp/terraform:0.10.5
+LABEL maintainer="Marko Locher, marko@codeship.com"
+
+RUN mkdir -p /terraform
+WORKDIR /terraform
+
+COPY . ./
+```
+
+The important settings here are creating a working directory and switching to that directory via the `WORKDIR` directive. This will allow us to simplify our configuration a bit and avoid some pitfalls later on.
+
+We'll make use of that Docker image via our `codeship-services.yml` file, which (in it's most basic variation) will look like the example below.
+
+```
+version: '2'
 services:
   terraform:
-    image: hashicorp/terraform:0.10.5
+    build:
+      dockerfile: Dockerfile
     volumes:
-      - ./:/app
+      - ./:/terraform
     encrypted_env_file: secrets.env.encrypted
 ```
 
-This services file makes use of [encrypted environment variables]() to pass configuration values and secrets to Terraform. This way you don't have to store the credentials for any providers used in your configuration as plain text values in your repository. See the Terraform documentation article on [environment variables](https://www.terraform.io/docs/configuration/environment-variables.html) for additional information as well as which variables are available and how to use them.
+This services file makes use of [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to pass configuration values and secrets to Terraform. This way you don't have to store the credentials for any providers used in your configuration as plain text values in your repository. See the Terraform documentation article on [environment variables](https://www.terraform.io/docs/configuration/environment-variables.html) for additional information as well as which variables are available and how to use them.
 
 A sample (unencrypted) version of the `secrets.env` file including credentials for AWS could, for example, look like the following snippet.
 
@@ -59,13 +74,13 @@ Once you have your Terraform service configured it's time to run the actual step
   command: version
 - name: init
   service: terraform
-  command: init --input=false
+  command: init --input=false ./
 - name: validate
   service: terraform
-  command: validate
+  command: validate ./
 - name: plan
   service: terraform
-  command: plan --input=false --out=/app/codeship.tfplan
+  command: plan --input=false --out=./codeship.tfplan
 ```
 
 Most of the commands are very straightforward and the Terraform [documentation page on the CLI commands](https://www.terraform.io/docs/commands/index.html) does a good job at explaining the various available options.
@@ -84,7 +99,7 @@ Once you're happy with your setup and want to actually apply changes to infrastr
 - name: apply
   tag: master
   service: terraform
-  command: apply --input=false /app/codeship.tfplan
+  command: apply --input=false ./codeship.tfplan
 ```
 
 This step uses the `tag` directive to limit execution to the `master` branch only. It further tells Terraform to use the execution plan created in the previous `plan` step and saved to the `/app/codeship.tfplan` file.
