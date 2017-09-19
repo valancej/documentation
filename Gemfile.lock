@@ -72,7 +72,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rake (12.0.0)
+    rake (12.1.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -86,7 +86,7 @@ GEM
     scss_lint (0.54.0)
       rake (>= 0.9, < 13)
       sass (~> 3.4.20)
-    shipyard-framework (0.4.9)
+    shipyard-framework (0.5.1)
       actionview (~> 5.0)
     thread_safe (0.3.6)
     tzinfo (1.2.3)
@@ -102,10 +102,10 @@ DEPENDENCIES
   jekyll-redirect-from (~> 0.12.1)
   jekyll-seo-tag (~> 2.3.0)
   jekyll-sitemap (~> 1.1.1)
-  rake (~> 12.0.0)
+  rake (~> 12.1.0)
   sassc (~> 1.11.4)
   scss_lint (~> 0.54.0)
-  shipyard-framework (~> 0.4.6)
+  shipyard-framework (~> 0.5.1)
 
 RUBY VERSION
    ruby 2.4.1p111
