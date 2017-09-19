@@ -23,7 +23,12 @@ redirect_from:
 * include a table of contents
 {:toc}
 
+<div class="info-block">
+This article covers using Docker build arguments with Codeship Pro. If you are unfamiliar with either, we recommend [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg) as well as the [Codeship Pro Getting Started Guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started %}).
+</div>
+
 ## Overview: Build Arguments
+
 For each service, you can declare [build arguments](https://docs.docker.com/compose/compose-file/#/args), which are values available to the image only at build time. For example, if you must pass the image a set of credentials in order to access an asset or repository when the image is built, you would pass that value to the image as a build argument.
 
 ## Build Arguments vs. Environment Variables
