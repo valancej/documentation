@@ -24,7 +24,7 @@ redirect_from:
 {:toc}
 
 <div class="info-block">
-This article covers using Docker build arguments with Codeship Pro. If you are unfamiliar with either, we recommend [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg) as well as the [Codeship Pro Getting Started Guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started %}).
+This article covers using Docker build arguments with Codeship Pro. If you are unfamiliar with either, we recommend [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg) as well as the [Codeship Pro Getting Started Guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}).
 </div>
 
 ## Overview: Build Arguments
