@@ -79,7 +79,7 @@ jet encrypt your_env_file your_env_file.encrypted
 
 Before calling any commands against the GCP API you need to authenticate with the Gcloud tool using the credentials and [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) you created above.
 
-The [deployment image that we maintain]((https://hub.docker.com/r/codeship/google-cloud-deployment/)) provides a default command named `codeship_google authenticate`. If you set up the environment variables for a service using this image, in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), it will set the configuration up for you using those account credentials.
+The [deployment image that we maintain](https://hub.docker.com/r/codeship/google-cloud-deployment/) provides a default command named `codeship_google authenticate`. If you set up the environment variables for a service using this image, in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), it will set the configuration up for you using those account credentials.
 
 The following example runs the `codeship_google authenticate` command and would typically be run at the start of a script file in your repository that contains all your deployment commands, called from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
