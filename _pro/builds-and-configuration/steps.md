@@ -19,6 +19,7 @@ redirect_from:
   - /docker/steps/
   - /pro/getting-started/steps/
   - /docker/dockercfg-services
+  - /docker/getting-started/steps/
 ---
 
 * include a table of contents
