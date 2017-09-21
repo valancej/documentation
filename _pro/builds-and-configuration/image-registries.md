@@ -26,6 +26,7 @@ redirect_from:
   - /pro/getting-started/dockercfg-services/
   - /docker/docker-pull/
   - /docker/dockercfg-service/
+  - /docker/getting-started/docker-push/
 ---
 
 <div class="info-block">

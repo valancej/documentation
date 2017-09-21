@@ -14,6 +14,7 @@ tags:
 
 redirect_from:
   - /docker-integration/google-cloud/
+  - /docker/continuous-deployment/google-cloud/
 ---
 
 <div class="info-block">
