@@ -77,7 +77,7 @@ Before reading through the documentation, please take a look at the Services and
 
 The `codeship-services.yml` file uses the `microsoft/azure-cli` container and sets the encrypted environment file created by running the Service Principal Creation Script. Additionally, it sets the resource group name (`resource`) and location (`location`) through the environment config setting. We set up a [volume]({% link _pro/builds-and-configuration/docker-volumes.md %}) that shares `./` (the repository folder) to `/deploy`. This gives us access to all files in the repository in `/deploy/...` for the following deployment step.
 
-Note: The following step only deploys infrastructure in Azure with a pre-built Ubuntu 16.04 virtual machine with Docker pre-configured.
+Note: The following step only deploys infrastructure in Azure with a prebuilt Ubuntu 16.04 virtual machine with Docker pre-configured.
 
 ```
 azuredeployment:

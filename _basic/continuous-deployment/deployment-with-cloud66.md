@@ -28,7 +28,7 @@ If you a have docker based microservice architecture and you want to (re)deploy 
 curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/xxxx/yyyy?services=web
 ```
 
-For mutiple services in one go:
+For multiple services in one go:
 
 ```bash
 curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/xxxx/yyyy?services=web,app

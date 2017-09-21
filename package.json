@@ -13,6 +13,10 @@
     "node": "^8.4.0",
     "yarn": "^1.0.1"
   },
+  "scripts": {
+    "check": "mdspell -rna --en-us '{,!(node_modules)/**/}*.md'",
+    "fix": "mdspell -na --en-us '{,!(node_modules)/**/}*.md'"
+  },
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "gulp": "^3.9.1",
@@ -21,6 +25,7 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-jsonlint": "^1.2.0",
     "gulp-postcss": "^7.0.0",
-    "gulp-print": "^2.0.1"
+    "gulp-print": "^2.0.1",
+    "markdown-spellcheck": "^1.0.0"
   }
 }

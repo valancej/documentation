@@ -46,7 +46,7 @@ Dockerfiles are image specifications, essentially blueprints for what is inside 
 
 A Docker Compose file is the syntax model for our own  Codeship Services file, and they do very similar work in their respective contexts.
 
-Docker Compose is a schema for how orchestrating and networkings your containers. Compose is a product maintained by Docker, whereas our Services file is a Codeship-specific file for defining your CI/CD environment that borrows heavily from Compose syntax to define your CI/CD build environment via containers.
+Docker Compose is a schema for how orchestrating and networking your containers. Compose is a product maintained by Docker, whereas our Services file is a Codeship-specific file for defining your CI/CD environment that borrows heavily from Compose syntax to define your CI/CD build environment via containers.
 
 [Learn more about Docker Compose](https://docs.docker.com/compose/overview/).
 

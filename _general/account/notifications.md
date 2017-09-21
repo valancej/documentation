@@ -48,7 +48,7 @@ We have in-build support for the following services:
 1. Grove
 1. Webhooks
 
-If the service you're looking for isn't on the list, you might be able to use the `webhook` option but if not, feel free to reach out to us (see bettom of the page).
+If the service you're looking for isn't on the list, you might be able to use the `webhook` option but if not, feel free to reach out to us (see bottom of the page).
 
 ## Configuring Build Notifications
 
@@ -73,7 +73,7 @@ Additionally, all rules can select between `started`, `failed`, `succeeded`, and
 
 ## Email Notification
 
-For an email rule, you can select whether all members of the project will recieve notifications, or only the person whos commit triggered the build.
+For an email rule, you can select whether all members of the project will receive notifications, or only the person whos commit triggered the build.
 
 If only the committer should be notified, either the emails or usernames must be the same in both Codeship and Github/Bitbucket/Gitlab. If they're different, no notifications are sent.
 
@@ -95,7 +95,7 @@ Flowdock expects a token as well, but the where to send the notification is hand
 
 ## Campfire
 
-For campfire, we need both an API key and your domain name (just the first part, without `.campfirenow.com`) as well as the specific room you want the notifictions to end up in.
+For campfire, we need both an API key and your domain name (just the first part, without `.campfirenow.com`) as well as the specific room you want the notifications to end up in.
 
 ## Grove
 
@@ -103,7 +103,7 @@ Grove provides specific tokens for each channel, so in this case, that's all we'
 
 ## Webhook
 
-Webhooks allows for a range of custom instegrations. It's pretty similar to the other services in terms of setup though, as you just need to provide the URL of the webhook we'll need to call.
+Webhooks allows for a range of custom integrations. It's pretty similar to the other services in terms of setup though, as you just need to provide the URL of the webhook we'll need to call.
 
 #### Webhook Payload
 

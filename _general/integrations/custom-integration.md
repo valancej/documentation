@@ -73,4 +73,4 @@ As an example if your project has a CLI that is required to be installed for the
 
 All commands on Codeship Basic are executed via the project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}). Setup commands happen before any tests are run, while test commands happen only after setup is complete.
 
-**Note** that you should consider that tests can run in parallel when determine if a command should be a setup command or a test command, as well as whether it shoudl execute only in one potential test pipeline or if it should execute in multiple test pipelines.
+**Note** that you should consider that tests can run in parallel when determine if a command should be a setup command or a test command, as well as whether it should execute only in one potential test pipeline or if it should execute in multiple test pipelines.

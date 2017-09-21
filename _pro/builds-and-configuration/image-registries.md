@@ -65,7 +65,7 @@ This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro
 
 * Run the `jet encrypt` command against your image registry `dockercfg` file. This typically looks like `jet encrypter dockercfg dockercfg.encrypted`. but you can name it whatever you'd like.
 
-* The newly encrypted dockercfg file will be commited to your repo and used in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) files to authenticate with your registry on pull and push.
+* The newly encrypted dockercfg file will be committed to your repo and used in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) files to authenticate with your registry on pull and push.
 
 ### Docker Credentials On Mac OSX
 
@@ -151,7 +151,7 @@ To use the encrypted dockercfg file authentication method with Quay.io, you will
 
 **Note** that permissions can be set per robot account, so if you are seeing authentication failures you should check that the individual robot account being used is configured with appropriate access.
 
-Next, you will need to  download the `.dockercfg` file for this accoun  by heading over to the _Robots Account_ tab in your settings. From there, either credit a new robot account or click on an existing robot account. In the pop-up window, the _Docker Configuration_ tab will have an option to download an `auth.json` file.
+Next, you will need to  download the `.dockercfg` file for this account  by heading over to the _Robots Account_ tab in your settings. From there, either credit a new robot account or click on an existing robot account. In the pop-up window, the _Docker Configuration_ tab will have an option to download an `auth.json` file.
 
 Once you have encrypted this auth.json file using the encrypted dockercfg method, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
@@ -198,7 +198,7 @@ You will also need to configure your `codeship-steps.yml` file to provide your a
 
 Pushing to a custom or self-hosted registry is similar to using Dockerhub or Quay.io.
 
-You will want to specify your regitry URL and provide your registry credentials in an encrypted dockercfg file on a [push step]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}#push-steps) in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+You will want to specify your registry URL and provide your registry credentials in an encrypted dockercfg file on a [push step]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}#push-steps) in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 ```yaml
 - service: app

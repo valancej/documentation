@@ -142,7 +142,7 @@ $ honeymarker
 
 #### Running Honeymarker Commands
 
-Once you have Honeymarker installed via your project's setup commands, you will need to add new commands to your projet's [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) to make use of it:
+Once you have Honeymarker installed via your project's setup commands, you will need to add new commands to your project's [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) to make use of it:
 
 ```bash
 honeymarker -k <your-writekey> -d <dataset> COMMAND [command-specific flags]

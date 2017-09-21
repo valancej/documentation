@@ -19,7 +19,7 @@ redirect_from:
 
 ## Prerequisites
 
-This deployment method is not yet able to create Elastic Beanstalk environments, neither does it configure the S3 Bucket needed to upload new versions of your application. Please configure your Elastic Beanstalk environment by hand before your first deploy. All later deployments can then be handled by our integreated deployment.
+This deployment method is not yet able to create Elastic Beanstalk environments, neither does it configure the S3 Bucket needed to upload new versions of your application. Please configure your Elastic Beanstalk environment by hand before your first deploy. All later deployments can then be handled by our integrated deployment.
 
 ## Configuration
 

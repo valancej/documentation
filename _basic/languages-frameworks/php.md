@@ -186,7 +186,7 @@ All commands must return an `exit code 0` to Codeship to report a successful res
 
 ### Custom PHPUnit Version
 
-Note that if you need to install a custom versin of PHPUnit, you can do so with the following commands:
+Note that if you need to install a custom version of PHPUnit, you can do so with the following commands:
 
 ```shell
 composer global remove phpunit/phpunit

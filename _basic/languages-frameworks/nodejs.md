@@ -93,7 +93,7 @@ export PREFIX="${HOME}/cache/npm/"
 ### Scoped Packages
 
 <div class="info-block">
-Scoped packages are only avalaible for versions of `npm` greater than 2.7.0.
+Scoped packages are only available for versions of `npm` greater than 2.7.0.
 </div>
 
 To create a scoped package, you simply use a package name that starts with your scope.
