@@ -21,6 +21,8 @@ tags:
 
 [PagerDuty](https://www.pagerduty.com) lets you send alerts and notifications about critical events to your on-call or development team.
 
+By using PagerDuty your engineering team can respond to important alerts quickly and run your applications without concern.
+
 [The PagerDuty documentation](https://v2.developer.pagerduty.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro

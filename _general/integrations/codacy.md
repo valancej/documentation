@@ -20,7 +20,11 @@ menus:
 
 ## About Codacy
 
-[Codacy](https://www.codacy.com) is an automated code coverage service. Starting with Codacy and Codeship is fast and easy. [Their documentation](https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo) does a great job of providing more information, in addition to the setup instructions below.
+[Codacy](https://www.codacy.com) is an automated code coverage service. Starting with Codacy and Codeship is fast and easy.
+
+By using Codacy you can help enforce higher standards of code quality and transparency with your engineering tea.
+
+[Their documentation](https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 

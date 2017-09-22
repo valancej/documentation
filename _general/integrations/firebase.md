@@ -20,6 +20,8 @@ menus:
 
 [Firebase](https://firebase.google.com/) is a cloud platform for handling operations and data for mobile and web applications.
 
+By using Firebase you can streamline a variety of data and account operations for your cloud application.
+
 The [Firebase documentation](https://firebase.google.com/docs/) provides a great guide to getting started, and the instructions below have more information on integrating with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro).
 
 ## Codeship Pro

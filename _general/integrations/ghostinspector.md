@@ -21,6 +21,8 @@ tags:
 
 [Ghost Inspector](https://ghostinspector.com/docs/integration/codeship/) lets you write and run UI and browser tests as part of your builds without configuring local servers and managing your own browsers.
 
+By using Ghost Inspector you can easily test your UI without complex browser testing overhead.
+
 [Their documentation](https://ghostinspector.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro

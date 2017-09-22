@@ -21,7 +21,11 @@ menus:
 
 ## About Codecov
 
-Codecov is an automated code coverage service. Starting with Codecov and Codeship is fast and easy. [Their documentation](https://docs.codecov.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
+Codecov is an automated code coverage service. Starting with Codecov and Codeship is fast and easy.
+
+By using Codecov you can help enforce higher standards of code quality and transparency with your engineering tea.
+
+[Their documentation](https://docs.codecov.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 

@@ -17,6 +17,8 @@ menus:
 
 [Gemnasium](https://gemnasium.com) is a service for analyzing and monitoring the security of your application dependencies.
 
+By using Gemnasium you can be sure that your Ruby gems are up to date and secure.
+
 [The Gemnasium documentation](https://github.com/gemnasium/toolbelt) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro

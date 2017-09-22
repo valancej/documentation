@@ -19,6 +19,8 @@ menus:
 
 [Appranix](http://www.appranix.com/) simplifies and automates application operations on cloud platforms.
 
+By using Appranix you can reduce the amount of time it takes to run and monitor cloud operations.
+
 The [Appranix documentation](https://app.appranix.net/docs/) provides a great guide to getting started, and the instructions below have more information on integrating with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro).
 
 ## Codeship Pro
