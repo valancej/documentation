@@ -46,7 +46,7 @@ Smart Notifications are a key feature of Codeship.
 
 [Codeship Basic](https://codeship.com/features/basic), too, provides a lot of granular build notification options, giving you good visibility into the health of your projects.
 
-Migrating notifications from Jenkins to Codeship is pretty easy. What generally works best is to begin with a list of notification types that your team uses and then reimplement each of those specific to the teams that want the particular notification.
+Migrating notifications from Jenkins to Codeship is pretty easy. What generally works best is to begin with a list of notification types that your team uses and then re-implement each of those specific to the teams that want the particular notification.
 
 Following are a few ways to get notified of build status or related information with Codeship.
 

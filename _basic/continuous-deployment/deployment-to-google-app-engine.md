@@ -55,7 +55,7 @@ Once connected, you will be brought back to your Google App Engine deployment se
 
 You can set the path of your `appcfg.*` file in the _Update Path:_ field. If the file exists on the root of your repository, simply leave it blank.
 
-By default we search for a `app.yml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. If the `app.yml` file is not located, we'll presume the application to be Java based and will use the `appcfg.sh` script insteaad.
+By default we search for a `app.yml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. If the `app.yml` file is not located, we'll presume the application to be Java based and will use the `appcfg.sh` script instead.
 
 #### Application URL
 

@@ -31,7 +31,7 @@ This image will support both a standard Heroku deployment by using the Heroku To
 
 Before setting up the [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) files, you will need to create an encrypted environment file that contains the Heroku API key.
 
-This will be done by using Codehip Pro's [encrypted environment files feature]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), which allows you to add your environment variables through an encrypted file placed in your repository. In this example, the file will be called `heroku-deployment.env.encrypted` and will encrypt the following data at a minimum:
+This will be done by using Codeship Pro's [encrypted environment files feature]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), which allows you to add your environment variables through an encrypted file placed in your repository. In this example, the file will be called `heroku-deployment.env.encrypted` and will encrypt the following data at a minimum:
 
 ```bash
 HEROKU_API_KEY=your_api_key_here
@@ -57,7 +57,7 @@ herokudeployment:
 
 ### Deployment Option #1: Platform Deployment
 
-If you are  not using [Heroku's Docker suppport](https://devcenter.heroku.com/articles/container-registry-and-runtime) to run Docker in production, you will most likely want to deploy using Heroku CLI commands and the [Heroku Platform API](https://devcenter.heroku.com/articles/build-and-release-using-the-api). By using the Platform API, no SSH key management is necessary.
+If you are  not using [Heroku's Docker support](https://devcenter.heroku.com/articles/container-registry-and-runtime) to run Docker in production, you will most likely want to deploy using Heroku CLI commands and the [Heroku Platform API](https://devcenter.heroku.com/articles/build-and-release-using-the-api). By using the Platform API, no SSH key management is necessary.
 
 The deployment container discussed above has a `codeship_heroku deploy` command that you need to call, along with the path to your application. In this example, the path to our application is actually coming through our separate, application container via a [host volume]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}) (in this case `/deploy`). You will also need to provide your application name. The default script will then check that it has access to the application and deploy it.
 
@@ -75,7 +75,7 @@ Also note above that the deployment container has the Heroku Toolbelt installed 
 
 ### Deployment Option #2: Docker Deployment
 
-If you are using [Heroku's Docker suppport](https://devcenter.heroku.com/articles/container-registry-and-runtime), you can trigger a deployment simply by doing an [image push]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#push-steps) to the Heroku registry.
+If you are using [Heroku's Docker support](https://devcenter.heroku.com/articles/container-registry-and-runtime), you can trigger a deployment simply by doing an [image push]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#push-steps) to the Heroku registry.
 
 On Codeship Pro, a push step happens in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) and requires that we generate an authentication token to authenticate with the Heroku registry. Codeship maintains an image that you will use to generate your authentication token, simply add it to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and provide your Heroku API key via the encrypted environment variables file discussed above.
 

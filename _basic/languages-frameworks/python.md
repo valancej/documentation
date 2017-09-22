@@ -34,7 +34,7 @@ In your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-sta
 pyenv local $version
 ```
 
-You can also use the environment vairable `PYENV_VERSION` to choose from one of the installed Python versions.
+You can also use the environment variable `PYENV_VERSION` to choose from one of the installed Python versions.
 
 Alternatively, you can specify a version to use by committing a file named `.python-version` into your code repository with a version specification.
 

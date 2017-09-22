@@ -30,7 +30,7 @@ To start, you need to add your `CODACY_PROJECT_TOKEN` to the [encrypted environm
 
 ### Project Configuration
 
-Once your Codacy project ID is loaded via your environment variables, you will need to install the Codacy package into your Dockerfile via your prefered package manager.
+Once your Codacy project ID is loaded via your environment variables, you will need to install the Codacy package into your Dockerfile via your preferred package manager.
 
 You can find specific instructions per-language over at the [Codacy documentation](https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo).
 

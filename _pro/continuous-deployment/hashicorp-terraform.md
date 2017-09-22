@@ -98,7 +98,7 @@ The `--out` flag instructs Terraform to save this execution plan to a file that 
 
 ### Automate Changes Via Apply Command
 
-To configure the actual application of instracture changes in your CI/CD pipeline, we will add a new step to our [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file example:
+To configure the actual application of infrastructure changes in your CI/CD pipeline, we will add a new step to our [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file example:
 
 
 ```yaml

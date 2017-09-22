@@ -31,13 +31,13 @@ Let's take a look at how Codeship manages permissions around your source control
 
 When we say permissions, we are  talking about access you give Codeship to your source control repo, or access you give to people on your team to your Codeship builds and account information.
 
-#### Repository permissions vs. Access permisisons ####
+#### Repository permissions vs. Access permissions ####
 
 In terms of access you give Codeship, there are two different types that are in play: repository level permissions and access level permissions.
 
 For Codeship to configure your repo correctly, the account that connects a repo needs to have the necessary permissions to setup a webhook etc on the repository. For this, we expect that account to have `admin` permissions (or master or owner depending on your source control system).
 
-As for access permissons, these influence what we're allowed to do on your behalf, on a per-build basis. We need access to clone your repo, as well as report back with the test results, but not full admin permissions.
+As for access permissions, these influence what we're allowed to do on your behalf, on a per-build basis. We need access to clone your repo, as well as report back with the test results, but not full admin permissions.
 
 The next section explains which specific permissions we ask for, depending on your source control system.
 
@@ -48,8 +48,8 @@ As mentioned above, Codeship requires both repository and access level permissio
 #### Github
 
 - For setting up a new project, we need the account to have `admin` permissions.
-- For regular access, we require read/write permissions to your private repositoties so that we can clone the repos and report back status.
-- Like all providers that integrate with Github, we'd love to request fewer permissions than we do, but as we're currently using GiHub's Oauth integration, we're limited to the [few options GitHub provides](https://developer.github.com/v3/oauth/#scopes) (we're asking for `repo` and `user:email` scopes). We are looking to move to the new [GitHub Integration](https://developer.github.com/early-access/integrations/integrations-vs-oauth-applications/) options, to offer you more granular control, in the near future.
+- For regular access, we require read/write permissions to your private repositories so that we can clone the repos and report back status.
+- Like all providers that integrate with Github, we'd love to request fewer permissions than we do, but as we're currently using GitHub's Oauth integration, we're limited to the [few options GitHub provides](https://developer.github.com/v3/oauth/#scopes) (we're asking for `repo` and `user:email` scopes). We are looking to move to the new [GitHub Integration](https://developer.github.com/early-access/integrations/integrations-vs-oauth-applications/) options, to offer you more granular control, in the near future.
 
 #### Bitbucket
 
@@ -92,7 +92,7 @@ If you attempt to connect a repository to a new project, and you don't have `adm
 1. The simplest option is to get `admin` permissions to the repo, which can be given to the team you're in or specifically to your user
 1. The second option is to have someone else, who have `admin` permissions, setup the project for you. The flow would look like this:
     1. User with `admin` permission creates the project and connects the repo (Codeship will create a webhook and register an SSH key)
-    1. Same user changes the project settings (Project settings > General > Account used for authentication) and assigns the project to you or another user with limited permissons
+    1. Same user changes the project settings (Project settings > General > Account used for authentication) and assigns the project to you or another user with limited permissions
     1. The project can now be used by Codeship, even without having admin permissions to the repo
 
 ## Security

@@ -54,7 +54,7 @@ gem 'coveralls', require: false
 
 ### Project Configuration
 
-Now, you'll need to put the Covealls initializers into your `spec_helper.rb` or `env.rb` file, depending on which framework you use.
+Now, you'll need to put the Coveralls initializers into your `spec_helper.rb` or `env.rb` file, depending on which framework you use.
 
 ```ruby
 require 'coveralls'
@@ -115,7 +115,7 @@ gem 'coveralls', require: false
 
 ### Project Configuration
 
-Now, you'll need to put the Covealls initializers into your `spec_helper.rb` or `env.rb` file, depending on which framework you use.
+Now, you'll need to put the Coveralls initializers into your `spec_helper.rb` or `env.rb` file, depending on which framework you use.
 
 ```ruby
 require 'coveralls'

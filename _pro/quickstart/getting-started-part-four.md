@@ -133,7 +133,7 @@ Now that we have our new service and both of our scripts, we need to edit our `c
       encrypted_dockercfg_path: dockercfg.encrypted
 ```
 
-As you can see, we've created a third parallel step to run out new volumes test, and that paralell step is using a *serial* sub-step to first run the `write.rb` script and then to run the `read.rb` script.
+As you can see, we've created a third parallel step to run out new volumes test, and that parallel step is using a *serial* sub-step to first run the `write.rb` script and then to run the `read.rb` script.
 
 So, now we've got a new service that writes an artifact to a volume, as defined in our `codeship-steps.yml` file. We also have a new test in our original `demo` service that checks to see if the artifact exists before moving on with our image push and deployment. This, in a nutshell, is how volumes are used in your CI/CD pipeline.
 

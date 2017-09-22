@@ -65,7 +65,7 @@ In order for you to deploy your app using Codeship, you need to provide the Hero
 
 You have now successfully setup deployment to Heroku. Go ahead and push a commit to your configured deploy branch.
 
-## Additonal Configuration Settings (optional)
+## Additional Configuration Settings (optional)
 You can configure additional settings to your Heroku deployment by selecting **More Options**:
 
 ![Select Heroku Deploy Options]({{ site.baseurl }}/images/continuous-deployment/select-heroku-deploy-options.png)

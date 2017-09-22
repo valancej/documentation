@@ -36,7 +36,7 @@ You can set your environment variables directly in your [Services file]({{ site.
 
 ### Via Services File
 
-To set unsecured enviroment variables via your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will use the `environment` specification. For example:
+To set unsecured environment variables via your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will use the `environment` specification. For example:
 
 ```
 app:
@@ -169,7 +169,7 @@ For the time being, there are several workarounds that may be worth investigatin
 
 - You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), you would run `jet steps service_name command` rather than just `jet steps`.
 
-- You could keep a different encrypted env file on hand locally. From there, you would maintain local `.gitignore` files so that the local credential files are not committed by individual developers and only the canonical, production encrypted environment file would be in the repo. The developers would then need to override the pulled encrypted enviroment variables file with their own, but it would be ignored on all commits back to the repo because of the `.gitignore`.
+- You could keep a different encrypted env file on hand locally. From there, you would maintain local `.gitignore` files so that the local credential files are not committed by individual developers and only the canonical, production encrypted environment file would be in the repo. The developers would then need to override the pulled encrypted environment variables file with their own, but it would be ignored on all commits back to the repo because of the `.gitignore`.
 
 - Your team could also maintain branches just for local development, and these branches would not have any environment variables file committed on them. Developers could then maintain a local env file that is never committed, with the main branches continuing to host a primary, encrypted environment variables file.
 

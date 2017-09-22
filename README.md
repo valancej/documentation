@@ -61,6 +61,22 @@ For NPM based dependencies, run the following two commands
 docker run -it --rm -v $(pwd):/docs codeship/documentation yarn upgrade
 ```
 
+### Spellcheck
+
+To run spellcheck on all Markdown files, run the following command:
+
+```bash
+docker run -it --rm -v $(pwd):/docs codeship/documentation yarn run check
+```
+
+To run the interactive correction functionality and to update the .spelling file, run:
+
+```bash
+docker run -it --rm -v $(pwd):/docs codeship/documentation yarn run fix
+```
+
+See output and [mdspell](https://github.com/lukeapage/node-markdown-spellcheck) for details on how to maintain the `.spelling` file.
+
 ### Linting
 
 #### SCSS

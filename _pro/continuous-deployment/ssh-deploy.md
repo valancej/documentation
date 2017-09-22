@@ -58,7 +58,7 @@ Now that the you have the `keyfile.rsa` file, you will need to encrypt this file
 
 **Note** that you may need the key as both a build argument and an environment variable, since build arguments are _only_ available via the Dockerfile and environment variables are _only_ available via the [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) after your containers have built.
 
-Whether using build arguments or environemnt variables, you will need to be sure to replace newlines with `\n` so that the entire SSH key is in one line. For example:
+Whether using build arguments or environment variables, you will need to be sure to replace newlines with `\n` so that the entire SSH key is in one line. For example:
 
 ```bash
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
@@ -129,6 +129,6 @@ If your SSH authentication commands are failing, there are several troubleshooti
 
 - First, try connecting using that key locally to verify the key and the corresponding public key are configured and working as intended.
 
-- Next, try running your deployments locally with [the local]() to see if you recieve the same error messages.
+- Next, try running your deployments locally with [the local]() to see if you receive the same error messages.
 
 - Often times these issues are related to character escaping or issues loading the key into the proper directory, so running `printenv` and `ls` commands will help you verify that the correct key has been loaded and that it is where you want it to be.

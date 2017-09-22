@@ -44,7 +44,7 @@ Then, either with a separate project or as a part of the build process for each 
 
 ## Cloning Multiple Repos During A Build
 
-In addition to the above method using images in a regsitry, you can also clone the repos themsleves during the build process - either with a separate project or as part of the build for each individual component.
+In addition to the above method using images in a registry, you can also clone the repos themselves during the build process - either with a separate project or as part of the build for each individual component.
 
 ### Creating Your SSH Key
 
