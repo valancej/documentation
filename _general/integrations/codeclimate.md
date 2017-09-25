@@ -33,7 +33,7 @@ redirect_from:
 
 Code Climate is an automated code coverage service. Starting with Code Climate and Codeship is fast and easy.
 
-By using Code Climate you can help enforce higher standards of code quality and transparency with your engineering tea.
+By using Code Climate you can help enforce higher standards of code quality and transparency with your engineering team.
 
 [Their documentation](http://docs.codeclimate.com/article/219-setting-up-test-coverage) does a great job of providing more information, in addition to the setup instructions below.
 
