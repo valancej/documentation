@@ -21,6 +21,8 @@ tags:
 
 [Honeycomb](https://www.honeycomb.io) lets you collect and track data and events for debugging and trend analysis. During your continuous deployment workflow with Codeship Pro, you can use Honeycomb to log information related to your deployments or tests.
 
+By using Honeycomb you can more easily track, troubleshoot and debug your applications.
+
 [Their documentation](https://honeycomb.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro

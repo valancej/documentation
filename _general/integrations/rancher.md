@@ -22,7 +22,11 @@ Note that Rancher only integrates with [Codeship Pro](https://codeship.com/featu
 If you do not have a familiarity with Codeship Pro, we recommend watching this [introductory webinar](https://resources.codeship.com/webinars/env-parity-docker-codeship-jet) before proceeding with your Rancher setup.
 </div>
 
-Rancher is a container management platform that helps bridge the gap between container stacks and infrastructure platforms. [Their documentation](http://rancher.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
+Rancher is a container management platform that helps bridge the gap between container stacks and infrastructure platforms.
+
+By using Rancher you can deploy and run your cloud native applications simpler and easier.
+
+[Their documentation](http://rancher.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Using Rancher
 

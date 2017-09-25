@@ -19,6 +19,8 @@ menus:
 
 [Snyk](https://www.Snyk.com) is an automated way to check for security vulnerabilities with your dependencies.
 
+By using Snyk you can be sure that your dependencies are up to date and secure.
+
 Starting with Snyk and Codeship is fast and easy. [The Snyk documentation](https://snyk.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro

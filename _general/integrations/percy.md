@@ -23,6 +23,8 @@ redirect_from:
 
 [Percy](https://percy.io) is a visual testing tool that lets you take screenshots, monitor visual changes, and require team approval to these visual captures in an automated way as part of your CI/CD pipeline.
 
+By using Percy you can easily test your UI without complex browser testing overhead.
+
 [Their documentation](https://percy.io/docs) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro

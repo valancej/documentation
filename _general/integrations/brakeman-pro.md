@@ -22,7 +22,11 @@ redirect_from:
 
 ## About Brakeman Pro
 
-Brakeman Pro is as service for automatically testing and reporting on your Rails application's security vulnerabilities. [Their documentation](https://brakemanpro.com/docs) does a great job of providing more information, in addition to the setup instructions below.
+Brakeman Pro is as service for automatically testing and reporting on your Rails application's security vulnerabilities.
+
+By using Brakeman Pro you can be confident that your Rails application is secure and up to date.
+
+[Their documentation](https://brakemanpro.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 

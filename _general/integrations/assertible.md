@@ -25,6 +25,8 @@ tags:
 
 [Assertible](https://assertible.com) is an API testing and monitoring tool that can be used with continuous integration and delivery services like [Codeship](https://codeship.com) to test and validate your web applications.
 
+By using Assertible you can ship more reliable code for your teams and your customers.
+
 The [Assertible documentation](https://assertible.com/docs) provides a great guide to getting started, and the instructions below have more information on integrating with [Codeship](https://codeship.com) to [run integration tests during CI](#triggering-tests-during-a-build) and [test your web app after a deployment](#running-tests-after-a-deployment).
 
 ## Codeship Pro

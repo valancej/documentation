@@ -22,6 +22,8 @@ tags:
 
 [OpsGenie](https://www.opsgenie.com) lets you send alerts and notifications about critical events to your on-call or development team.
 
+By using OpsGenie your engineering team can respond to important alerts quickly and run your applications without concern.
+
 [Their documentation](https://www.opsgenie.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro

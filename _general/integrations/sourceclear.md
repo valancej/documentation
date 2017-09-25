@@ -21,7 +21,11 @@ redirect_from:
 
 ## About SourceClear
 
-SourceClear is as service for automatically testing and reporting on your application's security vulnerabilities. [Their documentation](https://www.sourceclear.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
+SourceClear is as service for automatically testing and reporting on your application's security vulnerabilities.
+
+By using SourceClear you can be sure that your application code is tested and secure.
+
+[Their documentation](https://www.sourceclear.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
