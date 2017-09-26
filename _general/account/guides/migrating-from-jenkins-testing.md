@@ -32,7 +32,7 @@ Codeship Pro’s simple configuration files ([codeship-services.yml]({% link _pr
 
 Simply set up the `codeship-steps.yml` file as shown.
 
-```
+```yaml
 - name: deluge
   service: deluge_build
   command: echo 'A first build step for whatever.'
@@ -64,7 +64,7 @@ First, set the command within your project’s tests section of the interface.
 
 Here is a quick code sample test for a Node.js application that we have [here](https://github.com/Adron/multi-cloud).
 
-```
+```javascript
 var assert = require('assert');
 
 describe('Where the important things happen', function () {

@@ -22,7 +22,7 @@ For security reasons Codeship does not provide persistent storage of files betwe
 
 If you want to upload artifacts to S3 during your test steps, you can use the AWS CLI. First add the following environment variables to your project configuration.
 
-```shell
+```
 AWS_DEFAULT_REGION
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY

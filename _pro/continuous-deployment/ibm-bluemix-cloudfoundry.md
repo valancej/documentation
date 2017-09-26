@@ -92,7 +92,7 @@ Note that in this example, all of the Cloud Foundry deployment commands have bee
 
 Inside the `deploy_via_cloudfoundry.sh` script, you will have something similar to:
 
-```bash
+```shell
 #!/bin/bash
 
 set -e

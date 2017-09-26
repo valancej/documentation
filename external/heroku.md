@@ -90,14 +90,14 @@ The credentials for our database are stored as **environment variables**
 
 * PostgreSQL
 
-  ```bash
+  ```shell
   Username: $PGUSER
   Password: $PGPASSWORD
   ```
 
 * MySQL
 
-  ```bash
+  ```shell
   Username: $MYSQL_USER
   Password: $MYSQL_PASSWORD
   ```

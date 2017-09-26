@@ -38,7 +38,7 @@ To do this you need to set up an encrypted SSH Key that is available as either a
 
 The first thing you will need to do is generate a usable SSH key locally. If you have an existing key, you can use it, or you can use the following recommended commands to generate the key:
 
-```bash
+```shell
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f keyfile.rsa
 ```
 
@@ -60,13 +60,13 @@ Now that the you have the `keyfile.rsa` file, you will need to encrypt this file
 
 Whether using build arguments or environment variables, you will need to be sure to replace newlines with `\n` so that the entire SSH key is in one line. For example:
 
-```bash
+```
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
 ```
 
 And here is a `docker run` command that will do the work of replacing your newlines with `\n`
 
-```
+```shell
 docker run -it --rm -v ${PATH_TO_PRIVATE_KEY}:/key alpine sed -E ':a;N;$!ba;s/\r?\n/\\n/g' /key
 ```
 
@@ -96,7 +96,7 @@ Before running any command that requires the SSH key to be available, make sure 
 
 These commands will load the SSH key into the required container directory so that is available for use. This will usually happen inside your Dockerfile, although in some cases it may happen with via a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```bash
+```shell
 mkdir -p "${HOME}/.ssh"
 echo "${PRIVATE_SSH_KEY}" >> "${HOME}/.ssh/id_rsa"
 ```

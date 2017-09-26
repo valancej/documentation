@@ -31,7 +31,7 @@ Integrating Appranix with Codeship requires that you include the  [appranix.sh](
 
 Inside this script, you will have the following:
 
-```bash
+```shell
 echo "Installing Appranix CLI"
 gem install prana
 
@@ -97,7 +97,7 @@ Note: The container must have [Ruby version 2.3.3]({{ site.baseurl }}{% link _pr
 
 Integrating Appranix with Codeship requires that you include the  [appranix.sh](https://github.com/RushinthJohn/documentation/blob/appranix/_data/appranix.sh) script file in your project repository.
 
-```bash
+```shell
 echo "Installing Appranix CLI"
 gem install prana
 

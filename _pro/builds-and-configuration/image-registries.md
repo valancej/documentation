@@ -50,7 +50,7 @@ This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro
 
 * First create an unencrypted dockercfg file using your account credentials. The dockercfg should look close to:
 
-```shell
+```json
 {
 	"auths": {
 		"https://index.docker.io/": {
@@ -130,7 +130,7 @@ The image defined above will be tagged and pushed based on the `push` step in yo
 
 After setting up your registry authentication using the encrypted dockercfg file method shown above, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) or your Dockerfile to reference the image you are pulling:
 
-```Dockerfile
+```dockerfile
 FROM username/registry_name
 # ...
 ```
@@ -179,7 +179,7 @@ To pull images from private Quay.io accounts, you will need to configure your Qu
 
 After setting up your registry authentication, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) or your Dockerfile to reference the image you are pulling:
 
-```Dockerfile
+```dockerfile
 FROM quay.io/username/registry_name
 # ...
 ```
@@ -214,7 +214,7 @@ You can  access images from privately or self-hosted registries with non-standar
 
 In your `Dockerfile`:
 
-```Dockerfile
+```dockerfile
 FROM your_registry_url/username/your_image
 # ...
 ```
@@ -389,7 +389,7 @@ For example:
 ```yaml
 base:
   build:
-    image: registry.ng.bluemix.net/your_namespace/image    
+    image: registry.ng.bluemix.net/your_namespace/image
     path: ./base
     dockerfile_path: Dockerfile
   dockercfg_service: bluemix_dockercfg

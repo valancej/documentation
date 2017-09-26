@@ -38,7 +38,7 @@ You can set your environment variables directly in your [Services file]({{ site.
 
 To set unsecured environment variables via your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will use the `environment` specification. For example:
 
-```
+```yaml
 app:
   build:
     image: myorg/appname
@@ -52,7 +52,7 @@ app:
 
 To set unsecured environment variables via your Dockerfile, you will use the `ENV` directive. For example:
 
-```
+```dockerfile
 FROM ubuntu:latest
 ENV URL=www.codeship.com
 ```
@@ -84,7 +84,7 @@ Once you create this file and save it in your project directory, we'll encrypt i
 
 From your terminal, you will run:
 
-```bash
+```shell
 jet encrypt env env.encrypted
 ```
 
@@ -96,7 +96,7 @@ In this example `env` is the name of the text file containing your environment v
 
 Now that you have created your encrypted environment variables file (and added the plain-text version to your `.gitignore`), you will want to use the encrypted file in your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). You do this using the `encrypted_env_file` directive. For example:
 
-```
+```yaml
 app:
   build:
     image: myorg/appname
@@ -108,7 +108,7 @@ app:
 
 If you need to decrypt the encrypted file run the following command instead
 
-```bash
+```shell
 jet decrypt env.encrypted env
 ```
 

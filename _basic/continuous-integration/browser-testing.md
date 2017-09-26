@@ -36,7 +36,7 @@ Chromium is at version 59 and is located at `/usr/bin/chromium-browser`.
 
 There is a `chrome` symlink in the PATH that defaults to calling Google Chrome. You can change it to point to Chromium by adding these commands to your build steps:
 
-```
+```shell
 ln -sf /usr/bin/chromium-browser /home/rof/bin/chrome
 ln -sf /usr/bin/chromium-browser /home/rof/bin/Chrome
 ```
@@ -49,7 +49,7 @@ Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://dev
 
 To install a [custom ChromeDriver version](https://github.com/codeship/scripts/blob/master/packages/chromedriver.sh) add the following commands to your build steps:
 
-```
+```shell
 export CHROMEDRIVER_VERSION=YOUR_DESIRED_VERSION
 
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/chromedriver.sh | bash -s
@@ -60,7 +60,7 @@ Firefox 35.0.1 is installed by default and available in the PATH.
 
 To install a [custom Firefox version](https://github.com/codeship/scripts/blob/master/packages/firefox.sh) add the following commands to your build steps:
 
-```
+```shell
 export FIREFOX_VERSION=YOUR_DESIRED_VERSION
 
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/firefox.sh | bash -s
@@ -71,7 +71,7 @@ geckodriver 0.11.1 is installed by default and available in the PATH.
 
 To install a [custom geckodriver version](https://github.com/codeship/scripts/blob/master/packages/geckodriver.sh) add the following commands to your build steps:
 
-```
+```shell
 export GECKODRIVER_VERSION=YOUR_DESIRED_VERSION
 
 source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/rust.sh)"
@@ -95,7 +95,7 @@ There is a [script](https://github.com/codeship/scripts/blob/master/packages/sau
 
 To install a [custom PhantomJS version](https://github.com/codeship/scripts/blob/master/packages/phantomjs.sh) add the following commands to your build steps:
 
-```
+```shell
 export PHANTOMJS_VERSION=YOUR_DESIRED_VERSION
 
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/phantomjs.sh | bash -s

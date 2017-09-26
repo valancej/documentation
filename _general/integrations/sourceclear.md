@@ -13,7 +13,7 @@ menus:
     weight: 4
 redirect_from:
   - /basic/continuous-integration/sourceclear/
-  - /pro/continuous-integration/sourceclear-docker/    
+  - /pro/continuous-integration/sourceclear-docker/
 ---
 
 * include a table of contents
@@ -38,9 +38,9 @@ To start, you need to add your SourceClear API token to your [encrypted environm
 After adding the API token, you will need to add the following commands to a script, placed in your repository, that you will call from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 
-```bash
+```shell
 curl -sSL https://download.sourceclear.com/ci.sh | bash
- ```
+```
 
 **Note** that if you are using [parallel test steps]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) then you likely only want to call this script once, as it's own step, rather than as part of your test steps themselves.
 
@@ -56,8 +56,8 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 After adding the API token, you'll just need to add the SourceClear command to your [project's test commands[project's test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %})]. The command to add is:
 
-```bash
+```shell
 curl -sSL https://download.sourceclear.com/ci.sh | bash
- ```
+```
 
 **Note** that if you are using [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}) then you likely only want to add this command to a single pipeline, rather than multiple pipelines.

@@ -46,7 +46,7 @@ Because all the commands in your pipeline, via your [codeship-steps.yml file]({{
 
 You can use an [existing image with Rancher compose configured](https://hub.docker.com/r/bfosberry/rancher-compose/) or build your own with a Dockerfile that looks similar to the one below:
 
-```bash
+```dockerfile
 FROM debian:8.1
 
 ENV RANCHER_COMPOSE_VERSION v0.12.0
@@ -67,7 +67,7 @@ CMD ["--version"]
 
 Once you have a image capable of executing Rancher Compose commands, you will want to build that image via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
-```bash
+```yaml
 rancher:
   build:
     image: your_org/your_image
@@ -82,20 +82,20 @@ Note that the service that will execute our Rancher Compose commands is using th
 After creating your encrypted Rancher keys and defining a service to execute your Rancher Compose commands, you will now want to add those commands to your pipeline via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 
-```bash
+```yaml
 - name: rancher-deploy
   service: rancher
   command: "rancher-compose  --p YOUR_STACK_NAME --verbose up -d --force-upgrade --pull --confirm-upgrade YOUR_SERVICE_NAME"
- ```
+```
 
- Note that this specific Rancher Compose command can be substituted for any command you need to run. The important thing is that the `service` directive is pointing to the service defined via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) with the Rancher Compose packages installed.
+Note that this specific Rancher Compose command can be substituted for any command you need to run. The important thing is that the `service` directive is pointing to the service defined via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) with the Rancher Compose packages installed.
 
- If you have multiple Rancher commands to run, you can combine them in a script file and execute that rather than running a command directly:
+If you have multiple Rancher commands to run, you can combine them in a script file and execute that rather than running a command directly:
 
- ```
- - name: rancher-deploy
-   service: rancher
-   command: deploy.sh
- ```
+```yaml
+- name: rancher-deploy
+service: rancher
+command: deploy.sh
+```
 
- You will just need to add the required script to your repository and to the containers in your pipeline.
+You will just need to add the required script to your repository and to the containers in your pipeline.

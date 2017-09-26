@@ -44,7 +44,7 @@ Next, you will need to add the following commands to a script, placed in your re
 
 Inside the script, you will need the following Ghost Inspector commands:
 
-```bash
+```shell
 # Execute Ghost Inspector suite via API and store results in JSON file
 curl "https://api.ghostinspector.com/v1/suites/$GHOST_SUITE_ID/execute/?apiKey=$GHOST_API_KEY" > ghostinspector.json
 
@@ -58,7 +58,7 @@ For a more complex setup with more granular control, Ghost Inspector recommends 
 
 To do this, you will want to change the script you run from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) to the following:
 
-```bash
+```shell
 # Start our application (Command needs to be customized)
 node server.js &
 
@@ -94,7 +94,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 Once your Ghost Inspector credentials are loaded via your environment variables, you will want to run the following commands, directly or via a script, in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 # Execute Ghost Inspector suite via API and store results in JSON file
 curl "https://api.ghostinspector.com/v1/suites/$GHOST_SUITE_ID/execute/?apiKey=$GHOST_API_KEY" > ghostinspector.json
 
@@ -108,7 +108,7 @@ For a more complex setup with more granular control, Ghost Inspector recommends 
 
 To do this, you will want to add the following code to a script in your repository that you run in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 # Start our application (Command needs to be customized)
 node server.js &
 

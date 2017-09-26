@@ -53,7 +53,7 @@ You will want to add the PagerDuty API calls to a new script file in your reposi
 
 Below is an example API call from PagerDuty that you can use as the basis for your own PagerDuty API calls:
 
-```
+```json
 /*
   This example shows how to send a trigger event without a dedup_key.
   In this case, PagerDuty will automatically assign a random and unique key
@@ -117,7 +117,7 @@ Next, you will need to add [API calls to PagerDuty](https://v2.developer.pagerdu
 
 Below is an example API call from PagerDuty that you can use as the basis for your own PagerDuty API calls. Note that you likely want to put your API call in a new script file in your repository that you call via your custom-script [deployment pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
-```
+```json
 /*
   This example shows how to send a trigger event without a dedup_key.
   In this case, PagerDuty will automatically assign a random and unique key

@@ -46,7 +46,7 @@ Declaring build arguments in your services file requires updates in two places: 
 ### Dockerfile ARG instruction
 The service's Dockerfile must include the `ARG` [instruction](https://docs.docker.com/engine/reference/builder/#/arg), which declares the name of the argument you will pass at build time. You may also declare a default here.
 
-```bash
+```dockerfile
 FROM ubuntu:latest
 
 ARG build_env # build_env=test would make test the default value
@@ -57,7 +57,7 @@ RUN script-requiring-build-env.sh "$build_env"
 ### Passing build args in the services file
 Now that the Dockerfile knows to expect an argument, you can pass the argument to the image via the service configuration in `codeship-services.yml`.
 
-```bash
+```yaml
 app:
   build:
     dockerfile: Dockerfile
@@ -69,7 +69,7 @@ When the `app` service is built, the value of `build_env` becomes `staging`. If 
 
 You may also declare a build argument before the `FROM` instruction, which is a new feature introduced in Docker 17.05. Following the same pattern, you must first declare the argument before consuming it.
 
-```bash
+```dockerfile
 ARG BASE_IMAGE_TAG
 
 FROM ubuntu:$BASE_IMAGE_TAG
@@ -82,7 +82,7 @@ In a lot of cases, the values needed by the image at build time are secrets -- c
 
 First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to root directory (and add it to the `.gitignore` file.)
 
-```bash
+```shell
 GEM_SERVER_TOKEN=XXXXXXXXXXXX
 SECRET_BUILDTIME_PASSWORD=XXXXXXXXXXXX
 ```

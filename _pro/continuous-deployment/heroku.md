@@ -33,7 +33,7 @@ Before setting up the [codeship-services.yml]({{ site.baseurl }}{% link _pro/bui
 
 This will be done by using Codeship Pro's [encrypted environment files feature]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), which allows you to add your environment variables through an encrypted file placed in your repository. In this example, the file will be called `heroku-deployment.env.encrypted` and will encrypt the following data at a minimum:
 
-```bash
+```
 HEROKU_API_KEY=your_api_key_here
 ```
 
@@ -79,7 +79,7 @@ If you are using [Heroku's Docker support](https://devcenter.heroku.com/articles
 
 On Codeship Pro, a push step happens in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) and requires that we generate an authentication token to authenticate with the Heroku registry. Codeship maintains an image that you will use to generate your authentication token, simply add it to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and provide your Heroku API key via the encrypted environment variables file discussed above.
 
-```bash
+```yaml
 dockercfg_generator:
   build:
     image: codeship/heroku-dockercfg-generator
@@ -92,7 +92,7 @@ This image will be used on our push step, and is configured to automatically gen
 
 Once we have this service in place, we can push to the Heroku registry in our [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```bash
+```yaml
 - name: Push
   service: dockercfg_test
   type: push

@@ -153,7 +153,7 @@ To look at using your Codeship Pro pipeline for flexible, custom notifications w
 
 First of all, we can create a simple notification script, pulling all configuration and credentials from environment variables, or mounted volumes should we need to use build artifacts.
 
-```bash
+```shell
 #!/bin/sh
 # Post to Slack channel on new deployment
 # https://api.slack.com/incoming-webhooks
@@ -180,7 +180,7 @@ curl -X POST \
 
 It's quite simple to integrate a simple script like this into the deployment pipeline. First we can build it into a standalone container, or use an existing one from elsewhere in the pipeline which has the deploy script added to it.
 
-```
+```dockerfile
 # Dockerfile.notify
 FROM ubuntu
 

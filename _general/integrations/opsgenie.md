@@ -79,7 +79,7 @@ Alternatively, you could combine your deployment scripts with an OpsGenie API ca
 
 The OpsGenie API call itself, however implemented, will likely look similar to:
 
-```bash
+```shell
 curl -XPOST 'https://api.opsgenie.com/v1/json/alert' -d '
 {
     "apiKey": "YOUR_API_KEY",
@@ -116,7 +116,7 @@ Next, you will need to add [API calls to OpsGenie](https://www.opsgenie.com/docs
 
 The OpsGenie API call will likely look similar to:
 
-```bash
+```shell
 curl -XPOST 'https://api.opsgenie.com/v1/json/alert' -d '
 {
     "apiKey": "YOUR_API_KEY",

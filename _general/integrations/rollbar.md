@@ -41,7 +41,7 @@ You will need to add your Rollbar access token to your [encrypted environment va
 Next, you will need to add the following commands to a script, placed in your repository, that you will call from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 
-```bash
+```shell
 curl https://api.rollbar.com/api/1/deploy/ \
   -F access_token=$ACCESS_TOKEN \
   -F environment=$CI_BRANCH \
@@ -77,7 +77,7 @@ To log a deployment-related datapoint in Rollbar, you will want to add a new cus
 
 This new step will either run the following commands, or run a script that includes the following commands:
 
-```bash
+```shell
 curl https://api.rollbar.com/api/1/deploy/ \
   -F access_token=$ACCESS_TOKEN \
   -F environment=$CI_BRANCH \

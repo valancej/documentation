@@ -36,7 +36,7 @@ To use Snyk in your CI/CD process, you'll need to add the Snyk CLI to a service 
 To add the Snyk CLI, you will need to add the following command to the Dockerfile for the service you want to run Snyk on:
 
 
-```bash
+```dockerfile
 RUN npm install -g snyk
 ```
 
@@ -48,7 +48,7 @@ Once your Snyk token is loaded via your environment variables and you have defin
 
 We will combine the Snyk authentication and Snyk scan commands into a script file that we call from a step:
 
-```bash
+```yaml
 - name: Snyk
   service: app
   command: snyk.sh
@@ -56,7 +56,7 @@ We will combine the Snyk authentication and Snyk scan commands into a script fil
 
 Inside this `snyk.sh` script, you will have something similar to:
 
-```bash
+```shell
 snyk auth
 snyk test
 ```
@@ -75,7 +75,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 To use Snyk in your CI/CD process, you'll need to install the Snyk CLI via your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 npm install -g snyk
 ```
 
@@ -85,7 +85,7 @@ Once your Snyk token is loaded via your environment variables and you have insta
 
 You will need to add the following commands to your project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %})
 
-```
+```shell
 snyk auth
 snyk test
 ```

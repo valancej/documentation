@@ -29,7 +29,7 @@ Checkout our [Deployment Pipelines]({{ site.baseurl }}{% link _basic/builds-and-
 
 You don't need to use our Capistrano Integration. If you have a more complex Deployment Setup you can call Capistrano directly.
 
-```bash
+```shell
 gem install capistrano
 bundle exec cap $STAGE deploy
 ```
@@ -44,7 +44,7 @@ Usually Capistrano relies on a SSH connection to copy files and execute remote c
 
 If you don't have Capistrano in your `Gemfile` you need to install it first. Simply add the following command to a script based deployment which runs before the Capistrano deployment.
 
-```bash
+```shell
 gem install capistrano
 ```
 
@@ -52,7 +52,7 @@ gem install capistrano
 
 Because Codeship only fetches the last 50 commits as well as checks out your repository in detached head mode, Capistrano may fail the deployment. If this is the case for your setup, please add the following two commands to your deployment script. They will fetch the full history of the repository and switch to the branch you are currently testing.
 
-```bash
+```shell
 git fetch --unshallow || true
 git checkout "${CI_BRANCH}"
 ```

@@ -35,7 +35,7 @@ This mean's after your build is finished, we will push any images you enable cac
 
 To use caching on a particular service, you must add a `cached` declaration to your services description:
 
-```yml
+```yaml
 app:
   build:
     path: testpath
@@ -61,7 +61,7 @@ By default, if we can't find a cached image for the branch your current build is
 
 In some cases, you may want to specify a branch other than `master` to use as your cache fallback. You can do this per service using the `default_cache_branch` directive:
 
-```yml
+```yaml
 app:
   build:
     path: testpath

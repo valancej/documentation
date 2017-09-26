@@ -48,7 +48,7 @@ Now you will need to create a new file to store your account credentials in, in 
 
 Your new environment variables file will container the following:
 
-```bash
+```
 GOOGLE_AUTH_JSON=...
 GOOGLE_AUTH_EMAIL=...
 GOOGLE_PROJECT_ID=...
@@ -66,7 +66,7 @@ Be sure to put this unencrypted env file into `.gitignore` so its never committe
 
 After creating this environment variables file, you will need to encrypt it using the instructions from our [encrypted environment variables tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or by using the commands below:
 
-```bash
+```shell
 jet encrypt your_env_file your_env_file.encrypted
 ```
 
@@ -137,7 +137,7 @@ This is calling `google-deploy.sh`, which would be a file in your repository tha
 
 Here is an is an example `google-deploy.sh` that you could use to base your own Google Container Engine scripts off of. Note that this is using Kubernetes as well as Google Container Engine:
 
-```bash
+```shell
 #!/bin/bash
 
 set -e

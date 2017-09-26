@@ -106,7 +106,7 @@ Note that in this example, all of the Container Service deployment commands have
 
 Inside the `deploy_to_kubernetes.sh` script, you will have something similar to:
 
-```bash
+```shell
 #!/bin/bash
 
 set -e

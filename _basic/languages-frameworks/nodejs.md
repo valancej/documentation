@@ -124,7 +124,7 @@ You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as 
 
 You can install webpack via NPM, as seen below:
 
-```bash
+```shell
 npm install webpack
 ```
 

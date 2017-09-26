@@ -81,7 +81,7 @@ COMPOSER_HOME=${HOME}/cache/composer
 
 To make sure that the dependency cache is used by all of your dependencies, please call `composer` via the following snippet.
 
-```
+```shell
 composer install --prefer-dist  --no-interaction
 ```
 

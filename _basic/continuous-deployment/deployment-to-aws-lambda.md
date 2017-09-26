@@ -74,7 +74,7 @@ To test that the function works we’ll invoke it after the deployment. We're us
 
 Following you can see the list of commands to use and how they’ve been added to a script deployment on Codeship.
 
-```bash
+```shell
 pip install awscli
 # Preparing and deploying Function to Lambda
 zip -r LambdaTest.zip LambdaTest.js
