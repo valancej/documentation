@@ -24,7 +24,7 @@ redirect_from:
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
-```bash
+```shell
 git clone git@github.com:codeship/ci-guide.git
 ```
 

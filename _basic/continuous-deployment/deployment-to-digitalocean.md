@@ -32,7 +32,7 @@ With the exception of the Capistrano tool, all the following options would need 
 If you have a Ruby on Rails application the most common way to deploy to DigitalOcean is with [Capistrano](http://capistranorb.com/).
 Check out our article on [Capistrano Deployments in Codeship]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-capistrano.md %}) for general guidance on how to run Capistrano commands from Codeship. Please also take a look at DigitalOcean's example project for [setting up Capistrano within a Droplet](https://www.digitalocean.com/community/tutorials/deploying-a-rails-app-on-ubuntu-14-04-with-capistrano-nginx-and-puma).
 
-```ruby
+```shell
 bundle exec cap production deploy
 ```
 
@@ -40,7 +40,7 @@ bundle exec cap production deploy
 
 You can also provide explicit commands on the Droplet shell via [ssh]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-ftp-sftp-scp.md %}).
 
-```bash
+```shell
 ssh codeship_user@your.droplet.com \
 'cd ~/src/repo ; systemctl stop node-sample ; git pull ; systemctl restart node-sample'
 ```
@@ -51,12 +51,12 @@ Files can be copied directly over from your Codeship deployment build to your Dr
 
 ### SCP
 
-```bash
+```shell
 scp -rp ~/clone/* codeship_user@your.droplet.com:/path/on/droplet/
 ```
 
 ### Rsync
 
-```bash
+```shell
 rsync -avz ~/clone/ codeship_user@your.droplet.com:/path/on/droplet/
 ```

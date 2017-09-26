@@ -67,7 +67,7 @@ Inside this deployment script will be all commands you want to run via the Googl
 
 Here is an example deployment script that you can use as a basis for your own deployments. Note that it authenticates at the top using the command discussed earlier.
 
-```bash
+```shell
 #!/bin/bash
 
 # Authenticate with the Google Services

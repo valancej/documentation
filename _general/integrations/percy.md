@@ -37,7 +37,7 @@ You will need to add the two values Percy provides when you create a new project
 
 To use Percy with static sites inside Docker images on Codeship Pro, you will need to install the `percy-cli` gem inside your images, either as part of a Gemfile or by adding the following command to the Dockerfile:
 
-```bash
+```dockerfile
 RUN gem install percy-cli
 ```
 
@@ -45,7 +45,7 @@ RUN gem install percy-cli
 
 From there, you will need to add the following command as a step or inside of a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```bash
+```yaml
 - service: your_service
   command: percy snapshot directory_to_snapshot
 ```
@@ -56,7 +56,7 @@ Note that you can use multiple commands to take snapshots of multiple directorie
 
 To integrate Percy with Codeship Pro on a Ruby and Docker project, you will want to install the you will need to install the `percy-capybara` gem inside your images, either as part of a Gemfile or by adding the following command to the Dockerfile:
 
-```bash
+```dockerfile
 RUN gem install percy-capybara
 ```
 
@@ -88,13 +88,13 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 To use Percy with static sites on Codeship Basic, you will need to install the `percy-cli` gem, either in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or in your `Gemfile` itself. You can install the gem with the command:
 
-```bash
+```shell
 gem install percy-cli
 ```
 
 From there, you will need to add the following command to your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 percy snapshot directory_to_snapshot
 ```
 
@@ -104,7 +104,7 @@ Note that you can use multiple commands to take snapshots of multiple directorie
 
 To integrate Percy with Codeship Basic on a Ruby project, you will want to install the `percy-capybara` gem in either your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or your Gemfile. You can install the gem with the command:
 
-```bash
+```shell
 gem install percy-capybara
 ```
 
@@ -114,7 +114,7 @@ From there, you will need to add specific hooks to your Rspec, Capybara, Minites
 
 To integrate Percy with Codeship Basic on an Ember project, you will want to install the `ember-percy` package by adding the following to your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 ember install ember-percy
 ```
 

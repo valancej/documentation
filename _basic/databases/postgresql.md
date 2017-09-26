@@ -83,7 +83,7 @@ sed -i "s|5432|5436|" "config/database.yml"
 ### pg_dump
 You may experience a `pg_dump` version mismatch with the PostgreSQL version you have configured.
 
-```shell
+```
 pg_dump: server version: $YOUR_VERSION; pg_dump version: 9.2.19
 pg_dump: aborting because of server version mismatch
 ```

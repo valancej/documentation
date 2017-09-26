@@ -63,7 +63,7 @@ Note that every step runs in isolated containers, so changes made on one step do
 
 Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Golang image documentation on [the Docker Hub](https://hub.docker.com/_/golang/).
 
-```Dockerfile
+```dockerfile
 # Starting from the latest Golang image
 FROM golang:1.9
 
@@ -89,7 +89,7 @@ Multi-stage builds allow you to specify multiple `FROM` lines in a Dockerfile, w
 
 Here's an example using Go in a Dockerfile:
 
-```
+```dockerfile
 # phase one, labeled as build-stage
 # first stage does the building
 

@@ -9,7 +9,7 @@ tags:
   - ruby
   - languages
   - rails
-  - sinatra  
+  - sinatra
 
 redirect_from:
   - /languages/ruby/
@@ -94,7 +94,7 @@ While we do not officially support or integrate with these modules, many Codeshi
 ### Nokogiri
 On **Ruby 2.3 only**, Nokogiri will fail to compile with the bundled _libxml_ and _libxslt_ libraries. To install the gem you need to use the system libraries instead.
 
-```
+```shell
 # add the following command before running "bundle install"
 bundle config build.nokogiri --use-system-libraries
 ```
@@ -107,7 +107,7 @@ Make sure to run your commands with `bundle exec` (e.g. `bundle exec rspec`) so 
 
 Sometimes you might see errors like the following:
 
-```shell
+```
 Could not find safe_yaml-0.9.2 in any of the sources
 ```
 

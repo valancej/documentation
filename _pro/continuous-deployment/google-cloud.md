@@ -52,7 +52,7 @@ Now you will need to create a new file to store your account credentials in, in 
 
 Your new environment variables file will container the following:
 
-```bash
+```
 GOOGLE_AUTH_JSON=...
 GOOGLE_AUTH_EMAIL=...
 GOOGLE_PROJECT_ID=...
@@ -70,7 +70,7 @@ Be sure to put this unencrypted env file into `.gitignore` so its never committe
 
 After creating this environment variables file, you will need to encrypt it using the instructions from our [encrypted environment variables tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or by using the commands below:
 
-```bash
+```shell
 jet encrypt your_env_file your_env_file.encrypted
 ```
 
@@ -84,7 +84,7 @@ The [deployment image that we maintain](https://hub.docker.com/r/codeship/google
 
 The following example runs the `codeship_google authenticate` command and would typically be run at the start of a script file in your repository that contains all your deployment commands, called from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```bash
+```shell
 #!/bin/bash
 
 # Authenticate with the Google Services
@@ -132,7 +132,7 @@ Inside this deployment script will be all commands you want to run via the Googl
 
 Here is an example deployment script that you can use as a basis for your own deployments. Note that it authenticates at the top using the command discussed earlier.
 
-```bash
+```shell
 #!/bin/bash
 
 # Authenticate with the Google Services

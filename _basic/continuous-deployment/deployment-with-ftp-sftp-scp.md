@@ -132,7 +132,7 @@ For ftp we recommend using `lftp` for uploading your files. The following sectio
 
 To keep your password out of your build logs, add it as an environment variable in your project configuration
 
-```shell
+```
 FTP_PASSWORD
 FTP_USER
 ```

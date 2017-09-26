@@ -136,7 +136,7 @@ The standard `environment` and `env_file` directives are supported. Additionally
 
 An example setup explicitly declaring your environment variables in your `codeship-services.yml` file would look like this:
 
-```
+```yaml
 app:
   build:
     image: codeship/app
@@ -148,7 +148,7 @@ app:
 
 An example setup providing your encrypted environment variable file in your `codeship-services.yml` file would look like this:
 
-```
+```yaml
 app:
   build:
     image: codeship/app
@@ -202,7 +202,7 @@ This prevents the Docker image from building from scratch each time, to save tim
 
 An example setup using caching in your `codeship-services.yml` file would look like this:
 
-```yml
+```yaml
 app:
   build:
     image: codeship/app
@@ -275,7 +275,7 @@ There are two common solutions to this problem:
 
 An example of a health poll script may look something like this:
 
-```bash
+```shell
 #!/usr/bin/env bash
 
 function test_postgresql {

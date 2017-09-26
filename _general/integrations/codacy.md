@@ -42,7 +42,7 @@ The next step will vary by language. Some of the Codacy packages will automatica
 
 For instance the Rails gem will automatically update your coverage report and export it to Codacy and requires no additional steps, whereas the Python package will require an additional command placed either directly in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) or inside of a script:
 
-```bash
+```yaml
 - name: codacy
   service: app
   command: python-codacy-coverage -r coverage.xml
@@ -68,7 +68,7 @@ The next step will vary by language. Some of the Codacy packages will automatica
 
 For instance the Rails gem will automatically update your coverage report and export it to Codacy and requires no additional steps, whereas the Python package will require an additional command placed either directly in your [[test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or inside of a script:
 
-```bash
+```shell
 python-codacy-coverage -r coverage.xml
 ```
 

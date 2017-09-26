@@ -71,7 +71,7 @@ Note that every step runs in isolated containers, so changes made on one step do
 
 Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the PHP image documentation on [the Docker Hub](https://hub.docker.com/_/php/).
 
-```Dockerfile
+```dockerfile
 # Start from PHP 5.6
 # Take a look at the PHP image documentation on the Docker Hub for more detailed
 # info on running the container: https://hub.docker.com/_/php/

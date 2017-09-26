@@ -26,7 +26,7 @@ If you want to push to a remote git repository during your deployment steps on C
 
 In case you push to a remote git repository and encounter an error with an error message like the following
 
-```shell
+```
 Writing objects: 100% (1065/1065), 234.32 KiB | 0 bytes/s, done.
 Total 1065 (delta 602), reused 1065 (delta 602)
 error: Could not read c70d417b6c0f4536f9a288888e80955b78b1cbc7

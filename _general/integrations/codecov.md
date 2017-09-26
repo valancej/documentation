@@ -39,7 +39,7 @@ Once your Codecov upload token is loaded via your environment variables, you wil
 
 After running your test commands, you can add:
 
-```bash
+```yaml
 - name: codecov
   service: YOURSERVICE
   command: bash -c "curl -s https://codecov.io/bash"
@@ -59,7 +59,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 Once your Codecov upload token is loaded via your environment variables, you will need to add the Codecov reporting command in your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 bash <(curl -s https://codecov.io/bash)
 ```
 

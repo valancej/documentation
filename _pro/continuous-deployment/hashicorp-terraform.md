@@ -29,7 +29,7 @@ This service can use any container you define or pull that contains the Terrafor
 
 In this example, we'll use the official image as a base image for our custom Docker image using the `Dockerfile` below:
 
-```Dockerfile
+```dockerfile
 FROM hashicorp/terraform:0.10.5
 LABEL maintainer="Your Name, you@org.com"
 

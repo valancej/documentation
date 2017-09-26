@@ -48,7 +48,7 @@ Please follow the steps below for the operating system you are using. See the [J
 
 See the [sha256sums]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/sha256sums) file for checksums for the latest release. To check the downloaded files on Linux / Unix based systems run the following command.
 
-```bash
+```shell
 shasum -c -a 256 sha256sums
 ```
 
@@ -56,7 +56,7 @@ shasum -c -a 256 sha256sums
 
 The `jet` CLI is now included in [Homebrew Cask](https://caskroom.github.io/). If you already have [Homebrew installed](http://brew.sh/) and the [Caskroom tapped](https://caskroom.github.io/)[^1] you can install `jet` by running the following command
 
-```bash
+```shell
 brew cask install jet
 ```
 
@@ -64,7 +64,7 @@ The formula will install Docker as well. If you already have Docker installed, b
 
 If you don't have Homebrew installed or don't use Homebrew Cask you can install `jet` via the following commands.
 
-```bash
+```shell
 curl -SLO "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz"
 tar -xC /usr/local/bin/ -f jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz
 chmod u+x /usr/local/bin/jet
@@ -74,7 +74,7 @@ chmod u+x /usr/local/bin/jet
 
 ### Installing Jet On Linux
 
-```bash
+```shell
 curl -SLO "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-linux_amd64_{{ site.data.jet.version }}.tar.gz"
 sudo tar -xaC /usr/local/bin -f jet-linux_amd64_{{ site.data.jet.version }}.tar.gz
 sudo chmod +x /usr/local/bin/jet
@@ -95,7 +95,7 @@ The above version is statically linked and will work the same way on all platfor
 
 Once this is done you can check that _Jet_ is working by running `jet help`. This will print output similar to the following.
 
-```bash
+```shell
 $ jet version
 {{ site.data.jet.version }}
 $ jet help
@@ -110,7 +110,7 @@ Usage:
 
 If you installed and configured your Docker environment via [Docker Machine](https://docs.docker.com/machine/) (and you are on OS X or Linux) and named the environment _dev_, running the following command will set those variables.
 
-```bash
+```shell
 eval $(docker-machine env dev)
 ```
 
@@ -144,7 +144,7 @@ While Codeship Pro does not offer SSH access to build machines for debugging lik
 
 To do this, you will need to execute the following commands:
 
-```bash
+```shell
 jet run PRIMARY_SERVICE_NAME
 docker ps -a
 docker exec CONTAINERID

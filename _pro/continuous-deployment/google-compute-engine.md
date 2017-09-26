@@ -67,7 +67,7 @@ Inside this deployment script will be all commands you want to run via the Googl
 
 Here is an example deployment script that you can use as a basis for your own deployments. Note that it authenticates at the top using the command discussed earlier.
 
-```bash
+```shell
 #!/bin/bash
 
 # Authenticate with the Google Services
@@ -89,7 +89,7 @@ Since Google Compute Engine instances are regular VMs, you don't need the `gclou
 
 You can also add a SSH key pair to your Google account, and [apply this keypair to your Google Cloud project](https://cloud.google.com/compute/docs/instances/connecting-to-instance#generatesshkeypair). If you make the private key available to the deployment script, you can then use regular `ssh` and `scp` commands to copy files to your instances.
 
-```bash
+```shell
 scp -i ~/.ssh/my-ssh-key "${LOCAL_PATH}" "${REMOTE_USERNAME}@${REMOTE_IP_ADDRESS}:${REMOTE_PATH}"
 ```
 

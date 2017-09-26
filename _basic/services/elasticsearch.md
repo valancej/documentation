@@ -32,7 +32,7 @@ If you need to install a later version or use a custom configuration, please tak
 
 For example if you wanted to install **5.2.0** you would set the desired version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project.
 
-```shell
+```
 ELASTICSEARCH_VERSION=5.2.0
 ```
 

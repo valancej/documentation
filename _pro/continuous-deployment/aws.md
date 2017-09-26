@@ -44,7 +44,7 @@ Before setting up the `codeship-services.yml` and `codeship-steps.yml` file we'r
 
 Take a look at our [encrypted environment files documentation]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and add a `aws-deployment.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
 
-```bash
+```
 AWS_ACCESS_KEY_ID=your_access_key_id
 AWS_SECRET_ACCESS_KEY=your_secret_access_key
 ```
@@ -85,7 +85,7 @@ If you want to interact with multiple AWS services simultaneously, in a more com
 
 Below is one example, which will upload files into S3 buckets and then trigger a redeployment on ECS. In the following example we're putting the script into `scripts/aws_deployment`.
 
-```bash
+```shell
 #!/bin/bash
 
 # Fail the build on any failed command

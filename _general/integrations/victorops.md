@@ -69,7 +69,7 @@ Alternatively, you could combine your deployment scripts with an VictorOps API c
 
 The VictorOps API call itself, however implemented, will likely look similar to:
 
-```bash
+```shell
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-VO-Api-Id: addle' --header 'X-VO-Api-Key: lkskakld' -d 'hi' 'https://api.victorops.com/api-public/v1/incidents'
 ```
 
@@ -91,7 +91,7 @@ Next, you will need to add [API calls to VictorOps](https://portal.victorops.com
 
 The VictorOps API call will likely look similar to:
 
-```bash
+```shell
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-VO-Api-Id: addle' --header 'X-VO-Api-Key: lkskakld' -d 'hi' 'https://api.victorops.com/api-public/v1/incidents'
 ```
 

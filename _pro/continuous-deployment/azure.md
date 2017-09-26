@@ -79,7 +79,7 @@ The `codeship-services.yml` file uses the `microsoft/azure-cli` container and se
 
 Note: The following step only deploys infrastructure in Azure with a prebuilt Ubuntu 16.04 virtual machine with Docker pre-configured.
 
-```
+```yaml
 azuredeployment:
   image: microsoft/azure-cli
   encrypted_env_file: azure.env.encrypted

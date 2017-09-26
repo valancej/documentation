@@ -30,7 +30,7 @@ You have several options to specify which Python version you would like to use.
 
 In your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) you can use **pyenv** commands. For instance:
 
-```
+```shell
 pyenv local $version
 ```
 

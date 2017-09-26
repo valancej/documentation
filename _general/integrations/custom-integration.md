@@ -37,7 +37,7 @@ As one example of this, if you have a CLI tool that is required to execute the t
 
 All commands on Codeship Pro are executed via the project's [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}). If the tool or service you are integrating has commands that must be directly called, you can do that as a new step, such as:
 
-```bash
+```yaml
 - name: your_service
   service: service_name
   command: service command here
@@ -45,7 +45,7 @@ All commands on Codeship Pro are executed via the project's [codeship-steps.yml 
 
 You can also place these types of commands as scripts that you include in the repository instead, if you need to chain multiple commands together in a single step. For example:
 
-```bash
+```yaml
 - name: your_service
   service: service_name
   command: command.sh

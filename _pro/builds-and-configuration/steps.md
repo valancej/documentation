@@ -41,7 +41,7 @@ Your Steps file will require that you have [installed Jet locally]({{ site.baseu
 
 Steps are specified in a list, such as:
 
-```yml
+```yaml
 - name: foo_step
   tag: master
   service: app

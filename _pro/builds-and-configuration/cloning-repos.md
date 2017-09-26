@@ -52,13 +52,13 @@ The first step of cloning a repo into your build process is to create your SSH k
 
 The following command will create two files in your local repository. `keyfile.rsa` contains your private key that we will encrypt and put into your repository. This encrypted file will be decrypted on Codeship as part of your build. The second file `keyfile.rsa.pub` can be added to services that you want to access.
 
-```bash
+```shell
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f keyfile.rsa
 ```
 
 Now you have to copy the content of `keyfile.rsa` into a [build arguments file]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}), in this case we'll name it `sshkey.args`. Make sure to replace newlines with \n so the whole SSH key is in one line. The following is an example of `ssh_key.args`.
 
-```bash
+```
 PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
 ```
 
@@ -82,7 +82,7 @@ app:
 
 Before running a command that needs SSH available make sure to run the following commands in that container. They will set up the SSH key so you can access external services.
 
-```bash
+```shell
 mkdir -p "$HOME/.ssh"
 echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa
 ```
@@ -91,13 +91,20 @@ echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa
 
 Once you have the SSH authentication working, then you'll just need a Dockerfile that grabs git and clones the repo you want:
 
-```bash
+```dockerfile
 FROM ubuntu:latest
-COPY .
-RUN apt-get update && apt-get install -y ca-certificates git-core ssh
-RUN mkdir -p "$HOME/.ssh"
-RUN echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa
-RUN git clone repo:repo.git
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends\
+    ca-certificates  \
+    git-core \
+    ssh \
+
+RUN mkdir -p "$HOME/.ssh" \
+  && echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa \
+  && git clone repo:repo.git
+
+COPY . ./
 ```
 
 Note that this is a high-level, directional example and will require additional work to use in a live build.

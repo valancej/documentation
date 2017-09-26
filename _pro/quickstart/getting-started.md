@@ -24,7 +24,7 @@ redirect_from:
 
 The source for the tutorial is available on GitHub at [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
-```bash
+```shell
 git clone git@github.com:codeship/ci-guide.git
 ```
 
@@ -83,7 +83,7 @@ If you're not familiar with Dockerfiles, and you want to spend a little bit of t
 
 Once you're ready to get going, create an empty Dockerfile and paste this code into it:
 
-```bash
+```dockerfile
 # base on latest ruby base image
 FROM ruby:2.2.1
 

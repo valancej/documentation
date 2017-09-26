@@ -50,7 +50,7 @@ To start, you need to add your Coveralls repo token to the [encrypted environmen
 
 Next, you'll want to either manually install the Coveralls Gem in your Dockerfile, or add it to the Gemfile that you install your dependencies from in your Docker image build.
 
-```
+```ruby
 gem 'coveralls', require: false
 ```
 
@@ -89,7 +89,7 @@ Coveralls::RakeTask.new
 The last thing you'll need to be sure to do is to actually push your data out to Coveralls. This will happen with a command either run directly or inside of a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 
-```bash
+```yaml
 - name: coveralls_push
   service: your_service
   command: bundle exec rake coveralls:push
@@ -101,7 +101,7 @@ The last thing you'll need to be sure to do is to actually push your data out to
 
 To start, you need to add your Coveralls repo token to a `.coveralls.yml` file to your codebase that contains your Coveralls key:
 
-```
+```yaml
 repo_token: YOUR_COVERALLS_TOKEN
 ```
 
@@ -113,7 +113,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 Next, you'll need to require the Gem in your Gemfile.
 
-```
+```ruby
 gem 'coveralls', require: false
 ```
 
@@ -149,6 +149,6 @@ Coveralls::RakeTask.new
 
 To push the data to Coveralls, add the following after your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) on Codeship:
 
-```ruby
+```shell
 bundle exec rake coveralls:push
 ```

@@ -35,7 +35,7 @@ You will need to add your Honeycomb Team Write Key to your [encrypted environmen
 
 Next, you will need to add your Honeycomb API calls to a new script, placed in your repository, that you will call from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}). For example:
 
-```bash
+```shell
 curl https://api.honeycomb.io/1/batch/Dataset%20Name -X POST \
   -H "YOUR TEAM: YOUR_WRITE_KEY" \
   -d '[
@@ -76,7 +76,7 @@ To use [Honeymarker](https://github.com/honeycombio/honeymarker), you will need 
 
 In the Dockerfile for the service you are building, or in the Dockerfile for a new Honeymarker service, you will need to add:
 
-```bash
+```dockerfile
 RUN go get github.com/honeycombio/honeymarker
 RUN honeymarker
 ```
@@ -87,7 +87,7 @@ RUN honeymarker
 
 Once you have Honeymarker installed via a new service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will need to run Honeymarker commands as a new step, using the service with Honeymarker installed, in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```bash
+```yaml
 - name: honeymarker
   service: your_service
   command: "honeymarker -k <your-writekey> -d <dataset> COMMAND [command-specific flags]"
@@ -113,7 +113,7 @@ Or, if you are calling the Honeycomb API during deployments you will want to use
 
 Whether in your test or deployment pipelines, you will want to call the Honeycomb API, similar to:
 
-```bash
+```shell
 curl https://api.honeycomb.io/1/batch/Dataset%20Name -X POST \
   -H "YOUR TEAM: YOUR_WRITE_KEY" \
   -d '[
@@ -135,7 +135,7 @@ Honeycomb also provides [Honeymarker](https://github.com/honeycombio/honeymarker
 
 To use [Honeymarker](https://github.com/honeycombio/honeymarker), you will need to install the tool by adding a couple of new commands to your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 $ go get github.com/honeycombio/honeymarker
 $ honeymarker
 ```
@@ -146,7 +146,7 @@ $ honeymarker
 
 Once you have Honeymarker installed via your project's setup commands, you will need to add new commands to your project's [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) to make use of it:
 
-```bash
+```shell
 honeymarker -k <your-writekey> -d <dataset> COMMAND [command-specific flags]
 ```
 
