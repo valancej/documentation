@@ -94,8 +94,8 @@ If you have multiple Rancher commands to run, you can combine them in a script f
 
 ```yaml
 - name: rancher-deploy
-service: rancher
-command: deploy.sh
+  service: rancher
+  command: deploy.sh
 ```
 
 You will just need to add the required script to your repository and to the containers in your pipeline.
