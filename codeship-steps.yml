@@ -23,6 +23,8 @@
           command: gulp lint
         - name: Jekyll
           command: bundle exec jekyll doctor
+        - name: Spellcheck
+          command: yarn run check
 - name: fail_master_on_forks
   service: documentation
   tag: master
