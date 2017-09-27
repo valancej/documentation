@@ -63,7 +63,7 @@ This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro
 
 * Get your AES encryption key from the _General_ settings page of your Codeship project and save it to your registry as `codeship.aes` (adding it to the `.gitignore` file is a good idea so that it does not end up in your repository).
 
-* Run the `jet encrypt` command against your image registry `dockercfg` file. This typically looks like `jet encrypter dockercfg dockercfg.encrypted`. but you can name it whatever you'd like.
+* Run the `jet encrypt` command against your image registry `dockercfg` file. This typically looks like `jet encrypt dockercfg dockercfg.encrypted`. but you can name it whatever you'd like.
 
 * The newly encrypted dockercfg file will be committed to your repo and used in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) files to authenticate with your registry on pull and push.
 
