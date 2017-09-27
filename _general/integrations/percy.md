@@ -20,7 +20,8 @@ redirect_from:
 {:toc}
 
 <div class="warning-block">
-Because we don't have a pull request identifier environment variable, Percy integration is limited in it's ability to generate screenshot comparisons over time.</div>
+Because we don't have a pull request identifier environment variable, the Percy integration is limited in it's ability to generate screenshot comparisons over time.
+</div>
 
 ## About Percy
 
