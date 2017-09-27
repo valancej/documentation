@@ -19,6 +19,10 @@ redirect_from:
 * include a table of contents
 {:toc}
 
+<div class="warning-block">
+Because we don't have a pull request identifier environment variable, the Percy integration is limited in it's ability to generate screenshot comparisons over time.
+</div>
+
 ## About Percy
 
 [Percy](https://percy.io) is a visual testing tool that lets you take screenshots, monitor visual changes, and require team approval to these visual captures in an automated way as part of your CI/CD pipeline.
