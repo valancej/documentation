@@ -76,8 +76,6 @@ We have created an easy workaround to help you get the appropriate authenticatio
 - First, add the following credentials, as environment variables, to a file named `credentials.env`:
 
 ```bash
-Add the required credentials (username, password and an optional registry URL) to a file on your computer, e.g. called credentials.env.
-
 DOCKER_USERNAME=...
 DOCKER_PASSWORD=...
 DOCKER_REGISTRY=https://index.docker.io/v1/
@@ -93,7 +91,7 @@ docker run -it --rm \
 	codeship/dockercfg-generator /opt/data/dockercfg
 ```
 
-**Note** that the `DOCKER_REGISTRY` endpoint can be changed to reference a registry other than Dockerhub, such as Quay.io.
+**Note** that the `DOCKER_REGISTRY` endpoint can be changed to reference a registry other than Dockerhub, such as Quay.io, as long as the registry authenticates with the `docker  login` command.
 
 ### Generating Credentials With A Service
 
