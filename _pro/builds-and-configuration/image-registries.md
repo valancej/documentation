@@ -69,9 +69,31 @@ This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro
 
 ### Docker Credentials On Mac OSX
 
-**Note that if you are using Mac OSX**, the newer versions of Docker have changed to store credentials in the OSX keychain rather than in a configuration file.
+If you are using Apple macOS, the newer versions of Docker have changed to store credentials in the macOS keychain rather than in a configuration file.
 
-To get the appropriate authentication file on OSX, you will need to remove the `credsStore` line from Docker's `config.json` to disable Keychain storage, re-run `docker login` and then use the values it then generates in your updated `dockercfg` as shown above.
+We have created an easy workaround to help you get the appropriate authentication file created on macOS:
+
+- First, add the following credentials, as environment variables, to a file named `credentials.env`:
+
+```bash
+Add the required credentials (username, password and an optional registry URL) to a file on your computer, e.g. called credentials.env.
+
+DOCKER_USERNAME=...
+DOCKER_PASSWORD=...
+DOCKER_REGISTRY=https://index.docker.io/v1/
+```
+
+- Next, run the following Docker command, which will use an image we maintain to process your credentials and create a standardized `dockercfg` file:
+
+```bash
+docker run -it --rm \
+	--env-file=credentials.env \
+	-v "$(pwd):/opt/data/" \
+	-v "/var/run/docker/sock:/var/run/docker.sock" \
+	codeship/dockercfg-generator /opt/data/dockercfg
+```
+
+**Note** that the `DOCKER_REGISTRY` endpoint can be changed to reference a registry other than Dockerhub, such as Qua.io
 
 ### Generating Credentials With A Service
 
