@@ -93,7 +93,7 @@ docker run -it --rm \
 	codeship/dockercfg-generator /opt/data/dockercfg
 ```
 
-**Note** that the `DOCKER_REGISTRY` endpoint can be changed to reference a registry other than Dockerhub, such as Qua.io
+**Note** that the `DOCKER_REGISTRY` endpoint can be changed to reference a registry other than Dockerhub, such as Quay.io.
 
 ### Generating Credentials With A Service
 
