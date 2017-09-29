@@ -387,6 +387,20 @@ div#integrations {
     color: $gray-darkest;
   }
 
+  p {
+    margin-top: 1rem;
+  }
+
+  .feedback {
+
+    p {
+      margin-top: 2rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+  }
+
   code {
     color: $gray-darkest;
     background-color: $gray-light;
