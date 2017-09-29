@@ -4,7 +4,7 @@ shortTitle: Repository Permissions and Access
 menus:
   general/about:
     title: Required Permissions for Remote SCMs
-    weight: 4
+    weight: 3
 tags:
   - security
   - permissions
