@@ -18,7 +18,11 @@ redirect_from:
 ---
 
 <div class="info-block">
-You can find a sample repo for deploying to AWS with Codeship Pro on Github [here](https://github.com/codeship-library/aws-utilities).
+This article is about deploying to Heroku using Codeship Pro.
+
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+
+You can find a sample repository for deploying to AWS with Codeship Pro on Github [here](https://github.com/codeship-library/aws-utilities).
 </div>
 
 * include a table of contents

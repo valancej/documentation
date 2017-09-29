@@ -25,6 +25,14 @@ redirect_from:
 * include a table of contents
 {:toc}
 
+<div class="info-block">
+This article is about the `codeship-steps.yml` file that powers Codeship Pro.
+
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+
+ Also note that the `codeship-steps.yml` file depends on the `codeship-services.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+</div>
+
 ## What Is codeship-steps.yml?
 
 `codeship-steps.yml` contains all the Steps for your CI/CD process. Steps are used for the `jet steps` command, which defines your continuous integration and delivery steps. By default, steps are expected to be in one of these 2 files:

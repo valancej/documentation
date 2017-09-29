@@ -14,8 +14,16 @@ redirect_from:
   - /continuous-integration/run-a-command-in-the-background/
 ---
 
+<div class="info-block">
+This article is about running a service or a command in the background of your CI/CD pipeline with Codeship Basic.
+
+If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic)
+</div>
+
 * include a table of contents
 {:toc}
+
+## Running A Command In The Background
 
 If you need to run a process in the background during your builds (e.g. to run a service not available by default, or to run a development server provided by your application framework) you can use the following templates to do so.
 
