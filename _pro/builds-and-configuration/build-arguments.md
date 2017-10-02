@@ -24,7 +24,13 @@ redirect_from:
 {:toc}
 
 <div class="info-block">
-This article covers using Docker build arguments with Codeship Pro. If you are unfamiliar with either, we recommend [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg) as well as the [Codeship Pro Getting Started Guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}).
+This article is about using Docker build arguments with Codeship Pro.
+
+ If you are unfamiliar with build arguments, we recommend reading [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg).
+
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+
+ Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) to encrypt your build arguments.
 </div>
 
 ## Overview: Build Arguments

@@ -16,7 +16,16 @@ redirect_from:
 * include a table of contents
 {:toc}
 
+<div class="info-block">
+This article is about deploying to DigitalOcean with Codeship Basic.
+
+If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic)
+
+You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on Codeship Basic.
+</div>
+
 ## Getting Started with DigitalOcean
+
 DigitalOcean offers virtual servers (called Droplets). If you have not yet set up a Droplet, check out [DigitalOcean's tutorial](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet-virtual-server).
 
 While not necessary, selecting the Ubuntu 14.04 image for your Droplet will provide even greater parity between your production and [CI/CD environment]({{ site.baseurl }}{% link _general/about/vm-and-infrastructure.md %}).
