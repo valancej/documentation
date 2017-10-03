@@ -78,9 +78,5 @@ To log a deployment-related datapoint in Rollbar, you will want to add a new cus
 This new step will either run the following commands, or run a script that includes the following commands:
 
 ```shell
-curl https://api.rollbar.com/api/1/deploy/ \
-  -F access_token=$ACCESS_TOKEN \
-  -F environment=$CI_BRANCH \
-  -F revision=$CI_COMMIT_ID \
-  -F local_username=$CI_COMMITTER_USERNAME
+curl https://api.rollbar.com/api/1/deploy/ -F access_token=$ACCESS_TOKEN -F environment=$CI_BRANCH -F revision=$CI_COMMIT_ID -F local_username=$CI_COMMITTER_USERNAME
 ```
