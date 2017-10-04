@@ -77,6 +77,8 @@ This dependency will need to be installed via your [setup commands]({{ site.base
 
 Once you have your API key and dependency installed, you will send data via API calls that you can make in your [test or deployment commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```
+```ruby
 client.send(new Error(), { 'mykey': 'beta' }, function (response){ });
 ```
+
+**Note** that you should [visit their documentation](https://raygun.com/docs) to learn more about their API and the specific calls you will want to make.
