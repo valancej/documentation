@@ -36,7 +36,7 @@ You will need to add your Raygun API key to your [encrypted environment variable
 
 ###  Installing Raygun Dependency
 
-Raygun maintains a list of modules that can be installed as dependencies for a wide variety of languages and frame works. You will want to [visit their documentation](https://raygun.com/docs) and follow the instructions to use the dependency that is right for your application.
+Raygun maintains a list of modules that can be installed as dependencies for a wide variety of languages and frameworks. You will want to [visit their documentation](https://raygun.com/docs) and follow the instructions to use the dependency that is right for your application.
 
 This dependency will need to be installed in the Dockerfile that you build via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
@@ -51,11 +51,13 @@ Once you have your API key and dependency installed, you will send data via API 
   command: raygun.sh
 ```
 
-Notice that in this case we are calling a script named `raygun.sh`. Inside this scrip, we could have a Raygun API call similar to:
+Notice that in this case we are calling a script named `raygun.sh`. Inside this script, we could have a Raygun API call similar to:
 
+```ruby
+client.send(new Error(), { 'mykey': '$API_KEY' }, function (response){ });
 ```
-client.send(new Error(), { 'mykey': 'beta' }, function (response){ });
-```
+
+**Note** that you should [visit their documentation](https://raygun.com/docs) to learn more about their API and the specific calls you will want to make.
 
 ## Codeship Basic
 
@@ -67,9 +69,9 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 ###  Installing Raygun Dependency
 
-Raygun maintains a list of modules that can be installed as dependencies for a wide variety of languages and frame works. You will want to [visit their documentation](https://raygun.com/docs) and follow the instructions to use the dependency that is right for your application.
+Raygun maintains a list of modules that can be installed as dependencies for a wide variety of languages and frameworks. You will want to [visit their documentation](https://raygun.com/docs) and follow the instructions to use the dependency that is right for your application.
 
-This dependency will need to be installed in the Dockerfile that you build via your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+This dependency will need to be installed via your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 ### Sending Data
 
