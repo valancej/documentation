@@ -5,7 +5,7 @@ description: Technical documentation outlining Codeship's security specification
 menus:
   general/about:
     title: Security Information
-    weight: 3
+    weight: 5
 tags:
   - security
   - gpg key

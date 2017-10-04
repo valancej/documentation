@@ -4,7 +4,7 @@ shortTitle: VM And Infrastructure
 menus:
   general/about:
     title: VM & Infrastructure Specifics
-    weight: 2
+    weight: 4
 tags:
   - security
   - infrastructure
