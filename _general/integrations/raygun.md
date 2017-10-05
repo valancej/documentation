@@ -34,7 +34,7 @@ By using Raygun you can keep track of error logs and deployment events easier.
 
 You will need to add your Raygun API key and other requites variables to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-###  Installing Raygun Dependency
+### Installing Raygun Dependency
 
 Raygun maintains a list of modules that can be installed as dependencies for a wide variety of languages and frameworks. You will want to [visit their documentation](https://raygun.com/docs) and follow the instructions to use the dependency that is right for your application.
 
@@ -144,7 +144,7 @@ You will need to add your Raygun API key and other requites variables to your to
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
-###  Installing Raygun Dependency
+### Installing Raygun Dependency
 
 Raygun maintains a list of modules that can be installed as dependencies for a wide variety of languages and frameworks. You will want to [visit their documentation](https://raygun.com/docs) and follow the instructions to use the dependency that is right for your application.
 
