@@ -6,6 +6,7 @@
 toc
 codeship
 500mb
+wget
 checkmark
 heroku
 wildcard
@@ -35,6 +36,7 @@ backticks
 _env
 repo
 anynines
+Runscope
 paas
 cloudfoundry
 openstack
