@@ -6,6 +6,7 @@
 toc
 codeship
 500mb
+wget
 checkmark
 heroku
 wildcard
