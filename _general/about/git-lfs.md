@@ -4,7 +4,7 @@ shortTitle: Git LFS
 menus:
   general/about:
     title: GIT LFS
-    weight: 5
+    weight: 7
 tags:
   - git
   - lfs
