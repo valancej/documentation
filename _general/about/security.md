@@ -54,6 +54,7 @@ Additionally for collecting metrics (but without any sensitive data) we use:
 + Intercom
 + Google Docs
 + Looker
++ Rollbar
 + Source code access
 
 As outlined in our Terms of Service we only access your source code for a build or support request. We do not have any way to access your repository outside of our build environment.
@@ -82,21 +83,27 @@ We have a more detailed security checklist available on request. [Get in touch](
 
 Codeship uses a variety of third-party javascript embeds to perform a variety of user and business functions.
 
-- NewRelic is used for capturing errors and other data, to help us with debugging issues
+**Note** that 3rd party tracking is enabled on all application pages.
+
+- NewRelic is used for capturing errors and other data, to help us with debugging issues.
+
+- Rollbar is used to collect application exception information for development purposes.
+
+- CrazyEgg is used to visually chart the performance of our front-end marketing pages.
 
 - Segment is our main data analytics platform. We use the data (in aggregate) to see how Codeship is being used and to design improvements and new features.
 
 - Google Analytics is used to track visitor data to our front-end marketing pages.
-
-- CrazyEgg is used to visually chart the performance of our front-end marketing pages.
-
-- Intercom is used to communicate with users based on behavioral metrics, although we are soon moving to a different platform for this.
 
 - Zendesk is used for live chat and ticket handling.
 
 - PerfectAudience is used to help optimize our Facebook advertising through anonymized behavior metrics.
 
 - Profitwell is used to help notify users when a credit card (stored securely in Braintree, our payments provider) needs to be renewed or updated.
+
+## Sensitive Information in the browser
+
+All Javascript code running in the browser, including code from the trusted third-parties listed above, has access to any information that is transmitted to the browser at runtime. No sensitive information is sent to third-party tracking functions. Code running the browser does not have restricted API access to any sensitive information that is not displayed in the browser.
 
 ## How Can I Get In Touch About Security?
 
