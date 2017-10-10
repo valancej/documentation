@@ -89,6 +89,8 @@ Codeship uses a variety of third-party javascript embeds to perform a variety of
 
 - Rollbar is used to collect error data on application performance.
 
+- CrazyEgg is used to visually chart the performance of our front-end marketing pages.
+
 - Segment is our main data analytics platform. We use the data (in aggregate) to see how Codeship is being used and to design improvements and new features.
 
 - Google Analytics is used to track visitor data to our front-end marketing pages.
