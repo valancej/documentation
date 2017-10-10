@@ -87,7 +87,7 @@ Codeship uses a variety of third-party javascript embeds to perform a variety of
 
 - NewRelic is used for capturing errors and other data, to help us with debugging issues.
 
-- Rollbar is used to collect error data on application performance.
+- Rollbar is used to collect application exception information for development purposes.
 
 - CrazyEgg is used to visually chart the performance of our front-end marketing pages.
 
@@ -101,9 +101,9 @@ Codeship uses a variety of third-party javascript embeds to perform a variety of
 
 - Profitwell is used to help notify users when a credit card (stored securely in Braintree, our payments provider) needs to be renewed or updated.
 
-## How Is Codeship Built?
+## Sensitive Information in the browser
 
-// TBD Engineering
+All Javascript code running in the browser, including code from the trusted third-parties listed above, has access to any information that is transmitted to the browser at runtime. No sensitive information is sent to third-party tracking functions. Code running the browser does not have restricted API access to any sensitive information that is not displayed in the browser.
 
 ## How Can I Get In Touch About Security?
 
