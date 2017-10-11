@@ -40,17 +40,6 @@ Select _Heroku_
 
 ### Step 4 - Deployment Configuration
 
-#### Add SSH Key to Heroku
-Get the public SSH key for your project under _Project Settings_ > _General_ and [add it to Heroku](https://devcenter.heroku.com/articles/keys#adding-keys-to-heroku). If you miss this step you may see an error like this during the `git push` step of the deploy:
-
-```
-Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-```
-
 ![Configure Heroku]({{ site.baseurl }}/images/continuous-deployment/configure_heroku.png)
 
 #### Application Name
@@ -95,6 +84,19 @@ You can specify a command to run post-deployment. The dynos will be restarted af
 This will enable your build to check the URL of your application to make sure that it is up.
 
 ## Troubleshooting
+
+### Missing SSH Key
+The public SSH key for your Codeship project should automatically get added to Heroku when you setup the deployment. If the key is missing or incorrect you may see an error like this during the `git push` step of the deploy:
+
+```
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+To fix this issue, get the public SSH key for your project under _Project Settings_ > _General_ and [add it to Heroku](https://devcenter.heroku.com/articles/keys#adding-keys-to-heroku).
 
 ### check_url fails for Heroku deployment
 
