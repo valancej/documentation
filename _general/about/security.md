@@ -91,11 +91,13 @@ Codeship uses a variety of third-party javascript embeds to perform a variety of
 
 - CrazyEgg is used to visually chart the performance of our front-end marketing pages.
 
+- Appcues is used to communicate with users based on behavioral metrics.
+
 - Segment is our main data analytics platform. We use the data (in aggregate) to see how Codeship is being used and to design improvements and new features.
 
 - Google Analytics is used to track visitor data to our front-end marketing pages.
 
-- Zendesk is used for live chat and ticket handling.
+- Zendesk is used for live chat and ticket handling. This shows up in the javascript as `zopim`.
 
 - PerfectAudience is used to help optimize our Facebook advertising through anonymized behavior metrics.
 
