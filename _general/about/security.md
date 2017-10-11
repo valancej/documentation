@@ -90,9 +90,9 @@ Codeship uses a variety of third-party javascript embeds to perform a variety of
 
 - CrazyEgg is used to visually chart the performance of our front-end marketing pages.
 
-- Intercom is used to communicate with users based on behavioral metrics, although we are soon moving to a different platform for this.
+- Appcues is used to communicate with users based on behavioral metrics.
 
-- Zendesk is used for live chat and ticket handling.
+- Zendesk is used for live chat and ticket handling. This shows up in the javascript as `zopim`.
 
 - PerfectAudience is used to help optimize our Facebook advertising through anonymized behavior metrics.
 
