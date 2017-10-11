@@ -84,6 +84,12 @@ If you are using [Heroku's Docker support](https://devcenter.heroku.com/articles
 On Codeship Pro, a push step happens in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) and requires that we generate an authentication token to authenticate with the Heroku registry. Codeship maintains an image that you will use to generate your authentication token, simply add it to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and provide your Heroku API key via the encrypted environment variables file discussed above.
 
 ```yaml
+app:
+  build:
+    image: registry.heroku.com/your_image/name
+    dockerfile: Dockerfile
+  encrypted_env_file: heroku-deployment.env.encrypted
+
 dockercfg_generator:
   build:
     image: codeship/heroku-dockercfg-generator
@@ -98,7 +104,7 @@ Once we have this service in place, we can push to the Heroku registry in our [c
 
 ```yaml
 - name: Push
-  service: dockercfg_test
+  service: app
   type: push
   image_name: registry.heroku.com/your_image/name
   registry: registry.heroku.com
