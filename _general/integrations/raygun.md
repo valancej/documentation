@@ -32,13 +32,13 @@ By using Raygun you can keep track of error logs and deployment events easier.
 
 ### Setting Your API Key And Variables
 
-You will need to add your Raygun API key and other requites variables to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+You will need to add your Raygun API key and other required variables to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Installing Raygun Dependency
 
 Raygun maintains a list of modules that can be installed as dependencies for a wide variety of languages and frameworks. You will want to [visit their documentation](https://raygun.com/docs) and follow the instructions to use the dependency that is right for your application.
 
-This dependency will need to be installed in the Dockerfile that you build via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+This dependency will need to be installed directly in your application's dependencies, or separately via the Dockerfile that you build via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ### Deploying And Sending Data
 
@@ -132,7 +132,7 @@ then
 fi
 ```
 
-**Note** that this example uses the [Raygun deployment commands](https://raygun.com/docs/deployments/bash) and requires additional environment variables to be set in the section above. We recommend visiting the Raygun documentation for more information.
+**Note** that this example uses the [Raygun deployment commands](https://raygun.com/docs/deployments/bash) and requires additional environment variables to be set in the section above. It also requires values to be passed to the script via the environment or via arguments when you call the script from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}). We recommend visiting the Raygun documentation for more information.
 
 You can also run API calls in the same way, simply running API calls rather than the deployment commands above.
 
@@ -140,7 +140,7 @@ You can also run API calls in the same way, simply running API calls rather than
 
 ### Setting Your API Key And Variables
 
-You will need to add your Raygun API key and other requites variables to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
+You will need to add your Raygun API key and other required variables to your to your project's [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}).
 
 You can do this by navigating to _Project Settings_ and then clicking on the _Environment_ tab.
 
@@ -148,7 +148,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 Raygun maintains a list of modules that can be installed as dependencies for a wide variety of languages and frameworks. You will want to [visit their documentation](https://raygun.com/docs) and follow the instructions to use the dependency that is right for your application.
 
-This dependency will need to be installed via your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+This dependency will need to be installed directly in your application's dependencies, or separately via your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 ### Deploying And Sending Data
 
@@ -231,6 +231,7 @@ then
 fi
 ```
 
-**Note** that this example uses the [Raygun deployment commands](https://raygun.com/docs/deployments/bash) and requires additional environment variables to be set in the section above. We recommend visiting the Raygun documentation for more information.
+**Note** that this example uses the [Raygun deployment commands](https://raygun.com/docs/deployments/bash) and requires additional environment variables to be set in the section above. It also requires values to be passed to the script via the environment or via arguments when you call the script. We recommend visiting the Raygun documentation for more information.
+
 
 You can also run API calls in the same way, simply running API calls rather than the deployment commands above.
