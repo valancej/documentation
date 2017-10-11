@@ -63,6 +63,9 @@ bodyclass: is-blue
           {% for c in collections %}
             {% if c.title == "General" %}
               {% for document in c.docs %}
+                {% if document %}
+
+                {% endif %}
                 {% if document.url contains page.category %}
                   <li><a href="{{ site.baseurl }}{{ document.url }}">{{document.title}}</a>
                 {% endif %}
