@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Terraform
     weight: 13
+categories:
+  - Continous Deployment    
 tags:
   - deployment
   - hashicorp

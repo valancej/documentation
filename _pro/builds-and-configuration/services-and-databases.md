@@ -13,6 +13,8 @@ tags:
   - databases
   - db
 
+categories:
+  - Builds and Configuration
 redirect_from:
   - /docker/services-and-databases/
   - /pro/getting-started/services-and-databases/

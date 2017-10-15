@@ -19,7 +19,8 @@ tags:
   - firefox
   - phantomjs
   - selenium
-
+categories:
+  - Continous Integration
 redirect_from:
   - /docker/browser-testing/
 ---

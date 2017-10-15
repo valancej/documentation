@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: AWS ECS
     weight: 4
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - aws

@@ -15,6 +15,8 @@ tags:
   - mercurial
   - on premise
   - enterprise
+categories:
+  - About Codeship  
 ---
 
 * include a table of contents

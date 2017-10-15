@@ -16,6 +16,8 @@ tags:
 - reporting
 - monitoring
 - notifications
+categories:
+  - Integrations
 ---
 
 * include a table of contents

@@ -13,6 +13,10 @@ tags:
   - variables
   - environment
 
+categories:
+  - Builds and Configuration
+
+
 redirect_from:
   - /docker/encryption/
   - /pro/getting-started/encryption/

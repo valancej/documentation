@@ -12,7 +12,8 @@ tags:
   - lvh.me
   - xip.io
   - nip.io
-
+categories:
+  - Continous Integration    
 redirect_from:
   - /continuous-integration/using-subdomains/
 ---
@@ -69,5 +70,5 @@ Address:	10.0.3.1#53
 
 Non-authoritative answer:
 Name:	myapp.127.0.0.1.nip.io
-Address: 127.0.0.1 
+Address: 127.0.0.1
 ```

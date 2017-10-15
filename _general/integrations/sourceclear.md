@@ -11,6 +11,8 @@ menus:
   general/integrations:
     title: Using SourceClear
     weight: 4
+categories:
+  - Integrations    
 redirect_from:
   - /basic/continuous-integration/sourceclear/
   - /pro/continuous-integration/sourceclear-docker/

@@ -9,7 +9,8 @@ tags:
   - go
   - languages
   - docker
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /docker-integration/go/
 ---

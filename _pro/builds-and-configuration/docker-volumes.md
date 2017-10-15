@@ -11,6 +11,10 @@ tags:
   - volumes
   - docker compose
 
+categories:
+  - Builds and Configuration
+
+
 redirect_from:
   - /docker/docker-volumes/
   - /pro/getting-started/docker-volumes/

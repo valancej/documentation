@@ -3,6 +3,7 @@ url: https://documentation.codeship.com
 baseurl:
 permalink: /:categories/:title/
 tags_dir: tags
+categories_dir: categories
 ubuntu_version: trusty
 zendesk:
   widget: true

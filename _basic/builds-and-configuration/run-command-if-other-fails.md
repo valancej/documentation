@@ -11,6 +11,8 @@ tags:
   - commands
   - fails
   - failure
+categories:
+  - Builds and Configuration  
 redirect_from:
   - /faq/run-command-if-other-fails/
   - /basic/getting-started/run-command-if-other-fails/

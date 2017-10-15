@@ -8,6 +8,8 @@ menus:
   general/integrations:
     title: Custom Integrations
     weight: 22
+categories:
+  - Integrations    
 ---
 
 * include a table of contents

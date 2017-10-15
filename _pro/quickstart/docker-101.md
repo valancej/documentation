@@ -5,6 +5,8 @@ menus:
   pro/quickstart:
     title: Docker For CI/CD
     weight: 7
+categories:
+  - Quickstart    
 tags:
   - docker
   - jet

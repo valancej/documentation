@@ -8,6 +8,8 @@ menus:
 tags:
   - git
   - lfs
+categories:
+  - About Codeship  
 ---
 
 * include a table of contents

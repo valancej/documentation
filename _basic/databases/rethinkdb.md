@@ -13,6 +13,8 @@ menus:
 redirect_from:
   - /databases/rethinkdb/
   - /classic/getting-started/rethinkdb/
+categories:
+  - Databases  
 ---
 
 * include a table of contents

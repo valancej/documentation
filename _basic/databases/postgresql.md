@@ -13,6 +13,8 @@ menus:
 redirect_from:
   - /databases/postgresql/
   - /classic/getting-started/postgresql/
+categories:
+  - Databases  
 ---
 
 * include a table of contents

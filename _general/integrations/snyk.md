@@ -10,6 +10,8 @@ menus:
   general/integrations:
     title: Using Snyk
     weight: 16
+categories:
+  - Integrations    
 ---
 
 * include a table of contents

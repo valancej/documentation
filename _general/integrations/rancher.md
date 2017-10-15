@@ -5,6 +5,8 @@ tags:
   - integrations
   - orchestration
   - containers
+categories:
+  - Integrations  
 menus:
   general/integrations:
     title: Using Rancher

@@ -8,7 +8,8 @@ menus:
 tags:
   - cdn
   - artifacts
-
+categories:
+  - Continous Integration
 redirect_from:
   - /continuous-integration/keep-build-artifacts/
 ---

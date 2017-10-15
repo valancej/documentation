@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Google Compute Engine
     weight: 12
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - google

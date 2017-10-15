@@ -14,6 +14,8 @@ tags:
   - deployment
   - images
   - image registry
+categories:
+  - Builds and Configuration
 
 redirect_from:
   - /docker/steps/

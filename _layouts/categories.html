@@ -3,8 +3,9 @@ layout: default
 title: Support Information About CI/CD And Codeship
 bodyclass: is-blue
 ---
-{% assign collections = site.collections %}
-
+{% assign basic = page.documents | where: "collection", "basic" %}
+{% assign pro = page.documents | where: "collection", "pro" %}
+{% assign general = page.documents | where: "collection", "general" %}
 <div class="contentWrapper">
   <div class="grid">
     <div class="row">
@@ -12,52 +13,43 @@ bodyclass: is-blue
         <br />
         <p><a href="#basic">Codeship Basic</a> | <a href="#pro">Codeship Pro</a> | <a href="#general">General</a></p>
     </div>
-
     <div class="grid grid--boxContainer">
       <div class="colxs100 colsm100 colmd100 collg100">
         <div class="box">
           <a name="basic"></a>
-          <h4>#{{ page.category }} for Codeship Basic</h4>
+          <h4>{{ page.category }} for Codeship Basic</h4>
           <p>Codeship Basic uses fast, performant VMs with preinstalled technology stacks to make it super easy and fast to get started running a CI/CD pipeline.</p>
           <br />
-          {% for c in collections %}
-            {% if c.title == "Codeship Basic" %}
-              {% for document in c.docs %}
-                {% if document.url contains page.category %}
-                  <li><a href="{{ site.baseurl }}{{ document.url }}">{{document.title}}</a>
-                {% endif %}
-              {% endfor %}
-            {% endif %}
+					{% for document in basic %}
+            <li><a href="{{ site.baseurl }}{{ document.url }}">{{ document.title }}</a>
           {% endfor %}
+          {% if basic.first == null %}
+            <p><em>No Codeship Basic articles for <strong>{{ page.category }}</strong> found.</em></p>
+          {% endif %}
         </div>
       </div>
     </div>
-
     <div class="grid grid--boxContainer">
       <div class="colxs100 colsm100 colmd100 collg100">
         <div class="box">
           <a name="pro"></a>
-          <h4>#{{ page.category }} for Codeship Pro</h4>
+          <h4>{{ page.category }} for Codeship Pro</h4>
           <p>Codeship Pro uses containers built from Docker images to let you define and build your own completely flexible CI/CD environment.</p>
           <br />
-          {% for c in collections %}
-            {% if c.title == "Codeship Pro" %}
-              {% for document in c.docs %}
-                {% if document.url contains page.category %}
-                  <li><a href="{{ site.baseurl }}{{ document.url }}">{{document.title}}</a>
-                {% endif %}
-              {% endfor %}
-            {% endif %}
+					{% for document in pro %}
+            <li><a href="{{ site.baseurl }}{{ document.url }}">{{ document.title }}</a>
           {% endfor %}
+          {% if pro.first == null %}
+            <p><em>No Codeship Pro articles for <strong>{{ page.category }}</strong> found.</em></p>
+          {% endif %}
         </div>
       </div>
     </div>
-
     <div class="grid grid--boxContainer">
       <div class="colxs100 colsm100 colmd100 collg100">
         <div class="box">
           <a name="general"></a>
-          <h4>#{{ page.category }} for General</h4>
+          <h4>{{ page.category }} for General</h4>
           <p>Information related to Codeship accounts, projects and general questions.</p>
           <br />
           {% for c in collections %}
@@ -72,6 +64,9 @@ bodyclass: is-blue
               {% endfor %}
             {% endif %}
           {% endfor %}
+          {% if general.first == null %}
+            <p><em>No general articles for <strong>{{ page.category }}</strong> found.</em></p>
+          {% endif %}
         </div>
       </div>
     </div>

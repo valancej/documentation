@@ -10,6 +10,8 @@ menus:
   general/integrations:
     title: Using Appranix
     weight: 15
+categories:
+  - Integrations    
 ---
 
 * include a table of contents

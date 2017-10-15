@@ -8,6 +8,8 @@ menus:
 tags:
   - api
   - integrations
+categories:
+  - Builds and Configuration  
 redirect_from:
   - /integrations/api/
   - /basic/getting-started/api/

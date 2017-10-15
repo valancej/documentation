@@ -13,6 +13,8 @@ menus:
 redirect_from:
   - /databases/sqlite/
   - /classic/getting-started/sqlite/
+categories:
+  - Databases  
 ---
 
 * include a table of contents

@@ -12,6 +12,8 @@ tags:
   - reports
   - reporting
   - integrations
+categories:
+  - Integrations  
 ---
 
 * include a table of contents

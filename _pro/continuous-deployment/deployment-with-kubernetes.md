@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Kubernetes
     weight: 13
+categories:
+  - Continous Deployment        
 tags:
   - kubernetes
   - notifications

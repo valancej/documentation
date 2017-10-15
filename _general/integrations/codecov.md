@@ -10,6 +10,8 @@ tags:
   - continuous integration
   - integrations
   - codecov
+categories:
+  - Integrations  
 menus:
   general/integrations:
     title: Using Codecov

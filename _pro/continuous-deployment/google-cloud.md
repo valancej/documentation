@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Google Cloud
     weight: 8
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - google

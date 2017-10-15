@@ -13,6 +13,8 @@ menus:
   general/integrations:
     title: Using Coveralls
     weight: 2
+categories:
+  - Integrations    
 redirect_from:
   - /basic/continuous-integration/coveralls/
   - /pro/continuous-integration/coveralls-docker/

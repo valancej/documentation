@@ -13,6 +13,8 @@ tags:
 - avatar
 - gravatar
 - getting started
+categories:
+  - Account
 redirect_from:
   - /general/about/other-scm/
   - /general/account/configure-your-avatar/

@@ -14,6 +14,8 @@ menus:
   general/integrations:
     title: Using Code Climate
     weight: 1
+categories:
+  - Integrations    
 redirect_from:
   - /basic/continuous-integration/code-climate/
   - /pro/continuous-integration/codeclimate-docker/

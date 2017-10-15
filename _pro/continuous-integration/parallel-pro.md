@@ -12,6 +12,8 @@ tags:
   - speed
   - parallel
   - concurrency
+categories:
+  - Continous Integration  
 ---
 
 * include a table of contents

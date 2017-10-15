@@ -6,6 +6,8 @@ menus:
   pro/cd:
     title: Azure
     weight: 6
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - azure

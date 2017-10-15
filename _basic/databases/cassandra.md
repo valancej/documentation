@@ -10,6 +10,8 @@ menus:
   basic/db:
     title: Apache Cassandra
     weight: 5
+categories:
+  - Databases    
 redirect_from:
   - /databases/cassandra/
   - /classic/getting-started/cassandra/

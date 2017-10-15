@@ -11,7 +11,8 @@ tags:
   - account
   - projects
   - firewall
-
+categories:
+  - Projects
 redirect_from:
   - /administration/delete-a-project/
   - /general/projects/delete-a-project/

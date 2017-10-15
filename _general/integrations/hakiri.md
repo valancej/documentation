@@ -6,6 +6,8 @@ tags:
   - integrations
   - rails
   - ruby
+categories:
+  - Integrations  
 menus:
   general/integrations:
     title: Using Hakiri

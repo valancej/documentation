@@ -11,7 +11,8 @@ tags:
 - browsers
 - browser testing
 - integrations
-
+categories:
+  - Integrations
 ---
 
 * include a table of contents

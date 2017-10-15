@@ -7,6 +7,8 @@ tags:
   - browsers
   - browser testing
   - integrations
+categories:
+  - Integrations  
 menus:
   general/integrations:
     title: Using Percy

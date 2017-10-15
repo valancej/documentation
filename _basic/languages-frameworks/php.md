@@ -10,7 +10,8 @@ tags:
   - languages
   - cakephp
   - laravel
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /languages/php/
 ---

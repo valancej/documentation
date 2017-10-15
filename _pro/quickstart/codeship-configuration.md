@@ -14,7 +14,8 @@ tags:
   - migrating
   - account
   - projects
-
+categories:
+  - Quickstart
 redirect_from:
   - /docker/codeship-configuration/
   - /pro/getting-started/codeship-configuration/

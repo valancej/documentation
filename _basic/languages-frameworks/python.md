@@ -10,7 +10,8 @@ tags:
   - languages
   - flask
   - django
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /languages/python/
 ---

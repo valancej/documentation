@@ -7,6 +7,8 @@ menus:
   basic/cd:
     title: CloudFoundry
     weight: 12
+categories:
+  - Continous Deployment        
 redirect_from:
   - /continuous-deployment/deployment-to-cloudfoundry/
 ---
