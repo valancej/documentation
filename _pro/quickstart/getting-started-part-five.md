@@ -12,7 +12,8 @@ tags:
   - getting started
   - tutorial
   - getting started jet
-
+categories:
+  - Quickstart
 redirect_from:
   - /docker-guide/getting-started-part-five/
   - /pro/getting-started/getting-started-part-five/

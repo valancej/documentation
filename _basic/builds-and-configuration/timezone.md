@@ -6,6 +6,8 @@ menus:
     weight: 10
 tags:
   - timezone
+categories:
+  - Builds and Configuration
 redirect_from:
   - /basic/getting-started/timezone/
 ---

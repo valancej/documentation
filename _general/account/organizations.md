@@ -7,7 +7,8 @@ tags:
   - team management
   - teams
   - account
-
+categories:
+  - Account
 redirect_from:
   - /administration/organizations/
 menus:

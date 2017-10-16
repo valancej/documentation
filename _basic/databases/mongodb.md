@@ -13,6 +13,8 @@ menus:
 redirect_from:
   - /databases/mongodb/
   - /classic/getting-started/mongodb/
+categories:
+  - Databases  
 ---
 
 * include a table of contents

@@ -10,6 +10,8 @@ menus:
   general/account:
     title: Invoices
     weight: 4
+categories:
+  - Account    
 redirect_from:
   - /administration/invoices/
 ---

@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: AWS CodeDeploy
     weight: 5
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - aws

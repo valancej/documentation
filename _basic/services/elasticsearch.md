@@ -11,6 +11,8 @@ menus:
 redirect_from:
   - /services/elasticsearch/
   - /classic/getting-started/elasticsearch/
+categories:
+  - Services  
 ---
 
 * include a table of contents

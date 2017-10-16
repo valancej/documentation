@@ -15,6 +15,9 @@ tags:
   - cache
   - images
 
+categories:
+  - Builds and Configuration
+
 redirect_from:
   - /docker/caching/
   - /pro/getting-started/caching/

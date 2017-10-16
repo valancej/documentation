@@ -11,7 +11,8 @@ tags:
   - docker
   - cakephp
   - laravel
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /docker-integration/php/
 ---

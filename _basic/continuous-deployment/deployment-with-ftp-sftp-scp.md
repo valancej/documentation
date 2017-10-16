@@ -13,6 +13,8 @@ tags:
   - sftp
   - linode
   - digital ocean
+categories:
+  - Continous Deployment      
 redirect_from:
   - /continuous-deployment/deployment-with-ftp-sftp-scp/
 ---

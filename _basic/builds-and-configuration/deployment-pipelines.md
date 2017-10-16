@@ -7,6 +7,8 @@ menus:
     weight: 6
 tags:
   - deployment
+categories:
+  - Builds and Configuration
 redirect_from:
   - /continuous-deployment/deployment-pipelines/
   - /basic/getting-started/wildcard-deployment-pipelines/

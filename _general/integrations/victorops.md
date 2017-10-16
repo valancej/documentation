@@ -5,6 +5,8 @@ menus:
   general/integrations:
     title: Using VictorOps
     weight: 13
+categories:
+  - Integrations    
 tags:
   - VictorOps
   - deployment

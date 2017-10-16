@@ -14,7 +14,8 @@ tags:
   - private repository
   - git
   - clone
-
+categories:
+  - Projects
 redirect_from:
   - /faq/access-to-other-repositories-fails-during-build/
 ---

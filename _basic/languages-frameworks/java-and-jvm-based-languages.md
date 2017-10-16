@@ -10,6 +10,8 @@ menus:
   basic/languages:
     title: Java And JVM
     weight: 7
+categories:
+  - Languages And Frameworks    
 redirect_from:
   - /languages/java-and-jvm-based-languages/
 ---

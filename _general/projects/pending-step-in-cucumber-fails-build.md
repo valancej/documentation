@@ -12,7 +12,8 @@ tags:
   - cucumber
   - debug
   - ssh
-
+categories:
+  - Projects
 redirect_from:
   - /troubleshooting/pending-step-in-cucumber-fails-build/
   - /faq/pending-step-in-cucumber-fails-build/

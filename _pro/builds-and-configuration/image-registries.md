@@ -19,6 +19,10 @@ tags:
   - images
   - image registry
 
+categories:
+  - Builds and Configuration
+
+
 redirect_from:
   - /docker/docker-push/
   - /pro/getting-started/docker-push/

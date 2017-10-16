@@ -19,7 +19,8 @@ tags:
   - phantomjs
   - selenium
   - capybara
-
+categories:
+  - Continous Integration
 redirect_from:
   - /continuous-integration/browser-testing/
 ---

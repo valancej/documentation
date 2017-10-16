@@ -7,6 +7,8 @@ menus:
   basic/cd:
     title: Cloud66
     weight: 13
+categories:
+  - Continous Deployment        
 redirect_from:
   - /continuous-deployment/deployment-with-cloud66/
 ---
@@ -33,5 +35,3 @@ For multiple services in one go:
 ```shell
 curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/xxxx/yyyy?services=web,app
 ```
-
-

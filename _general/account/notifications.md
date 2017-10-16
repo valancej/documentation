@@ -7,6 +7,8 @@ tags:
   - alerts
   - account
   - slack
+categories:
+  - Account  
 redirect_from:
   - /administration/notifications/
   - /basic/getting-started/webhooks/

@@ -8,7 +8,8 @@ published: false
 tags:
   - deployment
   - ansible
-
+categories:
+  - Continous Deployment    
 ---
 
 * include a table of contents

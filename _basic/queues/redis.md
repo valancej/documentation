@@ -9,6 +9,8 @@ menus:
   basic/queues:
     title: Redis
     weight: 1
+categories:
+  - Queues    
 redirect_from:
   - /queues/redis/
   - /classic/getting-started/redis/

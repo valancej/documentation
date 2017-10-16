@@ -9,7 +9,8 @@ tags:
   - testing
   - background
   - commands
-
+categories:
+  - Continous Integration
 redirect_from:
   - /continuous-integration/run-a-command-in-the-background/
 ---

@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: IBM Bluemix Container Service
     weight: 17
+categories:
+  - Continous Deployment    
 tags:
   - deployment
   - ibm

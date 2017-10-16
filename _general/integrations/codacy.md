@@ -9,6 +9,8 @@ tags:
   - reporting
   - continuous integration
   - integrations
+categories:
+  - Integrations  
 menus:
   general/integrations:
     title: Using Codacy

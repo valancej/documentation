@@ -12,6 +12,8 @@ tags:
   - permissions
   - ssh
   - git
+categories:
+  - About Codeship  
 redirect_from:
   - /security/
   - /security/security/

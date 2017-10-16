@@ -7,6 +7,8 @@ menus:
   basic/cd:
     title: anynines
     weight: 14
+categories:
+  - Continous Deployment        
 redirect_from:
   - /continuous-deployment/deployment-to-anynines/
 ---

@@ -10,6 +10,9 @@ tags:
   - release notes
   - cli
 
+categories:
+  - Builds and Configuration
+
 redirect_from:
   - /docker/release-notes/
   - /pro/getting-started/release-notes/

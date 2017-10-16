@@ -10,7 +10,8 @@ tags:
   - languages
   - docker
   - jvm
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /docker-integration/java/
 ---

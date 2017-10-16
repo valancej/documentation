@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: AWS EB
     weight: 3
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - aws

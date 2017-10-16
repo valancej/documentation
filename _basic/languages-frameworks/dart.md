@@ -8,6 +8,8 @@ menus:
   basic/languages:
     title: Dart
     weight: 8
+categories:
+  - Languages And Frameworks    
 redirect_from:
   - /languages/dart/
 ---

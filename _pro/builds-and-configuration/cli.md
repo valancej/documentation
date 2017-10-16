@@ -17,6 +17,9 @@ tags:
   - troubleshooting
   - cli
 
+categories:
+  - Builds and Configuration
+
 redirect_from:
   - /docker/installation/
   - /pro/installation/

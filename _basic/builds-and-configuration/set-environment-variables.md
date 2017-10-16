@@ -10,6 +10,8 @@ tags:
   - environment variables
   - variables
   - environment
+categories:
+  - Builds and Configuration
 redirect_from:
   - /continuous-integration/set-environment-variables/
   - /basic/getting-started/set-environment-variables/

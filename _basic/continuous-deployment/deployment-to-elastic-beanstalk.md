@@ -9,7 +9,8 @@ tags:
   - elastic Beanstalk
   - aws
   - amazon
-
+categories:
+  - Continous Deployment    
 redirect_from:
   - /continuous-deployment/deployment-to-elastic-beanstalk/
 ---

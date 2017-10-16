@@ -11,6 +11,8 @@ menus:
   general/integrations:
     title: Using Firebase
     weight: 19
+categories:
+  - Integrations    
 ---
 
 * include a table of contents

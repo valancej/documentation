@@ -11,7 +11,8 @@ tags:
   - docker
   - rails
   - sinatra
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /docker-integration/ruby/
 ---

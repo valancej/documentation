@@ -8,7 +8,8 @@ menus:
 tags:
   - git
   - submodules
-
+categories:
+  - Continous Integration
 redirect_from:
   - /continuous-integration/git-submodules/
 ---

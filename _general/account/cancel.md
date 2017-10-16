@@ -9,6 +9,8 @@ tags:
 - cancel
 - account
 - delete account
+categories:
+  - Account
 ---
 
 * include a table of contents

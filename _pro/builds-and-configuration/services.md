@@ -13,6 +13,9 @@ tags:
   - image registry
   - docker compose
 
+categories:
+  - Builds and Configuration
+
 redirect_from:
   - /docker/services/
   - /pro/getting-started/services/

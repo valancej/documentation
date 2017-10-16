@@ -14,7 +14,8 @@ tags:
   - reporting
   - integrations
   - errors
-
+categories:
+  - Integrations
 ---
 
 * include a table of contents

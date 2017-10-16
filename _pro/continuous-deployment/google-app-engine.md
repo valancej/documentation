@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Google App Engine
     weight: 9
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - google

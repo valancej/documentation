@@ -15,6 +15,10 @@ tags:
   - environment variables
   - variables
 
+categories:
+  - Builds and Configuration
+
+
 redirect_from:
   - /pro/getting-started/handling-secrets/
 ---

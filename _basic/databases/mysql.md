@@ -13,6 +13,8 @@ menus:
 redirect_from:
   - /databases/mysql/
   - /classic/getting-started/mysql/
+categories:
+  - Databases  
 ---
 
 * include a table of contents

@@ -7,6 +7,8 @@ menus:
 tags:
   - getting started
   - codeship basic
+categories:
+  - Quickstart  
 redirect_from:
   - /basic/getting-started/getting-started/
 ---

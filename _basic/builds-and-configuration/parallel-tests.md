@@ -13,6 +13,8 @@ tags:
   - speed
   - parallel
   - concurrency
+categories:
+  - Builds and Configuration  
 redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/

@@ -10,6 +10,8 @@ menus:
   basic/db:
     title: CouchDB
     weight: 7
+categories:
+  - Databases    
 ---
 
 * include a table of contents

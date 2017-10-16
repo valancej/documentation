@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Google Cloud Functions
     weight: 10
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - google

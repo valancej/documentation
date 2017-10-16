@@ -10,7 +10,8 @@ tags:
   - languages
   - rails
   - sinatra
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /languages/ruby/
   - /general/projects/could-not-find-gemname-in-any-of-the-sources/

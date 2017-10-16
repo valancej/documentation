@@ -8,6 +8,8 @@ menus:
   general/integrations:
     title: Using Gemnasium
     weight: 17
+categories:
+  - Integrations    
 ---
 
 * include a table of contents

@@ -11,7 +11,8 @@ tags:
   - docker
   - flask
   - django
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /docker-integration/python/
 ---

@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: AWS S3
     weight: 2
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - aws

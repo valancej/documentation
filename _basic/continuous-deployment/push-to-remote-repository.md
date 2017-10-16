@@ -8,7 +8,8 @@ tags:
   - deployment
   - git
   - push
-
+categories:
+  - Continous Deployment    
 redirect_from:
   - /continuous-deployment/push-to-remote-repository/
 ---

@@ -11,6 +11,8 @@ tags:
   - key
   - debug
   - troubleshooting
+categories:
+  - Builds and Configuration
 redirect_from:
   - /continuous-integration/ssh-access/
   - /basic/getting-started/ssh-access/

@@ -8,6 +8,8 @@ menus:
   basic/languages:
     title: Elixir
     weight: 5
+categories:
+  - Languages And Frameworks    
 ---
 
 * include a table of contents

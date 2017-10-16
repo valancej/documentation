@@ -13,6 +13,8 @@ tags:
   - reports
   - reporting
   - integrations
+categories:
+  - Integrations  
 redirect_from:
   - /basic/continuous-deployment/rollbar-basic/
   - /pro/continuous-deployment/rollbar-docker/

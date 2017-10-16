@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: AWS
     weight: 1
+categories:
+  - Continous Deployment        
 tags:
   - deployment
   - aws

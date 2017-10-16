@@ -12,6 +12,8 @@ tags:
   - firewall
   - virtual machine
   - build machine
+categories:
+  - About Codeship  
 redirect_from:
   - /security/vm-and-infrastructure/
 ---
