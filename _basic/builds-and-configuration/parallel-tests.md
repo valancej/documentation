@@ -43,6 +43,12 @@ To ease distinguishing different pipelines you can provide a name for each one.
 
 ![Configuration of test pipelines]({{ site.baseurl }}/images/continuous-integration/parallelization-test-pipelines-configuration.png)
 
+### Restarting Individual Pipeline
+
+If a pipeline fails, you can restart only that individual pipeline by hovering over the failed pipeline's status indicator.
+
+![Restarting test pipeline]({{ site.baseurl }}/images/continuous-integration/restart-pipelines.png)
+
 ### Disabling Parallel Test Pipelines
 
 You can either delete additional test pipelines, or comment out any commands by prepending a `#` symbol to each line. A test pipeline is only active if it contains at least one command.
