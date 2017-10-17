@@ -181,6 +181,19 @@ echo "Stopping Container Cluster for $KUBERNETES_APP_NAME"
 gcloud container clusters delete $KUBERNETES_APP_NAME -q
 ```
 
+### Permissions
+
+To use Google Cloud with Codeship Pro, your generator service on Codeship will need to authenticate with an account with the correct IAM permissions.
+
+While the permissions may vary and do change, the minimal required permissions are:
+
+- Container Engine Admin
+- Container Engine Cluster Admin
+- Deployment Manager Editor
+- Storage Object Admin
+
+If these permissions are not enough to authenticate, we recommend investigating other potentially required IAM permissions.
+
 ## Other Google Cloud Services
 
 If you are looking to use other Google Cloud services, we maintain [specific documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}) for using the Google Cloud CLI for all other deployments.
