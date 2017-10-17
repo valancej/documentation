@@ -45,16 +45,16 @@ Having the above scenarios as a guiding light, we have focus on these specific e
 
 For Projects, you're able to do most CRUD operations (we're working on the remaining ones) which should allow you to automate most of your project maintenance tasks; especially useful for those with 10s or 100s of projects.
 
-**Thigns to note**:
+**Things to note**:
 
 * There's currently no Delete action on projects
 * Test and deployment pipelines cannot be updated at this point in time
 
 ### Builds Endpoint
 
-Builds can't really be deleted, but otherwise you can do pretty much anything with them. You can even go a level deeper than what the Codeship UI offeres; if you restart a build, the old build data is kept around, but the UI only shows the latest. With the builds endpoint you can get the informatin on those old builds as well.
+Builds can't really be deleted, but otherwise you can do pretty much anything with them. You can even go a level deeper than what the Codeship UI offers; if you restart a build, the old build data is kept around, but the UI only shows the latest. With the builds endpoint you can get the information on those old builds as well.
 
-In terms of `commands` on the builds endpoint, we've deviated slightly from "textbook REST" and have allowed endpoints to `/restart` and existing build or `/stop` a running build. If you want to trigger a build that pulls the lates code from a given branch, you would POST to the `/builds` endpoint with the project and the branch in question. More details can be found on this in the [API v2 Documentation](https://apidocs.codeship.com/v2/).
+In terms of `commands` on the builds endpoint, we've deviated slightly from "textbook REST" and have allowed endpoints to `/restart` and existing build or `/stop` a running build. If you want to trigger a build that pulls the latest code from a given branch, you would POST to the `/builds` endpoint with the project and the branch in question. More details can be found on this in the [API v2 Documentation](https://apidocs.codeship.com/v2/).
 
 **Things to note**:
 
