@@ -19,6 +19,7 @@ tags:
   - phantomjs
   - selenium
   - capybara
+  - screenshots
 categories:
   - Continous Integration
 redirect_from:
@@ -125,3 +126,15 @@ export PHANTOMJS_VERSION=YOUR_DESIRED_VERSION
 ## CasperJS
 
 [CasperJS](http://casperjs.org) 1.1.0-beta3 is installed by default and available in the PATH.
+
+## Screenshots
+
+During your tests you may want to generate screenshots when tests fail. Codeship Basic starts a new build machine for each build and that machine gets terminated as soon as the build finishes. As a result there is not a simple way to save screenshots from failing builds.
+
+However, you can use a [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) to manually run your failing build again which will generate new screenshots. Then from another terminal window you can use `scp` to copy any screenshot files from the debug machine to your local machine for viewing.
+
+Here is an example command. Note that the `PORT` and `IP_ADDRESS` are the same as what you use to connect to the debug session and the file path will depend on where your tests place the screenshots.
+
+```
+scp -P PORT rof@IP_ADDRESS:/home/rof/clone/screenshots/my_screenshot.png .
+```
