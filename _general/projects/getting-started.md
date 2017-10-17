@@ -62,6 +62,10 @@ You need to have project ownership for deleting a project. Once you click the de
 
 All your builds will be deleted as well. Make sure that you really don't need this project anymore. It cannot be recovered once deleted.
 
+## Creating Projects Using Codeship API
+
+If you need to create a large number of projects, or maybe just create similar projects on a regular basis, you can use the API to do the heavy lifting and just have a template on your side that forms the basis for all new projects. To learn more, head over to the [API Documentation]({{ site.baseurl }}{% link _basic/builds-and-configuration/api.md %}) page.
+
 ## Transfer Project Ownership
 You can transfer your project to another account by navigating to:
 
