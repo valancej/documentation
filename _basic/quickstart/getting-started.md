@@ -80,6 +80,10 @@ To add multiple steps or deployments to a pipeline, just click on an additional 
 
 ![Custom Script Deployment on Codeship Basic]({{ site.baseurl }}/images/basic-guide/multiple-deployments.png)
 
+## Accessing Codeship using the API
+
+If you're looking to automate more of your processes, you can access your projects and builds via the Codeship API. See the [Codeship API Documentation]({{ site.baseurl }}{% link _basic/builds-and-configuration/api.md %}) for more details and examples.
+
 ## Common Questions
 
 ### Caching
