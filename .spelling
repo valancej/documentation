@@ -15,6 +15,8 @@
 60gb
 7.5gb
 7.x.x
+10s
+100s
 _
 _access
 _analyzer
@@ -271,6 +273,7 @@ pre-test
 preinstalled
 prepending
 profitwell
+programmatically
 py.test.
 pyenv
 pytest
@@ -344,6 +347,8 @@ unselect
 uploader
 uptime
 url
+v1
+v2
 versioning
 victorops
 virtualenv

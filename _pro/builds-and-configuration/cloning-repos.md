@@ -115,4 +115,6 @@ Note that this is a high-level, directional example and will require additional 
 
 ## Building With Repos Via API
 
-Codeship Pro does not yet have an API for triggering builds, but we will be launching an API for this purpose later in 2017.
+You can also use the API v2 to programmatically trigger builds that somehow depend on each other, or potentially an external event or system.
+
+To get more details on how to do this, head over to the [API Documentation]({{ site.baseurl }}{% link _basic/builds-and-configuration/api.md %}) page
