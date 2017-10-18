@@ -113,6 +113,19 @@ To accomplish this, we provide an `image_tag` declaration that allows you to set
 
 Now, when we push up your app image to the Google Container Registry, it will be tagged with the current build's Unix timestamp.
 
+### Permissions
+
+To use Google Cloud with Codeship Pro, your generator service on Codeship will need to authenticate with an account with the correct IAM permissions.
+
+While the permissions may vary and do change, the minimal required permissions are:
+
+- Container Engine Admin
+- Container Engine Cluster Admin
+- Deployment Manager Editor
+- Storage Object Admin
+
+If these permissions are not enough to authenticate, we recommend investigating other potentially required IAM permissions.
+
 ## Updating Kubernetes Deployments
 
 Once your `push` step is defined, we need to tell Kubernetes to update the appropriate Deployment to roll out the new image. This is where the previously defined `google_cloud_deployment` service comes into play. Thanks to this service, we are able to easily run authenticated commands against Google Cloud Platform without any additional overhead, which means that manipulating your Kubernetes platform from within Codeship is no different than working with it directly.
