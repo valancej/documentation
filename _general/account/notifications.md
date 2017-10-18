@@ -249,4 +249,4 @@ Shipscope is open source and lives on [GitHub](https://github.com/codeship/ships
 
 ### CCMenu
 
-CCMenu is not supported at this time, although we hope to address it by offering an API as soon as we can.
+CCMenu is not supported at this time, although we hope to address it at a later stage.
