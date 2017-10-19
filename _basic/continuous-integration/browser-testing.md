@@ -20,6 +20,7 @@ tags:
   - selenium
   - capybara
   - screenshots
+  - vnc
 categories:
   - Continous Integration
 redirect_from:
@@ -138,3 +139,38 @@ Here is an example command. Note that the `PORT` and `IP_ADDRESS` are the same a
 ```
 scp -P PORT rof@IP_ADDRESS:/home/rof/clone/screenshots/my_screenshot.png .
 ```
+
+## Viewing browser tests with VNC
+
+If your tests are running full versions of Chrome or Firefox, rather than running them in headless mode, you may want to try debugging tests by watching them run live with VNC.
+
+To begin, start a [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}).
+
+Then connect to the debug session, taking note to forward port 5900:
+
+```
+ssh rof@IP_ADDRESS -p PORT -L 5900:localhost:5900
+```
+
+Now in the debug session run the following commands which will install [TigerVNC](http://tigervnc.org) and start the VNC server:
+
+```
+# Install TigerVNC 
+\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/tigervnc.sh | bash -s
+
+# Set a password for the VNC session
+vncpasswd
+
+Password:
+Verify:
+Would you like to enter a view-only password (y/n)? n
+
+# Start the VNC server which will export the Xvfb display server that is already running
+x0vncserver -display :99 -PasswordFile=$HOME/.vnc/passwd
+```
+
+Now your VNC server should be running and ready for connections. You can connect from your local machine with your VNC client of choice. If you are using macOS, you can connect with the built in VNC client called **Screen Sharing**.
+
+From your VNC client, connect to `localhost:5900` and enter the password you set in the step above. It should connect and show you a blank, black screen. This is expected as there are no browser tests running yet.
+
+Now in a separate terminal window, connect back to the debug session and begin running your test commands manually. Once you start running your browser tests you should see them appear in the VNC display.
