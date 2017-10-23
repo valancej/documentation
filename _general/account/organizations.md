@@ -116,6 +116,8 @@ Be aware that:
 * The organization will be removed and all team members will lose access
 * All your projects, configuration and builds will be deleted
 
+**Note** that you must be in the _Owners_ group to be able to delete an organization.
+
 
 ## Accessing Invoices
 
