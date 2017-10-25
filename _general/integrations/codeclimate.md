@@ -50,7 +50,7 @@ To start, you need to add your `CC_TEST_REPORTER_ID` to the [encrypted environme
 Once your Code Climate project ID is loaded via your environment variables, you will need to install Code Climate into one of your services via your Dockerfile by using the following command:
 
 ```shell
-curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "$/usr/local/bin/cc-test-reporter"
+curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "/usr/local/bin/cc-test-reporter"
 chmod +x "/usr/local/bin/cc-test-reporter"
 ```
 
@@ -69,8 +69,10 @@ After your final test commands:
 ```yaml
 - name: codeclimate_post
   service: YOURSERVICE
-  command: cc-test-reporter after-build --exit-code $?
+  command: cc-test-reporter after-build
 ```
+
+You can view a simple implementation of Code Climate coverage [here](https://github.com/whiteotter/ruby-rails-todoapp-with-codeclimate).
 
 ### Parallel Test Coverage
 
