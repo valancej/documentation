@@ -131,3 +131,6 @@ cp your_config.yml.example your_config.yml
 ```
 
 You should also check that you are not coming from a case-insensitive operating system where you may not have noticed that the file name is different, i.e. `File.yml` compared to `file.yml`.
+
+## Renaming A Project
+Right now it is not possible to rename a project. You will need to remove and re-add the project if a repo's name is changed and you want to reflect this.
