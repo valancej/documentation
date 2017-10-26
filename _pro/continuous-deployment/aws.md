@@ -20,7 +20,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-This article is about deploying to Heroku using Codeship Pro.
+This article is about deploying to AWS using Codeship Pro.
 
  If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
 
