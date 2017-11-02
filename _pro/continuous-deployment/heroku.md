@@ -92,9 +92,7 @@ app:
   encrypted_env_file: heroku-deployment.env.encrypted
 
 dockercfg_generator:
-  build:
-    image: codeship/heroku-dockercfg-generator
-    path: ./dockercfg-generator
+  image: codeship/heroku-dockercfg-generator
   add_docker: true
   encrypted_env_file: heroku-deployment.env.encrypted
 ```
