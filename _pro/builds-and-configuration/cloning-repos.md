@@ -46,7 +46,7 @@ If you opt to create separate CI/CD projects for each individual component, you 
 
 Then, either with a separate project or as a part of the build process for each component, you can pull in the latest images for each component to build and test your combined application.
 
-## Cloning Multiple Repos During A Build
+## Cloning Multiple Repositories
 
 In addition to the above method using images in a registry, you can also clone the repos themselves during the build process - either with a separate project or as part of the build for each individual component.
 
@@ -74,11 +74,12 @@ docker run -it --rm -v ${PATH_TO_PRIVATE_KEY}:/key alpine sed -E ':a;N;$!ba;s/\r
 
 After preparing the `sshkey.args` file we can encrypt it with the local CLI. Follow the [encryption tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}) to turn the `sshkey.args` file into a `sshkey.args.encrypted` file.
 
-You can then add it to a service with the `encrypted_args_file` option. It will be automatically decrypted on Codeship.
+You can then add it to a service via an [encrypted build arguments file]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}) with the `encrypted_args_file` option. It will be automatically decrypted on Codeship.
 
 ```yaml
 app:
-  build: .
+  build:
+    dockerfile: Dockerfile
     encrypted_args_file: sshkey.args.encrypted
 ```
 
@@ -93,10 +94,13 @@ echo -e $PRIVATE_SSH_KEY >> $HOME/.ssh/id_rsa
 
 ### Cloning Another Repo
 
-Once you have the SSH authentication working, then you'll just need a Dockerfile that grabs git and clones the repo you want:
+Once you have the SSH authentication working, then you'll just need a Dockerfile that grabs git and clones the repo you want.
+
+You will also need the use the `ARG` declaration in your Dockerfile to declare which argument from your [encrypted build arguments file]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}) you will be using.
 
 ```dockerfile
 FROM ubuntu:latest
+ARG PRIVATE_SSH_KEY
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends\
@@ -115,6 +119,6 @@ Note that this is a high-level, directional example and will require additional 
 
 ## Building With Repos Via API
 
-You can also use the API v2 to programmatically trigger builds that somehow depend on each other, or potentially an external event or system.
+You can also use the API v2 to programmatically trigger builds that depend on each other, or potentially an external event or system.
 
 To get more details on how to do this, head over to the [API Documentation]({{ site.baseurl }}{% link _basic/builds-and-configuration/api.md %}) page
