@@ -21,9 +21,9 @@ redirect_from:
 
 ## Versions And Setup
 
-We use [pyenv](https://github.com/pyenv/pyenv ) to manage Python environments for you.
+We use [pyenv](https://github.com/pyenv/pyenv) to manage Python environments for you.
 
-By default, we run Python version `2.7.13`, but versions `3.4`, `3.5` and `3.6` are all preinstalled as well.
+By default, we run Python version `2.7.14`, but versions `3.3`, `3.4`, `3.5` and `3.6` are all preinstalled as well.
 
 ### Specifying Version
 
