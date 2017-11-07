@@ -261,7 +261,7 @@ The following features available in Docker Compose are not available on Codeship
   * `tmpfs`
   * `ulimits`
   * `volume_driver`
-  * `volumes` (top-level key)
+  * `volumes` ([we do support volumes]({% link _pro/builds-and-configuration/docker-volumes.md %}), just not as a [top-level key](https://docs.docker.com/compose/compose-file/compose-file-v2/#volumes-volume_driver))
   * `privileged`
 
 All linking to the host is not allowed. This means the following directives are excluded:
