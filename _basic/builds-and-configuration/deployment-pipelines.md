@@ -57,7 +57,6 @@ You can use the [Script Deployment]({{ site.baseurl }}{% link _basic/continuous-
 ### Multi-Step Deployment Pipelines
 
 You can add **multiple deployments within one deployment pipeline**. One easy example of this type of workflow would be to run your deployment commands and then, if they are successful, run post-deployment notification scripts. This process is easy to fully automated on Codeship. Note, though, that it is **not** possible to run multiple deployments in parallel.
-</div>
 
 ![Multiple Deployments]({{ site.baseurl }}/images/continuous-deployment/multiple_deployments.png)
 
