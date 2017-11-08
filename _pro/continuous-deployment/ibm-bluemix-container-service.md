@@ -1,9 +1,9 @@
 ---
-title: Continuous Delivery to IBM Bluemix Container Service
-shortTitle: Deploying To IBM Bluemix Container Service
+title: Continuous Delivery to IBM Cloud Container Service
+shortTitle: Deploying To IBM Cloud Container Service
 menus:
   pro/cd:
-    title: IBM Bluemix Container Service
+    title: IBM Cloud Container Service
     weight: 17
 categories:
   - Continous Deployment    
@@ -12,22 +12,23 @@ tags:
   - ibm
   - bluemix
   - bluemix container service
+  - blue mix
 
 ---
 <div class="info-block">
-You can find a sample repo for deploying to IBM Bluemix with Codeship Pro on Github [here](https://github.com/codeship-library/ibm-bluemix-utilities).
+You can find a sample repo for deploying to IBM Cloud with Codeship Pro on Github [here](https://github.com/codeship-library/ibm-bluemix-utilities).
 </div>
 
 * include a table of contents
 {:toc}
 
-## Continuous Delivery To IBM Bluemix Container Service
+## Continuous Delivery To IBM Cloud Container Service
 
-To make it easy for you to deploy your application to IBM Bluemix Container Service, we’ve [built deployment images](https://github.com/codeship-library/ibm-bluemix-utilities) that have the Bluemix CLI installed and configured for use in the CI/CD process.
+To make it easy for you to deploy your application to IBM Cloud Container Service, we’ve [built deployment images](https://github.com/codeship-library/ibm-bluemix-utilities) that have the IBM Cloud CLI installed and configured for use in the CI/CD process.
 
 You will simply need to add one of the IBM deployment images as a service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) so that you can run the commands you need.
 
-## IBM Bluemix Deployment Container
+## IBM Cloud Deployment Container
 
 ### Prerequisites
 
@@ -36,8 +37,8 @@ Prior to getting started, please ensure you have the following:
 - [An Understanding Of Codeship Pro]({% link _pro/quickstart/getting-started.md %})
 - [Codeship's Jet CLI]({% link _pro/builds-and-configuration/cli.md %}) installed locally
 - [Docker](https://www.Docker.com/products/overview)
-- [An IBM Bluemix Account](https://www.ibm.com/cloud-computing/bluemix/)
-- An understanding of using IBM Bluemix Container Service and the required manifest and database files for a Container Service application
+- [An IBM Cloud Account](https://www.ibm.com/cloud-computing/bluemix/)
+- An understanding of using IBM Cloud Container Service and the required manifest and database files for a Container Service application
 
 ### Authentication
 
@@ -49,7 +50,7 @@ To deploy to IBM, you will need to add the following values to your [encrypted e
 - BLUEMIX_ORGANIZATION
 - BLUEMIX_SPACE
 
-These variables will be set on the [IBM deployment container](https://github.com/codeship-library/ibm-bluemix-utilities), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the IBM Bluemix CLI when you run your deployment commands.
+These variables will be set on the [IBM deployment container](https://github.com/codeship-library/ibm-bluemix-utilities), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the IBM Cloud CLI when you run your deployment commands.
 
 ### Configuring Deployment Service
 
@@ -83,25 +84,25 @@ deployment:
 
 ## Container Registry
 
-Using IBM Bluemix Container Service usually involves pushing images to the IBM Bluemix Container Registry as part of your CI/CD process.
+Using IBM Cloud Container Service usually involves pushing images to the IBM Cloud Container Registry as part of your CI/CD process.
 
-We recommend reading [our guide for pushing to the Bluemix registry]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}#ibm-bluemix-registry), as the deployment commands below will feature an image push based on those instructions.
+We recommend reading [our guide for pushing to the IBM Cloud container registry]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}#ibm-bluemix-registry), as the deployment commands below will feature an image push based on those instructions.
 
 ## Deploying Your App
 
 Once you have added the deployment service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will now run Container Service deployment commands from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) using that service to execute the commands.
 
-Note that in this example, all of the Container Service deployment commands have been moved to a script file named `deploy_to_kubernetes.sh`. The reason it is named `deploy_to_kubernetes.sh` is because the IBM Bluemix Container Service uses Kubernetes to orchestrate container deployments, so you will use Kubernetes commands in your deployment commands.
+Note that in this example, all of the Container Service deployment commands have been moved to a script file named `deploy_to_kubernetes.sh`. The reason it is named `deploy_to_kubernetes.sh` is because the IBM Cloud Container Service uses Kubernetes to orchestrate container deployments, so you will use Kubernetes commands in your deployment commands.
 
 ```yaml
-- name: Push To Bluemix Container Registry
+- name: Push To IBM Cloud Container Registry
   service: app
   type: push
   image_name: registry.ng.bluemix.net/your-org/your-image
   registry: registry.ng.bluemix.net
   dockercfg_service: dockercfg_generator  
 
-- name: Bluemix Container Service Kubernetes Deployment
+- name: IBM Cloud Container Service Kubernetes Deployment
   service: deployment
   command: /tests/deploy_to_kubernetes.sh
 ```
@@ -113,7 +114,7 @@ Inside the `deploy_to_kubernetes.sh` script, you will have something similar to:
 
 set -e
 
-# login to IBM Bluemix via credentials provided via (encrypted) environment
+# login to IBM Cloud via credentials provided via (encrypted) environment
 # variables
 bluemix login \
   --apikey "${BLUEMIX_API_KEY}" \
@@ -139,6 +140,6 @@ kubectl cluster-info
 
 To learn more:
 
-- [Visit the IBM Bluemix Container Service documentation](https://console.bluemix.net/docs/)
+- [Visit the IBM Cloud Container Service documentation](https://console.bluemix.net/docs/)
 
 - [View our example repository](https://github.com/codeship-library/ibm-bluemix-utilities)
