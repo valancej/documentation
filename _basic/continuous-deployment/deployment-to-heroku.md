@@ -99,6 +99,16 @@ and the repository exists.
 
 To fix this issue, get the public SSH key for your project under _Project Settings_ > _General_ and [add it to Heroku](https://devcenter.heroku.com/articles/keys#adding-keys-to-heroku).
 
+### SSH Key is Already in Use
+
+During a Heroku deployment you might encounter this error on the step that syncs your project's SSH key to Heroku:
+
+```
+This key is already in use by another account. Each account must have a unique key.
+```
+
+To fix this issue, return to the [deployment configuration]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-heroku.md %}#step-4---deployment-configuration), add your Heroku API key again and save the changes. In the background this will reset the SSH key for the project and add the new key to the repository on your SCM. The next time you deploy the new SSH key will automatically sync to Heroku.
+
 ### check_url fails for Heroku deployment
 
 After each deployment we check if your app is up. Therefore we call (`wget`) either the default `*.herokuapps.com` URL or the URL you specified here.
