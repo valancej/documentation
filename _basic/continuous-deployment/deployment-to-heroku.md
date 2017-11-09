@@ -107,7 +107,7 @@ During a Heroku deployment you might encounter this error on the step that syncs
 This key is already in use by another account. Each account must have a unique key.
 ```
 
-To fix this issue, return to the [deployment configuration]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-heroku.md %}#step-4---deployment-configuration), add your Heroku API key again and save the changes. In the background this will reset the SSH key for the project and add the new key to the repository on your SCM. The next time you deploy the new SSH key will automatically sync to Heroku.
+To fix this issue, visit _Project Settings_ > _General_ and click _Reset project SSH key_. This will reset the SSH key for the project and add the new key to the repository on your SCM. The next time you deploy the new SSH key will automatically sync to Heroku.
 
 ### check_url fails for Heroku deployment
 
