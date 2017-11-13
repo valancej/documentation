@@ -109,8 +109,8 @@ Volumes solve several common problems, including:
 
 ## More Information
 
--  https://docs.docker.com/engine/reference/builder/#volume
+- [https://docs.docker.com/engine/reference/builder/#volume](https://docs.docker.com/engine/reference/builder/#volume)
 
-- https://docs.docker.com/compose/compose-file/#volumes-volume-driver
+- [https://docs.docker.com/compose/compose-file/#volumes](https://docs.docker.com/compose/compose-file/#volumes)
 
--  https://docs.docker.com/engine/userguide/containers/dockervolumes/
+- [https://docs.docker.com/engine/admin/volumes/volumes](https://docs.docker.com/engine/admin/volumes/volumes)
