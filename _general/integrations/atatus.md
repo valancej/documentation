@@ -4,23 +4,17 @@ shortTitle: Tracking Deployments With Atatus
 menus:
   general/integrations:
     title: Using Atatus
-    weight: 3
+    weight: 23
 tags:
   - atatus
   - deployment
   - logging
   - analytics
-  - reports
   - reporting
   - integrations
   - errors
-  - performance
 categories:
   - Integrations
-redirect_from:
-  - /basic/continuous-deployment/atatus-basic/
-  - /pro/continuous-deployment/atatus-docker/
-
 ---
 
 * include a table of contents
