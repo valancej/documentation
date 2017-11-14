@@ -128,6 +128,7 @@ datapoint
 datasets
 de-facto
 decryptor
+depfu
 deployer
 dev
 digitalocean
@@ -362,6 +363,7 @@ webkit
 webpack
 webserver
 wget
+whitelisted
 whitelisting
 whitespace
 whos
