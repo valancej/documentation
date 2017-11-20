@@ -28,7 +28,7 @@ Any Elixir framework or tool that can run inside a Docker container will run on 
 
 ## Example Repo
 
-We have a sample Phoenix project that you can clone or take a look at via the GitHub [Phoenix Quickstart with Codeship Pro](https://github.com/whiteotter/phoenix-tutorial) repository. This may make a good starting point for your Phoenix or Elixir-based projects.
+We have a sample Phoenix project that you can clone or take a look at via the GitHub [Phoenix Quickstart with Codeship Pro](https://github.com/codeship-library/elixir-phoenix-quickstart) repository. This may make a good starting point for your Phoenix or Elixir-based projects.
 
 ## Services File
 
