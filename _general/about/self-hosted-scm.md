@@ -38,7 +38,7 @@ To use your private Git server with Codeship, you will need a publicly reachable
 
 We require port 22  clone your repository to run your builds and port 433 for status and clone requests.
 
-**Note** that Bitbucket Server uses port 7999 rather than port 433.
+**Note** that Bitbucket Server uses port 7999 rather than port 22.
 
 ## IP Whitelisting
 
