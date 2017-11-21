@@ -30,7 +30,7 @@ categories:
 
 Codeship supports self-hosted [Git](https://git-scm.com) repositories for the Github Enterprise, Gitlab Community Edition, Gitlab Enterprise and Bitbucket Server products.
 
-This is a beta feature and you will need to [get in touch](mailto:solutions@codeship.com) to request access for free.
+This is a beta feature and you will need to [contact us and request access](mailto:solutions@codeship.com).
 
 ## Exposing Ports
 
@@ -44,7 +44,7 @@ We require port 22  clone your repository to run your builds and port 433 for st
 
 We are currently planning a beta to make available a limited number of IPs for whitelisting and network access purposes.
 
-For now, the above ports need to be made available to the public internet but please [get in touch](mailto:solutions@codeship.com) if you are interested in our upcoming IP whitelisting feature.
+For now, the above ports need to be made available to the public internet but please [contact us](mailto:solutions@codeship.com) if you are interested in our upcoming IP whitelisting feature.
 
 ## SCM Feature Requests
 
