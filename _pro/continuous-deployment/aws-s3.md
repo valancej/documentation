@@ -6,7 +6,7 @@ menus:
     title: AWS S3
     weight: 2
 categories:
-  - Continous Deployment        
+  - Continuous Deployment        
 tags:
   - deployment
   - aws

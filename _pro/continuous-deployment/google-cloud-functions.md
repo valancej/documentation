@@ -6,7 +6,7 @@ menus:
     title: Google Cloud Functions
     weight: 10
 categories:
-  - Continous Deployment        
+  - Continuous Deployment        
 tags:
   - deployment
   - google

@@ -6,7 +6,7 @@ menus:
     title: Docker Swarm
     weight: 15
 categories:
-  - Continous Deployment        
+  - Continuous Deployment        
 tags:
   - deployment
   - swarm

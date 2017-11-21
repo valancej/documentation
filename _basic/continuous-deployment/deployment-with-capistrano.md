@@ -8,7 +8,7 @@ tags:
   - deployment
   - capistrano
 categories:
-  - Continous Deployment    
+  - Continuous Deployment   
 redirect_from:
   - /continuous-deployment/deployment-with-capistrano/
 ---

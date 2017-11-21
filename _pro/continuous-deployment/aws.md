@@ -6,7 +6,7 @@ menus:
     title: AWS
     weight: 1
 categories:
-  - Continous Deployment        
+  - Continuous Deployment        
 tags:
   - deployment
   - aws

@@ -8,7 +8,7 @@ menus:
     title: CloudFoundry
     weight: 12
 categories:
-  - Continous Deployment        
+  - Continuous Deployment       
 redirect_from:
   - /continuous-deployment/deployment-to-cloudfoundry/
 ---

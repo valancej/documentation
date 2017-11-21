@@ -6,7 +6,7 @@ menus:
     title: AWS EB
     weight: 3
 categories:
-  - Continous Deployment        
+  - Continuous Deployment        
 tags:
   - deployment
   - aws
