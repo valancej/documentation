@@ -42,7 +42,7 @@ We require port 22 for status and clone requests, and port 433 to clone your rep
 
 ## IP Whitelisting
 
-We are currently planning a beta to make available a limited numbe of IPs for whitelisting and network access purposes.
+We are currently planning a beta to make available a limited number of IPs for whitelisting and network access purposes.
 
 For now, the above ports need to be made available to the public internet but please [get in touch](mailto:solutions@codeship.com) if you are interested in our upcoming IP whitelisting feature.
 
