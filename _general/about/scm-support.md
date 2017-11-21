@@ -54,6 +54,14 @@ Get started by [creating a project]({{ site.baseurl }}{% link _general/projects/
 
 * [GitLab Enterprise](https://about.gitlab.com/gitlab-ee) is not supported.
 
+## Self-hosted Git Servers
+
+Codeship has an ongoing beta allowing for support of Github Enterprise, Gitlab Community Edition, Gitlab Enterprise and Bitbucket Server products.
+
+As this is a beta feature and you will need to [get in touch](mailto:solutions@codeship.com) to request access for free.
+
+You can read the [self-hosted Git documentation]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) to learn more.
+
 ## SCM Feature Requests
 
 We are continually evaluating our SCM integration support. If there is something you would like to see, please [get in touch](mailto:support@codeship.com) and let us know more details about your SCM needs.
