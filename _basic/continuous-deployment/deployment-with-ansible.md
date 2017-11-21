@@ -9,7 +9,7 @@ tags:
   - deployment
   - ansible
 categories:
-  - Continous Deployment    
+  - Continuous Deployment   
 ---
 
 * include a table of contents

@@ -7,7 +7,7 @@ menus:
     title: Azure
     weight: 6
 categories:
-  - Continous Deployment        
+  - Continuous Deployment        
 tags:
   - deployment
   - azure

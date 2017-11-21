@@ -6,7 +6,7 @@ menus:
     title: IBM Cloud Foundry
     weight: 16
 categories:
-  - Continous Deployment        
+  - Continuous Deployment        
 tags:
   - deployment
   - ibm

@@ -8,7 +8,7 @@ tags:
   - deployment
   - heroku
 categories:
-  - Continous Deployment    
+  - Continuous Deployment  
 redirect_from:
   - /continuous-deployment/deployment-to-heroku/
   - /faq/push-to-heroku-rejected/

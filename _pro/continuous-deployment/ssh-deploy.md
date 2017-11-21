@@ -17,6 +17,8 @@ tags:
   - sftp
   - linode
   - digital ocean
+categories:
+  - Continuous Deployment
 ---
 
 <div class="info-block">

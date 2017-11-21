@@ -6,7 +6,7 @@ menus:
     title: Google App Engine
     weight: 9
 categories:
-  - Continous Deployment        
+  - Continuous Deployment        
 tags:
   - deployment
   - google

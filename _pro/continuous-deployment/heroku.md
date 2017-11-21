@@ -10,7 +10,7 @@ tags:
   - heroku
   - docker
 categories:
-  - Continous Deployment    
+  - Continuous Deployment    
 redirect_from:
   - /docker-integration/heroku/
 ---

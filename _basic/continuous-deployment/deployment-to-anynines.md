@@ -8,7 +8,7 @@ menus:
     title: anynines
     weight: 14
 categories:
-  - Continous Deployment        
+  - Continuous Deployment        
 redirect_from:
   - /continuous-deployment/deployment-to-anynines/
 ---

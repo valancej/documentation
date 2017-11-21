@@ -9,7 +9,7 @@ tags:
   - git
   - push
 categories:
-  - Continous Deployment    
+  - Continuous Deployment
 redirect_from:
   - /continuous-deployment/push-to-remote-repository/
 ---
