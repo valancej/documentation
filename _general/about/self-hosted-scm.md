@@ -14,7 +14,7 @@ tags:
   - github enterprise
   - bitbucket stash
   - bitbucket server
-  - gitlab enterprise
+  - gitlab enterprise edition
   - gitlab community edition
   - git
   - on premise
@@ -28,7 +28,7 @@ categories:
 
 ## Beta Access
 
-Codeship supports self-hosted [Git](https://git-scm.com) repositories for the Github Enterprise, Gitlab Community Edition, Gitlab Enterprise and Bitbucket Server products.
+Codeship supports self-hosted [Git](https://git-scm.com) repositories for the GitHub Enterprise, GitLab Community Edition, GitLab Enterprise Edition and Bitbucket Server products.
 
 This is a beta feature and you will need to [contact us and request access](mailto:solutions@codeship.com).
 
@@ -36,7 +36,7 @@ This is a beta feature and you will need to [contact us and request access](mail
 
 To use your private Git server with Codeship, you will need a publicly reachable endpoint with ports 22 and 433 open to the internet.
 
-We require port 22  clone your repository to run your builds and port 433 for status and clone requests.
+We require port 22 to clone your repository to run your builds and port 433 for status and clone requests.
 
 **Note** that Bitbucket Server uses port 7999 rather than port 22.
 

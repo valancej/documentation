@@ -22,7 +22,7 @@ categories:
 * include a table of contents
 {:toc}
 
-Codeship supports [Git](https://git-scm.com) repositories hosted directly on [GitHub](https://github.com), [Bitbucket](https://bitbucket.org) and [GitLab](https://about.gitlab.com). On-premise versions of these SCM systems are not currently supported.
+Codeship supports [Git](https://git-scm.com) repositories hosted directly on [GitHub](https://github.com), [Bitbucket](https://bitbucket.org) and [GitLab](https://about.gitlab.com). There is [ongoing beta support]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) for on-premise versions of these SCM systems.
 
 Integration between a repository and any forked repositories is not currently supported for any SCM. You can setup forked repositories as separate projects on Codeship, but any builds for the forked repository will not link back to the parent repository.
 
@@ -34,7 +34,7 @@ Get started by [creating a project]({{ site.baseurl }}{% link _general/projects/
 
 * Required [GitHub permissions]({{ site.baseurl }}{% link _general/about/permissions.md %}#github).
 
-* [GitHub Enterprise](https://enterprise.github.com/home) is not supported.
+* There is [beta support]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) for [GitHub Enterprise](https://enterprise.github.com/home)d.
 
 ## Bitbucket
 
@@ -44,7 +44,7 @@ Get started by [creating a project]({{ site.baseurl }}{% link _general/projects/
 
 * In addition to Git repositories, [Mercurial](https://www.mercurial-scm.org) repositories on Bitbucket are also supported.
 
-* [Bitbucket Server](https://www.atlassian.com/software/bitbucket/server) is not supported.
+* There is [beta support]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) for [Bitbucket Server](https://www.atlassian.com/software/bitbucket/server).
 
 ## GitLab
 
@@ -52,13 +52,13 @@ Get started by [creating a project]({{ site.baseurl }}{% link _general/projects/
 
 * Required [GitLab permissions]({{ site.baseurl }}{% link _general/about/permissions.md %}#gitlab).
 
-* [GitLab Enterprise](https://about.gitlab.com/gitlab-ee) is not supported.
+* There is [beta support]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) for [GitLab Community Edition](https://gitlab.com/gitlab-org/gitlab-ce) and [GitLab Enterprise Edition](https://about.gitlab.com/gitlab-ee).
 
 ## Self-hosted Git Servers
 
-Codeship has an ongoing beta allowing for support of Github Enterprise, Gitlab Community Edition, Gitlab Enterprise and Bitbucket Server products.
+Codeship has an ongoing beta allowing for support of GitHub Enterprise, GitLab Community Edition, GitLab Enterprise Edition and Bitbucket Server products.
 
-As this is a beta feature and you will need to [get in touch](mailto:solutions@codeship.com) to request access for free.
+This is a beta feature and you will need to [get in touch](mailto:solutions@codeship.com) to request access for free.
 
 You can read the [self-hosted Git documentation]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) to learn more.
 
