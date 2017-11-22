@@ -34,7 +34,7 @@ Get started by [creating a project]({{ site.baseurl }}{% link _general/projects/
 
 * Required [GitHub permissions]({{ site.baseurl }}{% link _general/about/permissions.md %}#github).
 
-* There is [beta support]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) for [GitHub Enterprise](https://enterprise.github.com/home)d.
+* There is [beta support]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) for [GitHub Enterprise](https://enterprise.github.com/home).
 
 ## Bitbucket
 
