@@ -13,6 +13,7 @@ tags:
   - environment
   - security
   - encryption
+  - aes key
 
 categories:
   - Builds and Configuration
@@ -89,7 +90,11 @@ Note: YAML boolean values (true, false, yes, no, on, off) must be enclosed in qu
 ## Encrypted Build Arguments
 In a lot of cases, the values needed by the image at build time are secrets -- credentials, passwords, and other things that you don't want to check in to source control in plain text. Because of this, Codeship supports encrypted build arguments. You can either encrypt a build argument individually, or encrypt an entire file containing all of the build arguments you need.
 
-First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to root directory (and add it to the `.gitignore` file.)
+First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}#downloading-your-aes-key) to the root directory (and add it to the `.gitignore` file).
+
+<div class="info-block">
+If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.
+</div>
 
 ```shell
 GEM_SERVER_TOKEN=XXXXXXXXXXXX

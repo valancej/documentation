@@ -12,6 +12,7 @@ tags:
   - security
   - variables
   - environment
+  - aes key
 
 categories:
   - Builds and Configuration
@@ -68,17 +69,21 @@ ENV URL=www.codeship.com
 
 ## Encrypted Environment Variables
 
-The most common way to use environment variables on Codeship Pro is by using our `encrypted_env_file` option. This lets you keep all environment variables securely encrypted, via a project-specific AES KEY, and therefore never explicitly visible in your repo.
+The most common way to use environment variables on Codeship Pro is by using our `encrypted_env_file` option. This lets you keep all environment variables securely encrypted, via a project-specific AES key, and therefore never explicitly visible in your repo.
 
 By doing this, you never have to worry about using environment variables for passing your secrets to your CI/CD pipeline and to your builds.
 
 ### Downloading Your AES Key
 
-If you have a project on https://codeship.com, head over to the _General_ page of your project settings and you'll find a section labeled _AES Key_ which allows you to either copy or download the key.
+Navigate to _Project Settings_ > _General_ and you'll find a section labeled _AES Key_ which allows you to either copy or download the key.
 
 ![AES key]({{ site.baseurl }}/images/docker/aes_key.png)
 
 Save that file as `codeship.aes` in your repository root and don't forget to add the key to your `.gitignore` file so you don't accidentally commit it to your repository.
+
+<div class="info-block">
+If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.
+</div>
 
 ### Encrypting Your Environment Variables
 
@@ -115,7 +120,7 @@ app:
 
 ### Decrypting
 
-If you need to decrypt the encrypted file run the following command instead
+If you need to decrypt the encrypted file run the following command instead:
 
 ```shell
 jet decrypt env.encrypted env

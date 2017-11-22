@@ -14,6 +14,7 @@ tags:
   - build arguments
   - environment variables
   - variables
+  - aes key
 
 categories:
   - Builds and Configuration
@@ -91,6 +92,10 @@ When these private assets need to be accessed at buildtime, to successfully buil
 Build arguments can be passed to the image via your `codeship-services.yml` file either encrypted or unencrypted. [You can learn how to set up build arguments here](https://docs.docker.com/engine/reference/builder/#/arg))
 
 ## How can I provide deployment credentials to Codeship?
-For any secret that needs to be accessed during container runtime, meaning _after_ your containers have built when you are running commands via your `codeship-steps.yml` file, then you should use encrypted environment variables.
+For any secret that needs to be accessed during container runtime, meaning _after_ your containers have built when you are running commands via your `codeship-steps.yml` file, then you should use [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}).
 
-You can learn more about using encrypted environment variables in [this article](https://documentation.codeship.com/pro/getting-started/encryption/). You'll need to [download Jet](https://documentation.codeship.com/pro/getting-started/installation/), the CLI for running Codeship Pro builds locally, as well as grab your project's AES key from the Project Settings page.
+You'll need to [download Jet]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), the CLI for running Codeship Pro builds locally, as well as [grab your project's AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}#downloading-your-aes-key) from the Project Settings page.
+
+<div class="info-block">
+If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.
+</div>
