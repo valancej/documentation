@@ -13,7 +13,7 @@ tags:
   - parallel
   - concurrency
 categories:
-  - Continous Integration  
+  - Continuous Integration 
 ---
 
 * include a table of contents

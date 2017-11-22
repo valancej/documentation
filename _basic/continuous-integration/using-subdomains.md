@@ -13,7 +13,7 @@ tags:
   - xip.io
   - nip.io
 categories:
-  - Continous Integration    
+  - Continuous Integration    
 redirect_from:
   - /continuous-integration/using-subdomains/
 ---

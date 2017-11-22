@@ -20,7 +20,7 @@ tags:
   - phantomjs
   - selenium
 categories:
-  - Continous Integration
+  - Continuous Integration
 redirect_from:
   - /docker/browser-testing/
 ---

@@ -10,7 +10,7 @@ tags:
   - background
   - commands
 categories:
-  - Continous Integration
+  - Continuous Integration
 redirect_from:
   - /continuous-integration/run-a-command-in-the-background/
 ---
