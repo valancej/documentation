@@ -9,7 +9,7 @@ tags:
   - cdn
   - artifacts
 categories:
-  - Continous Integration
+  - Continuous Integration
 redirect_from:
   - /continuous-integration/keep-build-artifacts/
 ---

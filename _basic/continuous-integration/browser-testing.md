@@ -22,7 +22,7 @@ tags:
   - screenshots
   - vnc
 categories:
-  - Continous Integration
+  - Continuous Integration
 redirect_from:
   - /continuous-integration/browser-testing/
 ---
@@ -155,7 +155,7 @@ ssh rof@IP_ADDRESS -p PORT -L 5900:localhost:5900
 Now in the debug session run the following commands which will install [TigerVNC](http://tigervnc.org) and start the VNC server:
 
 ```
-# Install TigerVNC 
+# Install TigerVNC
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/tigervnc.sh | bash -s
 
 # Set a password for the VNC session

@@ -15,6 +15,7 @@ tags:
   - concurrency
 categories:
   - Builds and Configuration  
+  - Continuous Integration
 redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/

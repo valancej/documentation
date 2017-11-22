@@ -9,7 +9,7 @@ tags:
   - git
   - submodules
 categories:
-  - Continous Integration
+  - Continuous Integration
 redirect_from:
   - /continuous-integration/git-submodules/
 ---
