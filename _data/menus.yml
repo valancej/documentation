@@ -16,7 +16,7 @@ main:
     url: /more-resources
   - title: API
     identifier: api
-    url: https://codeship-api.api-docs.io/v1/introduction/auth
+    url: https://apidocs.codeship.com/v2
 
 general:
   - &GENERAL_ABOUT
