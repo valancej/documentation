@@ -40,6 +40,21 @@ We require port 22 to clone your repository to run your builds and port 433 for 
 
 **Note** that Bitbucket Server uses port 7999 rather than port 22.
 
+
+## Personal Access Tokens
+
+To connect to your self-hosted Git instance, you will need to retrieve your personal access token and add it to your _Connected Services_ screen.
+
+On Codeship, you can find your _Connected Services_ screen by navigating to [https://app.codeship.com/authentications](https://app.codeship.com/authentications) once you've logged in.
+
+To fetch your token, follow the following instructions:
+
+- [Github Enterprise](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+- [Gitlab Community Edition](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) or [Enterprise Edition](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
+- [Bitbucket Server](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html)
+
+**Note** that Codeship requires Bitbucket Server 5.5 due to prior versions not providing personal access tokens.
+
 ## IP Whitelisting
 
 We are currently planning a beta to make available a limited number of IPs for whitelisting and network access purposes.
