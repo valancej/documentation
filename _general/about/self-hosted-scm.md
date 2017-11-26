@@ -40,7 +40,6 @@ We require port 22 to clone your repository to run your builds and port 433 for 
 
 **Note** that Bitbucket Server uses port 7999 rather than port 22.
 
-
 ## Personal Access Tokens
 
 To connect to your self-hosted Git instance, you will need to retrieve your personal access token and add it to your _Connected Services_ screen.
