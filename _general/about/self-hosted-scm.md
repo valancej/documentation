@@ -46,7 +46,7 @@ To connect to your self-hosted Git instance, you will need to retrieve your pers
 
 On Codeship, you can find your _Connected Services_ screen by navigating to [https://app.codeship.com/authentications](https://app.codeship.com/authentications) once you've logged in.
 
-To fetch your token, follow the following instructions:
+To fetch your token, follow these instructions:
 
 - [Github Enterprise](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
 - [Gitlab Community Edition](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) or [Enterprise Edition](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
