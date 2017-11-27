@@ -10,6 +10,7 @@ tags:
   - languages
   - flask
   - django
+  - pyenv
 categories:
   - Languages And Frameworks
 redirect_from:
@@ -86,3 +87,17 @@ Due to Python version issues, you may find it helpful to tests your commands wit
 ### Executable Not Available
 
 As we use **pyenv**, if an executable is not available after installation you may need to run the command `pyenv rehash` after installing the package. [You can read pyenv's documentation](https://github.com/pyenv/pyenv) for more information.
+
+### Cannot Rehash
+
+You may encounter a rehash error like this:
+
+```
+pyenv: cannot rehash: /home/rof/.pyenv/shims/.pyenv-shim exists
+```
+
+If this occurs try adding this command to the start of your _Setup Steps_:
+
+```
+rm -rf $HOME/.pyenv/plugins/pyenv-codeship-rehash
+```
