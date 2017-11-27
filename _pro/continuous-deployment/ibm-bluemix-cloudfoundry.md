@@ -4,7 +4,7 @@ shortTitle: Deploying To IBM Cloud Foundry
 menus:
   pro/cd:
     title: IBM Cloud Foundry
-    weight: 16
+    weight: 17
 categories:
   - Continuous Deployment        
 tags:

@@ -4,7 +4,7 @@ shortTitle: Deploying To Google Cloud
 menus:
   pro/cd:
     title: Google Cloud
-    weight: 8
+    weight: 9
 categories:
   - Continuous Deployment        
 tags:

@@ -4,7 +4,7 @@ shortTitle: CD with Terraform
 menus:
   pro/cd:
     title: Terraform
-    weight: 13
+    weight: 14
 categories:
   - Continuous Deployment    
 tags:

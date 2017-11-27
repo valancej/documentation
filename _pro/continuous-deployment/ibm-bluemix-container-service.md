@@ -4,7 +4,7 @@ shortTitle: Deploying To IBM Cloud Container Service
 menus:
   pro/cd:
     title: IBM Cloud Container Service
-    weight: 17
+    weight: 18
 categories:
   - Continuous Deployment   
 tags:

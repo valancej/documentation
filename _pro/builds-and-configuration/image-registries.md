@@ -305,7 +305,7 @@ dockercfg_generator:
   encrypted_env_file: gcr.env.encrypted
 ```
 
-This will use the  image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
+This will use the image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
 
 Learn more about [using Google Cloud with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}).
 
@@ -363,7 +363,7 @@ dockercfg_generator:
   encrypted_env_file: aws.env.encrypted
 ```
 
-This will use the  image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
+This will use the image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
 
 Learn more about [using AWS with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
 
@@ -424,9 +424,81 @@ bluemix_dockercfg:
   encrypted_env_file: bluemix.env.encrypted
 ```
 
-This will use the  image we maintain for IBM Bluemix authentication to generate credentials on image pull. Note that you will need to have your IBM `BLUEMIX_API_KEY` credential set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service.
+This will use the image we maintain for IBM Bluemix authentication to generate credentials on image pull. Note that you will need to have your IBM `BLUEMIX_API_KEY` credential set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service.
 
 To see a full example of using IBM Bluemix Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+
+## Azure Container Service
+
+### Pushing To Azure Container Service
+
+To push to Azure Container Service in your builds, you will want to make use of our service generator method for registry authentication.
+
+[We maintain an image](https://github.com/codeship-library/azure-utilities) you can easily add to your push step to generate these credentials for you.
+
+First, you will need to add the following credentials as [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}):
+
+- `AZURE_USERNAME` - Your username of the Admin user of the registry
+- `AZURE_PASSWORD` - The password associated with the above admin user
+- `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of NAME.azurecr.io)
+
+Also note that our image name must include your Azure Container Service registry path for your push step to authenticate. Here is an example [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+
+```yaml
+app:
+  build:
+    image: codeship.azurecr.io/codeship-testing
+    dockerfile_path: ./Dockerfile
+
+azure_dockercfg:
+  image: codeship/azure-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: azure.env.encrypted
+```
+
+Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
+
+Note that the Azure Container Service requires the fully registry path in our image name:
+
+```yaml
+- service: app
+  type: push
+  tag: master
+  image_name: codeship.azurecr.io/codeship-testing
+  registry: codeship.azurecr.io
+  dockercfg_service: azure_dockercfg
+```
+
+To see a full example of using the Azure Container Service with Codeship Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
+
+### Pulling From Azure Container Service
+
+To pull images from Azure Container Service, you will need to provide the image, including the registry path, as well as use the service generator for authentication in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+
+For example:
+
+```yaml
+app:
+  build:
+    image: codeship.azurecr.io/codeship-testing
+    dockerfile_path: ./Dockerfile
+  dockercfg_service: azure_dockercfg  
+
+azure_dockercfg:
+  image: codeship/azure-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: azure.env.encrypted
+```
+
+This will use the image we maintain for Azure Container Service authentication to generate credentials on image pull.
+
+Note that you will need the following credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service:
+
+- `AZURE_USERNAME` - Your username of the Admin user of the registry
+- `AZURE_PASSWORD` - The password associated with the above admin user
+- `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of NAME.azurecr.io)
+
+To see a full example of using the Azure Container Service with Codeship Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
 
 ## Common Questions
 
