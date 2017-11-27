@@ -10,6 +10,7 @@ tags:
   - languages
   - rails
   - sinatra
+  - rvm
 categories:
   - Languages And Frameworks
 redirect_from:
@@ -96,13 +97,13 @@ While we do not officially support or integrate with these modules, many Codeshi
 On **Ruby 2.3 only**, Nokogiri will fail to compile with the bundled _libxml_ and _libxslt_ libraries. To install the gem you need to use the system libraries instead.
 
 ```shell
-# add the following command before running "bundle install"
+# Add the following command before running "bundle install"
 bundle config build.nokogiri --use-system-libraries
 ```
 
 ### Run With Bundle Exec
 
-Make sure to run your commands with `bundle exec` (e.g. `bundle exec rspec`) so all commands you run are executed with the versions of the ruby gems you configured in your Gemfile.lock
+Make sure to run your commands with `bundle exec` (e.g. `bundle exec rspec`) so all commands you run are executed with the versions of the Ruby gems you configured in your Gemfile.lock.
 
 ### Can Not Find Gem In Sources
 
@@ -112,4 +113,25 @@ Sometimes you might see errors like the following:
 Could not find safe_yaml-0.9.2 in any of the sources
 ```
 
-Please make sure that the version of the gem you want to install there wasn't yanked from [Rubygems](http://rubygems.org/)
+Please make sure the version of the gem you want to install wasn't removed from [RubyGems](https://rubygems.org/).
+
+### RVM Requires Curl
+
+Any Ruby version you might need should already be installed by default, however if you are trying to manually install a version with rvm you may encounter the following error:
+
+```
+RVM requires 'curl'. Install 'curl' first and try again.
+```
+
+This error typically occurs when the NPM package [node-which](https://github.com/npm/node-which) is installed. You can check if it is present in the build with:
+
+```
+$ which which
+node_modules/.bin/which
+```
+
+To workaround this, temporarily remove the NPM version of `which`, then run your `rvm` command. After that completes you can let the package reinstall with either `npm install` or `yarn install`. To remove it, add this command at the start of your _Setup Steps_:
+
+```
+rm -f node_modules/.bin/which
+```
