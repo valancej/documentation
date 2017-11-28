@@ -305,7 +305,7 @@ dockercfg_generator:
   encrypted_env_file: gcr.env.encrypted
 ```
 
-This will use the image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
+This will use the image we maintain for Google authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
 
 Learn more about [using Google Cloud with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}).
 
@@ -442,6 +442,8 @@ First, you will need to add the following credentials as [encrypted environment 
 - `AZURE_PASSWORD` - The password associated with the above admin user
 - `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of NAME.azurecr.io)
 
+**Note** that you must enable the _Admin_ user for your Azure account, which you can do via your _Access keys_ settings page once you log into Azure.
+
 Also note that our image name must include your Azure Container Service registry path for your push step to authenticate. Here is an example [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 ```yaml
@@ -497,6 +499,8 @@ Note that you will need the following credentials set via the [encrypted environ
 - `AZURE_USERNAME` - Your username of the Admin user of the registry
 - `AZURE_PASSWORD` - The password associated with the above admin user
 - `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of NAME.azurecr.io)
+
+**Note** that you must enable the _Admin_ user for your Azure account, which you can do via your _Access keys_ settings page once you log into Azure.
 
 To see a full example of using the Azure Container Service with Codeship Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
 

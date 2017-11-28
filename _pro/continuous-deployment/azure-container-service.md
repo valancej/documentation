@@ -45,8 +45,8 @@ Prior to getting started, please ensure you have the following:
 
 To deploy to the Azure Container Service, you will need to add the following values to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
-- `AZURE_USERNAME` - Your username of the Admin user of the registry
-- `AZURE_PASSWORD` - The password associated with the above admin user
+- `AZURE_USERNAME` - Your Azure username
+- `AZURE_PASSWORD` - The password associated with your Azure user
 - `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of NAME.azurecr.io)
 
 These variables will be set on the [Azure deployment container](https://github.com/codeship-library/azure-utilities), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the Azure Container Service when you run your deployment commands.
@@ -72,11 +72,17 @@ app:
 azure_dockercfg:
   image: codeship/azure-dockercfg-generator
   add_docker: true
-  encrypted_env_file: azure.env.encrypted
+  encrypted_env_file: acr.env.encrypted
 
 azure_deployment:
-  image: codeship/azure-deployment
-  encrypted_env_file: azure.env.encrypted  
+  build:
+    image: codeship/azure-deployment
+    path: ./deployment
+    dockerfile_path: Dockerfile
+  environment:
+    - AZURE_RESOURCE_GROUP=cs-k8s
+    - AZURE_CLUSTER_NAME=cs-k8s-testing
+  encrypted_env_file: aks.env.encrypted
   volumes_from:
     - app
 ```
@@ -91,7 +97,7 @@ We recommend reading [our guide for pushing to the IBM Cloud container registry]
 
 Once you have added the deployment service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will now run Azure Container Service deployment commands from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) using that service to execute the commands.
 
-Note that in this example, all of the Container Service deployment commands have been moved to a script file named `deploy_to_azure.sh`.
+Note that in this example, all of the Container Service deployment commands have been moved to a script file named `kubernetes.sh` because the Azure Container Service uses Kubernetes to manage your application.
 
 ```yaml
 - name: Push To The Azure Container Service Registry
@@ -104,13 +110,35 @@ Note that in this example, all of the Container Service deployment commands have
 
 - name: Azure Container Service Deployment
   service: azure_deployment
-  command: deploy_to_azure.sh
+  command: kubernetes.sh
 ```
 
-Inside the `deploy_to_azure.sh` script, you will have something similar to the commands below:
+Inside the `kubernetes.sh` script, you will have something similar to the commands below:
 
 ```shell
-COMMANDS TBD
+#!/bin/bash
+
+set -e
+
+# login to Microsoft Azure via credentials provided via (encrypted) environment
+# variables
+
+: "${AZURE_USERNAME:?Need to set your AZURE_USERNAME}"
+: "${AZURE_PASSWORD:?Need to set your AZURE_PASSWORD}"
+: "${AZURE_RESOURCE_GROUP:?Need to set your AZURE_RESOURCE_GROUP}"
+: "${AZURE_CLUSTER_NAME:?Need to set your AZURE_CLUSTER_NAME}"
+
+# Logging into Azure
+echo "Logging into Microsoft Azure using credentials for ${AZURE_USERNAME}"
+az login --username "${AZURE_USERNAME}" --password "${AZURE_PASSWORD}"
+
+# Configure kubectl
+echo "Configuring access for kubectl"
+az aks get-credentials --resource-group "${AZURE_RESOURCE_GROUP}" --name "${AZURE_CLUSTER_NAME}"
+
+# run the commands required to deploy the application via `kubectl`
+kubectl version
+kubectl cluster-info
 ```
 
 ## See Also
