@@ -120,15 +120,11 @@ Inside the `kubernetes.sh` script, you will have something similar to the comman
 
 set -e
 
-# login to Microsoft Azure via credentials provided via (encrypted) environment
-# variables
-
 : "${AZURE_USERNAME:?Need to set your AZURE_USERNAME}"
 : "${AZURE_PASSWORD:?Need to set your AZURE_PASSWORD}"
 : "${AZURE_RESOURCE_GROUP:?Need to set your AZURE_RESOURCE_GROUP}"
 : "${AZURE_CLUSTER_NAME:?Need to set your AZURE_CLUSTER_NAME}"
 
-# Logging into Azure
 echo "Logging into Microsoft Azure using credentials for ${AZURE_USERNAME}"
 az login --username "${AZURE_USERNAME}" --password "${AZURE_PASSWORD}"
 
