@@ -483,7 +483,7 @@ app:
   build:
     image: codeship.azurecr.io/codeship-testing
     dockerfile_path: ./Dockerfile
-  dockercfg_service: azure_dockercfg  
+  dockercfg_service: azure_dockercfg
 
 azure_dockercfg:
   image: codeship/azure-dockercfg-generator
