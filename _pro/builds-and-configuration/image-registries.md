@@ -366,15 +366,15 @@ This will use the image we maintain for AWS authentication to generate credentia
 
 Learn more about [using AWS with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
 
-## IBM Bluemix Registry
+## IBM Cloud Registry
 
-### Pushing To Bluemix Registry
+### Pushing To IBM Cloud Registry
 
-To push to IBM Bluemix in your builds, you will want to make use of our service generator method for registry authentication. This is because Bluemix uses a CLI-based login system.
+To push to IBM Cloud in your builds, you will want to make use of our service generator method for registry authentication. This is because IBM Cloud uses a CLI-based login system.
 
 [We maintain an image](https://github.com/codeship-library/ibm-bluemix-utilities) you can easily add to your push step to generate these credentials for you.
 
-First, you will need to provide your IBM `BLUEMIX_API_KEY` credential as an [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for your IBM authentication service. Also note that our image name must include your Bluemix registry path for your push step to authenticate. Here is an example [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+First, you will need to provide your IBM Cloud API key as `BLUEMIX_API_KEY` via an [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for your IBM Cloud authentication service. Also note that our image name must include your IBM Cloud registry path for your push step to authenticate. Here is an example [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 ```yaml
 app:
@@ -390,10 +390,10 @@ bluemix_dockercfg:
 
 Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
 
-Note that Bluemix requires the fully registry path in our image name, and the account you are authenticating with must have at least one namespace configured with the IBM Bluemix Container Registry product:
+Note that IBM Cloud requires the fully registry path in our image name, and the account you are authenticating with must have at least one namespace configured with the IBM Cloud Container Registry product:
 
 ```yaml
-- name: Push To Bluemix
+- name: Push To IBM Cloud
   service: app
   type: push
   image_name: registry.ng.bluemix.net/codeship/codeship-testing
@@ -401,11 +401,11 @@ Note that Bluemix requires the fully registry path in our image name, and the ac
   dockercfg_service: bluemix_dockercfg
 ```
 
-To see a full example of using IBM Bluemix Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+To see a full example of using IBM Cloud Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
 
-### Pulling From Bluemix Registry
+### Pulling From IBM Cloud Registry
 
-To pull images from Bluemix, you will need to provide the image, including the registry path, as well as use the service generator for authentication in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To pull images from a IBM Cloud Container Registry, you will need to provide the image, including the registry path, as well as use the service generator for authentication in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 For example:
 
@@ -423,9 +423,9 @@ bluemix_dockercfg:
   encrypted_env_file: bluemix.env.encrypted
 ```
 
-This will use the image we maintain for IBM Bluemix authentication to generate credentials on image pull. Note that you will need to have your IBM `BLUEMIX_API_KEY` credential set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service.
+This will use the image we maintain for IBM Cloud authentication to generate credentials on image pull. Note that you will need to have the `BLUEMIX_API_KEY` variable set via [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service.
 
-To see a full example of using IBM Bluemix Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+To see a full example of using IBM Cloud Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
 
 ## Azure Container Service
 
