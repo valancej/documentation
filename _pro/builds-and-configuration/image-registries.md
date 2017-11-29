@@ -439,9 +439,9 @@ First, you will need to add the following credentials as [encrypted environment 
 
 - `AZURE_USERNAME` - Your username of the Admin user of the registry
 - `AZURE_PASSWORD` - The password associated with the above admin user
-- `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of NAME.azurecr.io)
+- `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of `NAME.azurecr.io`)
 
-**Note** that you must enable the _Admin_ user for your Azure account, which you can do via your _Access keys_ settings page once you log into Azure.
+**Note** that you must enable the _Admin_ user for your the specific Azure Container Registry, which you can do via the _Access keys_ settings page of the registry you want to push the image to.
 
 Also note that our image name must include your Azure Container Service registry path for your push step to authenticate. Here is an example [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
@@ -497,9 +497,9 @@ Note that you will need the following credentials set via the [encrypted environ
 
 - `AZURE_USERNAME` - Your username of the Admin user of the registry
 - `AZURE_PASSWORD` - The password associated with the above admin user
-- `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of NAME.azurecr.io)
+- `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of `NAME.azurecr.io`)
 
-**Note** that you must enable the _Admin_ user for your Azure account, which you can do via your _Access keys_ settings page once you log into Azure.
+**Note** that you must enable the _Admin_ user for your the specific Azure Container Registry, which you can do via the _Access keys_ settings page of the registry you want to push the image to.
 
 To see a full example of using the Azure Container Service with Codeship Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
 
