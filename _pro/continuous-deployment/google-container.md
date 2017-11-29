@@ -4,7 +4,7 @@ shortTitle: Deploying To Google Container Engine
 menus:
   pro/cd:
     title: Google Container Engine
-    weight: 12
+    weight: 11
 categories:
   - Continuous Deployment
 tags:

@@ -4,7 +4,7 @@ shortTitle: Deploying To Heroku
 menus:
   pro/cd:
     title: Heroku
-    weight: 8
+    weight: 7
 tags:
   - deployment
   - heroku

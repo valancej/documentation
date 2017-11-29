@@ -4,7 +4,7 @@ shortTitle: Deploying With Kubernetes
 menus:
   pro/cd:
     title: Kubernetes
-    weight: 14
+    weight: 13
 categories:
   - Continuous Deployment        
 tags:
