@@ -137,7 +137,6 @@ django
 dockercfg
 dockerfile
 dockerfiles
-dockerhub
 dockerignore
 dockerized
 donios
