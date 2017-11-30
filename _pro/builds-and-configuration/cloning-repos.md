@@ -121,4 +121,4 @@ Note that this is a high-level, directional example and will require additional 
 
 You can also use the API v2 to programmatically trigger builds that depend on each other, or potentially an external event or system.
 
-To get more details on how to do this, head over to the [API Documentation]({{ site.baseurl }}{% link _integrations/api.md %}) page
+To get more details on how to do this, head over to the [API Documentation]({{ site.baseurl }}{% link _general/integrations/api.md %}) page

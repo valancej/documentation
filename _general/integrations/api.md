@@ -27,12 +27,14 @@ If you're just looking to get started, head over to the [API v2 Documentation](h
 
 ## Core Use Cases
 
-The new API have initially been focused on solving a specific set of core use cases, which have been requested by the majority of users:
+The new API has initially been focused on solving a specific set of core use cases, which has been requested by the majority of users:
 
 * Custom Dashboards - the ask here have been to be able to mix and match data from codeship with other systems, to create custom dashboards that would not be possible inside Codeship. See [this example](https://blog.codeship.com/creating-a-custom-build-status-page-using-codeship-api-v2/) for inspiration on how to get started.
 * Chaining Projects - what we've heard most here is needing to trigger a downstream project based on results from one or more upstream projects, and potentially information from outside of codeship. If you're looking to chain multiple Codeship projects, consider relying on a notification webhook as the trigger instead of polling the API for updates to the upstream build.
 * Automatically (or manually) Trigger New Builds - scheduled builds, builds triggered by events in external systems, or just giving QA a button on a webpage to trigger a build, have been among the requests for this use case.
 * Automatic project creation - for those who more frequently create new projects, there's been a lot of requests for being able to automatically provisioning a project on codeship, together with provisioning a new repo, test environment etc. to make bootstrapping a new project quicker and more standardized
+
+If you need help with something you're trying to use the API for, whether covered by the above use cases or not, please reach out to our support via [helpdesk.codeship.com](https://helpdesk.codeship.com).
 
 ## Available Endpoints
 
