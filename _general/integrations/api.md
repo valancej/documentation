@@ -50,7 +50,7 @@ For Projects, you're able to do most CRUD operations (we're working on the remai
 
 * There's currently no Delete action on projects
 * Test and deployment pipelines cannot be updated at this point in time
-* Both items is planned to be addressed early 2018
+* Both items are planned to be addressed early 2018
 
 ### Builds Endpoint
 
