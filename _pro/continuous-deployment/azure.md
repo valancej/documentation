@@ -122,9 +122,3 @@ az aks get-credentials --resource-group "${AZURE_RESOURCE_GROUP}" --name "${AZUR
 kubectl version
 kubectl cluster-info
 ```
-
-### Via SSH
-
-You can SSH into your Azure instance and either deploy your code as normal, without Docker, or run Docker commands to build your containers after copying your code.
-
-[See here for an example.](https://github.com/codeship-library/azure-utilities)
