@@ -13,7 +13,7 @@ categories:
 redirect_from:
   - /integration/api
   - /basic/getting-started/api/
-  - /basic/builds-and-configuration/api/
+  - /basic/builds-and-configuration/api
 ---
 
 * include a table of contents
