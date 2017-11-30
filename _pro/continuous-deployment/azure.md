@@ -1,14 +1,15 @@
 ---
-title: Deploying to Microsoft Azure with Codeship Pro
-description: Technical documentation for deploying to Microsoft Azure with Codeship Pro and Docker
-shortTitle: Deploying To Azure
+title: Continuous Delivery to Azure Container Service
+shortTitle: Deploying To Azure Container Service
 menus:
   pro/cd:
-    title: Azure
+    title: Azure Container Service
     weight: 6
 categories:
-  - Continuous Deployment        
+  - Continuous Deployment
 tags:
+  - aks
+  - kubernetes
   - deployment
   - azure
   - microsoft
@@ -16,100 +17,108 @@ tags:
 
 ---
 <div class="info-block">
-You can find a sample repo for deploying to Microsoft Azure with Codeship Pro on Github [here](https://github.com/Codeship-library/azure-deployment).
+You can find a sample repo for deploying to the Azure Container Service with Codeship Pro on Github [here](https://github.com/codeship-library/azure-utilities).
 </div>
 
 * include a table of contents
 {:toc}
 
-## Continuous Delivery To Azure With Docker
+## Continuous Delivery To Microsoft Azure
 
-To make it easy for you to deploy your application to Azure we’ve built a container that has the AzureCLI installed. We will set up a simple example showing you how to configure any deployment to Azure.
+To make it easy for you to deploy your application to Azure Container Service, we’ve [built deployment images](https://github.com/codeship-library/azure-utilities) that have the Azure Container Service CLI installed and configured for use in the CI/CD process.
 
-**Note** that since Codeship Pro runs Docker containers on Linux build machines, in addition to deploying to Azure, we also support all Microsoft .NET builds that do not require Windows build machines.
-
-## Codeship Azure Deployment Container
-
-The Azure deployment container lets you plugin your deployment tools without the need to include that in the testing or even production container. That keeps your containers small and focused on the specific task they need to accomplish in the build. By using the Azure deployment container, you get the tools you need to deploy to any Azure service and still have the flexibility to adapt it to your needs.
-
-We will use the [microsoft/azure-cli](https://hub.Docker.com/r/microsoft/azure-cli/) Docker image throughout the documentation to interact with various Azure services.
+You will simply need to add one of the Azure deployment images as a service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) so that you can run the commands you need.
 
 ## Prerequisites
 
-Prior to getting started, please ensure you have the following installed in your local linux/unix environment.
+Prior to getting started, please ensure you have the following:
 
 - [An Understanding Of Codeship Pro]({% link _pro/quickstart/getting-started.md %})
-- [Codeship's Jet CLI]({% link _pro/builds-and-configuration/cli.md %})
+- [Codeship's Jet CLI]({% link _pro/builds-and-configuration/cli.md %}) installed locally
 - [Docker](https://www.Docker.com/products/overview)
-- [A Microsoft Azure Account](https://azure.microsoft.com/)
+- [An Azure Container Service account ](https://azure.microsoft.com/account/)
+- An understanding of using Azure Container Service
 
-## Using Other Tools
+## Authenticating With Azure
 
-While the container we provide for interacting with Azure gives you an easy and straight forward way to run your deployments it is not the only way you can interact with Azure services. You can install your own dependencies, write your own deployment scripts, talk to the Azure API directly or bring 3rd party tools to do it for you. By installing those tools into a Docker container and running them you have a lot of flexibility in how to deploy to Azure.
+To deploy to the Azure Container Service, you will need to add the following values to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) that you encrypt and include in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
-## Authentication
+- `AZURE_USERNAME` - Your Azure username
+- `AZURE_PASSWORD` - The password associated with your Azure user
 
-Before setting up the `codeship-services.yml` and `codeship-steps.yml` file we’re going to create an encrypted environment file that contains a service principal, password, and tenant ID.
+These variables will be set on the [Azure deployment container](https://github.com/codeship-library/azure-utilities), which you can read more about below. This deployment container will use the environment variables as part of the authentication required by the Azure Container Service when you run your deployment commands.
 
-## Azure Authentication
+### Configuring Deployment Service
 
-Take a look at Codeship's [encrypted environment files documentation]({% link _pro/builds-and-configuration/environment-variables.md %}) and add a `azure.env.encrypted` file to your repository. The file needs to contain an encrypted version of the following file:
+Once you have created your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), you will want to add a new service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
-```
-spn=service_principal_name
-password=service_principal_password
-tenant=azure_tenant_id
-```
+This file will use [the image Codeship maintains](https://github.com/codeship-library/azure-utilities) for Azure-based deployments, and will read your code from a volume connected to your primary service.
 
-You can get the spn, password, and tenant ID from running the [Service Principal Creation Script](https://github.com/codeship-library/azure-deployment/blob/master/local_scripts/create_serviceprincipal.sh) on your local machine with Azure-Cli installed.
-
-To learn more about the script, [click here](https://github.com/codeship-library/azure-deployment/blob/master/local_scripts/create_serviceprincipal.md).
-
-## Virtual Machine Authentication
-
-You will also need to create an encrypted environment file for the credentials to your Azure Docker Virtual Machine you will setup in the next step. We have generated a script to help you get started. You can run the [VM Credential Creation Script](https://github.com/codeship-library/azure-deployment/blob/master/local_scripts/create_vm_creds.sh) and it will generate something similar to the following:
-
-```
-adminusername=username_here
-adminpassword=password_here
-Auzre Deployment Service Definition and Examples
-```
-
-Before reading through the documentation, please take a look at the Services and Steps documentation page so you have a good understanding how services and steps on Codeship work.
-
-The `codeship-services.yml` file uses the `microsoft/azure-cli` container and sets the encrypted environment file created by running the Service Principal Creation Script. Additionally, it sets the resource group name (`resource`) and location (`location`) through the environment config setting. We set up a [volume]({% link _pro/builds-and-configuration/docker-volumes.md %}) that shares `./` (the repository folder) to `/deploy`. This gives us access to all files in the repository in `/deploy/...` for the following deployment step.
-
-Note: The following step only deploys infrastructure in Azure with a prebuilt Ubuntu 16.04 virtual machine with Docker pre-configured.
+This service will be used for all of your Azure Container Service deployment commands, and will use the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) you created above.
 
 ```yaml
-azuredeployment:
-  image: microsoft/azure-cli
-  encrypted_env_file: azure.env.encrypted
-  environment:
-  - Resource=resource_group_name
-  - Location=eastus
+app:
+  build:
+    image: your-org/your-app
+    path: .
+    dockerfile_path: Dockerfile.app
+  encrypted_env_file: env.encrypted
   volumes:
-  - ./:/deploy
+    - ./:/code
+
+azure_deployment:
+  build:
+    image: codeship/azure-deployment
+    path: ./deployment
+    dockerfile_path: Dockerfile
+  environment:
+    - AZURE_RESOURCE_GROUP=cs-k8s
+    - AZURE_CLUSTER_NAME=cs-k8s-testing
+  encrypted_env_file: aks.env.encrypted
+  volumes_from:
+    - app
 ```
 
-To interact with different Azure services you can simply call the Azure command directly. You can use any Azure service or command provided by the [AzureCLI](https://docs.microsoft.com/en-us/azure/xplat-cli-install). You can use [environment variables or command arguments](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates) to set the `Azure Datacenter Location` or other parameters.
+## Azure Container Registry
 
-Take a look at the [Steps documentation page]({% link _pro/builds-and-configuration/steps.md %}) so you have a good understanding how steps on Codeship work and how to set it up in your  `codeship-steps.yml`.
+Using Azure Container Service usually involves pushing images to the Azure Container Registry as part of your CI/CD process.
 
-The following script will use the [Azure GitHub QuickStart Templates](https://github.com/Azure/azure-quickstart-templates) to deploy your new Docker virtual machine and resource group. The deployment script can access any files in your repository through `/deploy`. To confirm, the [Azure Deployment Script](https://github.com/codeship-library/azure-deployment/blob/master/deployment/azure_deploy.sh), stands up an AzureRM resource group with all necessary dependencies for an Ubuntu 16.04 image with Docker pre-installed.
-
-Disclaimer: It is always recommended to read any script thoroughly before executing it in your environment. These scripts are provided for demo purposes only.
+We recommend reading [our guide for pushing to the Azure Container Registry]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}#azure-container-service), as the deployment commands below will feature an image push based on those instructions.
 
 ## Deploying Your App
 
-Now that you can authenticate with Azure and build Azure infrastructure, you will want to deploy your application. There are multiple ways to do this, so we have sample projects showing two easy and popular deployment configurations:
+### Azure Container Service
 
-- You can SSH into your Azure instance and either deploy your code as normal, without Docker, or run Docker commands to build your containers after copying your code. [See here for an example.](https://github.com/codeship-library/azure-deployment/tree/ssh_deploy)
+Once you have added the deployment service to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will now run Azure Container Service deployment commands from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) using that service to execute the commands.
 
-- You can use Azure Container Service to deploy with Docker Swarm to Azure.[See here for an example.](https://github.com/codeship-library/azure-deployment/tree/acs-swarm)
+Note that in this example, all of the Container Service deployment commands have been moved to a script file named `kubernetes.sh` because the Azure Container Service uses Kubernetes to manage your application.
 
-- You can use Azure Container Service and Kubernetes to deploy to Azure. [See here for an example.](https://github.com/codeship-library/azure-deployment/tree/acs-kubernetes)
+```yaml
+- name: Azure Container Service Deployment
+  service: azure_deployment
+  command: kubernetes.sh
+```
 
-## See Also
+Inside the `kubernetes.sh` script, you will have something similar to the commands below:
 
-- [Create a Docker environment in Azure using the Docker VM extension](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-Dockerextension)
+```shell
+#!/bin/bash
+
+set -e
+
+: "${AZURE_USERNAME:?Need to set your AZURE_USERNAME}"
+: "${AZURE_PASSWORD:?Need to set your AZURE_PASSWORD}"
+: "${AZURE_RESOURCE_GROUP:?Need to set your AZURE_RESOURCE_GROUP}"
+: "${AZURE_CLUSTER_NAME:?Need to set your AZURE_CLUSTER_NAME}"
+
+echo "Logging into Microsoft Azure using credentials for ${AZURE_USERNAME}"
+az login --username "${AZURE_USERNAME}" --password "${AZURE_PASSWORD}"
+
+# Configure kubectl
+echo "Configuring access for kubectl"
+az aks get-credentials --resource-group "${AZURE_RESOURCE_GROUP}" --name "${AZURE_CLUSTER_NAME}"
+
+# run the commands required to deploy the application via `kubectl`
+kubectl version
+kubectl cluster-info
+```

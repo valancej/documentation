@@ -6,7 +6,7 @@ menus:
     title: Google Container Engine
     weight: 11
 categories:
-  - Continuous Deployment    
+  - Continuous Deployment
 tags:
   - deployment
   - google
@@ -26,7 +26,7 @@ You can find a sample repo for deploying to Google Cloud with Codeship Pro on Gi
 
 To deploy to Google Container Engine and Google Container Registry, you will need to create a container that can authenticate with your Google Account and another to generate authentication for pushing and pulling images to and from Google Container Registry.
 
-We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [a deployment image stored on Dockerhub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. We also maintain a [GCR authentication generator image](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/). You can add these images and examples to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) to get started quickly.
+We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [a deployment image stored on Docker Hub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. We also maintain a [GCR authentication generator image](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/). You can add these images and examples to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) to get started quickly.
 
 ## Authentication
 

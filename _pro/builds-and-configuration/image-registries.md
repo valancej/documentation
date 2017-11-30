@@ -12,7 +12,6 @@ tags:
   - registry
   - registries
   - Docker Hub
-  - Dockerhub
   - quay
   - ecr
   - gcr
@@ -48,7 +47,7 @@ If you are using private images, you will need to authenticate with the image re
 
 ### Encrypted Registry Account Credentials
 
-The most common way authenticate with image registries is to provide your account credentials via an encrypted dockercfg file. This keeps your credentials secure while allowing you to push and pull from private registry accounts.
+The most common way authenticate with image registries is to provide your account credentials via an encrypted `dockercfg` file. This keeps your credentials secure while allowing you to push and pull from private registry accounts.
 
 This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), similar to using [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). To encrypt your image registry credentials:
 
@@ -95,11 +94,11 @@ docker run -it --rm \
 	codeship/dockercfg-generator /opt/data/dockercfg
 ```
 
-**Note** that the `DOCKER_REGISTRY` endpoint can be changed to reference a registry other than Dockerhub, such as Quay.io, as long as the registry authenticates with the `docker  login` command.
+**Note** that the `DOCKER_REGISTRY` endpoint can be changed to reference a registry other than Docker Hub, such as Quay.io, as long as the registry authenticates with the `docker login` command.
 
 ### Generating Credentials With A Service
 
-Due to an increasing number of container registry vendors using different methods to generate Docker temporary credentials, we also have support for custom dockercfg credential generation at runtime. By using a custom service within your list of Codeship services, you can integrate with a standard dockercfg generation container for your desired provider.
+Due to an increasing number of container registry vendors using different methods to generate Docker temporary credentials, we also have support for custom `dockercfg` credential generation at runtime. By using a custom service within your list of Codeship services, you can integrate with a standard `dockercfg` generation container for your desired provider.
 
 Taking advantage of this feature is fairly simple. First off, add a service using the image for your desired registry provider to your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) file. You can add any [links]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or [volumes]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}) you need, just like with a regular service.
 
@@ -126,13 +125,13 @@ To use this generator service, simply reference it using the `dockercfg_service`
   dockercfg_service: myservice_generator
 ```
 
-Codeship will run the service to generate a dockercfg as needed.
+Codeship will run the service to generate a `dockercfg` as needed.
 
 ## Docker Hub
 
 ### Pushing To Docker Hub
 
-After setting up your registry authentication using the encrypted dockercfg file method shown above, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+After setting up your registry authentication using the encrypted `dockercfg` file method shown above, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 ```yaml
 app:
@@ -152,14 +151,14 @@ The image defined above will be tagged and pushed based on the `push` step in yo
 
 ### Pulling From Docker Hub
 
-After setting up your registry authentication using the encrypted dockercfg file method shown above, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) or your Dockerfile to reference the image you are pulling:
+After setting up your registry authentication using the encrypted `dockercfg` file method shown above, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) or your Dockerfile to reference the image you are pulling:
 
 ```dockerfile
 FROM username/registry_name
 # ...
 ```
 
-You will also need to configure your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file to provide your account credentials via the encrypted dockercfg file on every step that uses an image from your Docker Hub account.
+You will also need to configure your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file to provide your account credentials via the encrypted `dockercfg` file on every step that uses an image from your Docker Hub account.
 
 ```yaml
 - service: app
@@ -171,13 +170,13 @@ You will also need to configure your [codeship-steps.yml]({{ site.baseurl }}{% l
 
 ### Pushing To Quay.io
 
-To use the encrypted dockercfg file authentication method with Quay.io, you will first need to have create robot account with the requires permissions for your Quay repository. Please see the documentation on [Robot Accounts](http://docs.quay.io/glossary/robot-accounts.html) for Quay.io on how to set it up for your repository.
+To use the encrypted `dockercfg` file authentication method with Quay.io, you will first need to have create robot account with the requires permissions for your Quay repository. Please see the documentation on [Robot Accounts](http://docs.quay.io/glossary/robot-accounts.html) for Quay.io on how to set it up for your repository.
 
 **Note** that permissions can be set per robot account, so if you are seeing authentication failures you should check that the individual robot account being used is configured with appropriate access.
 
 Next, you will need to  download the `.dockercfg` file for this account  by heading over to the _Robots Account_ tab in your settings. From there, either credit a new robot account or click on an existing robot account. In the pop-up window, the _Docker Configuration_ tab will have an option to download an `auth.json` file.
 
-Once you have encrypted this auth.json file using the encrypted dockercfg method, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+Once you have encrypted this auth.json file using the encrypted `dockercfg` method, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 ```yaml
 app:
@@ -199,7 +198,7 @@ Next, you will need to configure your `codeship-steps.yml` file.
 
 ### Pulling From Quay.io
 
-To pull images from private Quay.io accounts, you will need to configure your Quay robot account permissions and authentication via the encrypted dockercfg file as discussed in the above instructions regarding push steps.
+To pull images from private Quay.io accounts, you will need to configure your Quay robot account permissions and authentication via the encrypted `dockercfg` file as discussed in the above instructions regarding push steps.
 
 After setting up your registry authentication, you will want to configure your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) or your Dockerfile to reference the image you are pulling:
 
@@ -220,9 +219,9 @@ You will also need to configure your `codeship-steps.yml` file to provide your a
 
 ### Pushing To A Custom / Self Hosted-Registry
 
-Pushing to a custom or self-hosted registry is similar to using Dockerhub or Quay.io.
+Pushing to a custom or self-hosted registry is similar to using Docker Hub or Quay.io.
 
-You will want to specify your registry URL and provide your registry credentials in an encrypted dockercfg file on a [push step]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}#push-steps) in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+You will want to specify your registry URL and provide your registry credentials in an encrypted `dockercfg` file on a [push step]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}#push-steps) in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 ```yaml
 - service: app
@@ -305,7 +304,7 @@ dockercfg_generator:
   encrypted_env_file: gcr.env.encrypted
 ```
 
-This will use the  image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
+This will use the image we maintain for Google authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
 
 Learn more about [using Google Cloud with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}).
 
@@ -363,19 +362,19 @@ dockercfg_generator:
   encrypted_env_file: aws.env.encrypted
 ```
 
-This will use the  image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
+This will use the image we maintain for AWS authentication to generate credentials on image pull. Note that you will need to have your AWS credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service, and that the AWS account you are authenticating with will need appropriate IAM permissions.
 
 Learn more about [using AWS with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
 
-## IBM Bluemix Registry
+## IBM Cloud Registry
 
-### Pushing To Bluemix Registry
+### Pushing To IBM Cloud Registry
 
-To push to IBM Bluemix in your builds, you will want to make use of our service generator method for registry authentication. This is because Bluemix uses a CLI-based login system.
+To push to IBM Cloud in your builds, you will want to make use of our service generator method for registry authentication. This is because IBM Cloud uses a CLI-based login system.
 
 [We maintain an image](https://github.com/codeship-library/ibm-bluemix-utilities) you can easily add to your push step to generate these credentials for you.
 
-First, you will need to provide your IBM `BLUEMIX_API_KEY` credential as an [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for your IBM authentication service. Also note that our image name must include your Bluemix registry path for your push step to authenticate. Here is an example [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+First, you will need to provide your IBM Cloud API key as `BLUEMIX_API_KEY` via an [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for your IBM Cloud authentication service. Also note that our image name must include your IBM Cloud registry path for your push step to authenticate. Here is an example [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 ```yaml
 app:
@@ -391,10 +390,10 @@ bluemix_dockercfg:
 
 Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
 
-Note that Bluemix requires the fully registry path in our image name, and the account you are authenticating with must have at least one namespace configured with the IBM Bluemix Container Registry product:
+Note that IBM Cloud requires the fully registry path in our image name, and the account you are authenticating with must have at least one namespace configured with the IBM Cloud Container Registry product:
 
 ```yaml
-- name: Push To Bluemix
+- name: Push To IBM Cloud
   service: app
   type: push
   image_name: registry.ng.bluemix.net/codeship/codeship-testing
@@ -402,11 +401,11 @@ Note that Bluemix requires the fully registry path in our image name, and the ac
   dockercfg_service: bluemix_dockercfg
 ```
 
-To see a full example of using IBM Bluemix Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+To see a full example of using IBM Cloud Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
 
-### Pulling From Bluemix Registry
+### Pulling From IBM Cloud Registry
 
-To pull images from Bluemix, you will need to provide the image, including the registry path, as well as use the service generator for authentication in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+To pull images from a IBM Cloud Container Registry, you will need to provide the image, including the registry path, as well as use the service generator for authentication in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 For example:
 
@@ -424,9 +423,85 @@ bluemix_dockercfg:
   encrypted_env_file: bluemix.env.encrypted
 ```
 
-This will use the  image we maintain for IBM Bluemix authentication to generate credentials on image pull. Note that you will need to have your IBM `BLUEMIX_API_KEY` credential set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service.
+This will use the image we maintain for IBM Cloud authentication to generate credentials on image pull. Note that you will need to have the `BLUEMIX_API_KEY` variable set via [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service.
 
-To see a full example of using IBM Bluemix Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+To see a full example of using IBM Cloud Container Registry with Codeship Pro, [visit our example repository](https://github.com/codeship-library/ibm-bluemix-utilities).
+
+## Azure Container Service
+
+### Pushing To Azure Container Service
+
+To push to Azure Container Service in your builds, you will want to make use of our service generator method for registry authentication.
+
+[We maintain an image](https://github.com/codeship-library/azure-utilities) you can easily add to your push step to generate these credentials for you.
+
+First, you will need to add the following credentials as [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}):
+
+- `AZURE_USERNAME` - Your username of the Admin user of the registry
+- `AZURE_PASSWORD` - The password associated with the above admin user
+- `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of `NAME.azurecr.io`)
+
+**Note** that you must enable the _Admin_ user for your the specific Azure Container Registry, which you can do via the _Access keys_ settings page of the registry you want to push the image to.
+
+Also note that our image name must include your Azure Container Service registry path for your push step to authenticate. Here is an example [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+
+```yaml
+app:
+  build:
+    image: codeship.azurecr.io/codeship-testing
+    dockerfile_path: ./Dockerfile
+
+azure_dockercfg:
+  image: codeship/azure-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: azure.env.encrypted
+```
+
+Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
+
+Note that the Azure Container Service requires the fully registry path in our image name:
+
+```yaml
+- service: app
+  type: push
+  tag: master
+  image_name: codeship.azurecr.io/codeship-testing
+  registry: codeship.azurecr.io
+  dockercfg_service: azure_dockercfg
+```
+
+To see a full example of using the Azure Container Service with Codeship Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
+
+### Pulling From Azure Container Service
+
+To pull images from Azure Container Service, you will need to provide the image, including the registry path, as well as use the service generator for authentication in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+
+For example:
+
+```yaml
+app:
+  build:
+    image: codeship.azurecr.io/codeship-testing
+    dockerfile_path: ./Dockerfile
+  dockercfg_service: azure_dockercfg
+
+azure_dockercfg:
+  image: codeship/azure-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: azure.env.encrypted
+```
+
+This will use the image we maintain for Azure Container Service authentication to generate credentials on image pull.
+
+Note that you will need the following credentials set via the [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) for the generator service:
+
+- `AZURE_USERNAME` - Your username of the Admin user of the registry
+- `AZURE_PASSWORD` - The password associated with the above admin user
+- `AZURE_REGISTRY` - The URL of the registry you want to access (in the form of `NAME.azurecr.io`)
+
+**Note** that you must enable the _Admin_ user for your the specific Azure Container Registry, which you can do via the _Access keys_ settings page of the registry you want to push the image to.
+
+To see a full example of using the Azure Container Service with Codeship Pro, [visit our example repository](https://github.com/codeship-library/azure-utilities).
 
 ## Common Questions
 
@@ -466,7 +541,7 @@ This `image_tag` field can contain a simple string, or be part of a [Go template
 
 To tag your image based on the Commit ID, use the string `"{% raw %}{{ .CommitID }}{% endraw %}"`. You can template together multiple keys into a tag by simply concatenating the strings: `"{% raw %}{{ .CiName }}-{{ .Branch }}{% endraw %}"`. Be careful about using raw values, however, since the resulting string will be stripped of any invalid tag characters.
 
-### Invalid character / Failed to parse dockercfg
+### Invalid character / Failed to parse `dockercfg`
 
 You might see an error like this when pulling a private base image using your encrypted `dockercfg` file:
 

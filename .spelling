@@ -137,7 +137,6 @@ django
 dockercfg
 dockerfile
 dockerfiles
-dockerhub
 dockerignore
 dockerized
 donios
@@ -228,6 +227,7 @@ moby
 mongodb
 myapp
 mysql
+NAME.azurecr.io
 namespace
 natively
 newrelic

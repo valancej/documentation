@@ -6,7 +6,7 @@ menus:
     title: Google App Engine
     weight: 9
 categories:
-  - Continuous Deployment        
+  - Continuous Deployment
 tags:
   - deployment
   - google
@@ -22,7 +22,7 @@ tags:
 
 To deploy to [Google App Engine](https://cloud.google.com/appengine/), you will need to create a container that can authenticate with your Google Account, and with the appropriate Google product, as well as run the Google Cloud CLI to execute your intended commands.
 
-We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [an image stored on Dockerhub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. You can copy setup instructions from this repo or reuse the Dockerfile, our [turnkey Google Cloud image](https://hub.docker.com/r/codeship/google-cloud-deployment/) or our [GCR authentication generator](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/) simply by adding the necessary elements from our [Google Cloud repo](https://github.com/codeship-library/google-cloud-deployment) to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [an image stored on Docker Hub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. You can copy setup instructions from this repo or reuse the Dockerfile, our [turnkey Google Cloud image](https://hub.docker.com/r/codeship/google-cloud-deployment/) or our [GCR authentication generator](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/) simply by adding the necessary elements from our [Google Cloud repo](https://github.com/codeship-library/google-cloud-deployment) to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ## Authentication
 
