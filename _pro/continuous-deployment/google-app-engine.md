@@ -80,7 +80,7 @@ codeship_google authenticate
 cd /deploy/
 
 # deploy the application
-gcloud app deploy
+gcloud app deploy --quiet
 ```
 
 Please see the [documentation for `gcloud app deploy`](https://cloud.google.com/sdk/gcloud/reference/app/deploy) on which more options are available and how they affect the deployment.
