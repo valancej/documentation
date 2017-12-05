@@ -11,9 +11,9 @@ tags:
 categories:
   - Builds and Configuration  
 redirect_from:
-  - /integration/api
+  - /integration/api/
   - /basic/getting-started/api/
-  - /basic/builds-and-configuration/api
+  - /basic/builds-and-configuration/api/
 ---
 
 * include a table of contents
