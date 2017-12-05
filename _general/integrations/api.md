@@ -2,9 +2,9 @@
 title: Using The Codeship API For CI/CD Workflows
 shortTitle: API
 menus:
-  basic/builds:
-    title: API
-    weight: 11
+  general/integrations:
+    title: Codeship API
+    weight: 25
 tags:
   - api
   - integrations
@@ -13,7 +13,7 @@ categories:
 redirect_from:
   - /integration/api
   - /basic/getting-started/api/
-  - /basic/builds-and-configuration/api
+  - /basic/builds-and-configuration/api/
 ---
 
 * include a table of contents
