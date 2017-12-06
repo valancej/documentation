@@ -249,6 +249,7 @@ openstack
 opsgenie
 oraclejdk7
 oraclejdk8
+oraclejdk9
 paas
 package.json
 pagerduty
