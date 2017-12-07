@@ -34,7 +34,7 @@ RUN \
 # NPM based dependencies
 COPY package.json yarn.lock ./
 RUN \
-  yarn install --production && \
+  yarn install --production --frozen-lockfile --non-interactive && \
   ln -s /docs/node_modules/gulp/bin/gulp.js /usr/local/bin/gulp
 
 # Ruby based dependencies
