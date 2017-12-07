@@ -15,6 +15,11 @@ task :test do
 	sh "jet steps"
 end
 
+desc 'Run arbitrary commands in the Docker container'
+task :run, [:command ] do |t, args|
+	sh "docker run -it --rm -p 4000:4000 -v $(pwd):/docs #{IMAGE_NAME} #{args.command}"
+end
+
 desc 'Update Ruby and NodeJS based dependencies'
 task update: %w[update:image build update:rubygems update:yarn]
 namespace :update do
