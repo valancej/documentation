@@ -3,7 +3,7 @@ title: Push To Remote Repository
 menus:
   basic/cd:
     title: Git Push
-    weight: 11
+    weight: 12
 tags:
   - deployment
   - git

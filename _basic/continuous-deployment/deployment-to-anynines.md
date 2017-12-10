@@ -6,7 +6,7 @@ tags:
 menus:
   basic/cd:
     title: anynines
-    weight: 14
+    weight: 15
 categories:
   - Continuous Deployment        
 redirect_from:

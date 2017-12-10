@@ -6,7 +6,7 @@ tags:
 menus:
   basic/cd:
     title: Cloud66
-    weight: 13
+    weight: 14
 categories:
   - Continuous Deployment       
 redirect_from:
