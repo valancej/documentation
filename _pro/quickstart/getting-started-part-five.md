@@ -3,7 +3,7 @@ title: Getting Started With Codeship Pro Part 5
 menus:
   pro/quickstart:
     title: Getting Started Pt. 5
-    weight: 5
+    weight: 6
 tags:
   - docker
   - jet

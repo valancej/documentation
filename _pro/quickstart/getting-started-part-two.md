@@ -4,7 +4,7 @@ layout: page
 menus:
   pro/quickstart:
     title: Getting Started Pt. 2
-    weight: 2
+    weight: 3
 tags:
   - docker
   - jet
