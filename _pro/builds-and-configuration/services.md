@@ -238,14 +238,21 @@ There are several Docker build flags, such as `-w`, that are not executable on C
 
 These flags should instead be implemented as directives in your Services file, as available. For instance, the `-w` instruction can be replaced with the `working_dir` directive applied to any of your services. Most Compose directives not specifically excluded below should function as expected.
 
+## Container networking
+
+We do not support the top-level `networks` directive (see [unavailable features](#unavailable-features)) - but all containers are started on isolated networks, per step, by default.
+
+Containers should be bidirectionally discoverable without requiring any custom setup and should not require custom network creation.
+
 ## Unavailable Features
+
 The following features available in Docker Compose are not available on Codeship. If these keys exist in your `codeship-services.yml` file, don't panic -- we'll just ignore them.
 
   * `cgroup_parent`
   * `container_name`
   * `cpu_quota`
-  * [`depends_on`*](#timing-and-waiting)
-  * [`healthcheck`*](#timing-and-waiting)
+  * [`depends_on`*](#timing-and-waiting) - Coming soon!
+  * [`healthcheck`*](#timing-and-waiting) - Coming soon!
   * `devices`
   * `extends`
   * `group_add`
