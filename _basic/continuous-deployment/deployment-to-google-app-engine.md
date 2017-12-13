@@ -3,7 +3,7 @@ title: Deploy To Google App Engine
 menus:
   basic/cd:
     title: Google App Engine
-    weight: 9
+    weight: 8
 tags:
   - deployment
   - google app engine

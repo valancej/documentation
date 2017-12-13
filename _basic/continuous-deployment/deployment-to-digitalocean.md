@@ -3,7 +3,7 @@ title: Deploy to DigitalOcean
 menus:
   basic/cd:
     title: Digital Ocean
-    weight: 8
+    weight: 9
 tags:
   - deployment
   - digital ocean
