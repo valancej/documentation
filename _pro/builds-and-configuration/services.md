@@ -250,8 +250,8 @@ The following features available in Docker Compose are not available on Codeship
   * `cgroup_parent`
   * `container_name`
   * `cpu_quota`
-  * [`depends_on`*](#timing-and-waiting) - Coming soon!
-  * [`healthcheck`*](#timing-and-waiting) - Coming soon!
+  * [`depends_on`*](#timing-and-waiting) - [Contact us for upcoming beta access!](mailto:solutions@codeship.com)
+  * [`healthcheck`*](#timing-and-waiting) - [Contact us for upcoming beta access!](mailto:solutions@codeship.com)
   * `devices`
   * `extends`
   * `group_add`
