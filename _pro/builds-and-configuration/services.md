@@ -19,6 +19,7 @@ categories:
 redirect_from:
   - /docker/services/
   - /pro/getting-started/services/
+  - /docker/getting-started/services/
 ---
 
 * include a table of contents
