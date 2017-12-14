@@ -13,13 +13,25 @@ tags:
   - image registry
   - docker compose
 
+categories:
+  - Builds and Configuration
+
 redirect_from:
   - /docker/services/
   - /pro/getting-started/services/
+  - /docker/getting-started/services/
 ---
 
 * include a table of contents
 {:toc}
+
+<div class="info-block">
+This article is about the `codeship-services.yml` file that powers Codeship Pro.
+
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+
+ Also note that the `codeship-services.yml` file depends on the `codeship-steps.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+</div>
 
 ## What Is Your Codeship Services File?
 Your services file - `codeship-services.yml` - is where you configure each service you need to run your CI/CD builds with Codeship. During the build, these services will be used to run the testing steps you've defined in your `codeship-steps.yml` [file]({% link _pro/builds-and-configuration/steps.md %}). You can have as many services as you'd like, and customize each of them. Each of these services will be run inside a Docker container.
@@ -136,7 +148,7 @@ The standard `environment` and `env_file` directives are supported. Additionally
 
 An example setup explicitly declaring your environment variables in your `codeship-services.yml` file would look like this:
 
-```
+```yaml
 app:
   build:
     image: codeship/app
@@ -148,7 +160,7 @@ app:
 
 An example setup providing your encrypted environment variable file in your `codeship-services.yml` file would look like this:
 
-```
+```yaml
 app:
   build:
     image: codeship/app
@@ -202,7 +214,7 @@ This prevents the Docker image from building from scratch each time, to save tim
 
 An example setup using caching in your `codeship-services.yml` file would look like this:
 
-```yml
+```yaml
 app:
   build:
     image: codeship/app
@@ -250,7 +262,7 @@ The following features available in Docker Compose are not available on Codeship
   * `tmpfs`
   * `ulimits`
   * `volume_driver`
-  * `volumes` (top-level key)
+  * `volumes` ([we do support volumes]({% link _pro/builds-and-configuration/docker-volumes.md %}), just not as a [top-level key](https://docs.docker.com/compose/compose-file/compose-file-v2/#volumes-volume_driver))
   * `privileged`
 
 All linking to the host is not allowed. This means the following directives are excluded:
@@ -275,7 +287,7 @@ There are two common solutions to this problem:
 
 An example of a health poll script may look something like this:
 
-```bash
+```shell
 #!/usr/bin/env bash
 
 function test_postgresql {

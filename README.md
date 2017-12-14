@@ -24,20 +24,20 @@ For content related changes and fixes, it's easiest to use GitHub's [File Edit U
 
 The first step is cloning and going into the repository.
 
-```bash
+```shell
 git clone git@github.com:codeship/documentation.git
 cd documentation
 ```
 
 Then build the container and save it as a tagged image.
 
-```bash
+```shell
 docker build --tag codeship/documentation .
 ```
 
 You can now run commands via that container. By default, it will build the site and start the Jekyll development server.
 
-```bash
+```shell
 docker run -it --rm -p 4000:4000 -v $(pwd):/docs codeship/documentation
 ```
 
@@ -51,15 +51,31 @@ On **Windows**, the Docker commands are executed via the Docker Quickstart Termi
 
 To update Rubygem based dependencies, update the `Gemfile` (if required) and run
 
-```bash
+```shell
 docker run -it --rm -v $(pwd):/docs codeship/documentation bundle update
 ```
 
 For NPM based dependencies, run the following two commands
 
-```bash
+```shell
 docker run -it --rm -v $(pwd):/docs codeship/documentation yarn upgrade
 ```
+
+### Spellcheck
+
+To run spellcheck on all Markdown files, run the following command:
+
+```shell
+docker run -it --rm -v $(pwd):/docs codeship/documentation yarn run check
+```
+
+To run the interactive correction functionality and to update the .spelling file, run:
+
+```shell
+docker run -it --rm -v $(pwd):/docs codeship/documentation yarn run fix
+```
+
+See output and [mdspell](https://github.com/lukeapage/node-markdown-spellcheck) for details on how to maintain the `.spelling` file.
 
 ### Linting
 
@@ -67,7 +83,7 @@ docker run -it --rm -v $(pwd):/docs codeship/documentation yarn upgrade
 
 SCSS files are automatically linted using [scss-lint](https://github.com/causes/scss-lint). To run it, execute the following command
 
-```bash
+```shell
 docker run -it --rm -v $(pwd):/docs codeship/documentation bundle exec scss-lint
 ```
 
@@ -75,13 +91,13 @@ It's configured in [.scss-lint.yml](.scss-lint.yml) and the default configuratio
 
 #### JSON
 
-```bash
+```shell
 docker run -it --rm -v $(pwd):/docs codeship/documentation gulp lint
 ```
 
 #### Jekyll
 
-```bash
+```shell
 docker run -it --rm -v $(pwd):/docs codeship/documentation bundle exec jekyll doctor
 ```
 

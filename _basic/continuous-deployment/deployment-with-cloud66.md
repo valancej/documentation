@@ -6,7 +6,9 @@ tags:
 menus:
   basic/cd:
     title: Cloud66
-    weight: 13
+    weight: 14
+categories:
+  - Continuous Deployment       
 redirect_from:
   - /continuous-deployment/deployment-with-cloud66/
 ---
@@ -18,20 +20,18 @@ Integrating [Cloud 66](http://www.cloud66.com/) with Codeship is as simple as co
 
 Once you've deployed your stack with _Cloud 66_, you'll see a **Redeployment Hook** URL on your **Stack Information** page. To trigger a new deployment via Codeship, simply add a **Script** deployment to the project and add the following command:
 
-```bash
+```shell
 curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/xxxx/yyyy
 ```
 
 If you a have docker based microservice architecture and you want to (re)deploy only one service on your cluster, add the following command:
 
-```bash
+```shell
 curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/xxxx/yyyy?services=web
 ```
 
-For mutiple services in one go:
+For multiple services in one go:
 
-```bash
+```shell
 curl -X POST -d "" https://hooks.cloud66.com/stacks/redeploy/xxxx/yyyy?services=web,app
 ```
-
-

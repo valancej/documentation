@@ -10,6 +10,8 @@ tags:
   - continuous integration
   - integrations
   - codecov
+categories:
+  - Integrations  
 menus:
   general/integrations:
     title: Using Codecov
@@ -21,7 +23,11 @@ menus:
 
 ## About Codecov
 
-Codecov is an automated code coverage service. Starting with Codecov and Codeship is fast and easy. [Their documentation](https://docs.codecov.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
+Codecov is an automated code coverage service. Starting with Codecov and Codeship is fast and easy.
+
+By using Codecov you can help enforce higher standards of code quality and transparency with your engineering team.
+
+[Their documentation](https://docs.codecov.io/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
@@ -35,7 +41,7 @@ Once your Codecov upload token is loaded via your environment variables, you wil
 
 After running your test commands, you can add:
 
-```bash
+```yaml
 - name: codecov
   service: YOURSERVICE
   command: bash -c "curl -s https://codecov.io/bash"
@@ -55,7 +61,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 Once your Codecov upload token is loaded via your environment variables, you will need to add the Codecov reporting command in your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 bash <(curl -s https://codecov.io/bash)
 ```
 

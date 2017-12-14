@@ -3,7 +3,7 @@ title: Setting Up Or Migrating A Project To Codeship Pro
 menus:
   pro/quickstart:
     title: Migrating To Pro
-    weight: 6
+    weight: 7
 tags:
   - docker
   - jet
@@ -14,7 +14,8 @@ tags:
   - migrating
   - account
   - projects
-
+categories:
+  - Quickstart
 redirect_from:
   - /docker/codeship-configuration/
   - /pro/getting-started/codeship-configuration/

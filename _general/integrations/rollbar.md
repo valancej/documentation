@@ -13,6 +13,8 @@ tags:
   - reports
   - reporting
   - integrations
+categories:
+  - Integrations  
 redirect_from:
   - /basic/continuous-deployment/rollbar-basic/
   - /pro/continuous-deployment/rollbar-docker/
@@ -25,6 +27,8 @@ redirect_from:
 ## About Rollbar
 
 [Rollbar](https://www.rollbar.com) lets you collect and track errors and events related to your web applications. During your continuous deployment workflow with Codeship Pro, you can use Rollbar to log information related to your deployments.
+
+By using Rollbar you can track important logs for future analysis and alerting.
 
 [Their documentation](https://rollbar.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
@@ -39,7 +43,7 @@ You will need to add your Rollbar access token to your [encrypted environment va
 Next, you will need to add the following commands to a script, placed in your repository, that you will call from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 
-```bash
+```shell
 curl https://api.rollbar.com/api/1/deploy/ \
   -F access_token=$ACCESS_TOKEN \
   -F environment=$CI_BRANCH \
@@ -75,10 +79,6 @@ To log a deployment-related datapoint in Rollbar, you will want to add a new cus
 
 This new step will either run the following commands, or run a script that includes the following commands:
 
-```bash
-curl https://api.rollbar.com/api/1/deploy/ \
-  -F access_token=$ACCESS_TOKEN \
-  -F environment=$CI_BRANCH \
-  -F revision=$CI_COMMIT_ID \
-  -F local_username=$CI_COMMITTER_USERNAME
+```shell
+curl https://api.rollbar.com/api/1/deploy/ -F access_token=$ACCESS_TOKEN -F environment=$CI_BRANCH -F revision=$CI_COMMIT_ID -F local_username=$CI_COMMITTER_USERNAME
 ```

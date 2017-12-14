@@ -12,6 +12,8 @@ tags:
   - reports
   - reporting
   - integrations
+categories:
+  - Integrations  
 ---
 
 * include a table of contents
@@ -20,6 +22,8 @@ tags:
 ## About PagerDuty
 
 [PagerDuty](https://www.pagerduty.com) lets you send alerts and notifications about critical events to your on-call or development team.
+
+By using PagerDuty your engineering team can respond to important alerts quickly and run your applications without concern.
 
 [The PagerDuty documentation](https://v2.developer.pagerduty.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
@@ -51,7 +55,7 @@ You will want to add the PagerDuty API calls to a new script file in your reposi
 
 Below is an example API call from PagerDuty that you can use as the basis for your own PagerDuty API calls:
 
-```
+```json
 /*
   This example shows how to send a trigger event without a dedup_key.
   In this case, PagerDuty will automatically assign a random and unique key
@@ -115,7 +119,7 @@ Next, you will need to add [API calls to PagerDuty](https://v2.developer.pagerdu
 
 Below is an example API call from PagerDuty that you can use as the basis for your own PagerDuty API calls. Note that you likely want to put your API call in a new script file in your repository that you call via your custom-script [deployment pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
-```
+```json
 /*
   This example shows how to send a trigger event without a dedup_key.
   In this case, PagerDuty will automatically assign a random and unique key

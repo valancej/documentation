@@ -14,15 +14,26 @@ tags:
   - deployment
   - images
   - image registry
+categories:
+  - Builds and Configuration
 
 redirect_from:
   - /docker/steps/
   - /pro/getting-started/steps/
   - /docker/dockercfg-services
+  - /docker/getting-started/steps/
 ---
 
 * include a table of contents
 {:toc}
+
+<div class="info-block">
+This article is about the `codeship-steps.yml` file that powers Codeship Pro.
+
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+
+ Also note that the `codeship-steps.yml` file depends on the `codeship-services.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+</div>
 
 ## What Is codeship-steps.yml?
 
@@ -40,7 +51,7 @@ Your Steps file will require that you have [installed Jet locally]({{ site.baseu
 
 Steps are specified in a list, such as:
 
-```yml
+```yaml
 - name: foo_step
   tag: master
   service: app

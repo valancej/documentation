@@ -7,7 +7,9 @@ tags:
 menus:
   general/integrations:
     title: Custom Integrations
-    weight: 20
+    weight: 24
+categories:
+  - Integrations    
 ---
 
 * include a table of contents
@@ -37,7 +39,7 @@ As one example of this, if you have a CLI tool that is required to execute the t
 
 All commands on Codeship Pro are executed via the project's [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}). If the tool or service you are integrating has commands that must be directly called, you can do that as a new step, such as:
 
-```bash
+```yaml
 - name: your_service
   service: service_name
   command: service command here
@@ -45,7 +47,7 @@ All commands on Codeship Pro are executed via the project's [codeship-steps.yml 
 
 You can also place these types of commands as scripts that you include in the repository instead, if you need to chain multiple commands together in a single step. For example:
 
-```bash
+```yaml
 - name: your_service
   service: service_name
   command: command.sh
@@ -73,4 +75,4 @@ As an example if your project has a CLI that is required to be installed for the
 
 All commands on Codeship Basic are executed via the project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}). Setup commands happen before any tests are run, while test commands happen only after setup is complete.
 
-**Note** that you should consider that tests can run in parallel when determine if a command should be a setup command or a test command, as well as whether it shoudl execute only in one potential test pipeline or if it should execute in multiple test pipelines.
+**Note** that you should consider that tests can run in parallel when determine if a command should be a setup command or a test command, as well as whether it should execute only in one potential test pipeline or if it should execute in multiple test pipelines.

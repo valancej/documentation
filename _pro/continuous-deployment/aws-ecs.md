@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: AWS ECS
     weight: 4
+categories:
+  - Continuous Deployment        
 tags:
   - deployment
   - aws
@@ -52,7 +54,7 @@ You can read more in-depth instructions for pushing to an image registry, includ
   dockercfg_service: dockercfg_generator
 ```
 
-**Note** that `ecr-region-url` above shoudl be replaced with your region-specific ECR url.
+**Note** that `ecr-region-url` above should be replaced with your region-specific ECR url.
 
 ## Deploying To AWS Elastic Container Service
 

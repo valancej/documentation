@@ -8,7 +8,8 @@ menus:
 tags:
   - git
   - submodules
-
+categories:
+  - Continuous Integration
 redirect_from:
   - /continuous-integration/git-submodules/
 ---
@@ -18,7 +19,7 @@ redirect_from:
 
 If your repository includes a `.gitmodules` file, Codeship will automatically initialize and update the configured submodules. The following command is run after cloning your repository to do this.
 
-```bash
+```shell
 git submodule update --recursive --init
 ```
 
@@ -41,15 +42,15 @@ See the git documentation on [Git Submodules](https://git-scm.com/book/en/v2/Git
 
 See [how to provide access to other repositories]({{ site.baseurl }}{% link _general/projects/access-to-other-repositories-fails-during-build.md %}) if you see an error like these.
 
-```shell
+```
 remote: Repository not found
 ```
 
-```shell
+```
 fatal: Could not read from remote repository
 ```
 
-```shell
+```
 Permission denied (publickey).
 ```
 

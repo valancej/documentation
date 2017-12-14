@@ -6,6 +6,8 @@ tags:
   - integrations
   - rails
   - ruby
+categories:
+  - Integrations  
 menus:
   general/integrations:
     title: Using Hakiri
@@ -18,6 +20,8 @@ menus:
 ## About Hakiri
 
 [Hakiri](https://hakiri.io) is a service for analyzing and monitoring the security of your Rails application dependencies.
+
+By using Hakiri you can be sure that your Ruby gems are up to date and secure.
 
 [The Hakiri documentation](https://hakiri.io/docs) does a great job of providing more information, in addition to the setup instructions below.
 
@@ -35,7 +39,7 @@ You will need a Hakiri manifest file to exist in your repo, unless you want to g
 
 To generate the manifest file (either in CI/CD or locally so that you can commit it to your repository), you will need to follow the instructions below to install the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) and then run the following command:
 
-```bash
+```shell
 hakiri manifest:generate
 ```
 
@@ -46,7 +50,7 @@ To use Hakiri in your CI/CD process, you'll need to add the [Hakiri Toolbelt](ht
 To install the Hakiri Toolbelt, you will need to add the following command to the Dockerfile for the service you want to run Hakiri on:
 
 
-```bash
+```shell
 gem install hakiri
 ```
 
@@ -58,7 +62,7 @@ Once your Hakiri Stack ID is loaded via your [encrypted environment variables]({
 
 For example:
 
-```bash
+```yaml
 - name: Hakiri
   service: app
   command: hakiri.sh
@@ -66,7 +70,7 @@ For example:
 
 Inside this `hakiri.sh` script, you will have something similar to:
 
-```bash
+```shell
 hakiri system:scan
 hakiri system:sync -s $STACK_ID
 ```
@@ -89,7 +93,7 @@ You will need a Hakiri manifest file to exist in your repo, unless you want to g
 
 To generate the manifest file (either in CI/CD or locally so that you can commit it to your repository), you will need to follow the instructions below to install the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) and then run the following command:
 
-```bash
+```shell
 hakiri manifest:generate
 ```
 
@@ -97,7 +101,7 @@ hakiri manifest:generate
 
 To use Hakiri in your CI/CD process, you'll need to install the [Hakiri Toolbelt](https://github.com/hakirisec/hakiri_toolbelt) via your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
-```bash
+```shell
 gem install hakiri
 ```
 
@@ -109,7 +113,7 @@ You will need to add the following commands to your project's [setup and test co
 
 For example:
 
-```bash
+```shell
 hakiri system:scan
 hakiri system:sync -s $STACK_ID
 ```

@@ -3,7 +3,7 @@ title: Getting Started With Codeship Pro Part 1
 menus:
   pro/quickstart:
     title: Getting Started Pt. 1
-    weight: 1
+    weight: 2
 tags:
   - docker
   - jet
@@ -12,7 +12,8 @@ tags:
   - getting started
   - tutorial
   - getting started jet
-
+categories:
+  - Quickstart
 redirect_from:
   - /docker-guide/getting-started/
   - /pro/getting-started/getting-started/
@@ -24,7 +25,7 @@ redirect_from:
 
 The source for the tutorial is available on GitHub at [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
-```bash
+```shell
 git clone git@github.com:codeship/ci-guide.git
 ```
 
@@ -83,7 +84,7 @@ If you're not familiar with Dockerfiles, and you want to spend a little bit of t
 
 Once you're ready to get going, create an empty Dockerfile and paste this code into it:
 
-```bash
+```dockerfile
 # base on latest ruby base image
 FROM ruby:2.2.1
 

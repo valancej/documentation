@@ -13,6 +13,8 @@ menus:
   general/integrations:
     title: Using Brakeman Pro
     weight: 9
+categories:
+  - Integrations    
 redirect_from:
   - /general/integrations/brakeman/
 ---
@@ -22,7 +24,11 @@ redirect_from:
 
 ## About Brakeman Pro
 
-Brakeman Pro is as service for automatically testing and reporting on your Rails application's security vulnerabilities. [Their documentation](https://brakemanpro.com/docs) does a great job of providing more information, in addition to the setup instructions below.
+Brakeman Pro is as service for automatically testing and reporting on your Rails application's security vulnerabilities.
+
+By using Brakeman Pro you can be confident that your Rails application is secure and up to date.
+
+[Their documentation](https://brakemanpro.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
@@ -36,7 +42,7 @@ After adding the credentials, you'll need to install the Brakeman Pro gem via yo
 
 This can be done with the following command in your Dockerfile, or by adding the gem to your project's `Gemfile` (which requires `bundle install` in your Dockerfile instead):
 
-```bash
+```shell
 RUN gem install brakeman-pro --source https://$BRAKEMAN_PRO_USER:$BRAKEMAN_PRO_PASSWORD@brakemanpro.com/gems/
 ```
 
@@ -44,7 +50,7 @@ RUN gem install brakeman-pro --source https://$BRAKEMAN_PRO_USER:$BRAKEMAN_PRO_P
 
 Next, you'll want to run the actual command to generate a Brakeman Pro report as a new step in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```bash
+```yaml
 - name: brakeman-pro
   service: your_service
   command: brakeman-pro --exit-on-warn --quiet -f plain
@@ -70,7 +76,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 After adding the credentials, you'll need to install the Brakeman Pro gem via your [project's setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}). This can be done with the following command, or by adding the gem to your project's `Gemfile` (which requires `bundle install` in your setup commands instead):
 
-```bash
+```shell
 gem install brakeman-pro --source https://$BRAKEMAN_PRO_USER:$BRAKEMAN_PRO_PASSWORD@brakemanpro.com/gems/
 ```
 
@@ -78,7 +84,7 @@ gem install brakeman-pro --source https://$BRAKEMAN_PRO_USER:$BRAKEMAN_PRO_PASSW
 
 Next, you'll want to run the actual command to generate a Brakeman Pro report in your [project's test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 brakeman-pro --exit-on-warn --quiet -f plain
 ```
 

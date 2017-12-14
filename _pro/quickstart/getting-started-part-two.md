@@ -4,7 +4,7 @@ layout: page
 menus:
   pro/quickstart:
     title: Getting Started Pt. 2
-    weight: 2
+    weight: 3
 tags:
   - docker
   - jet
@@ -13,7 +13,8 @@ tags:
   - getting started
   - tutorial
   - getting started jet
-
+categories:
+  - Quickstart
 redirect_from:
   - /docker-guide/getting-started-part-two/
   - /pro/getting-started/getting-started-part-two/
@@ -24,7 +25,7 @@ redirect_from:
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
-```bash
+```shell
 git clone git@github.com:codeship/ci-guide.git
 ```
 

@@ -12,6 +12,11 @@ tags:
   - security
   - variables
   - environment
+  - aes key
+
+categories:
+  - Builds and Configuration
+
 
 redirect_from:
   - /docker/encryption/
@@ -20,8 +25,13 @@ redirect_from:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}).
+This article is about using environment variables with Codeship Pro.
+
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+
+ Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) to encrypt your environment variables.
 </div>
+
 
 * include a table of contents
 {:toc}
@@ -36,9 +46,9 @@ You can set your environment variables directly in your [Services file]({{ site.
 
 ### Via Services File
 
-To set unsecured enviroment variables via your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will use the `environment` specification. For example:
+To set unsecured environment variables via your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), you will use the `environment` specification. For example:
 
-```
+```yaml
 app:
   build:
     image: myorg/appname
@@ -52,24 +62,28 @@ app:
 
 To set unsecured environment variables via your Dockerfile, you will use the `ENV` directive. For example:
 
-```
+```dockerfile
 FROM ubuntu:latest
 ENV URL=www.codeship.com
 ```
 
 ## Encrypted Environment Variables
 
-The most common way to use environment variables on Codeship Pro is by using our `encrypted_env_file` option. This lets you keep all environment variables securely encrypted, via a project-specific AES KEY, and therefore never explicitly visible in your repo.
+The most common way to use environment variables on Codeship Pro is by using our `encrypted_env_file` option. This lets you keep all environment variables securely encrypted, via a project-specific AES key, and therefore never explicitly visible in your repo.
 
 By doing this, you never have to worry about using environment variables for passing your secrets to your CI/CD pipeline and to your builds.
 
 ### Downloading Your AES Key
 
-If you have a project on https://codeship.com, head over to the _General_ page of your project settings and you'll find a section labeled _AES Key_ which allows you to either copy or download the key.
+Navigate to _Project Settings_ > _General_ and you'll find a section labeled _AES Key_ which allows you to either copy or download the key.
 
 ![AES key]({{ site.baseurl }}/images/docker/aes_key.png)
 
 Save that file as `codeship.aes` in your repository root and don't forget to add the key to your `.gitignore` file so you don't accidentally commit it to your repository.
+
+<div class="info-block">
+If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.
+</div>
 
 ### Encrypting Your Environment Variables
 
@@ -84,7 +98,7 @@ Once you create this file and save it in your project directory, we'll encrypt i
 
 From your terminal, you will run:
 
-```bash
+```shell
 jet encrypt env env.encrypted
 ```
 
@@ -96,7 +110,7 @@ In this example `env` is the name of the text file containing your environment v
 
 Now that you have created your encrypted environment variables file (and added the plain-text version to your `.gitignore`), you will want to use the encrypted file in your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). You do this using the `encrypted_env_file` directive. For example:
 
-```
+```yaml
 app:
   build:
     image: myorg/appname
@@ -106,9 +120,9 @@ app:
 
 ### Decrypting
 
-If you need to decrypt the encrypted file run the following command instead
+If you need to decrypt the encrypted file run the following command instead:
 
-```bash
+```shell
 jet decrypt env.encrypted env
 ```
 
@@ -167,9 +181,9 @@ In some situations, you may find that you want to run one set of credentials loc
 
 For the time being, there are several workarounds that may be worth investigating for your team if you have this need:
 
-- You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), you would run `jet steps service_name command` rather than just `jet steps`.
+- You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), you would run `jet run service_name command` rather than just `jet steps`.
 
-- You could keep a different encrypted env file on hand locally. From there, you would maintain local `.gitignore` files so that the local credential files are not committed by individual developers and only the canonical, production encrypted environment file would be in the repo. The developers would then need to override the pulled encrypted enviroment variables file with their own, but it would be ignored on all commits back to the repo because of the `.gitignore`.
+- You could keep a different encrypted env file on hand locally. From there, you would maintain local `.gitignore` files so that the local credential files are not committed by individual developers and only the canonical, production encrypted environment file would be in the repo. The developers would then need to override the pulled encrypted environment variables file with their own, but it would be ignored on all commits back to the repo because of the `.gitignore`.
 
 - Your team could also maintain branches just for local development, and these branches would not have any environment variables file committed on them. Developers could then maintain a local env file that is never committed, with the main branches continuing to host a primary, encrypted environment variables file.
 

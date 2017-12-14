@@ -4,7 +4,7 @@ layout: page
 menus:
   pro/quickstart:
     title: Getting Started Pt. 3
-    weight: 3
+    weight: 4
 tags:
   - docker
   - jet
@@ -13,7 +13,8 @@ tags:
   - getting started
   - tutorial
   - getting started jet
-
+categories:
+  - Quickstart
 redirect_from:
   - /docker-guide/getting-started-part-three/
   - /pro/getting-started/getting-started-part-three/
@@ -24,7 +25,7 @@ redirect_from:
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
-```bash
+```shell
 git clone git@github.com:codeship/ci-guide.git
 ```
 
@@ -106,7 +107,7 @@ Now that you've downloaded your AES key, we'll created a new file named `dockerc
 
 To get our auth key, we'll need to go back to our terminal and run:
 
-```bash
+```shell
 docker login
 cat ${HOME}/.docker/config.json
 ```
@@ -119,7 +120,7 @@ To get the appropriate authentication file on OSX, you will need to remove the `
 
 This will print the `auths` value that we need to add to our `dockercfg` file. Once we've added this information to our `dockercfg` file and saved it, we'll run:
 
-```bash
+```shell
 jet encrypt dockercfg dockercfg.encrypted
 ```
 
@@ -131,7 +132,7 @@ Now, assuming you've swapped in your credentials in the push step and created yo
 
 Let's go back to our terminal and run:
 
-```
+```shell
 git add .
 git commit . -m "Deploying our image"
 git push origin master
@@ -157,7 +158,7 @@ You will just need to use `jet run` (a command we didn't see earlier, which leav
 
 To do this, you will need to execute the following commands:
 
-```bash
+```shell
 jet run PRIMARY_SERVICE_NAME
 docker ps -a
 docker exec CONTAINERID

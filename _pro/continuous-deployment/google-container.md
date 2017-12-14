@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Google Container Engine
     weight: 11
+categories:
+  - Continuous Deployment
 tags:
   - deployment
   - google
@@ -24,7 +26,7 @@ You can find a sample repo for deploying to Google Cloud with Codeship Pro on Gi
 
 To deploy to Google Container Engine and Google Container Registry, you will need to create a container that can authenticate with your Google Account and another to generate authentication for pushing and pulling images to and from Google Container Registry.
 
-We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [a deployment image stored on Dockerhub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. We also maintain a [GCR authentication generator image](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/). You can add these images and examples to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) to get started quickly.
+We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [a deployment image stored on Docker Hub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. We also maintain a [GCR authentication generator image](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/). You can add these images and examples to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) to get started quickly.
 
 ## Authentication
 
@@ -48,7 +50,7 @@ Now you will need to create a new file to store your account credentials in, in 
 
 Your new environment variables file will container the following:
 
-```bash
+```
 GOOGLE_AUTH_JSON=...
 GOOGLE_AUTH_EMAIL=...
 GOOGLE_PROJECT_ID=...
@@ -66,7 +68,7 @@ Be sure to put this unencrypted env file into `.gitignore` so its never committe
 
 After creating this environment variables file, you will need to encrypt it using the instructions from our [encrypted environment variables tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or by using the commands below:
 
-```bash
+```shell
 jet encrypt your_env_file your_env_file.encrypted
 ```
 
@@ -137,7 +139,7 @@ This is calling `google-deploy.sh`, which would be a file in your repository tha
 
 Here is an is an example `google-deploy.sh` that you could use to base your own Google Container Engine scripts off of. Note that this is using Kubernetes as well as Google Container Engine:
 
-```bash
+```shell
 #!/bin/bash
 
 set -e
@@ -178,6 +180,19 @@ kubectl stop rc $KUBERNETES_APP_NAME
 echo "Stopping Container Cluster for $KUBERNETES_APP_NAME"
 gcloud container clusters delete $KUBERNETES_APP_NAME -q
 ```
+
+### Permissions
+
+To use Google Cloud with Codeship Pro, your generator service on Codeship will need to authenticate with an account with the correct IAM permissions.
+
+While the permissions may vary and do change, the minimal required permissions are:
+
+- Container Engine Admin
+- Container Engine Cluster Admin
+- Deployment Manager Editor
+- Storage Object Admin
+
+If these permissions are not enough to authenticate, we recommend investigating other potentially required IAM permissions.
 
 ## Other Google Cloud Services
 

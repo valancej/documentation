@@ -10,6 +10,8 @@ menus:
   general/integrations:
     title: Using Appranix
     weight: 15
+categories:
+  - Integrations    
 ---
 
 * include a table of contents
@@ -18,6 +20,8 @@ menus:
 ## About Appranix
 
 [Appranix](http://www.appranix.com/) simplifies and automates application operations on cloud platforms.
+
+By using Appranix you can reduce the amount of time it takes to run and monitor cloud operations.
 
 The [Appranix documentation](https://app.appranix.net/docs/) provides a great guide to getting started, and the instructions below have more information on integrating with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro).
 
@@ -29,7 +33,7 @@ Integrating Appranix with Codeship requires that you include the  [appranix.sh](
 
 Inside this script, you will have the following:
 
-```bash
+```shell
 echo "Installing Appranix CLI"
 gem install prana
 
@@ -95,7 +99,7 @@ Note: The container must have [Ruby version 2.3.3]({{ site.baseurl }}{% link _pr
 
 Integrating Appranix with Codeship requires that you include the  [appranix.sh](https://github.com/RushinthJohn/documentation/blob/appranix/_data/appranix.sh) script file in your project repository.
 
-```bash
+```shell
 echo "Installing Appranix CLI"
 gem install prana
 

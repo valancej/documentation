@@ -7,6 +7,8 @@ menus:
 tags:
   - getting started
   - codeship basic
+categories:
+  - Quickstart  
 redirect_from:
   - /basic/getting-started/getting-started/
 ---
@@ -77,6 +79,10 @@ It's worth noting that for each deployment pipeline, you can add multiple deploy
 To add multiple steps or deployments to a pipeline, just click on an additional deployment target and specify as needed. You can then use the simple drag-and-drop interface to arrange the deployment commands in the order you need them to run in.
 
 ![Custom Script Deployment on Codeship Basic]({{ site.baseurl }}/images/basic-guide/multiple-deployments.png)
+
+## Accessing Codeship using the API
+
+If you're looking to automate more of your processes, you can access your projects and builds via the Codeship API. See the [Codeship API Documentation]({{ site.baseurl }}{% link _general/integrations/api.md %}) for more details and examples.
 
 ## Common Questions
 

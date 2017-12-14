@@ -5,10 +5,13 @@ tags:
   - account
   - invoices
   - billing
+  - credit card
 menus:
   general/account:
     title: Invoices
     weight: 4
+categories:
+  - Account    
 redirect_from:
   - /administration/invoices/
 ---
@@ -16,22 +19,21 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-Invoices are available every month on the date the subscription began via email or the invoices page in your Account or Organization Settings.
+Invoices are available every month on the date the subscription began via email or the invoices page under your subscription settings.
 
 ### View and download invoices
-To view your invoices on Codeship
+To view your invoices on Codeship:
 
-- As member of the owner team within your account, go to Subscription in the main navigation
+- As a member of the owner team within your account, go to **Subscription** in the top menu navigation
 
-- Select _View Invoices_ link in sub-navigation
+- Then select **Invoices** in the upper right corner
 
 Here, you will see the history of all previous invoices. All invoices can be downloaded as a PDF file.
 
-### Receive invoices to another email address
-You can also change the email address to receive the invoices in **Manage Subscriptions** > _Update credit card and billing address_.
+![Invoices]({{ site.baseurl }}/images/administration/invoices.png)
 
-![Billing Info Link]({{ site.baseurl }}/images/administration/update_cc_info_link.png)
+### Update credit card and billing information
+As a member of the owner team within your account, you can update the credit card and billing information on file. Using the same navigation as above select **Billing Info** in the upper right corner and update the billing information.
 
-### Update Credit Card
-
-As long as you are looking at your account, or are an owner of the organization you are viewing, you can update the card on file in the "Subscription" tab in your top menu and then clicking the "Payment Data" button.
+### Receive invoices at another email address
+You can also change the email address that receives invoices. Using the same navigation as above select **Billing Info** in the upper right corner and update the email address.

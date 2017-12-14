@@ -10,6 +10,8 @@ tags:
   - environment variables
   - variables
   - environment
+categories:
+  - Builds and Configuration
 redirect_from:
   - /continuous-integration/set-environment-variables/
   - /basic/getting-started/set-environment-variables/
@@ -32,7 +34,7 @@ On the ***Environment*** page of your project settings you can enter the variabl
 
 We will export these environment variables to the environment your build runs via a command similar to:
 
-```bash
+```shell
 export VARIABLE_NAME="value"
 ```
 
@@ -44,7 +46,7 @@ We export your environment variables before all other commands of your build. Th
 
 You can also export environment variables in your setup or test commands. So, for example, you could enter the following setup commands:
 
-```bash
+```shell
 rvm use 2.0.0
 export RAILS_ENV="test"
 bundle install

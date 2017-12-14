@@ -13,6 +13,8 @@ menus:
 redirect_from:
   - /databases/postgresql/
   - /classic/getting-started/postgresql/
+categories:
+  - Databases  
 ---
 
 * include a table of contents
@@ -83,7 +85,7 @@ sed -i "s|5432|5436|" "config/database.yml"
 ### pg_dump
 You may experience a `pg_dump` version mismatch with the PostgreSQL version you have configured.
 
-```shell
+```
 pg_dump: server version: $YOUR_VERSION; pg_dump version: 9.2.19
 pg_dump: aborting because of server version mismatch
 ```
@@ -114,9 +116,9 @@ PostgreSQL versions 9.2 to 9.4 include PostGIS 2.0, PostgreSQL version 9.5 and n
 ## Framework-specific configuration
 
 ### Ruby on Rails
-We replace the values in your `config/database.yml` file automatically to configuration matching the PostgreSQL 9.2 instance.
+We replace the values in your `config/database.yml` file automatically to a configuration matching the PostgreSQL 9.2 instance.
 
-If your Rails application is in stored a subdirectory or you want to change the database configuration from our default values ,you can add the following data to a `codeship.database.yml` file (or any other filename) and commit that file to your repository.
+If your Rails application is stored in a subdirectory or you want to change the database configuration from our default values, you can add the following data to a `codeship.database.yml` file (or any other filename) and commit that file to your repository.
 
 ```yaml
 development:
@@ -149,7 +151,7 @@ In your _Setup Commands_, run the following command to copy the file to its targ
 cp codeship.database.yml YOUR_DATABASE_YAML_PATH
 ```
 
-If you don't use Rails and load the database.yml file yourself, you might see a PSQL::Error message stating the raw username <%= ENV['PG_USER'] %> instead of the value of the environment variable. This is because the database.yml example includes ERB syntax. You need to load database.yml, and run it through ERB before you can use it first.
+If you don't use Rails and load the database.yml file yourself, you might see `PSQL::Error message stating the raw username <%= ENV['PG_USER'] %>` instead of the value of the environment variable. This is because the database.yml example includes ERB syntax. You need to load database.yml, and run it through ERB before you can use it first.
 
 ```ruby
 # Sample error message

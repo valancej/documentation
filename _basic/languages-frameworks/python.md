@@ -10,7 +10,9 @@ tags:
   - languages
   - flask
   - django
-
+  - pyenv
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /languages/python/
 ---
@@ -20,9 +22,9 @@ redirect_from:
 
 ## Versions And Setup
 
-We use [pyenv](https://github.com/pyenv/pyenv ) to manage Python environments for you.
+We use [pyenv](https://github.com/pyenv/pyenv) to manage Python environments for you.
 
-By default, we run Python version `2.7.13`, but versions `3.4`, `3.5` and `3.6` are all preinstalled as well.
+By default, we run Python version `2.7.14`, but versions `3.3`, `3.4`, `3.5` and `3.6` are all preinstalled as well.
 
 ### Specifying Version
 
@@ -30,11 +32,11 @@ You have several options to specify which Python version you would like to use.
 
 In your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) you can use **pyenv** commands. For instance:
 
-```
+```shell
 pyenv local $version
 ```
 
-You can also use the environment vairable `PYENV_VERSION` to choose from one of the installed Python versions.
+You can also use the environment variable `PYENV_VERSION` to choose from one of the installed Python versions.
 
 Alternatively, you can specify a version to use by committing a file named `.python-version` into your code repository with a version specification.
 
@@ -85,3 +87,17 @@ Due to Python version issues, you may find it helpful to tests your commands wit
 ### Executable Not Available
 
 As we use **pyenv**, if an executable is not available after installation you may need to run the command `pyenv rehash` after installing the package. [You can read pyenv's documentation](https://github.com/pyenv/pyenv) for more information.
+
+### Cannot Rehash
+
+You may encounter a rehash error like this:
+
+```
+pyenv: cannot rehash: /home/rof/.pyenv/shims/.pyenv-shim exists
+```
+
+If this occurs try adding this command to the start of your _Setup Steps_:
+
+```
+rm -rf $HOME/.pyenv/plugins/pyenv-codeship-rehash
+```

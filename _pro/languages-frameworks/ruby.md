@@ -11,7 +11,8 @@ tags:
   - docker
   - rails
   - sinatra
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /docker-integration/ruby/
 ---
@@ -82,7 +83,7 @@ Note that every step runs in isolated containers, so changes made on one step do
 
 Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Ruby image documentation on [the Docker Hub](https://hub.docker.com/_/ruby/).
 
-```Dockerfile
+```dockerfile
 # We're using the Ruby 2.4 base image and extending it
 FROM ruby:2.4
 

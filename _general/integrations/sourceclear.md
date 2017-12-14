@@ -11,9 +11,11 @@ menus:
   general/integrations:
     title: Using SourceClear
     weight: 4
+categories:
+  - Integrations    
 redirect_from:
   - /basic/continuous-integration/sourceclear/
-  - /pro/continuous-integration/sourceclear-docker/    
+  - /pro/continuous-integration/sourceclear-docker/
 ---
 
 * include a table of contents
@@ -21,7 +23,11 @@ redirect_from:
 
 ## About SourceClear
 
-SourceClear is as service for automatically testing and reporting on your application's security vulnerabilities. [Their documentation](https://www.sourceclear.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
+SourceClear is as service for automatically testing and reporting on your application's security vulnerabilities.
+
+By using SourceClear you can be sure that your application code is tested and secure.
+
+[Their documentation](https://www.sourceclear.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
@@ -34,9 +40,9 @@ To start, you need to add your SourceClear API token to your [encrypted environm
 After adding the API token, you will need to add the following commands to a script, placed in your repository, that you will call from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 
-```bash
+```shell
 curl -sSL https://download.sourceclear.com/ci.sh | bash
- ```
+```
 
 **Note** that if you are using [parallel test steps]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) then you likely only want to call this script once, as it's own step, rather than as part of your test steps themselves.
 
@@ -52,8 +58,8 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 After adding the API token, you'll just need to add the SourceClear command to your [project's test commands[project's test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %})]. The command to add is:
 
-```bash
+```shell
 curl -sSL https://download.sourceclear.com/ci.sh | bash
- ```
+```
 
 **Note** that if you are using [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}) then you likely only want to add this command to a single pipeline, rather than multiple pipelines.

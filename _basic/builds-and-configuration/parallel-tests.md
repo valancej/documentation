@@ -13,6 +13,9 @@ tags:
   - speed
   - parallel
   - concurrency
+categories:
+  - Builds and Configuration  
+  - Continuous Integration
 redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/
@@ -40,6 +43,12 @@ Once parallel test pipelines are enabled, each project can have multiple **test 
 To ease distinguishing different pipelines you can provide a name for each one.
 
 ![Configuration of test pipelines]({{ site.baseurl }}/images/continuous-integration/parallelization-test-pipelines-configuration.png)
+
+### Restarting Individual Pipeline
+
+If a pipeline fails, you can restart only that individual pipeline by hovering over the failed pipeline's status indicator.
+
+![Restarting test pipeline]({{ site.baseurl }}/images/continuous-integration/restart-pipelines.png)
 
 ### Disabling Parallel Test Pipelines
 

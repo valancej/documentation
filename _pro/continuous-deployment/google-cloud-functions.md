@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Google Cloud Functions
     weight: 10
+categories:
+  - Continuous Deployment
 tags:
   - deployment
   - google
@@ -20,11 +22,11 @@ tags:
 
 To deploy to [Google Cloud Functions](https://cloud.google.com/functions/), you will need to create a container that can authenticate with your Google Account, and with the appropriate Google products, as well as run the Google Cloud CLI to execute your intended commands.
 
-We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [an image stored on Dockerhub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. You can copy setup instructions from this repo or reuse the Dockerfile, our [turnkey Google Cloud image](https://hub.docker.com/r/codeship/google-cloud-deployment/) or our [GCR authentication generator](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/) simply by adding the necessary elements from our [Google Cloud repo](https://github.com/codeship-library/google-cloud-deployment) to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [an image stored on Docker Hub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. You can copy setup instructions from this repo or reuse the Dockerfile, our [turnkey Google Cloud image](https://hub.docker.com/r/codeship/google-cloud-deployment/) or our [GCR authentication generator](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/) simply by adding the necessary elements from our [Google Cloud repo](https://github.com/codeship-library/google-cloud-deployment) to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ## Authentication
 
-To deploy to Cloud Functions, you will need to define a Google _Service account_ as well as add your Google credentials to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) so that the `gcloud` utility can authenticate approriately.
+To deploy to Cloud Functions, you will need to define a Google _Service account_ as well as add your Google credentials to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) so that the `gcloud` utility can authenticate appropriately.
 
 For full instructions, see the [authentication portion of our Google Cloud documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}#authentication).
 
@@ -71,7 +73,7 @@ Inside this deployment script will be all commands you want to run via the Googl
 
 Here is an example deployment script that you can use as a basis for your own deployments. Note that it authenticates at the top using the command discussed earlier.
 
-```bash
+```shell
 #!/bin/bash
 
 # Authenticate with the Google Services

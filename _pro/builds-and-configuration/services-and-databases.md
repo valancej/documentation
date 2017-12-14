@@ -13,6 +13,8 @@ tags:
   - databases
   - db
 
+categories:
+  - Builds and Configuration
 redirect_from:
   - /docker/services-and-databases/
   - /pro/getting-started/services-and-databases/
@@ -39,7 +41,7 @@ node:
 
 Now we create a Dockerfile that starts from an Elasticsearch base container and adds our configuration file.
 
-```
+```dockerfile
 FROM elasticsearch:1.7
 
 ADD config/elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
@@ -65,7 +67,7 @@ Now we have a fully customized instance of Elasticsearch running. This same proc
 
 Before starting your tests you want to make sure that your service is up and running. The following script will check for Postgres and Redis to be ready and accept connections. You can use this script to add any further checks for other services. You can connect checks with `&&`. The list of supported containers below has tools that help you to test your service for availability. Make sure to set all necessary environment variables used in the commands.
 
-```bash
+```shell
 #!/usr/bin/env bash
 
 function test_postgresql {
@@ -104,13 +106,13 @@ For Postgis the [Postgis community contributed container](https://hub.docker.com
 
 Addition to your Dockerfile:
 
-```
+```dockerfile
 RUN apt-get update && apt-get install -y postgresql-common postgresql-client
 ```
 
 Command to run:
 
-```bash
+```shell
 pg_isready -h "${POSTGRESQL_HOST}" -U "${POSTGRESQL_USER}"
 ```
 
@@ -123,13 +125,13 @@ Use the [official MariaDB container](https://hub.docker.com/_/mariadb/).
 
 Addition to your Dockerfile:
 
-```
+```dockerfile
 RUN apt-get update && apt-get install -y mysql-client
 ```
 
 Command to run:
 
-```bash
+```shell
 mysqladmin -h "${MYSQL_HOST}" ping
 ```
 
@@ -140,13 +142,13 @@ Use the [official Redis container](https://hub.docker.com/_/redis/).
 
 Addition to your Dockerfile:
 
-```
+```dockerfile
 RUN apt-get update && apt-get install -y redis-tools
 ```
 
 Command to run:
 
-```bash
+```shell
 redis-cli -h "${REDIS_HOST}" PING
 ```
 
@@ -157,13 +159,13 @@ Use the [official MongoDB container](https://hub.docker.com/_/mongo/).
 
 Addition to your Dockerfile:
 
-```
+```dockerfile
 RUN apt-get update && apt-get install -y curl
 ```
 
 Command to run:
 
-```bash
+```shell
 curl "http://${MONGO_HOST}:${MONGO_PORT}"
 ```
 
@@ -174,12 +176,12 @@ Use the [official Memcached container](https://hub.docker.com/_/memcached/).
 
 Addition to your Dockerfile:
 
-```
+```dockerfile
 RUN apt-get update && apt-get install -y netcat
 ```
 
 Command to run:
 
-```bash
+```shell
 echo "flush_all" | nc -w1 "${MEMCACHE_HOST}" "${MEMCACHE_PORT}"
 ```

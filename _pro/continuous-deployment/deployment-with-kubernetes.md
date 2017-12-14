@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Kubernetes
     weight: 13
+categories:
+  - Continuous Deployment        
 tags:
   - kubernetes
   - notifications
@@ -64,7 +66,7 @@ Before we can do anything, however, we need to create an encrypted environment f
 
 Once we have an encrypted environment file (and have saved your Google Cloud environment variables to `gc.env.encrypted`), we next need to define the Google Cloud service in the `codeship-services.yml` file.
 
-```
+```yaml
 google_cloud_deployment:
   image: codeship/google-cloud-deployment
   add_docker: true
@@ -86,7 +88,7 @@ Your `codeship-steps.yml` file supports `push` steps, to make pushing Docker ima
 
 Using the `gcr_dockercfg` service defined above, all we need to do is add a step to the `codeship-steps.yml` file with your Google Container Registry URL as the destination. It's important to remember here that we will be deploying your application image, so be sure to replace the app service name with the name of the service your own application is running on.
 
-```
+```yaml
 - service: app
   type: push
   image_name: gcr.io/project-name/app-name
@@ -100,7 +102,7 @@ While this step does push updated images to the registry, there is a problem wit
 
 To accomplish this, we provide an `image_tag` declaration that allows you to set any tag other than `latest` to push your image up to. We also provide a list of variables that can be dynamically used for this declaration; however, to keep things simple, lets use the current build's Unix timestamp because it is relatively unique and repeatable. With the new `image_tag` declaration, the previous step should now look like this:
 
-```
+```yaml
 - service: app
   type: push
   image_name: gcr.io/project-name/app-name
@@ -111,13 +113,26 @@ To accomplish this, we provide an `image_tag` declaration that allows you to set
 
 Now, when we push up your app image to the Google Container Registry, it will be tagged with the current build's Unix timestamp.
 
+### Permissions
+
+To use Google Cloud with Codeship Pro, your generator service on Codeship will need to authenticate with an account with the correct IAM permissions.
+
+While the permissions may vary and do change, the minimal required permissions are:
+
+- Container Engine Admin
+- Container Engine Cluster Admin
+- Deployment Manager Editor
+- Storage Object Admin
+
+If these permissions are not enough to authenticate, we recommend investigating other potentially required IAM permissions.
+
 ## Updating Kubernetes Deployments
 
 Once your `push` step is defined, we need to tell Kubernetes to update the appropriate Deployment to roll out the new image. This is where the previously defined `google_cloud_deployment` service comes into play. Thanks to this service, we are able to easily run authenticated commands against Google Cloud Platform without any additional overhead, which means that manipulating your Kubernetes platform from within Codeship is no different than working with it directly.
 
 Before we set up the actual step, though, let's take a look at how updating a Kubernetes Deployment actually works. According to the Kubernetes documentation (and as touched upon above), triggering a Deployment update is as simple as updating the Deployment's defined label or container image. For now, let's assume that we already have a defined Deployment for an Nginx server as per the documentation. All we have to do to roll out an updated Docker image to the Deployment is to change the defined image using the `kubectl` command like so:
 
-```
+```shell
 $ kubectl set image deployment/nginx-deployment nginx=nginx:1.9.1 deployment "nginx-deployment" image updated
 ```
 
@@ -125,7 +140,7 @@ Because we tagged your image pushes above, this type of update will be relativel
 
 Now, the script we need to write consists of only a small handful of commands:
 
-```
+```shell
 #!/bin/bash
 set-e
 
@@ -153,7 +168,7 @@ It's important to note here that Codeship provides an environment variable of th
 
 Now that we have your deployment script set up (I've saved mine to the root of my project as `deploy.sh`), all we have left to do is to add a step to the `codeship-steps.yml` file that calls it:
 
-```
+```yaml
 - service: google_cloud_deployment
   command: /deploy/deploy.sh
 ```

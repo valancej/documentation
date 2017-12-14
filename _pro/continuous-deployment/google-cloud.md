@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Google Cloud
     weight: 8
+categories:
+  - Continuous Deployment
 tags:
   - deployment
   - google
@@ -14,6 +16,7 @@ tags:
 
 redirect_from:
   - /docker-integration/google-cloud/
+  - /docker/continuous-deployment/google-cloud/
 ---
 
 <div class="info-block">
@@ -27,7 +30,7 @@ You can find a sample repo for deploying to Google Cloud with Codeship Pro on Gi
 
 To deploy to Google Cloud services, you will need to create a container that can authenticate with your Google Account, and with the appropriate Google product, as well as run the Google Cloud CLI to execute your intended commands.
 
-We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [an image stored on Dockerhub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. You can copy setup instructions from this repo or reuse the Dockerfile, our [turnkey Google Cloud image](https://hub.docker.com/r/codeship/google-cloud-deployment/) or our [GCR authentication generator](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/) simply by adding the necessary elements from our [Google Cloud repo](https://github.com/codeship-library/google-cloud-deployment) to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+We maintain an [example repository](https://github.com/codeship-library/google-cloud-deployment) with [an image stored on Docker Hub](https://hub.docker.com/r/codeship/google-cloud-deployment/) to simplify this process. You can copy setup instructions from this repo or reuse the Dockerfile, our [turnkey Google Cloud image](https://hub.docker.com/r/codeship/google-cloud-deployment/) or our [GCR authentication generator](https://hub.docker.com/r/codeship/gcr-dockercfg-generator/) simply by adding the necessary elements from our [Google Cloud repo](https://github.com/codeship-library/google-cloud-deployment) to your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 
 ## Authentication
 
@@ -51,7 +54,7 @@ Now you will need to create a new file to store your account credentials in, in 
 
 Your new environment variables file will container the following:
 
-```bash
+```
 GOOGLE_AUTH_JSON=...
 GOOGLE_AUTH_EMAIL=...
 GOOGLE_PROJECT_ID=...
@@ -69,7 +72,7 @@ Be sure to put this unencrypted env file into `.gitignore` so its never committe
 
 After creating this environment variables file, you will need to encrypt it using the instructions from our [encrypted environment variables tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or by using the commands below:
 
-```bash
+```shell
 jet encrypt your_env_file your_env_file.encrypted
 ```
 
@@ -79,11 +82,11 @@ jet encrypt your_env_file your_env_file.encrypted
 
 Before calling any commands against the GCP API you need to authenticate with the Gcloud tool using the credentials and [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) you created above.
 
-The [deployment image that we maintain]((https://hub.docker.com/r/codeship/google-cloud-deployment/)) provides a default command named `codeship_google authenticate`. If you set up the environment variables for a service using this image, in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), it will set the configuration up for you using those account credentials.
+The [deployment image that we maintain](https://hub.docker.com/r/codeship/google-cloud-deployment/) provides a default command named `codeship_google authenticate`. If you set up the environment variables for a service using this image, in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), it will set the configuration up for you using those account credentials.
 
 The following example runs the `codeship_google authenticate` command and would typically be run at the start of a script file in your repository that contains all your deployment commands, called from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```bash
+```shell
 #!/bin/bash
 
 # Authenticate with the Google Services
@@ -131,7 +134,7 @@ Inside this deployment script will be all commands you want to run via the Googl
 
 Here is an example deployment script that you can use as a basis for your own deployments. Note that it authenticates at the top using the command discussed earlier.
 
-```bash
+```shell
 #!/bin/bash
 
 # Authenticate with the Google Services

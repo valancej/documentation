@@ -8,6 +8,8 @@ menus:
 tags:
   - commands
   - testing
+categories:
+  - Builds and Configuration  
 redirect_from:
   - /faq/ignore-command-on-branch/
   - /basic/getting-started/ignore-command-on-branch/

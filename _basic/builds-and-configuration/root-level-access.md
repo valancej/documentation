@@ -10,6 +10,8 @@ tags:
   - packages
   - root
   - admin
+categories:
+  - Builds and Configuration  
 redirect_from:
   - /faq/root-level-access/
   - /basic/getting-started/root-level-access/

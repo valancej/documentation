@@ -14,7 +14,8 @@ tags:
   - private repository
   - git
   - clone
-
+categories:
+  - Projects
 redirect_from:
   - /faq/access-to-other-repositories-fails-during-build/
 ---
@@ -37,15 +38,15 @@ As an alternative you can also add the SSH key from the Codeship project to your
 
 ## Typical error messages for this error
 
-```shell
+```
 remote: Repository not found
 ```
 
-```shell
+```
 fatal: Could not read from remote repository
 ```
 
-```shell
+```
 Permission denied (publickey).
 ```
 

@@ -3,7 +3,7 @@ title: Getting Started With Codeship Pro Part 5
 menus:
   pro/quickstart:
     title: Getting Started Pt. 5
-    weight: 5
+    weight: 6
 tags:
   - docker
   - jet
@@ -12,7 +12,8 @@ tags:
   - getting started
   - tutorial
   - getting started jet
-
+categories:
+  - Quickstart
 redirect_from:
   - /docker-guide/getting-started-part-five/
   - /pro/getting-started/getting-started-part-five/
@@ -23,7 +24,7 @@ redirect_from:
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
-```bash
+```shell
 git clone git@github.com:codeship/ci-guide.git
 ```
 

@@ -8,6 +8,8 @@ menus:
   basic/languages:
     title: Elixir
     weight: 5
+categories:
+  - Languages And Frameworks    
 ---
 
 * include a table of contents
@@ -19,7 +21,7 @@ We currently don't have Elixir pre-installed on our build VMs so we'd recommend 
 
 The easiest way to do this is by using our [scripts repository](https://github.com/codeship/scripts), specifically the [Erlang](https://github.com/codeship/scripts/blob/master/languages/erlang.sh) and [Elixir](https://github.com/codeship/scripts/blob/master/languages/elixir.sh) scripts both. After connecting your repository, you can add these setup commands that will automatically download Elixir and Erlang. Both are needed to be able to run Elixir.
 
-```
+```shell
 source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/erlang.sh)"
 source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/elixir.sh)"
 ```

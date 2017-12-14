@@ -14,7 +14,8 @@ tags:
   - testing
   - skipping
   - skip
-
+categories:
+  - Projects
 redirect_from:
   - /docker/skipping-builds/
   - /pro/getting-started/skipping-builds/

@@ -3,6 +3,7 @@ url: https://documentation.codeship.com
 baseurl:
 permalink: /:categories/:title/
 tags_dir: tags
+categories_dir: categories
 ubuntu_version: trusty
 zendesk:
   widget: true
@@ -15,6 +16,17 @@ twitter:
 facebook:
   publisher: https://www.facebook.com/codeship
 logo: /assets/img/logo-codeship.png
+author: Codeship
+social:
+  name: Codeship
+  links:
+    - https://www.twitter.com/codeship
+    - https://www.facebook.com/codeship
+    - https://www.linkedin.com/company/codeship
+    - https://github.com/codeship
+    - https://www.instagram.com/codeship/
+    - https://vimeo.com/codeship
+    - https://www.youtube.com/channel/UCxc5i0d5pIJJeF39NFdCGRQ
 
 # Defaults
 defaults:

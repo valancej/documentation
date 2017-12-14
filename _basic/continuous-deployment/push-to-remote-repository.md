@@ -3,12 +3,13 @@ title: Push To Remote Repository
 menus:
   basic/cd:
     title: Git Push
-    weight: 11
+    weight: 12
 tags:
   - deployment
   - git
   - push
-
+categories:
+  - Continuous Deployment
 redirect_from:
   - /continuous-deployment/push-to-remote-repository/
 ---

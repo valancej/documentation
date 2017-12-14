@@ -19,7 +19,8 @@ tags:
   - firefox
   - phantomjs
   - selenium
-
+categories:
+  - Continuous Integration
 redirect_from:
   - /docker/browser-testing/
 ---
@@ -34,11 +35,11 @@ Before going into the details of setting up various browsers make sure to includ
 
 Add the following to your Dockerfile to make sure Xvfb is properly started. If you use a non-Debian based Linux distribution please install the Xvfb package through the available package manager.
 
-```
+```dockerfile
 RUN apt-get install -y xvfb
 ```
 
-```bash
+```shell
 # The server will listen for connections as server number 1 and screen 0 will be depth 16 1600x1200
 Xvfb :1 -screen 0 1600x1200x16 &
 export DISPLAY=:1.0
@@ -50,7 +51,7 @@ Now you can start any browser that needs a screen available.
 
 To get the latest version of Google Chrome simply install it from their [Debian repository](https://www.ubuntuupdates.org/ppa/google_chrome) in your Dockerfile. Additionally you need to install [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) if you want to use Selenium with Chrome.
 
-```
+```dockerfile
 # Starting from Ubuntu Xenial
 FROM ubuntu:xenial
 
@@ -88,7 +89,7 @@ Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://dev
 
 There are two ways to install Firefox in your Dockerfile. Either through the available package manager or by downloading it directly from Mozilla. At first we're going to install it through the available package manager. Add the following to your Dockerfile:
 
-```
+```dockerfile
 # Starting from Ubuntu Xenial
 FROM ubuntu:xenial
 
@@ -98,7 +99,7 @@ RUN apt-get install -y xvfb firefox
 
 Now the Firefox version installed from your package manager will be available. As this sometimes doesn't fit the exact version of Firefox you want to use you can instead download and install a specific version. We will still install Firefox through the package manager as this makes sure all necessary libraries are installed. We will set the PATH to use our specific version of Firefox though.
 
-```
+```dockerfile
 # Starting from Ubuntu Xenial
 FROM ubuntu:xenial
 
@@ -124,7 +125,7 @@ Now Firefox is installed in your path and available to use for any of your brows
 
 PhantomJS is a headless browser, thus we don't need any Xvfb setup to run tests. Simply download it, unpack it and put it into the PATH.
 
-```
+```dockerfile
 # Starting from Ubuntu Xenial
 FROM ubuntu:xenial
 
@@ -150,7 +151,7 @@ Now PhantomJS is installed in your path and available to use for any of your bro
 
 To use the standalone Selenium Server you need to download the Selenium jar file in your Dockerfile.
 
-```
+```dockerfile
 # Starting from Ubuntu Xenial
 FROM ubuntu:xenial
 
@@ -168,7 +169,7 @@ RUN wget -q --continue --output-document /selenium-server.jar "http://selenium-r
 
 Then as part of your build script you simply start the Selenium Server with the jar file and wait a few seconds for it to properly load.
 
-```bash
+```shell
 java -jar /selenium-server.jar -port "${SELENIUM_PORT}" ${SELENIUM_OPTIONS} 2>&1 &
 sleep "${SELENIUM_WAIT_TIME}"
 echo "Selenium is now ready to connect on port ${SELENIUM_PORT}"
@@ -179,7 +180,7 @@ echo "Selenium is now ready to connect on port ${SELENIUM_PORT}"
 ### Chrome Crashing
 If you are seeing Chrome crashing during your tests you may want to try modifying `/dev/shm` in `codeship-services.yml`.  Try adding the following:
 
-```
+```yaml
 volumes:
   - /dev/shm:/dev/shm
 ```

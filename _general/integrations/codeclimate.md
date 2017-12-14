@@ -14,12 +14,14 @@ menus:
   general/integrations:
     title: Using Code Climate
     weight: 1
+categories:
+  - Integrations    
 redirect_from:
   - /basic/continuous-integration/code-climate/
   - /pro/continuous-integration/codeclimate-docker/
   -  /analytics/code-climate/
   - /classic/getting-started/code-climate/
-  -  /basic/analytics/code-climate/  
+  -  /basic/analytics/code-climate/
 ---
 
 <div class="info-block">
@@ -31,7 +33,11 @@ redirect_from:
 
 ## About Code Climate
 
-Code Climate is an automated code coverage service. Starting with Code Climate and Codeship is fast and easy. [Their documentation](http://docs.codeclimate.com/article/219-setting-up-test-coverage) does a great job of providing more information, in addition to the setup instructions below.
+Code Climate is an automated code coverage service. Starting with Code Climate and Codeship is fast and easy.
+
+By using Code Climate you can help enforce higher standards of code quality and transparency with your engineering team.
+
+[Their documentation](http://docs.codeclimate.com/article/219-setting-up-test-coverage) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
@@ -43,8 +49,8 @@ To start, you need to add your `CC_TEST_REPORTER_ID` to the [encrypted environme
 
 Once your Code Climate project ID is loaded via your environment variables, you will need to install Code Climate into one of your services via your Dockerfile by using the following command:
 
-```bash
-curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "$/usr/local/bin/cc-test-reporter"
+```shell
+curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "/usr/local/bin/cc-test-reporter"
 chmod +x "/usr/local/bin/cc-test-reporter"
 ```
 
@@ -52,7 +58,7 @@ Next, you will need to add a couple additional commands to your pipeline via you
 
 Before your test commands:
 
-```bash
+```yaml
 - name: codeclimate_pre
   service: YOURSERVICE
   command: cc-test-reporter before-build
@@ -60,11 +66,13 @@ Before your test commands:
 
 After your final test commands:
 
-```bash
+```yaml
 - name: codeclimate_post
   service: YOURSERVICE
-  command: cc-test-reporter after-build --exit-code $?
+  command: cc-test-reporter after-build
 ```
+
+You can view a simple implementation of Code Climate coverage [here](https://github.com/whiteotter/ruby-rails-todoapp-with-codeclimate).
 
 ### Parallel Test Coverage
 
@@ -76,7 +84,7 @@ Here are [Code Climate's example](https://github.com/codeclimate/test-reporter#l
 
 After each parallel test command you'll run a new script:
 
-```
+```yaml
 - type: parallel
   steps:
     - service: YOURSERVICE
@@ -87,7 +95,7 @@ After each parallel test command you'll run a new script:
 
 Note that we're using script files to run our tests, so that we can execute the tests and export the coverage report as one command. This is because each step uses a new container, so the coverage report will not persist if the commands are separated. Inside the new `tests.sh` files, you will have:
 
-```bash
+```shell
 # your test commands go here
 
 ./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
@@ -98,7 +106,7 @@ Note that you will need to modify the S3 path (or provide an alternative storage
 
 Next, at the end of your build itself, as a new test command placed after your normal tests:
 
-```bash
+```yaml
 - name: codeclimate_assemble_results
   service: YOURSERVICE
   command: codeclimate-assemble.sh
@@ -106,7 +114,7 @@ Next, at the end of your build itself, as a new test command placed after your n
 
 Inside the `codeclimate-assemble.sh` file, you will have:
 
-```bash
+```shell
 cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
 ```
 
@@ -124,7 +132,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 Once your Code Climate project ID is loaded via your environment variables, you will want to install Code Climate via your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "${HOME}/bin/cc-test-reporter"
 chmod +x "${HOME}/bin/cc-test-reporter"
 ```
@@ -133,13 +141,13 @@ Next, you will need to add special Code Climate commands before and after your [
 
 Before your tests:
 
-```bash
+```shell
 cc-test-reporter before-build
 ```
 
 After your final tests have run:
 
-```bash
+```shell
 cc-test-reporter after-build --exit-code $?
 ```
 
@@ -153,7 +161,7 @@ Here are [Code Climate's example](https://github.com/codeclimate/test-reporter#l
 
 At the end of each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}):
 
-```bash
+```shell
 ./cc-test-reporter format-coverage --output "coverage/codeclimate.$N.json"
 aws s3 sync coverage/ "s3://my-bucket/coverage/$CI_COMMIT_ID"
 ```
@@ -168,7 +176,7 @@ At the end of your build itself, you will need to complete the parallel coverage
 
 The code to use to end the parallel coverage report is:
 
-```bash
+```shell
 cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
     ./cc-test-reporter upload-coverage
 ```

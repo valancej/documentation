@@ -9,6 +9,8 @@ menus:
 tags:
 - AMI
 - packages
+categories:
+  - Builds and Configuration
 redirect_from:
   - /basic/getting-started/packages/
 ---

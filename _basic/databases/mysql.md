@@ -13,6 +13,8 @@ menus:
 redirect_from:
   - /databases/mysql/
   - /classic/getting-started/mysql/
+categories:
+  - Databases  
 ---
 
 * include a table of contents
@@ -61,7 +63,7 @@ to copy the file wherever you need it.
 
 If you don't use Rails and load the database.yml yourself you might see an error like the following:
 
-```shell
+```
 MYSQL2::Error: Access denied for user '<%= ENV['MYSQL_USER'] %>'@'localhost'
 ```
 

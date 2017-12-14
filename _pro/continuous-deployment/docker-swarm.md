@@ -5,6 +5,8 @@ menus:
   pro/cd:
     title: Docker Swarm
     weight: 15
+categories:
+  - Continuous Deployment        
 tags:
   - deployment
   - swarm
@@ -52,7 +54,7 @@ To deploy with Swarm, you will want to run a `docker stack deploy` command via y
 
 The specifics of this command will depend on the specifics of your application, and we recommend reading the [Docker documentation](https://docs.docker.com) to learn more.
 
-```yml
+```yaml
 - name: swarm-deploy
   service: your-app
   command: docker stack deploy --compose-file docker-stack.yml app

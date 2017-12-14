@@ -11,6 +11,9 @@ tags:
   - ci
   - cd
   - continuous deployment
+categories:
+  - About Codeship  
+  - Continuous Deployment  
 redirect_from:
   - /faq/getting_started_with_ci/
 ---

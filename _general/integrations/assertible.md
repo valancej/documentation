@@ -16,6 +16,8 @@ tags:
 - reporting
 - monitoring
 - notifications
+categories:
+  - Integrations
 ---
 
 * include a table of contents
@@ -24,6 +26,8 @@ tags:
 ## About Assertible
 
 [Assertible](https://assertible.com) is an API testing and monitoring tool that can be used with continuous integration and delivery services like [Codeship](https://codeship.com) to test and validate your web applications.
+
+By using Assertible you can ship more reliable code for your teams and your customers.
 
 The [Assertible documentation](https://assertible.com/docs) provides a great guide to getting started, and the instructions below have more information on integrating with [Codeship](https://codeship.com) to [run integration tests during CI](#triggering-tests-during-a-build) and [test your web app after a deployment](#running-tests-after-a-deployment).
 
@@ -44,7 +48,7 @@ To test your API or web app during your CI build, Assertible recommends building
 
 To do this, add the following script in your repository, that you will then call from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```yml
+```yaml
 - name: Assertible
   service: app
   command: assertible.sh
@@ -52,7 +56,7 @@ To do this, add the following script in your repository, that you will then call
 
 Inside of the `assertible.sh` file, use the following code:
 
-```bash
+```shell
 # Start your application (NOTE: CUSTOMIZE THIS COMMAND)
 node server.js &
 
@@ -83,7 +87,7 @@ And that's it! Be sure to customize the command that starts your application. No
 
 To run tests against your API or website _after_ a deployment, add the following command to a script placed in your repository, that you will then call from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
-```bash
+```shell
 # POST a new deployment to Assertible, and your tests will run against it
 curl -u $ASSERTIBLE_API_TOKEN: -XPOST "https://assertible.com/deployments" -d'{\
     "service": "'"${ASSERTIBLE_SERVICE_ID}"'",\
@@ -94,7 +98,7 @@ curl -u $ASSERTIBLE_API_TOKEN: -XPOST "https://assertible.com/deployments" -d'{\
 
 Call this script on all deployment-related branches by specifying the [tag](https://documentation.codeship.com/pro/builds-and-configuration/steps//#limiting-steps-to-specific-branches-or-tags). Be sure to add this step **after** your deployment, so that the tests are run against the new version of your application. For example:
 
-```yml
+```yaml
 - name: deploy
   service: app
   tag: master
@@ -123,7 +127,7 @@ To test your API or web app during your CI build, Assertible recommends building
 
 To do this, add the following code to a script in your repository and run it in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 # Start your application (NOTE: CUSTOMIZE THIS COMMAND)
 node server.js &
 
@@ -156,7 +160,7 @@ To run tests against your API or website after a deployment, add a new custom-sc
 
 The custom-script step will call the [Assertible Deployments API](https://assertible.com/docs/guide/deployments) to track the new release and run tests against the newly deployed version of your app by using the following command:
 
-```bash
+```shell
 # POST a deployment release to Assertible, and your tests will run against it
 curl -u $ASSERTIBLE_API_TOKEN: -XPOST "https://assertible.com/deployments" -d'{\
     "service": "'"${ASSERTIBLE_SERVICE_ID}"'",\

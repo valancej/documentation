@@ -7,7 +7,8 @@ menus:
 tags:
   - deployment
   - heroku
-
+categories:
+  - Continuous Deployment  
 redirect_from:
   - /continuous-deployment/deployment-to-heroku/
   - /faq/push-to-heroku-rejected/
@@ -40,17 +41,6 @@ Select _Heroku_
 
 ### Step 4 - Deployment Configuration
 
-#### Add SSH Key to Heroku
-Get the public SSH key for your project under _Project Settings_ > _General_ and [add it to Heroku](https://devcenter.heroku.com/articles/keys#adding-keys-to-heroku). If you miss this step you may see an error like this during the `git push` step of the deploy:
-
-```
-Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-```
-
 ![Configure Heroku]({{ site.baseurl }}/images/continuous-deployment/configure_heroku.png)
 
 #### Application Name
@@ -65,7 +55,7 @@ In order for you to deploy your app using Codeship, you need to provide the Hero
 
 You have now successfully setup deployment to Heroku. Go ahead and push a commit to your configured deploy branch.
 
-## Additonal Configuration Settings (optional)
+## Additional Configuration Settings (optional)
 You can configure additional settings to your Heroku deployment by selecting **More Options**:
 
 ![Select Heroku Deploy Options]({{ site.baseurl }}/images/continuous-deployment/select-heroku-deploy-options.png)
@@ -95,6 +85,29 @@ You can specify a command to run post-deployment. The dynos will be restarted af
 This will enable your build to check the URL of your application to make sure that it is up.
 
 ## Troubleshooting
+
+### Missing SSH Key
+The public SSH key for your Codeship project should automatically get added to Heroku when you setup the deployment. If the key is missing or incorrect you may see an error like this during the `git push` step of the deploy:
+
+```
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+To fix this issue, get the public SSH key for your project under _Project Settings_ > _General_ and [add it to Heroku](https://devcenter.heroku.com/articles/keys#adding-keys-to-heroku).
+
+### SSH Key is Already in Use
+
+During a Heroku deployment you might encounter this error on the step that syncs your project's SSH key to Heroku:
+
+```
+This key is already in use by another account. Each account must have a unique key.
+```
+
+To fix this issue, visit _Project Settings_ > _General_ and click _Reset project SSH key_. This will reset the SSH key for the project and add the new key to the repository on your SCM. The next time you deploy the new SSH key will automatically sync to Heroku.
 
 ### check_url fails for Heroku deployment
 

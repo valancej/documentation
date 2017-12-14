@@ -13,13 +13,20 @@ tags:
   - framework
   - javascript
   - languages
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /languages/nodejs/
 ---
 
 * include a table of contents
 {:toc}
+
+<div class="info-block">
+This article is about using Node.js with Codeship Basic.
+
+If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic)
+</div>
 
 ## Versions And Setup
 
@@ -93,7 +100,7 @@ export PREFIX="${HOME}/cache/npm/"
 ### Scoped Packages
 
 <div class="info-block">
-Scoped packages are only avalaible for versions of `npm` greater than 2.7.0.
+Scoped packages are only available for versions of `npm` greater than 2.7.0.
 </div>
 
 To create a scoped package, you simply use a package name that starts with your scope.
@@ -118,13 +125,23 @@ npm config set scope username
 
 ### Yarn
 
-You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as an alternative to npm. Yarn is pre-installed on the build VMs and requires Node.js 4.0 or higher.
+You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as an alternative to npm. Yarn 1.0.2 is pre-installed on the build VMs and requires your project to use Node.js 4.0 or higher.
+
+If you want to [install the latest version of Yarn](https://yarnpkg.com/en/docs/install#alternatives-tab), there are several ways to do it, including:
+
+```
+curl -o- -L https://yarnpkg.com/install.sh | bash
+
+export PATH="$HOME/.yarn/bin:$PATH"
+```
+
+You can also [install specific versions or use npm](https://yarnpkg.com/en/docs/install#alternatives-tab).
 
 ### Webpack
 
 You can install webpack via NPM, as seen below:
 
-```bash
+```shell
 npm install webpack
 ```
 

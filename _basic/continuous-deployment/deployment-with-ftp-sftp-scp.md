@@ -13,6 +13,8 @@ tags:
   - sftp
   - linode
   - digital ocean
+categories:
+  - Continuous Deployment     
 redirect_from:
   - /continuous-deployment/deployment-with-ftp-sftp-scp/
 ---
@@ -21,9 +23,11 @@ redirect_from:
 {:toc}
 
 <div class="info-block">
-  You might also want to check out these related articles:
-  * [Codeship public SSH key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %})
-  * [Deployment via Custom Script]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %})
+This article is about deploying via SFTP with Codeship Basic.
+
+If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic).
+
+You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on Codeship Basic.
 </div>
 
 After your code passed through the pipeline successfully, the last step in your CI chain is deploying your code. You're either using one of our many integrations or deploying with your own script. If you're using your own means of deployment, we recommend tools like rsync, [Capistrano (Ruby)](http://capistranorb.com/), [Rocketeer (PHP)](http://rocketeer.autopergamene.eu/), [Deployer (PHP)](https://deployer.org/), or [Fabric (Python)](http://www.fabfile.org/).
@@ -132,7 +136,7 @@ For ftp we recommend using `lftp` for uploading your files. The following sectio
 
 To keep your password out of your build logs, add it as an environment variable in your project configuration
 
-```shell
+```
 FTP_PASSWORD
 FTP_USER
 ```

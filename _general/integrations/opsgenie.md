@@ -13,6 +13,8 @@ tags:
   - reports
   - reporting
   - integrations
+categories:
+  - Integrations  
 ---
 
 * include a table of contents
@@ -21,6 +23,8 @@ tags:
 ## About OpsGenie
 
 [OpsGenie](https://www.opsgenie.com) lets you send alerts and notifications about critical events to your on-call or development team.
+
+By using OpsGenie your engineering team can respond to important alerts quickly and run your applications without concern.
 
 [Their documentation](https://www.opsgenie.com/docs) does a great job of providing more information, in addition to the setup instructions below.
 
@@ -77,7 +81,7 @@ Alternatively, you could combine your deployment scripts with an OpsGenie API ca
 
 The OpsGenie API call itself, however implemented, will likely look similar to:
 
-```bash
+```shell
 curl -XPOST 'https://api.opsgenie.com/v1/json/alert' -d '
 {
     "apiKey": "YOUR_API_KEY",
@@ -114,7 +118,7 @@ Next, you will need to add [API calls to OpsGenie](https://www.opsgenie.com/docs
 
 The OpsGenie API call will likely look similar to:
 
-```bash
+```shell
 curl -XPOST 'https://api.opsgenie.com/v1/json/alert' -d '
 {
     "apiKey": "YOUR_API_KEY",

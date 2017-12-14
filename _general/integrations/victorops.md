@@ -5,6 +5,8 @@ menus:
   general/integrations:
     title: Using VictorOps
     weight: 13
+categories:
+  - Integrations    
 tags:
   - VictorOps
   - deployment
@@ -21,6 +23,8 @@ tags:
 ## About VictorOps
 
 [VictorOps](https://www.victorops.com) lets you send alerts and notifications about critical events to your on-call or development team.
+
+By using VictorOps your engineering team can respond to important alerts quickly and run your applications without concern.
 
 [Their documentation](https://help.victorops.com) does a great job of providing more information, in addition to the setup instructions below.
 
@@ -67,7 +71,7 @@ Alternatively, you could combine your deployment scripts with an VictorOps API c
 
 The VictorOps API call itself, however implemented, will likely look similar to:
 
-```bash
+```shell
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-VO-Api-Id: addle' --header 'X-VO-Api-Key: lkskakld' -d 'hi' 'https://api.victorops.com/api-public/v1/incidents'
 ```
 
@@ -89,7 +93,7 @@ Next, you will need to add [API calls to VictorOps](https://portal.victorops.com
 
 The VictorOps API call will likely look similar to:
 
-```bash
+```shell
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-VO-Api-Id: addle' --header 'X-VO-Api-Key: lkskakld' -d 'hi' 'https://api.victorops.com/api-public/v1/incidents'
 ```
 

@@ -13,6 +13,10 @@ tags:
   - environment
   - security
   - encryption
+  - aes key
+
+categories:
+  - Builds and Configuration
 
 redirect_from:
   - /pro/getting-started/build-arguments/
@@ -23,7 +27,18 @@ redirect_from:
 * include a table of contents
 {:toc}
 
+<div class="info-block">
+This article is about using Docker build arguments with Codeship Pro.
+
+ If you are unfamiliar with build arguments, we recommend reading [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg).
+
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+
+ Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) to encrypt your build arguments.
+</div>
+
 ## Overview: Build Arguments
+
 For each service, you can declare [build arguments](https://docs.docker.com/compose/compose-file/#/args), which are values available to the image only at build time. For example, if you must pass the image a set of credentials in order to access an asset or repository when the image is built, you would pass that value to the image as a build argument.
 
 ## Build Arguments vs. Environment Variables
@@ -41,7 +56,7 @@ Declaring build arguments in your services file requires updates in two places: 
 ### Dockerfile ARG instruction
 The service's Dockerfile must include the `ARG` [instruction](https://docs.docker.com/engine/reference/builder/#/arg), which declares the name of the argument you will pass at build time. You may also declare a default here.
 
-```bash
+```dockerfile
 FROM ubuntu:latest
 
 ARG build_env # build_env=test would make test the default value
@@ -52,7 +67,7 @@ RUN script-requiring-build-env.sh "$build_env"
 ### Passing build args in the services file
 Now that the Dockerfile knows to expect an argument, you can pass the argument to the image via the service configuration in `codeship-services.yml`.
 
-```bash
+```yaml
 app:
   build:
     dockerfile: Dockerfile
@@ -64,7 +79,7 @@ When the `app` service is built, the value of `build_env` becomes `staging`. If 
 
 You may also declare a build argument before the `FROM` instruction, which is a new feature introduced in Docker 17.05. Following the same pattern, you must first declare the argument before consuming it.
 
-```bash
+```dockerfile
 ARG BASE_IMAGE_TAG
 
 FROM ubuntu:$BASE_IMAGE_TAG
@@ -75,9 +90,13 @@ Note: YAML boolean values (true, false, yes, no, on, off) must be enclosed in qu
 ## Encrypted Build Arguments
 In a lot of cases, the values needed by the image at build time are secrets -- credentials, passwords, and other things that you don't want to check in to source control in plain text. Because of this, Codeship supports encrypted build arguments. You can either encrypt a build argument individually, or encrypt an entire file containing all of the build arguments you need.
 
-First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to root directory (and add it to the `.gitignore` file.)
+First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}#downloading-your-aes-key) to the root directory (and add it to the `.gitignore` file).
 
-```bash
+<div class="info-block">
+If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.
+</div>
+
+```shell
 GEM_SERVER_TOKEN=XXXXXXXXXXXX
 SECRET_BUILDTIME_PASSWORD=XXXXXXXXXXXX
 ```

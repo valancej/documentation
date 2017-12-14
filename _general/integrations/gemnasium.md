@@ -8,6 +8,8 @@ menus:
   general/integrations:
     title: Using Gemnasium
     weight: 17
+categories:
+  - Integrations    
 ---
 
 * include a table of contents
@@ -16,6 +18,8 @@ menus:
 ## About Gemnasium
 
 [Gemnasium](https://gemnasium.com) is a service for analyzing and monitoring the security of your application dependencies.
+
+By using Gemnasium you can be sure that your Ruby gems are up to date and secure.
 
 [The Gemnasium documentation](https://github.com/gemnasium/toolbelt) does a great job of providing more information, in addition to the setup instructions below.
 
@@ -34,7 +38,7 @@ To use Gemnasium in your CI/CD process, you'll need to add the Gemnasium CLI to 
 To add the Gemnasium CLI, you will need to add the following command to the Dockerfile for the service you want to run Gemnasium on:
 
 
-```bash
+```shell
 sudo apt-get install gemnasium-toolbelt
 ```
 
@@ -46,7 +50,7 @@ Once your Gemnasium token is loaded via your environment variables and you have 
 
 We will combine the Gemnasium authentication and Gemnasium scan commands into a script file that we call from a step:
 
-```bash
+```yaml
 - name: Gemnasium
   service: app
   command: gemnasium.sh
@@ -54,7 +58,7 @@ We will combine the Gemnasium authentication and Gemnasium scan commands into a 
 
 Inside this `gemnasium.sh` script, you will have something similar to:
 
-```bash
+```shell
 gemnasium configure $GEMNASIUM-PROJECT-ID
 gemnasium eval -f=Gemfile,Gemfile.lock
 ```
@@ -77,7 +81,7 @@ There are other options to configure your `.gemnasium.yml` file that you can set
 
 To use Gemnasium in your CI/CD process, you'll need to install the Gemnasium CLI via your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}):
 
-```bash
+```shell
 go build -o gemnasium
 ```
 
@@ -87,7 +91,7 @@ Once your Gemnasium token is loaded via your environment variables and you have 
 
 You will need to add the following commands to your project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %})
 
-```bash
+```shell
 gemnasium configure $GEMNASIUM-PROJECT-ID
 gemnasium eval -f=Gemfile,Gemfile.lock
 ```

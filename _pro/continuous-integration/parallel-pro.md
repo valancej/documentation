@@ -12,6 +12,8 @@ tags:
   - speed
   - parallel
   - concurrency
+categories:
+  - Continuous Integration 
 ---
 
 * include a table of contents
@@ -31,7 +33,7 @@ To set up your parallel steps in Codeship Pro, you will be making changes to you
 
 A parallel step group is just defined by using the `type: parallel` header and then nesting all steps you want parallelized underneath, as seen in this example:
 
-```
+```yaml
 - type: parallel
   steps:
   - service: app
@@ -46,7 +48,7 @@ A parallel step group is just defined by using the `type: parallel` header and t
 
 To break a larger test suite into parallelized groups of test specs running simultaneously, you'll want to call your individual specs via separate commands rather than invoking the test suite overall:
 
-```
+```yaml
 - type: parallel
   steps:
   - service: app

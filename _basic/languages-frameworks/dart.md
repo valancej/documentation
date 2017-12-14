@@ -8,6 +8,8 @@ menus:
   basic/languages:
     title: Dart
     weight: 8
+categories:
+  - Languages And Frameworks    
 redirect_from:
   - /languages/dart/
 ---
@@ -28,12 +30,7 @@ You can use these commands from the Dart SDK:
 
 ### Installing New Versions
 
-If you want to use a newer Dart version than what is pre-installed on the build  machines, you can use the following script:
-
-```shell
-wget https://storage.googleapis.com/dart-archive/channels/stable/release/latest/sdk/dartsdk-linux-x64-release.zip
-unzip -o dartsdk-linux-x64-release.zip -d ~
-```
+To change to another version, use [this script](https://github.com/codeship/scripts/blob/master/languages/dart.sh) in your Setup Commands.
 
 ## Dependencies
 
@@ -45,7 +42,7 @@ pub get
 
 ### Dependency Cache
 
-We do not cache Dart dependencies between builds.
+We do not cache Dart dependencies between builds by default, but any dependencies moved into the `$HOME/cache` directory before the end of the build will be cached and can be retrieved from that directory on the next build.
 
 ## Frameworks And Testing
 

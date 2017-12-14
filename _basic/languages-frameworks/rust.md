@@ -9,6 +9,8 @@ menus:
   basic/languages:
     title: Rust
     weight: 9
+categories:
+  - Languages And Frameworks  
 ---
 
 * include a table of contents

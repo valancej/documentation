@@ -17,6 +17,9 @@ tags:
   - troubleshooting
   - cli
 
+categories:
+  - Builds and Configuration
+
 redirect_from:
   - /docker/installation/
   - /pro/installation/
@@ -26,6 +29,15 @@ redirect_from:
   - /jet/  
   - /docker/getting-started/installation/
 ---
+
+<div class="info-block">
+This article is about the local CLI tool that you can use to test and debug your Codeship Pro builds and configuration files as well as to encrypt your [environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and [build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}).
+
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+
+ Note that if you are using Codeship Basic, you will not be able to use the local CLI.
+</div>
+
 
 <div class="info-block">
 Jet is used to locally debug and test builds for Codeship Pro, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship Basic, you will not need to use Jet.
@@ -48,7 +60,7 @@ Please follow the steps below for the operating system you are using. See the [J
 
 See the [sha256sums]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/sha256sums) file for checksums for the latest release. To check the downloaded files on Linux / Unix based systems run the following command.
 
-```bash
+```shell
 shasum -c -a 256 sha256sums
 ```
 
@@ -56,7 +68,7 @@ shasum -c -a 256 sha256sums
 
 The `jet` CLI is now included in [Homebrew Cask](https://caskroom.github.io/). If you already have [Homebrew installed](http://brew.sh/) and the [Caskroom tapped](https://caskroom.github.io/)[^1] you can install `jet` by running the following command
 
-```bash
+```shell
 brew cask install jet
 ```
 
@@ -64,7 +76,7 @@ The formula will install Docker as well. If you already have Docker installed, b
 
 If you don't have Homebrew installed or don't use Homebrew Cask you can install `jet` via the following commands.
 
-```bash
+```shell
 curl -SLO "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz"
 tar -xC /usr/local/bin/ -f jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz
 chmod u+x /usr/local/bin/jet
@@ -74,7 +86,7 @@ chmod u+x /usr/local/bin/jet
 
 ### Installing Jet On Linux
 
-```bash
+```shell
 curl -SLO "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-linux_amd64_{{ site.data.jet.version }}.tar.gz"
 sudo tar -xaC /usr/local/bin -f jet-linux_amd64_{{ site.data.jet.version }}.tar.gz
 sudo chmod +x /usr/local/bin/jet
@@ -95,7 +107,7 @@ The above version is statically linked and will work the same way on all platfor
 
 Once this is done you can check that _Jet_ is working by running `jet help`. This will print output similar to the following.
 
-```bash
+```shell
 $ jet version
 {{ site.data.jet.version }}
 $ jet help
@@ -110,7 +122,7 @@ Usage:
 
 If you installed and configured your Docker environment via [Docker Machine](https://docs.docker.com/machine/) (and you are on OS X or Linux) and named the environment _dev_, running the following command will set those variables.
 
-```bash
+```shell
 eval $(docker-machine env dev)
 ```
 
@@ -144,7 +156,7 @@ While Codeship Pro does not offer SSH access to build machines for debugging lik
 
 To do this, you will need to execute the following commands:
 
-```bash
+```shell
 jet run PRIMARY_SERVICE_NAME
 docker ps -a
 docker exec CONTAINERID
@@ -155,6 +167,8 @@ Note that you are running your containers, looking up the container ID and then 
 ## Common Issues
 
 There are several common issues that you may experience when using the Jet CLI:
+
+- The `--no-cache` flag is deprecated as-is and currently does not work locally. You will need to manually delete images and re-run `jet steps` to force new images to build.
 
 - `No AES key provided` - this error occurs when the Jet CLI can not find an AES key during encryption or decryption. Note that the key file can be found in your _Project Settings_, must be in the same directory you are running `jet encrypt` from and must be named `codeship.aes`.
 

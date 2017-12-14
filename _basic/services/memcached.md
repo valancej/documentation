@@ -11,6 +11,8 @@ menus:
 redirect_from:
   - /services/memcached/
   - /classic/getting-started/memcached/
+categories:
+  - Services  
 ---
 
 * include a table of contents

@@ -10,6 +10,8 @@ tags:
   - dependencies
   - speed
   - caching
+categories:
+  - Builds and Configuration  
 redirect_from:
   - /basic/getting-started/dependency-cache/
 ---

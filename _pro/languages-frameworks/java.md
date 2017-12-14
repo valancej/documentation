@@ -10,7 +10,8 @@ tags:
   - languages
   - docker
   - jvm
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /docker-integration/java/
 ---
@@ -70,7 +71,7 @@ Following are two example Dockerfiles, one for using Maven and one for using Gra
 
 ### Maven
 
-```
+```dockerfile
 # We're using the official Maven 3 image from the Docker Hub (https://hub.docker.com/_/maven/).
 # Take a look at the available versions so you can specify the Java version you want to use.
 FROM maven:3
@@ -93,7 +94,7 @@ COPY . ./
 
 ### Gradle
 
-```
+```dockerfile
 # We're using the official OpenJDK image from the Docker Hub (https://hub.docker.com/_/java/).
 # Take a look at the available versions so you can specify the Java version you want to use.
 FROM java:openjdk-8-jdk
@@ -129,7 +130,7 @@ Multi-stage builds allow you to specify multiple `FROM` lines in a Dockerfile, w
 
 Here's an example using Java in a Dockerfile:
 
-```
+```dockerfile
 # phase one, labeled as build-stage
 # first stage does the building
 

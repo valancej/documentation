@@ -12,7 +12,8 @@ tags:
   - lvh.me
   - xip.io
   - nip.io
-
+categories:
+  - Continuous Integration    
 redirect_from:
   - /continuous-integration/using-subdomains/
 ---
@@ -30,7 +31,7 @@ There are several different services available for you to use. We recommend `lvh
 
 This service is very straight forward. Any request to a subdomain of `lvh.me` will resolve to `127.0.0.1`.
 
-```bash
+```shell
 $ nslookup myapp.lvh.me
 Server:		10.0.3.1
 Address:	10.0.3.1#53
@@ -46,7 +47,7 @@ If you need more flexibility with regards to the resolved IP address try [xip.io
 
 You can configure the IP address as part of the domain name. A name like `myapp.127.0.0.1.xip.io` will resolve to `127.0.0.1`.
 
-```bash
+```shell
 $ nslookup myapp.127.0.0.1.xip.io
 Server:		10.0.3.1
 Address:	10.0.3.1#53
@@ -62,12 +63,12 @@ In most cases this additional flexibility is not required, as you can't modify t
 
 As an alternative to xip.io there is [nip.io](http://nip.io). It works the same way.
 
-```bash
+```shell
 $ nslookup myapp.127.0.0.1.nip.io
 Server:		10.0.3.1
 Address:	10.0.3.1#53
 
 Non-authoritative answer:
 Name:	myapp.127.0.0.1.nip.io
-Address: 127.0.0.1 
+Address: 127.0.0.1
 ```

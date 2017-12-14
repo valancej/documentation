@@ -8,6 +8,8 @@ menus:
   basic/languages:
     title: Go
     weight: 6
+categories:
+  - Languages And Frameworks    
 redirect_from:
   - /languages/go/
 ---

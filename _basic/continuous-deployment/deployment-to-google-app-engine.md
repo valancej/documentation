@@ -3,12 +3,13 @@ title: Deploy To Google App Engine
 menus:
   basic/cd:
     title: Google App Engine
-    weight: 9
+    weight: 8
 tags:
   - deployment
   - google app engine
   - google
-
+categories:
+  - Continuous Deployment   
 redirect_from:
   - /continuous-deployment/deployment-to-google-app-engine/
   - /tutorials/continuous-deployment-google-app-engine-github-django-python/
@@ -55,7 +56,7 @@ Once connected, you will be brought back to your Google App Engine deployment se
 
 You can set the path of your `appcfg.*` file in the _Update Path:_ field. If the file exists on the root of your repository, simply leave it blank.
 
-By default we search for a `app.yml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. If the `app.yml` file is not located, we'll presume the application to be Java based and will use the `appcfg.sh` script insteaad.
+By default we search for a `app.yml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. If the `app.yml` file is not located, we'll presume the application to be Java based and will use the `appcfg.sh` script instead.
 
 #### Application URL
 

@@ -9,6 +9,8 @@ tags:
   - reporting
   - continuous integration
   - integrations
+categories:
+  - Integrations  
 menus:
   general/integrations:
     title: Using Codacy
@@ -20,7 +22,11 @@ menus:
 
 ## About Codacy
 
-[Codacy](https://www.codacy.com) is an automated code coverage service. Starting with Codacy and Codeship is fast and easy. [Their documentation](https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo) does a great job of providing more information, in addition to the setup instructions below.
+[Codacy](https://www.codacy.com) is an automated code coverage service. Starting with Codacy and Codeship is fast and easy.
+
+By using Codacy you can help enforce higher standards of code quality and transparency with your engineering tea.
+
+[Their documentation](https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Codeship Pro
 
@@ -30,7 +36,7 @@ To start, you need to add your `CODACY_PROJECT_TOKEN` to the [encrypted environm
 
 ### Project Configuration
 
-Once your Codacy project ID is loaded via your environment variables, you will need to install the Codacy package into your Dockerfile via your prefered package manager.
+Once your Codacy project ID is loaded via your environment variables, you will need to install the Codacy package into your Dockerfile via your preferred package manager.
 
 You can find specific instructions per-language over at the [Codacy documentation](https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo).
 
@@ -38,7 +44,7 @@ The next step will vary by language. Some of the Codacy packages will automatica
 
 For instance the Rails gem will automatically update your coverage report and export it to Codacy and requires no additional steps, whereas the Python package will require an additional command placed either directly in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) or inside of a script:
 
-```bash
+```yaml
 - name: codacy
   service: app
   command: python-codacy-coverage -r coverage.xml
@@ -64,7 +70,7 @@ The next step will vary by language. Some of the Codacy packages will automatica
 
 For instance the Rails gem will automatically update your coverage report and export it to Codacy and requires no additional steps, whereas the Python package will require an additional command placed either directly in your [[test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or inside of a script:
 
-```bash
+```shell
 python-codacy-coverage -r coverage.xml
 ```
 

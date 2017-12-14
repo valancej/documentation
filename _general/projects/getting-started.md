@@ -11,7 +11,8 @@ tags:
   - account
   - projects
   - firewall
-
+categories:
+  - Projects
 redirect_from:
   - /administration/delete-a-project/
   - /general/projects/delete-a-project/
@@ -25,6 +26,7 @@ redirect_from:
   - /general/projects/cant-find-file-in-repository/
   - /troubleshooting/no-such-file-or-directory-config-yourconfigyml/
   - /faq/no-such-file-or-directory-config-yourconfigyml/
+  - /faq/enabling-access-to-servers/
 ---
 
 * include a table of contents
@@ -59,6 +61,10 @@ You need to have project ownership for deleting a project. Once you click the de
 ![Delete a Project]({{ site.baseurl }}/images/general/deleteproject.png)
 
 All your builds will be deleted as well. Make sure that you really don't need this project anymore. It cannot be recovered once deleted.
+
+## Creating Projects Using Codeship API
+
+If you need to create a large number of projects, or maybe just create similar projects on a regular basis, you can use the API to do the heavy lifting and just have a template on your side that forms the basis for all new projects. To learn more, head over to the [API Documentation]({{ site.baseurl }}{% link _general/integrations/api.md %}) page.
 
 ## Transfer Project Ownership
 You can transfer your project to another account by navigating to:
@@ -125,3 +131,6 @@ cp your_config.yml.example your_config.yml
 ```
 
 You should also check that you are not coming from a case-insensitive operating system where you may not have noticed that the file name is different, i.e. `File.yml` compared to `file.yml`.
+
+## Renaming A Project
+Right now it is not possible to rename a project. You will need to either remove and re-add the project if a repo's name is changed and you want to reflect this, or [contact our support team](email:helpdesk@codeship.com).

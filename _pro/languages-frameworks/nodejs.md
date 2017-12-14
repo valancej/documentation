@@ -12,7 +12,8 @@ tags:
   - frameworks
   - nodejs
   - javascript
-
+categories:
+  - Languages And Frameworks
 redirect_from:
   - /docker-integration/nodejs/
 ---
@@ -75,7 +76,7 @@ Note that every step runs in isolated containers, so changes made on one step do
 
 Following is an example Dockerfile with inline comments describing each step in the file. The Dockerfile shows the different ways you can install extensions or dependencies so you can extend it to fit exactly what you need. Also take a look at the Node image documentation on [the Docker Hub](https://hub.docker.com/_/node/).
 
-```Dockerfile
+```dockerfile
 # We're starting from the Node 8 image
 FROM node:8
 
@@ -99,11 +100,9 @@ Because of version and test dependency issues, it is advised to try using [the J
 
 ### Webpack
 
-### Webpack
-
 You can install webpack via NPM in your services' Dockerfile, as seen below:
 
-```bash
+```dockerfile
 RUN npm install webpack
 ```
 

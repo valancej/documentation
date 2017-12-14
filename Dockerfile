@@ -1,4 +1,4 @@
-FROM ruby:2.4.1-slim
+FROM ruby:2.4.2-slim
 
 ENV CACHE_BUST=2017-09-12 \
     DEBIAN_DISTRIBUTION="jessie" \
@@ -34,7 +34,7 @@ RUN \
 # NPM based dependencies
 COPY package.json yarn.lock ./
 RUN \
-  yarn install --production && \
+  yarn install --production --frozen-lockfile --non-interactive && \
   ln -s /docs/node_modules/gulp/bin/gulp.js /usr/local/bin/gulp
 
 # Ruby based dependencies

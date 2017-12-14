@@ -7,7 +7,8 @@ tags:
   - team management
   - teams
   - account
-
+categories:
+  - Account
 redirect_from:
   - /administration/organizations/
 menus:
@@ -106,9 +107,26 @@ In order to change the account name, navigate to the _Settings_ page of your acc
 
 Account names are required to be unique. Changing the account name will also change the dashboard url - `app.codeship.com/<your_account_name>` - for that account.
 
+## Delete Your Organization Account
+
+To delete your organization account on Codeship, navigate to the _Settings_ page of your organization and select delete organization.
+Be aware that:
+* You have to be part of the **Owner Team**
+* You must cancel your billing subscription before you are able to delete your organization account
+* The organization will be removed and all team members will lose access
+* All your projects, configuration and builds will be deleted
+
+**Note** that you must be in the _Owners_ group to be able to delete an organization.
+
+
 ## Accessing Invoices
 
 For all users assigned the **Owner** role in an organization, you can access invoices by clicking on your name in the top right and selecting an organization from the drop-down. Then, on the sidebar underneath the organization name, you will see a tab for _Invoices_.
+
+## Cancel Your Billing Subscription
+
+To cancel your billing subscription but not delete your account, simply click _Subscription_ from the top navigation and select the free plan as your account option.
+
 
 ## Transfer A Project To An Organization
 

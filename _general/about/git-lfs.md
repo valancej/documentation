@@ -4,10 +4,12 @@ shortTitle: Git LFS
 menus:
   general/about:
     title: GIT LFS
-    weight: 5
+    weight: 7
 tags:
   - git
   - lfs
+categories:
+  - About Codeship  
 ---
 
 * include a table of contents
@@ -23,7 +25,7 @@ You will need to run this script inside a container with both Git and Git LFS in
 
 This container will also need to mount your entire cloned repository as volume in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as:
 
-```bash
+```yaml
 app:
   image: alpine:3.6
   volumes:
