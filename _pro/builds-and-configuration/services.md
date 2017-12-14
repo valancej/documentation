@@ -242,7 +242,7 @@ These flags should instead be implemented as directives in your Services file, a
 
 We do not support the top-level `networks` directive (see [unavailable features](#unavailable-features)) - but all containers are started on isolated networks, per step, by default.
 
-Containers should be bidirectionally discoverable without requiring any custom setup and should not require custom network creation.
+Containers are bidirectionally discoverable without requiring any custom setup and should not require custom network creation.
 
 ## Unavailable Features
 
