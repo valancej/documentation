@@ -14,7 +14,7 @@ tags:
 ---
 
 <div class="info-block">
-You can find a sample repository for deploying with Docker Swarm and Codeship Pro on Github [here](https://github.com/codeship-library/example-voting-app/tree/codeship-integration).
+You can find a sample repository for deploying with Docker Swarm and Codeship Pro on Github [here](https://github.com/codeship-library/example-voting-app).
 </div>
 
 * include a table of contents
@@ -64,4 +64,4 @@ Note that this example is using a `docker` command. This will only work if the c
 
 ## Example Project
 
-To learn more, you can [visit our sample repository](https://github.com/codeship-library/example-voting-app/tree/codeship-integration) to see a working example of using Compose V3 and Swarm to deploy to Google Cloud.
+To learn more, you can [visit our sample repository](https://github.com/codeship-library/example-voting-app) to see a working example of using Compose V3 and Swarm to deploy to Google Cloud.
