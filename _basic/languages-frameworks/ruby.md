@@ -7,10 +7,12 @@ menus:
     weight: 1
 tags:
   - ruby
+  - jruby
   - languages
   - rails
   - sinatra
   - rvm
+  - bundler
 categories:
   - Languages And Frameworks
 redirect_from:
@@ -24,18 +26,18 @@ redirect_from:
 ## Versions And Setup
 
 ### RVM
-We use RVM to manage different Ruby versions. We set <strong>{{ site.data.basic.defaults.ruby }}</strong> as the default version. Currently we do not load the Ruby version from your Gemfile. You can always change the Ruby version by running:
+We use [RVM](https://rvm.io) to manage different [Ruby](https://www.ruby-lang.org/en) and [JRuby](http://jruby.org) versions. We set **{{ site.data.basic.defaults.ruby }}** as the default version. Currently we do not automatically load the Ruby version from your Gemfile. You can always change the Ruby version by running:
 
 ```shell
 rvm use RUBY_VERSION_YOU_WANT_TO_USE
 ```
 
-The following Ruby versions are preinstalled
+The following Ruby versions are preinstalled:
 
 {% include basic/ami/{{ site.data.basic.ami_id }}/ruby.md %}
 
 ### Using a .ruby-version file
-You can also use your .ruby-version file on Codeship. The .ruby-version file lives in the project root and its content is just your Ruby version, for example: `2.0.0-p195`. You can just read the ruby version to use from that file:
+You can also use your `.ruby-version` file on Codeship. The `.ruby-version` file lives in the project root and its content is just your Ruby version, for example: `2.4.2`. You can read the Ruby version to use from that file:
 
 ```shell
 rvm use $(cat .ruby-version) --install
@@ -45,15 +47,14 @@ One use case is that you can change your Ruby version for different branches.
 
 ## Dependencies
 
-You can install dependencies using bundler in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+You can install dependencies using [bundler](http://bundler.io) in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 For example:
 
 ```shell
 gem install bundler
+bundle install
 ```
-
-If you want to use a version of bundler different than what is preinstalled on the VM, you will need to install bundler yourself by adding the following command to your setup steps
 
 ### Dependency Cache
 
@@ -61,15 +62,15 @@ Codeship automatically configures bundler to use the `$HOME/cache/bundler` direc
 
 ## Frameworks And Testing
 
-Our Ruby support includes Ruby itself, Rails, Sinatra and most other frameworks that do not require root-access for customized system configuration.
+Our Ruby support includes Ruby itself, [Rails](http://rubyonrails.org), [Sinatra](http://sinatrarb.com) and most other frameworks that do not require root-access for customized system configuration.
 
-We also support all Ruby based test frameworks from RSpec, Cucumber to Minitest or others.
+We also support all Ruby based test frameworks like RSpec, Cucumber and Minitest.
 
-Capybara is also supported out of the box with the selenium-webdriver , capybara-webkit or the poltergeist driver for phantomjs.
+Capybara is also [supported out of the box]({{ site.baseurl }}{% link _basic/continuous-integration/browser-testing.md %}) with the selenium-webdriver, capybara-webkit or the poltergeist driver for PhantomJS.
 
 ## Parallel Testing
 
-If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), you will want separate your RSpec tests into groups and call a group specifically in each pipeline. For instance:
+If you are running [parallel test pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), you will want to separate your RSpec tests into groups and call a group specifically in each pipeline. For instance:
 
 **Pipeline 1**:
 ```shell
@@ -83,9 +84,9 @@ rspec spec/spec_2
 
 ### Parallelization Gems
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
+In addition to parallelizing your tests explicitly [with parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), there are a couple Rails gems that are popular ways to parallelize within your codebase.
 
-While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues, as well.
+While we do not officially support or integrate with these modules, many Codeship users find success speeding their tests up by using them. Note that it is possible for these gems to cause resource and build failure issues.
 
 - [https://github.com/grosser/parallel_tests](https://github.com/grosser/parallel_tests)
 - [https://github.com/ArturT/knapsack](https://github.com/ArturT/knapsack)
@@ -117,7 +118,7 @@ Please make sure the version of the gem you want to install wasn't removed from 
 
 ### RVM Requires Curl
 
-Any Ruby version you might need should already be installed by default, however if you are trying to manually install a version with rvm you may encounter the following error:
+Any Ruby version you might need should already be installed by default, however if you are trying to manually install a version with RVM you may encounter the following error:
 
 ```
 RVM requires 'curl'. Install 'curl' first and try again.
