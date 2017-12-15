@@ -29,7 +29,7 @@ Navigate to your project's deployment configuration page by selecting _Project S
 ![Project Settings Deployment]({{ site.baseurl }}/images/continuous-deployment/project_configuration.png)
 
 ### Step 2 - Add New Deployment Pipeline
-Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}#wildcard-branch-deployment-pipelines).
+Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}#wildcard-branch-deployment-pipelines %}).
 
 ![Create branch deploy]({{ site.baseurl }}/images/continuous-deployment/create_deploy_branch.png)
 
@@ -121,6 +121,4 @@ If the build fails during `check_url YOUR_URL` it's usually because your applica
 
 * Configure a URL that will respond with such an status code in the advanced deployment configuration.
 
-* Enter a generic URL(e.g. `http://google.com`) in the deployment configuration if you want to _disable_ the check entirely.
-
-**Note** that you can disabled the check URL functionality by unselecting the "Check app URL" options on the deployment configuration.
+**Note** that you can disable the check URL functionality by unselecting the "Check app URL" option on the deployment configuration.
