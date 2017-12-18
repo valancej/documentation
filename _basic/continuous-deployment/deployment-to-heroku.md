@@ -49,11 +49,11 @@ Insert the name of the Heroku application you want the pipeline to deploy to.
 #### Heroku API Key
 In order for you to deploy your app using Codeship, you need to provide the Heroku API key from your Heroku account. You can access your Heroku API key [here](https://dashboard.heroku.com/account).
 
-### Success!
+### Push A Build
 
 ![Heroku Success]({{ site.baseurl }}/images/continuous-deployment/heroku_success.png)
 
-You have now successfully setup deployment to Heroku. Go ahead and push a commit to your configured deploy branch.
+You have now successfully setup deployment to Heroku. Go ahead and [push a commit to your configured deploy branch]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 ## Additional Configuration Settings (optional)
 You can configure additional settings to your Heroku deployment by selecting **More Options**:
@@ -121,4 +121,4 @@ If the build fails during `check_url YOUR_URL` it's usually because your applica
 
 * Configure a URL that will respond with such an status code in the advanced deployment configuration.
 
-* Enter a generic URL(e.g. `http://google.com`) in the deployment configuration if you want to _disable_ the check entirely.
+**Note** that you can disable the check URL functionality by unselecting the "Check app URL" option on the deployment configuration.
