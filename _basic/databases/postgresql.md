@@ -5,6 +5,9 @@ tags:
   - services
   - databases
   - postgresql
+  - postgres
+  - psql
+  - pg
   - db
 menus:
   basic/db:
@@ -96,7 +99,7 @@ This can be resolved by adding the following command in your **Setup Commands** 
 export PATH=/usr/lib/postgresql/<PG_VERSION>/bin/:$PATH
 ```
 
-## Run `psql` commands
+## Run psql commands
 You can run any SQL query against the PostgreSQL database. For example to create a new database:
 
 ```shell
