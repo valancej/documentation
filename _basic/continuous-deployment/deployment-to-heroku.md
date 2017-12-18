@@ -53,7 +53,7 @@ In order for you to deploy your app using Codeship, you need to provide the Hero
 
 ![Heroku Success]({{ site.baseurl }}/images/continuous-deployment/heroku_success.png)
 
-You have now successfully setup deployment to Heroku. Go ahead and [push a commit to your configured deploy branch]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md).
+You have now successfully setup deployment to Heroku. Go ahead and [push a commit to your configured deploy branch]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 ## Additional Configuration Settings (optional)
 You can configure additional settings to your Heroku deployment by selecting **More Options**:
