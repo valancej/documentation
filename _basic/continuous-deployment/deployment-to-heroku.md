@@ -29,7 +29,7 @@ Navigate to your project's deployment configuration page by selecting _Project S
 ![Project Settings Deployment]({{ site.baseurl }}/images/continuous-deployment/project_configuration.png)
 
 ### Step 2 - Add New Deployment Pipeline
-Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}#wildcard-branch-deployment-pipelines %}).
+Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}#wildcard-branch-deployment-pipelines).
 
 ![Create branch deploy]({{ site.baseurl }}/images/continuous-deployment/create_deploy_branch.png)
 
@@ -49,7 +49,7 @@ Insert the name of the Heroku application you want the pipeline to deploy to.
 #### Heroku API Key
 In order for you to deploy your app using Codeship, you need to provide the Heroku API key from your Heroku account. You can access your Heroku API key [here](https://dashboard.heroku.com/account).
 
-### Success!
+### Push A Build
 
 ![Heroku Success]({{ site.baseurl }}/images/continuous-deployment/heroku_success.png)
 
