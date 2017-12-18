@@ -1,4 +1,4 @@
-FROM ruby:2.4.2-slim
+FROM ruby:2.4.3-slim
 
 ENV CACHE_BUST=2017-09-12 \
     DEBIAN_DISTRIBUTION="jessie" \
