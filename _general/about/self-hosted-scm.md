@@ -26,11 +26,9 @@ categories:
 * include a table of contents
 {:toc}
 
-## Beta Access
+## Enterprise Support
 
-Codeship supports self-hosted [Git](https://git-scm.com) repositories for the GitHub Enterprise, GitLab Community Edition, GitLab Enterprise Edition and Bitbucket Server products.
-
-This is a beta feature and you will need to [contact us and request access](mailto:solutions@codeship.com).
+Codeship supports self-hosted [Git](https://git-scm.com) repositories for the GitHub Enterprise, GitLab Community Edition, GitLab Enterprise Edition and Bitbucket Server products - in addition to our [standard Cloud SCM support]({{ site.baseurl }}{% link _general/about/scm-support.md %}).
 
 ## Exposing Ports
 
