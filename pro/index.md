@@ -13,7 +13,7 @@ Codeship Pro uses containers built from Docker images to let you define and buil
 ## Getting Started
 To get started with Codeship Pro, there are a few articles that may be helpful.
 
-- [Read the getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) if you are a new to the service.
+- [Read the getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) if you are new to the service.
 
 - Watch this [webinar demo](https://resources.codeship.com/webinars/thank-you-video-an-introduction-to-ci-cd-with-docker-best-practices) to learn more about using Docker for CI/CD.
 
