@@ -9,13 +9,15 @@ tags:
   - scm
   - vcs
   - github
-  - bitbucket
-  - gitlab
   - github enterprise
+  - bitbucket
   - bitbucket stash
   - bitbucket server
+  - gitlab
   - gitlab enterprise edition
   - gitlab community edition
+  - gitlab ee
+  - gitlab ce
   - git
   - on premise
   - enterprise
@@ -28,7 +30,7 @@ categories:
 
 ## Enterprise Support
 
-Codeship supports self-hosted [Git](https://git-scm.com) repositories for the GitHub Enterprise, GitLab Community Edition, GitLab Enterprise Edition and Bitbucket Server products - in addition to our [standard Cloud SCM support]({{ site.baseurl }}{% link _general/about/scm-support.md %}).
+Codeship supports self-hosted [Git](https://git-scm.com) repositories for the [GitHub Enterprise](https://enterprise.github.com/home), [GitLab Community Edition](https://gitlab.com/gitlab-org/gitlab-ce), [GitLab Enterprise Edition](https://about.gitlab.com/gitlab-ee) and [Bitbucket Server](https://www.atlassian.com/software/bitbucket/server) products - in addition to our [standard cloud SCM support]({{ site.baseurl }}{% link _general/about/scm-support.md %}).
 
 ## Exposing Ports
 
@@ -40,14 +42,12 @@ We require port 22 to clone your repository to run your builds and port 433 for 
 
 ## Personal Access Tokens
 
-To connect to your self-hosted Git instance, you will need to retrieve your personal access token and add it to your _Connected Services_ screen.
-
-On Codeship, you can find your _Connected Services_ screen by navigating to [https://app.codeship.com/authentications](https://app.codeship.com/authentications) once you've logged in.
+To connect to your self-hosted Git instance, you will need to retrieve your personal access token and add it to your [Connected Services](https://app.codeship.com/authentications) page.
 
 To fetch your token, follow these instructions:
 
-- [Github Enterprise](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
-- [Gitlab Community Edition](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) or [Enterprise Edition](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
+- [GitHub Enterprise](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+- [GitLab Community Edition](https://docs.gitlab.com/ce/user/profile/personal_access_tokens.html) or [Enterprise Edition](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
 - [Bitbucket Server](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html)
 
 **Note** that Codeship requires Bitbucket Server 5.5 due to prior versions not providing personal access tokens.
