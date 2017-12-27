@@ -7,6 +7,8 @@ tags:
   - alerts
   - account
   - slack
+  - hipchat
+  - shipscope
 categories:
   - Account  
 redirect_from:
@@ -235,7 +237,7 @@ https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=BRANCH_NAME
 
 ### Shipscope - Chrome Extension
 
-Monitor your Codeship projects and builds with [Shipscope](https://chrome.google.com/webstore/detail/shipscope/jdedmgopefelimgjceagffkeeiknclhh). Shipscope lists all of your Codeship projects and presents the status of recent builds in the Chrome toolbar. You can restart a build or go straight to the build details on the Codeship service.
+Monitor your Codeship projects and builds with [Shipscope](https://chrome.google.com/webstore/detail/shipscope/lajnoiemmpanljkbiiclldijcknbbkfm). Shipscope lists all of your Codeship projects and presents the status of recent builds in the Chrome toolbar. You can restart a build or go straight to the build details on the Codeship service.
 
 The Shipscope notifications presented by Chrome will end up in the Notification Center. If you would like to prevent Shipscope notifications in the Notification Center, simply:
 
