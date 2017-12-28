@@ -24,15 +24,15 @@ A custom script deployment is useful if your deployment requires additional or c
 A custom script deployment is also useful when you need to execute another task after or prior to a deployment. For example:
 
 ```shell
-# execute rake tasks
+# Execute rake tasks
 bundle exec rake my_rake_task
 
-# run additional tests
+# Run additional tests
 # my_test_script.sh lives in the root folder
 ./my_test_script.sh
 
-# deploy to Amazon S3 or any other server with ssh access
-# you can define your keys in the environment variables
+# Deploy to Amazon S3 or any other server with ssh access
+# You can define your keys with environment variables
 ```
 
 Please follow these steps to create a custom deployment script:
@@ -65,4 +65,4 @@ Insert your deployment commands in the _Deployment Commands_ box shown below. Th
 
 ![Custome Deployment Success]({{ site.baseurl }}/images/continuous-deployment/custom_script_success.png)
 
-You have now successfully created a custom deployment script. Go ahead and push a commit to your configured deploy branch. If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com/) page.
+You have now successfully created a custom deployment script. Go ahead and push a commit to your configured deploy branch.
