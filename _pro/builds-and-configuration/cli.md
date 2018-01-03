@@ -12,7 +12,7 @@ tags:
   - introduction
   - installation
   - running locally
-  - debugging
+  - debug
   - setup
   - troubleshooting
   - cli
