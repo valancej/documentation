@@ -20,7 +20,7 @@ redirect_from:
 {:toc}
 
 <div class="info-block">
-In addition to this guide, we've also got [quickstart repos and sample apps]() available to make starting out with Codeship Pro faster and easier.
+In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
 </div>
 
 The source for the tutorial is available on GitHub at [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
