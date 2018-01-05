@@ -1,5 +1,5 @@
-latest_update: '2017/12/7'
-ami_id: 'ami-4c80e036'
+latest_update: '2018/01/05'
+ami_id: 'ami-876f3ffd'
 defaults:
   ruby: '2.1.7'
   php: '5.5'
