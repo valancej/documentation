@@ -1,9 +1,5 @@
 ---
-title: Getting Started With Codeship Pro Part 5
-menus:
-  pro/quickstart:
-    title: Getting Started Pt. 5
-    weight: 6
+title: Codeship Pro Introduction Guide Part 5
 tags:
   - docker
   - jet
@@ -21,6 +17,10 @@ redirect_from:
 
 * include a table of contents
 {:toc}
+
+<div class="info-block">
+In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
+</div>
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 

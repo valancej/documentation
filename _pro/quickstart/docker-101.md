@@ -4,7 +4,7 @@ layout: page
 menus:
   pro/quickstart:
     title: Docker For CI/CD
-    weight: 8
+    weight: 3
 categories:
   - Quickstart    
 tags:
