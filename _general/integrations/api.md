@@ -58,7 +58,19 @@ For Projects, you're able to do most CRUD operations (we're working on the remai
 
 Builds can't really be deleted, but otherwise you can do pretty much anything with them. You can even go a level deeper than what the Codeship UI offers; if you restart a build, the old build data is kept around, but the UI only shows the latest. With the builds endpoint you can get the information on those old builds as well.
 
-In terms of `commands` on the builds endpoint, we've deviated slightly from "textbook REST" and have allowed endpoints to `/restart` and existing build or `/stop` a running build. If you want to trigger a build that pulls the latest code from a given branch, you would POST to the `/builds` endpoint with the project and the branch in question. More details can be found on this in the [API v2 Documentation](https://apidocs.codeship.com/v2/).
+In terms of `commands` on the builds endpoint, we've deviated slightly from "textbook REST" and have allowed endpoints to `/restart` an existing build or `/stop` a running build. If you want to trigger a build that pulls the latest code from a given branch, you would POST to the `/builds` endpoint with the project and the branch in question. More details can be found on this in the [API v2 Documentation](https://apidocs.codeship.com/v2/).
+
+## API Clients
+
+### Golang
+
+If you're using Golang for you automation, you can get started more quickly with the [Official Codeship Go API Client](https://github.com/codeship/codeship-go). There's a good introduction in the git repo, and you can find the [full documentation here](https://godoc.org/github.com/codeship/codeship-go).
+
+The Golang library is released with the MIT license, so feel free to use it as you will. If you have suggestions, bugs or otherwise want to contribute to the project, please use the [GitHub Issues](https://github.com/codeship/codeship-go/issues) to submit these (or submit a PR).
+
+### Ruby & Javascript
+
+We plan to add Ruby and Javascript API clients in the near future.
 
 **Things to note**:
 
@@ -66,5 +78,5 @@ In terms of `commands` on the builds endpoint, we've deviated slightly from "tex
 
 ## Deprecation of v1
 
-With the public release of v2, the old v1 API will be deprecated by July 1st, 2018. If you're relying on v1 and don't think you can migrate to v2 before this date, please get in touch and we'll see how we can help.
+With the public release of v2, the old v1 API will be deprecated by July 1st, 2018. If you're relying on v1 and don't think you can migrate to v2 before this date, please get in touch with [helpdesk.codeship.com](https://helpdesk.codeship.com) and we'll see how we can help.
 
