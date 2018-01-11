@@ -7,6 +7,7 @@ menus:
     weight: 3
 tags:
   - git
+  - testing
   - submodules
 categories:
   - Continuous Integration

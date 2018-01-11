@@ -8,6 +8,7 @@ menus:
 tags:
   - cdn
   - artifacts
+  - testing
 categories:
   - Continuous Integration
 redirect_from:

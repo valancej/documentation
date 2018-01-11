@@ -19,6 +19,7 @@ tags:
   - firefox
   - phantomjs
   - selenium
+  - testing
 categories:
   - Continuous Integration
 redirect_from:
