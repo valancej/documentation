@@ -519,11 +519,37 @@ ul#markdown-toc {
 div.homepage-header {
 
   h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    text-align: center;
+    margin: 3rem 0 1rem 0;
   }
 
-  h4.box__title {
-    font-size: 1.4rem;    
+  p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+.homepage-subnav p {
+  margin: .5rem 0 1rem 0;
+  font-weight: bold;
+  text-align: center;
+
+  a {
+    margin-right: 0.5rem;
+    font-size: .9rem;
+  }
+}
+
+div #homepage-title {
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
   }
 
 }
