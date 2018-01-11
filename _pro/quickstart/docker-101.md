@@ -18,6 +18,10 @@ tags:
 * include a table of contents
 {:toc}
 
+<div class="info-block">
+We've got [quickstart repos, sample apps and a getting started guide]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
+</div>
+
 Because Codeship Pro uses Docker domain language, and is powered by Docker, most customers find it easier to use if they are familiar with Docker concepts.
 
 While being a Docker user is not required to use Codeship Pro, the more you know about Docker the more natively you will be able to understand Codeship Pro.
