@@ -27,9 +27,7 @@ if [ -f "_data/jet.yml" ]; then
 fi
 
 if [ -f "_pro/builds-and-configuration/release-notes.md" ]; then
-	log "Copying changelog to destination"
 	cat "${jet_source}/CHANGELOG.md" >> "_pro/builds-and-configuration/release-notes.md"
-	cat "_pro/builds-and-configuration/release-notes.md"
 fi
 
 rm -rf "${jet_source}"
