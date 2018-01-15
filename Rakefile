@@ -9,6 +9,12 @@ desc 'Run the development server'
 task :serve do
 	sh "docker run -it --rm -p 4000:4000 -v $(pwd):/docs #{IMAGE_NAME}"
 end
+namespace :serve do
+	desc "Serve a locally available site (from the ./tmp/site/ directory) via nginx"
+	task :local do
+		sh "docker run -it --rm -p 4000:80 -v $(pwd)/tmp/site:/usr/share/nginx/html:ro nginx:alpine"
+	end
+end
 
 desc 'Run tests'
 task :test do
