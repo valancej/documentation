@@ -26,7 +26,7 @@ redirect_from:
   - /pro/getting-started/installation/
   - /docker/cli/
   - /pro/cli/
-  - /jet/  
+  - /jet/
   - /docker/getting-started/installation/
 ---
 
@@ -70,6 +70,9 @@ The `jet` CLI is now included in our custom [Homebrew Cask](https://github.com/c
 
 ```shell
 brew cask install codeship/taps/jet
+
+# If you already have the CLI installed and want to update to the latest version
+brew case reinstall codeship/taps/jet
 ```
 
 If you don't have Homebrew installed or don't use Homebrew Cask you can install `jet` via the following commands.

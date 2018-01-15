@@ -64,6 +64,9 @@ exclude:
   - codeship-steps.yml
   - codeship.aes
   - CONTRIBUTING.md
+  - deployment.env*
+  - dockercfg*
+  - Dockerfile*
   - external
   - Gemfile*
   - Guardfile
@@ -72,9 +75,12 @@ exclude:
   - node_modules
   - npm-shrinkwrap.json
   - package.json
+  - Rakefile
   - README.md
   - SUPPORT.md
   - templates
+  - tmp
+  - yarn.lock
 encoding: utf-8
 plugins:
   - jekyll-coffeescript

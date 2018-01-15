@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-log() { echo -e "\033[36m$@\033[39m"; }
+log() { echo -e "\033[36m$*\033[39m"; }
 
 # Special settings for the "master" branch, compile the site to the "master"
 # subdirectory, but use an empty baseurl, so we can deploy to the bucket root
@@ -27,7 +27,7 @@ if [ -f "_data/jet.yml" ]; then
 fi
 
 if [ -f "_pro/builds-and-configuration/release-notes.md" ]; then
-	cat "${jet_source}/release-notes" >> "_pro/builds-and-configuration/release-notes.md"
+	cat "${jet_source}/CHANGELOG.md" >> "_pro/builds-and-configuration/release-notes.md"
 fi
 
 rm -rf "${jet_source}"
