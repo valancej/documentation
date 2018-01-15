@@ -12,6 +12,7 @@ tags:
   - lvh.me
   - xip.io
   - nip.io
+  - testing
 categories:
   - Continuous Integration    
 redirect_from:

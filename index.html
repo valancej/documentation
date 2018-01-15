@@ -8,93 +8,209 @@ bodyclass: is-blue
 <div class="contentWrapper">
   <div class="grid">
     <div class="row">
+        <div class="col" id="homepage-title">
+          <h1>Codeship Developer Resources</h1>
+          <p>We're here to help you solve your problems quickly and efficiently.</p>
+        </div>
+    </div>
+    <div class="row homepage-subnav">
         <div class="col">
-          <h1>Codeship Documentation & Resources</h1>
-          <p>In addition to our documentation, we produce technical content in the form of ebooks, blogs and webinars covering a range of use cases and technologies to help you learn more and solve problems.</p>
+          <p><a href="#starting-out">Starting Out</a> | <a href="#your-role">Developers</a> | <a href="#your-role">DevOps</a> | <a href="#your-role">Managers</a> | <a href="#testing-section">Testing</a> | <a href="#deploying-section">Deploying</a> | <a href="#technical-section">Technical Specs</a></p>
+          <a name="starting-out" id="starting-out"></a>
+          <hr />
         </div>
     </div>
 
+
+    <div class="homepage-header">
+      <h3>Starting Out</h3>
+      <p>If you're looking to follow-along with a quick start guide and learn how to use Codeship quickly:</p>
+    </div>
+
     <div class="grid grid--boxContainer">
-      <div class="colxs100 colsm100 colmd100 collg100">
+      <div class="colxs100 cols45 colmd50 collg50">
         <div class="box">
-          <h2 class="box__title">Getting Started Guides</h2>
-          <p>If you're looking to follow-along with a quick start guide and learn how to use Codeship quickly:</p>
+          <h4 class="box__title homepage__box__title">Basic</h3>
+          <p>For straightforward web apps, non-containerized apps and turnkey deployments.</p>
           <br />
-          <p class="box-link">- <a href="{{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}">Get Started With Codeship Pro</a></p>
-          <p class="box-link">- <a href="{{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}">Get Started With Codeship Basic</a></p>
+          <p>- <a href="{{ site.baseurl }}/tags/languages/">Language Quickstarts</a></p>
+          <p>- <a href="{{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}">In-Depth Intro Guide</a></p>
+          <p>- <a href="https://resources.codeship.com/webinars/env-parity-docker-codeship-jet.md">Introductory Walkthrough Video</a></p>
+          <p>- <a href="https://github.com/codeship/scripts">Scripts Library</a></p>
+        </div>
+      </div>
+      <div class="colxs100 cols45 colmd50 collg50">
+        <div class="box">
+          <h4 class="box__title homepage__box__title">Pro</h3>
+          <p>For Docker applications, cloud-native applications and complex deployment needs.</p>
+          <br />
+          <p class="box-link">- <a href="{{ site.baseurl }}{% link _pro/quickstart/quickstart-examples.md %}">Quickstart Repos</a></p>
+          <p class="box-link">- <a href="{{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}">Getting Started Guide</a></p>
+          <p class="box-link">- <a href="https://resources.codeship.com/webinars/env-parity-docker-codeship-jet.md">Introductory Walkthrough Video</a></p>
+          <p class="box-link">- <a href="https://github.com/codeship-library">Sample Apps & Projects</a></p>
           </ul>
+          <a name="your-role" id="your-role"></a>
         </div>
       </div>
+    </div>
+
+    <div class="homepage-header">
+      <h3>For Your Role</h3>
+      <p>If you're looking to follow-along with a quick start guide and learn how to use Codeship quickly:</p>
     </div>
 
     <div class="grid grid--boxContainer">
-      <div class="colxs100 colsm100 colmd100 collg100">
+      <div class="colxs100 colsm33 colmd33 collg33">
         <div class="box">
-          <h2 class="box__title">Code Examples And Sample Projects</h2>
-          <p>Browse code examples and and sample projects for:</p>
-          <br />
-          <p class="box-link">- <a href="https://documentation.codeship.com/integrations">Integrations</a></p>
-          <p class="box-link">- <a href="https://github.com/codeship-library">Codeship Pro</a></p>
-          <p class="box-link">- <a href="https://github.com/codeship/scripts">Codeship Basic</a></p>
-          </ul>
+          <h4 class="box__title homepage__box__title">Developers</h3>
+          <p>Learn everything you need to know to build powerful CI/CD wokrflows, debug faster and improve your code using Codeship with our <a href="{{ site.baseurl }}/collections/developers">developer resource page.</a></p>
         </div>
       </div>
+      <div class="colxs100 colsm33 colmd33 collg33">
+        <div class="box">
+          <h4 class="box__title homepage__box__title">DevOps</h3>
+          <p>Manage your DevOps processes, your infrastructure and your team's deployment and cloud needs using Codeship with our <a href="{{ site.baseurl }}/collections/devops">DevOps resource page.</a></p>
+        </div>
+      </div>
+      <div class="colxs100 colsm33 colmd33 collg33">
+        <div class="box">
+          <h4 class="box__title homepage__box__title">Managers</h3>
+          <p>Keep your team productive, secure and happy by making the most of features like notifications, access rules, resources and more with our <a href="{{ site.baseurl }}/collections/managers/">manager resource page.</a></p>
+          <a name="testing-section" id="testing-section"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage-header">
+      <h3>Testing</h3>
+      <p>If you're looking to follow-along with a quick start guide and learn how to use Codeship quickly:</p>
     </div>
 
     <div class="grid grid--boxContainer">
-      <div class="colxs100 colsm100 colmd100 collg100">
+      <div class="colxs100 colsm50 colmd50 collg50">
         <div class="box">
-          <h2 class="box__title">Popular Language Articles</h2>
-          <p><strong>Codeship Pro:</strong> <a href="{{ site.baseurl }}{% link pro/all/index.html %}">All Docs</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/ruby.md %}">Ruby</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/nodejs.md %}">Node</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/php.md %}">PHP</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/python.md %}">Python</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/java.md %}">Java</a> | <a href="{{ site.baseurl }}{% link _pro/languages-frameworks/go.md %}">Go</a>
-            <p><strong>Codeship Basic:</strong> <a href="{{ site.baseurl }}{% link basic/all/index.html %}">All Docs</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/ruby.md %}">Ruby</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/nodejs.md %}">Node</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/php.md %}">PHP</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}">Python</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}">Java</a> | <a href="{{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}">Go</a> </p>
-          <br />
-          <p class="box-link"><a class="more-link" href="{{ site.baseurl }}/tags/languages">View All Language Articles</a></p>
+          <h4 class="box__title homepage__box__title">Configure Your Tests</h4>
+          <p>- <a href="{{ site.baseurl }}/tags/parallel">Parallel Testing</a></p>
+          <p>- <a href="{{ site.baseurl }}/tags/browser-testing">Browser Testing</a></p>
+          <p>- <a href="{{ site.baseurl }}/tags/languages">Language Examples</a></p>
+          <p>- <a href="{{ site.baseurl }}/tags/testing/">More Testing Articles</a></p>
         </div>
       </div>
+      <div class="colxs100 colsm50 colmd50 collg50">
+        <div class="box">
+          <h4 class="box__title homepage__box__title">More Power</h2>
+          <p>- <a href="{{ site.baseurl }}/integrations/#codecov">Adding Code Coverage</a></p>
+          <p>- <a href="{{ site.baseurl }}/integrations/#notifications">Build Notifications</a></p>
+          <p>- <a href="{{ site.baseurl }}/integrations/#monitoring">Build Monitoring And Tracking</a></p>
+          <p>- <a href="{{ site.baseurl }}{% link _general/integrations/custom-integration.md %}">Integrating Other Services</a></p>
+          <a name="deploying-section" id="deploying-section"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="homepage-header">
+      <h3>Deploying</h3>
+      <p>If you're looking to follow-along with a quick start guide and learn how to use Codeship quickly:</p>
+    </div>
+
+    <div class="grid grid--boxContainer" id="integrations">
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+        <div class="box">
+          <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}/tags/aws/">AWS</a></h4>
+            <a href="{{ site.baseurl }}/tags/aws/"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/aws.jpg"></a>
+        </div>
+      </div>
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+        <div class="box">
+          <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}/tags/azure/">Azure</a></h4>
+            <a href="{{ site.baseurl }}/tags/azure/"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/azure.jpg"></a>
+        </div>
+      </div>
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+        <div class="box">
+          <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}/tags/digitalocean">Digital Ocean</a></h4>
+            <a href="{{ site.baseurl }}/tags/digitalocean"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/digitalocean.jpg"></a>
+        </div>
+      </div>
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+       <div class="box">
+         <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}{% link _general/integrations/firebase.md %}">Firebase</a></h4>
+           <a href="{{ site.baseurl }}{% link _general/integrations/firebase.md %}"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/firebase.jpg"></a>
+       </div>
+     </div>
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+        <div class="box">
+          <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}/tags/google/">Google Cloud</a></h4>
+            <a href="{{ site.baseurl }}/tags/google/"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/google.jpg"></a>
+        </div>
+      </div>
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+        <div class="box">
+          <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}/tags/heroku/">Heroku</a></h4>
+            <a href="{{ site.baseurl }}/tags/heroku/"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/heroku.jpg"></a>
+        </div>
+      </div>
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+        <div class="box">
+          <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}">IBM Bluemix</a></h4>
+            <a href="{{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/ibm.jpg"></a>
+        </div>
+      </div>
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+        <div class="box">
+          <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}{% link _pro/continuous-deployment/deployment-with-kubernetes.md %}">Kubernetes</a></h4>
+            <a href="{{ site.baseurl }}{% link _pro/continuous-deployment/deployment-with-kubernetes.md %}"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/kubernetes.jpg"></a>
+        </div>
+      </div>
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+        <div class="box">
+          <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}/tags/ssh">SSH</a></h4>
+            <a href="{{ site.baseurl }}/tags/ssh"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/ssh.jpg"></a>
+        </div>
+      </div>
+
+      <div class="colxs50 colsm50 colmd30 collg20">
+        <div class="box">
+          <h4 class="box__title homepage__box__title"><a href="{{ site.baseurl }}/tags/deployment/">All Deployments</a></h4>
+            <a href="{{ site.baseurl }}/tags/deployment/"><img class="integration-image" src="{{ site.baseurl }}/images/integrations/codeship.jpg"></a>
+          <a name="techical-section" id="technical-section"></a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="homepage-header">
+      <h3>Technical Specifications</h3>
+      <p>If you're looking to follow-along with a quick start guide and learn how to use Codeship quickly:</p>
     </div>
 
     <div class="grid grid--boxContainer">
-      <div class="colxs100 colsm100 colmd100 collg100">
+      <div class="colxs100 colsm33 colmd33 collg33">
         <div class="box">
-          <h2 class="box__title">Popular Deployment Articles</h2>
-          <p><strong>Codeship Pro:</strong> <a href="{{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}">AWS</a> | <a href="{{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}">Google Cloud </a> | <a href="{{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud-functions.md %}">Google Functions </a> | <a href="{{ site.baseurl }}{% link _pro/continuous-deployment/heroku.md %}">Heroku</a> | <a href="{{ site.baseurl }}{% link _pro/continuous-deployment/azure.md %}">Azure</a> | <a href="{{ site.baseurl }}{% link _pro/continuous-deployment/deployment-with-kubernetes.md %}">Kubernetes</a></p>
-          <p><strong>Codeship Basic:</strong> <a href="{{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-elastic-beanstalk.md %}">AWS ElasticBeanstalk</a> | <a href="{{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-google-app-engine.md %}">Google App Engine </a> | <a href="{{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-heroku.md %}">Heroku</a> | <a href="{{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-digitalocean.md %}">DigitalOcean</a></p>
-          <br />
-          <p class="box-link"><a class="more-link" href="{{ site.baseurl }}/tags/deployment">View All Deployment Articles</a></p>
+          <p>Learn about our <p><a href="{{ site.baseurl }}{% link _general/about/vm-and-infrastructure.md %}"> build machine specifications</a> if you have questions about how we run your builds.</p>
+        </div>
+      </div>
+      <div class="colxs100 colsm33 colmd33 collg33">
+        <div class="box">
+          <p>Read our <a href="{{ site.baseurl }}{% link _general/about/security.md %}">security FAQ</a> if you have questions about security policies and practices on Codeship.</p>
+        </div>
+      </div>
+      <div class="colxs100 colsm33 colmd33 collg33">
+        <div class="box">
+          <p>Our <a href="{{ site.baseurl }}{% link _general/account/organizations.md %}">organizations documentation</a> will explain how you manage your teams, projects and accont.</p>
         </div>
       </div>
     </div>
-
-    <div class="grid grid--boxContainer">
-      <div class="colxs100 colsm100 colmd100 collg100">
-        <div class="box">
-          <h2 class="box__title">Popular Setup Articles</h2>
-					<p><strong>Codeship Pro:</strong> <a href="{{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %}"> Caching</a> | <a href="{{ site.baseurl }}{% link _pro/continuous-integration/parallel-pro.md %}"> Parallel Testing</a> | <a href="{{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}">  Image Registries</a> | <a href="{{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}"> Local CLI</a> </p>
-          <p><strong>Codeship Basic:</strong> <a href="{{ site.baseurl }}{% link _basic/builds-and-configuration/dependency-cache.md %}"> Caching</a> | <a href="{{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}"> Parallel Testing</a> | <a href="{{ site.baseurl }}{% link _basic/builds-and-configuration/packages.md %}"> Installed Packages</a> | <a href="{{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}"> Debug Via SSH</a> </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid grid--boxContainer">
-      <div class="colxs100 colsm100 colmd100 collg100">
-        <div class="box">
-          <h2 class="box__title">General Information</h2>
-          <p><strong>More Information:</strong><a href="{{ site.baseurl }}{% link _general/about/vm-and-infrastructure.md %}"> Build Machine Specifications</a> | <a href="{{ site.baseurl }}{% link _general/about/security.md %}"> Security FAQ</a> | <a href="{{ site.baseurl }}{% link _general/account/organizations.md %}"> Organizations And Teams</a> </p>
-          <br />
-          <p class="box-link"><a class="more-link" href="{{ site.baseurl }}{% link general/all/index.html %}">View All General And Account Articles</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid grid--boxContainer">
-      <div class="colxs100 colsm100 colmd100 collg100">
-        <div class="box">
-          <a href="https://resources.codeship.com/ebooks"><h2 class="box__title">Webinars & Ebooks</h2></a>
-          <p>Browse through our library of webinars and ebooks about Continuous Integration and Delivery, Docker, efficient software development, distributed team workflows, and much more. <a href="https://resources.codeship.com" target="_BLANK">View our resources library here.</a></p>
-        </div>
-      </div>
-    </div>
-
 
   </div>
 </div>

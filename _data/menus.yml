@@ -1,22 +1,13 @@
 main:
-  - title: Getting Started
-    identifier: getting-started
-    url: /getting-started
-  - title: Basic
-    identifier: basic
-    url: /basic
-  - title: Pro
-    identifier: pro
-    url: /pro
   - title: Integrations
     identifier: integrations
     url: /integrations
-  - title: More Resources
-    identifier: more-resources
-    url: /more-resources
   - title: API
     identifier: api
     url: https://apidocs.codeship.com/v2
+  - title: Getting Started
+    identifier: getting-started
+    url: /getting-started
 
 general:
   - &GENERAL_ABOUT

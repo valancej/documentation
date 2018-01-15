@@ -26,6 +26,10 @@ body.is-blue {
     margin-bottom: 1rem;
   }
 
+  .homepage__box__title {
+    font-size: 1.2rem;
+  }
+
   a {
     font-family: 'Bariol', Arial, sans-serif;
     font-weight: 700;
@@ -513,6 +517,43 @@ ul#markdown-toc {
 
   li {
     margin: 0 !important;
+  }
+}
+
+div.homepage-header {
+
+  h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 3rem 0 1rem;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+.homepage-subnav p {
+  margin: .5rem 0 1rem;
+  font-weight: bold;
+  text-align: center;
+
+  a {
+    margin-right: .5rem;
+    font-size: 1.1rem;
+  }
+}
+
+div #homepage-title {
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
   }
 
 }

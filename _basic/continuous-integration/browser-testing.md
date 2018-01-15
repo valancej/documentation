@@ -21,6 +21,7 @@ tags:
   - capybara
   - screenshots
   - vnc
+  - testing
 categories:
   - Continuous Integration
 redirect_from:
