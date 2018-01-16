@@ -55,7 +55,7 @@ To fetch your token, follow these instructions:
 
 ## IP Whitelisting
 
-We have an IP Whitelisting option, which allows you to provice access to your git server, from just eight specific IP addresses. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
+We have an IP Whitelisting option, which allows you to provide access to your git server, from just eight specific IP addresses. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
 
 ## SCM Feature Requests
 

@@ -61,7 +61,7 @@ There is support of GitHub Enterprise, GitLab Community Edition, GitLab Enterpri
 
 You can read the [self-hosted Git documentation]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) to learn more.
 
-If you use self-hosted git servers, we have an IP Whitelisting option, which allows you to provice access to your git server, from just eight specific IP addresses. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
+If you use self-hosted git servers, we have an IP Whitelisting option, which allows you to provide access to your git server, from just eight specific IP addresses. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
 
 ## SCM Feature Requests
 
