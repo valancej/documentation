@@ -23,6 +23,8 @@ If you're unsure if you need IP whitelisting or not, keep reading. If you know y
 
 Note that IP whitelisting is currently in Beta and currently only works for Basic projects. Support for Pro projects is in the works and will be finished soon. We expect IP Whitelisting to be generally available before February 2018.
 
+[Get in touch](mailto:solutions@codeship.com) if you would like to get access to the IP Whitelisting Beta
+
 ## When to use IP Whitelisting
 There's no need for whitelisting if you're deploying to heroku or similar managed hosting services, as they generally allow connections from any public IP address.
 
