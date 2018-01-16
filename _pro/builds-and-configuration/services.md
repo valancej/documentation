@@ -279,6 +279,9 @@ All linking to the host is not allowed. This means the following directives are 
 
 Labels as they relate to images are supported by Codeship and should be [declared in the Dockerfile](https://docs.docker.com/engine/reference/builder/#/label) using the `LABEL` instruction. `labels` as a key in the services file (to label the running container) is not supported.
 
+#### Deprecated keys
+  * `links` Links are used to declare dependencies in your services file. They also create environment variables with information for container communication. `links` is considered a legacy key by Docker and may be removed at any time. Use `depends_on` to control boot order of your containers. All containers running in a given step are on an isolated network, so you can communicate with services by using their service name as a hostname.
+
 ## Timing And Waiting
 
 One common issue Docker users encounter is around the `depends_on` directive, outlined above and used to orchestrate dependent containers. Even if a dependency is declared via `depends_on`, it does not force the primary container to wait on the dependent container to be available until it is ready to proceed.
