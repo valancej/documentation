@@ -31,15 +31,11 @@ redirect_from:
 ---
 
 <div class="info-block">
-This article is about the local CLI tool that you can use to test and debug your Codeship Pro builds and configuration files as well as to encrypt your [environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and [build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}).
+<p>This article is about the local CLI tool that you can use to test and debug your Codeship Pro builds and configuration files as well as to encrypt your [environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and [build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}).</p>
 
- If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+ <p>If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/quickstart-examples.md %}) or [the features overview page](http://codeship.com/features/pro).</p>
 
- Note that if you are using Codeship Basic, you will not be able to use the local CLI.
-</div>
-
-<div class="info-block">
-Jet is used to locally debug and test builds for Codeship Pro, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship Basic, you will not need to use Jet.
+ <p>Note that if you are using Codeship Basic, you will not be able to use the local CLI.</p>
 </div>
 
 * include a table of contents
