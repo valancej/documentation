@@ -261,3 +261,7 @@ Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/builds-and-
 ## Step Timeouts
 
 On **Codeship Pro**, a build can run for up to 2 hours, although builds will time out if there is no log activity for 15 minutes.
+
+## Validating Your Files
+
+You can use the `jet validate` command, via our [local CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), to verify that your files are configured correctly and ready to be used.

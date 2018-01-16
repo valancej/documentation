@@ -106,7 +106,7 @@ Add . /app
 
 As you can see here, we're pulling the Ruby base image, creating some directories, installing some gems, and then adding our code. That last bit is important because now when we launch our Docker container, the `check.rb` script we wrote earlier will be inside it and ready to run.
 
-## Define Your Services / Compose File
+## Define Your Services
 
 So, now we have a script, we have a Docker container that includes this script... now what?
 
@@ -170,7 +170,7 @@ As you'll recall, that script prints the version of *redis* and *postgres* - whi
 
 Now -  let's see how all of this ties together. Open up a terminal and go to the directory with the files we created.
 
-Type: `jet steps`
+The first thing we'll do is run `jet validate`. This will instruct `jet` to verify that our files our correct. Once this passes and we know our files our configured without issue, we will run `jet steps`.
 
 This will tell the Jet CLI tool to build the services in your `codeship-services.yml` file and then run the steps in your `codeship-steps.yml` file.
 

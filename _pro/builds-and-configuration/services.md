@@ -323,6 +323,10 @@ Or, a health check poll could look like [this script](https://github.com/codeshi
 
 **Note** that the above scripts require tools like `bash`, `pg_isready` and `redics-cli` that need to be running on the container running these scripts.
 
+## Validating Your Files
+
+You can use the `jet validate` command, via our [local CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), to verify that your files are configured correctly and ready to be used.
+
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)
 * [Build Directive In Compose](https://docs.docker.com/compose/compose-file/#build)

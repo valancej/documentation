@@ -150,7 +150,7 @@ For instance, you can run `jet run service_app` or `jet run service_app echo "he
 
 ## Jet Cleanup
 
-With `jet cleanup` you can be sure that Jet removed any leftover containers or other artifacts of your local build run.
+With `jet cleanup` you can be sure that Jet removes any leftover containers, networks and all other Docker build artifacts of your local build run.
 
 Typically, cleanup happens by default but the `jet cleanup` command allows you to invoke it manually if there are any issues that prevent Jet from completing.
 
