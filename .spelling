@@ -381,3 +381,6 @@ xvfb
 yml
 yourdomain.com.
 zendesk
+hostname
+healthcheck
+_on
