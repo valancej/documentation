@@ -67,7 +67,10 @@ The `jet` CLI is now included in our custom [Homebrew Cask](https://github.com/c
 brew cask install codeship/taps/jet
 
 # If you already have the CLI installed and want to update to the latest version
+<<<<<<< HEAD
 brew update
+=======
+>>>>>>> 95a5143dbc57832c3e4801891c131b580d853e7a
 brew cask reinstall codeship/taps/jet
 ```
 
