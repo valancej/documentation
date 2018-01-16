@@ -43,7 +43,7 @@ demo:
   build:
     image: myapp
     dockerfile: Dockerfile
-  links:
+  depends_on:
     - redis
     - postgres
   volumes:

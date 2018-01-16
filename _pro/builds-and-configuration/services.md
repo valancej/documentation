@@ -251,7 +251,6 @@ The following features available in Docker Compose are not available on Codeship
   * `cgroup_parent`
   * `container_name`
   * `cpu_quota`
-  * [`depends_on`*](#timing-and-waiting) - [Contact us for upcoming beta access!](mailto:solutions@codeship.com)
   * [`healthcheck`*](#timing-and-waiting) - [Contact us for upcoming beta access!](mailto:solutions@codeship.com)
   * `devices`
   * `extends`
@@ -282,7 +281,7 @@ Labels as they relate to images are supported by Codeship and should be [declare
 
 ## Timing And Waiting
 
-One common issue Docker users encounter is around the `links` directive, outlined above and used to orchestrate dependent containers. A container orchestrated via `links` does not force the primary container to wait until it is ready to proceed.
+One common issue Docker users encounter is around the `depends_on` directive, outlined above and used to orchestrate dependent containers. Even if a dependency is declared via `depends_on`, it does not force the primary container to wait on the dependent container to be available until it is ready to proceed.
 
 This means that often your commands may begin executing before your dependent containers are ready. This is particularly problematic and common with databases.
 
@@ -291,6 +290,8 @@ There are two common solutions to this problem:
 - Adding a short `sleep` command before your tests, giving the dependent service slightly more time to start up before proceeding.
 
 - Writing a simple health poll script to check for service uptime before proceeding.
+
+We are adding support for `healthchecks` soon. [Contact us for upcoming beta access!](mailto:solutions@codeship.com)
 
 An example of a health poll script may look something like this:
 
@@ -319,7 +320,7 @@ do
 done
 ```
 
-Or, a health check poll could look like [this script](https://github.com/codeship/scripts/blob/master/utilities/check_port.sh) for checking to see if a port is available.
+Or, a healthcheck poll could look like [this script](https://github.com/codeship/scripts/blob/master/utilities/check_port.sh) for checking to see if a port is available.
 
 **Note** that the above scripts require tools like `bash`, `pg_isready` and `redics-cli` that need to be running on the container running these scripts.
 
@@ -335,5 +336,5 @@ Or, a health check poll could look like [this script](https://github.com/codeshi
 * [Build Arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %})
 
 ## Other Notes
-* `link` containers will be newly created for each step.
+* Dependency containers declared via `depends_on` or `link` will be newly created for each step.
 * `volumes_from` containers will be created exactly once for all services.

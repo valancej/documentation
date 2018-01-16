@@ -123,7 +123,7 @@ demo:
   build:
     image: myapp
     dockerfile: Dockerfile
-  links:
+  depends_on:
     - redis
     - postgres
 redis:
@@ -132,11 +132,11 @@ postgres:
    image: postgres:9.3.6
 ```
 
-The first thing this file does is define our *demo* service. It *builds* the Dockerfile and names it *myapp*. The *links* section tells it what services are required for *demo* to run. In this case both *redis* and *postgres*.
+The first thing this file does is define our *demo* service. It *builds* the Dockerfile and names it *myapp*. The *depends_on* section tells it what services are required for *demo* to run. In this case both *redis* and *postgres*.
 
 Since we reference *redis* and *postgres*, we need to define them as separate services as well. For each, we provide an image - we could build one using separate Dockerfiles but instead we're going to download existing repos from a Docker registry. This is [Docker Hub](https://hub.docker.com/) by default but it can be *any* registry you specify.
 
-One important thing to know is that any time you build a service, such as *demo*, it will automatically spin up containers for every linked service. So if we build *demo*, we end up with three containers: one for the primary service, one for Redis and one for Postgres.
+One important thing to know is that any time you build a service, such as *demo*, it will automatically spin up containers for every dependent service. So if we build *demo*, we end up with three containers: one for the primary service, one for Redis and one for Postgres.
 
 ![Three containers]({{ site.baseurl }}/images/gettingstarted/3containers.png)
 
@@ -164,7 +164,7 @@ Next we call a command inside our new *demo* container. We tell it to run the `c
 
 ![flow chart of three containers and script]({{ site.baseurl }}/images/gettingstarted/workflow.png)
 
-As you'll recall, that script prints the version of *redis* and *postgres* - which it will do by checking the version of the services we launched via the links to our original *demo* service.
+As you'll recall, that script prints the version of *redis* and *postgres* - which it will do by checking the version of the services we launched via the declared dependencies on our original *demo* service.
 
 ## Run Your Build Pipeline Locally
 

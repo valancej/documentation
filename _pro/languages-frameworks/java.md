@@ -38,7 +38,7 @@ project_name:
   build:
     image: organisation_name/project_name
     dockerfile: Dockerfile
-  links:
+  depends_on:
     - redis
     - postgres
   environment:
