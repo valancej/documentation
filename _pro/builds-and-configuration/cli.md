@@ -145,13 +145,13 @@ For instance, you can run `jet run service_app` or `jet run service_app echo "he
 
 **Note** that you can also run `jet run --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
 
-## Jet Cleanup
+### Jet Cleanup
 
 With `jet cleanup` you can be sure that Jet removes any leftover containers, networks and all other Docker build artifacts of your local build run.
 
 Typically, cleanup happens by default but the `jet cleanup` command allows you to invoke it manually if there are any issues that prevent Jet from completing.
 
-## Jet Validate
+### Jet Validate
 
 The `jet validate` command will confirm that your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) are valid and ready to be used. If there are any configuration issues with your files, the `jet validate` command will let you know what to address.
 
