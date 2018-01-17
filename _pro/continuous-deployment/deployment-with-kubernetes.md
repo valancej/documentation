@@ -77,7 +77,7 @@ Inside this script file can be any `kubectl` commands you would like, for instan
 kubectl apply -f ./deployment.yaml
 ```
 
-Essentially, now that you have a container with the `kubectl` tool, you will script your dpeloyments in any way you'd like to use that command line tool in the workflow you define.
+Essentially, now that you have a container with the `kubectl` tool, you will script your deployments in any way you'd like to use that command line tool in the workflow you define.
 
 ### Managed Services
 
