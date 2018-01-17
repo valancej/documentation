@@ -48,9 +48,9 @@ pip install awscli
 
 ### Configuring Authentication
 
-Once the CLI is installed, you will need to run the appropriate AWS CLI login commands via your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+Once the CLI is installed, you will need to run the appropriate AWS CLI login commands via your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or at the start of your [custom-script deployment pipeline]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}).
 
-The easiest way to keep these authentication secure would be to use [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) to store the username and password, and to pass those through to your AWS CLI login [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %})
+The easiest way to keep these authentication secure would be to use [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) to store the username and password, and to pass those through to your AWS CLI login commands.
 
 ### Deployment Scripting
 
