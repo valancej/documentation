@@ -132,9 +132,13 @@ Just like when encrypting but in reverse, `env.encrypted` is the name of the fil
 
 In some cases, you may have explicitly declared variables through the `environment` directive as well as unencrypted or encrypted variables through the file directives.
 
-In these cases, we will parse all unencrypted variables, followed by all encrypted variables. Explicitly declared variables will be parsed first, followed by file-declared variables.
+In these cases, we will parse the variables in the following order:
 
-So, if the same env var is present in both `environment`, an unencrypted environment file and an encrypted environment file, it would overwrite in that order as we parse the variables.
+- 1) `environment` directive-declared
+- 2) Unencyrpted `env_var` file-declared
+- 3) `encrypted_env_var` file-declared`
+
+So, if the same variable is present in multiple declarations, it will overwrite in the above order.
 
 ## Default Environment Variables
 
