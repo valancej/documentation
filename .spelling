@@ -271,6 +271,7 @@ phpunit
 postgis
 postgres
 postgresql
+pre-built
 pre-configured
 pre-installed
 pre-populated

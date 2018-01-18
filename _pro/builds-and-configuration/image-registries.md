@@ -127,6 +127,10 @@ To use this generator service, simply reference it using the `dockercfg_service`
 
 Codeship will run the service to generate a `dockercfg` as needed.
 
+### Credential Inclusion
+
+Note that in these examples we show the registry credential directives used on both Services and Steps at different points. We allow for either configuration in the case of pulling an image from a private registry. In the case of pushing an image to a private registry the registry credential directive must be included on the push step, though.
+
 ## Docker Hub
 
 ### Pushing To Docker Hub

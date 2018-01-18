@@ -21,6 +21,7 @@ tags:
   - git
   - on premise
   - enterprise
+  - whitelisting
 categories:
   - About Codeship  
 ---
@@ -54,9 +55,7 @@ To fetch your token, follow these instructions:
 
 ## IP Whitelisting
 
-We are currently planning a beta to make available a limited number of IPs for whitelisting and network access purposes.
-
-For now, the above ports need to be made available to the public internet but please [contact us](mailto:solutions@codeship.com) if you are interested in our upcoming IP whitelisting feature.
+We have an IP Whitelisting option, which allows you to provide access to your git server, from just eight specific IP addresses. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
 
 ## SCM Feature Requests
 

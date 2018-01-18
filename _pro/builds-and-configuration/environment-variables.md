@@ -128,6 +128,18 @@ jet decrypt env.encrypted env
 
 Just like when encrypting but in reverse, `env.encrypted` is the name of the file you want to decrypt and `env` is the name you give to the decrypted file.
 
+### Priority Of Variable Inheritance
+
+In some cases, you may have explicitly declared variables through the `environment` directive as well as unencrypted or encrypted variables through the file directives.
+
+In these cases, we will parse the variables in the following order:
+
+- 1) `environment` directive
+- 2) Unencrypted `env_var` file
+- 3) `encrypted_env_var` file
+
+So, if the same variable is present in multiple declarations, it will overwrite in the above order.
+
 ## Default Environment Variables
 
 By default, Codeship populates a list of CI/CD related environment variables, such as the branch and the commit ID.

@@ -12,6 +12,8 @@ tags:
   - permissions
   - ssh
   - git
+  - 2fa
+  - whitelisting
 categories:
   - About Codeship  
 redirect_from:
@@ -32,7 +34,7 @@ All communication between your browser and our website is SSL encrypted, as is a
 
 ## Can Codeship Read My Code?
 
-On Codeship Basic, with permission our support team can open an SSH debug session in to your build machine which allows us to see your source code.
+On Codeship Basic, with permission, our support team can open an SSH debug session in to your build machine which allows us to see your source code.
 
 On Codeship Pro, we have no direct access to your source control but our support team can see your builds and build logs, as well as account information.
 
@@ -41,6 +43,11 @@ On Codeship Pro, we have no direct access to your source control but our support
 To run your tests, we need to check out your code from your source code provider. Currently we support GitHub, GitLab, and Bitbucket. You can sign up for the Codeship via Email as well but as soon as you connect a repository with your Codeship account you are telling your source code provider that you allow us to check out your private repositories.
 
 You can revoke permission in your source code provider settings and by removing the Codeship's deploy keys and service hooks from your projects' configuration pages.
+
+## How Can I Access Internal Resources from Codeship?
+
+If you need to access resources behind a custom firewall from Codeship, e.g. pulling code from a [self-hosted git server]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) or perhaps deploying build artifacts to an internal environment, you can enable the IP Whitelisting feature and only open the necessary ports for those IPs in your firewall. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
+
 
 ## What Services Does Codeship Use?
 
