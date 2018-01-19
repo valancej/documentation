@@ -73,6 +73,7 @@ assertible
 atlassian’s
 atatus
 auth.json
+awsdeployment
 aws-deployment
 azure-cli
 azurecli
@@ -139,6 +140,7 @@ dockerfile
 dockerfiles
 dockerignore
 dockerized
+Dockerrun.aws.json
 donios
 dropdown
 dynos
