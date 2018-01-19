@@ -23,17 +23,14 @@ You can find a sample repo for deploying to AWS with Codeship Pro on Github [her
 * include a table of contents
 {:toc}
 
-To make it easy for you to deploy your application to AWS Elastic Beanstalk, we've built a container that has the AWSCLI installed. We will set up a simple example showing you how to configure any deployment to AWS Elastic Beanstalk.
+## Prerequisites
 
-## Codeship AWS Deployment Container
-
-Codeship Pro uses an AWS deployment container that we maintain to authenticate with your AWS account.
-
-Please review our [AWS documentation]({% link _pro/continuous-deployment/aws.md %}) to learn how to set up and use this authentication container.
-
-You will need the AWS service, as well as your application itself, defined via your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}) so that you can execute the necessary S3 commands in your [codeship-steps.yml file]({% link _pro/builds-and-configuration/steps.md %}).
-
-It is also advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
+- You will need to set up our [Codeship maintained awsdeployment container]({% link _pro/continuous-deployment/aws.md %}) to automate authentication with your AWS account.
+- This `awsdeployment` service (as well as your application container) needs to be defined via your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %})
+- A folder must be designated for deployment purposes
+- A Dockerrun.aws.json file configured for either [single container](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_image.html) or [multi-container service](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_v2config.html) must be placed in the deployment folder
+- Any other assets that would be required by the instance host should be included in the deployment folder as well.
+- If applicable, please review the AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
 ## Deploying to AWS Elastic Beanstalk
 
