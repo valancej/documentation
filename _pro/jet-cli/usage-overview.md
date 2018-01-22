@@ -29,14 +29,15 @@ redirect_from:
 ---
 
 <div class="info-block">
-  <p>This article is about the local CLI tool that you can use to test and debug your Codeship Pro builds and configuration files as well as to encrypt your [environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and [build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}).</p>
-
   <p>If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/quickstart-examples.md %}) or [the features overview page](http://codeship.com/features/pro).</p>
 
   <p>Note that if you are using Codeship Basic, you will not be able to use the local CLI.</p>
 </div>
 
-## jet
+* include a table of contents
+{:toc}
+
+## Using The Jet CLI
 
 To list available commands, run `jet` with no parameters, `jet -h` or `jet --help`:
 
@@ -60,9 +61,19 @@ Flags:
 
 Use "jet [command] --help" for more information about a command.
 ```
+## Troubleshooting With Jet
 
-## Description
-By default, Docker will use existing images when running `jet` locally. This may lead to builds passing locally, and failing remotely on Codeship. This is due to the remote environment starting without any prior images. We recommend removing any locally saved Docker images prior to running `jet steps` for a more consistent result to the remote server.
+Because the Jet CLI accurately reproduces your CI/CD build pipeline locally, you can use it to quickly solve difficult problems.
+
+For instance, if a test or command fails on a build in Codeship, you can try to reproduce the error with `jet steps`. When you want to test a change, `jet steps` will let you verify the change is working prior to committing so that you don't have to wait for the full build to run remotely to get feedback.
+
+We recommend that developers using Codeship make use of the Jet CLI to improve productivity and solve build-related issues.
+
+### Local Images
+
+By default, Docker will use existing images when running `jet` locally. This may lead to builds passing locally, and failing remotely on Codeship due to the remote environment starting without any prior images and therefore building an image that may be newer or different than your existing local image.
+
+We recommend removing any locally saved Docker images prior to running `jet steps` for a more consistent result to the remote server if you are seeing this issue.
 
 ## Examples
 
