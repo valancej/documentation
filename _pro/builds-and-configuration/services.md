@@ -143,6 +143,12 @@ data:
 
 [Learn more about using volumes.]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %})
 
+#### Healthchecks
+
+Codeship supports the `healthchecks` directive for healthchecks built into a Docker image. For images that contain a healthcheck, we will poll for availability every 1 second for up to 60 minutes before proceeding. You can find the health polling status in your logs:
+
+![Healthchecks logs output]({{ site.baseurl }}/images/docker/healthchecks.png)
+
 ### Environment Variables
 The standard `environment` and `env_file` directives are supported. Additionally, we support encrypted environment variables with `encrypted_environment` and `encrypted_env_file` directives. These are the same format, but they expect encrypted variables.
 
