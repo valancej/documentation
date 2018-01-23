@@ -14,6 +14,10 @@ tags:
   - getting started jet
 categories:
   - Quickstart
+redirect_from:
+  - /general/account/guides/migrating-from-jenkins-organizations/
+  - /general/account/guides/migrating-from-jenkins-notifications/
+  - /general/account/guides/migrating-from-jenkins-testing/
 
 ---
 

@@ -73,6 +73,7 @@ assertible
 atlassian’s
 atatus
 auth.json
+awsdeployment
 aws-deployment
 azure-cli
 azurecli
@@ -139,6 +140,7 @@ dockerfile
 dockerfiles
 dockerignore
 dockerized
+Dockerrun.aws.json
 donios
 dropdown
 dynos
@@ -271,6 +273,7 @@ phpunit
 postgis
 postgres
 postgresql
+pre-built
 pre-configured
 pre-installed
 pre-populated
@@ -384,3 +387,6 @@ zendesk
 hostname
 healthcheck
 _on
+cli
+ - _pro/jet-cli/release-notes.md
+_from

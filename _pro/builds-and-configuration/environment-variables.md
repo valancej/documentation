@@ -29,7 +29,7 @@ This article is about using environment variables with Codeship Pro.
 
  If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
 
- Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) to encrypt your environment variables.
+ Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) to encrypt your environment variables.
 </div>
 
 
@@ -94,7 +94,7 @@ NAME=codeship
 URL=www.codeship.com
 ```
 
-Once you create this file and save it in your project directory, we'll encrypt it. This will require that you have installed the [Jet CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) and that you have downloaded your [AES key](#downloading-your-aes-key) to your project root, as well.
+Once you create this file and save it in your project directory, we'll encrypt it. This will require that you have installed the [Jet CLI]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) and that you have downloaded your [AES key](#downloading-your-aes-key) to your project root, as well.
 
 From your terminal, you will run:
 
@@ -127,6 +127,18 @@ jet decrypt env.encrypted env
 ```
 
 Just like when encrypting but in reverse, `env.encrypted` is the name of the file you want to decrypt and `env` is the name you give to the decrypted file.
+
+### Priority Of Variable Inheritance
+
+In some cases, you may have explicitly declared variables through the `environment` directive as well as unencrypted or encrypted variables through the file directives.
+
+In these cases, we will parse the variables in the following order:
+
+- 1) `environment` directive
+- 2) Unencrypted `env_var` file
+- 3) `encrypted_env_var` file
+
+So, if the same variable is present in multiple declarations, it will overwrite in the above order.
 
 ## Default Environment Variables
 
@@ -181,7 +193,7 @@ In some situations, you may find that you want to run one set of credentials loc
 
 For the time being, there are several workarounds that may be worth investigating for your team if you have this need:
 
-- You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), you would run `jet run service_name command` rather than just `jet steps`.
+- You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), you would run `jet run service_name command` rather than just `jet steps`.
 
 - You could keep a different encrypted env file on hand locally. From there, you would maintain local `.gitignore` files so that the local credential files are not committed by individual developers and only the canonical, production encrypted environment file would be in the repo. The developers would then need to override the pulled encrypted environment variables file with their own, but it would be ignored on all commits back to the repo because of the `.gitignore`.
 

@@ -33,7 +33,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}).
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}).
 </div>
 
 * include a table of contents
@@ -49,7 +49,7 @@ If you are using private images, you will need to authenticate with the image re
 
 The most common way authenticate with image registries is to provide your account credentials via an encrypted `dockercfg` file. This keeps your credentials secure while allowing you to push and pull from private registry accounts.
 
-This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), similar to using [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). To encrypt your image registry credentials:
+This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), similar to using [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). To encrypt your image registry credentials:
 
 * First create an unencrypted dockercfg file using your account credentials. The dockercfg should look close to:
 
@@ -126,6 +126,10 @@ To use this generator service, simply reference it using the `dockercfg_service`
 ```
 
 Codeship will run the service to generate a `dockercfg` as needed.
+
+### Credential Inclusion
+
+Note that in these examples we show the registry credential directives used on both Services and Steps at different points. We allow for either configuration in the case of pulling an image from a private registry. In the case of pushing an image to a private registry the registry credential directive must be included on the push step, though.
 
 ## Docker Hub
 

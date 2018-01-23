@@ -1,21 +1,22 @@
 ---
 title: CLI Release Notes
 menus:
-  pro/builds:
+  pro/jet:
     title: CLI Release Notes
-    weight: 13
+    weight: 12
+categories:
+  - Jet CLI
 tags:
   - docker
   - jet
   - release notes
   - cli
-
 categories:
-  - Builds and Configuration
-
+  - Jet CLI
 redirect_from:
   - /docker/release-notes/
   - /pro/getting-started/release-notes/
+  - /pro/builds-and-configuration/release-notes/
 ---
 
 <div class="info-block">
