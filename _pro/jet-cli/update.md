@@ -3,7 +3,7 @@ title: jet update
 menus:
   pro/jet:
     title: jet update
-    weight: 3
+    weight: 9
 categories:
   - Jet CLI
 tags:
