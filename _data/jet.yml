@@ -116,6 +116,9 @@ flags:
       default: codeship-steps.yml
     - name: --tag
       description: The tag to use
+  update:
+    - name: --dry-run
+      description: Only print out what the command would do
   validate:
     - name: --debug
       description: Enables debug output
