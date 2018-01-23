@@ -22,12 +22,12 @@ categories:
 
 ## What is Two-Factor (2FA) Authentication?
 
-Two-Factor Authentication (more commenly refered to as 2FA) is a way to secure online accounts further by requiring more than just your username and password. There are different approaches to this, but in most cases 2FA relies on the user having a personal device (phone, tablet etc.) that the user is in full control over. If an online service is compromised and usernames + passwords are stolen, the hackers wouldn't be able to access account where 2FA is enabled as they wouldn't have access to the user's personal device.
+Two-Factor Authentication (more commonly referred to as 2FA) is a way to secure online accounts further by requiring more than just your username and password. There are different approaches to this, but in most cases 2FA relies on the user having a personal device (phone, tablet etc.) that the user is in full control over. If an online service is compromised and usernames + passwords are stolen, the hackers wouldn't be able to access account where 2FA is enabled as they wouldn't have access to the user's personal device.
 
 ### How does 2FA work?
 
 There are a couple of different approaches to 2FA, some are purely app-based while others require you to have a special piece of hardware that can generate unique codes. 
-In all cases you will be asked for a unique code as part of loggin in the online service, and the unique code is deliveres to/by your personal device.
+In all cases you will be asked for a unique code as part of logging in the online service, and the unique code is delivered to/by your personal device.
 
 For our implementation on Codeship, we have chosen to rely on mobile apps that can generate the unique codes. These apps will continuously generate one-time use codes that are only valid for a short period of time. The apps rely on a shared unique code between codeship and the specific app, to ensure that only the app on your personal device is able to generate the correct codes; it's impossible for someone to generate the same codes, at the same time, on their own device.
 
