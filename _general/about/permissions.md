@@ -51,7 +51,7 @@ As mentioned above, Codeship requires both repository and access level permissio
 
 - For setting up a new project, we need the account to have `admin` permissions.
 - For regular access, we require read/write permissions to your private repositories so that we can clone the repos and report back status.
-- Like all providers that integrate with Github, we'd love to request fewer permissions than we do, but as we're currently using GitHub's Oauth integration, we're limited to the [few options GitHub provides](https://developer.github.com/v3/oauth/#scopes) (we're asking for `repo` and `user:email` scopes). We are looking to move to the new [GitHub Integration](https://developer.github.com/early-access/integrations/integrations-vs-oauth-applications/) options, to offer you more granular control, in the near future.
+- Like all providers that integrate with Github, we'd love to request fewer permissions than we do, but as we're currently using GitHub's OAuth integration, we're limited to the [few options GitHub provides](https://developer.github.com/v3/oauth/#scopes) (we're asking for `repo` and `user:email` scopes). We are looking to move to the new [GitHub Integration](https://developer.github.com/early-access/integrations/integrations-vs-oauth-applications/) options, to offer you more granular control, in the near future.
 
 #### Bitbucket
 
