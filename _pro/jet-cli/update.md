@@ -35,4 +35,8 @@ This command is handy if you installed the `jet` CLI by downloading the archive 
 ### Update Dry Run
 ```shell
 $ jet update --dry-run
+Dry run. Would have updated from $INSTALLED_VERSION to $NEW_VERSION.
+
+# If you are on the latest version already
+Up to date. Running version $INSTALLED_VERSION.
 ```
