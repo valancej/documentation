@@ -58,13 +58,16 @@ To fetch your token, follow these instructions:
 In order for Codeship to be allowed to setup the necessary hooks etc. the personal access tokens need to have the correct set of scopes. Below you'll find the necessary setting for each of the three self-hosted Git servers:
 
 **GitHub Enterprise**
-![GitHub Enterprise Access Scopes]({{ site.baseurl }}/images/general/github_ent_scopes.jpg)
+
+![GitHub Enterprise Access Scopes]({{ site.baseurl }}/images/general/github_ent_scopes.png)
 
 **GitLab Community Edition**
-![GitLab Community Edition Access Scopes]({{ site.baseurl }}/images/general/gitlab_ce_scopes.jpg)
+
+![GitLab Community Edition Access Scopes]({{ site.baseurl }}/images/general/gitlab_ce_scopes.png)
 
 **Bitbucket Server**
-![Bitbucket Server Access Scopes]({{ site.baseurl }}/images/general/bitbucket_server_scopes.jpg)
+
+![Bitbucket Server Access Scopes]({{ site.baseurl }}/images/general/bitbucket_server_scopes.png)
 
 ## IP Whitelisting
 
