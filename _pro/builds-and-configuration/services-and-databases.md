@@ -48,12 +48,12 @@ ADD config/elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
 RUN chown elasticsearch:elasticsearch /usr/share/elasticsearch/config/elasticsearch.yml
 ```
 
-The following `codeship-services.yml` uses the `Dockerfile.elasticsearch` we just created to build our container and link it to a ruby container.
+The following `codeship-services.yml` uses the `Dockerfile.elasticsearch` we just created to build our container. Using `depends_on`, we can make it clear that the Elasticsearch container is a dependency of the Ruby container.
 
 ```yaml
 ruby:
   image: ruby:2.2
-  links:
+  depends_on:
     - elasticsearch
 elasticsearch:
   build:

@@ -384,6 +384,9 @@ xvfb
 yml
 yourdomain.com.
 zendesk
+hostname
+healthcheck
+_on
 cli
  - _pro/jet-cli/release-notes.md
 _from
