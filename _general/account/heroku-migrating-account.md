@@ -19,7 +19,7 @@ categories:
 
 Codeship Basic plans are offered via Heroku add-ons directly via your Heroku account.
 
-Accounts set up via Heroku add-ons *can not* add a Codeship Pro subscription and provide Codeship support with limited troubleshooting visibility due to data retention on Heroku's side.
+Accounts set up via Heroku add-ons *can not* add a Codeship Pro subscription and Codeship support has limited access to billing-related issues due to Heroku owning the underlying account.
 
 If you are using an account set up via a Heroku add-on and wish to expand to using Codeship Pro, you will need to follow the migration instructions below.
 
