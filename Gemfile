@@ -3,8 +3,7 @@ source "https://rubygems.org"
 ruby "2.4.3"
 
 gem 'rake', '~>12.3.0'
-gem 'jekyll', '~> 3.6.0'
-gem 'rouge', '~> 2.2.0'
+gem 'jekyll', '~> 3.7.0'
 gem 'sassc', '~> 1.11.4'
 gem 'shipyard-framework', '~> 0.5.81'
 
