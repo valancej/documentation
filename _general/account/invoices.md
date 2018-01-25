@@ -9,7 +9,7 @@ tags:
 menus:
   general/account:
     title: Invoices
-    weight: 4
+    weight: 6
 categories:
   - Account    
 redirect_from:

@@ -40,7 +40,7 @@ $ jet decrypt env.encrypted env
 
 This will create `env` from the `env.encrypted` file using the key in the `codeship.aes` file.
 
-### encrypt with key-path
+### decrypt with key-path
 
 ```shell
 $ jet decrypt env.encrypted env --key-path PATH_TO_AES_KEY
