@@ -1,6 +1,6 @@
 FROM ruby:2.5.0-slim
 
-ENV CACHE_BUST=2017-09-12 \
+ENV CACHE_BUST=2018-01-29 \
     DEBIAN_DISTRIBUTION="stretch" \
     DEBIAN_FRONTEND="noninteractive" \
     NODE_VERSION="8.x"
@@ -13,20 +13,20 @@ EXPOSE 4000
 RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends \
-  apt-transport-https \
-  curl && \
+    apt-transport-https \
+    curl && \
   curl -sS https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
-  echo "deb https://deb.nodesource.com/node_${NODE_VERSION} ${DEBIAN_DISTRIBUTION} main" > /etc/apt/sources.list.d/nodesource.list && \
+  echo "deb https://deb.nodesource.com/node_${NODE_VERSION} ${DEBIAN_DISTRIBUTION} main" >            /etc/apt/sources.list.d/nodesource.list && \
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian stable main" > /etc/apt/sources.list.d/yarn.list && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
-  build-essential \
-  graphicsmagick \
-  libssl1.0.0 \
-  libyaml-0-2 \
-  nodejs \
-  yarn && \
+    build-essential \
+    graphicsmagick \
+    libssl1.0.0 \
+    libyaml-0-2 \
+    nodejs \
+    yarn && \
   ln -s "$(which nodejs)" /usr/local/bin/node && \
   apt-get clean -y && \
   rm -rf /var/lib/apt/lists/*
