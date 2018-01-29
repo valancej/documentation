@@ -1,7 +1,7 @@
-FROM ruby:2.4.3-slim
+FROM ruby:2.5.0-slim
 
 ENV CACHE_BUST=2017-09-12 \
-    DEBIAN_DISTRIBUTION="jessie" \
+    DEBIAN_DISTRIBUTION="stretch" \
     DEBIAN_FRONTEND="noninteractive" \
     NODE_VERSION="8.x"
 
