@@ -14,16 +14,21 @@ RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     apt-transport-https \
-    curl && \
+    curl \
+    gnupg && \
   curl -sS https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
   echo "deb https://deb.nodesource.com/node_${NODE_VERSION} ${DEBIAN_DISTRIBUTION} main" >            /etc/apt/sources.list.d/nodesource.list && \
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian stable main" > /etc/apt/sources.list.d/yarn.list && \
+  apt-get clean -y && \
+  rm -rf /var/lib/apt/lists/*
+
+RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     build-essential \
     graphicsmagick \
-    libssl1.0.0 \
+    libssl1.1 \
     libyaml-0-2 \
     nodejs \
     yarn && \
