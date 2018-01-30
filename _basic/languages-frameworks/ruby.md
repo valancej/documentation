@@ -136,3 +136,13 @@ To workaround this, temporarily remove the NPM version of `which`, then run your
 ```
 rm -f node_modules/.bin/which
 ```
+
+### Custom Bundler Version
+
+The build environment will always include a recent version of [Bundler](http://bundler.io) by default. If you have a situation where you need to install a specific Bundler version you can do so by adding the following commands to your build:
+
+```
+gem uninstall -x -a bundler
+rvm @global do gem uninstall -x -a bundler
+gem install bundler -v YOUR_BUNDLER_VERSION
+```
