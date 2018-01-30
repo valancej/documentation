@@ -48,6 +48,7 @@ If something goes wrong in setting up the app, simply cancel out of enabling 2FA
 ### Recovery Codes
 
 Accidents happen, and you may end up in the situation where you've either lost your personal device, or for some reason it's no longer working and can no longer generate codes for you. In this case it's important that you have downloaded the recovery codes made available when you setup 2FA. 
+
 Once the setup is complete a link will appear, which will allow you to download a set of recovery codes. These can be used in case your don't have your personal device, so make sure to keep them safe. If someone else should get hold of them (as well as your username and password) they would be able to get access to your account, without having the authenticator app on your personal device.
 
 ## Using Recovery Codes
@@ -60,6 +61,12 @@ When asked for a 2FA code, select to use a recovery code instead. This will take
 
 In the event that you have lost your device (or authenticator app) as well as your recovery codes, we're unfortunately unable to help you recover your account. To avoid hackers using "social engineering" (i.e. tricking us into thinking they're you) to gain access to your account, we don't have the ability to turn off 2FA on your account or otherwise reset it.
 This is why it's important to remember to download your recovery codes before it's too late.
+
+## Replace Authenticator App
+
+Should you end up in a situation where you want to use a different authenticator app (or a are setting up a new device), you'll need to reset the 2FA configuration. The QR code that is generated can theoretically be used on multiple devices, so if you setup a new device without resetting the 2FA setup, anyone with access to your old authenticator app would still be able to generate valid codes.
+
+To reset your setup, simply go to you account and click the Reset button. This will cause the old configuration to be invalid and a new one to be generated. If you don't complete the resetting process, your account will be left without 2FA.
 
 ## Disabling 2FA
 
