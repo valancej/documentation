@@ -145,15 +145,13 @@ data:
 
 #### Healthchecks
 
-Codeship supports the `healthchecks` directive for healthchecks built into a Docker image. For images that contain a healthcheck, we will poll for availability every 1 second for up to 60 minutes before proceeding.
+Codeship supports the `healthchecks` directive for healthchecks built into a Docker image. For images that contain a healthcheck, we will check for container availability every 1 second for up to 60 minutes before proceeding.
 
 You can find the health polling status in your logs:
 
 ![Healthchecks logs output]({{ site.baseurl }}/images/docker/healthchecks.png)
 
-**Note** that while we will poll for up to an hour for a service to become healthy, if a service explicitly transitions into an `unhealthy` state we will poll for 30 seconds before failing the build.
-
-If you need your container to allow for a longer period in an `unhealthy` or `starting` state, you can use the `--start-period` on your healthcheck, inside your Dockerfile.
+**Note** that Docker will fail a build that makes three unsuccessful attempts to poll for a healthy state. This can be problematic when using options such as `--interval`, which instruct Docker to poll at a different rate than it's default 30 seconds.
 
 ### Environment Variables
 The standard `environment` and `env_file` directives are supported. Additionally, we support encrypted environment variables with `encrypted_environment` and `encrypted_env_file` directives. These are the same format, but they expect encrypted variables.
