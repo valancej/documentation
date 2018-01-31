@@ -145,7 +145,7 @@ data:
 
 #### Healthchecks
 
-Codeship supports the `healthchecks` directive for healthchecks built into a Docker image. For images that contain a healthcheck, we will check for container availability every 1 second for up to 60 minutes before proceeding.
+Codeship supports the `HEALTHCHECK` directive for Docker images. For images that contain a healthcheck defined in the Dockerfile, we will check for container availability every 1 second for up to 60 minutes before proceeding.
 
 You can find the health polling status in your logs:
 
