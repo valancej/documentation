@@ -145,7 +145,7 @@ data:
 
 ### Healthchecks
 
-Codeship supports the `HEALTHCHECK` directive for healthchecks built into a Docker image. For images that contain a healthcheck, we will poll for availability every 1 second for up to 60 minutes before proceeding. You can find the health polling status in your logs:
+Codeship supports the `HEALTHCHECK` directive for healthchecks built into a Dockerfile. For images that contain a `HEALTHCHECK`, we will check with Docker for container availability every 1 second, for up to 60 minutes, before proceeding. You can find the health polling status in your logs:
 
 ![Healthchecks logs output]({{ site.baseurl }}/images/docker/healthchecks.png)
 
@@ -170,7 +170,10 @@ Or, inside of your Dockerfile:
 FROM healthcheck/postgres:alpine
 ```
 
+**Note** that Docker will fail a build that makes three unsuccessful attempts to poll for a healthy state, by default. This can be problematic when using options such as `--interval`, which instruct Docker to poll at a different rate than it's default 30 seconds. You can also change the number of retries Docker tolerates with the `--retries` option.
+
 ### Environment Variables
+
 The standard `environment` and `env_file` directives are supported. Additionally, we support encrypted environment variables with `encrypted_environment` and `encrypted_env_file` directives. These are the same format, but they expect encrypted variables.
 
 An example setup explicitly declaring your environment variables in your `codeship-services.yml` file would look like this:
