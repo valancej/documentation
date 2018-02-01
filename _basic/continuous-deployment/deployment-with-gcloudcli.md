@@ -30,7 +30,7 @@ You will need to configure your authentication with environment variables and th
 
 The [gcloud CLI](https://cloud.google.com/sdk/gcloud) is pre-installed on Codeship Basic build machines.
 
-If you want to update to the latest version at build time, add the following command in the Setup Commands section of your test settings:
+If you want to update to the latest version at build time, add the following command in the [Setup Commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}#configuring-your-setup-commands) section of your test settings:
 
 ```shell
 gcloud components update --quiet
