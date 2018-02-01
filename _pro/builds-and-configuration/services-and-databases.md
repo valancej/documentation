@@ -42,7 +42,7 @@ node:
 Now we create a Dockerfile that starts from an Elasticsearch base container and adds our configuration file.
 
 ```dockerfile
-FROM healthcheck/elasticsearch:latest
+FROM healthcheck/elasticsearch:alpine
 
 ADD config/elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
 RUN chown elasticsearch:elasticsearch /usr/share/elasticsearch/config/elasticsearch.yml
