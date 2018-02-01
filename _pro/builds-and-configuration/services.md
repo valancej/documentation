@@ -143,11 +143,32 @@ data:
 
 [Learn more about using volumes.]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %})
 
-#### Healthchecks
+### Healthchecks
 
-Codeship supports the `healthchecks` directive for healthchecks built into a Docker image. For images that contain a healthcheck, we will poll for availability every 1 second for up to 60 minutes before proceeding. You can find the health polling status in your logs:
+Codeship supports the `HEALTHCHECK` directive for healthchecks built into a Docker image. For images that contain a healthcheck, we will poll for availability every 1 second for up to 60 minutes before proceeding. You can find the health polling status in your logs:
 
 ![Healthchecks logs output]({{ site.baseurl }}/images/docker/healthchecks.png)
+
+You can use the `healthcheck` version of a base image, [which can be found on Dockerhub](https://hub.docker.com/u/healthcheck/), to add a healthcheck to your builds with minimal configuration.
+
+Inside of your `codeship-services.yml` file:
+
+```yaml
+app:
+  build:
+    image: codeship/app
+    dockerfile: Dockerfile
+  links:
+    - postgres
+postgres:
+  image: healthcheck/postgres:alpine
+```
+
+Or, inside of your Dockerfile:
+
+```
+FROM healthcheck/postgres:alpine
+```
 
 ### Environment Variables
 The standard `environment` and `env_file` directives are supported. Additionally, we support encrypted environment variables with `encrypted_environment` and `encrypted_env_file` directives. These are the same format, but they expect encrypted variables.
@@ -286,52 +307,8 @@ All linking to the host is not allowed. This means the following directives are 
 Labels as they relate to images are supported by Codeship and should be [declared in the Dockerfile](https://docs.docker.com/engine/reference/builder/#/label) using the `LABEL` instruction. `labels` as a key in the services file (to label the running container) is not supported.
 
 #### Deprecated keys
+
   * `links` Links are used to declare dependencies in your services file. They also create environment variables with information for container communication. `links` is considered a legacy key by Docker and may be removed at any time. Use `depends_on` to control boot order of your containers. All containers running in a given step are on an isolated network, so you can communicate with services by using their service name as a hostname.
-
-## Timing And Waiting
-
-One common issue Docker users encounter is around the `depends_on` directive, outlined above and used to orchestrate dependent containers. Even if a dependency is declared via `depends_on`, it does not force the primary container to wait on the dependent container to be available until it is ready to proceed.
-
-This means that often your commands may begin executing before your dependent containers are ready. This is particularly problematic and common with databases.
-
-There are two common solutions to this problem:
-
-- Adding a short `sleep` command before your tests, giving the dependent service slightly more time to start up before proceeding.
-
-- Writing a simple health poll script to check for service uptime before proceeding.
-
-We are adding support for `healthchecks` soon. [Contact us for upcoming beta access!](mailto:solutions@codeship.com)
-
-An example of a health poll script may look something like this:
-
-```shell
-#!/usr/bin/env bash
-
-function test_postgresql {
-  pg_isready -h "${POSTGRESQL_HOST}" -U "${POSTGRESQL_USER}"
-}
-
-function test_redis {
-  redis-cli -h "${REDIS_HOST}" PING
-}
-
-count=0
-# Chain tests together by using &&
-until ( test_postgresql && test_redis )
-do
-  ((count++))
-  if [ ${count} -gt 50 ]
-  then
-    echo "Services didn't become ready in time"
-    exit 1
-  fi
-  sleep 0.1
-done
-```
-
-Or, a healthcheck poll could look like [this script](https://github.com/codeship/scripts/blob/master/utilities/check_port.sh) for checking to see if a port is available.
-
-**Note** that the above scripts require tools like `bash`, `pg_isready` and `redics-cli` that need to be running on the container running these scripts.
 
 ## Validating Your Files
 
