@@ -45,12 +45,12 @@ project_name:
     - DATABASE_URL=postgres://postgres@postgres/YOUR_DATABASE_NAME
     - REDIS_URL=redis://redis
 redis:
-  image: healthcheck/redis:latest
+  image: healthcheck/redis:alpine
 postgres:
-  image: healthcheck/postgres:latest
+  image: healthcheck/postgres:alpine
 ```
 
-**Note** that in this example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#healthchecks) version of our Redis and Postgres images to avoid startup timing issues.
+**Note** that in this example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#healthchecks) version of our Redis and PostgreSQL images to avoid startup timing issues.
 
 ## Steps File
 
@@ -143,7 +143,7 @@ COPY pom.xml /usr/src/app
 RUN mvn -f /usr/src/app/pom.xml clean package
 
 # phase two, which uses the java binary produced above
-FROM org/app:latest
+FROM org/app:alpine
 
 COPY --from=BUILD /usr/src/app/target/binary.war /opt/org/app/path/deployments/binary.war
 ```

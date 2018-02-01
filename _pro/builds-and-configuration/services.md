@@ -143,13 +143,13 @@ data:
 
 [Learn more about using volumes.]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %})
 
-### Healthchecks
+### HEALTHCHECK
 
-Codeship supports the `HEALTHCHECK` directive for healthchecks built into a Dockerfile. For images that contain a `HEALTHCHECK`, we will check with Docker for container availability every 1 second, for up to 60 minutes, before proceeding. You can find the health polling status in your logs:
+Codeship supports the `HEALTHCHECK` directive for health checks built into a Dockerfile. For images that contain the `HEALTHCHECK` directive, we will check with Docker for container availability every 1 second, for up to 60 minutes, before proceeding. You can find the health polling status in your logs:
 
 ![Healthchecks logs output]({{ site.baseurl }}/images/docker/healthchecks.png)
 
-You can use the `healthcheck` version of a base image, [which can be found on Dockerhub](https://hub.docker.com/u/healthcheck/), to add a healthcheck to your builds with minimal configuration.
+You can use the `healthcheck` version of a base image, [which can be found on Docker Hub](https://hub.docker.com/u/healthcheck/), to add a healthcheck to your builds with minimal configuration.
 
 Inside of your `codeship-services.yml` file:
 

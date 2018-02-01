@@ -48,7 +48,7 @@ ADD config/elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
 RUN chown elasticsearch:elasticsearch /usr/share/elasticsearch/config/elasticsearch.yml
 ```
 
-**Note** that in this example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#healthchecks) version of the Elasticsearch image to avoid startup timing issues.
+**Note** that in this example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#) version of the Elasticsearch image to avoid startup timing issues.
 
 The following `codeship-services.yml` uses the `Dockerfile.elasticsearch` we just created to build our container. Using `depends_on`, we can make it clear that the Elasticsearch container is a dependency of the Ruby container.
 
@@ -69,9 +69,9 @@ Now we have a fully customized instance of Elasticsearch running. This same proc
 
 When starting your tests you want to make sure that your service is up and running.
 
-### Healthchecks
+### HEALTHCHECK
 
-The most common and most supported way to make sure that a service is available is to use the `HEALTHCHECK` directive inside your Dockerfile, or to use the `healthcheck` version of a base image from Dockerhub or another source. For more about healthchecks, [read our codeship-services.yml file documentation]({% link _pro/builds-and-configuration/services.md %}#healthchecks).
+The most common and most supported way to make sure that a service is available is to use the `HEALTHCHECK` directive inside your Dockerfile, or to use the `healthcheck` version of a [base image from Docker Hub](https://hub.docker.com/u/healthcheck/) or another source. For more about , [read our codeship-services.yml file documentation]({% link _pro/builds-and-configuration/services.md %}#).
 
 ### Service poll
 

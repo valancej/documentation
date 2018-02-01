@@ -138,7 +138,6 @@ django
 dockercfg
 dockerfile
 dockerfiles
-dockerhub
 dockerignore
 dockerized
 Dockerrun.aws.json

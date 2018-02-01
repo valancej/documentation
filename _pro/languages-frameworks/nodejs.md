@@ -51,12 +51,12 @@ project_name:
     - DATABASE_URL=postgres://postgres@postgres/YOUR_DATABASE_NAME
     - REDIS_URL=redis://redis
 redis:
-  image: healthcheck/redis:latest
+  image: healthcheck/redis:alpine
 postgres:
-  image: healthcheck/postgres:latest
+  image: healthcheck/postgres:alpine
 ```
 
-**Note** that in this example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#healthchecks) version of our Redis and Postgres images to avoid startup timing issues.
+**Note** that in this example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#healthchecks) version of our Redis and PostgreSQL images to avoid startup timing issues.
 
 ## Steps File
 
