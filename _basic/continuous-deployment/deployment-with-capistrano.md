@@ -3,7 +3,7 @@ title: Deploy With Capistrano
 menus:
   basic/cd:
     title: Capistrano
-    weight: 11
+    weight: 13
 tags:
   - deployment
   - capistrano
