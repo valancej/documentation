@@ -26,7 +26,7 @@ You will need to install the CLI, configure your authentication with environment
 
 The [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest) _does not_ come pre-installed on Codeship Basic build machines.
 
-Please add the following command in the Setup Commands section of your test settings to install the Azure CLI:
+Please add the following command in the [Setup Commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}#configuring-your-setup-commands) section of your test settings to install the Azure CLI:
 
 ```shell
 pip install azure-cli
