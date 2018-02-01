@@ -7,6 +7,7 @@ menus:
 tags:
   - deployment
   - google app engine
+  - gae
   - google
 categories:
   - Continuous Deployment   
@@ -15,7 +16,11 @@ redirect_from:
   - /tutorials/continuous-deployment-google-app-engine-github-django-python/
 ---
 
-**Please note:** Codeship Basic currently runs Google App Engine SDK version `1.9.40` and supports the following languages: [Java]({{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}),[Python]({{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}) and [Go]({{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}).
+<div class="info-block">
+This article is for deploying to Google App Engine with the built-in Codeship integration. This integration runs the older App Engine SDK version `1.9.42` and supports the following languages: [Java]({{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}), [Python]({{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}) and [Go]({{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}).
+
+If you have a project that uses the [gcloud CLI](https://cloud.google.com/sdk/gcloud), please refer to documentation on doing [custom deployments with the gcloud CLI]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-gcloudcli.md %}).
+</div>
 
 * include a table of contents
 {:toc}
@@ -68,19 +73,14 @@ You have the option of adding the URL of your GAE app below to call after the de
 
 ![GAE Success]({{ site.baseurl }}/images/continuous-deployment/gae_success.png)
 
-You have now successfully setup deployment to your Google App Engine. Go ahead and push a commit to your configured deploy branch.
+You have now successfully setup deployment to Google App Engine. Go ahead and push a commit to your configured deploy branch.
 
 ## App Engine Authentication Issues
 
-The specific implementation Google App Engines uses to authenticate with other
-services like Codeship omits certain information if you re-authenticate.
-(Specifically the OAuth [refresh token](https://auth0.com/docs/refresh-token).)
+The specific implementation Google App Engines uses to authenticate with other services like Codeship omits certain information if you re-authenticate (specifically the OAuth [refresh token](https://auth0.com/docs/tokens/refresh-token/current)).
 
-If you encounter authentication problems with your GAE deployments,
-please head over to the [Google OAuth Application Settings](https://security.google.com/settings/security/permissions)
-page and remove the Codeship application from your account.
-Once you've done the above step, disconnecting and reconnecting to App Engine
-on [Connected Services](https://codeship.com/authentications) will update your authentication settings
-and allow deployments to App Engine.
+If you encounter authentication problems with your GAE deployments, please visit the [Google OAuth Application Settings](https://security.google.com/settings/security/permissions) and remove the Codeship application from your account.
+
+Once you've done the above step, disconnecting and reconnecting to App Engine on [Connected Services](https://app.codeship.com/authentications) will update your authentication settings and allow deployments to App Engine.
 
 Please save the deployment settings after reconnecting to GAE to ensure that we use the newly created token.
