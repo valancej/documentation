@@ -3,7 +3,7 @@ title: Deployment With gcloud CLI
 menus:
   basic/cd:
     title: gcloud CLI
-    weight: 7
+    weight: 9
 tags:
   - deployment
   - gcloud

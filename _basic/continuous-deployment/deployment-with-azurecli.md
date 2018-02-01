@@ -3,7 +3,7 @@ title: Deployment With Azure CLI
 menus:
   basic/cd:
     title: Azure CLI
-    weight: 7
+    weight: 10
 tags:
   - deployment
   - azure
