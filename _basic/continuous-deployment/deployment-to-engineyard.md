@@ -3,7 +3,7 @@ title: Deploy To Engine Yard
 menus:
   basic/cd:
     title: Engine Yard
-    weight: 10
+    weight: 12
 tags:
   - deployment
   - engine yard

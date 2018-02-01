@@ -22,7 +22,6 @@ redirect_from:
 
 Codeship Basic offers a variety of turnkey deployment integrations for AWS, including:
 
-
 - [CodeDeploy]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-aws-codedeploy.md %})
 - [Lambda]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-aws-lambda.md %})
 - [Elastic Beanstalk]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-elastic-beanstalk.md %})
@@ -38,9 +37,9 @@ You will need to install the CLI, configure your authentication via environment 
 
 ### Installing The CLI
 
-The AWS CLI tool does NOT come pre-installed on Codeship Basic build machines.
+The [AWS CLI](https://aws.amazon.com/cli) _does not_ come pre-installed on Codeship Basic build machines.
 
-Please add the following command in the Setup Command section of your test settings to install the AWS CLI tool:
+Please add the following command in the [Setup Commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}#configuring-your-setup-commands) section of your test settings to install the AWS CLI:
 
 ```shell
 pip install awscli
@@ -48,9 +47,9 @@ pip install awscli
 
 ### Configuring Authentication
 
-Once the CLI is installed, you will need to run the appropriate AWS CLI login commands via your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or at the start of your [custom-script deployment pipeline]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}).
+Once the CLI is installed, you will need to run the appropriate AWS login commands in your project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}#configuring-your-setup-commands) or at the start of your [custom-script deployment pipeline]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}).
 
-The easiest way to keep these authentication secure would be to use [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) to store the username and password, and to pass those through to your AWS CLI login commands.
+The easiest way to keep the authentication secure is to use [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) to store the username and password, and to pass those to your AWS login commands.
 
 ### Deployment Scripting
 
@@ -60,4 +59,4 @@ These commands will be run every time the branch the deployment pipeline is asso
 
 ## AWS CLI Information
 
-Please visit [https://aws.amazon.com/cli/](https://aws.amazon.com/cli/) for more information on using the AWS CLI as well as complete documentation on what commands can be run with it.
+Read more about the [AWS CLI](https://aws.amazon.com/cli) for more information on using the CLI as well as complete documentation on what commands can be run with it.

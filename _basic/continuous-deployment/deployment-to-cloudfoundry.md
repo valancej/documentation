@@ -6,7 +6,7 @@ tags:
 menus:
   basic/cd:
     title: CloudFoundry
-    weight: 13
+    weight: 15
 categories:
   - Continuous Deployment       
 redirect_from:
