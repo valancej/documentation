@@ -127,9 +127,9 @@ demo:
     - redis
     - postgres
 redis:
-  image: healthcheck/redis:latest
+  image: healthcheck/redis:alpine
 postgres:
-  image: healthcheck/postgres:latest
+  image: healthcheck/postgres:alpine
 ```
 
 The first thing this file does is define our *demo* service. It *builds* the Dockerfile and names it *myapp*. The *depends_on* section tells it what services are required for *demo* to run. In this case both *redis* and *postgres*.
