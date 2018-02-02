@@ -42,6 +42,7 @@ This article is about using Docker build arguments with Codeship Pro.
 For each service, you can declare [build arguments](https://docs.docker.com/compose/compose-file/#/args), which are values available to the image only at build time. For example, if you must pass the image a set of credentials in order to access an asset or repository when the image is built, you would pass that value to the image as a build argument.
 
 ## Build Arguments vs. Environment Variables
+
 During a build on Codeship's Docker platform, there are three ways to pass custom values to your services:
 
 * Build arguments or encrypted build arguments: available only at image build time
@@ -50,10 +51,12 @@ During a build on Codeship's Docker platform, there are three ways to pass custo
 
 Build arguments are unique in that they are available only at build time. They are not persisted in the image. However, you may assign a build argument to an environment variable during the build process, and that environment variable will be available.
 
-## Using Unencrypted Build Arguments with Codeship
+## Unencrypted Build Arguments
+
 Declaring build arguments in your services file requires updates in two places: the service's Dockerfile and the `codeship-services.yml` file.
 
 ### Dockerfile ARG instruction
+
 The service's Dockerfile must include the `ARG` [instruction](https://docs.docker.com/engine/reference/builder/#/arg), which declares the name of the argument you will pass at build time. You may also declare a default here.
 
 ```dockerfile
@@ -65,6 +68,7 @@ RUN script-requiring-build-env.sh "$build_env"
 ```
 
 ### Passing build args in the services file
+
 Now that the Dockerfile knows to expect an argument, you can pass the argument to the image via the service configuration in `codeship-services.yml`.
 
 ```yaml
@@ -88,6 +92,7 @@ FROM ubuntu:$BASE_IMAGE_TAG
 Note: YAML boolean values (true, false, yes, no, on, off) must be enclosed in quotes, so that the parser interprets them as strings.
 
 ## Encrypted Build Arguments
+
 In a lot of cases, the values needed by the image at build time are secrets -- credentials, passwords, and other things that you don't want to check in to source control in plain text. Because of this, Codeship supports encrypted build arguments. You can either encrypt a build argument individually, or encrypt an entire file containing all of the build arguments you need.
 
 First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}#downloading-your-aes-key) to the root directory (and add it to the `.gitignore` file).
@@ -125,10 +130,46 @@ app:
 
 Codeship will decrypt your build arguments and pass them to the image when it is built.
 
+## CI/CD Variables As Build Arguments
+
+Codeship sets a variety of CI/CD-related environment variables at runtime with information about your build.
+
+These can be set as build arguments and used in the Dockerfile, but they must be explicitly set as unencrypted arguments in your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
+
+For example:
+
+```yaml
+app:
+  build:
+    dockerfile: Dockerfile
+    args:
+      BRANCH: "{{.Branch}}"
+      CI: "{{.CI}}"
+```
+
+The full list of CI/CD-related variables you can use is:
+
+* `ProjectID` (the Codeship defined project ID)
+* `BuildID` (the Codeship defined build ID)
+* `RepoName` (the name of the repository according to the SCM)
+* `Branch` (the name of the current branch)
+* `CommitID` (the commit hash or ID)
+* `CommitMessage` (the commit message)
+* `CommitDescription` (the commit description, see footnote)
+* `CommitterName` (the name of the person who committed the change)
+* `CommitterEmail` (the email of the person who committed the change)
+* `CommitterUsername` (the username of the person who committed the change)
+* `Time` (a golang [`Time` object](http://golang.org/pkg/time/#Time) of the build time)
+* `Timestamp` (a unix timestamp of the build time)
+* `StringTime` (a readable version of the build time)
+* `Ci` (defaults to `true`)
+
 ## Impact on Docker Image Caching
+
 Docker will attempt to reuse layers of your image if there are no changes. Although the values of a build argument are not persisted to the image, they do impact the build cache in a similar way. Refer to Docker's [notes on cache invalidation](https://docs.docker.com/engine/reference/builder/#/impact-on-build-caching) when using build arguments.
 
 ## Common Error Messages
+
 `One or more build-args [XXX] were not consumed`
 
 If you pass a build argument to an image at build time, but do not have a corresponding `ARG` instruction in the Dockerfile, Docker (versions < 1.13) will fail the image build.
