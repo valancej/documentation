@@ -40,16 +40,27 @@ There are a lot of other authenticator apps available, so check your app store i
 
 Once you have decided on an authenticator app, and have installed it on your device, you can go to your Personal Settings in codeship and enable 2FA.
 
-When you enable 2FA we will display a unique QR code that you will need to scan with your authenticator app. This is how an (automatically generated) shares secret is agreed upon between codeship and your app.
+![button to enable 2fa]({{ site.baseurl }}/images/general/2fa_enable.png)
 
-Next, you will be asked to provide a valid code from your authenticator app. You will start to get codes generated once the app have scanned the QR code and have finished it's setup. The setup on Codeship will not be complete until you've entered a code, to make sure that everything works as it's supposed to.
+When you enable 2FA we will display a unique QR code that you will need to scan with your authenticator app. This is how an (automatically generated) shared secret is agreed upon between codeship and your app.
+
+![button to enable 2fa]({{ site.baseurl }}/images/general/2fa_enable.png)
+
+Before you can finalize the setup, you will need to provide a valid code from your authenticator app. Your app will start to generate codes once you have scanned the QR code (and potentially have finished it's setup - that depends a bit on the app). The setup on Codeship will not be complete until you've entered a code, to make sure that everything works as it's supposed to.
+
 If something goes wrong in setting up the app, simply cancel out of enabling 2FA and try again. As long as the we haven't been able to validate a code from your authenticator app, your setup will not change.
+
+As a final step, make sure you download your recovery codes and store them somewhere safe. You can read more about recovery codes below.
+
+# XXX INSERT SCREENSHOT OF DIALOG HERE
 
 ### Recovery Codes
 
-Accidents happen, and you may end up in the situation where you've either lost your personal device, or for some reason it's no longer working and can no longer generate codes for you. In this case it's important that you have downloaded the recovery codes made available when you setup 2FA. 
+Accidents happen, and you may end up in the situation where you've either lost your personal device, or for some reason it's no longer working and can no longer generate codes for you. In this case it's important that you have downloaded the recovery codes made available to youm, when you initially set up 2FA.
 
-Once the setup is complete a link will appear, which will allow you to download a set of recovery codes. These can be used in case your don't have your personal device, so make sure to keep them safe. If someone else should get hold of them (as well as your username and password) they would be able to get access to your account, without having the authenticator app on your personal device.
+In case you didn't download the recovery codes during the setup, you can always go back to your Personal Settings and click the `Download recovery codes` button.
+
+Be aware that recovery codes can be used in case your don't have your personal device, so make sure to keep them safe. If someone else were to get hold of them (as well as your username and password) they would be able to get access to your account, without having the authenticator app on your personal device.
 
 ## Using Recovery Codes
 
