@@ -56,7 +56,7 @@ As a final step, make sure you download your recovery codes and store them somew
 
 ### Recovery Codes
 
-Accidents happen, and you may end up in the situation where you've either lost your personal device, or for some reason it's no longer working and can no longer generate codes for you. In this case it's important that you have downloaded the recovery codes made available to youm, when you initially set up 2FA.
+Accidents happen, and you may end up in the situation where you've either lost your personal device, or for some reason it's no longer working and can no longer generate codes for you. In this case it's important that you have downloaded the recovery codes made available to you, when you initially set up 2FA.
 
 In case you didn't download the recovery codes during the setup, you can always go back to your Personal Settings and click the `Download recovery codes` button.
 
