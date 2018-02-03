@@ -44,7 +44,7 @@ Once you have decided on an authenticator app, and have installed it on your dev
 
 When you enable 2FA we will display a unique QR code that you will need to scan with your authenticator app. This is how an (automatically generated) shared secret is agreed upon between codeship and your app.
 
-![button to enable 2fa]({{ site.baseurl }}/images/general/2fa_enable.png)
+![2fa qr code]({{ site.baseurl }}/images/general/2fa_qrcode.png)
 
 Before you can finalize the setup, you will need to provide a valid code from your authenticator app. Your app will start to generate codes once you have scanned the QR code (and potentially have finished it's setup - that depends a bit on the app). The setup on Codeship will not be complete until you've entered a code, to make sure that everything works as it's supposed to.
 
@@ -52,7 +52,7 @@ If something goes wrong in setting up the app, simply cancel out of enabling 2FA
 
 As a final step, make sure you download your recovery codes and store them somewhere safe. You can read more about recovery codes below.
 
-# XXX INSERT SCREENSHOT OF DIALOG HERE
+![2fa recovery codes]({{ site.baseurl }}/images/general/2fa_recoverycodes.png)
 
 ### Recovery Codes
 
