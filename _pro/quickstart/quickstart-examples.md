@@ -49,6 +49,10 @@ If you're looking for a full, working proof of concept application ready to test
 - [PHP/Laravel](https://github.com/codeship-library/php-laravel-todoapp)
 - [NodeJS/Express](https://github.com/codeship-library/nodejs-express-todoapp)
 
+## Configuration Builder
+
+You can use our [configuration builder](https://configbuilder.codeship.com) to help build out your initial set of Services and Steps files!
+
 ## Webinars
 
 We've got some great webinars that you can watch to learn everything from the basics of Codeship Pro to Docker deployment best practices.
