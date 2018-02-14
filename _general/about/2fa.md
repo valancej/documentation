@@ -82,3 +82,7 @@ To reset your setup, simply go to you account and click the Reset button. This w
 ## Disabling 2FA
 
 If you need to disable 2FA, simple access your account, navigate to your Personal Settings, and disable 2FA.
+
+## 2FA and the Codeship API
+
+As the API is build with system-to-system interaction in mind, it's not possible to access the API with a user that have 2FA enabled. We're looking into personal access tokens and similar options, but do [get in touch](mailto:support@codeship.com) if this is a concern for you, as we would like to learn more about which options might work best in which scenarios.
