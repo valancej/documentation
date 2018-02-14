@@ -29,7 +29,7 @@ Two-Factor Authentication (more commonly referred to as 2FA) is a way to secure 
 There are a couple of different approaches to 2FA, some are purely app-based while others require you to have a special piece of hardware that can generate unique codes. 
 In all cases you will be asked for a unique code as part of logging in the online service, and the unique code is delivered to/by your personal device.
 
-For our implementation on Codeship, we have chosen to rely on mobile apps that can generate the unique codes. These apps will continuously generate one-time use codes that are only valid for a short period of time. The apps rely on a shared unique code between codeship and the specific app, to ensure that only the app on your personal device is able to generate the correct codes; it's impossible for someone to generate the same codes, at the same time, on their own device.
+For our implementation on Codeship, we have chosen to rely on mobile apps that can generate the unique codes. These apps will continuously generate one-time use codes that are only valid for a short period of time. The apps rely on a shared unique code between Codeship and the specific app, to ensure that only the app on your personal device is able to generate the correct codes; it's impossible for someone to generate the same codes, at the same time, on their own device.
 
 ### Authenticator Apps
 
@@ -38,11 +38,11 @@ There are a lot of other authenticator apps available, so check your app store i
 
 ## Enabling 2FA
 
-Once you have decided on an authenticator app, and have installed it on your device, you can go to your Personal Settings in codeship and enable 2FA.
+Once you have decided on an authenticator app, and have installed it on your device, you can go to your Personal Settings in Codeship and enable 2FA.
 
 ![button to enable 2fa]({{ site.baseurl }}/images/general/2fa_enable.png)
 
-When you enable 2FA we will display a unique QR code that you will need to scan with your authenticator app. This is how an (automatically generated) shared secret is agreed upon between codeship and your app.
+When you enable 2FA we will display a unique QR code that you will need to scan with your authenticator app. This is how an (automatically generated) shared secret is agreed upon between Codeship and your app.
 
 ![2fa qr code]({{ site.baseurl }}/images/general/2fa_qrcode.png)
 
