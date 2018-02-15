@@ -83,7 +83,17 @@ If only the committer should be notified, either the emails or usernames must be
 
 #### Disable Email
 
-If you don't want to receive any emails you can set that on your [account page](https://www.codeship.com/user/edit). This applies to all emails though, and not just for one project.
+If you don't want to receive any emails you can set that on your [account page](https://app.codeship.com/user/edit). This applies to all emails though, and not just for one project.
+
+#### Not Receiving Email
+
+If you are not receiving email notifications, but are expecting them, there are a few things to check. First make sure notifications are enabled for your [account](https://app.codeship.com/user/edit). Next make sure that the email address on your [Codeship account](https://app.codeship.com/user/edit) matches the email you have set in your Git configuration on your local machine.  You can check this with:
+
+```
+git config --get user.email
+```
+
+If all those settings look correct and you are still not receiving notifications, please [contact us](mailto:support@codeship.com) and we can further investigate.
 
 ## Slack
 
