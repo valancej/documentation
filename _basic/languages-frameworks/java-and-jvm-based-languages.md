@@ -3,10 +3,17 @@ title: Using Java And The JVM In CI/CD with Codeship Basic
 shortTitle: Java And The JVM
 tags:
   - java
+  - clojure
+  - groovy
+  - kotlin
   - scala
   - languages
   - jvm
   - jdk
+  - openjdk
+  - jre
+  - oracle
+  - junit
 menus:
   basic/languages:
     title: Java And JVM
@@ -51,9 +58,9 @@ echo $JAVA_HOME
 echo $JRE_HOME
 # /usr/lib/jvm/java-7-openjdk-amd64/jre
 java -version
-# java version "1.7.0_65"
-# OpenJDK Runtime Environment (IcedTea 2.5.3) (7u71-2.5.3-0ubuntu0.14.04.1)
-# OpenJDK 64-Bit Server VM (build 24.65-b04, mixed mode)
+# java version "1.7.0_151"
+# OpenJDK Runtime Environment (IcedTea 2.6.11) (7u151-2.6.11-2ubuntu0.14.04.1)
+# OpenJDK 64-Bit Server VM (build 24.151-b01, mixed mode)
 ```
 
 ### Oracle JDK 7
@@ -67,9 +74,9 @@ echo $JAVA_HOME
 echo $JRE_HOME
 # /usr/lib/jvm/java-7-oracle/jre
 java -version
-# java version "1.7.0_72"
-# Java(TM) SE Runtime Environment (build 1.7.0_72-b14)
-# Java HotSpot(TM) 64-Bit Server VM (build 24.72-b04, mixed mode)
+# java version "1.7.0_80"
+# Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
+# Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
 ```
 
 ### Oracle JDK 8
@@ -83,9 +90,9 @@ echo $JAVA_HOME
 echo $JRE_HOME
 # /usr/lib/jvm/java-8-oracle/jre
 java -version
-# java version "1.8.0_25"
-# Java(TM) SE Runtime Environment (build 1.8.0_25-b17)
-# Java HotSpot(TM) 64-Bit Server VM (build 25.25-b02, mixed mode)
+# java version "1.8.0_161"
+# Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
+# Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
 ```
 
 ### Oracle JDK 9
@@ -99,9 +106,9 @@ echo $JAVA_HOME
 echo $JRE_HOME
 # /usr/lib/jvm/java-9-oracle/jre
 java -version
-# java version "9.0.1"
-# Java(TM) SE Runtime Environment (build 9.0.1+11)
-# Java HotSpot(TM) 64-Bit Server VM (build 9.0.1+11, mixed mode)
+# java version "9.0.4"
+# Java(TM) SE Runtime Environment (build 9.0.4+11)
+# Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
 ```
 
 ### Build Tools
@@ -109,14 +116,14 @@ java -version
 The following tools are preinstalled in our virtual machine. You can add them to your setup or test commands to start your build:
 
 * ant (1.9.2)
-* maven (3.1.1)
+* maven (3.2.5)
 * gradle (1.10)
 * sbt (0.13.5)
 * leiningen (2.4.0)
 
 ### JVM-based languages
 
-Scala , Clojure, Groovy and other JVM based languages should run without issue on Codeship, as well. [Let us know](https://helpdesk.codeship.com) if you find something that doesn't work as expected.
+[Scala](https://www.scala-lang.org), [Clojure](https://clojure.org), [Kotlin](https://kotlinlang.org), [Groovy](http://groovy-lang.org) and other JVM based languages should also run on Codeship. [Let us know](https://helpdesk.codeship.com) if you find something that doesn't work as expected.
 
 ## Dependencies
 
@@ -128,7 +135,7 @@ Codeship automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` direc
 
 ## Frameworks And Testing
 
-All build tools and test frameworks, such as Junit, will work without issue as long as they do not require root access for custom machine configuration.
+All build tools and test frameworks, such as [JUnit](https://junit.org), will work without issue as long as they do not require root access for custom machine configuration.
 
 ## Parallel Testing
 
@@ -146,10 +153,10 @@ mvn test -Dtest=class_2
 
 ### Parallelization Modules
 
-In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), some customers have found using the parallel features in Junit and other testing frameworks to be a good way to speed up your tests.
+In addition to parallelizing your tests explicitly [via parallel pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}), some customers have found using the parallel features in JUnit and other testing frameworks to be a good way to speed up your tests.
 
 Note that aggressive parallelization can cause resource and build failure issues, as well.
 
 ## Notes And Known Issues
 
-Due to Java version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to Java version issues, you may find it helpful to test your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.

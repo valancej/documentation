@@ -206,6 +206,7 @@ junit
 jvm-based
 keychain
 keypair
+kotlin
 kubernetes
 laravel
 leiningen
