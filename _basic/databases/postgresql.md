@@ -33,13 +33,13 @@ You need to activate them with `CREATE EXTENSION` as explained in the [Extension
 
 ## Deprecation Notice - PostgreSQL 9.2 EOL
 
-PostgreSQL 9.2 officially reached it's End-of-Life (EOL) (see [the PostgreSQL site for details](https://www.postgresql.org/support/versioning/)) which means that we will remove it from the Codeship Basic build image on **March 31, 2018**.
+PostgreSQL 9.2 officially reached it's End-of-Life (EOL) (see [the PostgreSQL site for details](https://www.postgresql.org/support/versioning/)) which means that we will remove it from the Codeship Basic build image on **March 29, 2018**.
 
-Since PostgreSQL 9.2 is currently running on port 5432, we will move PostgreSQL 10.2 from 5437 to 5432 to make 10.2 the new default. This should have minimal impact on users as PostgreSQL are generally very well backwards compatible, but we encourage you to try out 10.2 before March 31, 2018 to avoid any unexpected surprises.
+Since PostgreSQL 9.2 is currently running on port 5432, we will move PostgreSQL 10.2 from 5437 to 5432 to make 10.2 the new default. This should have minimal impact on users as PostgreSQL are generally very well backwards compatible, but we encourage you to try out 10.2 before March 29, 2018 to avoid any unexpected surprises.
 
 ### Python & earlier psycopg2 versions
 
-During testing, a very small number of users (2-4) experienced issues with older versions of the Python PostgreSQL client `psycopg2`. These older versions used a string-comparison to try and work out the PostgreSQL version number, and didn't account for a 10.x version. To resolve this issue, you'll need to upgrade psycopg2 to version 2.6 or higher.
+During testing, a very small number of users (2-4) experienced issues with older versions of the Python PostgreSQL client `psycopg2`. These older versions used a string-comparison to try and work out the PostgreSQL version number, and didn't account for a 10.x version. To resolve this issue, you'll need to upgrade psycopg2 to version 2.7 or higher.
 
 ## Versions
 
