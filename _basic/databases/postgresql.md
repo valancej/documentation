@@ -31,9 +31,15 @@ We install the Ubuntu `postgresql-contrib` package. It includes the [extension m
 
 You need to activate them with `CREATE EXTENSION` as explained in the [Extension Guide](http://www.postgresql.org/docs/9.1/static/sql-createextension.html).
 
+## Deprecation Notice - PostgreSQL 9.2 EOL
+
+PostgreSQL 9.2 officially reached it's End-of-Life (EOL) (see [the PostgreSQL site for details](https://www.postgresql.org/support/versioning/)) which means that we will remove it from the Codeship Basic build image on **March 31, 2018**.
+
+Since PostgreSQL 9.2 is currently running on port 5432, we will move PostgreSQL 10.2 from 5437 to 5432 to make 10.2 the new default. This should have minimal impact on users as PostgreSQL are generally very well backwards compatible, but we encourage you to try out 10.2 before March 31, 2018 to avoid any unexpected surprises.
+
 ## Versions
 
-### 9.2
+### 9.2 - TO BE DEPRECATED
 
 The **default version** of PostgreSQL on Codeship is **9.2**, which runs on the default port of `5432`. No additional configuration is required to use version 9.2.
 
@@ -84,6 +90,18 @@ Similar to the other versions, you need to work around our auto-configuration fo
 ```shell
 sed -i "s|5432|5436|" "config/database.yml"
 ```
+
+### 10.2
+
+PostgreSQL version **10.2** is running on port `5437` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
+
+Similar to the other versions, you need to work around our auto-configuration for Rails based projects by adding the following command to your _Setup Commands_.
+
+```shell
+sed -i "s|5432|5437|" "config/database.yml"
+```
+
+**Note**: the port `5437` is only temporary. Once we've fully deprecated PostgreSQL 9.2 on March 31st, 10.2 will be moved to the default port `5432`.
 
 ### pg_dump
 You may experience a `pg_dump` version mismatch with the PostgreSQL version you have configured.
