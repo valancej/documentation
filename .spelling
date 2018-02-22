@@ -15,6 +15,7 @@
 60gb
 7.5gb
 7.x.x
+10.x
 10s
 100s
 _
@@ -287,6 +288,7 @@ prepending
 profitwell
 programmatically
 psql
+psycopg2
 py.test.
 pyenv
 pytest
