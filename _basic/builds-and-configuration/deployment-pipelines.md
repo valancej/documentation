@@ -86,3 +86,9 @@ After saving the deployment pipeline you can add your deployment methods for tha
 ### Editing Branch Specifications
 
 By clicking on "Edit Branch Settings" you can change the branch name or delete that branch.
+
+### Scripts Library
+
+We maintain a [scripts library](https://github.com/codeship/scripts) with scripts for common packages, deployments and other useful workflow improvements on Codeship Basic.
+
+If you're looking for a specific tool or version, the scripts library is a great first place to check.
