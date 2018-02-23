@@ -20,7 +20,7 @@ redirect_from:
 
 Codeship Basic makes it easy and simple to get a working CI/CD process running through an easy-to-configure web UI and turnkey deployments.
 
-This article will walk you through setting up a Codeship Basic project.
+This article will walk you through setting up a Codeship Basic project. For a video introduction to Codeship Basic, you can view our [overview video](https://codeship.com/features/basic).
 
 ## Creating Your Account
 
@@ -83,6 +83,12 @@ To add multiple steps or deployments to a pipeline, just click on an additional 
 ## Accessing Codeship using the API
 
 If you're looking to automate more of your processes, you can access your projects and builds via the Codeship API. See the [Codeship API Documentation]({{ site.baseurl }}{% link _general/integrations/api.md %}) for more details and examples.
+
+## Scripts Library
+
+We maintain a [scripts library](https://github.com/codeship/scripts) with scripts for common packages, deployments and other useful workflow improvements on Codeship Basic.
+
+If you're looking for a specific tool or version, the scripts library is a great first place to check.
 
 ## Common Questions
 
