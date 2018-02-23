@@ -41,9 +41,9 @@ You can get the API Key from your RedLine13 account after [registering for a Red
 
 The test runner provides for multiple configuration items which can be managed via environment variables. These variables can also be passed along as encrypted or stored in your codeship-services.yml file
 
-- `TIMEOUT` # of seconds before test consider failure, default 900s
+- `TIMEOUT` # of seconds before test consider failure, default 900 seconds
 - `SUCCESS_RATE` % of test cases that must pass for success, default 0 - always pass
-- `RESPONSE_TIME` response time must be less than this for success, default 10000ms
+- `RESPONSE_TIME` response time must be less than this for success, default 10000 milliseconds 
 
 ### Starting load tests
 
