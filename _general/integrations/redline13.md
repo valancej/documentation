@@ -4,7 +4,7 @@ shortTitle: RedLine13 Load Testing
 menus:
   general/integrations:
     title: Using RedLine13
-    weight: 14
+    weight: 24
 tags:
 - apis
 - api testing
@@ -23,9 +23,7 @@ categories:
 
 ## About RedLine13
 
-[RedLine13](https://www.redline13.com) is a (Almost Free) load testing and reporting tool that can be used with continuous integration and delivery services like [Codeship](https://codeship.com) to determine performance and throughput of your web applications and mobile apis.
-
-By using RedLine13 you can ship more performant code for your teams and your customers.
+[RedLine13](https://www.redline13.com) is a load testing and reporting tool that can be used with continuous integration and delivery services to determine performance and throughput of your web applications and mobile APIs.
 
 The [RedLine13 documentation](https://www.redline13.com/blog/kb/) provides a starting point for running load tests, and the instructions below have more information on integrating with [Codeship](https://codeship.com) to [run load tests during CI](#starting-load-tests).
 
@@ -137,4 +135,6 @@ Add the following to your [project's test commands]({{ site.baseurl }}{% link _b
 ./codeship.sh 'curl -s https://www.redline13.com/Api/LoadTest -H \"X-Redline-Auth: ${REDLINE_API_KEY}\" -F testType=jmeter-test -F name=CodeShipAndRedLine13 -F \"file=@`pwd`/tests/Plexify.jmx\" -F numServers=1 -F storeOutput=T -F servers[0][location]=us-east-1 -F servers[0][size]=m3.medium -F servers[0][num]=1 -F servers[0][onDemand]=T -F servers[0][usersPerServer]=1'
 ```
 
-For a walk-through of setting up read this RedLine13 blog post: [Load Testing on Codeship with Redline13 – it just makes sense](https://www.redline13.com/blog/2018/02/codeship-integration/).
+## More Info
+
+For a walk-through of setting up you can read more on the [RedLine13 blog](https://www.redline13.com/blog/2018/02/codeship-integration/).
