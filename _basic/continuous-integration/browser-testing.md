@@ -89,9 +89,6 @@ To install a [custom geckodriver version](https://github.com/codeship/scripts/bl
 
 ```shell
 export GECKODRIVER_VERSION=YOUR_DESIRED_VERSION
-
-source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/rust.sh)"
-
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/geckodriver.sh | bash -s
 ```
 
