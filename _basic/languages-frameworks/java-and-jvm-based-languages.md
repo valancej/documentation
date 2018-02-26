@@ -14,6 +14,7 @@ tags:
   - jre
   - oracle
   - junit
+  - jce
 menus:
   basic/languages:
     title: Java And JVM
@@ -160,3 +161,12 @@ Note that aggressive parallelization can cause resource and build failure issues
 ## Notes And Known Issues
 
 Due to Java version issues, you may find it helpful to test your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+
+### JCE
+
+The Java Cryptography Extension (JCE) ships from Oracle [by default](https://www.java.com/en/jre-jdk-cryptoroadmap.html) on Java 8 and Java 9. You can also check if JCE is in limited or unlimited mode by checking the allowed key length. Limited mode will return `128` and unlimited mode will return `2147483647`.
+
+```
+jdk_switcher use oraclejdk9
+jrunscript -e 'print (javax.crypto.Cipher.getMaxAllowedKeyLength("AES"));'
+```
