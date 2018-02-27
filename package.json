@@ -11,7 +11,7 @@
   "license": "MIT",
   "engines": {
     "node": "^8.9.4",
-    "yarn": "^1.3.2"
+    "yarn": "^1.5.1"
   },
   "scripts": {
     "check": "mdspell -rna --en-us '{,!(node_modules)/**/}*.md'",

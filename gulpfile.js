@@ -18,7 +18,6 @@ gulp.task('css', folders(site, function(folder) {
 	];
 
 	return gulp.src(path.join(site, folder, 'assets', 'css', '*.css'))
-		.pipe(print())
 		.pipe(postcss(processors))
 		.pipe(gulp.dest(''))
 }));
@@ -34,7 +33,6 @@ gulp.task('img:resize', folders(site, function(folder) {
 			width: 1024,
 			upscale : false
 		}))
-		.pipe(print())
 		.pipe(gulp.dest(path.join(site, 'images')));
 }));
 
@@ -51,13 +49,11 @@ gulp.task('img:minify', ['img:resize'], folders(site, function(folder) {
 				removeViewBox: false
 			}],
 		}))
-		.pipe(print())
 		.pipe(gulp.dest(path.join(site, 'images')));
 }));
 
 gulp.task('jsonlint', function() {
 	gulp.src('./*.json')
-		.pipe(print())
 		.pipe(jsonlint())
 		.pipe(jsonlint.failAfterError())
 });
