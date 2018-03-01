@@ -111,15 +111,15 @@ Under ***Project Settings > Team members***, simply add their email address to s
 
 ## Whitelisting Codeship On Your Firewall
 
-Codeship is hosted on AWS EC2 in the us-east-1 region. Because of this, Codeship services do not have static IP addresses. There are several different options for allowing Codeship to pass through your firewall.
+Codeship is hosted on AWS EC2 in the us-east-1 region. Because of this, Codeship services do not have static IP addresses by default. There are several different options for allowing Codeship to pass through your firewall.
 
-AWS publishes current [IP address ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json). You can enable access for those ranges on your own server's firewall settings.
+* The most straightforward solution is our [IP whitelisting feature]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) so you can allow a small number of [IP addresses]({{ site.baseurl }}{% link _general/account/whitelisting.md %}#step-2) through your firewall.
 
-Another option is to set up and run your own [bastion host](https://en.wikipedia.org/wiki/Bastion_host). This would allow you to route all Codeship calls through your bastion host and white list only this host.
+* AWS publishes current [IP address ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json). You can enable access for those ranges on your firewall.
 
-Finally, another option is configuring [port knocking](https://help.ubuntu.com/community/PortKnocking). The [knock package]({% man_url knock %}) is already installed on Codeship Basic and could also be installed in your Codeship Pro configuration.
+* Another option is to set up and run your own [bastion host](https://en.wikipedia.org/wiki/Bastion_host). This allows you to route all Codeship calls through your bastion host and whitelist only this host.
 
-We realize these options may not work for all configurations. If there is something specific you would like to see, please [get in touch](mailto:support@codeship.com) and let us know more details about your environment.
+* Finally, another option is configuring [port knocking](https://help.ubuntu.com/community/PortKnocking). The [knock package]({% man_url knock %}) is already installed on Codeship Basic and could also be installed in your Codeship Pro configuration.
 
 ## Can't Locate A File
 
