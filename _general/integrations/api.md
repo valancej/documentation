@@ -21,7 +21,7 @@ redirect_from:
 
 ## API v2 Introduction
 
-We recently launched a new version of the API as a public Beta, which is open to anyone and doesn't require any registration. This page will provide more context around the new API and examples of how to work with it.
+We launched a new version of the API, which is open to anyone and doesn't require any registration. This page will provide more context around the new API and examples of how to work with it.
 
 If you're just looking to get started, head over to the [API v2 Documentation](https://apidocs.codeship.com/v2/) for all the details.
 
