@@ -36,13 +36,9 @@ We provide a deployment container configured to making deploying with SSH and SC
 
 ## Configuring SSH/SCP
 
-### SSH Helper Image
-
-To get started deploying via SSH and SCP with Codeship Pro, first see our [SSH helper repo](https://github.com/codeship-library/docker-utilities/tree/master/ssh-helper). Clone this repo locally and build the helper image by running `docker build -t codeship/ssh-helper`.
-
 ### Creating Keys
 
-Next, use the SSH helper image to create a new SSH key and write the key files to your current directory. The file names will be `codeship_deploy_key` for the private key and `codeship_deploy_key.pub` for the public one. To create your keys, run the following command:
+Use our SSH helper image to create a new SSH key and write the key files to your current directory. The file names will be `codeship_deploy_key` for the private key and `codeship_deploy_key.pub` for the public one. To create your keys, run the following command:
 
 ```
 docker run -it --rm -v $(pwd):/keys/ codeship/ssh-helper generate "<YOUR_EMAIL>"
