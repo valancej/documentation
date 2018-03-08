@@ -42,7 +42,7 @@ If you'd like to learn more about Codeship Basic, we recommend the [getting star
 
 Current versions of Google Chrome and Chromium are installed by default.
 
-Google Chrome is at version 64 and is located at `/usr/bin/google-chrome`.
+Google Chrome is at version 65 and is located at `/usr/bin/google-chrome`.
 
 Chromium is at version 64 and is located at `/usr/bin/chromium-browser`.
 
