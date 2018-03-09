@@ -95,6 +95,8 @@ cs clear-cache
 
 #### Prompted For Password
 
+SSH Debug Session expects to find the default private key in `~/.ssh/id_rsa`. In the case you are using a custom configuration for the identity file, you need to pass it by the `-i` parameter.
+
 If you are being prompted for a password while connecting to your SSH debug session, you likely have a mismatch with the key you added to your Codeship account.
 
 Try removing the key, verifying or regenerating the key locally and then re-adding it.
