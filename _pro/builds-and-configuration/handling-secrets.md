@@ -75,7 +75,7 @@ Typically, the need for passing secrets to the build falls into three main categ
 - Accessing private assets during the image build
 - Deployments access for a remote host.
 
-> Note: Docker advises against using build arguments to pass in any sort of secrets to your images, as they can be seen when inspecting the image layers. This is great advice for production environments, but during CI/CD with Codeship all your builds run in a single-tenant environment, and no other user or machine has access to your build machine. Your machine (and everything on it!) is also destroyed after each build, never being reused. Because of this, it _is_ advised to use build arguments necessary for the CI/CD process on Codeship while being sure _not_ to deploy images to production that use them in the same way.
+> Note: Docker advises against using build arguments to pass in any sort of secrets to your images, as they can be seen when inspecting the image layers. This is great advice for production environments, but during CI/CD with Codeship all your builds run in a single-tenant environment, and no other user or machine has access to your build machine. Your machine (and everything on it!) is also destroyed after each build, never being reused. Because of this, it *is* advised to use build arguments necessary for the CI/CD process on Codeship while being sure *not* to deploy images to production that use them in the same way.
 
 ## How do I push or pull from a private Docker image registry during a Codeship Pro build?
 

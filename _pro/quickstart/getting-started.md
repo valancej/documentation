@@ -132,7 +132,7 @@ postgres:
   image: healthcheck/postgres:alpine
 ```
 
-The first thing this file does is define our *demo* service. It *builds* the Dockerfile and names it *myapp*. The *depends_on* section tells it what services are required for *demo* to run. In this case both *redis* and *postgres*.
+The first thing this file does is define our *demo* service. It *builds* the Dockerfile and names it *myapp*. The `depends_on` section tells it what services are required for *demo* to run. In this case both *redis* and *postgres*.
 
 Since we reference *redis* and *postgres*, we need to define them as separate services as well. For each, we provide an image - we could build one using separate Dockerfiles but instead we're going to download existing repos from a Docker registry. This is [Docker Hub](https://hub.docker.com/) by default but it can be *any* registry you specify.
 

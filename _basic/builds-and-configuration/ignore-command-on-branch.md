@@ -9,7 +9,7 @@ tags:
   - commands
   - testing
 categories:
-  - Builds and Configuration  
+  - Builds and Configuration
 redirect_from:
   - /faq/ignore-command-on-branch/
   - /basic/getting-started/ignore-command-on-branch/
@@ -28,7 +28,7 @@ Below you will find scripts that you can use on your project's [setup and test c
 
 ### Skip A Command On Specific Branches
 
-If you don't want to run a command on a specific branch use the following syntax. In this example we run your command on every branch except gh_pages
+If you don't want to run a command on a specific branch use the following syntax. In this example we run your command on every branch except `gh_pages`.
 
 ```shell
 if [ "$CI_BRANCH" != "gh-pages" ]; then YOUR_COMMAND; fi

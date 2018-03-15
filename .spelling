@@ -1,23 +1,8 @@
-# markdown-spellcheck spelling configuration file
 # Format - lines beginning # are comments
 # global dictionary is at the start, file overrides afterwards
+# markdown-spellcheck spelling configuration file
 # one word per line, to define a file override use ' - filename'
 # where filename is relative to this configuration file
-0.8.x
-10gb
-15gb
-2xx
-3.75gb
-30gb
-5.x
-5.x.x
-500mb
-60gb
-7.5gb
-7.x.x
-10.x
-10s
-100s
 _
 _access
 _analyzer
@@ -34,6 +19,7 @@ _dump
 _endpoint
 _env
 _flags
+_from
 _home
 _host
 _id
@@ -41,6 +27,7 @@ _key
 _keys
 _name
 _node
+_on
 _organization
 _pages
 _region
@@ -53,6 +40,22 @@ _token
 _url
 _user
 _var
+0.8.x
+10.x
+100s
+10gb
+10s
+15gb
+2xx
+3.75gb
+30gb
+5.x
+5.x.x
+500mb
+60gb
+7.5gb
+7.x.x
+add_docker
 add-ons
 addon
 amazon.com
@@ -63,19 +66,23 @@ anynines
 api
 apis
 appcfg
+appcues
 appname
 appranix
 appranix.sh
 appspace
 aptible
-appcues
 args
 assertible
-atlassian’s
 atatus
+atlassian’s
 auth.json
-awsdeployment
+authorized_keys
+AWS_ACCESS_KEY_ID
+AWS_DEFAULT_REGION
+AWS_SECRET_ACCESS_KEY
 aws-deployment
+awsdeployment
 azure-cli
 azurecli
 azurerm
@@ -86,6 +93,11 @@ beta3
 bitbucket
 blog.codeship.com
 bluemix
+BLUEMIX_API_ENDPOINT
+BLUEMIX_CONTAINER_SERVICE_CLUSTER_NAME
+BLUEMIX_CONTAINER_SERVICE_HOST
+BLUEMIX_ORGANIZATION
+BLUEMIX_SPACE
 boolean
 braintree
 bugfixes
@@ -98,10 +110,12 @@ caskroom
 casperjs
 ccmenu
 changelog
+check_url
 checkmark
 checksums
 chromedriver
 ci-guide
+cli
 cli-based
 clojure
 cloudfoundry
@@ -124,6 +138,7 @@ cpus
 cqlsh
 crazyegg
 customizable
+dart_analyzer
 dart2js
 database.yml
 datacenter
@@ -131,6 +146,7 @@ datapoint
 datasets
 de-facto
 decryptor
+depends_on
 depfu
 deployer
 dev
@@ -152,6 +168,7 @@ ebook
 ecs-related
 elasticbeanstalk
 elasticsearch
+ensure_called.sh
 env
 erlang
 executables
@@ -167,6 +184,7 @@ gemfile.lock
 gemfile.lock.
 gemnasium
 gh
+gh_pages
 github
 gitignore
 gitlab
@@ -190,6 +208,7 @@ heroku
 hipchat
 homebrew
 honeymarker
+hostname
 http
 https
 i.e.
@@ -199,9 +218,11 @@ io.js
 ios
 ips
 ish
+JAVA_HOME
 javascript
 jdks
 JMeter
+JRE_HOME
 jruby
 json
 junit
@@ -222,11 +243,19 @@ lookahead
 loopback
 lvh.me
 macos
+management.html
 mariadb
 marko
 matchers
 mdspell
 memcached
+METEOR_APP_URL
+METEOR_APP_URL
+METEOR_SESSION
+METEOR_SESSION
+METEOR_TOKEN
+METEOR_USER_ID
+METEOR_USER_ID
 microservice
 microservices
 microsoft
@@ -270,6 +299,7 @@ pdfs
 pecl
 perfectaudience
 performant
+pg_dump
 phantomjs
 php-based
 php-laravel-todoapp
@@ -299,15 +329,18 @@ quay.io.
 quickstart
 rabbitmq
 racher
+RAILS_ENV
 railsonfire
 ramdisk
 raygun
 readme
+redirect_from
 redis
 redline13
 regexes
 repo
 repos
+repository_name
 resize
 rethinkdb
 ries
@@ -351,10 +384,13 @@ sudo
 support.anynines.com
 symfony
 symlink
+TF_VAR_aws_access_key_id
+TF_VAR_aws_secret_access_key
 tigervnc
 timestamp
 toc
 todo
+TOOL_NODE_FLAGS
 toolbelt
 twitter.com
 uncheck
@@ -387,15 +423,13 @@ whitespace
 whos
 wildcard
 www.codeshipstatus.com
+www.npmjs.com
+www.rabbitmq.com
 xdebug
 xip.io
 xvfb
 yml
+YOUR_AWS_ACCESS_KEY
+YOUR_AWS_SECRET_ACCESS_KEY
 yourdomain.com.
 zendesk
-hostname
-healthcheck
-_on
-cli
- - _pro/jet-cli/release-notes.md
-_from

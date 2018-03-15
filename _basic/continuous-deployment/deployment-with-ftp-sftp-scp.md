@@ -14,7 +14,7 @@ tags:
   - linode
   - digital ocean
 categories:
-  - Continuous Deployment     
+  - Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-with-ftp-sftp-scp/
 ---
@@ -127,7 +127,7 @@ For the [branch you want to deploy]({{ site.baseurl }}{% link _basic/builds-and-
 sftp -b deploy/production ssh_user@your.server.com
 ```
 
-* Make sure you add the [SSH key of your project]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) into your servers ***authorized_keys*** file.
+* Make sure you add the [SSH key of your project]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) into your servers `authorized_keys` file.
 * Also make sure your _remote directory_ already exists before running your first deployment.
 
 ## Continuous Deployment with FTP
