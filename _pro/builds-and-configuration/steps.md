@@ -271,7 +271,7 @@ You can use the `on_fail` directive to specify one or more commands to run if a 
     - command: notify-fail.sh
 ```      
 
-It is important to note that steps that run on failure inherit the service of the step that failed. On-fail steps will also only appear in the UI if they are executed.
+It is important to note that steps that run on failure inherit the service of the step that failed.
 
 ## Step Timeouts
 
