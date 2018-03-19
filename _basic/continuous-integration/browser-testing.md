@@ -82,6 +82,10 @@ export FIREFOX_VERSION=YOUR_DESIRED_VERSION
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/firefox.sh | bash -s
 ```
 
+### Headless Firefox
+
+Beginning in Firefox 55, you can run Firefox in [headless mode](https://developer.mozilla.org/en-US/Firefox/Headless_mode). To take advantage of this be sure your build is targeting Firefox and using a current geckodriver version. Your application will also need to pass the `-headless` flag to Firefox.
+
 ## geckodriver
 
 [geckodriver](https://github.com/mozilla/geckodriver) 0.20.0 is installed by default and available in the PATH.
