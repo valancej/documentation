@@ -19,6 +19,7 @@ tags:
   - phantomjs
   - selenium
   - capybara
+  - headless
   - screenshots
   - vnc
   - testing
@@ -55,7 +56,7 @@ ln -sf /usr/bin/chromium-browser /home/rof/bin/Chrome
 
 ### Headless Chrome
 
-Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). To take advantage of this be sure your build is targeting Google Chrome and using ChromeDriver 2.30 or greater.  Your application will also need to pass the `headless` and `disable-gpu` flags to Chrome.
+Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). To take advantage of this be sure your build is targeting Google Chrome and using ChromeDriver 2.30 or greater. Your application will also need to pass the `--headless` flag to Chrome.
 
 ## ChromeDriver
 
