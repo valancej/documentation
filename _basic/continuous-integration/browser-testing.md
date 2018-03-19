@@ -59,7 +59,7 @@ Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://dev
 
 ## ChromeDriver
 
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.35 is installed by default and available in the PATH.
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.36 is installed by default and available in the PATH.
 
 To install a [custom ChromeDriver version](https://github.com/codeship/scripts/blob/master/packages/chromedriver.sh) add the following commands to your build steps:
 
@@ -71,7 +71,7 @@ export CHROMEDRIVER_VERSION=YOUR_DESIRED_VERSION
 
 ## Firefox
 
-Firefox 35.0.1 is installed by default and available in the PATH.
+[Firefox](https://www.mozilla.org/en-US/firefox/releases) 59.0.1 is installed by default and available in the PATH.
 
 To install a [custom Firefox version](https://github.com/codeship/scripts/blob/master/packages/firefox.sh) add the following commands to your build steps:
 
@@ -83,12 +83,13 @@ export FIREFOX_VERSION=YOUR_DESIRED_VERSION
 
 ## geckodriver
 
-geckodriver 0.11.1 is installed by default and available in the PATH.
+[geckodriver](https://github.com/mozilla/geckodriver) 0.20.0 is installed by default and available in the PATH.
 
 To install a [custom geckodriver version](https://github.com/codeship/scripts/blob/master/packages/geckodriver.sh) add the following commands to your build steps:
 
 ```shell
 export GECKODRIVER_VERSION=YOUR_DESIRED_VERSION
+
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/geckodriver.sh | bash -s
 ```
 
@@ -108,7 +109,7 @@ There is a [script](https://github.com/codeship/scripts/blob/master/packages/sau
 
 ## PhantomJS
 
-[PhantomJS](http://phantomjs.org) 1.9.7 is installed by default and available in the PATH.
+[PhantomJS](http://phantomjs.org) 2.1.1 is installed by default and available in the PATH.
 
 To install a [custom PhantomJS version](https://github.com/codeship/scripts/blob/master/packages/phantomjs.sh) add the following commands to your build steps:
 
