@@ -147,6 +147,12 @@ cp -r slimerjs-1.0.0-beta.1 $HOME/.slimerjs
 
 [CasperJS](http://casperjs.org) 1.1.0-beta3 is installed by default and available in the PATH.
 
+To install the latest CasperJS version add the following command to your build steps:
+
+```
+npm install casperjs
+```
+
 ## Screenshots
 
 During your tests you may want to generate screenshots when tests fail. Codeship Basic starts a new build machine for each build and that machine gets terminated as soon as the build finishes. As a result there is not a simple way to save screenshots from failing builds.
