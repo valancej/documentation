@@ -19,6 +19,7 @@ tags:
   - phantomjs
   - selenium
   - capybara
+  - headless
   - screenshots
   - vnc
   - testing
@@ -55,11 +56,11 @@ ln -sf /usr/bin/chromium-browser /home/rof/bin/Chrome
 
 ### Headless Chrome
 
-Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). To take advantage of this be sure your build is targeting Google Chrome and using ChromeDriver 2.30 or greater.  Your application will also need to pass the `headless` and `disable-gpu` flags to Chrome.
+Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). To take advantage of this be sure your build is targeting Google Chrome and using ChromeDriver 2.30 or greater. Your application will also need to pass the `--headless` flag to Chrome.
 
 ## ChromeDriver
 
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.35 is installed by default and available in the PATH.
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.36 is installed by default and available in the PATH.
 
 To install a [custom ChromeDriver version](https://github.com/codeship/scripts/blob/master/packages/chromedriver.sh) add the following commands to your build steps:
 
@@ -71,7 +72,7 @@ export CHROMEDRIVER_VERSION=YOUR_DESIRED_VERSION
 
 ## Firefox
 
-Firefox 35.0.1 is installed by default and available in the PATH.
+[Firefox](https://www.mozilla.org/en-US/firefox/releases) 59.0.1 is installed by default and available in the PATH.
 
 To install a [custom Firefox version](https://github.com/codeship/scripts/blob/master/packages/firefox.sh) add the following commands to your build steps:
 
@@ -81,14 +82,19 @@ export FIREFOX_VERSION=YOUR_DESIRED_VERSION
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/firefox.sh | bash -s
 ```
 
+### Headless Firefox
+
+Beginning in Firefox 55, you can run Firefox in [headless mode](https://developer.mozilla.org/en-US/Firefox/Headless_mode). To take advantage of this be sure your build is targeting Firefox and using a current geckodriver version. Your application will also need to pass the `-headless` flag to Firefox.
+
 ## geckodriver
 
-geckodriver 0.11.1 is installed by default and available in the PATH.
+[geckodriver](https://github.com/mozilla/geckodriver) 0.20.0 is installed by default and available in the PATH.
 
 To install a [custom geckodriver version](https://github.com/codeship/scripts/blob/master/packages/geckodriver.sh) add the following commands to your build steps:
 
 ```shell
 export GECKODRIVER_VERSION=YOUR_DESIRED_VERSION
+
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/geckodriver.sh | bash -s
 ```
 
@@ -108,7 +114,7 @@ There is a [script](https://github.com/codeship/scripts/blob/master/packages/sau
 
 ## PhantomJS
 
-[PhantomJS](http://phantomjs.org) 1.9.7 is installed by default and available in the PATH.
+[PhantomJS](http://phantomjs.org) 2.1.1 is installed by default and available in the PATH.
 
 To install a [custom PhantomJS version](https://github.com/codeship/scripts/blob/master/packages/phantomjs.sh) add the following commands to your build steps:
 
@@ -122,9 +128,30 @@ export PHANTOMJS_VERSION=YOUR_DESIRED_VERSION
 
 [SlimerJS](https://slimerjs.org) 0.9.5 is installed by default and available in the PATH.
 
+To install [SlimerJS 0.10.3](https://slimerjs.org/download.html) install a compatible Firefox version (38.0 to 52.0) and add the following command to your build steps:
+
+```
+npm install slimerjs
+```
+
+To install [SlimerJS 1.0.0-beta.1](https://slimerjs.org/download.html#betas) install a compatible Firefox version (57.0) and add the following commands to your build steps:
+
+```
+rm -rf $HOME/.slimerjs
+wget https://download.slimerjs.org/releases/1.0.0-beta.1/slimerjs-1.0.0-beta.1.tar.bz2
+tar xaf slimerjs-1.0.0-beta.1.tar.bz2
+cp -r slimerjs-1.0.0-beta.1 $HOME/.slimerjs
+```
+
 ## CasperJS
 
 [CasperJS](http://casperjs.org) 1.1.0-beta3 is installed by default and available in the PATH.
+
+To install the latest CasperJS version add the following command to your build steps:
+
+```
+npm install casperjs
+```
 
 ## Screenshots
 
