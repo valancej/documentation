@@ -1,13 +1,13 @@
 main:
+  - title: Getting Started
+    identifier: getting-started
+    url: /getting-started
   - title: Integrations
     identifier: integrations
     url: /integrations
   - title: API
     identifier: api
     url: https://apidocs.codeship.com/v2
-  - title: Getting Started
-    identifier: getting-started
-    url: /getting-started
   - title: CLI
     identifier: cli
     url: /pro/jet-cli/usage-overview/
