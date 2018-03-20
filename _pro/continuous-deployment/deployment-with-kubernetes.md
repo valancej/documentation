@@ -86,4 +86,4 @@ For managed services, we have prebuilt deployment containers to simplify then au
 - [AWS](https://github.com/codeship-library/aws-utilities)
 - [Azure](https://github.com/codeship-library/azure-utilities)
 - [IBM Bluemix](https://github.com/codeship-library/ibm-bluemix-utilities)
-- Google(https://github.com/codeship/codeship-kubernetes-demo)
+- [Google](https://github.com/codeship/codeship-kubernetes-demo)
