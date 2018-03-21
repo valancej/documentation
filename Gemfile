@@ -15,5 +15,5 @@ gem 'jekyll-redirect-from', '~> 0.13.0'
 gem 'jekyll-menus', '~> 0.6.0'
 
 group :test do
-  gem 'scss_lint', '~> 0.54.0'
+  gem 'scss_lint', '~> 0.56.0'
 end

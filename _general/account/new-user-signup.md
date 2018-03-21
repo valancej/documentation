@@ -92,7 +92,7 @@ Simply click on the SCM icon you would like to connect with and proceed to provi
 _Examples_:
 - git@gitlab.com:<username>/<repository_name>.git
 - https://username@gitlab.com/<username>/<repository_name>.git
-- https://gitlab.com/<username>/<respository_name>.git
+- https://gitlab.com/<username>/<repository_name>.git
 
 ![Bitbucket Repo]({{ site.baseurl }}/images/new-user-setup/bb-repo.png)
 

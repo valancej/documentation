@@ -322,7 +322,7 @@ You can use the `jet validate` command, via our [local CLI]({{ site.baseurl }}{%
 * [Encrypting environment variables and build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
 * [Steps File]({% link _pro/builds-and-configuration/steps.md %})
 * [Volumes]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %})
-* [Add_Docker Directive in Compose](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker)
+* [`add_docker` Directive in Compose](https://github.com/codeship/codeship-tool-examples/tree/master/14.add_docker)
 * [Docker-in-Docker](https://registry.hub.docker.com/u/jpetazzo/dind).
 * [Caching]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %})
 * [Build Arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %})
