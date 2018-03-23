@@ -25,7 +25,7 @@ categories:
 
 ## Other Versions
 
-If you need to install a different version or use a custom configuration, please see [this script](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh).
+If you need to install a different version or use a custom configuration, please see [this script](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh). This script supports [MongoDB 3.0.0 and above](https://docs.mongodb.com/manual/release-notes).
 
 For example if you want to install **3.6.0**, set that version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_:
 
