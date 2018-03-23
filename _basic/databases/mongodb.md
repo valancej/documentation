@@ -5,6 +5,7 @@ tags:
   - services
   - databases
   - mongodb
+  - mongo
   - db
 menus:
   basic/db:
@@ -20,14 +21,20 @@ categories:
 * include a table of contents
 {:toc}
 
-MongoDB **2.6.4** runs on the default port and doesn't require any credentials.
+[MongoDB](https://www.mongodb.com) `2.6.4` runs on the default port **27017** and doesn't require any credentials.
 
-If you need to test against another version of MongoDB, see the [MongoDB script](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh) on the [codeship/scripts](https://github.com/codeship/scripts) GitHub repository.
+## Other Versions
 
-Simply set the `MONGODB_VERSION` environment variable and include the script via the following command in your setup steps.
+If you need to install a different version or use a custom configuration, please see [this script](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh). This script supports [MongoDB 3.0.0 and above](https://docs.mongodb.com/manual/release-notes).
 
-```shell
-\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/mongodb.sh | bash -s
+For example if you want to install **3.6.0**, set that version as an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project or add this in the _Setup Commands_:
+
+```
+export MONGODB_VERSION=3.6.0
 ```
 
-This will start a MongoDB server on port `27018`. (You can change the port via the `MONGODB_PORT` environment variable, if you want to.)
+Next, add [this command](https://github.com/codeship/scripts/blob/master/packages/mongodb.sh#L10) to your _Setup Commands_ and the script will automatically be called at build time. Note, this script will automatically start MongoDB on port **27018** as the default port is taken by the default MongoDB version above. Your application will need to point to the updated port number.
+
+```
+\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/mongodb.sh | bash -s
+```
