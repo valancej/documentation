@@ -143,8 +143,8 @@ app:
   build:
     dockerfile: Dockerfile
     args:
-      BRANCH: "{{.Branch}}"
-      CI: "{{.CI}}"
+      BRANCH: "{% raw %}{{ .Branch }}{% endraw %}"
+      CI: "{% raw %}{{ .Ci }}{% endraw %}"
 ```
 
 The full list of CI/CD-related variables you can use is:
