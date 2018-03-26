@@ -6,6 +6,7 @@ menus:
     title: Node.js
     weight: 2
 tags:
+  - node
   - nodejs
   - iojs
   - npm
@@ -30,7 +31,7 @@ If you'd like to learn more about Codeship Basic, we recommend the [getting star
 
 ## Versions And Setup
 
-We use **nvm** to manage different node versions. We read the node version you set in your **package.json** and install the appropriate one. You can use **nvm** in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), such as:
+We use **nvm** to manage different Node.js versions. We read the Node.js version you set in your **package.json** and install the appropriate one. You can use **nvm** in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), such as:
 
 ```shell
 nvm install NODE_VERSION
@@ -43,7 +44,7 @@ If the version isn't already pre-installed on the build VMs `nvm` will download 
 The default version when we can't find a setting in your `package.json` is the latest version of the `0.10` release.
 
 ### Pre-installed versions
-We have the latest versions of the following NodeJS releases pre-installed on our build VMs: `0.8.x`, `0.9.x`, `0.10.x`, `0.11.x`, `0.12.x`, `4.x`, `5.x` and `6.x`.
+The latest versions of the following [Node.js releases](https://nodejs.org/en/download/releases) are pre-installed on our build VMs: `0.8.x`, `0.9.x`, `0.10.x`, `0.11.x`, `0.12.x`, `4.x`, `5.x`, `6.x`, `7.x`, `8.x` and `9.x`.
 
 Please note that we only install the latest version for each of those releases. You can however install any custom version via the `nvm install` command mentioned above.
 
@@ -145,7 +146,7 @@ You can install webpack via NPM, as seen below:
 npm install webpack
 ```
 
-**Note** that you may need to specify a specific version of Node via `nvm` to use webpack successfully.
+**Note** that you may need to specify a specific version of Node.js via `nvm` to use webpack successfully.
 
 ## Parallel Testing
 
@@ -169,7 +170,7 @@ Note that we do not officially support or integrate with this module and that it
 
 ## Notes And Known Issues
 
-Due to Node version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+Due to Node.js version issues, you may find it helpful to test your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
 ### Running grunt
 
@@ -183,7 +184,7 @@ grunt test
 
 ## Frameworks And Testing
 
-All versions of node run on Codeship. Additionally, all tools and test frameworks, such as karma, mocha, grunt or any other node-based tool should work without issue. You will need to be sure to install them via `npm` before using them, however.
+All versions of Node.js run on Codeship. Additionally, all tools and test frameworks, such as karma, mocha, grunt or any other node-based tool should work without issue. You will need to be sure to install them via `npm` before using them, however.
 
 ### io.js
 
