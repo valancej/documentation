@@ -320,6 +320,7 @@ prepending
 profitwell
 programmatically
 psql
+psycopg
 psycopg2
 py.test.
 pyenv

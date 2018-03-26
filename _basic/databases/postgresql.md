@@ -23,48 +23,40 @@ categories:
 * include a table of contents
 {:toc}
 
-The default databases created for you are **development** and **test**.
+<div class="info-block">
+PostgreSQL 9.2 officially reached its [end-of-life (EOL)](https://www.postgresql.org/support/versioning) and as a result it was removed from the build environment as of **March 29, 2018**.
 
-PostgreSQL `9.2` runs on the default port and the credentials are stored in the `PGUSER` and `PGPASSWORD` environment variables.
+PostgreSQL 10 is now the new default running on port 5432.
+</div>
 
-We install the Ubuntu `postgresql-contrib` package. It includes the [extension modules](http://www.postgresql.org/docs/9.2/static/contrib.html) listed in the PostgreSQL Documentation.
+PostgreSQL `10` runs on the default port and the credentials are stored in the `PGUSER` and `PGPASSWORD` environment variables. The default databases created for you are **development** and **test**.
 
-You need to activate them with `CREATE EXTENSION` as explained in the [Extension Guide](http://www.postgresql.org/docs/9.1/static/sql-createextension.html).
+We install the Ubuntu `postgresql-contrib` package. It includes the [extension modules](https://www.postgresql.org/docs/10/static/contrib.html) listed in the PostgreSQL documentation.
 
-## Deprecation Notice - PostgreSQL 9.2 EOL
-
-PostgreSQL 9.2 officially reached it's End-of-Life (EOL) (see [the PostgreSQL site for details](https://www.postgresql.org/support/versioning/)) which means that we will remove it from the Codeship Basic build image on **March 29, 2018**.
-
-Since PostgreSQL 9.2 is currently running on port 5432, we will move PostgreSQL 10.3 from 5437 to 5432 to make 10.3 the new default. This should have minimal impact on users as PostgreSQL are generally very well backwards compatible, but we encourage you to try out 10.3 before March 29, 2018 to avoid any unexpected surprises.
-
-### Python & earlier psycopg2 versions
-
-During testing, a very small number of users (2-4) experienced issues with older versions of the Python PostgreSQL client `psycopg2`. These older versions used a string-comparison to try and work out the PostgreSQL version number, and didn't account for a 10.x version. To resolve this issue, you'll need to upgrade psycopg2 to version 2.7 or higher.
+You need to activate them with `CREATE EXTENSION` as explained in the [Extension Guide](https://www.postgresql.org/docs/10/static/sql-createextension.html).
 
 ## Versions
 
-### 9.2 - TO BE DEPRECATED
+### 10
 
-The **default version** of PostgreSQL on Codeship is **9.2**, which runs on the default port of `5432`. No additional configuration is required to use version 9.2.
+The **default version** of PostgreSQL on Codeship is **10**, which runs on the default port of `5432`. No additional configuration is required to use version 10.
 
-### 9.3
+<div class="info-block">
+PostgreSQL 10 includes PostGIS version 2.4.
+</div>
 
-In addition we also have version **9.3** installed and configured identically. You can use this version by specifying port `5433` in your database configuration.
+### 9.6
 
-For Rails based projects you also need to work around our auto-configuration. Please add the following command to your _Setup Commands_.
+PostgreSQL version **9.6** is running on port `5436` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
-```shell
-sed -i "s|5432|5433|" "config/database.yml"
-```
+<div class="info-block">
+PostgreSQL 9.6 includes PostGIS version 2.3.
+</div>
 
-### 9.4
-
-Version **9.4** of the database server is running on port `5434` and configured identical to the others. If you want to use this version make sure to specify the correct port in your database configuration.
-
-For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place on the build VMs.
+For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
 
 ```shell
-sed -i "s|5432|5434|" "config/database.yml"
+sed -i "s|5432|5436|" "config/database.yml"
 ```
 
 ### 9.5
@@ -72,40 +64,42 @@ sed -i "s|5432|5434|" "config/database.yml"
 PostgreSQL version **9.5** is running on port `5435` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
 <div class="info-block">
-PostgreSQL 9.5 includes PostGIS version 2.2 instead of 2.1, which is installed for the other PostgreSQL versions.
+PostgreSQL 9.5 includes PostGIS version 2.2.
 </div>
 
-Similar to the other versions, you need to work around our auto-configuration for Rails based projects by adding the following command to your _Setup Commands_.
+For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
 
 ```shell
 sed -i "s|5432|5435|" "config/database.yml"
 ```
 
-### 9.6
+### 9.4
 
-PostgreSQL version **9.6** is running on port `5436` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
+PostgreSQL version **9.4** is running on port `5434` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
 <div class="info-block">
-PostgreSQL 9.6 includes PostGIS version 2.2 instead of 2.1, which is installed for the other PostgreSQL versions.
+PostgreSQL 9.4 includes PostGIS version 2.1.
 </div>
 
-Similar to the other versions, you need to work around our auto-configuration for Rails based projects by adding the following command to your _Setup Commands_.
+For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
 
 ```shell
-sed -i "s|5432|5436|" "config/database.yml"
+sed -i "s|5432|5434|" "config/database.yml"
 ```
 
-### 10.3
+### 9.3
 
-PostgreSQL version **10.3** is running on port `5437` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
+PostgreSQL version **9.3** is running on port `5433` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
-Similar to the other versions, you need to work around our auto-configuration for Rails based projects by adding the following command to your _Setup Commands_.
+<div class="info-block">
+PostgreSQL 9.3 includes PostGIS version 2.1.
+</div>
+
+For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
 
 ```shell
-sed -i "s|5432|5437|" "config/database.yml"
+sed -i "s|5432|5433|" "config/database.yml"
 ```
-
-**Note**: Port `5437` is temporary. Once PostgreSQL 9.2 is deprecated on March 29, 10.3 will be moved to the default port `5432`.
 
 ### pg_dump
 You may experience a `pg_dump` version mismatch with the PostgreSQL version you have configured.
@@ -115,7 +109,7 @@ pg_dump: server version: $YOUR_VERSION; pg_dump version: 9.2.19
 pg_dump: aborting because of server version mismatch
 ```
 
-This can be resolved by adding the following command in your **Setup Commands** before running your migrations:
+This can be resolved by adding the following command in your _Setup Commands_ before running your migrations:
 
 ```shell
 export PATH=/usr/lib/postgresql/<PG_VERSION>/bin/:$PATH
@@ -129,19 +123,19 @@ psql -p DATABASE_PORT -c 'create database new_db;'
 ```
 
 ## Enable Extensions
-You can enable extensions either via the your application framework (if supported) or by running commands directly against the database. E.g, you would add the following command to your setup steps to enable the `hstore` extension.
+You can enable extensions either through your application framework (if supported) or by running commands directly against the database. For example, you would add the following command to your _Setup Commands_ to enable the `hstore` extension.
 
 ```shell
 psql -d DATABASE_NAME -p DATABASE_PORT -c 'create extension if not exists hstore;'
 ```
 
 ### PostGIS
-PostgreSQL versions 9.2 to 9.4 include PostGIS 2.0, PostgreSQL version 9.5 and newer include the newer PostGIS version 2.2.
+PostgreSQL versions 9.3 to 9.4 include PostGIS 2.1, 9.5 includes 2.2, 9.6 includes 2.3 and 10 includes 2.4.
 
 ## Framework-specific configuration
 
 ### Ruby on Rails
-We replace the values in your `config/database.yml` file automatically to a configuration matching the PostgreSQL 9.2 instance.
+We replace the values in your `config/database.yml` file automatically to a configuration matching the PostgreSQL 10 instance.
 
 If your Rails application is stored in a subdirectory or you want to change the database configuration from our default values, you can add the following data to a `codeship.database.yml` file (or any other filename) and commit that file to your repository.
 
@@ -200,3 +194,8 @@ DATABASES = {
   }
 }
 ```
+
+## Notes And Known Issues
+
+### Python and earlier Psycopg versions
+Earlier versions of [Python PostgreSQL client Psycopg](http://initd.org/psycopg) may not work with version 10. These older versions used a string-comparison to try and work out the PostgreSQL version number and didn't account for version 10. To resolve this issue, upgrade `psycopg2` to version 2.7 or higher.
