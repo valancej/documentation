@@ -126,9 +126,7 @@ export PHANTOMJS_VERSION=YOUR_DESIRED_VERSION
 
 ## SlimerJS
 
-[SlimerJS](https://slimerjs.org) 0.9.5 is installed by default and available in the PATH.
-
-To install the latest SlimerJS version install a compatible Firefox version (53.0 to 59.0) and add the following command to your build steps:
+To install the latest [SlimerJS](https://slimerjs.org) version install a compatible Firefox version (53.0 to 59.0) and add the following command to your build steps:
 
 ```
 npm install slimerjs
@@ -136,9 +134,7 @@ npm install slimerjs
 
 ## CasperJS
 
-[CasperJS](http://casperjs.org) 1.1.0-beta3 is installed by default and available in the PATH.
-
-To install the latest CasperJS version add the following command to your build steps:
+To install the latest [CasperJS](http://casperjs.org) version add the following command to your build steps:
 
 ```
 npm install casperjs
