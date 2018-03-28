@@ -176,13 +176,15 @@ In your _Setup Commands_, run the following command to copy the file to its targ
 cp codeship.database.yml YOUR_DATABASE_YAML_PATH
 ```
 
-If you don't use Rails and load the `database.yml` file yourself, you might see `PSQL::Error message stating the raw username <%= ENV['PG_USER'] %>` instead of the value of the environment variable. This is because the `database.yml` example includes ERB syntax. You need to load `database.yml` and run it through ERB before you can use it.
+If you don't use Rails and load `database.yml` yourself you might see an error like the following instead of the value of the environment variable:
+
+```
+PSQL::Error: Access denied for user '<%= ENV['PGUSER'] %>'@'localhost'
+```
+
+This is because the `database.yml` example includes ERB syntax. You need to load `database.yml` and run it through ERB before you can use it:
 
 ```ruby
-# Sample error message:
-# PSQL::Error: Access denied for user '<%= ENV['PGUSER'] %>'@'localhost'
-#
-# Run the file through ERB before loading the YAML data
 require "erb"
 require "yaml"
 
