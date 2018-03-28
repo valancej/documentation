@@ -102,9 +102,9 @@ Note that we're using script files to run our tests, so that we can execute the 
 aws s3 sync coverage/ "s3://my-bucket/coverage/$CI_COMMIT_ID"
 ```
 
-Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value value by manually declaring separate pipeline IDs.
+Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value by manually declaring separate pipeline IDs.
 
-Next, at the end of your build itself, as a new test command placed after your normal tests:
+Next, at the end of your build itself you will not use the `after-build` call, but instead as a new test command placed after your normal tests:
 
 ```yaml
 - name: codeclimate_assemble_results
@@ -115,10 +115,10 @@ Next, at the end of your build itself, as a new test command placed after your n
 Inside the `codeclimate-assemble.sh` file, you will have:
 
 ```shell
-cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
+cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage
 ```
 
-Note that you will need to manually `$PARTS` to reflect the number of parallel threads.
+Note that you will need to manually set `$PARTS` to reflect the number of parallel threads.
 
 ## Codeship Basic
 
@@ -157,7 +157,7 @@ Code Climate supports parallel test reports by uploading the partial result to a
 
 In addition to the pre-test and post-test commands above, to use Code Climate with parallel reporting you will need to add another command at the end of your [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), in each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}) that you run tests in - as well as a new command at the end of your build.
 
-Here are [Code Climate's example](https://github.com/codeclimate/test-reporter#low-level-usage) scripts for doing so.
+Here are [Code Climate's example scripts](https://github.com/codeclimate/test-reporter#low-level-usage) for doing so.
 
 At the end of each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-and-configuration/parallel-tests.md %}):
 
@@ -166,22 +166,21 @@ At the end of each [parallel pipeline]({{ site.baseurl }}{% link _basic/builds-a
 aws s3 sync coverage/ "s3://my-bucket/coverage/$CI_COMMIT_ID"
 ```
 
-Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value value by manually declaring separate parallel test pipeline IDs.
+Note that you will need to modify the S3 path (or provide an alternative storage path), as well as set the `$N` value by manually declaring separate parallel test pipeline IDs.
 
-At the end of your build itself, you will need to complete the parallel coverage reports in one of two ways.
+At the end of your build itself, you will not need to use the `after-build` call, but instead need to complete the parallel coverage reports in one of two ways:
 
-- As a command, run via a the [custom-script deployment option]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). This means code coverage for parallel testing will only run on branches you have configured deployments.
+- As a command, run via the [custom-script deployment option]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}). This means code coverage for parallel testing will only run on branches you have configured deployments.
 
 - As an additional test step placed at the end of one of your parallel test pipelines. This method will require additional logic to be written to pause the script while it queries your external storage service for the existence of the appropriately-named coverage reports for all the additional pipelines, so that it doesn't erroneously combine coverage reports for pipelines that are still in progress.
 
 The code to use to end the parallel coverage report is:
 
 ```shell
-cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | \
-    ./cc-test-reporter upload-coverage
+cc-test-reporter sum-coverage --output - --parts $PARTS coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage
 ```
 
-Note that you will need to manually `$PARTS` to reflect the number of parallel threads.
+Note that you will need to manually set `$PARTS` to reflect the number of parallel threads.
 
 All of these commands will work best when executed from script files.
 
