@@ -126,7 +126,7 @@ export PHANTOMJS_VERSION=YOUR_DESIRED_VERSION
 
 ## SlimerJS
 
-To install the latest [SlimerJS](https://slimerjs.org) version install a compatible Firefox version (53.0 to 59.0) and add the following command to your build steps:
+To install the latest [SlimerJS](https://slimerjs.org) version [install a compatible Firefox version]({{ site.baseurl }}{% link _basic/continuous-integration/browser-testing.md %}#firefox) (53.0 to 59.0) and add the following command to your build steps:
 
 ```
 npm install slimerjs
