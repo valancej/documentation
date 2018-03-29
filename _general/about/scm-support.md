@@ -63,6 +63,12 @@ You can read the [self-hosted Git documentation]({{ site.baseurl }}{% link _gene
 
 If you use self-hosted git servers, we have an IP Whitelisting option, which allows you to provide access to your git server, from just eight specific IP addresses. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
 
+## Managing Your Git Server Connections
+
+If you want to see which services you're connected to, or perhaps ensure your username is registered so your builds show up on the personal dashboard, you can go to your [Connected Services](https://app.codeship.com/authentications) page. This allows you to add more connections or update/disable your existing connections.
+
+**Note**: Before disconnecting a service, you should check to see if it's being used by a project to communicate with your git server. The account used to connect to the git server is shown on the project's `General` settings (Project -> Project Settings -> General)
+
 ## SCM Feature Requests
 
 We are continually evaluating our SCM integration support. If there is something you would like to see, please [get in touch](mailto:support@codeship.com) and let us know more details about your SCM needs.
