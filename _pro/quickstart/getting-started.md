@@ -104,7 +104,33 @@ RUN bundle install --jobs 20 --retry 5
 Add . /app
 ```
 
-As you can see here, we're pulling the Ruby base image, creating some directories, installing some gems, and then adding our code. That last bit is important because now when we launch our Docker container, the `check.rb` script we wrote earlier will be inside it and ready to run.
+As you can see here, we're pulling the Ruby base image, creating some directories, installing some gems, and then adding our code. That last bit is important because now when we launch our Docker container, the `check.rb` script we wrote earlier will be inside it and ready to run. We have also referenced a `Gemfile` and `Gemfile.lock` file which you should go ahead and create as well:
+
+```ruby
+# Gemfile
+source 'https://rubygems.org'
+
+ruby '2.2.1'
+
+gem 'redis'
+gem 'pg'
+```
+
+```bash
+# Gemfile.lock
+GEM
+  remote: https://rubygems.org/
+  specs:
+    pg (0.18.1)
+    redis (3.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pg
+  redis
+```
 
 ## Define Your Services
 
