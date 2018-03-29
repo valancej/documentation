@@ -36,7 +36,7 @@ To connect a new service, simply click the block of the service you want to conn
 
 Depending on the service, you can either connect to the service via Oauth (SCM cloud-versions as well as Google) or provide the necessary credentials. Once you've saved everything, the service is ready to be used.
 
-**Example of a cloud-SCM with Oauth available**
+**Example of a cloud-based SCM with Oauth available**
 
 ![cloud-scm option folded out]({{ site.baseurl }}/images/general/cloud-scm_option.png)
 
