@@ -11,6 +11,7 @@ tags:
   - iojs
   - npm
   - yarn
+  - bower
   - framework
   - javascript
   - languages
@@ -137,6 +138,16 @@ export PATH="$HOME/.yarn/bin:$PATH"
 ```
 
 You can also [install specific versions or use npm](https://yarnpkg.com/en/docs/install#alternatives-tab).
+
+### Bower
+
+You can also use [Bower](https://bower.io) for working with dependencies. To install the latest version add this step to your build:
+
+```
+npm install -g bower
+```
+
+Note that the Bower project recommends [migrating to Yarn](https://bower.io/blog/2017/how-to-migrate-away-from-bower) as an alternative to Bower.
 
 ### Webpack
 
