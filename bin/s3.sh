@@ -46,9 +46,9 @@ case "$action" in
 		;;
 	'invalidate_cdn')
 		if [ "${CI_BRANCH}" = "master" ]; then
-			target='/'
+			target="/*"
 		else
-			target="/${CI_BRANCH}/"
+			target="/${CI_BRANCH}/*"
 		fi
 		aws configure set preview.cloudfront true
 		aws cloudfront create-invalidation \
