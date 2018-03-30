@@ -45,6 +45,13 @@ rvm use $(cat .ruby-version) --install
 
 One use case is that you can change your Ruby version for different branches.
 
+### JRuby
+If you need to install a version of [JRuby](http://jruby.org/download) that is not already installed by default you can do so with:
+
+```shell
+rvm use jruby-JRUBY_VERSION_YOU_WANT_TO_USE --install
+```
+
 ## Dependencies
 
 You can install dependencies using [bundler](http://bundler.io) in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
