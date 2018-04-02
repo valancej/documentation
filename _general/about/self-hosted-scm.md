@@ -69,6 +69,12 @@ In order for Codeship to be allowed to setup the necessary hooks etc. the person
 
 ![Bitbucket Server Access Scopes]({{ site.baseurl }}/images/general/bitbucket_server_scopes.png)
 
+### Usernames
+
+The last thing to map between Codeship and your Git server, is your git username. Once we know your git username, it will allow us to map your builds coming from your Git server(s), to your Codeship account and show them on your personal dashboard page. If you don't expect to be pushing code, and are mainly setting up Codeship for others, you can leave out the usernames.
+
+Note: Users who want to take advantage of the personal dashboard will need to supply their usernames, but don't necessarily need to supply access tokens.
+
 ## IP Whitelisting
 
 We have an IP Whitelisting option, which allows you to provide access to your git server, from just eight specific IP addresses. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
