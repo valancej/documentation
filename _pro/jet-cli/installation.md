@@ -79,6 +79,10 @@ Usage:
 ...
 ```
 
+### Updating
+
+Once `jet` is installed, you can use the `jet update` command to quickly update to the newest version. You can [read the jet update documentation]({% link _pro/jet-cli/update.md %}) for more information.
+
 ### Docker Configuration
 
 `DOCKER_HOST` must be set. `DOCKER_TLS_VERIFY` and `DOCKER_CERT_PATH` are respected in the same way as with the official Docker client. If you installed Docker via [Docker For Mac](https://docs.docker.com/docker-for-mac/) this is typically done by default during installation.
