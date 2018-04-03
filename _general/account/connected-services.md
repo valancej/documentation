@@ -26,8 +26,6 @@ categories:
 
 The connected services page is where you can see which services are connected to your account, but also where you can specify your git username for us to map your builds with your Codeship account.
 
-Currently, you can only connect your account to one of the SCM providers, to authenticate and/or pull code, or Google Cloud, to deploy to Google App Engine.
-
 ![connected services screenshot]({{ site.baseurl }}/images/general/connected_services.png)
 
 ### Connecting to New Services
