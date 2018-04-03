@@ -336,7 +336,7 @@ dockercfg_generator:
 
 Now, you will need a push step in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) with the `dockercfg_service` directive. This directive runs the service specified, when it is pushing, to generate the necessary authentication token.
 
-Note that ECR requires the fully registry path in our image name, and the account you are authenticating with AWS must have the necessary IAM permissions as well. Here is an example [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
+ECR requires the fully registry path in our image name, and the account you are authenticating with AWS must have the necessary IAM permissions as well. Here is an example [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```yaml
 - name: Push To ECR
@@ -346,6 +346,12 @@ Note that ECR requires the fully registry path in our image name, and the accoun
   registry: https://870119404647.dkr.ecr.us-east-1.amazonaws.com
   dockercfg_service: dockercfg_generator
 ```
+
+**Note** that to authenticate with ECR, you will need to provide the following environment variables via your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) in order to authenticate with AWS successfully:
+
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `AWS_REGION`
 
 Learn more about [using AWS with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}).
 
