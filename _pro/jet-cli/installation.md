@@ -33,10 +33,6 @@ The `jet` CLI is now included in our custom [Homebrew Cask](https://github.com/c
 
 ```shell
 brew cask install codeship/taps/jet
-
-# If you already have the CLI installed and want to update to the latest version
-brew update
-brew cask reinstall codeship/taps/jet
 ```
 
 If you don't have Homebrew installed or don't use Homebrew Cask you can install `jet` via the following commands.
@@ -78,6 +74,10 @@ Usage:
   jet [command]
 ...
 ```
+
+### Updating
+
+Once `jet` is installed, you can use the `jet update` command to quickly update to the newest version. You can [read the jet update documentation]({% link _pro/jet-cli/update.md %}) for more information.
 
 ### Docker Configuration
 

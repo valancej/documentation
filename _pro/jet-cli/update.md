@@ -14,9 +14,9 @@ tags:
 ---
 
 ## Description
-Download and install the latest version of Jet. 
+Download and install the latest version of Jet.
 
-_Note: This command is available if you are using version [2.2.0](https://documentation.codeship.com/pro/jet-cli/release-notes/#220---2018-01-23) or newer of the Jet CLI._
+**Note:** This command is available if you are using version [2.2.0](https://documentation.codeship.com/pro/jet-cli/release-notes/#220---2018-01-23) or newer of the Jet CLI.
 
 ## Usage
 
