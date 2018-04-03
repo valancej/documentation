@@ -142,7 +142,7 @@ These can be set as build arguments and used in the Dockerfile, but they must be
 
 - These arguments will still need to be [declared in your Dockerfile](#dockerfile-arg-instruction) similar to any other build argument.
 
-- These values use a slightly different format than you may be used to, as they are set by the Golang template library just like the [default environment variables]({% link _pro/builds-and-configuration/environment-variables.md %}#default-environment-variables).
+- These values use a slightly different format than you may be used to, as they are set by the Golang template library just like [image push steps]({% link _pro/builds-and-configuration/image-registries.md) use.
 
 
 Here's an example of declaring a default value as a build argument:
