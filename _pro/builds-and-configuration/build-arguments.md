@@ -136,7 +136,16 @@ Codeship sets a variety of CI/CD-related environment variables at runtime with i
 
 These can be set as build arguments and used in the Dockerfile, but they must be explicitly set as unencrypted arguments in your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
 
-For example:
+**Note** that there are several key things to know when using these values as build arguments:
+
+- Not all of these values will be available locally via `jet` since they may depend on information from your SCM.
+
+- These arguments will still need to be [declared in your Dockerfile](#dockerfile-arg-instruction) similar to any other build argument.
+
+- These values use a slightly different format than you may be used to, as they are set by the Golang template library just like the [default environment variables]({% link _pro/builds-and-configuration/environment-variables.md %}#default-environment-variables).
+
+
+Here's an example of declaring a default value as a build argument:
 
 ```yaml
 app:
@@ -147,7 +156,7 @@ app:
       CI: "{% raw %}{{ .Ci }}{% endraw %}"
 ```
 
-The full list of CI/CD-related variables you can use is:
+The full list of CI/CD-related variables is:
 
 * `ProjectID` (the Codeship defined project ID)
 * `BuildID` (the Codeship defined build ID)
