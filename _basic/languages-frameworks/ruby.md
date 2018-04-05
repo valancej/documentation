@@ -29,15 +29,17 @@ redirect_from:
 We use [RVM](https://rvm.io) to manage different [Ruby](https://www.ruby-lang.org/en) and [JRuby](http://jruby.org) versions. We set **{{ site.data.basic.defaults.ruby }}** as the default version. Currently we do not automatically load the Ruby version from your Gemfile. You can always change the Ruby version by running:
 
 ```shell
-rvm use RUBY_VERSION_YOU_WANT_TO_USE
+rvm use RUBY_VERSION_YOU_WANT_TO_USE --install
 ```
+
+Most Ruby versions are preinstalled, but if you need an older version the `--install` flag will automatically install the version for you at build time.
 
 The following Ruby versions are preinstalled:
 
 {% include basic/ami/{{ site.data.basic.ami_id }}/ruby.md %}
 
 ### Using a .ruby-version file
-You can also use your `.ruby-version` file on Codeship. The `.ruby-version` file lives in the project root and its content is just your Ruby version, for example: `2.4.2`. You can read the Ruby version to use from that file:
+You can also use your `.ruby-version` file on Codeship. The `.ruby-version` file lives in the project root and its content is just your Ruby version, for example: `2.5.1`. You can read the Ruby version to use from that file:
 
 ```shell
 rvm use $(cat .ruby-version) --install
@@ -125,7 +127,7 @@ Please make sure the version of the gem you want to install wasn't removed from 
 
 ### RVM Requires Curl
 
-Any Ruby version you might need should already be installed by default, however if you are trying to manually install a version with RVM you may encounter the following error:
+If you are manually installing a Ruby version with RVM you may encounter the following error:
 
 ```
 RVM requires 'curl'. Install 'curl' first and try again.
@@ -146,7 +148,7 @@ rm -f node_modules/.bin/which
 
 ### Custom Bundler Version
 
-The build environment will always include a recent version of [Bundler](http://bundler.io) by default. If you have a situation where you need to install a specific Bundler version you can do so by adding the following commands to your build:
+Each preinstalled Ruby version will include a recent version of [Bundler](http://bundler.io) by default. If you have a situation where you need to install a specific Bundler version you can do so by adding the following commands to your build after setting the Ruby version:
 
 ```
 gem uninstall -x -a bundler
