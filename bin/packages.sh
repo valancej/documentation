@@ -27,6 +27,19 @@ ami=$(./ec2-metadata --ami-id |  awk -F ': ' '{print $2}')
 rm -rf "./${ami}"
 mkdir -p "${ami}"
 
+# Java versions
+source "${HOME}/bin/jdk/jdk_switcher"
+echo '```shell' > "${ami}/java.md"
+jdk_switcher use openjdk7 > /dev/null
+java -version 2>> "${ami}/java.md" && echo >> "${ami}/java.md"
+jdk_switcher use oraclejdk7 > /dev/null
+java -version 2>> "${ami}/java.md" && echo >> "${ami}/java.md"
+jdk_switcher use oraclejdk8 > /dev/null
+java -version 2>> "${ami}/java.md" && echo >> "${ami}/java.md"
+jdk_switcher use oraclejdk9 > /dev/null
+java -version 2>> "${ami}/java.md"
+echo '```' >> "${ami}/java.md"
+
 # NodeJS versions
 set +u
 # shellcheck disable=1090

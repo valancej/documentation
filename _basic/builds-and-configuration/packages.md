@@ -24,7 +24,7 @@ This page was last updated on {{ site.data.basic.latest_update }}.
 
 ## Codeship Pre-Installed Packages And Tools
 
-In a best effort to list everything installed on  our hosted Codeship Basic environment, we offer the following list of installed packages. While the list may not be fully complete at any given moment, we try our best to keep it comprehensive and up to date.
+In a best effort to list everything installed on Codeship Basic, we offer the following list of installed packages. While the list may not be fully complete at any given moment, we try our best to keep it comprehensive and up to date.
 
 ## Check For Packages Versions Via SSH Session
 
@@ -36,6 +36,9 @@ Click on the link to open an SSH debug session. You will be provided with the us
 
 ## Full list of installed packages
 {% include basic/ami/{{ site.data.basic.ami_id }}/packages.md %}
+
+## Java versions available via jdk_switcher
+{% include basic/ami/{{ site.data.basic.ami_id }}/java.md %}
 
 ## NodeJS versions available via nvm
 {% include basic/ami/{{ site.data.basic.ami_id }}/node.md %}
