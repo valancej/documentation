@@ -32,7 +32,7 @@ set +u
 # shellcheck disable=1090
 source "${HOME}/.nvm/nvm.sh"
 echo '```shell' > "${ami}/node.md"
-nvm list >> "${ami}/node.md"
+nvm list --no-colors >> "${ami}/node.md"
 echo '```' >> "${ami}/node.md"
 set -u
 
