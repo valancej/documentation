@@ -77,12 +77,12 @@ This is why it's important to remember to download your recovery codes before it
 
 Should you end up in a situation where you want to use a different authenticator app (or a are setting up a new device), you'll need to reset the 2FA configuration. The QR code that is generated can theoretically be used on multiple devices, so if you setup a new device without resetting the 2FA setup, anyone with access to your old authenticator app would still be able to generate valid codes.
 
-To reset your setup, simply go to you account and click the Reset button. This will cause the old configuration to be invalid and a new one to be generated. If you don't complete the resetting process, your account will be left without 2FA.
+To reset your setup, simply go to your account and click the Reset button. This will cause the old configuration to be invalid and a new one to be generated. If you don't complete the resetting process, your account will be left without 2FA.
 
 ## Disabling 2FA
 
-If you need to disable 2FA, simple access your account, navigate to your Personal Settings, and disable 2FA.
+If you need to disable 2FA, simply access your account, navigate to your Personal Settings, and disable 2FA.
 
 ## 2FA and the Codeship API
 
-As the API is build with system-to-system interaction in mind, it's not possible to access the API with a user that have 2FA enabled. We're looking into personal access tokens and similar options, but do [get in touch](mailto:support@codeship.com) if this is a concern for you, as we would like to learn more about which options might work best in which scenarios.
+As the API is built with system-to-system interaction in mind, it's not possible to access the API with a user that has 2FA enabled. We're looking into personal access tokens and similar options, but do [get in touch](mailto:support@codeship.com) if this is a concern for you, as we would like to learn more about which options might work best in which scenarios.
