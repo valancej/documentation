@@ -86,7 +86,7 @@ Once you're ready to get going, create an empty Dockerfile and paste this code i
 
 ```dockerfile
 # base on latest ruby base image
-FROM ruby:2.2.1
+FROM ruby:2.5.0
 
 # update and install dependencies
 RUN apt-get update -qq
@@ -104,32 +104,24 @@ RUN bundle install --jobs 20 --retry 5
 Add . /app
 ```
 
-As you can see here, we're pulling the Ruby base image, creating some directories, installing some gems, and then adding our code. That last bit is important because now when we launch our Docker container, the `check.rb` script we wrote earlier will be inside it and ready to run. We have also referenced a `Gemfile` and `Gemfile.lock` file which you should go ahead and create as well:
+As you can see here, we're pulling the Ruby base image, creating some directories, installing some gems, and then adding our code. That last bit is important because now when we launch our Docker container, the `check.rb` script we wrote earlier will be inside it and ready to run.
+
+We have also referenced a `Gemfile` that you should go ahead and create as well:
 
 ```ruby
 # Gemfile
 source 'https://rubygems.org'
 
-ruby '2.2.1'
+ruby '2.5.0'
 
 gem 'redis'
 gem 'pg'
 ```
 
+Once saved, run the following Docker command to generate the corresponding `Gemfile.lock`:
+
 ```bash
-# Gemfile.lock
-GEM
-  remote: https://rubygems.org/
-  specs:
-    pg (0.18.1)
-    redis (3.2.1)
-
-PLATFORMS
-  ruby
-
-DEPENDENCIES
-  pg
-  redis
+docker run -it --rm -v $(pwd):/app -w /app ruby:2.5.0 bundle lock
 ```
 
 ## Define Your Services
@@ -212,7 +204,7 @@ And if you scroll through your logs, you should see the versions for *redis* and
 
 Now we'll take a look at one of the cool benefits of doing all of your CI/CD process with these simple files in your repo.
 
-Open up `codeship-services.yml` and find the line where you define your *redis* service. Change `image: redis:3.0.5` to `image: redis:2.6.17`.
+Open up `codeship-services.yml` and find the line where you define your *redis* service. Change `image: redis:3.0.5` to `image: redis:3.2.11`.
 
 ## Run Locally Again
 
