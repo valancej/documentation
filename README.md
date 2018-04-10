@@ -52,7 +52,7 @@ On **Windows**, the Docker commands are executed via the Docker Quickstart Termi
 To update Rubygem based dependencies, update the `Gemfile` (if required) and run
 
 ```shell
-docker run -it --rm -v $(pwd):/docs codeship/documentation bundle update
+docker run -it --rm -v $(pwd):/docs codeship/documentation bundle lock --update
 ```
 
 For NPM based dependencies, run the following two commands
