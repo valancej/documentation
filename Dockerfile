@@ -39,14 +39,14 @@ RUN \
 # NPM based dependencies
 COPY package.json yarn.lock ./
 RUN \
-  yarn install --production --frozen-lockfile --non-interactive && \
+  yarn install --production --pure-lockfile --non-interactive && \
   ln -s /docs/node_modules/gulp/bin/gulp.js /usr/local/bin/gulp
 
 # Ruby based dependencies
 COPY Gemfile Gemfile.lock ./
 RUN \
   echo "gem: --no-rdoc --no-ri" >> "${HOME}/.gemrc" && \
-  bundle install --jobs 20 --retry 5 --without development
+  bundle install --jobs 20 --retry 5 --no-cache --without development
 
 # Copy the complete site
 COPY . ./
