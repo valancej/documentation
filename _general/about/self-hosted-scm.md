@@ -69,6 +69,17 @@ In order for Codeship to be allowed to setup the necessary hooks etc. the person
 
 ![Bitbucket Server Access Scopes]({{ site.baseurl }}/images/general/bitbucket_server_scopes.png)
 
+### Usernames
+
+When you're using a self-hosted git server, you will need to supply your username as well so that we can map up your builds with your Codeship account and show them on your personal dashboard. All users of self-hosted git servers will need to do this, for the personal dashboard to work, but are not required to supply access codes.
+If you don't expect to be pushing code, and are mainly setting up Codeship for others, you can leave the username(s) blank.
+
+**Note**: Users of cloud SCMs, who authenticate with oAuth, do not need to supply usernames as we get the username as part of the authentication workflow.
+
+
+
+Note: Users who want to take advantage of the personal dashboard will need to supply their usernames, but don't necessarily need to supply access tokens.
+
 ## IP Whitelisting
 
 We have an IP Whitelisting option, which allows you to provide access to your git server, from just eight specific IP addresses. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.

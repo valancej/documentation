@@ -58,6 +58,8 @@ Note that these oAuth login pages come directly from the SCM tools themselves an
 
 *You can learn more about the permissions we ask when authenticating with SCM [here](https://documentation.codeship.com/general/account/permissions/).  Learn more about security at Codeship [here](https://documentation.codeship.com/general/about/security/).*
 
+**Note**: When signing up using your email, we won't know what your git username is, which means that your personal dashboard (aka your home page) won't be populated with your builds. To get your builds to show up, head over to your [Connected Services](https://app.codeship.com/authentications) page and enter your git username(s) there.
+
 ### New Account Setup
 
 Once you’ve signed up, unless you were invited by a team member to an existing organization, you will be asked to create your account / organization. Account names must be unique since, you will be able to access your account with a unique URL - `app.codeship.com/<your-account-name>`.
@@ -87,7 +89,7 @@ We recommend inviting people to the _Managers_ team if they will need to create 
 
 Simply click on the SCM icon you would like to connect with and proceed to provide your login credentials in order to give Codeship access to your account (see step 1 for further information).
 
-**Choose your repository:** Once you have authenticated your SCM you have to select your repository.  To choose your repository, simply paste your Git clone URL into the provided area and click ‘Connect’.
+**Choose your repository:** Once you have authenticated with your SCM provider, you will need to specify the code repository for the project.  Simply paste your Git clone URL into the provided area and click ‘Connect’. Note that a repository can only be connected to one project, and a project can only have one repository.
 
 _Examples_:
 - git@gitlab.com:<username>/<repository_name>.git
@@ -100,7 +102,7 @@ _Examples_:
 
 ![Gitlab Repo]({{ site.baseurl }}/images/new-user-setup/gl-repo.png)
 
-Now that you’ve connected your repo, it’s time to select your infrastructure!  You simply have to decide if you want to set up your project with [Codeship's Basic Infrastructure.](https://codeship.com/features/basic) or [Codeship's Pro Infrastructure.](https://codeship.com/features/pro)
+Now that you’ve connected your repository, it’s time to select your infrastructure!  You can choose to set up your project with [Codeship's Basic Infrastructure.](https://codeship.com/features/basic) or [Codeship's Pro Infrastructure.](https://codeship.com/features/pro)
 
 
 **Basic** is a good place to start if:
@@ -115,7 +117,7 @@ Now that you’ve connected your repo, it’s time to select your infrastructure
 - Fully customizable CI environment
 - Local build runner for test consistency
 
-Once you know which type of infrastructure you’d like to use, simply click ‘Select Infrastructure’ on the corresponding project.
+Once you've decided on the infrastructure you’d like to use, simply click ‘Select Infrastructure’ on the corresponding project.
 
 ![Select Codeship Infrastructure]({{ site.baseurl }}/images/new-user-setup/select-infra.png)
 
