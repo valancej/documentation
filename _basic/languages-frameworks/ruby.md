@@ -104,10 +104,19 @@ While we do not officially support or integrate with these modules, many Codeshi
 ## Notes And Known Issues
 
 ### Nokogiri
-On **Ruby 2.3 only**, Nokogiri will fail to compile with the bundled _libxml_ and _libxslt_ libraries. To install the gem you need to use the system libraries instead.
+Nokogiri might fail to compile with the bundled _libxml_ and _libxslt_ libraries. To install the gem you need to use the system libraries instead.
+
+The error may look like this:
+
+```
+Fetching nokogiri 1.8.2
+Installing nokogiri 1.8.2 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+```
+
+Fix it by adding this command before `bundle install`:
 
 ```shell
-# Add the following command before running "bundle install"
 bundle config build.nokogiri --use-system-libraries
 ```
 
