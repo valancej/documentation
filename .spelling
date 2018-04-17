@@ -221,7 +221,8 @@ ips
 ish
 JAVA_HOME
 javascript
-jdk_switcher
+jdk
+_switcher
 jdks
 JMeter
 JRE_HOME
