@@ -24,27 +24,30 @@ Codeship makes it easy to deploy your application to Heroku using Codeship's int
 ## Setup Heroku Deployment
 
 ### Step 1 - Navigate to Deployment Configuration
-Navigate to your project's deployment configuration page by selecting _Project Settings_ > _Deploy_ on the top right side of the page.
-
-![Project Settings Deployment]({{ site.baseurl }}/images/continuous-deployment/project_configuration.png)
+Navigate to your project's deployment configuration page by selecting _Project Settings_ on the top right side of the page project page, and then the _Deploy_ option in the sub-nav.
 
 ### Step 2 - Add New Deployment Pipeline
-Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}#wildcard-branch-deployment-pipelines).
+Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. If you create a new deployment pipeline, you need to select when it's triggered. You can either match the exact name of a branch or a specify a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}#wildcard-branch-deployment-pipelines).
 
 ![Create branch deploy]({{ site.baseurl }}/images/continuous-deployment/create_deploy_branch.png)
 
 ### Step 3 - Heroku
-Select _Heroku_
+Now we're ready to configure your Heroku deployment.
+
+Select the _Heroku_ template from the list of available deploy templates.
 
 ![Select Heroku]({{ site.baseurl }}/images/continuous-deployment/select_heroku.png)
 
+Note that we occasionally add/remove deployment templates, so the exact location might change.
 
 ### Step 4 - Deployment Configuration
+
+Next step is to provide the application name and API key.
 
 ![Configure Heroku]({{ site.baseurl }}/images/continuous-deployment/configure_heroku.png)
 
 #### Application Name
-Insert the name of the Heroku application you want the pipeline to deploy to.
+Copy-paste the name of the Heroku application you want the pipeline to deploy to.
 
 #### Heroku API Key
 In order for you to deploy your app using Codeship, you need to provide the Heroku API key from your Heroku account. You can access your Heroku API key [here](https://dashboard.heroku.com/account).
@@ -67,22 +70,14 @@ After each deployment, we check your application to make sure that it is up. We 
 
 If this URL requires **basic auth** please enter: `http://YOUR_USERNAME:YOUR_PASSWORD@YOUR_URL`
 
-#### Restore
-This takes a different Heroku app and will restore the database of the current Heroku application you are deploying to with the main database from the Heroku application posted here.
-
-#### Backup Database
-Backup your database before you deploy. See Heroku's [Creating a Backup](https://devcenter.heroku.com/articles/heroku-postgres-backups#creating-a-backup) page for more information.
-
-#### Force Push
-This causes git to disable some checks and can cause the remote repository to lose commits. Use this option with care.
-
-See [git push -f](https://git-scm.com/docs/git-push) for more info.
-
 #### Post-deploy Command
 You can specify a command to run post-deployment. The dynos will be restarted after running. This can be useful for running migrations or other commands that need to be run on each deploy.
 
 #### Check app URL
 This will enable your build to check the URL of your application to make sure that it is up.
+
+#### Folder
+This is what will be uploaded to Heroku. If you have your deployment files in a sub-folder, e.g. `/app` or `/dist` specifying that here will ensure only your deployment files are uploaded.
 
 ## Troubleshooting
 
