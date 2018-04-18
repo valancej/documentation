@@ -24,7 +24,7 @@ Codeship makes it easy to deploy your application to Heroku using Codeship's int
 ## Setup Heroku Deployment
 
 ### Step 1 - Navigate to Deployment Configuration
-Navigate to your project's deployment configuration page by selecting _Project Settings_ on the top right side of the page project page, and then the _Deploy_ option in the sub-nav.
+Navigate to your project's deployment configuration page by selecting _Project Settings_ on the top right side of the project page, and then the _Deploy_ option in the secondary navigation.
 
 ### Step 2 - Add New Deployment Pipeline
 Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. If you create a new deployment pipeline, you need to select when it's triggered. You can either match the exact name of a branch or a specify a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}#wildcard-branch-deployment-pipelines).
