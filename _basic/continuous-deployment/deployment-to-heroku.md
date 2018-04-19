@@ -21,6 +21,11 @@ redirect_from:
 
 Codeship makes it easy to deploy your application to Heroku using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
+<div class="info-block">
+Note that this documentation refers to the new Heroku Deployment template, which uses the Heroku API instead of the older `git push` method. The main difference between the two methods is that the new method copies files from the build environment directly to Heroku, as opposed to the old method that pushed the final files to a git repo, which Heroku then deployed from.
+For more details on how the Heroku Platform API works, see the [Heroku Dev Center](https://devcenter.heroku.com/articles/platform-api-quickstart)
+</div>
+
 ## Setup Heroku Deployment
 
 ### Step 1 - Navigate to Deployment Configuration
@@ -37,8 +42,6 @@ Now we're ready to configure your Heroku deployment.
 Select the _Heroku_ template from the list of available deploy templates.
 
 ![Select Heroku]({{ site.baseurl }}/images/continuous-deployment/select_heroku.png)
-
-Note that we occasionally add/remove deployment templates, so the exact location might change.
 
 ### Step 4 - Deployment Configuration
 
