@@ -18,7 +18,7 @@ redirect_from:
 
 Codeship makes it easy to deploy your application to Google App Engine using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
-We support deploying projects in the following languages: `go`, `java`, `node`, `php`, `python`, and `ruby`. Note that for java, you need to set an optional flag (see below for details).
+We support deploying projects in the following stacks: go, java, node, php, python, and ruby. Note that for java, you need to set an optional flag (see below for details).
 
 * include a table of contents
 {:toc}
@@ -41,8 +41,11 @@ The last thing needed is to specify the permissions needed for the service accou
 
 ![Create service account]({{ site.baseurl }}/images/continuous-deployment/gae_create_service_account.png)
 
-That's it. Once you save the new service account a key file will be generated and automatically downloaded to your computer. This file is very important to keep safe as it provides the keys to pushing deployments to your project. Treat it like any other password, and keep it in a safe place.
+That's it. Once you save the new service account a key file will be generated and automatically downloaded to your computer.
 
+<div class="info-block">
+The key file is very important to keep safe as it provides the keys to pushing deployments to your project. Treat it like any other password, and keep it in a safe place.
+</div>
 
 ### Step 2 - Navigate to Deployment Configuration
 
@@ -60,8 +63,6 @@ Now we're ready to configure your app engine deployment.
 Select the _Google App Engine_ template from the list of available deploy templates.
 
 ![Select GAE]({{ site.baseurl }}/images/continuous-deployment/select_gae.png)
-
-Note that we occasionally add/remove deployment templates, so the exact location might change.
 
 ### Step 5 - Deployment Configuration
 
