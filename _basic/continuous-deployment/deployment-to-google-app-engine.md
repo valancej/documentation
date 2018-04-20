@@ -16,56 +16,65 @@ redirect_from:
   - /tutorials/continuous-deployment-google-app-engine-github-django-python/
 ---
 
-<div class="info-block">
-This article is for deploying to Google App Engine with the built-in Codeship integration. This integration runs the older App Engine SDK version `1.9.42` and supports the following languages: [Java]({{ site.baseurl }}{% link _basic/languages-frameworks/java-and-jvm-based-languages.md %}), [Python]({{ site.baseurl }}{% link _basic/languages-frameworks/python.md %}) and [Go]({{ site.baseurl }}{% link _basic/languages-frameworks/go.md %}).
+Codeship makes it easy to deploy your application to Google App Engine using Codeship's integrated [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
 
-If you have a project that uses the [gcloud CLI](https://cloud.google.com/sdk/gcloud), please refer to documentation on doing [custom deployments with the gcloud CLI]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-gcloudcli.md %}).
-</div>
+We support deploying projects in the following stacks: go, java, node, php, python, and ruby. Note that for java, you need to set an optional flag (see below for details).
 
 * include a table of contents
 {:toc}
 
 ## Setup Google App Engine Deployment
 
-### Step 1
+### Step 1 - Google Cloud Service Account
 
-Navigate to your project's deployment configuration page by selecting _Project Settings_ > _Deployment_ on the top right side of the page.
+Before getting into actually configuring Codeship to deploy your code, you should create a dedicated `Service Account`. Service accounts are like users, but meant for system integrations and usually have very limited permissions.
+Since we just need to deploy your code, and not have access to anything else on your project, we suggest you create a new service account specifically for Codeship, but you could also reuse an existing one if you're comfortable with that.
 
-![Project Settings Deployment]({{ site.baseurl }}/images/continuous-deployment/project_configuration.png)
+#### Creating Service Account
 
-### Step 2
+First thing is to navigate to the `AIM & admin` section and locate the `Service accounts` menu.
+![Navigate to service account]({{ site.baseurl }}/images/continuous-deployment/gae_service_account_nav.png)
 
-Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. Create the deployment pipeline to match the exact name of your deployment branch or a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}).
+In that view, click the `Create Service Account` button and give the account a name, e.g. `codeship-deploy` so you can easily remember what it's for. Also ensure you check the box for "Furnish a new private key" and leave the option on `JSON`.
+
+The last thing needed is to specify the permissions needed for the service account to be able to deploy to app engine. The only one we need is `App Engine` -> `App Engine Deployer`.
+
+![Create service account]({{ site.baseurl }}/images/continuous-deployment/gae_create_service_account.png)
+
+That's it. Once you save the new service account a key file will be generated and automatically downloaded to your computer.
+
+<div class="info-block">
+The key file is very important to keep safe as it provides the keys to pushing deployments to your project. Treat it like any other password, and keep it in a safe place.
+</div>
+
+### Step 2 - Navigate to Deployment Configuration
+
+With the service account key file in place, navigate to your project's deployment configuration page by selecting _Project Settings_ on the top right side of the project page, and then the _Deploy_ option in the secondary navigation.
+
+### Step 3 - Add New Deployment Pipeline
+
+Edit an existing deployment pipeline or create a new deployment pipeline by selecting + _Add new deployment pipeline_. If you create a new deployment pipeline, you need to select when it's triggered. You can either match the exact name of a branch or a specify a [wildcard branch]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}#wildcard-branch-deployment-pipelines).
 
 ![Create branch deploy]({{ site.baseurl }}/images/continuous-deployment/create_deploy_branch.png)
 
-### Step 3
+### Step 4 - Google App Engine
+Now we're ready to configure your app engine deployment.
 
-Select _Google App Engine_
+Select the _Google App Engine_ template from the list of available deploy templates.
 
 ![Select GAE]({{ site.baseurl }}/images/continuous-deployment/select_gae.png)
 
-### Step 4
+### Step 5 - Deployment Configuration
 
-The first time you want to connect Codeship to Google App Engine we will ask for credentials through OAuth.
+Next step is to provide the project ID as well as the keys file you downloaded in step 1.
 
-![Connect GAE]({{ site.baseurl }}/images/continuous-deployment/connect_gae.png)
+#### Project ID
 
-You will then be directed to log into your Google account.
+Copy-paste the project ID of the project you want the pipeline to deploy to.
 
-### Step 5
+#### Key File
 
-Once connected, you will be brought back to your Google App Engine deployment settings page.
-
-#### appcfg Update Path
-
-You can set the path of your `appcfg.*` file in the _Update Path:_ field. If the file exists on the root of your repository, simply leave it blank.
-
-By default we search for a `app.yml` file in the path you've set. If we find it we will use the `appcfg.py` script to upload your application. If the `app.yml` file is not located, we'll presume the application to be Java based and will use the `appcfg.sh` script instead.
-
-#### Application URL
-
-You have the option of adding the URL of your GAE app below to call after the deployment to make sure everything is up and running.
+This is the file you generated in step 1. The file includes private keys etc. that will allow us to connect to Google App Engine on your behalf, with the permissions specified for the service account.
 
 ![Configure GAE]({{ site.baseurl }}/images/continuous-deployment/configure_gae.png)
 
@@ -74,13 +83,3 @@ You have the option of adding the URL of your GAE app below to call after the de
 ![GAE Success]({{ site.baseurl }}/images/continuous-deployment/gae_success.png)
 
 You have now successfully setup deployment to Google App Engine. Go ahead and push a commit to your configured deploy branch.
-
-## App Engine Authentication Issues
-
-The specific implementation Google App Engines uses to authenticate with other services like Codeship omits certain information if you re-authenticate (specifically the OAuth [refresh token](https://auth0.com/docs/tokens/refresh-token/current)).
-
-If you encounter authentication problems with your GAE deployments, please visit the [Google OAuth Application Settings](https://security.google.com/settings/security/permissions) and remove the Codeship application from your account.
-
-Once you've done the above step, disconnecting and reconnecting to App Engine on [Connected Services](https://app.codeship.com/authentications) will update your authentication settings and allow deployments to App Engine.
-
-Please save the deployment settings after reconnecting to GAE to ensure that we use the newly created token.
