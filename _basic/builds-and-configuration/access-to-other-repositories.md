@@ -1,5 +1,5 @@
 ---
-title: Access To Other Repositories
+title: Access To Other Repositories in Codeship Basic
 shortTitle: Access To Other Repositories
 menus:
   basic/builds:
