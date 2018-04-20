@@ -39,12 +39,12 @@ namespace :update do
 	end
 
 	desc 'Update Ruby based dependencies'
-	task rubygems: %w[update:image build] do
+	task :rubygems do
 		sh "docker run -it --rm -v $(pwd):/docs #{IMAGE_NAME} bundle lock --update"
 	end
 
 	desc 'Update NodeJS based dependencies'
-	task yarn: %w[update:image build] do
+	task :yarn do
 		sh "docker run -it --rm -v $(pwd):/docs #{IMAGE_NAME} yarn upgrade"
 	end
 end
