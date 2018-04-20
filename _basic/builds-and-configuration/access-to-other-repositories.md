@@ -1,10 +1,10 @@
 ---
-title: Access Other Repositories
-shortTitle: Access Other Repositories
+title: Access To Other Repositories in Codeship Basic
+shortTitle: Access To Other Repositories
 menus:
-  general/projects:
-    title: Access Other Repositories 
-    weight: 3
+  basic/builds:
+    title: Access To Other Repositories 
+    weight: 11
 tags:
   - build error
   - ssh key
@@ -22,6 +22,7 @@ categories:
 redirect_from:
   - /faq/access-to-other-repositories-fails-during-build/
   - /general/projects/access-to-other-repositories-fails-during-build/
+  - /general/projects/access-other-repositories/
 ---
 
 * include a table of contents
@@ -29,15 +30,15 @@ redirect_from:
 
 Some projects have dependencies that require access to other private repositories during the build. There are several options for configuring your project to be able to access other private repositories.
 
-## Default Configuration
+## The Default Configuration
 
 Codeship creates a SSH key pair for each project when you first configure it. This SSH key allows Codeship to clone that main private repository by default. It will also allow Codeship to clone other public repositories on the same SCM. For example if your private repository is on GitHub, Codeship can clone your private repository and any public repository on GitHub during your build.
 
 On Codeship you can view the SSH public key under _Project Settings > General_. This key is automatically added as a deploy key to the repository on your SCM. For example on GitHub you can see this deploy key by going to your repository and navigating to _Settings > Deploy keys_.
 
-If your project needs to access private repositories during the build you will get a [cloning error]({{ site.baseurl }}{% link _general/projects/access-other-repositories.md %}#typical-error-messages) and will need to do additional configuration to enable access.
+If your project needs to access private repositories during the build you will get a [cloning error]({{ site.baseurl }}{% link _basic/builds-and-configuration/access-to-other-repositories.md %}#typical-error-messages) and will need to do additional configuration to enable access.
 
-## Machine User Configuration
+## The Machine User Solution
 
 The recommended solution for accessing other private repositories is to configure a machine user on your SCM.
 
@@ -49,7 +50,7 @@ The recommended solution for accessing other private repositories is to configur
 
 Even though the above example references GitHub, the process should be similar for Bitbucket and GitLab.
 
-## Personal Account Configuration
+## The Personal Account Solution
 
 As an alternative you can also apply the same process above to a personal GitHub user account instead of a machine user. Keep in mind this will allow the Codeship project to access any repository that the personal account has access to. Also note that if the personal account has permissions revoked on the SCM (for example if an employee leaves the company) then all of the Codeship projects using that account's authorization will also break.
 
