@@ -5,7 +5,7 @@ ruby "2.5.0"
 gem 'rake', '~>12.3.0'
 gem 'jekyll', '~> 3.8.0'
 gem 'sassc', '~> 1.11.4'
-gem 'shipyard-framework', '~> 0.8.0'
+gem 'shipyard-framework', '~> 0.9.0'
 
 # Jekyll Plugins
 gem 'jekyll-coffeescript', '~> 1.1.0'
