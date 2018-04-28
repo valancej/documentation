@@ -6,7 +6,7 @@ menus:
     title: AWS EB
     weight: 3
 categories:
-  - Continuous Deployment        
+  - Continuous Deployment
 tags:
   - deployment
   - aws
@@ -16,9 +16,9 @@ tags:
 
 ---
 
-<div class="info-block">
-You can find a sample repo for deploying to AWS with Codeship Pro on Github [here](https://github.com/codeship-library/aws-utilities).
-</div>
+{% csnote info %}
+You can find a [sample repo for deploying to AWS with Codeship Pro](https://github.com/codeship-library/aws-utilities) on Github.
+{% endcsnote %}
 
 * include a table of contents
 {:toc}

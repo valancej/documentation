@@ -6,7 +6,7 @@ menus:
     title: Docker For CI/CD
     weight: 3
 categories:
-  - Quickstart    
+  - Quickstart
 tags:
   - docker
   - jet
@@ -18,9 +18,9 @@ tags:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 We've got [quickstart repos, sample apps and a getting started guide]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
-</div>
+{% endcsnote %}
 
 Because Codeship Pro uses Docker domain language, and is powered by Docker, most customers find it easier to use if they are familiar with Docker concepts.
 

@@ -24,9 +24,9 @@ If your repository includes a `.gitmodules` file, Codeship will automatically in
 git submodule update --recursive --init
 ```
 
-<div class="info-block">
-  Right now there is not a way to skip this command, but let us know if that creates a problem for your build.
-</div>
+{% csnote info %}
+Right now there is not a way to skip this command, but let us know if that creates a problem for your build.
+{% endcsnote %}
 
 ## Submodule Permissions
 

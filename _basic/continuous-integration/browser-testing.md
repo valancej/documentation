@@ -32,12 +32,11 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 This article is about running browser testing in your CI/CD pipeline with Codeship Basic.
 
 If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic).
-</div>
-
+{% endcsnote %}
 
 ## Chrome
 

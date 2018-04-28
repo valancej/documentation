@@ -10,7 +10,7 @@ tags:
   - gae
   - google
 categories:
-  - Continuous Deployment   
+  - Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-to-google-app-engine/
   - /tutorials/continuous-deployment-google-app-engine-github-django-python/
@@ -43,9 +43,9 @@ The last thing needed is to specify the permissions needed for the service accou
 
 That's it. Once you save the new service account a key file will be generated and automatically downloaded to your computer.
 
-<div class="info-block">
+{% csnote info %}
 The key file is very important to keep safe as it provides the keys to pushing deployments to your project. Treat it like any other password, and keep it in a safe place.
-</div>
+{% endcsnote %}
 
 ### Step 2 - Navigate to Deployment Configuration
 

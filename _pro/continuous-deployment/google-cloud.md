@@ -19,9 +19,9 @@ redirect_from:
   - /docker/continuous-deployment/google-cloud/
 ---
 
-<div class="info-block">
+{% csnote info %}
 You can find a sample repo for deploying to Google Cloud with Codeship Pro on Github [here](https://github.com/codeship-library/google-cloud-deployment).
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}
@@ -66,9 +66,9 @@ GOOGLE_PROJECT_ID=...
 
 - `GOOGLE_PROJECT_ID` should be populated with the value found on the Dashboard of your project in the Google developer console.
 
-<div class="alert-block">
+{% csnote warning %}
 Be sure to put this unencrypted env file into `.gitignore` so its never committed, or delete it altogether following encryption.
-</div>
+{% endcsnote %}
 
 After creating this environment variables file, you will need to encrypt it using the instructions from our [encrypted environment variables tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or by using the commands below:
 

@@ -4,7 +4,7 @@ layout: page
 tags:
   - docker
   - jet
-  - codeship pro  
+  - codeship pro
   - introduction
   - getting started
   - tutorial
@@ -19,9 +19,9 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
-</div>
+{% endcsnote %}
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 

@@ -11,7 +11,7 @@ tags:
   - speed
   - caching
 categories:
-  - Builds and Configuration  
+  - Builds and Configuration
 redirect_from:
   - /basic/getting-started/dependency-cache/
 ---
@@ -19,9 +19,9 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 Note that this article addresses caching on **Codeship Basic**. If you are looking for information on caching with **Codeship Pro**, [click here]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %})
-</div>
+{% endcsnote %}
 
 ## What Is The Dependency Cache?
 

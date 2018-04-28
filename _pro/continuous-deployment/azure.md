@@ -16,9 +16,10 @@ tags:
   - Docker
 
 ---
-<div class="info-block">
+
+{% csnote info %}
 You can find a sample repo for deploying to the Azure Container Service with Codeship Pro on Github [here](https://github.com/codeship-library/azure-utilities).
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}
