@@ -312,16 +312,19 @@ div#integrations {
     content: '\f05a\00a0';
   }
 }
+
 .note-warning {
   > *:first-child::before {
     content: '\f071\00a0';
   }
 }
+
 .note-success {
   > *:first-child::before {
     content: '\f14a\00a0';
   }
 }
+
 .note-time {
   > *:first-child::before {
     content: '\f017\00a0';
