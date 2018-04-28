@@ -1,9 +1,10 @@
 {% assign words = content | number_of_words %}
 
-<div class="reading-block" title="Estimated read time">
+
+{% csnote time %}
   {% if words < 360 %}
-    <p>You'll need about one minute to read this article.</p>
+    <p>You will need about one minute to read this article.</p>
   {% else %}
-		<p>You'll need roughly {{ words | divided_by:180 }} minutes to read this article.</p>
+		<p>You will need roughly {{ words | divided_by:180 }} minutes to read this article.</p>
   {% endif %}
-</div>
+{% endcsnote %}

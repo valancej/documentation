@@ -296,141 +296,35 @@ div#integrations {
 // Notification Blocks
 // *******************************************************
 
-.alert-block,
-.feedback-block,
-.info-block,
-.reading-block {
-  position: relative;
-  padding: 1rem 1rem 1rem 2.5rem;
-  line-height: 1.2em;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  color: #313a44;
-  margin: 1.5em 0;
-
+.note {
   > *:first-child::before {
     font-family: 'FontAwesome';
-    color: #fff;
-    margin-left: -1.5em;
-    padding-right: .5em;
-  }
-
-  h2 {
-    font: bolder 20px/1.6 "Lato", sans-serif;
-    margin: 1.2em 0 .8em;
-    color: #313a44;
+    content: '';
   }
 
   p {
-    font: 300 16px/1.6 "museo-sans-rounded", Arial, sans-serif;
-    margin: .2em 0;
-  }
-
-  a {
-    color: #1e252c;
-    font-size: 1em;
-    margin: 0;
-    text-decoration: underline;
-  }
-
-  code {
-    color: $blue-darkest;
-    background-color: $blue-light;
-    border-color: $blue;
+    margin-bottom: 0;
   }
 }
 
-.alert-block {
-  background-color: $yellow-lightest;
-  border-color: $yellow-lightest;
-
+.note-info {
   > *:first-child::before {
-    content: '\f071';
-    color: $yellow-darkest;
-  }
-
-  a {
-    color: $yellow-darkest;
-  }
-
-  code {
-    color: $yellow-darkest;
-    background-color: $yellow-light;
-    border-color: $yellow;
+    content: '\f05a\00a0';
   }
 }
-
-.info-block {
-  background-color: $blue-lightest;
-  border-color: $blue-lightest;
-
+.note-warning {
   > *:first-child::before {
-    content: '\f05a';
-    color: $blue-darkest;
-  }
-
-  a {
-    color: $blue-darkest;
-  }
-
-  code {
-    color: $blue-darkest;
-    background-color: $blue-light;
-    border-color: $blue;
-  }
-
-}
-
-.feedback-block {
-  padding-top: .1em;
-  background-color: $gray-lightest;
-  border-color: $gray-lightest;
-
-  > *:first-child::before {
-    content: '\f059';
-    color: $gray-darkest;
-  }
-
-  a {
-    color: $gray-darkest;
-  }
-
-  p {
-    margin-top: 1rem;
-  }
-
-  .feedback {
-
-    p {
-      margin-top: 2rem;
-      font-weight: bold;
-      font-style: italic;
-    }
-
-  }
-
-  code {
-    color: $gray-darkest;
-    background-color: $gray-light;
-    border-color: $gray;
-  }
-
-  .rating-nero-value {
-    margin-right: 2em;
+    content: '\f071\00a0';
   }
 }
-
-.reading-block {
-  background-color: #fff;
-  border-color: #fff;
-  color: #788594;
-  margin: 0 0 .8em;
-  padding-top: 0;
-  padding-bottom: 0;
-
+.note-success {
   > *:first-child::before {
-    content: '\f017';
-    color: #788594;
+    content: '\f14a\00a0';
+  }
+}
+.note-time {
+  > *:first-child::before {
+    content: '\f017\00a0';
   }
 }
 
