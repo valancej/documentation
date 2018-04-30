@@ -70,7 +70,7 @@ The deployment container discussed above has a `codeship_heroku deploy` command 
 - service: herokudeployment
   command: codeship_heroku deploy /deploy codeship-heroku-deployment
 - service: herokudeployment
-  command: heroku run --app codeship-heroku-deployment -- bundle exec rake db:migrate
+  command: heroku run --exit-code --app codeship-heroku-deployment -- bundle exec rake db:migrate
 ```
 
 Additionally, if you provide the location of the application that should be deployed then you can also deploy subfolders of your app, or even run different commands on your codebase before deploying it. These optional specifications will give you more granular control over your deployment steps.
