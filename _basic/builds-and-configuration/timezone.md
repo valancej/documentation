@@ -8,6 +8,7 @@ tags:
   - timezone
 categories:
   - Builds and Configuration
+  - Configuration
 redirect_from:
   - /basic/getting-started/timezone/
 ---

@@ -6,6 +6,7 @@ menus:
     weight: 9
 categories:
   - Jet CLI
+  - CLI
 tags:
   - jet
   - update

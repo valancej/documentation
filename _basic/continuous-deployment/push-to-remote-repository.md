@@ -10,6 +10,7 @@ tags:
   - push
 categories:
   - Continuous Deployment
+  - Deployment
 redirect_from:
   - /continuous-deployment/push-to-remote-repository/
 ---

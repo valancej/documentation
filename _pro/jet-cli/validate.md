@@ -6,6 +6,7 @@ menus:
     weight: 10
 categories:
   - Jet CLI
+  - CLI
 tags:
   - jet
   - validate

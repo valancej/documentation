@@ -6,7 +6,9 @@ menus:
     title: Kubernetes
     weight: 13
 categories:
-  - Continuous Deployment        
+  - Continuous Deployment   
+  - Deployment
+  - Kubernetes     
 tags:
   - kubernetes
   - notifications

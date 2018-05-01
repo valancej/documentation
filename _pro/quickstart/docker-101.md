@@ -6,7 +6,9 @@ menus:
     title: Docker For CI/CD
     weight: 3
 categories:
-  - Quickstart    
+  - Quickstart
+  - Docker
+  - Guide   
 tags:
   - docker
   - jet

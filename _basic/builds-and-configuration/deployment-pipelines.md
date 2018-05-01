@@ -9,6 +9,8 @@ tags:
   - deployment
 categories:
   - Builds and Configuration
+  - Deployment
+  - Configuration
 redirect_from:
   - /continuous-deployment/deployment-pipelines/
   - /basic/getting-started/wildcard-deployment-pipelines/

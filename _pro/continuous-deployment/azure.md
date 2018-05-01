@@ -7,6 +7,9 @@ menus:
     weight: 6
 categories:
   - Continuous Deployment
+  - Deployment
+  - Microsoft
+  - Kubernetes
 tags:
   - aks
   - kubernetes

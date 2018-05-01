@@ -9,7 +9,8 @@ tags:
   - digital ocean
   - digitalocean
 categories:
-  - Continuous Deployment   
+  - Continuous Deployment  
+  - Deployment 
 redirect_from:
   - /continuous-deployment/deployment-to-digitalocean/
 ---

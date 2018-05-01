@@ -8,7 +8,8 @@ menus:
     title: Cloud66
     weight: 16
 categories:
-  - Continuous Deployment       
+  - Continuous Deployment  
+  - Deployment     
 redirect_from:
   - /continuous-deployment/deployment-with-cloud66/
 ---

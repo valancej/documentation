@@ -11,6 +11,8 @@ tags:
   - commands
 categories:
   - Continuous Integration
+  - Configuration
+  - Testing
 redirect_from:
   - /continuous-integration/run-a-command-in-the-background/
 ---

@@ -16,6 +16,7 @@ tags:
 categories:
   - Builds and Configuration  
   - Continuous Integration
+  - Testing
 redirect_from:
   - /continuous-integration/parallelci/
   - /basic/getting-started/parallelci/

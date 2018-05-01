@@ -10,6 +10,7 @@ tags:
   - whitelisting
 categories:
   - Account
+  - Security
 redirect_from:
   - /administration/organizations/
 menus:

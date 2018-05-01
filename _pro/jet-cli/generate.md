@@ -6,6 +6,7 @@ menus:
     weight: 6
 categories:
   - Jet CLI
+  - CLI
 tags:
   - jet
   - generate

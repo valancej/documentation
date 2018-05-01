@@ -11,6 +11,7 @@ menus:
     weight: 9
 categories:
   - Languages And Frameworks  
+  - Configuration
 ---
 
 * include a table of contents

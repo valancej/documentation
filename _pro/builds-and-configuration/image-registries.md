@@ -20,7 +20,10 @@ tags:
 
 categories:
   - Builds and Configuration
-
+  - Docker
+  - Configuration
+  - Caching
+  - Registry
 
 redirect_from:
   - /docker/docker-push/

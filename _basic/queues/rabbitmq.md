@@ -11,6 +11,7 @@ menus:
     weight: 2
 categories:
   - Queues    
+  - Configuration
 redirect_from:
   - /queues/rabbitmq/
   - /classic/getting-started/rabbitmq/

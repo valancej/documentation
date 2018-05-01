@@ -18,7 +18,10 @@ tags:
 
 categories:
   - Builds and Configuration
-
+  - Security
+  - Configuration
+  - Docker
+  - CLI
 
 redirect_from:
   - /pro/getting-started/handling-secrets/

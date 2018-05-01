@@ -11,6 +11,8 @@ tags:
   - amazon
 categories:
   - Continuous Deployment
+  - Deployment
+  - AWS
 ---
 
 * include a table of contents

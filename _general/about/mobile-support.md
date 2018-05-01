@@ -14,6 +14,8 @@ tags:
   - objective-c
 categories:
   - About Codeship  
+  - Configuration
+  - Account
 ---
 
 * include a table of contents

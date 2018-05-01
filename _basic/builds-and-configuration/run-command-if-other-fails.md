@@ -13,6 +13,8 @@ tags:
   - failure
 categories:
   - Builds and Configuration  
+  - Testing
+  - Configuration
 redirect_from:
   - /faq/run-command-if-other-fails/
   - /basic/getting-started/run-command-if-other-fails/

@@ -11,6 +11,7 @@ menus:
     weight: 1
 categories:
   - Queues    
+  - Configuration
 redirect_from:
   - /queues/redis/
   - /classic/getting-started/redis/

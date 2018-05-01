@@ -25,6 +25,8 @@ tags:
   - testing
 categories:
   - Continuous Integration
+  - Testing
+  - Browsers
 redirect_from:
   - /continuous-integration/browser-testing/
 ---

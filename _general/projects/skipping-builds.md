@@ -16,6 +16,8 @@ tags:
   - skip
 categories:
   - Projects
+  - Testing
+  - Configuration
 redirect_from:
   - /docker/skipping-builds/
   - /pro/getting-started/skipping-builds/

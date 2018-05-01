@@ -17,6 +17,8 @@ tags:
 - bitbucket
 categories:
   - Account
+  - Security
+  - Integrations
 ---
 
 * include a table of contents

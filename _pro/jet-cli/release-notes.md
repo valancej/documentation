@@ -6,6 +6,7 @@ menus:
     weight: 12
 categories:
   - Jet CLI
+  - CLI
 tags:
   - docker
   - jet

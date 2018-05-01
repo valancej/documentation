@@ -17,6 +17,10 @@ tags:
 
 categories:
   - Builds and Configuration
+  - Docker
+  - Security
+  - CLI
+  - Configuration
 
 redirect_from:
   - /pro/getting-started/build-arguments/

@@ -14,7 +14,9 @@ tags:
   - cli
   - google
 categories:
-  - Continuous Deployment    
+  - Continuous Deployment  
+  - Deployment
+  - Google  
 ---
 
 * include a table of contents

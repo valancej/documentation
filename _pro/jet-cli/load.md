@@ -6,6 +6,7 @@ menus:
     weight: 7
 categories:
   - Jet CLI
+  - CLI
 tags:
   - jet
   - usage

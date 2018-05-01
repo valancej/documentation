@@ -15,7 +15,8 @@ tags:
   - 2fa
   - whitelisting
 categories:
-  - About Codeship  
+  - About Codeship
+  - Security 
 redirect_from:
   - /security/
   - /security/security/

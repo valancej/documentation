@@ -12,6 +12,7 @@ tags:
   - caching
 categories:
   - Builds and Configuration  
+  - Caching
 redirect_from:
   - /basic/getting-started/dependency-cache/
 ---

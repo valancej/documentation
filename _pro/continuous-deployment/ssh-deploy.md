@@ -19,6 +19,7 @@ tags:
   - digital ocean
 categories:
   - Continuous Deployment
+  - Deployment
 ---
 
 <div class="info-block">

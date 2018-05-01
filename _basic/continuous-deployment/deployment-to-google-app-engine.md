@@ -11,6 +11,8 @@ tags:
   - google
 categories:
   - Continuous Deployment   
+  - Deployment
+  - Google
 redirect_from:
   - /continuous-deployment/deployment-to-google-app-engine/
   - /tutorials/continuous-deployment-google-app-engine-github-django-python/

@@ -15,6 +15,10 @@ tags:
 
 categories:
   - Builds and Configuration
+  - Databases
+  - Docker
+  - Configuration
+
 redirect_from:
   - /docker/services-and-databases/
   - /pro/getting-started/services-and-databases/

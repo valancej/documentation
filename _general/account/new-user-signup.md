@@ -15,6 +15,7 @@ tags:
 - getting started
 categories:
   - Account
+  - Guide
 redirect_from:
   - /general/about/other-scm/
   - /general/account/configure-your-avatar/

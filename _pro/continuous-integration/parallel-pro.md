@@ -13,7 +13,9 @@ tags:
   - parallel
   - concurrency
 categories:
-  - Continuous Integration 
+  - Continuous Integration
+  - Testing
+  - Configuration
 ---
 
 * include a table of contents

@@ -7,6 +7,8 @@ menus:
     weight: 9
 categories:
   - Continuous Deployment
+  - Deployment
+  - Google
 tags:
   - deployment
   - google

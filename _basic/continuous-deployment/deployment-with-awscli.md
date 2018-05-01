@@ -11,6 +11,8 @@ tags:
   - amazon
 categories:
   - Continuous Deployment    
+  - Deployment
+  - AWS
 redirect_from:
   - /continuous-deployment/deployment-with-awscli/
 ---

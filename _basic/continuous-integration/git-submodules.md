@@ -11,6 +11,7 @@ tags:
   - submodules
 categories:
   - Continuous Integration
+  - Configuration
 redirect_from:
   - /continuous-integration/git-submodules/
 ---

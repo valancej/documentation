@@ -18,6 +18,8 @@ tags:
   - whitelisting
 categories:
   - About Codeship  
+  - Account
+  - Security
 ---
 
 * include a table of contents

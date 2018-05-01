@@ -15,7 +15,7 @@ tags:
 
 categories:
   - Builds and Configuration
-
+  - Configuration
 
 redirect_from:
   - /docker/ssh-key-authentication/

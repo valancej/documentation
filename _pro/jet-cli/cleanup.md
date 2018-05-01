@@ -6,6 +6,7 @@ menus:
     weight: 3
 categories:
   - Jet CLI
+  - CLI
 tags:
   - jet
   - cleanup

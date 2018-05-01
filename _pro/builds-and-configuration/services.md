@@ -15,6 +15,12 @@ tags:
 
 categories:
   - Builds and Configuration
+  - Docker
+  - Testing
+  - Deployment
+  - CLI
+  - Configuration
+  - Registry
 
 redirect_from:
   - /docker/services/

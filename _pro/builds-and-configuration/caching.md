@@ -17,6 +17,9 @@ tags:
 
 categories:
   - Builds and Configuration
+  - Caching
+  - Docker
+  - Registry
 
 redirect_from:
   - /docker/caching/
