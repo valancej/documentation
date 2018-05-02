@@ -20,6 +20,10 @@ tags:
 
 categories:
   - Builds and Configuration
+
+redirect_from:
+  - /docker/ssh-key-authentication/
+  - /pro/getting-started/ssh-key-authentication/
 ---
 
 {% csnote info %}

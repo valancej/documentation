@@ -18,8 +18,6 @@ categories:
   - Configuration
 
 redirect_from:
-  - /docker/ssh-key-authentication/
-  - /pro/getting-started/ssh-key-authentication/
   - /pro/getting-started/cloning-repos/
 ---
 
