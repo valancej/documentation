@@ -22,9 +22,9 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 If your builds are not getting triggered on Codeship, it could be that we are experiencing a service interruption. Be sure to check our [status page](http://codeshipstatus.com) to monitor any potential issues. You can also follow the [@CodeshipStatus](https://twitter.com/codeship) account on Twitter.
-</div>
+{% endcsnote %}
 
 ## Webhooks
 

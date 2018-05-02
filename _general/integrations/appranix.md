@@ -11,7 +11,7 @@ menus:
     title: Using Appranix
     weight: 15
 categories:
-  - Integrations    
+  - Integrations
 ---
 
 * include a table of contents
@@ -82,16 +82,16 @@ To start, you need to add the following environment variables to the [encrypted 
 
 To use Appranix, you will need to call your `appranix.sh` script from your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) after the step where your deployment takes place.
 
-```yaml  
+```yaml
 - name: Appranix deployment
   tag: master
   service: app
   command: sh appranix.sh
 ```
 
-<div class="info-block">
-Note: The container must have [Ruby version 2.3.3]({{ site.baseurl }}{% link _pro/languages-frameworks/ruby.md %}) or higher for the `appranix.sh` file to execute the required gem install.
-</div>
+{% csnote info %}
+The container must have [Ruby version 2.3.3]({{ site.baseurl }}{% link _pro/languages-frameworks/ruby.md %}) or higher for the `appranix.sh` file to execute the required gem install.
+{% endcsnote %}
 
 ## Codeship Basic
 
@@ -152,6 +152,6 @@ To use Appranix, you will need to call your `appranix.sh` script from your [depl
 
 After that add `sh appranix.sh` at the end. The script file will connect to Appranix and trigger deployment for the new build.
 
-<div class="info-block">
-Note: Make sure you have selected [Ruby version 2.3.3]({{ site.baseurl }}{% link _basic/languages-frameworks/ruby.md %}). or higher.
-</div>
+{% csnote info %}
+Make sure you have selected [Ruby version 2.3.3]({{ site.baseurl }}{% link _basic/languages-frameworks/ruby.md %}). or higher.
+{% endcsnote %}

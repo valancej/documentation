@@ -19,9 +19,9 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 In addition to this guide, we've also got [quickstart repos and sample apps]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
-</div>
+{% endcsnote %}
 
 The source for the tutorial is available on Github as [codeship/ci-guide](https://github.com/codeship/ci-guide/) and you can clone it via
 
@@ -112,11 +112,11 @@ docker login
 cat ${HOME}/.docker/config.json
 ```
 
-<div class="info-block">
-**Note that if you are using Mac OSX**, the newer versions of Docker have changed to store credentials in the OSX keychain rather than in a configuration file.
+{% csnote info %}
+**If you are using Mac OSX**, the newer versions of Docker have changed to store credentials in the OSX keychain rather than in a configuration file.
 
 To get the appropriate authentication file on OSX, you will need to remove the `credsStore` line from Docker's `config.json` to disable Keychain storage, re-run `docker login` and then use the values it then generates in your updated `dockercfg` as shown above.
-</div>
+{% endcsnote %}
 
 This will print the `auths` value that we need to add to our `dockercfg` file. Once we've added this information to our `dockercfg` file and saved it, we'll run:
 

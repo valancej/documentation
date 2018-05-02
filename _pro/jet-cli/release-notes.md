@@ -19,6 +19,6 @@ redirect_from:
   - /pro/builds-and-configuration/release-notes/
 ---
 
-<div class="info-block">
+{% csnote info %}
 Missing versions only improved the integration with our hosted platform and have no user facing changes / bug fixes.
-</div>
+{% endcsnote %}

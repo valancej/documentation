@@ -37,9 +37,9 @@ pip install awscli
 aws s3 cp your_artifact_file.zip s3://mybucket/your_artifact_file.zip
 ```
 
-<div class="info-block">
+{% csnote info %}
 For Codeship Pro, our [_Codeship AWS container_]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}) can be implemented to transfer artifacts to S3 storage.
-</div>
+{% endcsnote %}
 
 For more advanced usage of the S3 CLI, please see the [S3 documentation](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html) on amazon.com
 

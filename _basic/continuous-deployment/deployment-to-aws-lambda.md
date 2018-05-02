@@ -10,7 +10,7 @@ tags:
   - lambda
   - aws
 categories:
-  - Continuous Deployment  
+  - Continuous Deployment
 redirect_from:
   - /continuous-deployment/deployment-to-aws-lambda/
 ---
@@ -18,13 +18,13 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 This article is about deploying to AWS Lambda with Codeship Basic.
 
 If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic)
 
 You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on Codeship Basic.
-</div>
+{% endcsnote %}
 
 ## General
 [AWS Lambda](http://aws.amazon.com/lambda/)  is a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information.

@@ -6,7 +6,7 @@ menus:
     title: IBM Cloud Container Service
     weight: 17
 categories:
-  - Continuous Deployment   
+  - Continuous Deployment
 tags:
   - deployment
   - ibm
@@ -15,9 +15,9 @@ tags:
   - blue mix
 
 ---
-<div class="info-block">
+{% csnote info %}
 You can find a sample repo for deploying to IBM Cloud with Codeship Pro on Github [here](https://github.com/codeship-library/ibm-bluemix-utilities).
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}
@@ -100,7 +100,7 @@ Note that in this example, all of the Container Service deployment commands have
   type: push
   image_name: registry.ng.bluemix.net/your-org/your-image
   registry: registry.ng.bluemix.net
-  dockercfg_service: dockercfg_generator  
+  dockercfg_service: dockercfg_generator
 
 - name: IBM Cloud Container Service Kubernetes Deployment
   service: deployment

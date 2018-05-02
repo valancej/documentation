@@ -26,10 +26,9 @@ Depfu continuously updates your dependencies one gem at a time and creates a pul
 
 Starting with Depfu and Codeship is fast and easy. [The Depfu documentation](https://depfu.com/docs) does a great job of providing more information about how to set up Depfu itself, in addition to the instructions below.
 
-<div class="info-block">
-**Note** that at the moment Depfu only works with Ruby projects hosted on GitHub. Support for more languages and other SCMs is planned.
-</div>
-
+{% csnote info %}
+At the moment Depfu only works with Ruby projects hosted on GitHub. Support for more languages and other SCMs is planned.
+{% endcsnote %}
 
 ## Codeship Pro
 

@@ -24,11 +24,11 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 This article is about using Node.js with Codeship Basic.
 
 If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic)
-</div>
+{% endcsnote %}
 
 ## Versions And Setup
 
@@ -101,9 +101,9 @@ export PREFIX="${HOME}/cache/npm/"
 
 ### Scoped Packages
 
-<div class="info-block">
+{% csnote info %}
 Scoped packages are only available for versions of `npm` greater than 2.7.0.
-</div>
+{% endcsnote %}
 
 To create a scoped package, you simply use a package name that starts with your scope.
 

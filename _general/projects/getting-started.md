@@ -75,11 +75,11 @@ A user with appropriate permission for the target account needs to confirm the t
 
 If you want to **bulk transfer projects**, please reach out to our support via [helpdesk.codeship.com](https://helpdesk.codeship.com).
 
-<div class="info-block">
-**Use Case Examples**
+{% csnote  %}
+**Example Use Cases**
 * You are using the Heroku addon and want to start using Codeship without it.
 * You don't want to maintain a project anymore and want to transfer it to someone else.
-</div>
+{% endcsnote %}
 
 ## Limit Builds to Specific Branches
 We don’t have a feature to limit which branches can be built.

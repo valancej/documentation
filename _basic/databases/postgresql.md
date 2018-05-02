@@ -17,17 +17,17 @@ redirect_from:
   - /databases/postgresql/
   - /classic/getting-started/postgresql/
 categories:
-  - Databases  
+  - Databases
 ---
 
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote warning %}
 PostgreSQL 9.2 officially reached its [end-of-life (EOL)](https://www.postgresql.org/support/versioning) and as a result it was removed from the build environment as of **March 29, 2018**.
 
 PostgreSQL 10 is now the new default running on port 5432.
-</div>
+{% endcsnote %}
 
 PostgreSQL `10` runs on the default port and the credentials are stored in the `PGUSER` and `PGPASSWORD` environment variables. The default databases created for you are **development** and **test**.
 
@@ -41,17 +41,17 @@ You need to activate them with `CREATE EXTENSION` as explained in the [Extension
 
 The **default version** of PostgreSQL on Codeship is **10**, which runs on the default port of `5432`. No additional configuration is required to use version 10.
 
-<div class="info-block">
+{% csnote info %}
 PostgreSQL 10 includes PostGIS version 2.4.
-</div>
+{% endcsnote %}
 
 ### 9.6
 
 PostgreSQL version **9.6** is running on port `5436` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
-<div class="info-block">
+{% csnote info %}
 PostgreSQL 9.6 includes PostGIS version 2.3.
-</div>
+{% endcsnote %}
 
 For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
 
@@ -63,9 +63,9 @@ sed -i "s|5432|5436|" "config/database.yml"
 
 PostgreSQL version **9.5** is running on port `5435` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
-<div class="info-block">
+{% csnote info %}
 PostgreSQL 9.5 includes PostGIS version 2.2.
-</div>
+{% endcsnote %}
 
 For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
 
@@ -77,9 +77,9 @@ sed -i "s|5432|5435|" "config/database.yml"
 
 PostgreSQL version **9.4** is running on port `5434` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
-<div class="info-block">
+{% csnote info %}
 PostgreSQL 9.4 includes PostGIS version 2.1.
-</div>
+{% endcsnote %}
 
 For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
 
@@ -91,9 +91,9 @@ sed -i "s|5432|5434|" "config/database.yml"
 
 PostgreSQL version **9.3** is running on port `5433` and configured (almost) identical to the others. Make sure to specify the correct port in your project configuration if you want to test against this version.
 
-<div class="info-block">
+{% csnote info %}
 PostgreSQL 9.3 includes PostGIS version 2.1.
-</div>
+{% endcsnote %}
 
 For Rails based projects, please add the following command to your _Setup Commands_ to work around the auto-configuration in place.
 

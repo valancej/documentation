@@ -23,9 +23,9 @@ redirect_from:
   - /pro/getting-started/caching/
 ---
 
-<div class="info-block">
+{% csnote info %}
 This tutorial describes the way caching works on Codeship's infrastructure during a build. For [local builds using the `jet` CLI]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), rely on the local Docker image cache.
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}
