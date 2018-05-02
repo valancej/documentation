@@ -6,7 +6,6 @@ menus:
     title: Google Compute Engine
     weight: 12
 categories:
-  - Continuous Deployment
   - Deployment
   - Google
 tags:

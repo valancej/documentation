@@ -10,7 +10,6 @@ tags:
   - gae
   - google
 categories:
-  - Continuous Deployment   
   - Deployment
   - Google
 redirect_from:

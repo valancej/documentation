@@ -10,7 +10,6 @@ tags:
   - codedeploy
   - aws
 categories:
-  - Continuous Deployment   
   - Deployment
   - AWS
 redirect_from:

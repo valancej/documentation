@@ -5,7 +5,6 @@ menus:
     title: jet steps
     weight: 9
 categories:
-  - Jet CLI
   - CLI
 tags:
   - jet

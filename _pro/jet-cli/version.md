@@ -5,7 +5,6 @@ menus:
     title: jet version
     weight: 11
 categories:
-  - Jet CLI
   - CLI
 tags:
   - jet

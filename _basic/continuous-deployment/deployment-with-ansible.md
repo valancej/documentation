@@ -9,7 +9,6 @@ tags:
   - deployment
   - ansible
 categories:
-  - Continuous Deployment
   - Deployment  
 ---
 

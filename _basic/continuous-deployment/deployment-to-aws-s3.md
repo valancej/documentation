@@ -10,7 +10,6 @@ tags:
   - s3
   - amazon
 categories:
-  - Continuous Deployment
   - Deployment
   - AWS
 ---

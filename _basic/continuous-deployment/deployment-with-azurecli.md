@@ -10,7 +10,6 @@ tags:
   - cli
   - microsoft
 categories:
-  - Continuous Deployment    
   - Deployment
   - Microsoft
 ---

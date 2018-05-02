@@ -6,7 +6,6 @@ menus:
     title: AWS CodeDeploy
     weight: 5
 categories:
-  - Continuous Deployment    
   - Deployment
   - AWS    
 tags:

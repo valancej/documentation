@@ -8,7 +8,6 @@ tags:
   - deployment
   - heroku
 categories:
-  - Continuous Deployment
   - Deployment
   - Heroku  
 redirect_from:

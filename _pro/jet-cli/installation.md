@@ -5,7 +5,6 @@ menus:
     title: Installation
     weight: 1
 categories:
-  - Jet CLI
   - CLI
 tags:
   - jet

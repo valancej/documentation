@@ -6,7 +6,6 @@ menus:
     title: Google Container Engine
     weight: 11
 categories:
-  - Continuous Deployment
   - Deployment
   - Google
 tags:

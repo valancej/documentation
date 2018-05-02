@@ -13,9 +13,8 @@ tags:
   - continuous deployment
 categories:
   - About Codeship  
-  - Continuous Deployment
   - Guide
-  - Configuration 
+  - Configuration
 redirect_from:
   - /faq/getting_started_with_ci/
 ---

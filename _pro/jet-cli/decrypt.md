@@ -5,7 +5,6 @@ menus:
     title: jet decrypt
     weight: 4
 categories:
-  - Jet CLI
   - CLI
 tags:
   - jet

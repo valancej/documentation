@@ -6,7 +6,6 @@ menus:
     title: Google Cloud
     weight: 8
 categories:
-  - Continuous Deployment
   - Deployment
   - Google
 tags:

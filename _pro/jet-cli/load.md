@@ -5,7 +5,6 @@ menus:
     title: jet load
     weight: 7
 categories:
-  - Jet CLI
   - CLI
 tags:
   - jet

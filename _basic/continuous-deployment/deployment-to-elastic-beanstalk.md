@@ -10,9 +10,8 @@ tags:
   - aws
   - amazon
 categories:
-  - Continuous Deployment  
   - Deployment
-  - AWS 
+  - AWS
 redirect_from:
   - /continuous-deployment/deployment-to-elastic-beanstalk/
 ---

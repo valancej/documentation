@@ -5,7 +5,6 @@ menus:
     title: jet run
     weight: 8
 categories:
-  - Jet CLI
   - CLI
 tags:
   - jet

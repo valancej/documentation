@@ -10,7 +10,6 @@ tags:
   - heroku
   - docker
 categories:
-  - Continuous Deployment  
   - Deployment
   - Heroku  
 redirect_from:

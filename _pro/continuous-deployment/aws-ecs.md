@@ -6,7 +6,6 @@ menus:
     title: AWS ECS
     weight: 4
 categories:
-  - Continuous Deployment     
   - Deployment
   - AWS   
 tags:

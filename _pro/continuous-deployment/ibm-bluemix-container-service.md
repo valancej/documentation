@@ -6,7 +6,6 @@ menus:
     title: IBM Cloud Container Service
     weight: 17
 categories:
-  - Continuous Deployment
   - Deployment
   - IBM  
   - Kubernetes

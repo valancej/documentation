@@ -9,7 +9,6 @@ tags:
   - engine yard
   - engineyard
 categories:
-  - Continuous Deployment  
   - Deployment 
 ---
 
