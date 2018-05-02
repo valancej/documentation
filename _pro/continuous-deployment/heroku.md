@@ -16,13 +16,13 @@ redirect_from:
   - /docker-integration/heroku/
 ---
 
-<div class="info-block">
+{% csnote info %}
 This article is about deploying to Heroku using Codeship Pro.
 
- If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
 
 You can find a sample repository for deploying to Heroku with Codeship Pro on Github [here](https://github.com/codeship-library/heroku-deployment).
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}

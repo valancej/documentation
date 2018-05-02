@@ -6,7 +6,7 @@ tags:
   - orchestration
   - containers
 categories:
-  - Integrations  
+  - Integrations
 menus:
   general/integrations:
     title: Using Rancher
@@ -18,11 +18,11 @@ menus:
 
 ## About Racher
 
-<div class="info-block">
-Note that Rancher only integrates with [Codeship Pro](https://codeship.com/features/pro) and will not work with [Codeship Basic](https://codeship.com/features/basic).
+{% csnote info %}
+Rancher only integrates with [Codeship Pro](https://codeship.com/features/pro) and will not work with [Codeship Basic](https://codeship.com/features/basic).
 
 If you do not have a familiarity with Codeship Pro, we recommend watching this [introductory webinar](https://resources.codeship.com/webinars/env-parity-docker-codeship-jet) before proceeding with your Rancher setup.
-</div>
+{% endcsnote %}
 
 Rancher is a container management platform that helps bridge the gap between container stacks and infrastructure platforms.
 

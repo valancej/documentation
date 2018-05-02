@@ -25,13 +25,13 @@ redirect_from:
   - /pro/getting-started/environment-variables
 ---
 
-<div class="info-block">
+{% csnote info %}
 This article is about using environment variables with Codeship Pro.
 
- If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
 
- Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) to encrypt your environment variables.
-</div>
+Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) to encrypt your environment variables.
+{% endcsnote %}
 
 
 * include a table of contents
@@ -82,9 +82,9 @@ Navigate to _Project Settings_ > _General_ and you'll find a section labeled _AE
 
 Save that file as `codeship.aes` in your repository root and don't forget to add the key to your `.gitignore` file so you don't accidentally commit it to your repository.
 
-<div class="info-block">
+{% csnote info %}
 If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.
-</div>
+{% endcsnote %}
 
 ### Encrypting Your Environment Variables
 

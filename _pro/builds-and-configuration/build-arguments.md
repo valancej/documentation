@@ -31,15 +31,14 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
-This article is about using Docker build arguments with Codeship Pro.
 
- If you are unfamiliar with build arguments, we recommend reading [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg).
+{% csnote info %}
+This article is about using Docker build arguments with Codeship Pro. If you are unfamiliar with build arguments, we recommend reading [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg). If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+{% endcsnote %}
 
- If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
-
- Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) to encrypt your build arguments.
-</div>
+{% csnote %}
+Note that you will also need to use the [Codeship Pro local CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) to encrypt your build arguments.
+{% endcsnote %}
 
 ## Overview: Build Arguments
 
@@ -101,9 +100,9 @@ In a lot of cases, the values needed by the image at build time are secrets -- c
 
 First, create a file in the root directory - in this case, a file named `build_args`. You will also need to [download the project AES key]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}#downloading-your-aes-key) to the root directory (and add it to the `.gitignore` file).
 
-<div class="info-block">
+{% csnote info %}
 If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.
-</div>
+{% endcsnote %}
 
 ```shell
 GEM_SERVER_TOKEN=XXXXXXXXXXXX

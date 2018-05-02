@@ -14,9 +14,9 @@ tags:
   - docker
 ---
 
-<div class="info-block">
+{% csnote info %}
 You can find a sample repository for deploying with Docker Swarm and Codeship Pro on Github [here](https://github.com/codeship-library/example-voting-app).
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}

@@ -28,11 +28,11 @@ redirect_from:
   - /pro/builds-and-configuration/cli/
 ---
 
-<div class="info-block">
-  <p>If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/quickstart-examples.md %}) or [the features overview page](http://codeship.com/features/pro).</p>
+{% csnote info %}
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/quickstart-examples.md %}) or [the features overview page](http://codeship.com/features/pro).
 
-  <p>Note that if you are using Codeship Basic, you will not be able to use the local CLI.</p>
-</div>
+Note that if you are using Codeship Basic, you will not be able to use the local CLI.
+{% endcsnote %}
 
 * include a table of contents
 {:toc}

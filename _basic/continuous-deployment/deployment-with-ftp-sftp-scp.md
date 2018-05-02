@@ -22,13 +22,13 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 This article is about deploying via SFTP with Codeship Basic.
 
 If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic).
 
 You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on Codeship Basic.
-</div>
+{% endcsnote %}
 
 After your code passed through the pipeline successfully, the last step in your CI chain is deploying your code. You're either using one of our many integrations or deploying with your own script. If you're using your own means of deployment, we recommend tools like rsync, [Capistrano (Ruby)](http://capistranorb.com/), [Rocketeer (PHP)](http://rocketeer.autopergamene.eu/), [Deployer (PHP)](https://deployer.org/), or [Fabric (Python)](http://www.fabfile.org/).
 
@@ -39,9 +39,9 @@ Our recommendation if you do not want to use a deployment tool or one of our int
 1. Add the Codeship public key to your `~/.ssh/authorized_keys` file, see [Authenticating via SSH Public Keys](#authenticating-via-ssh-public-keys).
 2. Create a deployment script, see [Run commands on a remote server via SSH](#run-commands-on-a-remote-server-via-ssh). At the very least, you will have to copy all files needed by your application to the server and start the services needed by your application.
 
-<div class="info-block">
+{% csnote info %}
 When Codeship checks out your repository, we clone it to a folder called `clone` directly beneath the home directory. So when you see references to `~/clone/` folder, we talk about our local copy of your repository.
-</div>
+{% endcsnote %}
 
 **Table of Contents**
 * include a table of contents

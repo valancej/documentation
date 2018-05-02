@@ -31,13 +31,13 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 This article is about the `codeship-services.yml` file that powers Codeship Pro.
 
- If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
 
- Also note that the `codeship-services.yml` file depends on the `codeship-steps.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
-</div>
+Also note that the `codeship-services.yml` file depends on the `codeship-steps.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+{% endcsnote %}
 
 ## What Is Your Codeship Services File?
 Your services file - `codeship-services.yml` - is where you configure each service you need to run your CI/CD builds with Codeship. During the build, these services will be used to run the testing steps you've defined in your `codeship-steps.yml` [file]({% link _pro/builds-and-configuration/steps.md %}). You can have as many services as you'd like, and customize each of them. Each of these services will be run inside a Docker container.

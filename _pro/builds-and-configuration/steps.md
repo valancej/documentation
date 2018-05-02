@@ -32,13 +32,13 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 This article is about the `codeship-steps.yml` file that powers Codeship Pro.
 
- If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
 
- Also note that the `codeship-steps.yml` file depends on the `codeship-services.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
-</div>
+Also note that the `codeship-steps.yml` file depends on the `codeship-services.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+{% endcsnote %}
 
 ## What Is codeship-steps.yml?
 
@@ -202,10 +202,9 @@ Run steps specify a command to run on a service. You must specify one or two dir
 
 ## Push steps
 
-<br />
-<div class="info-block">
+{% csnote info %}
 We implemented tagging via templates. See below for the available variables. Did we miss any important ones? Let us know at [support@codeship.com](mailto:support@codeship.com).
-</div>
+{% endcsnote %}
 
 Push steps allow a generated container to be pushed to a remote docker registry. When running after a build, this allows a deployment based upon the successful build to occur. You must specify a number of directives:
 
@@ -274,7 +273,7 @@ You can use the `on_fail` directive to specify one or more commands to run if a 
   command: true
   on_fail:
     - command: notify-fail.sh
-```      
+```
 
 It is important to note that steps that run on failure inherit the service of the step that failed.
 

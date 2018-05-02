@@ -17,13 +17,13 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-<div class="info-block">
+{% csnote info %}
 This article is about deploying to DigitalOcean with Codeship Basic.
 
 If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic)
 
 You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on Codeship Basic.
-</div>
+{% endcsnote %}
 
 ## Getting Started with DigitalOcean
 

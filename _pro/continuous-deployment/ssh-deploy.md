@@ -21,9 +21,9 @@ categories:
   - Deployment
 ---
 
-<div class="info-block">
+{% csnote info %}
 See the [example repo](https://github.com/codeship-library/docker-utilities/tree/master/ssh-helper) for a full example and further instructions on using SSH and SCP with Codeship Pro.
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}
