@@ -14,7 +14,9 @@ tags:
   - organizations
   - git
 categories:
-  - About Codeship  
+  - About Codeship
+  - Security
+  - Account 
 redirect_from:
   - /troubleshooting/github-3rd-party-restrictions/
   - /faq/github-3rd-party-restrictions/

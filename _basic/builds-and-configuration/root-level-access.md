@@ -12,6 +12,8 @@ tags:
   - admin
 categories:
   - Builds and Configuration  
+  - Configuration
+  - Security
 redirect_from:
   - /faq/root-level-access/
   - /basic/getting-started/root-level-access/

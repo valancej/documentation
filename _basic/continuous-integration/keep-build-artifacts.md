@@ -11,6 +11,7 @@ tags:
   - testing
 categories:
   - Continuous Integration
+  - Caching
 redirect_from:
   - /continuous-integration/keep-build-artifacts/
 ---

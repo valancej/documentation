@@ -16,6 +16,11 @@ tags:
   - image registry
 categories:
   - Builds and Configuration
+  - Docker
+  - Testing
+  - Deployment
+  - CLI
+  - Configuration
 
 redirect_from:
   - /docker/steps/

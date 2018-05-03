@@ -6,6 +6,7 @@ tags:
   - whitelisting
 categories:
   - Account
+  - Security
 menus:
   general/account:
     title: IP Whitelisting

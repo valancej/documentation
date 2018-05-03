@@ -13,6 +13,7 @@ redirect_from:
   - /classic/getting-started/memcached/
 categories:
   - Services  
+  - Configuration
 ---
 
 * include a table of contents

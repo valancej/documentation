@@ -22,6 +22,9 @@ tags:
   - testing
 categories:
   - Continuous Integration
+  - Browsers
+  - Integration
+  - Testing
 redirect_from:
   - /docker/browser-testing/
 ---

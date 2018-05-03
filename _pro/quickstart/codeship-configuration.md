@@ -16,6 +16,10 @@ tags:
   - projects
 categories:
   - Quickstart
+  - Docker
+  - Guide
+  - Configuration
+  - Account
 redirect_from:
   - /docker/codeship-configuration/
   - /pro/getting-started/codeship-configuration/

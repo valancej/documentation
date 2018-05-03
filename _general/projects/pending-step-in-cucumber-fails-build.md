@@ -14,6 +14,7 @@ tags:
   - ssh
 categories:
   - Projects
+  - Testing
 redirect_from:
   - /troubleshooting/pending-step-in-cucumber-fails-build/
   - /faq/pending-step-in-cucumber-fails-build/

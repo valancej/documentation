@@ -3,7 +3,7 @@ title: Access To Other Repositories in Codeship Basic
 shortTitle: Access To Other Repositories
 menus:
   basic/builds:
-    title: Access To Other Repositories 
+    title: Access To Other Repositories
     weight: 11
 tags:
   - build error
@@ -19,6 +19,7 @@ tags:
   - machine user
 categories:
   - Projects
+  - Configuration
 redirect_from:
   - /faq/access-to-other-repositories-fails-during-build/
   - /general/projects/access-to-other-repositories-fails-during-build/

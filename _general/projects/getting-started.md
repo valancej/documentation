@@ -13,6 +13,7 @@ tags:
   - firewall
 categories:
   - Projects
+  - Guide
 redirect_from:
   - /administration/delete-a-project/
   - /general/projects/delete-a-project/

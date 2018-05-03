@@ -11,6 +11,7 @@ tags:
 - delete account
 categories:
   - Account
+  - Security
 ---
 
 * include a table of contents

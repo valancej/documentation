@@ -10,6 +10,8 @@ tags:
   - testing
 categories:
   - Builds and Configuration
+  - Testing
+  - Configuration
 redirect_from:
   - /faq/ignore-command-on-branch/
   - /basic/getting-started/ignore-command-on-branch/

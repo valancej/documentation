@@ -13,6 +13,8 @@ tags:
   - troubleshooting
 categories:
   - Builds and Configuration
+  - Testing
+  - Configuration
 redirect_from:
   - /continuous-integration/ssh-access/
   - /basic/getting-started/ssh-access/

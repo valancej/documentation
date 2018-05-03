@@ -7,6 +7,8 @@ menus:
     weight: 3
 categories:
   - Quickstart
+  - Docker
+  - Guide   
 tags:
   - docker
   - jet

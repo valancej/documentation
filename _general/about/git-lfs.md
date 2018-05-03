@@ -10,6 +10,7 @@ tags:
   - lfs
 categories:
   - About Codeship  
+  - Configuration
 ---
 
 * include a table of contents

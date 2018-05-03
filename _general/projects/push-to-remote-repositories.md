@@ -15,6 +15,7 @@ tags:
   - git
 categories:
   - Projects
+  - Configuration
 redirect_from:
   - /troubleshooting/push-to-remote-repositories/
   - /faq/push-to-remote-repositories/

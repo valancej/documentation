@@ -6,7 +6,7 @@ menus:
     title: Terraform
     weight: 13
 categories:
-  - Continuous Deployment    
+  - Deployment  
 tags:
   - deployment
   - hashicorp

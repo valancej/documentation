@@ -14,7 +14,9 @@ tags:
   - nip.io
   - testing
 categories:
-  - Continuous Integration    
+  - Continuous Integration  
+  - Configuration
+  - Testing  
 redirect_from:
   - /continuous-integration/using-subdomains/
 ---

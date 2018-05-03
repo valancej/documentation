@@ -13,7 +13,8 @@ tags:
 
 categories:
   - Builds and Configuration
-
+  - Docker
+  - Configuration
 
 redirect_from:
   - /docker/docker-volumes/

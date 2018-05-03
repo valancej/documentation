@@ -13,7 +13,8 @@ tags:
   - virtual machine
   - build machine
 categories:
-  - About Codeship  
+  - About Codeship
+  - Security 
 redirect_from:
   - /security/vm-and-infrastructure/
 ---

@@ -10,7 +10,8 @@ tags:
   - cli
   - microsoft
 categories:
-  - Continuous Deployment    
+  - Deployment
+  - Microsoft
 ---
 
 * include a table of contents

@@ -12,6 +12,8 @@ tags:
   - environment
 categories:
   - Builds and Configuration
+  - Configuration
+  - Security
 redirect_from:
   - /continuous-integration/set-environment-variables/
   - /basic/getting-started/set-environment-variables/

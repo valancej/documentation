@@ -5,7 +5,7 @@ menus:
     title: jet encrypt
     weight: 5
 categories:
-  - Jet CLI
+  - CLI
 tags:
   - jet
   - encrypt

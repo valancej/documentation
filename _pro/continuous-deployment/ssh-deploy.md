@@ -18,7 +18,7 @@ tags:
   - linode
   - digital ocean
 categories:
-  - Continuous Deployment
+  - Deployment
 ---
 
 {% csnote info %}

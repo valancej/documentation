@@ -16,7 +16,8 @@ tags:
 
 categories:
   - Builds and Configuration
-
+  - Security
+  - Configuration
 
 redirect_from:
   - /docker/encryption/

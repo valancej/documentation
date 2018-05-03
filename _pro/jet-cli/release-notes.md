@@ -5,7 +5,7 @@ menus:
     title: CLI Release Notes
     weight: 12
 categories:
-  - Jet CLI
+  - CLI
 tags:
   - docker
   - jet

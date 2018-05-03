@@ -14,6 +14,8 @@ tags:
   - getting started jet
 categories:
   - Quickstart
+  - Docker
+  - Guide
 redirect_from:
   - /general/account/guides/migrating-from-jenkins-organizations/
   - /general/account/guides/migrating-from-jenkins-notifications/

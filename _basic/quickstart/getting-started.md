@@ -9,6 +9,8 @@ tags:
   - codeship basic
 categories:
   - Quickstart  
+  - Guide
+  - Configuration
 redirect_from:
   - /basic/getting-started/getting-started/
 ---

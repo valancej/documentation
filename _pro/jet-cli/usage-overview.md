@@ -16,7 +16,7 @@ tags:
   - troubleshooting
   - cli
 categories:
-- Jet CLI
+  - CLI
 redirect_from:
   - /docker/installation/
   - /pro/installation/

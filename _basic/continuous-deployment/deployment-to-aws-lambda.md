@@ -10,7 +10,8 @@ tags:
   - lambda
   - aws
 categories:
-  - Continuous Deployment
+  - Deployment
+  - AWS
 redirect_from:
   - /continuous-deployment/deployment-to-aws-lambda/
 ---

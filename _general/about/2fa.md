@@ -15,6 +15,8 @@ tags:
   - authentication
 categories:
   - About Codeship
+  - Account
+  - Security
 ---
 
 * include a table of contents
@@ -26,14 +28,14 @@ Two-Factor Authentication (more commonly referred to as 2FA) is a way to secure 
 
 ### How does 2FA work?
 
-There are a couple of different approaches to 2FA, some are purely app-based while others require you to have a special piece of hardware that can generate unique codes. 
+There are a couple of different approaches to 2FA, some are purely app-based while others require you to have a special piece of hardware that can generate unique codes.
 In all cases you will be asked for a unique code as part of logging in the online service, and the unique code is delivered to/by your personal device.
 
 For our implementation on Codeship, we have chosen to rely on mobile apps that can generate the unique codes. These apps will continuously generate one-time use codes that are only valid for a short period of time. The apps rely on a shared unique code between Codeship and the specific app, to ensure that only the app on your personal device is able to generate the correct codes; it's impossible for someone to generate the same codes, at the same time, on their own device.
 
 ### Authenticator Apps
 
-Depending on your mobile OS, you can get one of these apps: [Google Authenticator](https://support.google.com/accounts/answer/1066447) (iOS, Android, Blackberry) or [Authenticator](https://www.microsoft.com/en-us/store/p/authenticator/9wzdncrfj3rj) (Windows Phone). 
+Depending on your mobile OS, you can get one of these apps: [Google Authenticator](https://support.google.com/accounts/answer/1066447) (iOS, Android, Blackberry) or [Authenticator](https://www.microsoft.com/en-us/store/p/authenticator/9wzdncrfj3rj) (Windows Phone).
 There are a lot of other authenticator apps available, so check your app store if you're looking for something else than what either of these two offer.
 
 ## Enabling 2FA
@@ -64,7 +66,7 @@ Be aware that recovery codes can be used in case your don't have your personal d
 
 ## Using Recovery Codes
 
-If you've lost your personal device, or for other reasons can't generate codes, you can use one of your recovery codes to get access to your account and re-setup 2FA. 
+If you've lost your personal device, or for other reasons can't generate codes, you can use one of your recovery codes to get access to your account and re-setup 2FA.
 
 When asked for a 2FA code, select to use a recovery code instead. This will take you to a different view where you can enter one of your recovery codes. Note that these codes are one-time use as well and will not work again later on. If you do use a recovery code, make sure you either turn off 2FA or setup another authenticator app to replace your old one. You shouldn't use recovery codes on a regular basis.
 
