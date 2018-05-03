@@ -14,7 +14,6 @@ redirect_from:
 categories:
   - Services  
   - Configuration
-  - Configuration
 ---
 
 * include a table of contents
