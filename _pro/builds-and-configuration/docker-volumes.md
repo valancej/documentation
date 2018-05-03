@@ -21,9 +21,9 @@ redirect_from:
   - /pro/getting-started/docker-volumes/
 ---
 
-<div class="info-block">
+{% csnote info %}
 To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}).
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}

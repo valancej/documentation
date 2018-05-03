@@ -33,14 +33,13 @@ layout: default
         {{ content }}
       </div>
 
-      <div class="feedback-block">
-				<h2>Need more help?</h2>
+      {% csnote %}
+				<h4>Need more help?</h4>
 
-				<p>You can post on <a href="http://stackoverflow.com/questions/ask?tags=codeship" target="_BLANK">Stack Overflow</a> using the tag <code>#codeship</code> or <a href="https://helpdesk.codeship.com">contact our Helpdesk</a>.</p>
+				<p>You can post on <a href="http://stackoverflow.com/questions/ask?tags=codeship" target="_BLANK">Stack Overflow</a> using the tag <code>#codeship</code> or <a href="https://helpdesk.codeship.com">contact our Helpdesk</a>.<br />
+				We also have a couple of <a href="https://github.com/codeship-library" target="_BLANK">code examples and sample projects</a> available for you to get started with.</p>
 
-				<p>We also have a couple of <a href="https://github.com/codeship-library" target="_BLANK">code examples and sample projects</a> available.</p>
-
-        <h2>Was This Article Helpful?</h2>
+        <h4>Was This Article Helpful?</h4>
         <div id="pd_rating_holder_8520732" class="polldaddy"></div>
         <script type="text/javascript">
 	        PDRTJS_settings_8520732 = {
@@ -51,8 +50,9 @@ layout: default
 	        };
 	        (function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=('https:'==document.location.protocol)?'https://polldaddy.com/js/rating/rating.js':'http://i0.poll.fm/js/rating/rating.js';s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,'script','pd-rating-js'));
         </script>
-        <div class="feedback"><p><a href="https://codeship.wufoo.com/forms/z12bkuf0eyp5qx/def/field3={{ page.title }}" target=_"BLANK">Please submit this feedback form to help us improve this article!</a></p></div>
-      </div>
+
+				<p>Do you think we need to improve this article? If so, please <a href="https://codeship.wufoo.com/forms/z12bkuf0eyp5qx/def/field3={{ page.title }}" target=_"BLANK">submit our feedback form</a> to help us improve this article!</p>
+      {% endcsnote %}
     </div>
   </div>
 </div>

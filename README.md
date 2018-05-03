@@ -141,3 +141,15 @@ generates the following output:
 ```
 http://manpages.ubuntu.com/manpages/trusty/en/man1/formatdb.1.html
 ```
+
+#### Notes
+
+You can include `note` sections on the pages via the `csnote` helper. Those blocks are powered by the [Shipyard Notes component](https://codeship.github.io/shipyard/components/notes)
+
+```
+{% csnote info %}
+Some informational text.
+{% endcsnote %}
+```
+
+As an optional argument you can specify either `info`, `success` or `warning`. If you don't specify the argument a default (grey) note will be used.

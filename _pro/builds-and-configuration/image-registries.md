@@ -35,9 +35,9 @@ redirect_from:
   - /docker/getting-started/docker-push/
 ---
 
-<div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}).
-</div>
+{% csnote info %}
+If you need to reset your AES key you can do so by visiting _Project Settings_ > _General_ and clicking _Reset project AES key_.
+{% endcsnote %}
 
 * include a table of contents
 {:toc}

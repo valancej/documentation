@@ -18,9 +18,9 @@ redirect_from:
   - /docker-integration/nodejs/
 ---
 
-<div class="info-block">
+{% csnote info %}
 We've got [quickstart repos, sample apps and a getting started guide]({% link _pro/quickstart/quickstart-examples.md %}) available to make starting out with Codeship Pro faster and easier.
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}

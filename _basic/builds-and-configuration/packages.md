@@ -16,9 +16,9 @@ redirect_from:
   - /basic/getting-started/packages/
 ---
 
-<div class="info-block">
+{% csnote info %}
 This page was last updated on {{ site.data.basic.latest_update }}.
-</div>
+{% endcsnote %}
 
 * include a table of contents
 {:toc}

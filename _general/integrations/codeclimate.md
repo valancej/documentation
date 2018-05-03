@@ -15,7 +15,7 @@ menus:
     title: Using Code Climate
     weight: 1
 categories:
-  - Integrations    
+  - Integrations
 redirect_from:
   - /basic/continuous-integration/code-climate/
   - /pro/continuous-integration/codeclimate-docker/
@@ -24,9 +24,10 @@ redirect_from:
   -  /basic/analytics/code-climate/
 ---
 
-<div class="info-block">
-**Note** that these instructions use the newest version of the Code Climate reporter, which is still in beta. Please view [their documentation](https://docs.codeclimate.com/v1.0/docs/configuring-test-coverage-older-versions) for instructions on using the older reporter. You will still need to add your API token via [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), as seen below, but the test configuration will work differently.
-</div>
+
+{% csnote info %}
+These instructions use the newest version of the Code Climate reporter, which is still in beta. Please view [their documentation](https://docs.codeclimate.com/v1.0/docs/configuring-test-coverage-older-versions) for instructions on using the older reporter. You will still need to add your API token via [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), as seen below, but the test configuration will work differently.
+{% endcsnote %}
 
 * include a table of contents
 {:toc}
