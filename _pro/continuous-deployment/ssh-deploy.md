@@ -28,8 +28,6 @@ categories:
 
 To deploy using SSH and SCP with Codeship Pro, you will need to create a container that can connect to your server via SSH. Then, you will pass this container the necessary deployment commands.
 
-### Configuring SSH private key
-
 {% csnote info %}
 Please follow our outlined steps on [setting your private SSH key]({{ site.baseurl }}{% link _pro/builds-and-configuration/setting-ssh-private-key.md %}) before proceeding
 {% endcsnote %}
