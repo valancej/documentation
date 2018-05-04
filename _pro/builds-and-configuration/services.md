@@ -145,9 +145,9 @@ data:
     - ./tmp/data:/data
 ```
 
-**Note**: volumes should only be mounted from a relative path, as the hosts are ephemeral, and you should not rely on existence of certain directories. Although absolute paths are possible at the moment, we will remove support for them soon.
-
-[Learn more about using volumes.]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %})
+{% csnote warning %}
+Volumes should only be mounted from a relative path, as the hosts are ephemeral, and you should not rely on existence of certain directories. Although absolute paths are possible at the moment, we will remove support for them soon. [Learn more about using volumes.]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %})
+{% endcsnote %}
 
 ### HEALTHCHECK
 
@@ -176,7 +176,9 @@ Or, inside of your Dockerfile:
 FROM healthcheck/postgres:alpine
 ```
 
-**Note** that Docker will fail a build that makes three unsuccessful attempts to poll for a healthy state, by default. This can be problematic when using options such as `--interval`, which instruct Docker to poll at a different rate than it's default 30 seconds. You can also change the number of retries Docker tolerates with the `--retries` option.
+{% csnote info %}
+Docker will fail a build that makes three unsuccessful attempts to poll for a healthy state, by default. This can be problematic when using options such as `--interval`, which instruct Docker to poll at a different rate than it's default 30 seconds. You can also change the number of retries Docker tolerates with the `--retries` option.
+{% endcsnote %}
 
 ### Environment Variables
 
