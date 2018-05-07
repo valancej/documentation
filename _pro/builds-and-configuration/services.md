@@ -278,7 +278,7 @@ These flags should instead be implemented as directives in your Services file, a
 
 ## Container networking
 
-We do not support the top-level `networks` directive (see [unavailable features](#unavailable-features)) - but all containers are started on isolated networks, per step, by default.
+We do not support the top-level `networks` directive (see [unavailable features](#unavailable-features)) - but all containers running in a given step are on an isolated network, so you can communicate with services by using their service name as a hostname.
 
 Containers are bidirectionally discoverable without requiring any custom setup and should not require custom network creation.
 
@@ -318,7 +318,7 @@ Labels as they relate to images are supported by Codeship and should be [declare
 
 #### Deprecated keys
 
-  * `links` Links are used to declare dependencies in your services file. They also create environment variables with information for container communication. `links` is considered a legacy key by Docker and may be removed at any time. Use `depends_on` to control boot order of your containers. All containers running in a given step are on an isolated network, so you can communicate with services by using their service name as a hostname.
+  * `links` Links are used to declare dependencies in your services file. They also create environment variables with information for container communication. `links` is considered a legacy key by Docker and may be removed at any time. Use `depends_on` to control boot order of your containers.
 
 ## Validating Your Files
 
