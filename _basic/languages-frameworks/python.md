@@ -11,6 +11,7 @@ tags:
   - flask
   - django
   - pyenv
+  - pip
 categories:
   - Languages And Frameworks
 redirect_from:
@@ -24,7 +25,7 @@ redirect_from:
 
 We use [pyenv](https://github.com/pyenv/pyenv) to manage Python environments for you.
 
-By default, we run Python version `2.7.15`, but versions `3.3`, `3.4`, `3.5` and `3.6` are all preinstalled as well.
+By default, we run Python version `2.7`, but versions `3.3`, `3.4`, `3.5` and `3.6` are all preinstalled as well. These are aliases that are pointing to the specific versions installed.
 
 ### Specifying Version
 
@@ -39,6 +40,13 @@ pyenv local $version
 You can also use the environment variable `PYENV_VERSION` to choose from one of the installed Python versions.
 
 Alternatively, you can specify a version to use by committing a file named `.python-version` into your code repository with a version specification.
+
+To install a specific Python version that is not already preinstalled, add these commands:
+
+```shell
+pyenv install $version
+pyenv local $version
+```
 
 ## Dependencies
 
