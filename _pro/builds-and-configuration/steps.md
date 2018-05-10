@@ -260,7 +260,7 @@ There are several important things to note when using manual steps:
 
 - Only one manual step group is allowed for any specific build context. This means that you can have separate manual step groups for the `staging` and `master` branches, but not two manual step groups for the `master` branch.
 
-- Only [project owners]({{ site.baseurl }}{% link _/general/account/organizations.md %}#team-roles-and-permissions) can approve builds paused pending manual approval.
+- Only [project owners]({{ site.baseurl }}{% link _general/account/organizations.md %}#team-roles-and-permissions) can approve builds paused pending manual approval.
 
 - Manual approval steps must be the final steps in your pipeline. We will not process builds with steps _after_ your manual approval steps, as these steps should be grouped into the manual approval group instead.
 
