@@ -89,7 +89,7 @@ Beginning in Firefox 55, you can run Firefox in [headless mode](https://develope
 
 ## geckodriver
 
-[geckodriver](https://github.com/mozilla/geckodriver) 0.20.0 is installed by default and available in the PATH.
+[geckodriver](https://github.com/mozilla/geckodriver) 0.20.1 is installed by default and available in the PATH.
 
 To install a [custom geckodriver version](https://github.com/codeship/scripts/blob/master/packages/geckodriver.sh) add the following commands to your build steps:
 
