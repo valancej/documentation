@@ -74,6 +74,7 @@ Additionally, all rules can select between `started`, `failed`, `succeeded`, and
 * `failed` -> sends a notification if a build fails for some reason
 * `succeeded` -> sends a notification if the build finishes successfully
 * `recovered` -> sends a notification if the previous build failed, but the current build succeeded
+* `requires approval` -> sends a notification if a build is paused pending a [manual approval]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %})
 
 ## Email Notification
 

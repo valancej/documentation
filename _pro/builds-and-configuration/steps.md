@@ -16,11 +16,6 @@ tags:
   - image registry
 categories:
   - Builds and Configuration
-  - Docker
-  - Testing
-  - Deployment
-  - CLI
-  - Configuration
 
 redirect_from:
   - /docker/steps/
@@ -32,13 +27,13 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-{% csnote info %}
+<div class="info-block">
 This article is about the `codeship-steps.yml` file that powers Codeship Pro.
 
-If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
 
-Also note that the `codeship-steps.yml` file depends on the `codeship-services.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
-{% endcsnote %}
+ Also note that the `codeship-steps.yml` file depends on the `codeship-services.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+</div>
 
 ## What Is codeship-steps.yml?
 
@@ -193,18 +188,19 @@ Since that's confusing, here's a logically equivalent example:
   - command: echo two
 ```
 
-## Run steps
+## Run Steps
 
 Run steps specify a command to run on a service. You must specify one or two directives:
 
 * `command` the command to run. This is always required, and identifies a step as a run step. Note that quotes are respected to split up arguments, but special characters such as `&&`, `|` or `>` are not.
 * `service` the service to run the command on. If you already specified a service at the group level you can not specify a service again, otherwise this directive is required.
 
-## Push steps
+## Push Steps
 
-{% csnote info %}
+<br />
+<div class="info-block">
 We implemented tagging via templates. See below for the available variables. Did we miss any important ones? Let us know at [support@codeship.com](mailto:support@codeship.com).
-{% endcsnote %}
+</div>
 
 Push steps allow a generated container to be pushed to a remote docker registry. When running after a build, this allows a deployment based upon the successful build to occur. You must specify a number of directives:
 
@@ -241,6 +237,37 @@ When using a private repository, or a non-standard tag in the `image_name`, keep
 
 As for the `encrypted_dockercfg_path` directive, we support both, the older `.dockercfg` as well as the newer `${HOME}/.docker/config.json` format. You can simply encrypt either of those files via `jet encrypt` and commit the encrypted files to the repository and the configuration will be picked up.
 
+## Manual Approval Steps
+
+{% csnote info %}
+  You can add flexible [notification rules]({{ site.baseurl }}{% link _general/account/notifications.md %}) for builds requiring manual approval.
+{% endcsnote %}
+
+You can use the `type: manual` directive to require that a step requires manual approval before proceeding further. For instance:
+
+```yaml
+- type: manual
+  tag: master
+  steps:
+    - service: app
+      name: requires-approval
+      command: deploy.sh
+```
+
+This is a new feature and we would love any [feedback you have](mailto:feedback@codeship.com) to help us learn more about expanding and improving the use cases.
+
+There are several important things to note when using manual steps:
+
+- Only one manual step group is allowed for any specific build context. This means that you can have separate manual step groups for the `staging` and `master` branches, but not two manual step groups for the `master` branch.
+
+- Only [project owners]({{ site.baseurl }}{% link _general/account/organizations.md %}#team-roles-and-permissions) can approve builds paused pending manual approval.
+
+- Manual approval steps must be the final steps in your pipeline. We will not process builds with steps _after_ your manual approval steps, as these steps should be grouped into the manual approval group instead.
+
+- Once approved, the pending steps will run as a new build, beginning to end, including the previously paused steps. These build runs will be grouped together under a single build on your dashboards, as seen in the screenshot below.
+
+![Manual approval step group]({{ site.baseurl }}/images/general/manual-approval.png)
+
 ## Build Environment
 
 For each step, the running container is provided with a set of environment variables from the CI process. These values can help your containers to make decisions based on your build pipeline.
@@ -261,21 +288,6 @@ For each step, the running container is provided with a set of environment varia
 * `CI_NAME` (defaults to `codeship`)
 
 Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.
-
-## On-fail Steps
-
-You can use the `on_fail` directive to specify one or more commands to run if a step fails. For example:
-
-```yaml
-- name: mystep
-  tag: master
-  service: app
-  command: true
-  on_fail:
-    - command: notify-fail.sh
-```
-
-It is important to note that steps that run on failure inherit the service of the step that failed.
 
 ## Step Timeouts
 
