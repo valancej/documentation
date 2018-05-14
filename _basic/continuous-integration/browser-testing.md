@@ -73,7 +73,7 @@ export CHROMEDRIVER_VERSION=YOUR_DESIRED_VERSION
 
 ## Firefox
 
-[Firefox](https://www.mozilla.org/en-US/firefox/releases) 59.0.1 is installed by default and available in the PATH.
+[Firefox](https://www.mozilla.org/en-US/firefox/releases) 60.0 is installed by default and available in the PATH.
 
 To install a [custom Firefox version](https://github.com/codeship/scripts/blob/master/packages/firefox.sh) add the following commands to your build steps:
 
