@@ -37,9 +37,9 @@ Codeship supports self-hosted [Git](https://git-scm.com) repositories for the [G
 
 ## Exposing Ports
 
-To use your private Git server with Codeship, you will need a publicly reachable endpoint with ports 22 and 433 open to the internet.
+To use your private Git server with Codeship, you will need a publicly reachable endpoint with ports 22 and 443 open to the internet.
 
-We require port 22 to clone your repository to run your builds and port 433 for status and clone requests.
+We require port 22 to clone your repository to run your builds and port 443 for status and clone requests.
 
 **Note** that Bitbucket Server uses port 7999 rather than port 22.
 
