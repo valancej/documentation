@@ -36,7 +36,7 @@ For every build that is run on Codeship (Codeship Basic or Codeship Pro) we will
 
 We also  cache dependencies between builds, so if you include a custom package or save data in the cache folder, that will be persisted and stored on Codeship infrastructure. Since we cannot fully control what is cached, or easily access cached data, it will be up to you to ensure that no personal data, or other sensitive information, ends up being cached.
 
-In some circumstances, as mentioned on the [Security page]({{ site.baseurl }}{% link _general/about/security.md %}), our support team can see the code that is checked out from your SCM, but are only allowed to access it for debug purposes and only with explicit consent from you.
+In some circumstances, as mentioned on the [Security page]({{ site.baseurl }}{% link _general/about/security.md %}), our support team is able to see the code that is checked out from your SCM, but are only in a debug scenario where you've reported an issue.
 
 ### Your customers' data
 
