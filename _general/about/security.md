@@ -16,7 +16,7 @@ tags:
   - whitelisting
 categories:
   - About Codeship
-  - Security 
+  - Security
 redirect_from:
   - /security/
   - /security/security/
@@ -49,6 +49,9 @@ You can revoke permission in your source code provider settings and by removing 
 
 If you need to access resources behind a custom firewall from Codeship, e.g. pulling code from a [self-hosted git server]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}) or perhaps deploying build artifacts to an internal environment, you can enable the IP Whitelisting feature and only open the necessary ports for those IPs in your firewall. See [IP Whitelisting]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) documentation for more details.
 
+## Is Codeship GDPR compliant
+
+Yes, we comply with GDPR as both a controller and a processor. See more on the GDPR page
 
 ## What Services Does Codeship Use?
 
@@ -61,7 +64,6 @@ Our whole infrastructure is based on Amazon EC2 or services built on top of it. 
 Additionally for collecting metrics (but without any sensitive data) we use:
 
 + Google Analytics
-+ Intercom
 + Google Docs
 + Looker
 + Rollbar
@@ -99,19 +101,11 @@ Codeship uses a variety of third-party javascript embeds to perform a variety of
 
 - Rollbar is used to collect application exception information for development purposes.
 
-- CrazyEgg is used to visually chart the performance of our front-end marketing pages.
-
 - Appcues is used to communicate with users based on behavioral metrics.
 
 - Segment is our main data analytics platform. We use the data (in aggregate) to see how Codeship is being used and to design improvements and new features.
 
-- Google Analytics is used to track visitor data to our front-end marketing pages.
-
 - Zendesk is used for live chat and ticket handling. This shows up in the javascript as `zopim`.
-
-- PerfectAudience is used to help optimize our Facebook advertising through anonymized behavior metrics.
-
-- Profitwell is used to help notify users when a credit card (stored securely in Braintree, our payments provider) needs to be renewed or updated.
 
 ## Sensitive Information in the browser
 
