@@ -61,15 +61,18 @@ Our whole infrastructure is based on Amazon EC2 or services built on top of it. 
 * Heroku
 * Openredis
 
-Additionally for collecting metrics (but without any sensitive data) we use:
+Additionally for monitoring the platform, handling payments, and potentially collecting metrics we use:
 
-+ Google Analytics
-+ Google Docs
++ Appcues
++ Braintree
++ Fullstory
 + Looker
++ NewRelic
++ Papertrail
 + Rollbar
-+ Source code access
++ Segment
 
-As outlined in our Terms of Service we only access your source code for a build or support request. We do not have any way to access your repository outside of our build environment.
+**Note**: Although we do have access to your source code, as outlined in our Terms of Service, we only access it for a build or support request. We do not have any way to access your source code repository outside of our build environment.
 
 ## Does Codeship Save My Code?
 

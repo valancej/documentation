@@ -32,9 +32,9 @@ Although we do consider ourselves as a Processor in the context of GDPR, and tak
 
 ### Your source code
 
-For every build that is run on Codeship (Codeship Basic or Codeship Pro) we will connect to the repo and use your source code along with other artifacts as part of the build process. Once the build is complete, the build machine along with its content is destroyed and replaced with a new clean build.
+For every build that is run on Codeship (Codeship Basic or Codeship Pro) we will connect to the repo and use your source code along with other artifacts as part of the build process. Once the build is complete, the build machine along with its content is destroyed and replaced with a new clean machine on the next build.
 
-We also  cache dependencies between builds, so if you include a custom package or save data in the cache folder, that will be persisted and stored on Codeship infrastructure. Since we cannot fully control what is cached, or easily access cached data, it will be up to you to ensure that no personal data, or other sensitive information, ends up being cached.
+We also cache dependencies between builds, so if you include a custom package or save data in the cache folder, that will be persisted and stored on Codeship infrastructure. Since we cannot fully control what is cached, or easily access cached data, it will be up to you to ensure that no personal data, or other sensitive information, ends up being cached.
 
 In some circumstances, as mentioned on the [Security page]({{ site.baseurl }}{% link _general/about/security.md %}), our support team is able to see the code that is checked out from your SCM, but are only in a debug scenario where you've reported an issue.
 
@@ -65,7 +65,7 @@ We will capture and store the following data that contain personal information:
 * oAuth Access
   * in case you authenticate via Github, Bitbucket, or Gitlab, we will store the oauth token that is provided to us along with information like username etc.
 
-Aside from the above, we will also store the results of your some of your actions, e.g. "John restarted build 345DG3AE" to be able to provide a record of who triggered certain events.
+Aside from the above, we will also store the results of some of your actions, e.g. "John restarted build 345DG3AE" to be able to provide a record of who triggered certain events.
 
 #### Deleting your account
 
