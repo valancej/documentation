@@ -51,7 +51,7 @@ If you need to access resources behind a custom firewall from Codeship, e.g. pul
 
 ## Is Codeship GDPR compliant
 
-Yes, we comply with GDPR as both a controller and a processor. See more on the GDPR page
+Yes, we comply with GDPR as both a controller and a processor. See more on the [GDPR page]({{ site.baseurl }}{% link _general/about/gdpr.md %})
 
 ## What Services Does Codeship Use?
 
@@ -106,6 +106,10 @@ Codeship uses a variety of third-party javascript embeds to perform a variety of
 - Segment is our main data analytics platform. We use the data (in aggregate) to see how Codeship is being used and to design improvements and new features.
 
 - Zendesk is used for live chat and ticket handling. This shows up in the javascript as `zopim`.
+
+- Profitwell is used to help notify users when a credit card (stored securely in Braintree, our payments provider) needs to be renewed or updated.
+
+If you have not allowed us to capture data on how you use Codeship (part of [GDPR]({{ site.baseurl }}{% link _general/about/gdpr.md %})) we will not embed Appcues and Segment.
 
 ## Sensitive Information in the browser
 
