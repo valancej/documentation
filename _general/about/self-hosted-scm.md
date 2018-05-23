@@ -4,7 +4,7 @@ shortTitle: Self-hosted SCM
 menus:
   general/about:
     title: Self-hosted SCM
-    weight: 8
+    weight: 9
 tags:
   - scm
   - vcs

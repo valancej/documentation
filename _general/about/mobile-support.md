@@ -4,7 +4,7 @@ shortTitle: Mobile CI/CD Support
 menus:
   general/about:
     title: CI & CD for mobile
-    weight: 6
+    weight: 7
 tags:
   - mobile
   - osx
