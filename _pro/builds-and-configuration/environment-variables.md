@@ -72,7 +72,7 @@ ENV URL=www.codeship.com
 
 The most common way to use environment variables on Codeship Pro is by using our `encrypted_env_file` option. This lets you keep all environment variables securely encrypted, via a project-specific AES key, and therefore never explicitly visible in your repo.
 
-By doing this, you never have to worry about using environment variables for passing your secrets to your CI/CD pipeline and to your builds.
+By doing this, you never have to worry about using environment variables for passing your secrets to your CI/CD pipeline and to your builds. Codeship Pro uses [AES-256 bit encryption](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard).
 
 ### Downloading Your AES Key
 
