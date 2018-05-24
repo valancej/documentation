@@ -32,11 +32,11 @@ Although we do consider ourselves as a Processor in the context of GDPR, and tak
 
 ### Your source code
 
-For every build that is run on Codeship (whether using Codeship Basic or Codeship Pro) we will get your source code along with other artifacts in the connected repo and place a copy on the build machine. The code will only be available during the build, after which the entire build machine is destroyed and replaced with a new clean one.
+For every build that is run on Codeship (Codeship Basic or Codeship Pro) we will connect to the repo and use your source code along with other artifacts as part of the build process. Once the build is complete, the build machine along with its content is destroyed and replaced with a new clean machine on the next build.
 
-We do cache dependencies between builds, so if you include a custom package or save data in the cache folder, that will be persisted and stored on the Codeship infrastructure. Since we cannot fully control what is cached, or easily access cached data, it will be up to you to ensure that no personal data, or other sensitive information, ends up being cached.
+We also cache dependencies between builds, so if you include a custom package or save data in the cache folder, that will be persisted and stored on Codeship infrastructure. Since we cannot fully control what is cached, or easily access cached data, it will be up to you to ensure that no personal data, or other sensitive information, ends up being cached.
 
-In some circumstances, as mentioned on the [Security page]({{ site.baseurl }}{% link _general/about/security.md %}), our support team can see the code that is checked out from your SCM, but are only allowed to access it for debug purposes and only with explicit consent from you.
+In some circumstances, as mentioned on the [Security page]({{ site.baseurl }}{% link _general/about/security.md %}), our support team is able to see the code that is checked out from your SCM, but are only in a debug scenario where you've reported an issue.
 
 ### Your customers' data
 
@@ -46,7 +46,7 @@ The best approach to avoid any issues around Customer data, is to always use fak
 
 ### Purging Data
 
-Should you find that you have personal information in e.g. log output or cached data, please [reach out](mailto:support@codeship.com) so we can help you purge the data from our systems.
+Should you find that you have personal information in e.g. log output or cached data, please reach out via [support@codeship.com](mailto:support@codeship.com) so we can help you purge the data from our systems.
 
 ## Codeship as a Controller
 
@@ -65,7 +65,7 @@ We will capture and store the following data that contain personal information:
 * oAuth Access
   * in case you authenticate via Github, Bitbucket, or Gitlab, we will store the oauth token that is provided to us along with information like username etc.
 
-Aside from the above, we will also store the results of your some of your actions, e.g. "John restarted build 345DG3AE" to be able to provide a record of who triggered certain events.
+Aside from the above, we will also store the results of some of your actions, e.g. "John restarted build 345DG3AE" to be able to provide a record of who triggered certain events.
 
 #### Deleting your account
 
@@ -99,7 +99,7 @@ Any Codeship user can request any of the following:
 
 * **Right to Erasure**: have all personal information removed from Codeship and any 3rd party system or service where it may exist
   * Note: this applies only to data collected as part of the optional data capture, as we're legally obligated to keep records of who has used the system etc.
-* **Right of Access**: receive a copy of the personal data captured by Codeship as well as a list of other data profiles that may exist (e.g. form having opted in to the optional data capturing)
+* **Right of Access**: receive a copy of the personal data captured by Codeship as well as a list of other data profiles that may exist (e.g. from having opted in to the optional data capturing)
 * **Right of Rectification**: correct personal data that is incorrectly stored by Codeship or other services
 * **Right to Restrict Processing**: disallow Codeship from using any optionally captured data for profiling or other analysis (data will still be captured)
 * **Right to Portability**: receive a JSON version of the Right to Access document
@@ -107,6 +107,6 @@ Any Codeship user can request any of the following:
 * **Right to Object**: if you're not satisfied with how we capture data, respond to your requests, or otherwise comply with GDPR you can object to any outcome
 * **Right not to be subject to automated decision-making including profiling**: to avoid being included in profiling etc., do not opt in to the optional data capturing
 
-In all cases, if you want to make a request, have questions, or objections please [reach out](mailto:support@codeship.com)
+In all cases, if you want to make a request, have questions, or objections please reach out via [support@codeship.com](mailto:support@codeship.com)
 
 We don't limit this to just EU citizens, as we think everyone should have the same rights regardless of where they are.
