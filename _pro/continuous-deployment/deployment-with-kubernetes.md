@@ -38,12 +38,8 @@ Since many Kubernetes users are using a managed platform, such as Google, AWS or
 Inside your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}), you will need to define a new service with the `kubectl` tool installed. For example:
 
 ```yaml
-app:
+kubernetes-deployment:
   build: ./
-  links:
-    - postgres
-  environment:
-    user: admin
   cached: true
 ```
 
@@ -55,11 +51,11 @@ FROM alpine:3.6
 # Install kubectl
 # Note: Latest version may be found on:
 # https://aur.archlinux.org/packages/kubectl-bin/
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.6.4/bin/linux/amd64/kubectl /usr/local/bin/kubectl
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.10.2/bin/linux/amd64/kubectl /usr/local/bin/kubectl
+RUN chmod u+x /usr/local/bin/kubectl
 
-USER kubectl
-
-ENTRYPOINT ["/usr/local/bin/kubectl"]
+COPY kubernetes.sh kubernetes.sh
+RUN chmod u+x kubernetes.sh
 ```
 
 ### Steps
@@ -68,13 +64,15 @@ Once you have your service defined, you will use your [codeship-steps.yml file](
 
 ```yaml
 - name: deploy
-  service: app
-  command: kubernetes.sh
+  service: kubernetes-deployment
+  command: ./kubernetes.sh
 ```
 
 Inside this script file can be any `kubectl` commands you would like, for instance invoking a new Kubernetes deployment from a configuration file:
 
 ```bash
+#!/bin/sh
+
 kubectl apply -f ./deployment.yaml
 ```
 
