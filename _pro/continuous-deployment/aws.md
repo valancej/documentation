@@ -22,10 +22,8 @@ redirect_from:
 
 {% csnote info %}
 This article is about deploying to AWS using Codeship Pro.
-
 If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
-
-You can find a [sample repo for deploying to AWS with Codeship Pro](https://github.com/codeship-library/aws-utilities) on Github.
+You can find a [sample repo for deploying to AWS with Codeship Pro](https://github.com/codeship-library/aws-utilities) on GitHub.
 {% endcsnote %}
 
 * include a table of contents
