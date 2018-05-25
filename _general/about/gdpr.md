@@ -24,25 +24,25 @@ GDPR (General Data Protection Regulation) is an EU regulation that provides cons
 
 When it comes to processing, storing, etc. there are two roles that a company can have under GDPR: controller and processor (also covers sub-processors). The controller decides what personal data is captured, while the processor handles personal data on behalf of a controller. Every entity that's involved in capturing or processing the personal data needs to be compliant.
 
-As Codeship is both a controller and a processor, we will address each case separately.
+In the context of GDPR, Codeship is only a controller and not a processor. The next two sections will provide more detail on Codeship in the context of each role.
 
-## Codeship as a Processor
+## Codeship is Not a Processor
 
-Although we do consider ourselves as a Processor in the context of GDPR, and take on the responsibilities that covers, we recommend you never use personal information about your customers as part of your CI/CD workflow.
+To be considered a processor under GDPR, we would have to store or process personal information from your users or customers, on your behalf. Since we only work with your source code, which shouldn’t contain any personal information, we do not fall into the category of processors. To help clarify this, we’ll provide more detail on how source code is handled and what to do if you use personal data in your testing.
 
-### Your source code
+### Your Source Code
 
 For every build that is run on Codeship (Codeship Basic or Codeship Pro) we will connect to the repo and use your source code along with other artifacts as part of the build process. Once the build is complete, the build machine along with its content is destroyed and replaced with a new clean machine on the next build.
 
-We also cache dependencies between builds, so if you include a custom package or save data in the cache folder, that will be persisted and stored on Codeship infrastructure. Since we cannot fully control what is cached, or easily access cached data, it will be up to you to ensure that no personal data, or other sensitive information, ends up being cached.
+We cache dependencies between builds, so if you include a custom package or save data in the cache folder, that will be persisted and stored on Codeship infrastructure. Since we cannot fully control what is cached, or easily access cached data, it will be up to you to ensure that no personal data, or other sensitive information, ends up being cached.
 
-In some circumstances, as mentioned on the [Security page]({{ site.baseurl }}{% link _general/about/security.md %}), our support team is able to see the code that is checked out from your SCM, but are only in a debug scenario where you've reported an issue.
+In some circumstances, as mentioned on the [Security page]({{ site.baseurl }}{% link _general/about/security.md %}), our support team is able to see the code that is checked out from your SCM, but only in a debug scenario where you've reported an issue.
 
-### Your customers' data
+### Your Customers' Data
 
-Although Codeship processes data on your behalf, we don't expect you to include any personal information in the data that we store for you. If you use personal information for testing purposes (e.g. name, usernames, email addresses of actual people) you should ensure that this data is not persisted. As mentioned above, data written to the caching folder will be persisted, but you should also ensure logging output is free from personal information as these are also persisted.
+Although Codeship runs databases, servers, and scripts on your behalf, we don't expect you to include any personal information in the data that is used or stored for you. If you use personal information for testing purposes (e.g. name, usernames, email addresses of actual people) you should ensure that this data is not persisted. As mentioned above, data written to the caching folder will be persisted, but you should also ensure logging output is free from personal information as these are also persisted.
 
-The best approach to avoid any issues around Customer data, is to always use fake names, email addresses, etc. If you use a data-dump from a production system as test data input, make sure to fully anonymize it so that nothing can be traced back to a specific individual.
+The best approach to avoid any issues around personal information, is to always use fake names, email addresses, etc. If you use a data-dump from a production system as test data input, make sure to fully anonymize it so that nothing can be traced back to a specific individual.
 
 ### Purging Data
 
@@ -52,7 +52,7 @@ Should you find that you have personal information in e.g. log output or cached 
 
 As a controller in the context of GDPR, we are very cognizant of what data we store about our users and how we can best protect your privacy.
 
-### Personal data we need to store
+### Personal Data We Need to Store
 
 For us to be able to deliver a service, as well as live up to other regulator requirements such as SOC2, there are certain personal information that we will need to store and will not be able to later remove.
 
@@ -67,11 +67,11 @@ We will capture and store the following data that contain personal information:
 
 Aside from the above, we will also store the results of some of your actions, e.g. "John restarted build 345DG3AE" to be able to provide a record of who triggered certain events.
 
-#### Deleting your account
+#### Deleting Your User
 
-In case you no longer want to use Codeship, you can delete your account via the Personal Settings page. This will not actually remove your information (we're obligated to keep it to be able to prove that the account existed) but we will delete any oauth token that we have on file, and make sure it will no longer be possible to authenticate as that user.
+In case you no longer want to use Codeship, you can delete your user via the Personal Settings page. This will not actually remove your information (we're obligated to keep it to be able to prove that the account existed) but we will delete any oauth token that we have on file, and make sure it will no longer be possible to authenticate as that user.
 
-### Other data that we use
+### Other Data That We Use
 
 As part of running the Codeship infrastructure, we use a few monitoring and error capturing tools (rollbar, papertrail, newrelic, etc.). Errors may occasionally contain personal information, such as a username, name, or email, but will never contain anything more sensitive than that. We also have a 30 day data retention policy in place for the tools, so anything older than that will be deleted.
 
@@ -93,7 +93,7 @@ When allowing us to capture how you use Codeship, we will enable the following s
 
 If you do opt in, but change your mind, you can easily opt out again via your Personal Settings page. Likewise, you can easily opt in on the same page, and help us improve Codeship.
 
-### Exercising your rights
+### Exercising Your Rights
 
 Any Codeship user can request any of the following:
 
