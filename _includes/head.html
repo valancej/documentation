@@ -14,6 +14,7 @@
 <meta class="swiftype" name="category" data-type="enum" content="{{ page.collection }}" />
 <meta class="swiftype" name="published_at" data-type="date" content="{{ site.time | date_to_xmlschema }}" />
 {% if page.tags %}
+  <meta name="googlebot" content="noindex">
   {% for tag in page.tags %}
   <meta class="swiftype" name="tags" data-type="string" content="{{ tag | downcase }}" />
   {% endfor %}
