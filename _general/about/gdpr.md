@@ -87,7 +87,7 @@ In the future, we would also like to be more proactive in helping you improve yo
 
 When allowing us to capture how you use Codeship, we will enable the following services:
 
-* [Fullstory](http://fullstory.com) (for optimizing our design and tracking UI issues)
+* [Fullstory](https://fullstory.com) (for optimizing our design and tracking UI issues)
 * [Appcues](https://www.appcues.com) (for communicating workflows and in-app changes)
 * [Segment](https://segment.com) (a data hub that sends data to our data warehouse)
 
