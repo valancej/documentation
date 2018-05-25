@@ -18,7 +18,7 @@ categories:
 * include a table of contents
 {:toc}
 
-## What is GDPR
+## What Is GDPR?
 
 GDPR (General Data Protection Regulation) is an EU regulation that provides consumers more control over their personal data and how it's used by companies. Part of GDPR focuses on the rights of the consumer and dictates specific rights, e.g right to be informed, right of access, right to erasure, etc. These rights concerns the consumer/user of a product or service, regardless of where that user's data is captured, processed, or stored.
 
@@ -26,7 +26,7 @@ When it comes to processing, storing, etc. there are two roles that a company ca
 
 In the context of GDPR, Codeship is only a controller and not a processor. The next two sections will provide more detail on Codeship in the context of each role.
 
-## Codeship is Not a Processor
+## Codeship Is Not A Processor
 
 To be considered a processor under GDPR, we would have to store or process personal information from your users or customers, on your behalf. Since we only work with your source code, which shouldn’t contain any personal information, we do not fall into the category of processors. To help clarify this, we’ll provide more detail on how source code is handled and what to do if you use personal data in your testing.
 
@@ -48,7 +48,7 @@ The best approach to avoid any issues around personal information, is to always 
 
 Should you find that you have personal information in e.g. log output or cached data, please reach out via [support@codeship.com](mailto:support@codeship.com) so we can help you purge the data from our systems.
 
-## Codeship as a Controller
+## Codeship As A Controller
 
 As a controller in the context of GDPR, we are very cognizant of what data we store about our users and how we can best protect your privacy.
 
@@ -77,7 +77,7 @@ As part of running the Codeship infrastructure, we use a few monitoring and erro
 
 Another service that we use, which captures personal information on some users, is Profitwell. This is a service that monitors payments and credit cards, and will proactively reach out to users whose credit card is about to expire. It also provides the ability to update payment information without being a Codeship user, which is very convenient for Finance who pays the bills but have no need for an actual account.
 
-### Optional Data capturing
+### Optional Data Capturing
 
 When it comes to data that is not strictly necessary for us to provide you with a CI/CD service, we believe you should be in full control.
 
