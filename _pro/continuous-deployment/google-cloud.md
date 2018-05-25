@@ -53,7 +53,7 @@ First, you will need to provide these credentials as [encrypted environment vari
 
 Now you will need to create a new file to store your account credentials in, in the form of environment variables. You will then [encrypt this file]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and save it in your repository to be used during your builds.
 
-Your new environment variables file will container the following, and be sure not to provide the values with quotes due to strict matching:
+Your new environment variables file will contain the following, and be sure not to provide the values with quotes due to strict matching:
 
 ```
 GOOGLE_AUTH_JSON=...
