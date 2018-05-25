@@ -23,7 +23,6 @@ redirect_from:
 
 {% csnote info %}
 This task requires the following:
-
 - Local machine install of our [CLI tool]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %})
 {% endcsnote %}
 
