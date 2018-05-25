@@ -53,7 +53,7 @@ First, you will need to provide these credentials as [encrypted environment vari
 
 Now you will need to create a new file to store your account credentials in, in the form of environment variables. You will then [encrypt this file]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) and save it in your repository to be used during your builds.
 
-Your new environment variables file will container the following:
+Your new environment variables file will contain the following, and be sure not to provide the values with quotes due to strict matching:
 
 ```
 GOOGLE_AUTH_JSON=...
@@ -61,7 +61,7 @@ GOOGLE_AUTH_EMAIL=...
 GOOGLE_PROJECT_ID=...
 ```
 
-- `GOOGLE_AUTH_JSON` should be populated with the account credential string you received in the JSON file you downloaded earlier.  **Note** that you will need to remove all newlines from the file. On Linux and macOS you can use `tr '\n' ' ' < your_file_name` to get the line and copy it back into the file.
+- `GOOGLE_AUTH_JSON` should be populated with the account credential string you received in the JSON file you downloaded earlier.  **Note** that you may need to remove all newlines from the file. On Linux and macOS you can use `tr '\n' ' ' < your_file_name` to get the line and copy it back into the file -- but be sure the `\n` characters are not already in place before running `tr`.
 
 - `GOOGLE_AUTH_EMAIL` should be populated with the account email address that you can find on the *credentials* page in the *Service accounts* section. **Note** that it has to be from the *Service account* we just created.
 
