@@ -61,6 +61,7 @@ addon
 AES-256
 amazon.com
 analytics
+anonymize
 anonymized
 ansible
 anynines
@@ -180,6 +181,7 @@ fabric.io
 filename
 filesystem
 flowdock
+fullstory
 gcloud
 geckodriver
 gemfile
@@ -295,6 +297,7 @@ oraclejdk9
 paas
 package.json
 pagerduty
+papertrail
 parallelci
 parallelization
 paratest
