@@ -10,7 +10,6 @@ zendesk:
   chat: false
 
 # SEO Tag
-title: Codeship Documentation
 twitter:
   username: codeship
 facebook:
