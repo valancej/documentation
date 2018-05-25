@@ -120,7 +120,7 @@ COPY . ./
 
 ## Notes And Known Issues
 
-- When setting using environment variables with PHP, the syntax can be either `$_ENV["VAR_NAME"]` or `$varname`, individual frameworks mat have their own formatting. For instance, Symfony uses `%env(VAR_NAME)%` for environment variables in configuration files, such as database configuration.
+- When setting environment variables with PHP, the syntax can be either `$_ENV["VAR_NAME"]` or `$varname`. Individual frameworks may have their own formatting. For instance, [Symfony](https://symfony.com/doc/current/index.html) uses `%env(VAR_NAME)%` for environment variables in configuration files, such as database configuration.
 
 - Because of version and test dependency issues, it is advised to try using [the Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) to debug issues locally via `jet steps`.
 
