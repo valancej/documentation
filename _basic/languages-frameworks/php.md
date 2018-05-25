@@ -163,7 +163,9 @@ Note that we do not officially support or integrate with this module and that it
 
 ## Notes And Known Issues
 
-Due to PHP version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
+- When setting using environment variables with PHP, the syntax can be either `$_ENV["VAR_NAME"]` or `$varname`, individual frameworks mat have their own formatting. For instance, Symfony uses `%env(VAR_NAME)%` for environment variables in configuration files, such as database configuration.
+
+- Due to PHP version issues, you may find it helpful to tests your commands with different versions via an [SSH debug session]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}) if tests are running differently on Codeship compared to your local machine.
 
 ### Running your PHP Server
 
