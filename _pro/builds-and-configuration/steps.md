@@ -289,6 +289,21 @@ For each step, the running container is provided with a set of environment varia
 
 Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.
 
+## On-fail Steps
+
+You can use the `on_fail` directive to specify one or more commands to run if a step fails. For example:
+
+```yaml
+- name: mystep
+  tag: master
+  service: app
+  command: true
+  on_fail:
+    - command: notify-fail.sh
+```      
+
+It is important to note that steps that run on failure inherit the service of the step that failed.
+
 ## Step Timeouts
 
 On **Codeship Pro**, a build can run for up to 5 hours, although builds will time out if there is no log activity for 15 minutes.
