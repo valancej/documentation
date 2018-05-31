@@ -51,7 +51,7 @@ If you need to access resources behind a custom firewall from Codeship, e.g. pul
 
 ## Is Codeship GDPR compliant
 
-Yes, we comply with GDPR as both a controller and a processor. See more on the [GDPR page]({{ site.baseurl }}{% link _general/about/gdpr.md %})
+Yes, we comply with GDPR as a controller. See more on the [GDPR page]({{ site.baseurl }}{% link _general/about/gdpr.md %})
 
 ## What Services Does Codeship Use?
 
