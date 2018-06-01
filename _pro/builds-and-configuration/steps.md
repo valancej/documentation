@@ -197,10 +197,13 @@ Run steps specify a command to run on a service. You must specify one or two dir
 
 ## Push Steps
 
-<br />
-<div class="info-block">
+{% csnote info %}
 We implemented tagging via templates. See below for the available variables. Did we miss any important ones? Let us know at [support@codeship.com](mailto:support@codeship.com).
-</div>
+{% endcsnote %}
+
+{% csnote warning %}
+Push steps by default will be ignored when run on local machine via `jet steps`. To override, run with flag: `jet steps --push`
+{% endcsnote %}
 
 Push steps allow a generated container to be pushed to a remote docker registry. When running after a build, this allows a deployment based upon the successful build to occur. You must specify a number of directives:
 
