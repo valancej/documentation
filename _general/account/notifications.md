@@ -71,7 +71,7 @@ All rules apply to either "All Branches", a names branch, or a branch match. If 
 Additionally, all rules can select between `started`, `failed`, `succeeded`, and `recovered` as events that trigger a notification. You must select at least one event in order to save the rule.
 
 * `started` -> sends a notification when a new build is triggered
-* `failed` -> sends a notification if a build fails for some reason
+* `failed` -> sends a notification if a build fails or is stopped for some reason
 * `succeeded` -> sends a notification if the build finishes successfully
 * `recovered` -> sends a notification if the previous build failed, but the current build succeeded
 * `requires approval` -> sends a notification if a build is paused pending a [manual approval]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %})
