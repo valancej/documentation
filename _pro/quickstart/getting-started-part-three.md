@@ -94,7 +94,7 @@ First, if you didn't do it on the last step, you'll need to download your projec
 
 ![Downloading AES key]({{ site.baseurl }}/images/gettingstarted/aes_key.png)
 
-{% csnote warn %}
+{% csnote warning %}
 Be sure to add your project's AES key to your **.gitignore** file to prevent it from being committed.
 {% endcsnote %}
 
