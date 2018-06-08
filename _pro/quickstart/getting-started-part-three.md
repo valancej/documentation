@@ -95,7 +95,7 @@ First, if you didn't do it on the last step, you'll need to download your projec
 ![Downloading AES key]({{ site.baseurl }}/images/gettingstarted/aes_key.png)
 
 {% csnote warn %}
-Be sure to your AES key to your **.gitignore** to prevent it from being committed.
+Be sure to add your project's AES key to your **.gitignore** file to prevent it from being committed.
 {% endcsnote %}
 
 Now that you've downloaded your AES key, we'll created a new file named `dockercfg` where we'll drop in our Docker Hub credentials:
