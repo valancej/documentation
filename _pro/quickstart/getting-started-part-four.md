@@ -61,7 +61,7 @@ demo:
     - ./tmp:/code
 ```
 
-The `volumes` directive takes a parameter that maps a host directory (`./tmp`) to a container directory (`/app`). This means that inside of our container, anything written or read from `/app` will actually be taking place on the host in the `./tmp` directory.
+The `volumes` directive takes a parameter that maps a host directory (`./tmp`) to a container directory (`/code`). This means that inside of our container, anything written or read from `/code` will actually be taking place on the host in the `./tmp` directory.
 
 ## Making It Work
 

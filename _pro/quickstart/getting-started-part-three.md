@@ -94,6 +94,10 @@ First, if you didn't do it on the last step, you'll need to download your projec
 
 ![Downloading AES key]({{ site.baseurl }}/images/gettingstarted/aes_key.png)
 
+{% csnote warning %}
+Be sure to add your project's AES key to your **.gitignore** file to prevent it from being committed.
+{% endcsnote %}
+
 Now that you've downloaded your AES key, we'll created a new file named `dockercfg` where we'll drop in our Docker Hub credentials:
 
 ```json
@@ -126,7 +130,7 @@ This will print the `auths` value that we need to add to our `dockercfg` file. O
 jet encrypt dockercfg dockercfg.encrypted
 ```
 
-You should see your new `dockercfg.encrypted` file populate. Now, you'll want to remove your unencrypted version - or, at the very least, add it to your **.gitignore** file.
+You should see your new `dockercfg.encrypted` file populate. Now, you'll want to remove your unencrypted version - or, at the very least, add it to your **.gitignore** file like your AES key.
 
 ## Push!
 
