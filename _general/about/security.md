@@ -100,11 +100,13 @@ Codeship uses a variety of third-party javascript embeds to perform a variety of
 
 **Note** that 3rd party tracking is enabled on all application pages.
 
+- Appcues is used to communicate with users based on behavioral metrics.
+
+- Fullstory is used to capture how users interact with the Codeship console, and helps highlight issues in the overall flow.
+
 - NewRelic is used for capturing errors and other data, to help us with debugging issues.
 
 - Rollbar is used to collect application exception information for development purposes.
-
-- Appcues is used to communicate with users based on behavioral metrics.
 
 - Segment is our main data analytics platform. We use the data (in aggregate) to see how Codeship is being used and to design improvements and new features.
 
