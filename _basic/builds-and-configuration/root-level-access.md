@@ -7,9 +7,11 @@ menus:
     weight: 7
 tags:
   - sudo
-  - packages
   - root
   - admin
+  - apt-get
+  - packages
+  - ubuntu
 categories:
   - Builds and Configuration  
   - Configuration
@@ -24,4 +26,4 @@ redirect_from:
 
 ## Sudo and Root On Codeship Basic
 
-Codeship does not allow root level access (i.e. commands run via `sudo`) for security reasons. If you are looking to install a dependency that's not available via a language specific package manager (e.g. `gem`, `pip`, `npm` or a similar tool), please contact [support@codeship.com](mailto:support@codeship.com) or send us a message using our in-app messenger.
+Codeship Basic currently does not allow root level access (i.e. commands run via `sudo`) for security reasons. We now have a beta feature that will allow `sudo` commands. If you need to install a dependency that is not available via a language specific package manager (e.g. `gem`, `pip`, `npm` or a similar tool), please contact [support@codeship.com](mailto:support@codeship.com) and we can add you to the beta feature.
