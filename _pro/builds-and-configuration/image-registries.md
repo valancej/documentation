@@ -228,7 +228,7 @@ You will also need to configure your `codeship-steps.yml` file to provide your a
 
 Pushing to a custom or self-hosted registry is similar to using Docker Hub or Quay.io.
 
-You will want to specify your registry URL and provide your registry credentials in an encrypted `dockercfg` file on a [push step]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}#push-steps) in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+You will want to specify your registry URL and provide your registry credentials in an encrypted `dockercfg` file on a [push step]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#push-steps) in your [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
 
 ```yaml
 - service: app
