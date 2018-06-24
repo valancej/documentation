@@ -96,7 +96,7 @@ curl -u $ASSERTIBLE_API_TOKEN: -XPOST "https://assertible.com/deployments" -d'{\
 }'
 ```
 
-Call this script on all deployment-related branches by specifying the [tag](https://documentation.codeship.com/pro/builds-and-configuration/steps//#limiting-steps-to-specific-branches-or-tags). Be sure to add this step **after** your deployment, so that the tests are run against the new version of your application. For example:
+Call this script on all deployment-related branches by specifying the [tag]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#limiting-steps-to-specific-branches-or-tags). Be sure to add this step **after** your deployment, so that the tests are run against the new version of your application. For example:
 
 ```yaml
 - name: deploy
