@@ -29,7 +29,7 @@ The [Appranix documentation](https://app.appranix.net/docs/) provides a great gu
 
 ### Appranix.sh
 
-Integrating Appranix with Codeship requires that you include the  [appranix.sh](https://github.com/RushinthJohn/documentation/blob/appranix/_data/appranix.sh) script file in your project repository.
+Integrating Appranix with Codeship requires that you include the [appranix.sh](https://github.com/RushinthJohn/documentation/blob/master/_data/appranix.sh) script file in your project repository.
 
 Inside this script, you will have the following:
 
@@ -97,7 +97,7 @@ The container must have [Ruby version 2.3.3]({{ site.baseurl }}{% link _pro/lang
 
 ### Appranix.sh
 
-Integrating Appranix with Codeship requires that you include the  [appranix.sh](https://github.com/RushinthJohn/documentation/blob/appranix/_data/appranix.sh) script file in your project repository.
+Integrating Appranix with Codeship requires that you include the [appranix.sh](https://github.com/RushinthJohn/documentation/blob/master/_data/appranix.sh) script file in your project repository.
 
 ```shell
 echo "Installing Appranix CLI"
