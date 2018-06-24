@@ -80,7 +80,7 @@ Right after account creation, you can either create your first project right awa
 
 If you need to invite your team members to help you set your first projects up, this can be done on the Teams page.
 
-We recommend inviting people to the _Managers_ team if they will need to create or delete projects or manage additional team members. [Read more]({{ site.baseurl }}/general/account/organizations/#managing-teams) about the team management and permissions.
+We recommend inviting people to the _Managers_ team if they will need to create or delete projects or manage additional team members. [Read more]({{ site.baseurl }}/general/account/organizations/#managing-teams-and-projects) about the team management and permissions.
 
 #### Create Your First Project
 
