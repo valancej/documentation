@@ -34,7 +34,7 @@ By using OpsGenie your engineering team can respond to important alerts quickly 
 
 The simplest way to integrate OpsGenie with Codeship is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [Codeship integration](https://app.opsgenie.com/integration#/add/Codeship).
 
-Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/account/notifications.md %}#webhooks-for-custom-notifications) using the webhook destination URL provided by the integrations page in OpsGenie.
+Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/account/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
 
 All successful Codeship builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
 
@@ -98,7 +98,7 @@ Although it is worth noting that [their API](https://www.opsgenie.com/docs) prov
 
 The simplest way to integrate OpsGenie with Codeship is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [Codeship integration](https://app.opsgenie.com/integration#/add/Codeship).
 
-Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/account/notifications.md %}#webhooks-for-custom-notifications) using the webhook destination URL provided by the integrations page in OpsGenie.
+Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/account/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
 
 All successful Codeship builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
 
@@ -114,7 +114,7 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 #### Sending Alerts
 
-Next, you will need to add [API calls to OpsGenie](https://www.opsgenie.com/docs/rest-api/alert-api) via a custom-script deployment added to your [[deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}), most likely to alert of a successful deployment or combined with your deployment commands in a script to alert of a failed deployment.
+Next, you will need to add [API calls to OpsGenie](https://www.opsgenie.com/docs/rest-api/alert-api) via a custom-script deployment added to your [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}), most likely to alert of a successful deployment or combined with your deployment commands in a script to alert of a failed deployment.
 
 The OpsGenie API call will likely look similar to:
 
