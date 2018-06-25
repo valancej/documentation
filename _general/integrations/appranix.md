@@ -19,7 +19,7 @@ categories:
 
 ## About Appranix
 
-[Appranix](http://www.appranix.com/) simplifies and automates application operations on cloud platforms.
+[Appranix](https://www.appranix.com/) simplifies and automates application operations on cloud platforms.
 
 By using Appranix you can reduce the amount of time it takes to run and monitor cloud operations.
 
