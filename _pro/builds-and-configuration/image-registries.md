@@ -6,6 +6,10 @@ menus:
     title: Image Registries
     weight: 5
 tags:
+  - aws
+  - azure
+  - google
+  - ibm
   - docker
   - tutorial
   - push
