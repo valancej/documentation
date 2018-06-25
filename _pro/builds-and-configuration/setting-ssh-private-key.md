@@ -69,14 +69,7 @@ Check out the [README page](https://github.com/codeship-library/docker-utilities
 
 FROM ubuntu:16.04
 
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends\
-    ca-certificates  \
-    ssh
-
-RUN mkdir -p ${HOME}/.ssh \
-  # key scan ensures that you will not receive interactive prompt to accept host
-  && ssh-keyscan -H github.com >> ${HOME}/.ssh/known_hosts
+RUN apt-get update && apt-get install -y ssh
 ```
 
 ```
@@ -89,15 +82,24 @@ app:
   encrypted_env_file: codeship.env.encrypted
   volumes:
   # mapping to `.ssh` directory ensures that `id_rsa` file persists to subsequent steps
-    - ./.ssh:${HOME}/.ssh
+  # replace container pathing if $HOME is not `/root`
+    - ./.ssh:/root/.ssh
 ```
 
 ```
 # codeship-steps.yml
 
-- name: store key to id_rsa file and chmod file to r/w for user
+- name: reinstate SSH Private Key File
   service: app
-  command: /bin/bash -c "echo -e $PRIVATE_SSH_KEY >> ${HOME}/.ssh/id_rsa && chmod 600 ${HOME}/.ssh/id_rsa"
+  command: /bin/bash -c "echo -e $PRIVATE_SSH_KEY >> /root/.ssh/id_rsa"
+
+- name: chmod id_rsa
+  service: app
+  command: chmod 600 /root/.ssh/id_rsa
+
+- name: add server to list of known hosts
+  service: app
+  command: /bin/bash -c "ssh-keyscan -H github.com >> /root/.ssh/known_hosts"
 
 # https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
 - name: confirm ssh connection to server, authenticating with generated public ssh key
