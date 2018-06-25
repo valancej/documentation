@@ -13,6 +13,10 @@
         - name: post-process
           service: documentation
           command: gulp post-process
+        - name: htmlproofer
+          service: documentation
+          exclude: master
+          command: bundle exec rake htmlproofer
     - type: serial
       name: linters
       service: documentation
