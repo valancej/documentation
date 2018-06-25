@@ -38,7 +38,7 @@ You can view [their documentation](https://help.victorops.com/knowledge-base/api
 
 ### Sending Incidents
 
-Next, you will need to add [API calls to VictorOps](https://www.VictorOps.com/docs/rest-api/alert-api), in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+Next, you will need to add [API calls to VictorOps](https://portal.victorops.com/public/api-docs.html), in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 
 There are a couple common ways you may do this:
 
@@ -89,7 +89,7 @@ You can also view [their documentation](https://help.victorops.com/knowledge-bas
 
 ### Sending Incidents
 
-Next, you will need to add [API calls to VictorOps](https://portal.victorops.com/public/api-docs.html) via a custom-script deployment added to your [[deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}), most likely to alert of a successful deployment or combined with your deployment commands in a script to alert of a failed deployment.
+Next, you will need to add [API calls to VictorOps](https://portal.victorops.com/public/api-docs.html) via a custom-script deployment added to your [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}), most likely to alert of a successful deployment or combined with your deployment commands in a script to alert of a failed deployment.
 
 The VictorOps API call will likely look similar to:
 
