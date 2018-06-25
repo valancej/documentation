@@ -38,7 +38,7 @@ Prior to getting started, please ensure you have the following:
 
 - [An Understanding Of Codeship Pro]({% link _pro/quickstart/getting-started.md %})
 - [Codeship's Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) installed locally
-- [Docker](https://www.Docker.com/products/overview)
+- [Docker](https://www.docker.com/community-edition)
 - [An Azure Container Service account ](https://azure.microsoft.com/account/)
 - An understanding of using Azure Container Service
 
