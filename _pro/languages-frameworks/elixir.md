@@ -54,7 +54,7 @@ postgres:
   image: healthcheck/postgres:alpine
 ```
 
-**Note** that in this example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#healthchecks) version of our Redis and PostgreSQL images to avoid startup timing issues.
+**Note** that in this example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#healthcheck) version of our Redis and PostgreSQL images to avoid startup timing issues.
 
 ## Steps File
 
