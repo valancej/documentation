@@ -22,7 +22,7 @@ tags:
 
 ## About VictorOps
 
-[VictorOps](https://www.victorops.com) lets you send alerts and notifications about critical events to your on-call or development team.
+[VictorOps](https://victorops.com) lets you send alerts and notifications about critical events to your on-call or development team.
 
 By using VictorOps your engineering team can respond to important alerts quickly and run your applications without concern.
 
