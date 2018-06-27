@@ -31,7 +31,7 @@ redirect_from:
 This feature is currently in a closed beta. Please contact [support@codeship.com](mailto:support@codeship.com) to be added.
 {% endcsnote %}
 
-Although CodeShip Basic already have a long list of [packages installed]({{ site.baseurl }}{% link _basic/builds-and-configuration/packages.md %}), you can install most packages yourself if you find that something is missing. CodeShip Basic supports running commands as `sudo` giving you root-level access; with a few caveats.
+Although CodeShip Basic already has a long list of [packages installed]({{ site.baseurl }}{% link _basic/builds-and-configuration/packages.md %}), you can install most packages yourself if you find that something is missing. CodeShip Basic supports running commands as `sudo` giving you root-level access; with a few caveats.
 
 ### What Can You Do?
 
