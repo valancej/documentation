@@ -28,7 +28,7 @@ redirect_from:
 ## Sudo and Root On CodeShip Basic
 
 {% csnote info %}
-This feature is currently in a closed beta. Please contact [support@codeship.com](mailto:support@codeship.com) to be added.
+Root access via sudo is currently in a closed beta. Please contact [support@codeship.com](mailto:support@codeship.com) to be added.
 {% endcsnote %}
 
 Although CodeShip Basic already has a long list of [packages installed]({{ site.baseurl }}{% link _basic/builds-and-configuration/packages.md %}), you can install most packages yourself if you find that something is missing. CodeShip Basic supports running commands as `sudo` giving you root-level access; with a few caveats.
@@ -39,6 +39,8 @@ With the sudo access, you can run `apt-get update` and `apt-get install <package
 
 You can also start new services (custom or standard), assuming they don't try to do any of the things mentioned below.
 
+**Note**: When you are looking for packages to install, look for those that work on `Ubuntu 14.04 (Trusty)` as that is the underlying Linux we use for the build machines. A newer version of Ubuntu (and other flavors) might be available later in the year.
+
 ### What Can't You Do?
 
 Although you get sudo/root-level access, there are still things you can't do as CodeShip Basic is still a shared platform:
@@ -47,7 +49,7 @@ Although you get sudo/root-level access, there are still things you can't do as 
   * Resource limits (prlimit/ulimit/etc.)
   * Networking resources or settings (incl. adding IP addresses)
   * Loading kernel modules
-  * Anything that relies on apparmour/selinux access
+  * Anything that relies on apparmor/selinux access
 * Don't attempt to run any type of virtualization (virtual machine, docker, LXC, or other container-based tech).
 * Don't expect any UI/Desktop-related stuff to work either. Headless browser testing is fine, but don't install an x-server and run gnome.
 
