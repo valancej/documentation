@@ -67,6 +67,7 @@ ansible
 anynines
 api
 apis
+apparmor
 appcfg
 appcues
 appname
@@ -324,6 +325,7 @@ pre-populated
 pre-test
 preinstalled
 prepending
+prlimit
 profitwell
 programmatically
 psql
@@ -371,6 +373,7 @@ scms
 scp
 scss-lint
 selenium-webdriver
+selinux
 service.yml
 sexualized
 sftp
@@ -401,6 +404,7 @@ todo
 TOOL_NODE_FLAGS
 toolbelt
 twitter.com
+ulimit
 uncheck
 unencrypted
 unittest
@@ -416,6 +420,7 @@ versioning
 victorops
 virtualenv
 virtualize
+virtualization
 vms
 walk-throughs
 webhook
