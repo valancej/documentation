@@ -1,3 +1,4 @@
+require 'fileutils'
 require 'html-proofer'
 
 IMAGE_NAME = 'codeship/documentation'
@@ -86,4 +87,5 @@ task :htmlproofer do
     :url_ignore => [/xip.io/]
   }
   HTMLProofer.check_directory("/site/htmlproofer", options).run
+  FileUtils.rm_rf("/site/htmlproofer")
 end
