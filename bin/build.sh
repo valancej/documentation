@@ -32,8 +32,15 @@ fi
 
 rm -rf "${jet_source}"
 
-# Compile the site
+# Build the site
 log "Building with base URL '${baseurl}' and environment '${JEKYLL_ENV}'."
 sed -i'' -e "s|^baseurl:.*|baseurl: ${baseurl}|" _config.yml
 export JEKYLL_ENV
+bundle exec jekyll build --destination "${destination}"
+
+# Build separate site just for HTMLProofer
+baseurl=""
+destination="/site/htmlproofer"
+log "Building with base URL '${baseurl}' and environment '${JEKYLL_ENV}' for HTMLProofer."
+sed -i'' -e "s|^baseurl:.*|baseurl: ${baseurl}|" _config.yml
 bundle exec jekyll build --destination "${destination}"

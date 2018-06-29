@@ -38,8 +38,8 @@ Prior to getting started, please ensure you have the following:
 
 - [An Understanding Of Codeship Pro]({% link _pro/quickstart/getting-started.md %})
 - [Codeship's Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) installed locally
-- [Docker](https://www.Docker.com/products/overview)
-- [An IBM Cloud Account](https://www.ibm.com/cloud-computing/bluemix/)
+- [Docker](https://www.docker.com/community-edition)
+- [An IBM Cloud Account](https://www.ibm.com/cloud)
 - An understanding of using IBM Cloud Container Service and the required manifest and database files for a Container Service application
 
 ### Authentication
@@ -88,7 +88,7 @@ deployment:
 
 Using IBM Cloud Container Service usually involves pushing images to the IBM Cloud Container Registry as part of your CI/CD process.
 
-We recommend reading [our guide for pushing to the IBM Cloud container registry]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}#ibm-bluemix-registry), as the deployment commands below will feature an image push based on those instructions.
+We recommend reading [our guide for pushing to the IBM Cloud container registry]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}#ibm-cloud-registry), as the deployment commands below will feature an image push based on those instructions.
 
 ## Deploying Your App
 

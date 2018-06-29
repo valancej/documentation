@@ -1,3 +1,6 @@
+require 'fileutils'
+require 'html-proofer'
+
 IMAGE_NAME = 'codeship/documentation'
 
 desc "Build the #{IMAGE_NAME} image"
@@ -66,4 +69,23 @@ namespace :lint do
 	task :jekyll do
 		sh "docker run -it --rm -v $(pwd):/docs #{IMAGE_NAME} bundle exec jekyll doctor"
 	end
+end
+
+desc 'Run HTMLProofer'
+task :htmlproofer do
+  options = {
+    :assume_extension => true,
+    :check_html => true,
+    :check_favicon => true,
+    :allow_hash_href => true,
+    :empty_alt_ignore => true,
+    :typhoeus => {
+      :ssl_verifypeer => false,
+    },
+    :http_status_ignore => [999],
+    :file_ignore => [/google1a85968316265362.html/],
+    :url_ignore => [/xip.io/]
+  }
+  HTMLProofer.check_directory("/site/htmlproofer", options).run
+  FileUtils.rm_rf("/site/htmlproofer")
 end

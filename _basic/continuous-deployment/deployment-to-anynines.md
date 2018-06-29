@@ -18,9 +18,9 @@ redirect_from:
 
 ## What is anynines?
 
-[anynines](http://www.anynines.com) is a PaaS built on top of CloudFoundry and OpenStack.
+[anynines](https://www.anynines.com) is a PaaS built on top of CloudFoundry and OpenStack.
 
-They have a great [Getting Started](https://support.anynines.com/entries/60238466-Getting-started-with-anynines-using-the-CLI-v6) guide which we definitely encourage you to check out. Also, see their documentation available at [support.anynines.com](https://support.anynines.com/forums).
+They have a great [Getting Started](https://support.anynines.com/hc/en-us/articles/115014344828-Getting-Started-with-anynines) guide which we definitely encourage you to check out. Also, see their [documentation](https://support.anynines.com/hc/en-us) for more information.
 
 ## Deploying
 
@@ -45,4 +45,4 @@ cf6 push "${CF_APPLICATION}"
 
 This will deploy your application on each push to the specific branch you configured the deployment for.
 
-If you have more thorough requirements, like _blue / green deployments_ see a great article written by the folks at _anynines_ about deploying to Codeship, which is  [available at their blog](http://blog.anynines.com/setup-continuous-deployment-anynines-codeship-com/).
+If you have more thorough requirements, like _blue/green deployments_ see a great article written by the folks at _anynines_ about deploying to Codeship, which is  [available at their blog](https://blog.anynines.com/setup-continuous-deployment-anynines-codeship-com).

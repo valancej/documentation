@@ -158,7 +158,7 @@ Since we reference *redis* and *postgres*, we need to define them as separate se
 
 One important thing to know is that any time you build a service, such as *demo*, it will automatically spin up containers for every dependent service. So if we build *demo*, we end up with three containers: one for the primary service, one for Redis and one for Postgres.
 
-Also note that in this configuration example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#healthchecks) version of our Redis and Postgres images to avoid startup timing issues.
+Also note that in this configuration example we are using the [healthcheck]({% link _pro/builds-and-configuration/services.md %}#healthcheck) version of our Redis and Postgres images to avoid startup timing issues.
 
 ![Three containers]({{ site.baseurl }}/images/gettingstarted/3containers.png)
 

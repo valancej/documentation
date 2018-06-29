@@ -10,7 +10,7 @@ main:
     url: https://apidocs.codeship.com/v2
   - title: CLI
     identifier: cli
-    url: /pro/jet-cli/usage-overview/
+    url: /pro/jet-cli/usage-overview
 
 general:
   - &GENERAL_ABOUT
