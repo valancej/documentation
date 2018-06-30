@@ -39,8 +39,10 @@ export JEKYLL_ENV
 bundle exec jekyll build --destination "${destination}"
 
 # Build separate site just for HTMLProofer
-baseurl=""
-destination="/site/htmlproofer"
-log "Building with base URL '${baseurl}' and environment '${JEKYLL_ENV}' for HTMLProofer."
-sed -i'' -e "s|^baseurl:.*|baseurl: ${baseurl}|" _config.yml
-bundle exec jekyll build --destination "${destination}"
+if [ "${CI_BRANCH}" != "master" ]; then
+	baseurl=""
+	destination="/site/htmlproofer"
+	log "Building with base URL '${baseurl}' and environment '${JEKYLL_ENV}' for HTMLProofer."
+	sed -i'' -e "s|^baseurl:.*|baseurl: ${baseurl}|" _config.yml
+	bundle exec jekyll build --destination "${destination}"
+fi
