@@ -5,15 +5,20 @@ tags:
   - administration
   - notifications
   - alerts
-  - account
   - slack
   - hipchat
+  - stride
+  - webhook
+  - email
+  - campfire
+  - flowdock
 categories:
-  - Account  
+  - Project  
 redirect_from:
   - /administration/notifications/
   - /basic/getting-started/webhooks/
   - /integrations/webhooks/
+  - /general/account/notifications
 menus:
   general/account:
     title: Notifications
@@ -43,13 +48,13 @@ The wildcard allows you to replace any amount of characters, so you could even d
 
 We have in-build support for the following services:
 
-1. Email
-1. Slack
-1. Hipchat
-1. Flowdock
-1. Campfire
-1. Grove
-1. Webhooks
+1. [Campfire](#campfire)
+1. [Email](#email-notification)
+1. [Flowdock](#flowdock)
+1. [Hipchat](#hipchat)
+1. [Slack](#slack)
+1. [Stride](#stride)
+1. [Webhooks](#webhook)
 
 If the service you're looking for isn't on the list, you might be able to use the `webhook` option but if not, feel free to reach out to us (see bottom of the page).
 
@@ -73,7 +78,11 @@ Additionally, all rules can select between `started`, `failed`, `succeeded`, and
 * `failed` -> sends a notification if a build fails or is stopped for some reason
 * `succeeded` -> sends a notification if the build finishes successfully
 * `recovered` -> sends a notification if the previous build failed, but the current build succeeded
-* `requires approval` -> sends a notification if a build is paused pending a [manual approval]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %})
+* `requires approval` -> sends a notification if a build is paused pending a [manual approval]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}#manual-approval-steps)
+
+## Campfire
+
+For campfire, we need both an API key and your domain name (just the first part, without `.campfirenow.com`) as well as the specific room you want the notifications to end up in.
 
 ## Email Notification
 
@@ -95,25 +104,21 @@ git config --get user.email
 
 If all those settings look correct and you are still not receiving notifications, please [contact us](mailto:support@codeship.com) and we can further investigate.
 
-## Slack
+## Flowdock
 
-For Slack, the only thing you need is the webhook URL Slack provides when you configure a Codeship integration. Copy-paste the URL to the Webhook URL field.
+Flowdock expects a token as well, but the where to send the notification is handled on the flowdock side of things.
 
 ## Hipchat
 
 Hipchat mainly requires a token and the room that you want the notification to be posted to.
 
-## Flowdock
+## Slack
 
-Flowdock expects a token as well, but the where to send the notification is handled on the flowdock side of things.
+For Slack, the only thing you need is the webhook URL Slack provides when you configure a Codeship integration. Copy-paste the URL to the Webhook URL field.
 
-## Campfire
+## Stride
 
-For campfire, we need both an API key and your domain name (just the first part, without `.campfirenow.com`) as well as the specific room you want the notifications to end up in.
-
-## Grove
-
-Grove provides specific tokens for each channel, so in this case, that's all we'll need to get going.
+Stride needs an access token as well as a webhook URL. In Stride, you need to add a 'custom app' from the Apps menu for the room you want the notifications to be delivered to. You're given a token and a webhook URL as part of the app creation.
 
 ## Webhook
 

@@ -34,7 +34,7 @@ By using OpsGenie your engineering team can respond to important alerts quickly 
 
 The simplest way to integrate OpsGenie with Codeship is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [Codeship integration](https://app.opsgenie.com/integration#/add/Codeship).
 
-Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/account/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
+Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/projects/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
 
 All successful Codeship builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
 
@@ -98,7 +98,7 @@ Although it is worth noting that [their API](https://www.opsgenie.com/docs) prov
 
 The simplest way to integrate OpsGenie with Codeship is to use the webhook integration. From inside your OpsGenie account, you will first want to enable the [Codeship integration](https://app.opsgenie.com/integration#/add/Codeship).
 
-Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/account/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
+Once the Codeship integration is enabled in OpsGenie, you will want to create a [custom webhook in your project's notifications]({{ site.baseurl }}{% link _general/projects/notifications.md %}#webhook) using the webhook destination URL provided by the integrations page in OpsGenie.
 
 All successful Codeship builds will now complete with a webhook to OpsGenie to trigger your configured alerts.
 

@@ -243,7 +243,7 @@ As for the `encrypted_dockercfg_path` directive, we support both, the older `.do
 ## Manual Approval Steps
 
 {% csnote info %}
-  You can add flexible [notification rules]({{ site.baseurl }}{% link _general/account/notifications.md %}) for builds requiring manual approval.
+  You can add flexible [notification rules]({{ site.baseurl }}{% link _general/projects/notifications.md %}) for builds requiring manual approval.
 {% endcsnote %}
 
 You can use the `type: manual` directive to require that a step requires manual approval before proceeding further. For instance:
