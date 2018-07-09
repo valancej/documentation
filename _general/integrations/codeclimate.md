@@ -192,3 +192,7 @@ All of these commands will work best when executed from script files.
 Because of a bug with version 0.8.x of simplecov, tests are reported as successful, even though they actually failed. This is caused by simplecov overriding the exit code of the test framework.
 
 According the the [issue report on GitHub](https://github.com/colszowka/simplecov/issues/281) this won't be fixed in the 0.8 release. Please either use versions prior to 0.8 or higher than 0.9.
+
+### Still having trouble setting up your Test Reporter?
+
+Check out Code Climate's [documentation on troubleshooting the Test Reporter setup](https://docs.codeclimate.com/docs/test-coverage-troubleshooting-tips).
