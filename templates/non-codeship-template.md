@@ -11,4 +11,4 @@ A list of tools and topics the users should have knowledge of prior to beginning
 ### Conclusion
 
 ### Questions
-If you have any further questions, please create a post on the [Codeship Community](https://community.codeship.com) page.
+If you have any further questions, please contact our [help desk](https://helpdesk.codeship.com).
