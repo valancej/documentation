@@ -16,7 +16,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-Integrating [Cloud 66](http://www.cloud66.com/) with Codeship is as simple as copying and pasting a URL!
+Integrating [Cloud 66](https://cloud66.com/) with Codeship is as simple as copying and pasting a URL!
 
 Once you've deployed your stack with _Cloud 66_, you'll see a **Redeployment Hook** URL on your **Stack Information** page. To trigger a new deployment via Codeship, simply add a **Script** deployment to the project and add the following command:
 

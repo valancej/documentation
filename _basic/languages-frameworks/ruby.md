@@ -56,7 +56,7 @@ rvm use jruby-JRUBY_VERSION_YOU_WANT_TO_USE --install
 
 ## Dependencies
 
-You can install dependencies using [bundler](http://bundler.io) in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
+You can install dependencies using [bundler](https://bundler.io) in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
 For example:
 
@@ -71,7 +71,7 @@ Codeship automatically configures bundler to use the `$HOME/cache/bundler` direc
 
 ## Frameworks And Testing
 
-Our Ruby support includes Ruby itself, [Rails](http://rubyonrails.org), [Sinatra](http://sinatrarb.com) and most other frameworks that do not require root-access for customized system configuration.
+Our Ruby support includes Ruby itself, [Rails](https://rubyonrails.org), [Sinatra](http://sinatrarb.com) and most other frameworks that do not require root-access for customized system configuration.
 
 We also support all Ruby based test frameworks like RSpec, Cucumber and Minitest.
 
@@ -157,7 +157,7 @@ rm -f node_modules/.bin/which
 
 ### Custom Bundler Version
 
-Each preinstalled Ruby version will include a recent version of [Bundler](http://bundler.io) by default. If you have a situation where you need to install a specific Bundler version you can do so by adding the following commands to your build after setting the Ruby version:
+Each preinstalled Ruby version will include a recent version of [Bundler](https://bundler.io) by default. If you have a situation where you need to install a specific Bundler version you can do so by adding the following commands to your build after setting the Ruby version:
 
 ```
 gem uninstall -x -a bundler

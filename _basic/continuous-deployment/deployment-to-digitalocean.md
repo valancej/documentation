@@ -20,7 +20,7 @@ redirect_from:
 {% csnote info %}
 This article is about deploying to DigitalOcean with Codeship Basic.
 
-If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic)
+If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic)
 
 You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on Codeship Basic.
 {% endcsnote %}
@@ -39,7 +39,7 @@ With the exception of the Capistrano tool, all the following options would need 
 
 ### Capistrano
 
-If you have a Ruby on Rails application the most common way to deploy to DigitalOcean is with [Capistrano](http://capistranorb.com/).
+If you have a Ruby on Rails application the most common way to deploy to DigitalOcean is with [Capistrano](https://capistranorb.com/).
 Check out our article on [Capistrano Deployments in Codeship]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-capistrano.md %}) for general guidance on how to run Capistrano commands from Codeship. Please also take a look at DigitalOcean's example project for [setting up Capistrano within a Droplet](https://www.digitalocean.com/community/tutorials/deploying-a-rails-app-on-ubuntu-14-04-with-capistrano-nginx-and-puma).
 
 ```shell

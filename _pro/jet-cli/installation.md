@@ -29,7 +29,7 @@ shasum -c -a 256 sha256sums
 
 ### Installing Jet On Mac OS X
 
-The `jet` CLI is now included in our custom [Homebrew Cask](https://github.com/codeship/homebrew-taps/tree/master/Casks). If you already have [Homebrew installed](http://brew.sh/) you can install `jet` by running the following command
+The `jet` CLI is now included in our custom [Homebrew Cask](https://github.com/codeship/homebrew-taps/tree/master/Casks). If you already have [Homebrew installed](https://brew.sh/) you can install `jet` by running the following command
 
 ```shell
 brew cask install codeship/taps/jet

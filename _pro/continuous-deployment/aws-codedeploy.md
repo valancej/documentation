@@ -35,7 +35,7 @@ Please review our [AWS documentation]({% link _pro/continuous-deployment/aws.md 
 
 You will need the AWS service, as well as your application itself, defined via your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}) so that you can execute the necessary S3 commands in your [codeship-steps.yml file]({% link _pro/builds-and-configuration/steps.md %}).
 
-It is also advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
+It is also advised that you review AWS' [IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
 ## Deploying to CodeDeploy
 
@@ -50,4 +50,4 @@ Add the following into your [codeship-steps.yml file]({% link _pro/builds-and-co
 
 This command will zip your application code, upload it to S3 and start a new deployment on CodeDeploy. You can take a look at the [full script](https://github.com/codeship-library/aws-utilities/blob/master/deployment/scripts/codeship_aws_codedeploy_deploy) if you would like to review or modify it.
 
-Note that you will need to make sure that the IAM User used with Codeship has all necessary permissions to interact with CodeDeploy. Take a look at the [getting started](http://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html) documentation from AWS to get the full policy template.
+Note that you will need to make sure that the IAM User used with Codeship has all necessary permissions to interact with CodeDeploy. Take a look at the [getting started](https://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html) documentation from AWS to get the full policy template.

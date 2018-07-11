@@ -34,7 +34,7 @@ redirect_from:
 {% csnote info %}
 This article is about the `codeship-services.yml` file that powers Codeship Pro.
 
-If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
 
 Also note that the `codeship-services.yml` file depends on the `codeship-steps.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
 {% endcsnote %}

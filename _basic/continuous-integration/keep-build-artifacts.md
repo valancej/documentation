@@ -42,7 +42,7 @@ aws s3 cp your_artifact_file.zip s3://mybucket/your_artifact_file.zip
 For Codeship Pro, our [_Codeship AWS container_]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}) can be implemented to transfer artifacts to S3 storage.
 {% endcsnote %}
 
-For more advanced usage of the S3 CLI, please see the [S3 documentation](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html) on amazon.com
+For more advanced usage of the S3 CLI, please see the [S3 documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/index.html) on amazon.com
 
 **Note** that you can simply add another integrated S3 deployment after your actual deployment if you only want to keep artifacts for specific branches.
 

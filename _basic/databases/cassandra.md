@@ -20,7 +20,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-The latest version from the `2.0.x` release of [Apache Cassandra](http://cassandra.apache.org/) is installed on the build VMs, but not running by default.
+The latest version from the `2.0.x` release of [Apache Cassandra](https://cassandra.apache.org/) is installed on the build VMs, but not running by default.
 
 To use the service during your builds, start the service via the following command:
 

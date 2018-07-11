@@ -25,12 +25,12 @@ redirect_from:
 {% csnote info %}
 This article is about deploying via SFTP with Codeship Basic.
 
-If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/basic).
+If you'd like to learn more about Codeship Basic, we recommend the [getting started guide]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/basic).
 
 You should also be aware of how [deployment pipelines]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %}) work on Codeship Basic.
 {% endcsnote %}
 
-After your code passed through the pipeline successfully, the last step in your CI chain is deploying your code. You're either using one of our many integrations or deploying with your own script. If you're using your own means of deployment, we recommend tools like rsync, [Capistrano (Ruby)](http://capistranorb.com/), [Rocketeer (PHP)](http://rocketeer.autopergamene.eu/), [Deployer (PHP)](https://deployer.org/), or [Fabric (Python)](http://www.fabfile.org/).
+After your code passed through the pipeline successfully, the last step in your CI chain is deploying your code. You're either using one of our many integrations or deploying with your own script. If you're using your own means of deployment, we recommend tools like rsync, [Capistrano (Ruby)](https://capistranorb.com/), [Rocketeer (PHP)](http://rocketeer.autopergamene.eu/), [Deployer (PHP)](https://deployer.org/), or [Fabric (Python)](http://www.fabfile.org/).
 
 Generally, we advise on using any SSH-based tool over FTP since the latter is not encrypted and transmits plain-text. If security is of any concern to you, one of the first steps is to use SSH when you're deploying without a tool.
 

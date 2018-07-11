@@ -34,7 +34,7 @@ Please review our [AWS documentation]({% link _pro/continuous-deployment/aws.md 
 
 You will need the AWS service, as well as your application itself, defined via your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}) so that you can execute the necessary S3 commands in your [codeship-steps.yml file]({% link _pro/builds-and-configuration/steps.md %}).
 
-It is also advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
+It is also advised that you review AWS' [IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
 ## Deploying To S3
 

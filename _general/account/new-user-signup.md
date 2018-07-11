@@ -144,7 +144,7 @@ The UUID for a specific project is available on the **General** tab in your proj
 
 ## Configuring Your Avatar
 
-Git identifies people by your e-mail and Codeship uses your Gravatar settings for your profile picture. If you have not set up Gravatar yet and want to change the avatar shown on Codeship and in your commit messages, please head over to [Gravatar.com](http://www.gravatar.com/) and setup an avatar for both the email address you configured in your Codeship [Account Settings](https://app.codeship.com/user/edit) as well as for any email addresses you use in your git configuration.
+Git identifies people by your e-mail and Codeship uses your Gravatar settings for your profile picture. If you have not set up Gravatar yet and want to change the avatar shown on Codeship and in your commit messages, please head over to [Gravatar.com](https://en.gravatar.com/) and setup an avatar for both the email address you configured in your Codeship [Account Settings](https://app.codeship.com/user/edit) as well as for any email addresses you use in your git configuration.
 
 You can check the latter via running the following command in your local git checkout.
 

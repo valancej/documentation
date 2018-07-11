@@ -28,13 +28,13 @@ Rancher is a container management platform that helps bridge the gap between con
 
 By using Rancher you can deploy and run your cloud native applications simpler and easier.
 
-[Their documentation](http://rancher.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
+[Their documentation](https://rancher.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Using Rancher
 
 We will not cover Rancher-side setup for your application in this documentation article, but if you are looking for more information on using Rancher itself we have a comprehensive [post on our blog](https://blog.codeship.com/deploying-rancher-using-codeship-pro/)
 
-You can also learn more from [their documentation](http://rancher.com/docs/).
+You can also learn more from [their documentation](https://rancher.com/docs/).
 
 ## Adding Rancher Keys
 

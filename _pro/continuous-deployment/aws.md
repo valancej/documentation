@@ -22,7 +22,7 @@ redirect_from:
 
 {% csnote info %}
 This article is about deploying to AWS using Codeship Pro.
-If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
 You can find a [sample repo for deploying to AWS with Codeship Pro](https://github.com/codeship-library/aws-utilities) on GitHub.
 {% endcsnote %}
 
@@ -56,7 +56,7 @@ AWS_SECRET_ACCESS_KEY=your_secret_access_key
 
 You can get the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from the IAM settings in your [AWS Console](https://console.aws.amazon.com/console/home). Do not use the admin keys provided to your main AWS account and make sure to limit the access to what is necessary for your deployment through IAM.
 
-It is advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
+It is advised that you review AWS' [IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
 ## Service Definition
 
@@ -118,4 +118,4 @@ And the corresponding `codeship-steps.yml`:
 
 ## See Also
 
-+ [Latest `awscli` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
++ [Latest `awscli` documentation](https://docs.aws.amazon.com/cli/latest/reference/)
