@@ -35,9 +35,9 @@ Save the deployment via the blue button in the lower left corner and you're good
 
 ## IAM Policies
 
-It is generally a good idea to create a separate [IAM user](http://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) for Codeship when deploying to AWS. This allows you to explicitly control which resources Codeship can access during your builds. Please take note of the **Access Key ID** and **Secret Access Key** created during the process, as you'll need this when configuring the deployment.
+It is generally a good idea to create a separate [IAM user](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html) for Codeship when deploying to AWS. This allows you to explicitly control which resources Codeship can access during your builds. Please take note of the **Access Key ID** and **Secret Access Key** created during the process, as you'll need this when configuring the deployment.
 
-It is advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
+It is advised that you review AWS' [IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
 ### S3
 
@@ -154,5 +154,5 @@ If you are using more than once instance for your application you need to add at
 
 ## See also
 
-+ [Latest `awscli` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
-+ [Latest Elastic Beanstalk documentation](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html)
++ [Latest `awscli` documentation](https://docs.aws.amazon.com/cli/latest/reference/)
++ [Latest Elastic Beanstalk documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html)

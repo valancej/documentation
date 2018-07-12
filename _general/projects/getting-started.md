@@ -116,7 +116,7 @@ Codeship is hosted on AWS EC2 in the us-east-1 region. Because of this, Codeship
 
 * The most straightforward solution is our [IP whitelisting feature]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) so you can allow a small number of [IP addresses]({{ site.baseurl }}{% link _general/account/whitelisting.md %}#step-2) through your firewall.
 
-* AWS publishes current [IP address ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json). You can enable access for those ranges on your firewall.
+* AWS publishes current [IP address ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json). You can enable access for those ranges on your firewall.
 
 * Another option is to set up and run your own [bastion host](https://en.wikipedia.org/wiki/Bastion_host). This allows you to route all Codeship calls through your bastion host and whitelist only this host.
 

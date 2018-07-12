@@ -33,7 +33,7 @@ redirect_from:
 
 
 {% csnote info %}
-This article is about using Docker build arguments with Codeship Pro. If you are unfamiliar with build arguments, we recommend reading [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg). If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+This article is about using Docker build arguments with Codeship Pro. If you are unfamiliar with build arguments, we recommend reading [Docker's build arguments documentation](https://docs.docker.com/engine/reference/builder/#arg). If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
 {% endcsnote %}
 
 {% csnote %}
@@ -171,7 +171,7 @@ The full list of CI/CD-related variables is:
 * `CommitterName` (the name of the person who committed the change)
 * `CommitterEmail` (the email of the person who committed the change)
 * `CommitterUsername` (the username of the person who committed the change)
-* `Time` (a golang [`Time` object](http://golang.org/pkg/time/#Time) of the build time)
+* `Time` (a golang [`Time` object](https://golang.org/pkg/time/#Time) of the build time)
 * `Timestamp` (a unix timestamp of the build time)
 * `StringTime` (a readable version of the build time)
 * `Ci` (defaults to `true`)

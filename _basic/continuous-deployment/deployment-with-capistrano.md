@@ -16,7 +16,7 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-You can deploy any kind of application with Capistrano. For detailed information about Capistrano check [capistranorb.com](http://capistranorb.com). Don't forget to [include Capistrano](#capistrano-is-not-installed-by-default) in your projects as it's not preinstalled on our build servers.
+You can deploy any kind of application with Capistrano. For detailed information about Capistrano check [capistranorb.com](https://capistranorb.com). Don't forget to [include Capistrano](#capistrano-is-not-installed-by-default) in your projects as it's not preinstalled on our build servers.
 
 ## Capistrano with a custom script deployment
 

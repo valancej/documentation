@@ -116,7 +116,7 @@ java -version
 
 The following tools are preinstalled in our virtual machine. You can add them to your setup or test commands to start your build:
 
-* [Ant](http://ant.apache.org) (1.9.10)
+* [Ant](https://ant.apache.org) (1.9.10)
 * [Gradle](https://gradle.org) (4.6)
 * [Leiningen](https://leiningen.org) (2.8.1)
 * [Maven](https://maven.apache.org) (3.5.3)

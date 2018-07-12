@@ -31,7 +31,7 @@ You can find a [sample repo for deploying to AWS with Codeship Pro](https://gith
 - A folder must be designated for deployment purposes
 - A Dockerrun.aws.json file configured for either [single container](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_image.html) or [multi-container service](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_v2config.html) must be placed in the deployment folder
 - Any other assets that would be required by the instance host should be included in the deployment folder as well.
-- If applicable, please review the AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
+- If applicable, please review the AWS' [IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
 ## Deploying to AWS Elastic Beanstalk
 

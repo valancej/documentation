@@ -30,7 +30,7 @@ redirect_from:
 <div class="info-block">
 This article is about the `codeship-steps.yml` file that powers Codeship Pro.
 
- If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](http://codeship.com/features/pro).
+ If you are unfamiliar with Codeship Pro, we recommend our [getting started guide]({{ site.baseurl }}{% link _pro/quickstart/getting-started.md %}) or [the features overview page](https://codeship.com/features/pro).
 
  Also note that the `codeship-steps.yml` file depends on the `codeship-services.yml` file, which you can [learn more about here]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
 </div>
@@ -211,7 +211,7 @@ Push steps allow a generated container to be pushed to a remote docker registry.
 * `service` the service to run the command on. If the run step is a sub-step of a parallel step, `service` cannot be specified, otherwise it is required.
 * `name` the name of this push step.
 * `image_name` the name of the generated image as it exists in your service.yml/json file, in the format `[registry/][owner/][name]`.
-* `image_tag` the tag the generated image should be pushed to. This can be either a hardcoded string (like `latest` ) or a golang [`Template` object](http://golang.org/pkg/text/template/) referencing any of the following variables. The resulting template will be stripped of any invalid characters. As an example, take the following configuration `{% raw %}"{{.ServiceName}}.{{.Branch}}"{% endraw %}` to get a tagged image like `sandbox-app.v0.2.6`.
+* `image_tag` the tag the generated image should be pushed to. This can be either a hardcoded string (like `latest` ) or a golang [`Template` object](https://golang.org/pkg/text/template/) referencing any of the following variables. The resulting template will be stripped of any invalid characters. As an example, take the following configuration `{% raw %}"{{.ServiceName}}.{{.Branch}}"{% endraw %}` to get a tagged image like `sandbox-app.v0.2.6`.
     * `ProjectID` (the Codeship defined project ID)
     * `BuildID` (the Codeship defined build ID)
     * `RepoName` (the name of the repository according to the SCM)
@@ -222,7 +222,7 @@ Push steps allow a generated container to be pushed to a remote docker registry.
     * `CommitterName` (the name of the person who committed the change)
     * `CommitterEmail` (the email of the person who committed the change)
     * `CommitterUsername` (the username of the person who committed the change)
-    * `Time` (a golang [`Time` object](http://golang.org/pkg/time/#Time) of the build time)
+    * `Time` (a golang [`Time` object](https://golang.org/pkg/time/#Time) of the build time)
     * `Timestamp` (a unix timestamp of the build time)
     * `StringTime` (a readable version of the build time)
     * `StepName` (the user defined name for the `push` step)

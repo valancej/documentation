@@ -181,7 +181,7 @@ You will also need to configure your [codeship-steps.yml]({{ site.baseurl }}{% l
 
 ### Pushing To Quay.io
 
-To use the encrypted `dockercfg` file authentication method with Quay.io, you will first need to have create robot account with the requires permissions for your Quay repository. Please see the documentation on [Robot Accounts](http://docs.quay.io/glossary/robot-accounts.html) for Quay.io on how to set it up for your repository.
+To use the encrypted `dockercfg` file authentication method with Quay.io, you will first need to have create robot account with the requires permissions for your Quay repository. Please see the documentation on [Robot Accounts](https://docs.quay.io/glossary/robot-accounts.html) for Quay.io on how to set it up for your repository.
 
 **Note** that permissions can be set per robot account, so if you are seeing authentication failures you should check that the individual robot account being used is configured with appropriate access.
 
@@ -535,7 +535,7 @@ Along with being able to push to private registries, you can also push to tags o
   encrypted_dockercfg_path: dockercfg.encrypted
 ```
 
-This `image_tag` field can contain a simple string, or be part of a [Go template](http://golang.org/pkg/text/template/). You can compose your image tag from a variety of provided values. __Note__ that because we use Go for our Regex support, negative regexes and conditional regexes are  not supported.
+This `image_tag` field can contain a simple string, or be part of a [Go template](https://golang.org/pkg/text/template/). You can compose your image tag from a variety of provided values. __Note__ that because we use Go for our Regex support, negative regexes and conditional regexes are  not supported.
 
 * `ProjectID` (the Codeship defined project ID)
 * `BuildID` (the Codeship defined build ID)
@@ -547,7 +547,7 @@ This `image_tag` field can contain a simple string, or be part of a [Go template
 * `CommitterName` (the name of the person who committed the change)
 * `CommitterEmail` (the email of the person who committed the change)
 * `CommitterUsername` (the username of the person who committed the change)
-* `Time` (a golang [`Time` object](http://golang.org/pkg/time/#Time) of the build time)
+* `Time` (a golang [`Time` object](https://golang.org/pkg/time/#Time) of the build time)
 * `Timestamp` (a unix timestamp of the build time)
 * `StringTime` (a readable version of the build time)
 * `StepName` (the user defined name for the `push` step)

@@ -105,6 +105,6 @@ This tag tells Codeship to only run this tag on the master branch. You can imagi
 
 From here, there's still a ton more you can learn to optimize your builds, troubleshoot your problems and build more complex and productive workflows.
 
-We recommend [our blog](https://blog.codeship.com), [our documentation]({{ site.url }}), and [our webinars](http://resources.codeship.com/webinars) to keep learning more.
+We recommend [our blog](https://blog.codeship.com), [our documentation]({{ site.url }}), and [our webinars](https://resources.codeship.com/webinars) to keep learning more.
 
 It's important to get to a working build as soon as possible when you start your new CI/CD process with Codeship Pro. From there, take some time with your team every few weeks or every few months to find ways to optimize, save time, keep the developers coding with fewer waiting periods and improve your application and Docker image efficiency.

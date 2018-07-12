@@ -17,7 +17,7 @@ categories:
 * include a table of contents
 {:toc}
 
-[CouchDB](http://couchdb.apache.org) **1.5.0** runs by default on port 5984.
+[CouchDB](https://couchdb.apache.org) **1.5.0** runs by default on port 5984.
 
 You can verify it is running with the following command:
 

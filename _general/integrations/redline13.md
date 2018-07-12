@@ -23,9 +23,9 @@ categories:
 
 ## About RedLine13
 
-[RedLine13](https://www.RedLine13.com) is a load testing and reporting tool that can be used with continuous integration and delivery services to determine performance and throughput of your web applications and mobile APIs.
+[RedLine13](https://www.redline13.com) is a load testing and reporting tool that can be used with continuous integration and delivery services to determine performance and throughput of your web applications and mobile APIs.
 
-The [RedLine13 documentation](https://www.RedLine13.com/blog/kb/) provides a starting point for running load tests, and the instructions below have more information on integrating with [Codeship](https://codeship.com) to [run load tests during CI](#starting-load-tests).
+The [RedLine13 documentation](https://www.redline13.com/blog/kb/) provides a starting point for running load tests, and the instructions below have more information on integrating with [Codeship](https://codeship.com) to [run load tests during CI](#starting-load-tests).
 
 ## Codeship Pro
 
@@ -35,7 +35,7 @@ To run your RedLine13 load tests on Codeship, you will need to add your API Key 
 
 - `RedLine13_API_KEY`
 
-You can get the API Key from your RedLine13 account after [registering for a RedLine13 account](https://www.RedLine13.com/Account/apikey).  
+You can get the API Key from your RedLine13 account after [registering for a RedLine13 account](https://www.redline13.com/Account/apikey).  
 
 ### Other Settings
 
@@ -48,7 +48,7 @@ The test runner provides for multiple configuration items which can be managed v
 ### Starting load tests
 
 The simplest way is to include the RedLine13 service in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) file.
- - The volumes is set to pull your repo into /test on the docker container.  This simplifies finding required files such as a [Apache JMeter](http://jmeter.apache.org/) or [Gatling](https://github.com/gatling/gatling) test file.
+ - The volumes is set to pull your repo into /test on the docker container.  This simplifies finding required files such as a [Apache JMeter](https://jmeter.apache.org/) or [Gatling](https://github.com/gatling/gatling) test file.
 
 ```yaml
 RedLine13:
@@ -90,9 +90,9 @@ Using the service above you only need to include the curl command in your [codes
 
 The codeship-services.yml and codeship-steps.yml above will run an Apache JMeter test from our repo on 2 servers, wait for up to 15 minutes for test to complete, and ensure that  80% of tests are success and response time is less than 5 seconds.
 
-To customize the API call via Curl you can read the [RedLine13 API documentation](https://www.RedLine13.com/ApiDoc) or export an existing load test.
+To customize the API call via Curl you can read the [RedLine13 API documentation](https://www.redline13.com/ApiDoc) or export an existing load test.
 
-When your build runs, your test will be started and RedLine13 will be tracking the results.  You can always see real time results on the [RedLine13 Dashboard](https://www.RedLine13.com/Service).
+When your build runs, your test will be started and RedLine13 will be tracking the results.  You can always see real time results on the [RedLine13 Dashboard](https://www.redline13.com/Service).
 
 ## Codeship Basic
 
@@ -102,7 +102,7 @@ To run your RedLine13 load tests on Codeship Basic, you will need to add your AP
 
 - `RedLine13_API_KEY`
 
-You can get the API Key from your RedLine13 account after [registering for a RedLine13 account](https://www.RedLine13.com/Account/apikey).  
+You can get the API Key from your RedLine13 account after [registering for a RedLine13 account](https://www.redline13.com/Account/apikey).  
 
 ### Other Settings
 
@@ -137,4 +137,4 @@ Add the following to your [project's test commands]({{ site.baseurl }}{% link _b
 
 ## More Info
 
-For a walk-through of setting up you can read more on the [RedLine13 blog](https://www.RedLine13.com/blog/2018/02/codeship-integration/).
+For a walk-through of setting up you can read more on the [RedLine13 blog](https://www.redline13.com/blog/2018/02/codeship-integration/).

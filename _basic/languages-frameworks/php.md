@@ -179,7 +179,7 @@ nohup bash -c "php -S 127.0.0.1:8000 2>&1 &" && sleep 1; cat nohup.out
 You can access it in your tests on 127.0.0.1:8000.
 
 Also take a look at the PHP built-in webserver docs in the
-[PHP documentation](http://www.php.net/manual/en/features.commandline.webserver.php)
+[PHP documentation](https://secure.php.net/manual/en/features.commandline.webserver.php)
 
 Thanks to [Jeff Donios](https://github.com/doniosjm) for the tip.
 

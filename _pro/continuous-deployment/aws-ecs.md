@@ -36,7 +36,7 @@ Please review our [AWS documentation]({% link _pro/continuous-deployment/aws.md 
 
 You will need the AWS service, as well as your application itself, defined via your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}) so that you can execute the necessary S3 commands in your [codeship-steps.yml file]({% link _pro/builds-and-configuration/steps.md %}).
 
-It is also advised that you review AWS' [IAM documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
+It is also advised that you review AWS' [IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_access-management.html) to find the correct policies for your account.
 
 ### Pushing To ECR
 
@@ -75,6 +75,6 @@ If you have more complex workflows for deploying your ECS tasks you can put thos
 - service: awsdeployment
   command: aws ecs run-task --cluster default --task-definition process_queue --count 5
 ```
-Note that we're using the task definitions from the [AWSCLI ECS docs](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_AWSCLI.html#AWSCLI_run_task)
+Note that we're using the task definitions from the [AWSCLI ECS docs](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_AWSCLI.html#AWSCLI_run_task)
 
 Also note that the `awsdeployment` service is discussed in more detail in our [AWS documentation]({% link _pro/continuous-deployment/aws.md %}), and that all ECS-related commands will work the same way in lieu of the above example.
