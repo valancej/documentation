@@ -57,7 +57,7 @@ Note that these oAuth login pages come directly from the SCM tools themselves an
 
 ![Email Login]({{ site.baseurl }}/images/new-user-setup/email-login.png)
 
-*You can learn more about the permissions we ask when authenticating with SCM [here](https://documentation.codeship.com/general/account/permissions/).  Learn more about security at Codeship [here](https://documentation.codeship.com/general/about/security/).*
+*You can learn more about the permissions we ask when authenticating with SCM [here]({{ site.baseurl }}{% link _general/about/permissions.md %}). Learn more about security at Codeship [here]({{ site.baseurl }}{% link _general/about/security.md %}).*
 
 **Note**: When signing up using your email, we won't know what your git username is, which means that your personal dashboard (aka your home page) won't be populated with your builds. To get your builds to show up, head over to your [Connected Services](https://app.codeship.com/authentications) page and enter your git username(s) there.
 

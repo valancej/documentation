@@ -84,7 +84,7 @@ Typically, the need for passing secrets to the build falls into three main categ
 
 You can store login credentials for your Docker image registry by using an encrypted credentials file. That file is declared in the service with the `encrypted_dockercfg_path` key or being using a `dockercfg_service` generator.
 
-With those credentials, you'll be able to pull private base images to use in your own Docker images, pull images from a private registry, and push your images to a private registry. Read the [tutorial on pulling private images](https://documentation.codeship.com/pro/getting-started/docker-pull/) to get started.
+With those credentials, you'll be able to pull private base images to use in your own Docker images, pull images from a private registry, and push your images to a private registry. Read the [tutorial on pulling private images]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}) to get started.
 
 ## How do I access private assets and dependencies during a Docker image build?
 
