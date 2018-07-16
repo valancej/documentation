@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "^8.11.2",
+    "node": "^8.11.3",
     "yarn": "^1.7.0"
   },
   "scripts": {
@@ -18,7 +18,7 @@
     "fix": "mdspell -na --en-us '{,!(node_modules)/**/}*.md'"
   },
   "dependencies": {
-    "autoprefixer": "^8.2.0",
+    "autoprefixer": "^8.6.5",
     "gulp": "^3.9.1",
     "gulp-folders": "^1.1.0",
     "gulp-image-resize": "^0.13.0",
