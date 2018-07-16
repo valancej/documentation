@@ -47,13 +47,17 @@ Usage:
   jet [command]
 
 Available Commands:
-  decrypt
-  encrypt
-  generate
-  load
-  run
-  steps
-  version
+  cleanup     Remove docker resources left behind by jet
+  decrypt     Decrypt a file using an AES key
+  encrypt     Encrypt a file using an AES key
+  generate    Generate an AES key for encrypting files
+  help        Help about any command
+  load        Pull or build service images
+  run         Run a command inside a service container
+  steps       Run steps
+  update      Download and install the latest version of Jet
+  validate    Validate codeship-services.yml and codeship-steps.yml files
+  version     Display the jet version
 
 Flags:
   -h, --help   help for jet
