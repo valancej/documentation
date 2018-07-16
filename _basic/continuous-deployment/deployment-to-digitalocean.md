@@ -31,7 +31,7 @@ DigitalOcean offers virtual servers (called Droplets). If you have not yet set u
 
 While not necessary, selecting the Ubuntu 14.04 image for your Droplet will provide even greater parity between your production and [CI/CD environment]({{ site.baseurl }}{% link _general/about/vm-and-infrastructure.md %}).
 
-For the ssh key section, be sure that you are including/authorizing your [Codeship project's ssh key](https://documentation.codeship.com/general/projects/project-ssh-key/) with your Droplet.
+For the ssh key section, be sure that you are including/authorizing your [Codeship project's ssh key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) with your Droplet.
 
 With the exception of the Capistrano tool, all the following options would need to be configured as [custom scripts]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) in your deployment pipeline.
 
