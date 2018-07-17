@@ -61,6 +61,7 @@ To upload new application versions to the S3 bucket specified in the deployment 
             "Effect": "Allow",
             "Action": [
                 "s3:PutObject",
+                "s3:PutObjectAcl",
                 "s3:GetObject",
                 "s3:ListBucket"
             ],
