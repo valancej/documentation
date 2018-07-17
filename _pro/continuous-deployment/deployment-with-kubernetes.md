@@ -26,7 +26,11 @@ redirect_from:
 
 ## Issue kubectl commands to your k8s cluster from your Codeship Pro build
 
-### Distill your current k8s configurations to a single file
+{% csnote info %}
+The public repository for our `codeship/kubectl` Docker image can be found [here](https://github.com/codeship-library/kubectl).
+{% endcsnote %}
+
+### 1. Distill your current k8s configuration to a single file
 
 With a configured k8s cluster context on your local machine, run the following command in your project directory:
 
@@ -34,7 +38,7 @@ With a configured k8s cluster context on your local machine, run the following c
 kubectl config view --flatten > kubeconfigdata # add --minify flag to reduce info to current context
 ```
 
-### Copy contents of generated k8s config file to env var file
+### 2. Copy contents of generated k8s config file to env var file
 
 We have a Docker container built for taking the plaintext, flattened k8s config file and storing to a [Codeship Pro env file]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). The `/root/.kube/config` path specifies exactly where we want the contents of the `kubeconfigdata` securely placed in the `codeship/kubectl` container during runtime.
 
@@ -46,14 +50,14 @@ docker run --rm -it -v $(pwd):/files codeship/env-var-helper cp kubeconfigdata:/
 Check out the [codeship/env-var-helper README](https://github.com/codeship-library/docker-utilities/tree/master/env-var-helper) for more information.
 {% endcsnote %}
 
-### Encrypt the env file, remove plaintext and/or add to .gitignore
+### 3. Encrypt the env file, remove plaintext and/or add to .gitignore
 
 ```shell
 jet encrypt k8s-env k8s-env.encrypted
 rm kubeconfigdata k8s-env
 ```
 
-### Configure your services and steps file with the following as guidance
+### 4. Configure your services and steps file with the following as guidance
 
 ```shell
 ## codeship-services.yml
@@ -62,7 +66,7 @@ kubectl:
   build:
     image: codeship/kubectl
     dockerfile: Dockerfile
-  encrypted_env_file: k8s-env.encrypted  kubectl:   build:     image: codeship/kubectl     dockerfile: Dockerfile   
+  encrypted_env_file: k8s-env.encrypted
 ```
 
 ```shell
