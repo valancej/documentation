@@ -40,6 +40,30 @@ We currently offer the following roles (though more roles are already on our tod
 * **Project Managers** can manage projects the team is assigned to. They can debug builds, update test settings, or manage deployments.
 * **Contributors** have read-only access to their projects. This means they can view the project dashboard and build details but are not allowed to change project settings, restart builds or open debug builds.
 
+##### Role Permissions
+
+| Permission                 | Owners | Managers | Project Managers | Contributors |
+| -------------------------- | :----: | :------: | :--------------: | :----------: |
+| **Organizations** | | | | |
+| Update/Delete Organization |   x    | | | |
+| Manage Billing             |   x    | | | |
+| **Teams** | | | | |
+| Create/Delete Team         |   x    |   x      | | |
+| Update Team                |   x    |   x      |        x         | |
+| **Projects** | | | | |
+| Create/Update Project      |   x    |   x      |        x         | |
+| View Project Details       |   x    |   x      |        x         |    x         |
+| Delete/Transfer Project    |   x    |   x      | | |
+| View All Projects          |   x    |   x      | | |
+| View/Reset AES key         |   x    |   x      |        x         | |
+| **Builds** | | | | |
+| Restart Build/Pipeline     |   x    |   x      |        x         |    *         |
+| Start Debug Build          |   x    |   x      |        x         | |
+| Approve Build              |   x    |  | | |
+| Stop Build                 |   x    |   x      |        x         | |
+
+
+\* _On CodeShip Pro, Contributors can restart builds_
 
 ### Default Teams
 
