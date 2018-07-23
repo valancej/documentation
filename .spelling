@@ -237,7 +237,10 @@ jvm-based
 keychain
 keypair
 kotlin
+kube
+kubectl
 kubernetes
+k8s
 laravel
 leiningen
 lftp
@@ -315,6 +318,7 @@ php-laravel-todoapp
 php.ini
 phpenv
 phpunit
+plaintext
 postgis
 postgres
 postgresql
