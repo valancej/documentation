@@ -75,8 +75,11 @@ kubectl:
 - name: check response to kubectl config
   service: kubectl
   command: kubectl config view
+#- name: attempt to connect to live k8s cluster
+#  service: kubectl
+#  command: kubectl cluster-info
 ```
 
 {% csnote info %}
-If you'd like to test the connection to your live k8s cluster, you can add a step command to `kubectl cluster-info`.
+If you’re still largely unfamiliar with the nuts and bolts of Codeship Pro, then check out our step-by-step, from the ground up walk-through on [issuing kubectl commands in Codeship Pro](https://github.com/codeship-library/kubectl-connection-demo).
 {% endcsnote %}
