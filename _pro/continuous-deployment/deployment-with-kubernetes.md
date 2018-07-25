@@ -81,5 +81,5 @@ kubectl:
 ```
 
 {% csnote info %}
-If you’re still largely unfamiliar with the nuts and bolts of Codeship Pro, then check out our step-by-step, from the ground up walk-through on [issuing kubectl commands in Codeship Pro](https://github.com/codeship-library/kubectl-connection-demo).
+If you’re still largely unfamiliar with Codeship Pro, then check out our step-by-step walk-through on [issuing kubectl commands in Codeship Pro](https://github.com/codeship-library/kubectl-connection-demo).
 {% endcsnote %}
