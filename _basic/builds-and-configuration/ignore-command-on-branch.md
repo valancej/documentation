@@ -26,6 +26,10 @@ For a variety of reasons, you may want to either _only run_ commands on certain 
 
 Below you will find scripts that you can use on your project's [setup and test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) to accomplish both scenarios.
 
+{% csnote info %}
+These commands must be entered as single lines in your setup or test commands to be executed properly. Multiple line commands will get treated as separate commands instead of a single command. If you want to write a longer command as multiple lines, you should write it in a script file and then call that script instead.
+{% endcsnote %}
+
 ## Using Include / Exclude Commands Per Branch
 
 ### Skip A Command On Specific Branches
