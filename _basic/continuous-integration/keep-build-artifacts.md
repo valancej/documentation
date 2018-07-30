@@ -23,7 +23,7 @@ For security reasons Codeship does not provide persistent storage of files betwe
 
 ## Upload artifacts to S3
 
-If you want to upload artifacts to S3 during your test steps, you can use the AWS CLI. First add the following environment variables to your project configuration.
+If you want to upload artifacts to S3 during your test steps, you can use the [AWS CLI]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-awscli.md %}). First add the following environment variables to your project configuration:
 
 ```
 AWS_DEFAULT_REGION
@@ -31,7 +31,7 @@ AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 ```
 
-then add the following commands to the your setup / test steps
+Then add the following commands to your setup/test steps:
 
 ```shell
 pip install awscli
@@ -39,13 +39,13 @@ aws s3 cp your_artifact_file.zip s3://mybucket/your_artifact_file.zip
 ```
 
 {% csnote info %}
-For Codeship Pro, our [_Codeship AWS container_]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}) can be implemented to transfer artifacts to S3 storage.
+For Codeship Pro, our [Codeship AWS container]({{ site.baseurl }}{% link _pro/continuous-deployment/aws.md %}) can be implemented to transfer artifacts to S3 storage.
 {% endcsnote %}
 
-For more advanced usage of the S3 CLI, please see the [S3 documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/index.html) on amazon.com
+For more advanced usage of the S3 CLI, please see Amazon's [S3 documentation](https://docs.aws.amazon.com/cli/latest/reference/s3/index.html).
 
-**Note** that you can simply add another integrated S3 deployment after your actual deployment if you only want to keep artifacts for specific branches.
+**Note** that you can simply add another [integrated S3 deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-aws-s3.md %}) after your actual deployment if you only want to keep artifacts for specific branches.
 
 ## Upload through SFTP
 
-Each project has its own public key which you'll find in your project settings on the *General* page. You can use this key to grant access to your storage provider for Codeship or upload files through SFTP.
+Each project has its own [SSH public key]({{ site.baseurl }}{% link _general/projects/project-ssh-key.md %}) which you'll find under _Project Settings > General_. You can use this key to grant access to your storage provider for Codeship or [upload files through SFTP]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-ftp-sftp-scp.md %}).
