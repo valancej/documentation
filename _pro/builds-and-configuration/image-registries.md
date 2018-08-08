@@ -63,7 +63,7 @@ This encryption happens with our [local CLI tool]({{ site.baseurl }}{% link _pro
 ```json
 {
 	"auths": {
-		"https://index.docker.io/": {
+		"https://index.docker.io/v1/": {
 			"auth": "your_auth_string",
 			"email": "your_email"
 		}
