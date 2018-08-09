@@ -132,22 +132,28 @@ sftp -b deploy/production ssh_user@your.server.com
 
 ## Continuous Deployment with FTP
 
-For ftp we recommend using `lftp` for uploading your files. The following section will help you get started.
+For FTP we recommend using [LFTP](https://lftp.yar.ru) for uploading files. The following section will help you get started.
 
-To keep your password out of your build logs, add it as an environment variable in your project configuration
+To keep your username and password out of your build logs, add them as [environment variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}) in your project configuration:
 
 ```
-FTP_PASSWORD
 FTP_USER
+FTP_PASSWORD
 ```
 
-So if you wanted to copy all of your repository to a remote server, you could add the following command to a _script deployment_ on the branch you want to deploy.
+So if you wanted to copy all of your repository to a remote server, you could add the following command to a [custom script deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) on the branch you want to deploy.
 
-* Make sure your _remote dir_ does not end with a slash unless you want your copy to live in a subdirectory called _clone_.
-* Also make sure your _remote dir_ already exists before trying your first deployment.
+* Make sure your _remote directory_ does not end with a slash unless you want your copy to live in a subdirectory called _clone_.
+* Also make sure your _remote directory_ already exists before trying your first deployment.
 
 ```shell
-lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.yoursite.com; set ssl:verify-certificate no; mirror -R ~/clone/ /path/on/server/"
+lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.yoursite.com; set ssl:verify-certificate no; mirror -R ~/clone/ /path/on/remote/server"
 ```
 
-For more information on using _lftp_ please see the [LFTP man page]({% man_url lftp %}) available online.
+LFTP is installed by default, but if you need a more current version you can install it in your build with the following [script](https://github.com/codeship/scripts/blob/master/packages/lftp.sh):
+
+```
+\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/lftp.sh | bash -s
+```
+
+For more information on using LFTP please see the [LFTP man page](https://lftp.yar.ru/lftp-man.html).
