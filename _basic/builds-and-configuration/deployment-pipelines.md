@@ -56,6 +56,10 @@ While Codeship does provide many helpful deployment integrations, you may find t
 
 You can use the [Script Deployment]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) to run your custom deployment commands or to execute other tasks right after or before a deployment. These will run as part of a deployment pipeline exactly as any of our deployment integrations would, but will rely on your scripts to provide exit status codes of `0` or any non-zero status code to indicate that they have either passed or failed.
 
+{% csnote info %}
+When using a single test pipeline, the same build container is used for the entire build and deploy so any configuration done during the setup and testing phase will also be present for the deployment phase. When using multiple test pipelines, a new container is used for the deploy and setup commands do not run again. If your deployment has any specific dependencies you will want to include those commands with your deployment steps.
+{% endcsnote %}
+
 ### Multi-Step Deployment Pipelines
 
 You can add **multiple deployments within one deployment pipeline**. One easy example of this type of workflow would be to run your deployment commands and then, if they are successful, run post-deployment notification scripts. This process is easy to fully automated on Codeship. Note, though, that it is **not** possible to run multiple deployments in parallel.

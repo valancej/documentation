@@ -35,6 +35,10 @@ bundle exec rake my_rake_task
 # You can define your keys with environment variables
 ```
 
+{% csnote info %}
+When using a single test pipeline, the same build container is used for the entire build and deploy so any configuration done during the setup and testing phase will also be present for the deployment phase. When using multiple test pipelines, a new container is used for the deploy and setup commands do not run again. If your deployment has any specific dependencies you will want to include those commands with your deployment steps.
+{% endcsnote %}
+
 Please follow these steps to create a custom deployment script:
 
 #### Step 1
