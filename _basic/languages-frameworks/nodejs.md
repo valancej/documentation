@@ -127,7 +127,7 @@ npm config set scope username
 
 ### Yarn
 
-You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as an alternative to npm. Yarn 1.5.1 is pre-installed on the build VMs and requires your project to use Node.js 4.0 or higher.
+You can also use [Yarn](https://yarnpkg.com/en) to install your dependencies as an alternative to npm. Yarn 1.9.4 is pre-installed on the build VMs and requires your project to use Node.js 4.0 or higher.
 
 If you want to [install the latest version of Yarn](https://yarnpkg.com/en/docs/install#alternatives-tab), there are several ways to do it, including:
 
