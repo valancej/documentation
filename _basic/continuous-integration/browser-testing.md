@@ -44,7 +44,7 @@ If you'd like to learn more about Codeship Basic, we recommend the [getting star
 
 Current versions of Google Chrome and Chromium are installed by default.
 
-Google Chrome is at version 67 and is located at `/usr/bin/google-chrome`.
+Google Chrome is at version 68 and is located at `/usr/bin/google-chrome`.
 
 Chromium is at version 65 and is located at `/usr/bin/chromium-browser`.
 
@@ -61,7 +61,7 @@ Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://dev
 
 ## ChromeDriver
 
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.40 is installed by default and available in the PATH.
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.41 is installed by default and available in the PATH.
 
 To install a [custom ChromeDriver version](https://github.com/codeship/scripts/blob/master/packages/chromedriver.sh) add the following commands to your build steps:
 
@@ -73,7 +73,7 @@ export CHROMEDRIVER_VERSION=YOUR_DESIRED_VERSION
 
 ## Firefox
 
-[Firefox](https://www.mozilla.org/en-US/firefox/releases) 60.0 is installed by default and available in the PATH.
+[Firefox](https://www.mozilla.org/en-US/firefox/releases) 61.0.1 is installed by default and available in the PATH.
 
 To install a [custom Firefox version](https://github.com/codeship/scripts/blob/master/packages/firefox.sh) add the following commands to your build steps:
 
@@ -89,7 +89,7 @@ Beginning in Firefox 55, you can run Firefox in [headless mode](https://develope
 
 ## geckodriver
 
-[geckodriver](https://github.com/mozilla/geckodriver) 0.20.1 is installed by default and available in the PATH.
+[geckodriver](https://github.com/mozilla/geckodriver) 0.21.0 is installed by default and available in the PATH.
 
 To install a [custom geckodriver version](https://github.com/codeship/scripts/blob/master/packages/geckodriver.sh) add the following commands to your build steps:
 
