@@ -25,7 +25,7 @@ redirect_from:
 
 We use [pyenv](https://github.com/pyenv/pyenv) to manage Python environments for you.
 
-By default, we run Python version `2.7`, but versions `3.3`, `3.4`, `3.5` and `3.6` are all preinstalled as well. These are aliases that are pointing to the specific versions installed.
+By default, we run Python version `2.7`, but versions `3.4`, `3.5` and `3.6` are preinstalled as well. These are aliases that are pointing to the specific versions installed.
 
 ### Specifying Version
 
