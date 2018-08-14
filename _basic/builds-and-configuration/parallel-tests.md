@@ -61,6 +61,10 @@ Using parallel test pipelines is unrelated to creating your deployment pipelines
 
 You can [learn more about deployment pipelines here.]({{ site.baseurl }}{% link _basic/builds-and-configuration/deployment-pipelines.md %})
 
+{% csnote info %}
+When using a single test pipeline, the same build container is used for the entire build and deploy so any configuration done during the setup and testing phase will also be present for the deployment phase. When using multiple test pipelines, a new container is used for the deploy and setup commands do not run again. If your deployment has any specific dependencies you will want to include those commands with your deployment steps.
+{% endcsnote %}
+
 ### Artifacts Support
 
 As your build and deployment commands are run on multiple virtual machines, **artifacts created during the test steps will not be available during the deployment**. If you need artifacts from the previous steps, make sure to regenerate them during the deployment using a [_script deployment_]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) added before the actual deployment.
