@@ -335,6 +335,7 @@ programmatically
 psql
 psycopg
 psycopg2
+pulumi
 py.test.
 pyenv
 pytest
