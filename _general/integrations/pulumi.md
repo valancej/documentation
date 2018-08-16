@@ -116,4 +116,4 @@ pulumi ${1:-preview} --stack pulumi/codeship-example-${CI_BRANCH} --non-interact
 
 With this script, you will be able to pass any specific Pulumi command that you need to run. The important thing is that the `service` directive is pointing to the service defined via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) with the necessary tooling installed.
 
-For more examples, check out the [Pulumi sample repo])https://github.com/pulumi/codeship-example).
+For more examples, check out the [Pulumi sample repo](https://github.com/pulumi/codeship-example).
