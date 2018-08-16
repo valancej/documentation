@@ -16,7 +16,7 @@ menus:
 * include a table of contents
 {:toc}
 
-## About Racher
+## About Rancher
 
 {% csnote info %}
 Rancher only integrates with [Codeship Pro](https://codeship.com/features/pro) and will not work with [Codeship Basic](https://codeship.com/features/basic).
