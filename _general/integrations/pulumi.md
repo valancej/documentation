@@ -24,13 +24,13 @@ Pulumi only integrates with [Codeship Pro](https://codeship.com/features/pro) an
 If you do not have a familiarity with Codeship Pro, we recommend watching this [introductory webinar](https://resources.codeship.com/webinars/env-parity-docker-codeship-jet) before proceeding with your Pulumi setup.
 {% endcsnote %}
 
-Pulumi is a platform for defining cloud applications and infrastructure, making configuration and deployment fast and easy.
+[Pulumi](https://pulumi.io/) is a platform for defining cloud applications and infrastructure, making configuration and deployment fast and easy.
 
-[Their documentation](https://Pulumi.com/docs/) does a great job of providing more information, in addition to the setup instructions below.
+[Their documentation](https://pulumi.io/quickstart/) does a great job of providing more information, in addition to the setup instructions below.
 
 ## Using Pulumi
 
-We will not cover Pulumi-side setup for your application in this documentation article, but if you are looking for more information on using Pulumi itself you can learn more from [their documentation](https://Pulumi.com/docs/).
+We will not cover Pulumi-side setup for your application in this documentation article, but if you are looking for more information on using Pulumi itself you can learn more from [their documentation](https://pulumi.io/quickstart/).
 
 Note that this guide has an easy to use [sample repo](https://github.com/pulumi/codeship-example) that you can clone and follow along with, with more examples than this documentation covers.
 
