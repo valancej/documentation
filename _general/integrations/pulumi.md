@@ -42,7 +42,7 @@ You will add these encrypted environment variables to the service you create bel
 
 ## Defining Your Service
 
-Because all the commands in your pipeline, via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}), are executed inside the service you define and build build via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) - the first thing you will need to do is define a service that is capable of executing Pulumi commands.
+Because all the commands in your pipeline, via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}), are executed inside the service you define and build via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) - the first thing you will need to do is define a service that is capable of executing Pulumi commands.
 
 To do this, you can create a Dockerfile that looks similar to the one below:
 
@@ -75,7 +75,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy over the package.json and yarn.lock files and then install packages. By copying just these two files first
-# we get better docker caching behavior (as these layers only change with you add or remove dependencies, not when)
+# we get better docker caching behavior (as these layers only change when you add or remove dependencies, not when)
 # you do normal application development.
 COPY package.json yarn.lock ./
 RUN yarn install
@@ -83,7 +83,7 @@ RUN yarn install
 COPY . .
 ```
 
-Once you have a image capable of executing Pulumi Compose commands, you will want to build that image via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
+Once you have an image capable of executing Pulumi Compose commands, you will want to build that image via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}):
 
 ```yaml
 app:
