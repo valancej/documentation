@@ -7,7 +7,7 @@ tags:
 menus:
   general/integrations:
     title: Custom Integrations
-    weight: 25
+    weight: 26
 categories:
   - Integrations    
 ---
