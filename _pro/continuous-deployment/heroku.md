@@ -90,7 +90,7 @@ app:
     dockerfile: Dockerfile
   encrypted_env_file: heroku-deployment.env.encrypted
 
-dockercfg_generator:
+dockercfg-generator:
   image: codeship/heroku-dockercfg-generator
   add_docker: true
   encrypted_env_file: heroku-deployment.env.encrypted
@@ -106,7 +106,7 @@ Once we have this service in place, we can push to the Heroku registry in our [c
   type: push
   image_name: registry.heroku.com/your_image/name
   registry: registry.heroku.com
-  dockercfg_service: dockercfg_generator
+  dockercfg_service: dockercfg-generator
 ```
 
 Note that the `dockercfg_service` directive calls the `dockercfg_generator` we specified above, to generate our token. The only variable you need to be sure to modify if the `image_name`, which must be set to the name for the application image you are pushing as defined in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
