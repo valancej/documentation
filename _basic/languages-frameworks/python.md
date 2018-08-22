@@ -64,7 +64,7 @@ Codeship automatically caches all dependencies installed through `pip`. You can 
 
 ## Frameworks And Testing
 
-All Python frameworks, including Django, Flask and Pyramid, should work without issue as long as they do not require root-access for customized system configuration.
+All Python frameworks, including Django, Flask and Pyramid, should work without issue.
 
 All test frameworks and tools, including pytest and unittest, should also work without issue.
 

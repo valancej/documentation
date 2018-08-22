@@ -71,7 +71,7 @@ Codeship automatically configures bundler to use the `$HOME/cache/bundler` direc
 
 ## Frameworks And Testing
 
-Our Ruby support includes Ruby itself, [Rails](https://rubyonrails.org), [Sinatra](http://sinatrarb.com) and most other frameworks that do not require root-access for customized system configuration.
+Our Ruby support includes Ruby itself, [Rails](https://rubyonrails.org), [Sinatra](http://sinatrarb.com) and most other frameworks.
 
 We also support all Ruby based test frameworks like RSpec, Cucumber and Minitest.
 

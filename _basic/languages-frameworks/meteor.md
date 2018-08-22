@@ -11,7 +11,7 @@ tags:
   - yarn
   - framework
 categories:
-  - Languages And Frameworks  
+  - Languages And Frameworks
 ---
 
 * include a table of contents
@@ -19,10 +19,10 @@ categories:
 
 ## Setup
 
-Meteor's default installer requires sudo on Linux. We use a script to change install location and make sudo unnecessary:
+First run Meteor's default installer:
 
 ```shell
-\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/meteor.sh | bash -s
+\curl https://install.meteor.com/ | sh
 ```
 
 ### Custom Versions

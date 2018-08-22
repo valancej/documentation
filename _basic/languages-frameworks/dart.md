@@ -9,7 +9,7 @@ menus:
     title: Dart
     weight: 8
 categories:
-  - Languages And Frameworks    
+  - Languages And Frameworks
 redirect_from:
   - /languages/dart/
 ---
@@ -46,7 +46,7 @@ We do not cache Dart dependencies between builds by default, but any dependencie
 
 ## Frameworks And Testing
 
-As dart currently doesn't have a default way to run your tests you can use exactly the same command to run those tests as you would on your local machine. Note that almost all tools that do not require root access for custom machine configuration will install and run without issue on Codeship.
+As dart currently doesn't have a default way to run your tests you can use exactly the same command to run those tests as you would on your local machine. Note that almost all tools for custom machine configuration will install and run without issue on Codeship.
 
 ### Browser testing
 

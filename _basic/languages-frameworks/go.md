@@ -9,7 +9,7 @@ menus:
     title: Go
     weight: 6
 categories:
-  - Languages And Frameworks    
+  - Languages And Frameworks
 redirect_from:
   - /languages/go/
 ---
@@ -58,7 +58,7 @@ We do not cache Go dependencies between builds.
 
 ## Frameworks And Testing
 
-We support all Go tools and test frameworks, sas long as they do not require root access for custom machine configuration. You can run your tests with a standard `go test -v` or by using test frameworks such as gocheck.
+We support all Go tools and test frameworks. You can run your tests with a standard `go test -v` or by using test frameworks such as gocheck.
 
 For example, using gocheck would look like:
 

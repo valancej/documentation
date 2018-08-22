@@ -9,7 +9,7 @@ menus:
     title: Custom Integrations
     weight: 26
 categories:
-  - Integrations    
+  - Integrations
 ---
 
 * include a table of contents
@@ -67,9 +67,9 @@ You can do this by navigating to _Project Settings_ and then clicking on the _En
 
 ### Tooling And Environment
 
-Codeship Basic builds run on shared virtual machines with tooling preinstalled. A user can install any package that they need via the project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), but may not install anything that requires `sudo` or root access.
+Codeship Basic builds run on shared virtual machines with tooling preinstalled. A user can install any package that they need via the project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}), including anything that requires `sudo` or root access.
 
-As an example if your project has a CLI that is required to be installed for the tool's commands to execute, you will need to install the CLI (without `sudo` or root) via the project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) so that you may call the commands you need in the [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) section.
+As an example if your project has a CLI that is required to be installed for the tool's commands to execute, you will need to install the CLI (potentially using `sudo`) via the project's [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) so that you may call the commands you need in the [test commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}) section.
 
 ### Executing Commands
 
