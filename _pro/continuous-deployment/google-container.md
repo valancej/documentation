@@ -184,7 +184,7 @@ gcloud container clusters delete $KUBERNETES_APP_NAME -q
 
 ### Permissions
 
-To use Google Cloud with Codeship Pro, your generator service on Codeship will need to authenticate with an account with the correct IAM permissions.
+To use Google Cloud with Codeship Pro, your generator service on Codeship will need to authenticate with an account with the correct permissions.
 
 While the permissions may vary and do change, the minimal required permissions are:
 
@@ -193,7 +193,7 @@ While the permissions may vary and do change, the minimal required permissions a
 - Deployment Manager Editor
 - Storage Object Admin
 
-If these permissions are not enough to authenticate, we recommend investigating other potentially required IAM permissions.
+If these permissions are not enough to authenticate, we recommend investigating other potentially required permissions.
 
 ## Other Google Cloud Services
 
