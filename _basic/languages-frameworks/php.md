@@ -137,7 +137,7 @@ composer install --prefer-dist --no-interaction
 
 ## Frameworks And Testing
 
-Codeship supports essentially all popular PHP frameworks, such as Laravel, Symfony, CodeIgniter and CakePHP. All frameworks that do not require root access for custom machine configuration should work without issue.
+Codeship supports essentially all popular PHP frameworks, such as Laravel, Symfony, CodeIgniter and CakePHP.
 
 Additionally, all testing frameworks, such as phpunit and codeception, will work on Codeship.
 

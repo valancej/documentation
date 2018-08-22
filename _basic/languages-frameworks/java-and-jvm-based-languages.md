@@ -20,7 +20,7 @@ menus:
     title: Java And JVM
     weight: 7
 categories:
-  - Languages And Frameworks    
+  - Languages And Frameworks
 redirect_from:
   - /languages/java-and-jvm-based-languages/
 ---
@@ -136,7 +136,7 @@ Codeship automatically caches the `$HOME/.ivy2` and `$HOME/.m2/repository` direc
 
 ## Frameworks And Testing
 
-All build tools and test frameworks, such as [JUnit](https://junit.org), will work without issue as long as they do not require root access for custom machine configuration.
+All build tools and test frameworks, such as [JUnit](https://junit.org), will work.
 
 ## Parallel Testing
 
