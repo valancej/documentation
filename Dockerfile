@@ -1,6 +1,6 @@
 FROM ruby:2.5.1-slim
 
-ENV CACHE_BUST=2018-06-19 \
+ENV CACHE_BUST=2018-08-23 \
     DEBIAN_DISTRIBUTION="stretch" \
     DEBIAN_FRONTEND="noninteractive" \
     NODE_VERSION="8.x" \
