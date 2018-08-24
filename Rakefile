@@ -84,7 +84,10 @@ task :htmlproofer do
     },
     :http_status_ignore => [999],
     :file_ignore => [/google1a85968316265362.html/],
-    :url_ignore => [/xip.io/]
+    :url_ignore => [/xip.io/],
+    :url_swap => {
+      'https://documentation.codeship.com' => '',
+    }
   }
   HTMLProofer.check_directory("/site/htmlproofer", options).run
   FileUtils.rm_rf("/site/htmlproofer")
