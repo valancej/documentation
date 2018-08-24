@@ -280,6 +280,8 @@ These flags should instead be implemented as directives in your Services file, a
 
 We do not support the top-level `networks` directive (see [unavailable features](#unavailable-features)) - but all containers running in a given step are on an isolated network, so you can communicate with services by using their service name as a hostname.
 
+As an example, if you have a service called `web` you can communicate with it on the hostname `web`. Similarly, if you need fully qualified domains for your testing, you can name your services like `web.codeship.com`.
+
 Containers are bidirectionally discoverable without requiring any custom setup and should not require custom network creation.
 
 ## Unavailable Features
