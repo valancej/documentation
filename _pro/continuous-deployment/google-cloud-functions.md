@@ -4,7 +4,7 @@ shortTitle: Deploying To Google Cloud Functions
 menus:
   pro/cd:
     title: Google Cloud Functions
-    weight: 10
+    weight: 11
 categories:
   - Deployment
   - Google

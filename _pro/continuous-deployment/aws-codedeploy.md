@@ -4,7 +4,7 @@ shortTitle: Deploying To AWS CodeDeploy
 menus:
   pro/cd:
     title: AWS CodeDeploy
-    weight: 5
+    weight: 6
 categories:
   - Deployment
   - AWS    

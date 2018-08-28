@@ -4,7 +4,7 @@ shortTitle: Deploying To Azure Container Service
 menus:
   pro/cd:
     title: Azure Container Service
-    weight: 6
+    weight: 7
 categories:
   - Deployment
   - Microsoft

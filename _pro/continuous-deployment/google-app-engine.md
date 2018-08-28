@@ -4,7 +4,7 @@ shortTitle: Deploying To Google App Engine
 menus:
   pro/cd:
     title: Google App Engine
-    weight: 9
+    weight: 10
 categories:
   - Deployment
   - Google

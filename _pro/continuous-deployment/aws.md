@@ -83,6 +83,7 @@ Once you have used the above instructions to set up your AWS deployment service 
 - [Elastic Container Service]({% link _pro/continuous-deployment/aws-ecs.md %})
 - [Elastic Container Registry]({% link _pro/builds-and-configuration/image-registries.md %}#aws-ecr)
 - [CodeDeploy]({% link _pro/continuous-deployment/aws-codedeploy.md %})
+- [EKS]({% link _pro/continuous-deployment/aws-eks.md %})
 
 ### Combining Various AWS Services In A Script
 
