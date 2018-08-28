@@ -240,6 +240,7 @@ kotlin
 kube
 kubectl
 kubernetes
+kubernetes.sh
 k8s
 laravel
 leiningen
