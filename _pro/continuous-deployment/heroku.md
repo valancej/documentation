@@ -39,7 +39,6 @@ This will be done by using Codeship Pro's [encrypted environment files feature](
 
 ```
 HEROKU_API_KEY=your_api_key_here
-CODESHIP_HEROKU_API_KEY=your_api_key_here
 ```
 
 You can get the Heroku API key from your [Heroku Dashboard](https://dashboard.heroku.com/account) or other methods outlined in the [Heroku documentation](https://devcenter.heroku.com/articles/platform-api-quickstart#authentication).
