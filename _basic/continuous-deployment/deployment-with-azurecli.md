@@ -27,10 +27,13 @@ You will need to install the CLI, configure your authentication with environment
 
 The [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest) _does not_ come pre-installed on Codeship Basic build machines.
 
-Please add the following command in the [Setup Commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}#configuring-your-setup-commands) section of your test settings to install the Azure CLI:
+Please add the following commands in the [Setup Commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}#configuring-your-setup-commands) section of your test settings to [install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest):
 
 ```shell
-pip install azure-cli
+AZ_REPO=$(lsb_release -cs)
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+sudo apt-get update && sudo apt-get install azure-cli
 ```
 
 ### Configuring Authentication
