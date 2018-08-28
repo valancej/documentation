@@ -27,9 +27,9 @@ You can find a [sample repo for deploying to any Kubernetes instance with CodeSh
 * include a table of contents
 {:toc}
 
-To make it easy for you to deploy your application to AWS EKS, which is a managed Kubernetes cluster service on AWS, we've build a container to make authenticating with a remote Kubernetes cluster and using the `kubectl` CLI easy.
+To make it easy for you to deploy your application to AWS EKS, which is a managed Kubernetes cluster service on AWS, we've built a container to make authenticating with a remote Kubernetes cluster and using the `kubectl` CLI easy.
 
-Because AWS provides [setup guide](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html) and a [starter blog post](https://aws.amazon.com/blogs/opensource/eksctl-eks-cluster-one-command/), we won’t cover the AWS side of your setup here. But, you will need an AWS user with the IAM right permissions  and an EKS cluster to be prepared on the AWS side.
+Because AWS provides [setup guide](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html) and a [starter blog post](https://aws.amazon.com/blogs/opensource/eksctl-eks-cluster-one-command/), we won’t cover the AWS side of your setup here. But, you will need an AWS user with the right IAM permissions and an EKS cluster to be prepared on the AWS side.
 
 ## CodeShip Kubernetes Deployment Container
 
