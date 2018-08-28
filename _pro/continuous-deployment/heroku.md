@@ -50,7 +50,7 @@ In the [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-co
 Note that Codeship maintains an image for this purpose. All you need to do is include it and provide your API key through the encrypted file discussed above, as well as set a [host volume]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}) so that you can share data with your primary containers.
 
 ```yaml
-herokudeployment:
+heroku-deployment:
   image: codeship/heroku-deployment
   encrypted_env_file: heroku-deployment.env.encrypted
   volumes:
@@ -66,9 +66,9 @@ If you are  not using [Heroku's Docker support](https://devcenter.heroku.com/art
 The deployment container discussed above has a `codeship_heroku deploy` command that you need to call, along with the path to your application. In this example, the path to our application is actually coming through our separate, application container via a [host volume]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}) (in this case `/deploy`). You will also need to provide your application name. The default script will then check that it has access to the application and deploy it.
 
 ```yaml
-- service: herokudeployment
+- service: heroku-deployment
   command: codeship_heroku deploy /deploy codeship-heroku-deployment
-- service: herokudeployment
+- service: heroku-deployment
   command: heroku run --exit-code --app codeship-heroku-deployment -- bundle exec rake db:migrate
 ```
 
@@ -86,27 +86,31 @@ On Codeship Pro, a push step happens in your [codeship-steps.yml file]({{ site.b
 ```yaml
 app:
   build:
-    image: registry.heroku.com/your_image/name
+    image: registry.heroku.com/your_image_name/web
     dockerfile: Dockerfile
   encrypted_env_file: heroku-deployment.env.encrypted
 
-dockercfg-generator:
+heroku-dockercfg-generator:
   image: codeship/heroku-dockercfg-generator
   add_docker: true
   encrypted_env_file: heroku-deployment.env.encrypted
 ```
 
-This image will be used on our push step, and is configured to automatically generate the token using the API key provided in the encrypted environment variables file.
+This `codeship/heroku-dockercfg-generator` image will be used on our image push step, and is configured to automatically generate the token using the API key provided in the encrypted environment variables file.
 
-Once we have this service in place, we can push to the Heroku registry in our [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
+Once we have this service in place, we can push to the Heroku registry in our [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) and subsequently trigger a release:
 
 ```yaml
-- name: Push
+- name: Push Image
   service: app
   type: push
-  image_name: registry.heroku.com/your_image/name
+  image_name: registry.heroku.com/your_image_name/web
   registry: registry.heroku.com
-  dockercfg_service: dockercfg-generator
+  dockercfg_service: heroku-dockercfg-generator
+
+- name: Trigger Release
+  service: heroku-deployment
+  command: heroku container:release --app your_image_name web
 ```
 
-Note that the `dockercfg_service` directive calls the `dockercfg_generator` we specified above, to generate our token. The only variable you need to be sure to modify if the `image_name`, which must be set to the name for the application image you are pushing as defined in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
+Note that the `dockercfg_service` directive calls the `heroku-dockercfg-generator` specified above to generate our token. The only variable you need to be sure to modify is `your_image_name`, which must be set to the name for the application image you are pushing as defined in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
