@@ -50,7 +50,9 @@ kubernetes-deployment:
   image: codeship/kubectl
 ```
 
-With this service configured as per the [Kubernetes documentation]({% link _pro/continuous-deployment/deployment-with-kubernetes.md %}), you will next add your `kubectl` deployment commands to your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}). In this example, we will run them via a script named `kubernetes.sh`:
+With this service configured as per the [Kubernetes documentation]({% link _pro/continuous-deployment/deployment-with-kubernetes.md %}), you will next add your `kubectl` deployment commands to your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+
+In this example, we will run them via a script named kubernetes.sh (such a script would be run from the container [via Docker volumes]({{ site.baseurl }}{% link _pro/builds-and-configuration/docker-volumes.md %}):
 
 ```yaml
 - name: deploy
