@@ -36,22 +36,22 @@ redirect_from:
 This article will teach you how to create and delete a project as well as give some further information on specific questions.
 
 ## Create a Project
-The screenshot below shows the initial [dashboard](https://app.codeship.com/projects) after logging in to Codeship for the first time.
+The screenshot below shows the initial [dashboard](https://app.codeship.com/projects) after logging in to CodeShip for the first time.
 ![new project screen]({{ site.baseurl }}/images/general/1welcome.png)
 
 In the next step, you can choose whether you want to import from a GitHub, GitLab, or Bitbucket repository by providing the repository link as shown in the examples.
 
 ![connecting to repository examples]({{ site.baseurl }}/images/general/2importrep.png)
 
-After connecting to a repository, you will either continue with [Codeship Basic]({{ site.baseurl }}{% link basic/index.md %}) or be able to choose between Codeship Basic and [Codeship Pro]({{ site.baseurl }}{% link pro/index.md %}) if the latter is activated on your account.
+After connecting to a repository, you will either continue with [CodeShip Basic]({{ site.baseurl }}{% link basic/index.md %}) or be able to choose between CodeShip Basic and [CodeShip Pro]({{ site.baseurl }}{% link pro/index.md %}) if the latter is activated on your account.
 
 ## Requirements For Creating A New Project
 
-To get started with a Codeship project, you will want to have a few resources available:
+To get started with a CodeShip project, you will want to have a few resources available:
 
 - A Github, Bitbucket or Gitlab account with admin permissions for a repo or organization
 
-- A Codeship account, either using your email or using source control authentication
+- A CodeShip account, either using your email or using source control authentication
 
 - A code base with either setup or test commands (or both) that you need to automate
 
@@ -63,7 +63,7 @@ You need to have project ownership for deleting a project. Once you click the de
 
 All your builds will be deleted as well. Make sure that you really don't need this project anymore. It cannot be recovered once deleted.
 
-## Creating Projects Using Codeship API
+## Creating Projects Using CodeShip API
 
 If you need to create a large number of projects, or maybe just create similar projects on a regular basis, you can use the API to do the heavy lifting and just have a template on your side that forms the basis for all new projects. To learn more, head over to the [API Documentation]({{ site.baseurl }}{% link _general/integrations/api.md %}) page.
 
@@ -78,7 +78,7 @@ If you want to **bulk transfer projects**, please reach out to our support via [
 
 {% csnote  %}
 **Example Use Cases**
-* You are using the Heroku addon and want to start using Codeship without it.
+* You are using the Heroku addon and want to start using CodeShip without it.
 * You don't want to maintain a project anymore and want to transfer it to someone else.
 {% endcsnote %}
 
@@ -91,16 +91,19 @@ If you wish to skip a build, please refer to the article about [skipping builds]
 
 ## Testing PRs from Forked Repositories
 
-Codeship **does not support testing pull requests from forked repositories** at the moment. You'd need to configure the forked repository separately on Codeship or push the branch to the already configured repository instead.
+CodeShip **does not support testing pull requests from forked repositories** at the moment. You'd need to configure the forked repository separately on CodeShip or push the branch to the already configured repository instead.
 
 ## Keyboard Shortcuts
 
-To make it easier to navigate through your Codeship projects, we've provided several keyboard shortcuts for quickly jumping through the interface:
+To make it easier to navigate through your CodeShip projects, we've provided several keyboard shortcuts for quickly jumping through the interface:
 
+- `Shift` + `?` brings up a list of all shortcuts
 - `gp`, available from inside your projects, will return you to your projects overview page
 - Escape key, available on your projects overview page, will return you to the previous page
 - Arrow keys, available on your projects overview page, will navigate between your projects
 - Enter key, available on your projects overview page, will select the highlighted project
+- `s` focuses on the project search bar
+- `gd` returns you to the CodeShip homepage
 
 ## Invite Team Members To Your Projects
 
@@ -110,17 +113,17 @@ Under ***Project Settings > Team members***, simply add their email address to s
 
 ![Invite team members to project]({{ site.baseurl }}/images/general/invite-team-member.png)
 
-## Whitelisting Codeship On Your Firewall
+## Whitelisting CodeShip On Your Firewall
 
-Codeship is hosted on AWS EC2 in the us-east-1 region. Because of this, Codeship services do not have static IP addresses by default. There are several different options for allowing Codeship to pass through your firewall.
+CodeShip is hosted on AWS EC2 in the us-east-1 region. Because of this, CodeShip services do not have static IP addresses by default. There are several different options for allowing CodeShip to pass through your firewall.
 
 * The most straightforward solution is our [IP whitelisting feature]({{ site.baseurl }}{% link _general/account/whitelisting.md %}) so you can allow a small number of [IP addresses]({{ site.baseurl }}{% link _general/account/whitelisting.md %}#step-2) through your firewall.
 
 * AWS publishes current [IP address ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json). You can enable access for those ranges on your firewall.
 
-* Another option is to set up and run your own [bastion host](https://en.wikipedia.org/wiki/Bastion_host). This allows you to route all Codeship calls through your bastion host and whitelist only this host.
+* Another option is to set up and run your own [bastion host](https://en.wikipedia.org/wiki/Bastion_host). This allows you to route all CodeShip calls through your bastion host and whitelist only this host.
 
-* Finally, another option is configuring [port knocking](https://help.ubuntu.com/community/PortKnocking). The [knock package]({% man_url knock %}) is already installed on Codeship Basic and could also be installed in your Codeship Pro configuration.
+* Finally, another option is configuring [port knocking](https://help.ubuntu.com/community/PortKnocking). The [knock package]({% man_url knock %}) is already installed on CodeShip Basic and could also be installed in your CodeShip Pro configuration.
 
 ## Can't Locate A File
 
@@ -134,4 +137,4 @@ cp your_config.yml.example your_config.yml
 You should also check that you are not coming from a case-insensitive operating system where you may not have noticed that the file name is different, i.e. `File.yml` compared to `file.yml`.
 
 ## Renaming A Project
-Right now it is not possible to rename a project. You will need to either remove and re-add the project if a repo's name is changed and you want to reflect this, or [contact our support team](email:helpdesk@codeship.com).
+Right now it is not possible to rename a project. You will need to either remove and re-add the project if a repo's name is changed and you want to reflect this, or [contact our support team](email:helpdesk@CodeShip.com).

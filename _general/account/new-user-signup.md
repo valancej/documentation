@@ -162,7 +162,10 @@ Note that different projects can have different email addresses configured and t
 
 To make it easier to navigate through your Codeship projects, we've provided several keyboard shortcuts for quickly jumping through the interface:
 
+- `Shift` + `?` brings up a list of all shortcuts
 - `gp`, available from inside your projects, will return you to your projects overview page
 - Escape key, available on your projects overview page, will return you to the previous page
 - Arrow keys, available on your projects overview page, will navigate between your projects
 - Enter key, available on your projects overview page, will select the highlighted project
+- `s` focuses on the project search bar
+- `gd` returns you to the CodeShip homepage
