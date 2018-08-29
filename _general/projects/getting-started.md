@@ -36,7 +36,7 @@ redirect_from:
 This article will teach you how to create and delete a project as well as give some further information on specific questions.
 
 ## Create a Project
-The screenshot below shows the initial [dashboard](https://app.CodeShip.com/projects) after logging in to CodeShip for the first time.
+The screenshot below shows the initial [dashboard](https://app.codeship.com/projects) after logging in to CodeShip for the first time.
 ![new project screen]({{ site.baseurl }}/images/general/1welcome.png)
 
 In the next step, you can choose whether you want to import from a GitHub, GitLab, or Bitbucket repository by providing the repository link as shown in the examples.
@@ -74,7 +74,7 @@ You can transfer your project to another account by navigating to:
 
 A user with appropriate permission for the target account needs to confirm the transfer if you do not have project creation rights in the target account. When confirming the transfer, the user can choose which of the current team members to keep and which to remove.
 
-If you want to **bulk transfer projects**, please reach out to our support via [helpdesk.CodeShip.com](https://helpdesk.CodeShip.com).
+If you want to **bulk transfer projects**, please reach out to our support via [helpdesk.codeship.com](https://helpdesk.codeship.com).
 
 {% csnote  %}
 **Example Use Cases**
