@@ -1,6 +1,6 @@
 ---
 title: Using The Codeship API For CI/CD Workflows
-shortTitle: API
+shortTitle: Codeship API v2
 menus:
   general/integrations:
     title: Codeship API
@@ -19,26 +19,24 @@ redirect_from:
 * include a table of contents
 {:toc}
 
-## API v2 Introduction
+## Codeship API v2
 
-We launched a new version of the API, which is open to anyone and doesn't require any registration. This page will provide more context around the new API and examples of how to work with it.
+The Codeship API v2 provides a number of ways for you to programmatically interact with your projects on Codeship.
 
-If you're just looking to get started, head over to the [API v2 Documentation](https://apidocs.codeship.com/v2/) for all the details.
+To get started visit the [API v2 documentation](https://apidocs.codeship.com/v2/) for all the details. If you need help with the API please reach out to our [support team](https://helpdesk.codeship.com).
 
 ## Core Use Cases
 
-The new API has initially been focused on solving a specific set of core use cases, which has been requested by the majority of users:
+The API is focused on solving a specific set of core use cases:
 
-* Custom Dashboards - the ask here have been to be able to mix and match data from codeship with other systems, to create custom dashboards that would not be possible inside Codeship. See [this example](https://blog.codeship.com/creating-a-custom-build-status-page-using-codeship-api-v2/) for inspiration on how to get started.
-* Chaining Projects - what we've heard most here is needing to trigger a downstream project based on results from one or more upstream projects, and potentially information from outside of codeship. If you're looking to chain multiple Codeship projects, consider relying on a notification webhook as the trigger instead of polling the API for updates to the upstream build.
-* Automatically (or manually) Trigger New Builds - scheduled builds, builds triggered by events in external systems, or just giving QA a button on a webpage to trigger a build, have been among the requests for this use case.
-* Automatic project creation - for those who more frequently create new projects, there's been a lot of requests for being able to automatically provisioning a project on codeship, together with provisioning a new repo, test environment etc. to make bootstrapping a new project quicker and more standardized
-
-If you need help with something you're trying to use the API for, whether covered by the above use cases or not, please reach out to our support via [helpdesk.codeship.com](https://helpdesk.codeship.com).
+* Custom Dashboards - Mix and match data from Codeship with other systems to create custom dashboards. See [this example](https://blog.codeship.com/creating-a-custom-build-status-page-using-codeship-api-v2/) for inspiration on how to get started.
+* Chaining Projects - Trigger a downstream project based on results from one or more upstream projects, and potentially information from outside of Codeship. If you're looking to chain multiple Codeship projects, consider relying on a notification webhook as the trigger instead of polling the API for updates to the upstream build. See [this example](https://blog.codeship.com/chained-builds-with-codeship-api-v2/) for some ideas.
+* Trigger New Builds - Scheduled builds, builds triggered by events in external systems, or just giving QA a button on a webpage to trigger a build.
+* Automatic Project Creation - For those who frequently create new projects you can automatically provision a project on Codeship, together with provisioning a new repo, test environment, etc.
 
 ## Available Endpoints
 
-Having the above scenarios as a guiding light, we have focus on these specific endpoints:
+With the above scenarios as a guide, there are these specific endpoints:
 
 * Authentication and authorization
 * Projects
@@ -46,37 +44,18 @@ Having the above scenarios as a guiding light, we have focus on these specific e
 
 ### Projects Endpoint
 
-For Projects, you're able to do most CRUD operations (we're working on the remaining ones) which should allow you to automate most of your project maintenance tasks; especially useful for those with 10s or 100s of projects.
-
-**Things to note**:
-
-* There's currently no Delete action on projects
-* Test and deployment pipelines cannot be updated at this point in time
-* Both items are planned to be addressed early 2018
+For projects, you're able to do most CRUD operations which should allow you to automate most of your project maintenance tasks; especially useful for those with 10s or 100s of projects. There is currently no delete action on projects.
 
 ### Builds Endpoint
 
-Builds can't really be deleted, but otherwise you can do pretty much anything with them. You can even go a level deeper than what the Codeship UI offers; if you restart a build, the old build data is kept around, but the UI only shows the latest. With the builds endpoint you can get the information on those old builds as well.
+Builds can't be deleted, but otherwise you can do most anything with them. You can even go a level deeper than what the Codeship UI offers. If you restart a build, the old build data is kept around, but the UI only shows the latest. With the builds endpoint you can get the information on those old builds as well.
 
-In terms of `commands` on the builds endpoint, we've deviated slightly from "textbook REST" and have allowed endpoints to `/restart` an existing build or `/stop` a running build. If you want to trigger a build that pulls the latest code from a given branch, you would POST to the `/builds` endpoint with the project and the branch in question. More details can be found on this in the [API v2 Documentation](https://apidocs.codeship.com/v2/).
+In terms of `commands` on the builds endpoint, we've deviated slightly from "textbook REST" and have allowed endpoints to `/restart` an existing build or `/stop` a running build. If you want to trigger a build that pulls the latest code from a given branch, you would POST to the `/builds` endpoint with the project and the branch in question. More details can be found on this in the [API v2 documentation](https://apidocs.codeship.com/v2/).
 
 ## API Clients
 
-### Golang
+### Go
 
-If you're using Golang for you automation, you can get started more quickly with the [Official Codeship Go API Client](https://github.com/codeship/codeship-go). There's a good introduction in the git repo, and you can find the [full documentation here](https://godoc.org/github.com/codeship/codeship-go).
+If you're using Go for your automation, you can get started more quickly with our [Codeship Go API client](https://github.com/codeship/codeship-go). There's a good introduction in the repo, and also [full documentation](https://godoc.org/github.com/codeship/codeship-go).
 
-The Golang library is released with the MIT license, so feel free to use it as you will. If you have suggestions, bugs or otherwise want to contribute to the project, please use the [GitHub Issues](https://github.com/codeship/codeship-go/issues) to submit these (or submit a PR).
-
-### Ruby & Javascript
-
-We plan to add Ruby and Javascript API clients in the near future.
-
-**Things to note**:
-
-* At this point we can't provide log output via the API. We're working on making that possible, but it'll take some time.
-
-## Deprecation of v1
-
-With the public release of v2, the old v1 API will be deprecated by July 1st, 2018. If you're relying on v1 and don't think you can migrate to v2 before this date, please get in touch with [helpdesk.codeship.com](https://helpdesk.codeship.com) and we'll see how we can help.
-
+The Go library is released with the MIT license, so feel free to use it as you will. If you have suggestions, bugs or otherwise want to contribute to the project, please use the [GitHub issues](https://github.com/codeship/codeship-go/issues) to submit these (or submit a PR).
