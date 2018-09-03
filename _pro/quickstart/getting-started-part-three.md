@@ -78,13 +78,13 @@ Add the following code, and then we'll go through it, to discuss what's happenin
 
 There are a few things to note here:
 
-* `Push` is the step type we use to signify that we're pushing out the image defined or built by our service.
+* `push` is the step type we use to signify that we're pushing out the image defined or built by our service.
 
-* `Image name` takes a slightly different form depending on the repo - if it's Docker Hub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
+* `image_name` takes a slightly different form depending on the repo - if it's Docker Hub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
 
-* `Registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Docker Hub be sure to verify that you get the right value for this.
+* `registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Docker Hub be sure to verify that you get the right value for this.
 
-* `Encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
+* `encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
 
 ## Encrypted Credentials
 
@@ -166,8 +166,9 @@ To do this, you will need to execute the following commands:
 
 ```shell
 jet run PRIMARY_SERVICE_NAME
+# locate CONTAINER_ID
 docker ps -a
-docker exec CONTAINERID
+docker exec -it CONTAINER_ID /bin/sh
 ```
 
 Note that you are running your containers, looking up the container ID and then connecting to the running container using the container ID.
