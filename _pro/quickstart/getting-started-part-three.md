@@ -94,6 +94,8 @@ First, if you didn't do it on the last step, you'll need to download your projec
 
 ![Downloading AES key]({{ site.baseurl }}/images/gettingstarted/aes_key.png)
 
+Once downloaded, move the AES key to your project folder and rename to `codeship.aes`.
+
 {% csnote warning %}
 Be sure to add your project's AES key to your **.gitignore** file to prevent it from being committed.
 {% endcsnote %}
@@ -119,9 +121,17 @@ cat ${HOME}/.docker/config.json
 ```
 
 {% csnote info %}
-**If you are using Mac OSX**, the newer versions of Docker have changed to store credentials in the OSX keychain rather than in a configuration file.
+**If you are using MacOS**
 
-To get the appropriate authentication file on OSX, you will need to remove the `credsStore` line from Docker's `config.json` to disable Keychain storage, re-run `docker login` and then use the values it then generates in your updated `dockercfg` as shown above.
+The newer versions of Docker have changed to store credentials in the MacOS keychain rather than in a configuration file.
+
+To get the appropriate authentication file on MacOS, you will need to remove the `credsStore` line from Docker's `config.json` to disable Keychain storage, re-run `docker login` and then use the values it then generates in your updated `dockercfg` as shown above.
+{% endcsnote %}
+
+{% csnote info %}
+**If you are using Linux**
+
+If you encounter any issues with the aforementioned instructions then we recommend copying `$HOME/.docker/config.json` to the project folder, renaming to `dockercfg` and redacting listed credentials as needed.
 {% endcsnote %}
 
 This will print the `auths` value that we need to add to our `dockercfg` file. Once we've added this information to our `dockercfg` file and saved it, we'll run:
@@ -130,7 +140,11 @@ This will print the `auths` value that we need to add to our `dockercfg` file. O
 jet encrypt dockercfg dockercfg.encrypted
 ```
 
-You should see your new `dockercfg.encrypted` file populate. Now, you'll want to remove your unencrypted version - or, at the very least, add it to your **.gitignore** file like your AES key.
+You should see your new `dockercfg.encrypted` file populate within your project directory.
+
+{% csnote warning %}
+Be sure to remove the unencrypted `dockercfg` file - or, at the very least, add it to your **.gitignore** file like your AES key.
+{% endcsnote %}
 
 ## Push!
 
