@@ -78,13 +78,13 @@ Add the following code, and then we'll go through it, to discuss what's happenin
 
 There are a few things to note here:
 
-* `Push` is the step type we use to signify that we're pushing out the image defined or built by our service.
+* `push` is the step type we use to signify that we're pushing out the image defined or built by our service.
 
-* `Image name` takes a slightly different form depending on the repo - if it's Docker Hub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
+* `image_name` takes a slightly different form depending on the repo - if it's Docker Hub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
 
-* `Registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Docker Hub be sure to verify that you get the right value for this.
+* `registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Docker Hub be sure to verify that you get the right value for this.
 
-* `Encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
+* `encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
 
 ## Encrypted Credentials
 
@@ -93,6 +93,8 @@ So, just like we did with our environmental variables in the previous lesson, we
 First, if you didn't do it on the last step, you'll need to download your project's AES key in to your code's directory. To get the AES key, just go to your project on Codeship.com and look at the project settings.
 
 ![Downloading AES key]({{ site.baseurl }}/images/gettingstarted/aes_key.png)
+
+Once downloaded, move the AES key to your project folder and rename to `codeship.aes`.
 
 {% csnote warning %}
 Be sure to add your project's AES key to your **.gitignore** file to prevent it from being committed.
@@ -119,9 +121,17 @@ cat ${HOME}/.docker/config.json
 ```
 
 {% csnote info %}
-**If you are using Mac OSX**, the newer versions of Docker have changed to store credentials in the OSX keychain rather than in a configuration file.
+**If you are using MacOS**
 
-To get the appropriate authentication file on OSX, you will need to remove the `credsStore` line from Docker's `config.json` to disable Keychain storage, re-run `docker login` and then use the values it then generates in your updated `dockercfg` as shown above.
+The newer versions of Docker have changed to store credentials in the MacOS keychain rather than in a configuration file.
+
+To get the appropriate authentication file on MacOS, you will need to remove the `credsStore` line from Docker's `config.json` to disable Keychain storage, re-run `docker login` and then use the values it then generates in your updated `dockercfg` as shown above.
+{% endcsnote %}
+
+{% csnote info %}
+**If you are using Linux**
+
+If you encounter any issues with the aforementioned instructions then we recommend copying `$HOME/.docker/config.json` to the project folder, renaming to `dockercfg` and redacting listed credentials as needed.
 {% endcsnote %}
 
 This will print the `auths` value that we need to add to our `dockercfg` file. Once we've added this information to our `dockercfg` file and saved it, we'll run:
@@ -130,7 +140,11 @@ This will print the `auths` value that we need to add to our `dockercfg` file. O
 jet encrypt dockercfg dockercfg.encrypted
 ```
 
-You should see your new `dockercfg.encrypted` file populate. Now, you'll want to remove your unencrypted version - or, at the very least, add it to your **.gitignore** file like your AES key.
+You should see your new `dockercfg.encrypted` file populate within your project directory.
+
+{% csnote warning %}
+Be sure to remove the unencrypted `dockercfg` file - or, at the very least, add it to your **.gitignore** file like your AES key.
+{% endcsnote %}
 
 ## Push!
 
@@ -166,8 +180,9 @@ To do this, you will need to execute the following commands:
 
 ```shell
 jet run PRIMARY_SERVICE_NAME
+# locate CONTAINER_ID
 docker ps -a
-docker exec CONTAINERID
+docker exec -it CONTAINER_ID /bin/sh
 ```
 
 Note that you are running your containers, looking up the container ID and then connecting to the running container using the container ID.

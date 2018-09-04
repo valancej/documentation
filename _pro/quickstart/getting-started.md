@@ -84,26 +84,24 @@ If you're not familiar with Dockerfiles, and you want to spend a little bit of t
 - [Docker Documentation](https://docs.docker.com/)
 - [The Docker Ecosystem](https://blog.codeship.com/understanding-the-docker-ecosystem/)
 
-Once you're ready to get going, create an empty Dockerfile and paste this code into it:
+Once you're ready to get going, create an empty `Dockerfile` and paste this code into it:
 
 ```dockerfile
 # base on latest ruby base image
 FROM ruby:2.5.0
 
-# update and install dependencies
-RUN apt-get update -qq
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential libpq-dev nodejs apt-utils
+# install dependencies
+RUN apt-get update && apt-get install -y build-essential libpq-dev nodejs apt-utils
 
-# setup app folders
-RUN mkdir /app
+# declare /app as working directory of image
 WORKDIR /app
 
-# copy over Gemfile and install bundle
-ADD Gemfile /app/Gemfile
-ADD Gemfile.lock /app/Gemfile.lock
+# copy over Gemfile and Gemfile.lock to image's working directory, then run `bundle install`
+COPY Gemfile Gemfile.lock ./
 RUN bundle install --jobs 20 --retry 5
 
-Add . /app
+# copy all remaining files/folders in project directory to the container
+COPY . /app
 ```
 
 As you can see here, we're pulling the Ruby base image, creating some directories, installing some gems, and then adding our code. That last bit is important because now when we launch our Docker container, the `check.rb` script we wrote earlier will be inside it and ready to run.
