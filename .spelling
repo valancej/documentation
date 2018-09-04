@@ -245,6 +245,7 @@ k8s
 laravel
 leiningen
 lftp
+libsodium
 libxml
 libxslt
 linux
