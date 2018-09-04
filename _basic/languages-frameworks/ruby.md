@@ -164,3 +164,17 @@ gem uninstall -x -a bundler
 rvm @global do gem uninstall -x -a bundler
 gem install bundler -v YOUR_BUNDLER_VERSION
 ```
+
+### FreeTDS
+
+[FreeTDS](http://www.freetds.org) `0.91-5` is installed by default. If your project requires a newer version you can install it with with a [script](https://github.com/codeship/scripts/blob/master/packages/freetds.sh) by adding this command to your setup steps:
+
+```
+\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/freetds.sh | bash -s
+```
+
+Following the install add this command before running `bundle install`:
+
+```
+bundle config build.tiny_tds --with-freetds-lib=$HOME/cache/freetds/lib --with-freetds-include=$HOME/cache/freetds/include
+```
