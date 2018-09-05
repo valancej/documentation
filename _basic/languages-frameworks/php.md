@@ -195,3 +195,17 @@ Note that if you need to install a custom version of PHPUnit, you can do so with
 composer global remove phpunit/phpunit
 composer global require phpunit/phpunit:5.*
 ```
+
+### libsodium
+
+If your project requires [libsodium](https://libsodium.org) you can install it with with a [script](https://github.com/codeship/scripts/blob/master/packages/libsodium.sh) by adding this command to your setup steps:
+
+```
+\curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/libsodium.sh | bash -s
+```
+
+Following the install add this command to install with pecl:
+
+```
+LD_LIBRARY_PATH=$HOME/cache/libsodium/lib PKG_CONFIG_PATH=$HOME/cache/libsodium/lib/pkgconfig LDFLAGS="-L$HOME/cache/libsodium/lib" pecl install libsodium
+```
