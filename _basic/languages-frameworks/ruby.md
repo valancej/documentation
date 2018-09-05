@@ -167,7 +167,7 @@ gem install bundler -v YOUR_BUNDLER_VERSION
 
 ### FreeTDS
 
-[FreeTDS](http://www.freetds.org) `0.91-5` is installed by default. If your project requires a newer version you can install it with with a [script](https://github.com/codeship/scripts/blob/master/packages/freetds.sh) by adding this command to your setup steps:
+[FreeTDS](http://www.freetds.org) `0.91-5` is installed by default. If your project requires a newer version you can install it with a [script](https://github.com/codeship/scripts/blob/master/packages/freetds.sh) by adding this command to your setup steps:
 
 ```
 \curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/freetds.sh | bash -s
