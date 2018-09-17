@@ -44,6 +44,7 @@ As an example, the following will start your service, display the container ID, 
 
 ```shell
 $ jet run PRIMARY_SERVICE_NAME
+# locate CONTAINER_ID
 $ docker ps -a
-$ docker exec CONTAINERID
+$ docker exec -it CONTAINER_ID /bin/sh
 ```
