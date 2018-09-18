@@ -78,6 +78,18 @@ By default, Docker will use existing images when running `jet` locally. This may
 
 We recommend removing any locally saved Docker images prior to running `jet steps` for a more consistent result to the remote server if you are seeing this issue.
 
+### Results from 'jet steps' differ from my build on CodeShip Pro, why might that be?
+
+- Jet tool is out of date
+- Jet is relying on an outdated Docker image stored on your local machine Docker Host
+- Resource constraints for the allotted CodeShip Pro instance size are forcing processes to be killed on CodeShip Pro builds, while processes run uninterrupted with `jet steps`
+- Files are present on the local machine project folder that would not be otherwise present in a freshly cloned version of the repository
+- Volumes may be configured to map absolute pathed Docker Host directories
+- Outdated Docker Engine version
+- Jet presumes the presence of certain CI environment variables that are not present during `jet steps`
+- Golang template objects are not present for 
+
+
 ## Examples
 
 ### Display help text
