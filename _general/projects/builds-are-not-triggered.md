@@ -32,15 +32,13 @@ If your builds are not getting triggered on Codeship, it could be that we are ex
 
 Builds on Codeship are triggered via a webhook from your source control repository. This webhook is added to your repository when you connect the project to Codeship, but sometimes those settings get out of sync.
 
-You can find a status indicator for this webhook on the _General_ page of your project settings.
-
-![Hook Status and Project UUID]({{ site.baseurl }}/images/faq/hook_status_and_project_uuid.png)
+Depending on your SCM, the process to fix this is a bit different.
 
 ### GitHub
 
-Make sure the _Codeship_ service is added under the _Webhooks & Services_ section of your repository settings. Also check that the UUID configured for the repository matches the one shown on the _General_ page of your project settings on Codeship.
+Make sure the CodeShip Github App has been installed on your Github organization that owns the repository for your project. You also need to ensure that the CodeShip Github App has been allowed to access the repository. To install or update your CodeShip Github App, go to your Github _Organization Settings_ and select the _Installed Github Apps_ menu. If the CodeShip Github App is not installed it will not show up; if it is installed click the _Configure_ button to update the list of allowed repositories.
 
-![GitHub Service Configuration]({{ site.baseurl }}/images/faq/service_github.png)
+![Github Apps Configuration]({{ site.baseurl }}/images/general/github_apps_configuration.png)
 
 ### Gitlab
 

@@ -39,9 +39,9 @@ When we say permissions, we are  talking about access you give Codeship to your 
 
 In terms of access you give Codeship, there are two different types that are in play: repository level permissions and access level permissions.
 
-For Codeship to configure your repo correctly, the account that connects a repo needs to have the necessary permissions to setup a webhook etc on the repository. For this, we expect that account to have `admin` permissions (or master or owner depending on your source control system).
+For Codeship to configure your Bitbucket or Gitlab repository correctly, the account that connects a repository needs to have the necessary permissions to setup a webhook etc. For this, we expect that account to have `admin` permissions (or `master` or `owner` depending on your source control system). As for access permissions, these influence what we're allowed to do on your behalf, on a per-build basis. We need access to clone your repo, as well as report back with the test results, but not full admin permissions.
 
-As for access permissions, these influence what we're allowed to do on your behalf, on a per-build basis. We need access to clone your repo, as well as report back with the test results, but not full admin permissions.
+Github works slightly different, as we require you to install the CodeShip Github App and allow the app access to the repositories you want to use on CodeShip. We expect you to have permission to install the app and configure it. Once the app has been installed, users who with to setup new projects mainly need to have access to the repository (and the app also need to have access).
 
 The next section explains which specific permissions we ask for, depending on your source control system.
 
@@ -51,9 +51,13 @@ As mentioned above, Codeship requires both repository and access level permissio
 
 #### Github
 
-- For setting up a new project, we need the account to have `admin` permissions.
-- For regular access, we require read/write permissions to your private repositories so that we can clone the repos and report back status.
-- Like all providers that integrate with Github, we'd love to request fewer permissions than we do, but as we're currently using GitHub's OAuth integration, we're limited to the [few options GitHub provides](https://developer.github.com/v3/oauth/#scopes) (we're asking for `repo` and `user:email` scopes). We are looking to move to the new [GitHub Integration](https://developer.github.com/early-access/integrations/integrations-vs-oauth-applications/) options, to offer you more granular control, in the near future.
+- For setting up a new project, we need the CodeShip Github App installed on your Github organization, and access to the necessary repositories via that app. We'll help you set things up when you create your first project, and once the app is installed you only need to make sure it has access to the repository you want to use in your new project.
+- The CodeShip Github App will ask for permissions to:
+  - Read your code
+  - Read metadata for your organization (default permission [set by Github](https://developer.github.com/apps/building-github-apps/setting-permissions-for-github-apps/))
+  - Read and Write access to administer your project and set commit status (this is a combined permission, without it we can't update commit status)
+- For regular user access, aside from the default access, we only ask to read your email, in case we need to get in contact with you
+  - The default permissions mainly allows us to see what resources you have access to (e.g. which organizations you're connected to, and if they have the CodeShip app installed). We cannot change these permissions as they're controlled by Github
 
 #### Bitbucket
 
@@ -91,13 +95,14 @@ See GitHub's help article on [3rd party restrictions](https://help.github.com/ar
 
 ### What if I'm not an admin of the repo?
 
-If you attempt to connect a repository to a new project, and you don't have `admin` permissions on that repository, there are two things you can do:
+If you attempt to connect a repository to a new project, and you don't have `admin` permissions on that repository (or, for Github don't have permission to install the CodeShip Github App), there are two things you can do:
 
 1. The simplest option is to get `admin` permissions to the repo, which can be given to the team you're in or specifically to your user
-1. The second option is to have someone else, who have `admin` permissions, setup the project for you. The flow would look like this:
+1. (Non Github): The second option is to have someone else, who have `admin` permissions, setup the project for you. The flow would look like this:
     1. User with `admin` permission creates the project and connects the repo (Codeship will create a webhook and register an SSH key)
     1. Same user changes the project settings (Project settings > General > Account used for authentication) and assigns the project to you or another user with limited permissions
     1. The project can now be used by Codeship, even without having admin permissions to the repo
+1. (Github Only): you can get a user with sufficient rights to install the CodeShip Github App and provide it access to the repositories you need, and then proceed to setup the new projects. During the setup the app will retrieve the repositories available to it and you can select the one you want for your new project
 
 ## Security
 

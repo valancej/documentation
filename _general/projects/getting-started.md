@@ -36,32 +36,40 @@ redirect_from:
 This article will teach you how to create and delete a project as well as give some further information on specific questions.
 
 ## Create a Project
-The screenshot below shows the initial [dashboard](https://app.codeship.com/projects) after logging in to CodeShip for the first time.
-![new project screen]({{ site.baseurl }}/images/general/1welcome.png)
 
-In the next step, you can choose whether you want to import from a GitHub, GitLab, or Bitbucket repository by providing the repository link as shown in the examples.
+The first thing you need to select, when creating a new project, is where your code is located. You can use Github, Bitbucket, or GitLab in either their cloud version or as a [self-hosted git server]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}).
 
-![connecting to repository examples]({{ site.baseurl }}/images/general/2importrep.png)
+If you select to use a cloud-based Github repository, you will be asked to first select the Github Organization that owns the repository, and then to select the repository itself. If you don't see your organization or repository in either of the dropdowns, you will likely need to first install the CodeShip Github App and/or allow the app access to the repository you're trying to setup a project for.
 
-After connecting to a repository, you will either continue with [CodeShip Basic]({{ site.baseurl }}{% link basic/index.md %}) or be able to choose between CodeShip Basic and [CodeShip Pro]({{ site.baseurl }}{% link pro/index.md %}) if the latter is activated on your account.
+![Select Github Repository]({{ site.baseurl }}/images/general/select_github_repo.png)
+
+If you select to use one of the other options, you will need to first get a link to the repository from your git server
+
+![Specify Repository]({{ site.baseurl }}/images/general/specify_repo.png)
+
+After connecting to a repository, you will be able to choose between [CodeShip Basic]({{ site.baseurl }}{% link basic/index.md %}) and [CodeShip Pro]({{ site.baseurl }}{% link pro/index.md %}).
 
 ## Requirements For Creating A New Project
 
 To get started with a CodeShip project, you will want to have a few resources available:
 
-- A Github, Bitbucket or Gitlab account with admin permissions for a repo or organization
+- A Github account with permission to install the Codeship Github app, or a Bitbucket or Gitlab account with admin permissions for a repo or organization
 
 - A CodeShip account, either using your email or using source control authentication
 
 - A code base with either setup or test commands (or both) that you need to automate
 
 ## Delete a Project
-You need to have project ownership for deleting a project. Once you click the delete button, you will have to confirm the deletion once more. A project can be deleted by going to:
+You need to have project ownership for deleting a project. Once you click the delete button, you will have to confirm the deletion once more.
 
-***Project Settings > General > Delete project***
+ A project can be deleted by going to _Project Settings_ on the project builds view, selecting the _General_ tab and click the _Delete this project_ button
+
 ![Delete a Project]({{ site.baseurl }}/images/general/deleteproject.png)
 
-All your builds will be deleted as well. Make sure that you really don't need this project anymore. It cannot be recovered once deleted.
+All your builds will be deleted as well. Make sure that you really don't need this project anymore as it cannot be recovered once deleted.
+
+## Renaming A Project
+Right now it is not possible to rename a project. You will need to either remove and re-add the project if a repo's name is changed and you want to reflect this, or [contact our support team](email:helpdesk@CodeShip.com).
 
 ## Creating Projects Using CodeShip API
 
@@ -135,6 +143,3 @@ cp your_config.yml.example your_config.yml
 ```
 
 You should also check that you are not coming from a case-insensitive operating system where you may not have noticed that the file name is different, i.e. `File.yml` compared to `file.yml`.
-
-## Renaming A Project
-Right now it is not possible to rename a project. You will need to either remove and re-add the project if a repo's name is changed and you want to reflect this, or [contact our support team](email:helpdesk@CodeShip.com).
