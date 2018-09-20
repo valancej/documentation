@@ -39,7 +39,7 @@ This article will teach you how to create and delete a project as well as give s
 
 The first thing you need to select, when creating a new project, is where your code is located. You can use Github, Bitbucket, or GitLab in either their cloud version or as a [self-hosted git server]({{ site.baseurl }}{% link _general/about/self-hosted-scm.md %}).
 
-If you select to use a cloud-based Github repository, you will be asked to first select the Github Organization that owns the repository, and then to select the repository itself. If you don't see your organization or repository in either of the dropdowns, you will likely need to first install the CodeShip Github App and/or allow the app access to the repository you're trying to setup a project for.
+If you select to use a cloud-based Github repository, you will be asked to first select the Github Organization that owns the repository, and then to select the repository itself. If you don't see your organization or repository in either of the dropdown boxes, you will likely need to first install the CodeShip Github App and/or allow the app access to the repository you're trying to setup a project for.
 
 ![Select Github Repository]({{ site.baseurl }}/images/general/select_github_repo.png)
 
