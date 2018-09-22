@@ -37,11 +37,15 @@ When we say permissions, we are  talking about access you give Codeship to your 
 
 #### Repository permissions vs. Access permissions ####
 
-In terms of access you give Codeship, there are two different types that are in play: repository level permissions and access level permissions.
+In terms of access you give Codeship, there are two different types that are in play: repository level permissions (for setting up new projects on CodeShip) and access level permissions (for authenticating with an SCM instead of username/password).
 
-For Codeship to configure your Bitbucket or Gitlab repository correctly, the account that connects a repository needs to have the necessary permissions to setup a webhook etc. For this, we expect that account to have `admin` permissions (or `master` or `owner` depending on your source control system). As for access permissions, these influence what we're allowed to do on your behalf, on a per-build basis. We need access to clone your repo, as well as report back with the test results, but not full admin permissions.
+To configure CodeShip with your Bitbucket or Gitlab repository correctly, the account that connects a repository needs to have the necessary permissions to setup a webhook, add deploy keys, update commit statuses, as well as clone the code in your repositories. For the initial configuration of CodeShip, we expect the user's account to have `admin` permissions (or `master` or `owner` depending on your source control system) to allow us to properly configure your SCM.
+In case a user will not need to setup new projects on CodeShip, we mainly need to
 
-Github works slightly different, as we require you to install the CodeShip Github App and allow the app access to the repositories you want to use on CodeShip. We expect you to have permission to install the app and configure it. Once the app has been installed, users who with to setup new projects mainly need to have access to the repository (and the app also need to have access).
+Github works slightly different, and requires that you to [install the CodeShip Github App](https://github.com/apps/codeship/installations/new) first, and then allow the app access to the repositories you want to use on CodeShip. You can select only the repositories you want us to have access to, or all repositories (incl. future ones). We suggest you only allow access to specific repositories to keep control on who can access what.
+For you to setup the github app, you must have permission to install apps on your organization and configure them. Once the app has been installed, users who setup new projects mainly need to have access to the repository, but do not need permission to install apps.
+
+As for access level permissions, we aim to request as few permissions as possible for users, but for some SCMs this is not possible, yet. Github is an example where we only ask for permissions to authenticate the user as well as the email, where as Gitlab only lets us ask for access to everything.
 
 The next section explains which specific permissions we ask for, depending on your source control system.
 
@@ -51,7 +55,7 @@ As mentioned above, Codeship requires both repository and access level permissio
 
 #### Github
 
-- For setting up a new project, we need the CodeShip Github App installed on your Github organization, and access to the necessary repositories via that app. We'll help you set things up when you create your first project, and once the app is installed you only need to make sure it has access to the repository you want to use in your new project.
+- For setting up a new project (repository level permissions), we need the CodeShip Github App installed on your Github organization, and access to the necessary repositories via that app. We'll help you set things up when you create your first project, and once the app is installed you only need to make sure it has access to the repository you want to use in your new project.
 - The CodeShip Github App will ask for permissions to:
   - Read your code
   - Read metadata for your organization (default permission [set by Github](https://developer.github.com/apps/building-github-apps/setting-permissions-for-github-apps/))
@@ -61,11 +65,11 @@ As mentioned above, Codeship requires both repository and access level permissio
 
 #### Bitbucket
 
-- For setting up a new project, we need the account to have `master` or `owner` permissions.
+- For setting up a new project (repository level permissions), we need the account to have `master` or `owner` permissions.
 - For regular access, we currently ask for full access to everything in the repository, but will change this soon to only cover reading/writing to your repos and webhooks as well as reading your email addresses (more specifically `repository:write`, `email`, and `webhook`. You can see the full list of permission options available from BitBucket [here](https://developer.atlassian.com/bitbucket/concepts/bitbucket-rest-scopes.html).
 
 #### Gitlab
-- For setting up a new project, we need the account to have `admin` permissions.
+- For setting up a new project (repository level permissions), we need the account to have `admin` permissions.
 - For regular access, GitLab only offers one option (the `api` scope), which unfortunately gives us access to everything on the repo. We wish it was different, but as of now, [GitLab only provides two options](https://docs.gitlab.com/ee/integration/oauth_provider.html#authorized-applications) where only one will allow us to access your repos.
 
 ### What permissions can I assign my team members?
