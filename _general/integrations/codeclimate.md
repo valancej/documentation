@@ -26,7 +26,7 @@ redirect_from:
 
 
 {% csnote info %}
-These instructions use the newest version of the Code Climate reporter, which is still in beta. Please view [their documentation](https://docs.codeclimate.com/v1.0/docs/configuring-test-coverage-older-versions) for instructions on using the older reporter. You will still need to add your API token via [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}), as seen below, but the test configuration will work differently.
+The Code Climate test reporter takes a supported test coverage report, transforms it into a generalized format, and submits it to the Code Climate API. It can also combine multiple test coverage report payloads created from parallel test processes within a parallelized CI build. The test reporter relies on third party (typically open source) tools to generate local test coverage reports. When troubleshooting test coverage submission, please first ensure you're able to generate test coverage in a supported format locally, outside of Code Climate's test reporter.
 {% endcsnote %}
 
 * include a table of contents
