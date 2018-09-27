@@ -21,12 +21,12 @@ redirect_from:
 {:toc}
 
 {% csnote info %}
-Note that this article addresses caching on **Codeship Basic**. If you are looking for information on caching with **Codeship Pro**, [click here]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %})
+This article addresses caching on **Codeship Basic**. There is a separate guide for [caching on Codeship Pro]({{ site.baseurl }}{% link _pro/builds-and-configuration/caching.md %}).
 {% endcsnote %}
 
 ## What Is The Dependency Cache?
 
-On all Codeship Basic projects, we automatically cache the dependency directories for several popular tools and frameworks to speed up future builds.
+On all Codeship Basic projects, we automatically cache the dependency directories for several popular tools to speed up future builds.
 
 This means that all packages saved in these directories at the end of a build will be automatically loaded on the build machine for future builds.
 
@@ -36,18 +36,21 @@ Any packages, up to 500mb, in the following directories at the end of your build
 
 - `$HOME/.ivy2`
 - `$HOME/.m2/repository`
-- `$HOME/cache/bundler`
-- `$HOME/cache/yarn`
 - `$HOME/cache`
+- `$HOME/cache/bundler`
 - `$HOME/cache/pip`
-- `$REPO_ROOT/node_modules`
+- `$HOME/cache/yarn`
+- `$HOME/clone/node_modules`
 
-Also note that we automatically configure `bundler` to write into `~/cache/bundler` as well as `yarn` to write into `$HOME/cache/yarn` and `pip` to write into `$HOME/cache/pip`.
+We automatically configure `bundler` to write to `$HOME/cache/bundler`, `pip` to write to `$HOME/cache/pip` and `yarn` to write to `$HOME/cache/yarn`.
 
-### Clearing The Cache
+## Clearing The Cache
 
-You can manually clear the cache either by removing the populated cache directory in your setup commands at the start of your build (for instance, by adding a startup command `rm -rf node_modules`), by using our custom `cs clear-cache` command in your startup commands or by clicking on **Reset Dependency Cache** on the right sidebar when viewing any build.
+You can manually clear the dependency cache in several different ways:
 
-**Note** that when clearing your dependency cache, you should wait 30-60 seconds to let the system run before triggering your next build.
+- The simplest option is clicking the **Reset Cache** option from the dropdown when viewing any build. Be sure to allow 30-60 seconds after clearing before you trigger another build.
 
 ![Reset Dependency Cache]({{ site.baseurl }}/images/basic-guide/reset-dependency-cache.png)
+
+- Use our custom `cs clear-cache` command at the start of your setup commands to clear everything under `$HOME/cache`.
+- You can also manually clear out any specific cached directories by adding a setup command like `rm -rf node_modules`.
