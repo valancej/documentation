@@ -293,7 +293,7 @@ Note that GCR requires the fully registry path in our image name, and the accoun
   type: push
   image_name: gcr.io/my_org/my_app
   registry: https://gcr.io
-  dockercfg_service: dockercfg_service
+  dockercfg_service: dockercfg_generator
 ```
 
 Learn more about [using Google Cloud with Codeship Pro]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}).
