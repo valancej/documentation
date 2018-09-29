@@ -54,3 +54,9 @@ You can manually clear the dependency cache in several different ways:
 
 - Use our custom `cs clear-cache` command at the start of your setup commands to clear everything under `$HOME/cache`.
 - You can also manually clear out any specific cached directories by adding a setup command like `rm -rf node_modules`.
+
+## Manual Caching
+
+If you want to cache items in your build that are not already handled in the automatic configurations above you can also manually cache items. If the tool you are using provides a way to set a cache location, perhaps with an [environment variable]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %}), you can point it to the `$HOME/cache` directory.
+
+Otherwise you can manually copy items to `$HOME/cache` at the end of the build and then at the start of the build you can either copy them back out of the cache or create a symlink to the cached location.
