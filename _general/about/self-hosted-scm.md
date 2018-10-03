@@ -43,6 +43,15 @@ We require port 22 to clone your repository to run your builds and port 443 for 
 
 **Note** that Bitbucket Server uses port 7999 rather than port 22.
 
+To check that these ports are open you can run the following against your server from your local machine:
+
+```
+nc -v -w1 yourserver.com 22
+Connection to yourserver.com 22 port [tcp/ssh] succeeded!
+
+nc -v -w1 yourserver.com 443
+Connection to yourserver.com 443 port [tcp/https] succeeded!
+```
 
 ## Personal Access Tokens
 
