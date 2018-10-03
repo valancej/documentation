@@ -145,7 +145,7 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 # phase two, which uses the java binary produced above
 FROM org/app:alpine
 
-COPY --from=BUILD /usr/src/app/target/binary.war /opt/org/app/path/deployments/binary.war
+COPY --from=build-stage /usr/src/app/target/binary.war /opt/org/app/path/deployments/binary.war
 ```
 
 Notice that the second `FROM` line begins the second stage, and this second stage is what the final image will consist of.
