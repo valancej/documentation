@@ -46,7 +46,7 @@ The best approach to avoid any issues around personal information, is to always 
 
 ### Purging Data
 
-Should you find that you have personal information in e.g. log output or cached data, please reach out via [support@codeship.com](mailto:support@codeship.com) so we can help you purge the data from our systems.
+Should you find that you have personal information in e.g. log output or cached data, [please reach out](https://helpdesk.codeship.com/hc/en-us/requests/new) so we can help you purge the data from our systems.
 
 ## Codeship As A Controller
 

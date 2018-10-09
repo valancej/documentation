@@ -198,7 +198,7 @@ Run steps specify a command to run on a service. You must specify one or two dir
 ## Push Steps
 
 {% csnote info %}
-We implemented tagging via templates. See below for the available variables. Did we miss any important ones? Let us know at [support@codeship.com](mailto:support@codeship.com).
+We implemented tagging via templates. See below for the available variables. Did we miss any important ones? If so, [let us know](https://helpdesk.codeship.com/hc/en-us/requests/new).
 {% endcsnote %}
 
 {% csnote warning %}

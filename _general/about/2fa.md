@@ -87,4 +87,4 @@ If you need to disable 2FA, simply access your account, navigate to your Persona
 
 ## 2FA and the Codeship API
 
-As the API is built with system-to-system interaction in mind, it's not possible to access the API with a user that has 2FA enabled. We're looking into personal access tokens and similar options, but do [get in touch](mailto:support@codeship.com) if this is a concern for you, as we would like to learn more about which options might work best in which scenarios.
+As the API is built with system-to-system interaction in mind, it's not possible to access the API with a user that has 2FA enabled. We're looking into personal access tokens and similar options, but do [get in touch](https://helpdesk.codeship.com/hc/en-us/requests/new) if this is a concern for you, as we would like to learn more about which options might work best in which scenarios.
