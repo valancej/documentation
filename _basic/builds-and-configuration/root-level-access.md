@@ -58,4 +58,4 @@ Main thing to check is to make sure that whatever you're trying to install or st
 It is also possible (esp. for language versions) that you can install it differently, without having to manually install the package. An example could be installing a different version of Ruby using [rvm]({{ site.baseurl }}{% link _basic/languages-frameworks/ruby.md %}).
 If it's not a language, double check the [list of installed packages]({{ site.baseurl }}{% link _basic/builds-and-configuration/packages.md %})
 
-And if it's still failing, contact [support@codeship.com](mailto:support@codeship.com) so we can help you figure out what's going on.
+And if it's still failing, [contact us](https://helpdesk.codeship.com/hc/en-us/requests/new) so we can help you figure out what's going on.

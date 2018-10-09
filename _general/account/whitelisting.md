@@ -32,7 +32,7 @@ Once the whitelisting feature is enabled, all traffic from Codeship (including t
 
 This will allow you to open your firewall to allow access from just these IP addresses, instead of allowing access from the entire AWS us-east-1 network (or worse still, from any public IP address). Our whitelisting IP addresses also won't change, at least not without sufficient notice, which makes maintenance much easier.
 
-Note though, that whitelisting only applies to traffic originating from Codeship. If your organization limits outgoing traffic, you won't be able to rely on these eight IP addresses to limit outbound traffic to Codeship. Please [get in touch](mailto:support@codeship.com) if you're in this situation and we'll see what we can do to help.
+Note though, that whitelisting only applies to traffic originating from Codeship. If your organization limits outgoing traffic, you won't be able to rely on these eight IP addresses to limit outbound traffic to Codeship. Please [get in touch](https://helpdesk.codeship.com/hc/en-us/requests/new) if you're in this situation and we'll see what we can do to help.
 
 ## Setting up Whitelisting
 

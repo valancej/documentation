@@ -73,4 +73,4 @@ If you want to see which services you're connected to, or perhaps ensure your us
 
 ## SCM Feature Requests
 
-We are continually evaluating our SCM integration support. If there is something you would like to see, please [get in touch](mailto:support@codeship.com) and let us know more details about your SCM needs.
+We are continually evaluating our SCM integration support. If there is something you would like to see, please [get in touch](https://helpdesk.codeship.com/hc/en-us/requests/new) and let us know more details about your SCM needs.

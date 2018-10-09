@@ -102,7 +102,7 @@ If you are not receiving email notifications, but are expecting them, there are 
 git config --get user.email
 ```
 
-If all those settings look correct and you are still not receiving notifications, please [contact us](mailto:support@codeship.com) and we can further investigate.
+If all those settings look correct and you are still not receiving notifications, please [contact us](https://helpdesk.codeship.com/hc/en-us/requests/new) and we can further investigate.
 
 ## Flowdock
 
