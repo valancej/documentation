@@ -67,6 +67,8 @@ To fetch your token, follow these instructions:
 
 **Github Note** Although we now use Github Apps for connecting CodeShip to your cloud Github organization, Github Apps are not yet available for Github Enterprise. Once they become available we will update our integration.
 
+**Gitlab Note** We require Gitlab version 9.6.3 or later due to user access design changes.
+
 ### Token Access Scopes
 
 In order for Codeship to be allowed to setup the necessary hooks etc. the personal access tokens need to have the correct set of scopes. Below you'll find the necessary setting for each of the three self-hosted Git servers:
