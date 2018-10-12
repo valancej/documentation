@@ -53,3 +53,9 @@ https://lighthouse.codeship.io/bitbucket/YOUR_PROJECT_UUID
 ```
 
 ![BitBucket Webhooks Configuration]({{ site.baseurl }}/images/general/bitbucket_webhooks.jpg)
+
+### Verifying Branches Aren't Excluded
+
+Because you can use the _Branches_ tab in your _Project Settings_ to exclude certain branches from running builds, or to only run builds on certain branches, you should verify that your branches are not excluded if you are seeing builds fail to trigger.
+
+![Exclude branches from running builds]({{ site.baseurl }}/images/general/exclude_branches.png)
