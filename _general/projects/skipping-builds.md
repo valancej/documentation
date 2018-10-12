@@ -32,6 +32,15 @@ redirect_from:
 
 You can skip builds on both [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro) by using a special commit directive.
 
+## Skipping On Certain Branches
+
+You can use the _Branches_ tab in your _Project Settings_ to exclude certain branches from running builds.
+
+![Exclude branches from running builds]({{ site.baseurl }}/images/general/exclude_branches.png)
+
+**Note** that you can also choose to only run builds on certain branches by using the other toggle on the _Branches_ tab as well.
+
+
 ### Skipping Via Commit Message
 
 You can add either of the following skip directives to the commit message of the last commit before you push and that push will be ignored:
