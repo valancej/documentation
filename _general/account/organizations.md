@@ -38,7 +38,7 @@ We currently offer the following roles (though more roles are already on our tod
 * **Owners** have control over all aspects of an organization. From changing the subscription to managing organization projects and teams.
 * **Managers** have control over team and project management of an organization. They can add and remove projects and manage the organization teams by adding new team members or assigning projects to teams. They have access to all projects and are able to change the project configuration.
 * **Project Managers** can manage projects the team is assigned to. They can debug builds, update test settings, or manage deployments.
-* **Contributors** have read-only access to their projects. This means they can view the project dashboard and build details but are not allowed to change project settings, restart builds or open debug builds.
+* **Contributors** have read-only access to their projects. This means they can view the project dashboard and build details but are not allowed to change project settings, or open debug builds. Contributors are allowed to restart builds.
 
 ##### Role Permissions
 
@@ -57,13 +57,10 @@ We currently offer the following roles (though more roles are already on our tod
 | View All Projects          |   x    |   x      | | |
 | View/Reset AES key         |   x    |   x      |        x         | |
 | **Builds** | | | | |
-| Restart Build/Pipeline     |   x    |   x      |        x         |    *         |
+| Restart Build/Pipeline     |   x    |   x      |        x         |    x         |
 | Start Debug Build          |   x    |   x      |        x         | |
-| Approve Build              |   x    |  | | |
+| Approve Build              |   x    |   x      | | |
 | Stop Build                 |   x    |   x      |        x         | |
-
-
-\* _On CodeShip Pro, Contributors can restart builds_
 
 ### Default Teams
 
