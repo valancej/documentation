@@ -118,3 +118,7 @@ cs exit
 #### Branch No Longer Exists
 
 If you restart a build, or trigger an SSH debug build for a branch that has since been removed from your source control repo you will see the build fail as it is unable to clone the branch it is keyed to.
+
+#### Choose Node Version
+
+When you start up a new debug build, you will need to choose your version of [Node.js]({{ site.baseurl }}{% link _basic/languages-frameworks/nodejs.md %}).
